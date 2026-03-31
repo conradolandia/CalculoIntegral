@@ -4,7 +4,7 @@ El primer capítulo comienza con la notación de sumatoria, las propiedades del 
 
 Muchas de las aplicaciones de la integral definida se usan en la tecnología y la ingeniería, y se explicarán en un capítulo posterior.
 
-\section{Notaci\'{o}n de sumatoria para sumas finitas}
+\section{Notación de sumatoria para sumas finitas}
 
 Dado un conjunto de números reales $a_{1},a_{2},\ldots ,a_{n},$ con $n$ un número natural, denotamos la suma
 \[
@@ -201,13 +201,13 @@ b_{1}+b_{2}+\ldots +b_{n}\right)=\overset{n}{\underset{k=1}{\sum }}a_{k}+\overse
 \end{align*}
 
 
-%Prueba por inducci\'{o}n sobre $n$.
+%Prueba por inducción sobre $n$.
 %
 %Sea $P\left( n\right) :\overset{n}{\underset{k=m}{\sum }}\left(
 %a_{k}-a_{k-1}\right) =a_{n}-a_{m-1}$ \ $\ n\geq m$
 %
 %i) $P\left( m\right) :\overset{m}{\underset{k=m}{\sum }}\left(
-%a_{k}-a_{k-1}\right) =a_{m}-a_{m-1}$ es una afirmaci\'{o}n verdadera
+%a_{k}-a_{k-1}\right) =a_{m}-a_{m-1}$ es una afirmación verdadera
 %
 %ii)$P\left( n\right) \Rightarrow P\left( n+1\right) $
 %
@@ -216,7 +216,7 @@ b_{1}+b_{2}+\ldots +b_{n}\right)=\overset{n}{\underset{k=1}{\sum }}a_{k}+\overse
 %a_{n+1}-a_{n}\right) $
 %
 %$\qquad \qquad \qquad \ \ \ =a_{n}-a_{m-1}+a_{n+1}-a_{n}$ \ \ por hipotesis
-%de inducci\'{o}n
+%de inducción
 %
 %$\qquad \qquad \qquad \ \ \ =a_{n+1}-a_{m-1}.$
 
@@ -236,7 +236,7 @@ o también
 que puede hacerse} \textit{a mano}. \textnormal {Pero, si la suma incluye muchos más términos, hacerlo a mano ya no es tan cómodo. Veamos, a continuación, lo que puede hacerse:}
 \end{ejemplo}
 
-Supongamos que quieren sumarse los $n$ primeros n\'{u}meros naturales. Sea $S$ dicha suma:
+Supongamos que quieren sumarse los $n$ primeros números naturales. Sea $S$ dicha suma:
 \[
 S=1+2+3+\ldots +n
 \]
@@ -418,7 +418,7 @@ La siguiente es una propiedad que en cierta forma extiende las fórmulas que dim
 donde \textit{$f$} es un polinomio de grado \textit{$m$}}.
 \end{teorema}
 
-\textit{Demostraci\'{o}n}. Usemos inducción\footnote{Para recordar sobre inducción matemática puede consultarse \textcite{Stewart_2012}.} sobre $m.$
+\textit{Demostración}. Usemos inducción\footnote{Para recordar sobre inducción matemática puede consultarse \textcite{Stewart_2012}.} sobre $m.$
 Supongamos que $P\left( m\right)$ está definida como
 {\small
 \[
@@ -626,17 +626,14 @@ es decir,
 \]
 }
 \vskip0.2cm
+
 \section{El área bajo la figura de una función}\label{area}
 
 A continuación se presenta un ejemplo de área bajo la curva de una función, como introducción a la noción de integral definida.
 
-%Sea $f$ una función definida en un intervalo $[a,b]$ y positiva en este
-%intervalo. Sea $\mathcal{R}$ la regi\'{o}n limitada por el eje $x$, la recta
-%$x=a$, la recta $x=b$ y la grafica de la funci\'{o}n $f$. Queremos encontrar el valor exacto del \'{a}rea de la regi\'{o}n \ $\mathcal{R}$. Tomemos un caso particular.
-
-Sea $f(x)=x^{3}+2,$ en el intervalo $[0,2]$, y $\mathcal{R}$, la regi\'{o}n
-limitada por las rectas verticales $x=0,x=2$, el eje $x$ y la gr\'{a}fica de
-la funci\'{o}n. En símbolos,
+Sea $f(x)=x^{3}+2,$ en el intervalo $[0,2]$, y $\mathcal{R}$, la región
+limitada por las rectas verticales $x=0,x=2$, el eje $x$ y la gráfica de
+la función. En símbolos,
 \[
 \mathcal{R}=\left\{ \left( x,y\right) :0\leq x\leq 2\text{ \ y \ }0\leq
 y\leq x^{3}+2\right\}
@@ -644,22 +641,14 @@ y\leq x^{3}+2\right\}
 
 Para hallar el área de $\mathcal{R}$, comenzamos aproximándola por medio de la suma del área de rectángulos con base de igual longitud y ubicados sobre el eje $x$. Las alturas de los rectángulos están dadas por la figura de la función, como se ilustra en la figura 1.
 
-
-\vskip0.2cm
-\noindent
-\begin{minipage}{\textwidth}
-	\centering
-	\captionof{figure}{Rectángulos bajo la función}
-	\begin{minipage}{0.45\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{Gráficas/graf1.eps}
-	\end{minipage}
-	
-	\vspace{0.3em}
-	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboración propia.}
-\end{minipage}
-\vskip0.2cm
-
+\begin{figure}[H]
+    \centering
+    \caption{Rectángulos bajo la función}
+    \includegraphics[width=0.45\textwidth]{Gráficas/graf1.eps}
+    \vspace{0.3em}
+    \propia
+\end{figure}
+\begin{comment}
 
 Recordemos que el área de un rectángulo de base {\small $B$} y altura {\small $H$} está dada por {\small $B\times H$}. En nuestro caso, si usamos $n$ rectángulos sobre el intervalo $[0,2]$, entonces la base de cada uno mide $\frac{2-0}{n}=\frac{2}{n}$; la altura, que está dada por la función $f(x)=x^3+2$, es igual, por ejemplo, a $x_k^3+2$, con $x_k$ un extremo del rectángulo (puede ser el extremo derecho), es decir, $x_k=\frac{2k}{n}$. Con ello, el $k-$ésimo rectángulo tiene área
 {\small
@@ -683,7 +672,7 @@ Y si recordamos las fórmulas del ejemplo \ref{SumaCubos}, tenemos que
 \[
 A_\mathcal{R}(n)=\frac{16}{n^{4}}\left(\frac{n(n+1)}{2}\right)^2 +4
 \]
-que es la suma de las áreas de los rectángulos, pero el área exacta de la región $\mathcal{R}$ se obtiene cuando $n$ tiende a infinito; luego, si $a\left( \mathcal{R}\right) $ denota el \'{a}rea de $\mathcal{R}$, entonces
+que es la suma de las áreas de los rectángulos, pero el área exacta de la región $\mathcal{R}$ se obtiene cuando $n$ tiende a infinito; luego, si $a\left( \mathcal{R}\right) $ denota el área de $\mathcal{R}$, entonces
 \begin{align*}
 a\left( \mathcal{R}\right)& =\underset{n\rightarrow \infty }{\lim }\left[ \frac{16}{n^{4}}\left(\frac{n(n+1)}{2}\right)^2 +4\right]%\\
 %&
@@ -697,10 +686,11 @@ a\left( \mathcal{R}\right)& =\underset{n\rightarrow \infty }{\lim }\left[ \frac{
 \end{align*}
 Con ello, entonces, el área de la región $\mathcal{R}$ es igual a $8$. 
 
+
 \section{Particiones y sumas de Riemann}
 
 \begin{defi}\sl
-Partici\'{o}n. \textnormal{Una partici\'{o}n del intervalo \textit{$[a,b]$} es un conjunto \textit{$P$} de puntos \textit{$x_{0},x_{1},x_{2},\ldots ,x_{n}$} tales que}
+Partición. \textnormal{Una partición del intervalo \textit{$[a,b]$} es un conjunto \textit{$P$} de puntos \textit{$x_{0},x_{1},x_{2},\ldots ,x_{n}$} tales que}
 \[
 a=x_{0}<x_{1}<x_{2}<\cdots <x_{n}=b
 \]
@@ -715,13 +705,13 @@ o también
 \[
 x_{k}=x_{k-1}+\Delta x_{k}
 \]
-La \textit{norma} de la partici\'{o}n es la longitud del mayor subintervalo y se denota por $\left\Vert P\right\Vert$:
+La \textit{norma} de la partición es la longitud del mayor subintervalo y se denota por $\left\Vert P\right\Vert$:
 \[
 \left\Vert P\right\Vert =\max \left\{ \Delta x_{1,}\Delta
 x_{2},\Delta x_{3},\ldots ,\Delta x_{n}\right\} 
 \]
 
-Una partici\'{o}n $P$ es regular si todos los subintervalos tienen la misma longitud, en este caso,
+Una partición $P$ es regular si todos los subintervalos tienen la misma longitud, en este caso,
 \[
 \left\Vert P\right\Vert =\Delta x_{k}:=\Delta x=\frac{b-a}{n}
 \]
@@ -733,9 +723,9 @@ x_{k}=x_{k-1}+\Delta x=x_{k-2}+2\Delta x=\ldots=x_0+k\Delta x
 Trabajemos con particiones:
 \renewcommand{\labelenumi}{\normalfont\theenumi.}
 \begin{enumerate}[leftmargin=1.2em,   itemindent=0pt,       labelwidth=\labelwidth,labelsep=0.5em,]
-\item  \textnormal{Dado el intervalo $\left[ 0,3\right] $, encuentre una partici\'{o}n regular con $6$ subintervalos.}
+\item  \textnormal{Dado el intervalo $\left[ 0,3\right] $, encuentre una partición regular con $6$ subintervalos.}
 
-\item \textnormal{Si el intervalo $\left[ 0,3\right] $ se divide en subintervalos mediante la partici\'{o}n}
+\item \textnormal{Si el intervalo $\left[ 0,3\right] $ se divide en subintervalos mediante la partición}
 
 \[
 \textit{P}=\left\{ 0,\frac{3}{5},\frac{6}{5},\frac{8}{5},2,\frac{5}{2},3\right\}
@@ -743,13 +733,13 @@ Trabajemos con particiones:
 \textnormal{encuentre cada subintervalo y también} $\left\Vert P\right\Vert$.
 
 \item \textnormal{Si el intervalo $\left[ -4,4\right] $ se divide en subintervalos
-mediante la partici\'{o}n regular}
+mediante la partición regular}
 \[
 \textit{P}=\left\{ -4,-3,-2,-1,0,1,2,3,4\right\}
 \]
 \textnormal{encuentre los subintervalos y} \textit{$\left\Vert P\right\Vert $.}
 
-\item \textnormal{Si el intervalo $\left[ -2,3\right] $ se divide en subintervalos mediante la partici\'{o}n}
+\item \textnormal{Si el intervalo $\left[ -2,3\right] $ se divide en subintervalos mediante la partición}
 \[
 P=\left\{
 -2,\frac{-7}{5},-1,\frac{-4}{5},\frac{-1}{5},\frac{3}{5},\frac{6}{5},\frac{8}{5},2,\frac{5}{2},3\right\}
@@ -832,7 +822,7 @@ Y, por último, la norma de la partición es
 \end{enumerate}
 
 \begin{defi} \sl
-\textnormal{Sumas de Riemann para funciones. Sea \textit{$f$} una función definida en el intervalo \textit{$\left[ a,b\right] $} y sea \textit{$P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$} una partici\'{o}n de \textit{$\left[ a,b\right] $}. Si \textit{$x_{k}^{\ast }$} es un punto en el subintervalo \textit{$\left[ x_{k-1},x_{k}\right] $} y \textit{$\Delta x_{k}=x_{k}-x_{k-1},$} entonces la suma de Riemann para \textit{$f$} en el intervalo \textit{$\left[ a,b\right] $} está dada por}
+\textnormal{Sumas de Riemann para funciones. Sea \textit{$f$} una función definida en el intervalo \textit{$\left[ a,b\right] $} y sea \textit{$P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$} una partición de \textit{$\left[ a,b\right] $}. Si \textit{$x_{k}^{\ast }$} es un punto en el subintervalo \textit{$\left[ x_{k-1},x_{k}\right] $} y \textit{$\Delta x_{k}=x_{k}-x_{k-1},$} entonces la suma de Riemann para \textit{$f$} en el intervalo \textit{$\left[ a,b\right] $} está dada por}
 \[
 \sum_{k=1}^{n}f(x_{k}^{\ast })\Delta x_{k}
 \]
@@ -840,7 +830,7 @@ Y, por último, la norma de la partición es
 Veamos algunos ejemplos:
 
 \begin{ejemplo}\sl
-\textnormal{Dadas la función \textit{$f(x)=16-x^{2}$} definida en el intervalo $\left[ 0,4\right]$, la partici\'{o}n \textit{$P=\left\{ 0,1,2,3,4\right\} $ y $x_{k}^{\ast }$} el extremo izquierdo de cada subintervalo, encuentre la suma de Riemann para \textit{$f$}.}
+\textnormal{Dadas la función \textit{$f(x)=16-x^{2}$} definida en el intervalo $\left[ 0,4\right]$, la partición \textit{$P=\left\{ 0,1,2,3,4\right\} $ y $x_{k}^{\ast }$} el extremo izquierdo de cada subintervalo, encuentre la suma de Riemann para \textit{$f$}.}
 \end{ejemplo}
 
 \textit{Solución.} Las longitudes de los subintervalos son
@@ -859,8 +849,8 @@ Teniendo entonces toda la información necesaria para la suma de Riemann, ya pod
 \end{align*}
 
 \begin{ejemplo}\sl
-Encuentre la suma de Riemann para la funci\'{o}n \textit{$f(x)=\frac{1}{x+1}$} en
-el intervalo $\left[ 0,3\right] $, con partici\'{o}n \textit{$P=\left\{0,0\text{,}6,1\text{,}2,1\text{,}6,2,2\text{,}5,3\right\}$}, y puntos en cada uno de los intervalos \textit{$x_{1}^{\ast }=0\text{,}3,$ $x_{2}^{\ast }=0\text{,}9,$ $x_{3}^{\ast }=1\text{,}4,$ $x_{4}^{\ast}=1\text{,}8,$ $x_{5}^{\ast }=$ $2\text{,}25,$ $x_{6}^{\ast }=2\text{,}75$.}
+Encuentre la suma de Riemann para la función \textit{$f(x)=\frac{1}{x+1}$} en
+el intervalo $\left[ 0,3\right] $, con partición \textit{$P=\left\{0,0\text{,}6,1\text{,}2,1\text{,}6,2,2\text{,}5,3\right\}$}, y puntos en cada uno de los intervalos \textit{$x_{1}^{\ast }=0\text{,}3,$ $x_{2}^{\ast }=0\text{,}9,$ $x_{3}^{\ast }=1\text{,}4,$ $x_{4}^{\ast}=1\text{,}8,$ $x_{5}^{\ast }=$ $2\text{,}25,$ $x_{6}^{\ast }=2\text{,}75$.}
 \end{ejemplo}
 
 \textit{Solución}. Las longitudes de los subintervalos son
@@ -887,14 +877,14 @@ x_{5}+\hspace{-0.1cm}f(2\text{,}75)\Delta x_{6}\\
 }
 
 %\begin{definicion}\sl
-%El \'{a}rea $A$ de la regi\'{o}n $\mathcal{R}$ que se encuentra debajo de la figura de la funci\'{o}n continua y positiva $f,$ es igual al límite, cuando existe, de la suma de las áreas de los rect\'{a}ngulos de aproximaci\'{o}n:
+%El área $A$ de la región $\mathcal{R}$ que se encuentra debajo de la figura de la función continua y positiva $f,$ es igual al límite, cuando existe, de la suma de las áreas de los rectángulos de aproximación:
 %\end{definicion}
 %\[
 %A=\lim_{n\to\infty}[f(x_{1}^*)\Delta x_1+f(x_{2}^*)\Delta x_2+\cdots +f(x_{n}^*)\Delta x_n].
 %\]
 
 \begin{defi}\sl
-\textnormal{Integral definida de una funci\'{o}n acotada. Sean \textit{$f$} una funci\'{o}n acotada en el intervalo \textit{$[a,b]$; $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$} una partici\'{o}n cualquiera del intervalo \textit{$[a,b]$}, y \textit{$x_{k}^{\ast }$}, un punto elegido en el subintervalo \textit{$\left[x_{k-1},x_{k}\right]$}. Entonces la integral entre $a$ y $b$ de $f$ está dada por}
+\textnormal{Integral definida de una función acotada. Sean \textit{$f$} una función acotada en el intervalo \textit{$[a,b]$; $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$} una partición cualquiera del intervalo \textit{$[a,b]$}, y \textit{$x_{k}^{\ast }$}, un punto elegido en el subintervalo \textit{$\left[x_{k-1},x_{k}\right]$}. Entonces la integral entre $a$ y $b$ de $f$ está dada por}
 \begin{equation}\label{defintegral}
 \int_{a}^{b}f(x)dx=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }
 \overset{n}{\underset{k=1}{\sum }}f(x_{k}^{\ast })\Delta x_{k}
@@ -904,16 +894,16 @@ x_{5}+\hspace{-0.1cm}f(2\text{,}75)\Delta x_{6}\\
 \vskip0.2cm
 
 Si usamos la notación \textit{epsilon-delta} para límites, tenemos
-que la integral de la funci\'{o}n $f$ en el intervalo $[a,b]$ es un n\'{u}mero $I$ para el que se tiene que, dado un $\varepsilon >0,$ existe un n\'{u}mero $\delta >0,$ tal que, para cada partici\'{o}n $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ con $\left\Vert
-P\right\Vert <\delta $ y cada elecci\'{o}n de $x_{k}^{\ast }$ en el
+que la integral de la función $f$ en el intervalo $[a,b]$ es un número $I$ para el que se tiene que, dado un $\varepsilon >0,$ existe un número $\delta >0,$ tal que, para cada partición $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ con $\left\Vert
+P\right\Vert <\delta $ y cada elección de $x_{k}^{\ast }$ en el
 subintervalo $\left[ x_{k-1},x_{k}\right]$, se cumple $\left\vert \overset{n}{\underset{k=1}{\sum }}f(x_{k}^{\ast })\Delta x_{k}-I\right\vert
 <\varepsilon .$
 
-Cuando se satisfaga esta condici\'{o}n, se dice que $f$ es \textit{integrable}
+Cuando se satisfaga esta condición, se dice que $f$ es \textit{integrable}
 en el intervalo $[a,b]$.
 
 \begin{ejemplo}\sl
-\textnormal{Integral de una funci\'{o}n constante} $f(x)=c$.
+\textnormal{Integral de una función constante} $f(x)=c$.
 \end{ejemplo}
 Supongamos que $f$ es constante, es decir, $f(x)=c$, con $c\in\mathbb{R}$; entonces,
 \begin{align*}
@@ -940,13 +930,13 @@ El siguiente teorema, que se demuestra usando la definición de integral, nos ga
 \begin{teorema}\sl
 \textnormal{Si \textit{$f$} es integrable en el intervalo \textit{$[a,b]$}, entonces}
 \begin{enumerate}
-\item $\displaystyle{\int_{a}^{b}f(x)dx}=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }\overset{n}{\underset{k=1}{\sum }}f(x_{k}^{\ast })\Delta x_{k}$, \textnormal{con \textit{$P$} una partici\'{o}n cualquiera de \textit{$[a,b]$} y \textit{$x_{k}^{\ast }$} un punto cualquiera del subintervalo \textit{$\left[ x_{k-1},x_{k}\right].$}}
+\item $\displaystyle{\int_{a}^{b}f(x)dx}=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }\overset{n}{\underset{k=1}{\sum }}f(x_{k}^{\ast })\Delta x_{k}$, \textnormal{con \textit{$P$} una partición cualquiera de \textit{$[a,b]$} y \textit{$x_{k}^{\ast }$} un punto cualquiera del subintervalo \textit{$\left[ x_{k-1},x_{k}\right].$}}
 
-\item $\displaystyle{\int_{a}^{b}f(x)dx}=\underset{n\rightarrow \infty }{\lim }\overset{n}{\underset{k=1}{\sum }}f(x_{k})\Delta x,$ con $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ una partici\'{o}n regular del intervalo $[a,b]$, $\Delta x=\frac{b-a}{n}$ y $x_{k}=a+k\Delta x=a+k\frac{b-a}{n},$ $1\leq k\leq n.$
+\item $\displaystyle{\int_{a}^{b}f(x)dx}=\underset{n\rightarrow \infty }{\lim }\overset{n}{\underset{k=1}{\sum }}f(x_{k})\Delta x,$ con $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ una partición regular del intervalo $[a,b]$, $\Delta x=\frac{b-a}{n}$ y $x_{k}=a+k\Delta x=a+k\frac{b-a}{n},$ $1\leq k\leq n.$
 \end{enumerate}
 \end{teorema}
 
-\begin{ejemplo}\sl \textnormal{Una funci\'{o}n que no es integrable. Tomemos el siguiente caso.}
+\begin{ejemplo}\sl \textnormal{Una función que no es integrable. Tomemos el siguiente caso.}
 \end{ejemplo}
 Supongamos que $0\leq x\leq 3$ y que
 \[
@@ -973,7 +963,7 @@ entonces tenemos dos posibilidades:
 3-0\right)=-3
 \]
 \end{itemize}
-Vemos, entonces, que, al hacer dos elecciones distintas de $x_k^*$, obtenemos resultados distintos del límite, entonces la funci\'{o}n $f$ no es integrable en el intervalo $[0,3].$
+Vemos, entonces, que, al hacer dos elecciones distintas de $x_k^*$, obtenemos resultados distintos del límite, entonces la función $f$ no es integrable en el intervalo $[0,3].$
 
 \begin{teorema}\label{PropIntegral}\sl
  \textnormal{Propiedades de la integral definida: sean \textit{$f$} y \textit{$g$} funciones integrables en el intervalo \textit{$[a,b]$}, y \textit{$\alpha$} y \textit{$\beta$}, constantes reales; entonces,}
@@ -997,7 +987,7 @@ Vemos, entonces, que, al hacer dos elecciones distintas de $x_k^*$, obtenemos re
  \item \textnormal{Propiedad de aditividad en el intervalo:} \[\int_{a}^{b}f(x)dx=\int_{a}^{c}f(x)dx+\int_{c}^{b}f(x)dx\] \textnormal{para \textit{$c$} entre \textit{$a$} y \textit{$b$}}\footnote{La condición de que $c$ está entre $a$ y $b$ no es necesaria. Acá se incluye solo por ser el caso que se toma en la demostración de más adelante}
  \item \textnormal{Positividad:} $f\geq 0$ en $[a,b]$, entonces $\int_{a}^{b}f(x)dx\geq 0$.
  \item \textnormal{Monotonía: sean \textit{$f$} y \textit{$g$} tales que \textit{$f\left( x\right)\leq g\left( x\right) $} para todo \textit{$x\in \left[ a,b\right],$} entonces \textit{$\int_{a}^{b}f(x)dx\leq \int_{a}^{b}g(x)dx$.}}
- \item \textnormal{Desigualdad m\'{a}ximo-m\'{i}nimo: si existen \textit{$f(c)=m $} y \textit{$f(d)=M$} los valores mínimo y máximo de \textit{$f$} en \textit{$[a,b]$}, entonces \textit{$m(b-a)\leq \int_{a}^{b}f(x)dx\leq M(b-a).$}}
+ \item \textnormal{Desigualdad máximo-mínimo: si existen \textit{$f(c)=m $} y \textit{$f(d)=M$} los valores mínimo y máximo de \textit{$f$} en \textit{$[a,b]$}, entonces \textit{$m(b-a)\leq \int_{a}^{b}f(x)dx\leq M(b-a).$}}
  \end{enumerate}
 \end{teorema}
 \clearpage
@@ -1013,7 +1003,7 @@ Vemos, entonces, que, al hacer dos elecciones distintas de $x_k^*$, obtenemos re
 \]
 }
 
-\item Si $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ es una partici\'{o}n de $\left[
+\item Si $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ es una partición de $\left[
 a,b\right] ,$ donde $\triangle x_{k}=x_{k}-x_{k-1},$ as\'{\i} $-\triangle x_{k}=-\left( x_{k-1}-x_{k}\right) $ y
 {\footnotesize
 \begin{align*}
@@ -1059,7 +1049,7 @@ x_{k}%\\&
 
 \item Se deduce de los puntos 3 y 4.
 
-\item Supongamos que la participación de $[a,b]$ es $P=\{x_{0},x_{1},x_{2},\ldots, x_{j}=c,x_{j+1},\ldots ,x_{n}\}$. Entonces, $P_{1}=\{x_{0},x_{1},x_{2},\ldots, x_{j}=c\}$ es una partici\'{o}n de $[a,c],$ y \newline$P_{2}=\{x_{j}=c,x_{j+1},\ldots ,x_{n}\}$ es partici\'{o}n de $[c,b]$; entonces,
+\item Supongamos que la participación de $[a,b]$ es $P=\{x_{0},x_{1},x_{2},\ldots, x_{j}=c,x_{j+1},\ldots ,x_{n}\}$. Entonces, $P_{1}=\{x_{0},x_{1},x_{2},\ldots, x_{j}=c\}$ es una partición de $[a,c],$ y \newline$P_{2}=\{x_{j}=c,x_{j+1},\ldots ,x_{n}\}$ es partición de $[c,b]$; entonces,
 {\footnotesize
 \begin{align*}
 \int_{a}^{b}f(x)dx&=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }\overset{n}{\underset{k=1}{\sum }}f(x_{k}^{\ast })\Delta x_{k}%\\&
@@ -1092,7 +1082,7 @@ lo que nos lleva a que
 \]
 }
 
-\item Sea $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ una partici\'{o}n de $[a,b]$. Por hipótesis, $f\left( x_{k}\right) \leq g\left( x_{k}\right)$ para $1\leq k\leq n,$ entonces
+\item Sea $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ una partición de $[a,b]$. Por hipótesis, $f\left( x_{k}\right) \leq g\left( x_{k}\right)$ para $1\leq k\leq n,$ entonces
 {\small
 \[
 \int_{a}^{b}f(x)dx=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }
@@ -1102,7 +1092,7 @@ k=1}{\sum }}g(x_{k}^{\ast })\Delta x_{k}=\int_{a}^{b}g(x)dx
 \]
 }
 
-\item Por hip\'{o}tesis, $m\leq f(x)\leq M$ para todo $x\in [a,b],$ entonces por la propiedad $8$ se tiene que
+\item Por hipótesis, $m\leq f(x)\leq M$ para todo $x\in [a,b],$ entonces por la propiedad $8$ se tiene que
 \[
 \int_{a}^{b}mdx\leq \int_{a}^{b}f(x)dx\leq \int_{a}^{b}Mdx
 \]
@@ -1137,7 +1127,7 @@ definida no depende de la variable de integración; es decir, si la función dep
 \textit{Demostración}
 
 \begin{enumerate}[leftmargin=1.2em,   itemindent=0pt,       labelwidth=\labelwidth,labelsep=0.5em,]
-\item Sea $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ una partici\'{o}n de $[a,b].$ Como $f$ es continua en $[x_{k-1},x_{k}]$, entonces $f$ toma estos valores: m\'{a}ximo $M_{k}$ y m\'{\i}nimo $m_{k}$ en $[x_{k-1},x_{k}]$ para $1\leq k\leq n$. Así que
+\item Sea $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ una partición de $[a,b].$ Como $f$ es continua en $[x_{k-1},x_{k}]$, entonces $f$ toma estos valores: máximo $M_{k}$ y m\'{\i}nimo $m_{k}$ en $[x_{k-1},x_{k}]$ para $1\leq k\leq n$. Así que
 {\small
 \[
 \overset{n}{\underset{k=1}{\sum }}m_{k}\Delta x_{k}\leq \overset{n}{%
@@ -1148,7 +1138,7 @@ definida no depende de la variable de integración; es decir, si la función dep
 para $x_{k}^{\ast }\in [x_{k-1},x_{k}]$.
 
 Ahora, como $f$ es creciente, los intervalos $[m_{k},M_{k}]$ forman una
-partici\'{o}n de $[f(a),f(b)]$ y
+partición de $[f(a),f(b)]$ y
 {\small
 \[
 \overset{n}{\underset{k=1}{\sum }}M_{k}\Delta x_{k}-\overset{n}{\underset{k=1}{\sum }}m_{k}\Delta x_{k}\leq \overset{n}{\underset{k=1}{\sum }}\left( M_{k}-m_{k}\right) \left\Vert P\right\Vert =\left\Vert P\right\Vert
@@ -1174,7 +1164,7 @@ y $f$ es integrable en $[a,b]$.
 uniformemente continua en \textit{$[a,b]$}. Es decir, dado un \textit{$\varepsilon >0$},
 existe un \textit{$\delta >0$} tal que para cada par de puntos \textit{$x,\ y$} en \textit{$[a,b],$} si \textit{$\left\vert x-y\right\vert <\delta ,$} entonces \textit{$\left\vert f\left( x\right)-f\left( y\right) \right\vert <\varepsilon .$}}
 
-\item \textnormal{Si \textit{$f$} es una funci\'{o}n continua en \textit{$[a,b]$}, entonces \textit{$f$} es integrable en \textit{$[a,b].$}}
+\item \textnormal{Si \textit{$f$} es una función continua en \textit{$[a,b]$}, entonces \textit{$f$} es integrable en \textit{$[a,b].$}}
 \end{enumerate}
 \end{teorema}
 
@@ -1184,7 +1174,7 @@ existe un \textit{$\delta >0$} tal que para cada par de puntos \textit{$x,\ y$} 
 
 \begin{enumerate}[leftmargin=1.2em,   itemindent=0pt,       labelwidth=\labelwidth,labelsep=0.5em,]
 
-\item Supongamos, por reducci\'{o}n al absurdo, que existe $\varepsilon _{0}>0$,
+\item Supongamos, por reducción al absurdo, que existe $\varepsilon _{0}>0$,
 tal que para cada $\delta >0$ existen $x,y$ en $[a,b]$ con $\left\vert
 f\left( x\right) -f\left( y\right) \right\vert \geq \varepsilon _{0}.$
 
@@ -1228,11 +1218,11 @@ Luego \
 +\left\vert \alpha -f\left( a_{n}\right) \right\vert <\varepsilon _{0},
 \end{align*}
 }
-lo que es una contradicci\'{o}n.
+lo que es una contradicción.
 
-\item Sean $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ una partici\'{o}n de $[a,b]$
+\item Sean $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ una partición de $[a,b]$
 y $\varepsilon >0.$ \ Como $f$ es continua en $[x_{k-1},x_{k}]$,
-entonces $f$ toma valores m\'{a}ximo $f(d_{k})$ y m\'{i}nimo
+entonces $f$ toma valores máximo $f(d_{k})$ y mínimo
 $f(c_{k})$ \ $1\leq k\leq n.$ \ As\'{\i} que \
 {\small
 \[
@@ -1283,9 +1273,9 @@ y $f$ es integrable en $[a,b].$
 \end{enumerate}
 
 \begin{defi}\sl
-\textnormal{{Integral definida de una funci\'{o}n continua}. Sea \textit{$P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$} una partici\'{o}n regular del
+\textnormal{{Integral definida de una función continua}. Sea \textit{$P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$} una partición regular del
 intervalo \textit{$[a,b]$, $\Delta x=\frac{b-a}{n}$} y \textit{$x_{k}=a+k\Delta x=a+k\frac{b-a}{n}$} para \textit{$1\leq k\leq n$}. Entonces, la integral entre \textit{$a$} y \textit{$b$} de
-una funci\'{o}n continua $f(x)$ es dada por
+una función continua $f(x)$ es dada por
 \[
 \int_{a}^{b}f(x)dx=\underset{n\rightarrow \infty }{\lim }\overset{n}{%
 \underset{k=1}{\sum }}f(x_{k})\Delta x
@@ -1300,9 +1290,9 @@ una funci\'{o}n continua $f(x)$ es dada por
 
 %%\textbf{NOTA: Funciones escalonadas}
 %%
-%%En la definici\'{o}n de integral definida aparecen de manera natural las funciones escalonadas, es decir, aquellas definidas a trozos que en cada intervalo $[a,b]$ toma un número finito de valores. Un ejemplo conocido es la función \textit{parte entera}.
+%%En la definición de integral definida aparecen de manera natural las funciones escalonadas, es decir, aquellas definidas a trozos que en cada intervalo $[a,b]$ toma un número finito de valores. Un ejemplo conocido es la función \textit{parte entera}.
 %%
-%%Ahora bien, dada una función $f(x)$ podemos asociarle, a manera de \textit{aproximación}, una función escalonada $s(x)$ por medio de la siguiente f\'{o}rmula en el intervalo $[a,b]$. La primera usar\'{a} el extremo derecho y la segunda el extremo izquierdo \textcolor[rgb]{1.00,0.00,0.00}{¿de qué?}.
+%%Ahora bien, dada una función $f(x)$ podemos asociarle, a manera de \textit{aproximación}, una función escalonada $s(x)$ por medio de la siguiente fórmula en el intervalo $[a,b]$. La primera usará el extremo derecho y la segunda el extremo izquierdo \textcolor[rgb]{1.00,0.00,0.00}{¿de qué?}.
 %%
 %%\[
 %%s(x)=f(x_{k}),\text{ para } x_{k-1}\leq x<x_{k}.
@@ -1324,7 +1314,7 @@ una funci\'{o}n continua $f(x)$ es dada por
 %%
 %%\begin{ejemplo}\sl
 %%si $f(x)=x^{2},a=-1,b=2,n=5,$ obtenemos las siguientes funciones escalonadas
-%%de aproximaci\'{o}n:
+%%de aproximación:
 %%\end{ejemplo}
 %%
 %%\textcolor[rgb]{1.00,0.00,0.00}{¿?} $(-1+(\left\lfloor \frac{x+1}{3/5}\right\rfloor +1)(3/5))^{2},x^{2}$
@@ -1347,7 +1337,7 @@ una funci\'{o}n continua $f(x)$ es dada por
 %%\end{center}
 %%
 
-\section{Integrales usando la definici\'{o}n}
+\section{Integrales usando la definición}
 
 En esta sección, usando la definición de integral, se encuentra el
 valor de algunas integrales definidas y se obtienen fórmulas para
@@ -1672,7 +1662,7 @@ b^{\beta}-1\right) b^{\beta/n}\right) }{b^{\beta/n}-1}\\
 b^{u}\right) }{b^{u}-1}
 =\left( b^{\beta}-1\right) \underset{u\rightarrow 0}{\lim }b^{u}\underset{%
 u\rightarrow 0}{\lim }\frac{u}{b^{u}-1}\\
-&\quad\intertext{y aplicando la regla de L'Hopital en el \'{u}ltimo límite,}\\
+&\quad\intertext{y aplicando la regla de L'Hopital en el último límite,}\\
 &=\left( b^{\beta}-1\right) \underset{u\rightarrow 0}{\lim }\frac{1}{b^{u}\ln b}
 =\left( b^{\beta}-1\right) \frac{1}{\ln b}=\frac{b^{\beta}-1}{\ln b}
 \end{align*}
@@ -1741,7 +1731,7 @@ que nos permite concluir que
 
 \section{Integrales de funciones acotadas y continuas a trozos}
 
-Supongamos que $P=\{x_0,x_1,\ldots,x_n \}$ es una partición del intervalo $[a,b]$ y sea $f$ una funci\'{o}n continua en cada uno de los subintervalos $\left[ x_{k-1},x_{k}\right]$, $1\leq k\leq n$ en la partición. Usando aditividad, podemos definir la integral de $f$ como
+Supongamos que $P=\{x_0,x_1,\ldots,x_n \}$ es una partición del intervalo $[a,b]$ y sea $f$ una función continua en cada uno de los subintervalos $\left[ x_{k-1},x_{k}\right]$, $1\leq k\leq n$ en la partición. Usando aditividad, podemos definir la integral de $f$ como
 \[
 \int_{a}^{b}f(x)dx=\sum_{k=1}^{n}\int_{x_{k-1}}^{x_{k}}f(x)dx
 \]
@@ -1765,17 +1755,13 @@ calculemos $\displaystyle\int_{-2}^2 f(x)\, dx.$
 
 \vskip0.4cm
 \noindent
-\begin{minipage}{\textwidth}
-	\centering
-	\captionof{figure}{Función a trozos entre $-2$ y $2$}
-	\begin{minipage}{0.45\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{Gráficas/graf6.eps}
-	\end{minipage}
-	
-	\vspace{0.3em}
-	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboración propia.}
-\end{minipage}
+\begin{figure}[H]
+    \centering
+    \caption{Función a trozos entre $-2$ y $2$}
+    \includegraphics[width=0.45\textwidth]{Gráficas/graf6.eps}
+    \vspace{0.3em}
+    \propia
+\end{figure}
 \vskip0.2cm
 
 
@@ -1841,17 +1827,13 @@ La figura de la función por integrar se muestra a continuación:
 
 \vskip0.4cm
 \noindent
-\begin{minipage}{\textwidth}
-	\centering
-	\captionof{figure}{Valor absoluto de una parábola}
-	\begin{minipage}{0.40\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{Gráficas/graf7.eps}
-	\end{minipage}
-	
-	\vspace{0.3em}
-	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboración propia.}
-\end{minipage}
+\begin{figure}[H]
+    \centering
+    \caption{Valor absoluto de una parábola}
+    \includegraphics[width=0.40\textwidth]{Gráficas/graf7.eps}
+    \vspace{0.3em}
+    \propia
+\end{figure}
 \vskip0.2cm
 
 
@@ -1890,7 +1872,7 @@ Recordemos que $\big[\hspace{-0.05cm}| x|\hspace{-0.07cm}\big]$ es la parte ente
 	
 	\includegraphics[width=0.6\linewidth]{Gráficas/graf8.eps}
 	
-	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboración propia.}
+	\propia
 \end{figure}
 
 
@@ -1922,17 +1904,13 @@ dx&=\int_{1}^{2}\big[\hspace{-0.05cm}| x|\hspace{-0.07cm}\big] dx+\int_{2}^{3}\b
 
 \vskip0.2cm
 \noindent
-\begin{minipage}{\textwidth}
-	\centering
-	\captionof{figure}{ Área de medio círculo de radio $1$}
-	\begin{minipage}{0.45\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{Gráficas/graf9.eps}
-	\end{minipage}
-	
-	\vspace{0.3em}
-	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboración propia.}
-\end{minipage}
+\begin{figure}[H]
+    \centering
+    \caption{ Área de medio círculo de radio $1$}
+    \includegraphics[width=0.45\textwidth]{Gráficas/graf9.eps}
+    \vspace{0.3em}
+    \propia
+\end{figure}
 \vskip0.2cm
 
 
@@ -1957,17 +1935,13 @@ es el área de un cuarto de círculo de radio $a$:
 
 \vskip0.2cm
 \noindent
-\begin{minipage}{\textwidth}
-	\centering
-	\captionof{figure}{Un cuarto de círculo}
-	\begin{minipage}{0.45\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{Gráficas/graf10.eps}
-	\end{minipage}
-	
-	\vspace{0.3em}
-	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboración propia.}
-\end{minipage}
+\begin{figure}[H]
+    \centering
+    \caption{Un cuarto de círculo}
+    \includegraphics[width=0.45\textwidth]{Gráficas/graf10.eps}
+    \vspace{0.3em}
+    \propia
+\end{figure}
 \vskip0.2cm
 
 
@@ -2002,17 +1976,13 @@ y su figura, entonces, es
 
 \vskip0.2cm
 \noindent
-\begin{minipage}{\textwidth}
-	\centering
-	\captionof{figure}{Área bajo $\big[\hspace{-0.05cm}| x^2|\hspace{-0.07cm}\big]$}
-	\begin{minipage}{0.45\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{Gráficas/grafPartEntex2.eps}
-	\end{minipage}
-	
-	\vspace{0.3em}
-	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboración propia.}
-\end{minipage}
+\begin{figure}[H]
+    \centering
+    \caption{Área bajo $\big[\hspace{-0.05cm}| x^2|\hspace{-0.07cm}\big]$}
+    \includegraphics[width=0.45\textwidth]{Gráficas/grafPartEntex2.eps}
+    \vspace{0.3em}
+    \propia
+\end{figure}
 \vskip0.2cm
 
 
@@ -2052,17 +2022,13 @@ igual a {\footnotesize $\displaystyle\int_{0}^{2}y^{3}dy$}. Entonces,
 
 \vskip0.2cm
 \noindent
-\begin{minipage}{\textwidth}
-	\centering
-	\captionof{figure}{Área bajo $y=\sqrt[3]{x}$}
-	\begin{minipage}{0.45\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{Gráficas/graf11.eps}
-	\end{minipage}
-	
-	\vspace{0.3em}
-	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboración propia.}
-\end{minipage}
+\begin{figure}[H]
+    \centering
+    \caption{Área bajo $y=\sqrt[3]{x}$}
+    \includegraphics[width=0.45\textwidth]{Gráficas/graf11.eps}
+    \vspace{0.3em}
+    \propia
+\end{figure}
 \vskip0.2cm
 
 
@@ -2093,17 +2059,13 @@ igual a {\footnotesize $\displaystyle\int_{0}^{2}y^{3}dy$}. Entonces,
 
 \vskip0.2cm
 \noindent
-\begin{minipage}{\textwidth}
-	\centering
-	\captionof{figure}{$\displaystyle\int_{1}^{9}\log _{3}x\, dx$}
-	\begin{minipage}{0.45\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{Gráficas/graf12.eps}
-	\end{minipage}
-	
-	\vspace{0.3em}
-	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboración propia.}
-\end{minipage}
+\begin{figure}[H]
+    \centering
+    \caption{$\displaystyle\int_{1}^{9}\log _{3}x\, dx$}
+    \includegraphics[width=0.45\textwidth]{Gráficas/graf12.eps}
+    \vspace{0.3em}
+    \propia
+\end{figure}
 \vskip0.2cm
 
 
@@ -2133,17 +2095,13 @@ La inversa de $y=\log _{3}x$ es $x=3^{y}$; entonces
 
 \vskip0.2cm
 \noindent
-\begin{minipage}{\textwidth}
-	\centering
-	\captionof{figure}{Área bajo $y=\sen^{-1} x$}
-	\begin{minipage}{0.40\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{Gráficas/graf13.eps}
-	\end{minipage}
-	
-	\vspace{0.3em}
-	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboración propia.}
-\end{minipage}
+\begin{figure}[H]
+    \centering
+    \caption{Área bajo $y=\sen^{-1} x$}
+    \includegraphics[width=0.40\textwidth]{Gráficas/graf13.eps}
+    \vspace{0.3em}
+    \propia
+\end{figure}
 \vskip0.2cm
 
 
@@ -2178,18 +2136,14 @@ La inversa de $y=\log _{3}x$ es $x=3^{y}$; entonces
 
 \vskip0.2cm
 \noindent
-\begin{minipage}{\textwidth}
-	\centering
-	\captionof{figure}{Prueba del teorema}
+\begin{figure}[H]
+    \centering
+    \caption{Prueba del teorema}
     \label{fig:prueba_teorema}
-	\begin{minipage}{0.44\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{Gráficas/graf14.eps}
-	\end{minipage}
-	
-	\vspace{0.3em}
-	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboración propia.}
-\end{minipage}
+    \includegraphics[width=0.44\textwidth]{Gráficas/graf14.eps}
+    \vspace{0.3em}
+    \propia
+\end{figure}
 \vskip0.2cm
 
 
@@ -2488,29 +2442,29 @@ g. $\displaystyle\lim_{n\rightarrow \infty}\sum_{k=1}^{n}\left[ \left( 2+\frac{k
 % $\frac{55}{12}$
 
 
-% \exercise{Escriba una suma de Riemann para cada funci\'{o}n y partici\'{o}n dadas, usando el punto indicado de cada subintervalo:}
+% \exercise{Escriba una suma de Riemann para cada función y partición dadas, usando el punto indicado de cada subintervalo:}
 
-% \subexercise{$f\left( x\right) =9-3x^{2}$\ $P=\left\{ 0,0.3,0.5,0.8,1\right\}$ partici\'{o}n de $\left[ 0,1\right],$ use el extremo derecho.}{7,593}
+% \subexercise{$f\left( x\right) =9-3x^{2}$\ $P=\left\{ 0,0.3,0.5,0.8,1\right\}$ partición de $\left[ 0,1\right],$ use el extremo derecho.}{7,593}
 
 % \subexercise{$f\left( x\right) =x^{2}+x^{3}$ \ $P=\left\{
-% -1,-0.5,-0.8,0,0.5,1\right\} $ partici\'{o}n de $\left[ -1,1\right],$ use
+% -1,-0.5,-0.8,0,0.5,1\right\} $ partición de $\left[ -1,1\right],$ use
 % el extremo derecho.}{1,2506}
 
-% \subexercise{$f\left( x\right) =20-x^{3}$ \ \ $P=\left\{ 0,0.5,1.5,1.8,2\right\} $ partici\'{o}n de $\left[ 0,2\right] ,$ use el extremo izquierdo.}{37,696}
+% \subexercise{$f\left( x\right) =20-x^{3}$ \ \ $P=\left\{ 0,0.5,1.5,1.8,2\right\} $ partición de $\left[ 0,2\right] ,$ use el extremo izquierdo.}{37,696}
 
 % \subexercise{$f\left( x\right) =x^{4}-1$ \ \ $P=\left\{ -1,-0.5,0,0.5,1,2,3\right\} $
-% partici\'{o}n de $\left[ -1,3\right] ,$ use el extremo izquierdo.}{13,563}
+% partición de $\left[ -1,3\right] ,$ use el extremo izquierdo.}{13,563}
 
 % \subexercise{$f\left( x\right) =20-4x^{2}$ \ $P=\left\{
-% 0,0.5,1.5,1.8,2,2.5,3\right\} $ partici\'{o}n de $\left[ 0,3\right] ,$ use
+% 0,0.5,1.5,1.8,2,2.5,3\right\} $ partición de $\left[ 0,3\right] ,$ use
 % el punto medio.}{24,47}
 
 % \subexercise{$f\left( x\right) =x^{3}-1$ \ $P=\left\{
-% -1,-0.5,0,0.5,1,2,3,3.6,4\right\} $ partici\'{o}n de $\left[ -1,4\right] ,$
+% -1,-0.5,0,0.5,1,2,3,3.6,4\right\} $ partición de $\left[ -1,4\right] ,$
 % use el punto medio.}{57,51}
 
 % \subexercise{$f\left( x\right) =2^{x}-1$ \ $P=\left\{
-% 0,0.5,1,2.5,3,3.6,4. 1,5\right\} $ partici\'{o}n de $\left[ 0,5\right] ,$
+% 0,0.5,1,2.5,3,3.6,4. 1,5\right\} $ partición de $\left[ 0,5\right] ,$
 % use el extremo derecho.}{$ 53,842$}
 \vskip0.4cm
 \begin{ejer}{Escriba una suma de Riemann para cada función y partición dadas, usando el punto indicado de cada subintervalo:}
@@ -2543,7 +2497,7 @@ g. $f(x) = 2^{x} - 1$,\quad $P = \{0, 0.5, 1, 2.5, 3, 3.6, 4.1, 5\}$,\quad parti
 % $53{,}842$
 
 \end{ejer}
-% \exercise{Calcule cada una de las siguientes integrales usando la definici\'{o}n:}
+% \exercise{Calcule cada una de las siguientes integrales usando la definición:}
 % %\begin{multicols}{3}
 % \subexercise{$\displaystyle{\int_{0}^{2}\left( x^{2}-2\right) dx}$}{$-\dfrac{4}{3}$}
 
@@ -2953,3 +2907,4 @@ i. $\displaystyle\int_{0}^{1}\arccos(1 - x)\,dx$
 \end{multicols}
 \end{ejer}
 
+\end{comment}

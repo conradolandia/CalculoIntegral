@@ -13,7 +13,7 @@ La diferencial representa la magnitud con que la recta tangente sube o baja cuan
 
 \section{Integración trigonométrica y método de sustitución}
 
-Para calcular una integral que tenga la forma {\footnotesize $\displaystyle{\int f(g(x))g^{\prime}(x)dx}$}, es decir, una integral en la que se tenga una composición de dos funciones y la derivada de la función interna (salvo, quizás, constantes) multiplique a esa composición\footnote{El hecho de que se tenga $g^\prime(x)$ no es completamente estricto. Puede tenerse una expresión muy similar a la derivada de $g$ de tal manera que la sustitución también funcione.}, puede hacerse la sustituci\'{o}n
+Para calcular una integral que tenga la forma {\footnotesize $\displaystyle{\int f(g(x))g^{\prime}(x)dx}$}, es decir, una integral en la que se tenga una composición de dos funciones y la derivada de la función interna (salvo, quizás, constantes) multiplique a esa composición\footnote{El hecho de que se tenga $g^\prime(x)$ no es completamente estricto. Puede tenerse una expresión muy similar a la derivada de $g$ de tal manera que la sustitución también funcione.}, puede hacerse la sustitución
 \[u=g(x), \qquad du=g^{\prime}(x)dx\]
 
 que la convierte en
@@ -48,7 +48,7 @@ u=g(x),\qquad du=g^{\prime}(x)dx
 tenemos en cuenta que, si $x=a$, entonces $u=g\left( a\right)$ y, si $x=b$, entonces $u=g\left( b\right)$; con ello,
 \begin{align*}
 \int_{a}^{b}f(g(x))g^{\prime}(x)\,dx&=
-\int_{g(a)}^{g(b)}f(u)du \text{, cambiando los limites de integraci\'{o}n}\\
+\int_{g(a)}^{g(b)}f(u)du \text{, cambiando los limites de integración}\\
 &=F(u)\Big\vert_{g(a)}^{g(b)}=F(g(b))-F(g(a))
 \end{align*}
 
@@ -144,7 +144,7 @@ u^{5}+u^{3}\right) du \\
 &=\left(\frac{u^{6}}{6}+\frac{u^{4}}{4}\right)\Big\vert_{0}^{1} =\frac{1}{6}+\frac{1}{4}=\frac{5}{12}
 \end{align*}
 
-\subsection*{Integrales de funciones trigonom\'{e}tricas}
+\subsection*{Integrales de funciones trigonométricas}
 
 Usando una sustitución adecuada y la integral $\int \frac{1}{u}du$, se pueden calcular las integrales de las funciones trigonométricas.\\
 
@@ -191,9 +191,9 @@ x\right\vert +C
 \end{align*}
 }
 
-\subsection*{Sustituci\'{o}n y f\'{o}rmulas de recurrencia}
+\subsection*{Sustitución y fórmulas de recurrencia}
 
-Las funciones tangente y cotangente tienen unas propiedades particulares que nos permiten aplicar el método de sustituci\'{o}n para obtener ciertas f\'{o}rmulas de recurrencia. Tomemos inicialmente
+Las funciones tangente y cotangente tienen unas propiedades particulares que nos permiten aplicar el método de sustitución para obtener ciertas fórmulas de recurrencia. Tomemos inicialmente
 \[
 \int \tan ^{n}xdx\text{ con $n\geq 2$}
 \]
@@ -210,7 +210,7 @@ En principio, modificamos el exponente y luego usamos identidades para reescribi
 \end{align*}
 }
 
-Es decir, se tiene la f\'{o}rmula de recurrencia:
+Es decir, se tiene la fórmula de recurrencia:
 \begin{equation*}
 \int \tan ^{n}xdx=\frac{1}{n-1}\tan ^{n-1}x-\int \tan ^{n-2}xdx,\ \ n\geq 2
 \end{equation*}
@@ -256,7 +256,7 @@ Veamos ahora, para el caso de cotangente, de manera similar al caso anterior,
 \end{align*}
 
 
-Es decir, se tiene la f\'{o}rmula de recurrencia:
+Es decir, se tiene la fórmula de recurrencia:
 
 \begin{equation*}
 \int \cot ^{n}xdx=-\frac{1}{n-1}\cot ^{n-1}x-\int \cot ^{n-2}xdx,\ \ n\geq 2
@@ -299,17 +299,13 @@ x\right\vert +C$
 \vspace{0.2cm}
 
 \noindent
-\begin{minipage}{\textwidth}
-	\centering
-	\captionof{figure}{Cuarto de círculo}
-	\begin{minipage}{0.40\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{Gráficas/CuartoCircul}
-	\end{minipage}
-	
-	\vspace{0.3em}
-	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboración propia.}
-\end{minipage}
+\begin{figure}[htbp]
+    \centering
+    \caption{Cuarto de círculo}
+    \includegraphics[width=0.40\textwidth]{Gráficas/CuartoCircul}
+    \vspace{0.3em}
+    \propia
+\end{figure}
 
 %\begin{center}--------
 %\centerline{ \graf{Cuarto de círculo}}
@@ -317,22 +313,18 @@ x\right\vert +C$
 %\textbf{Fuente:} elaboración propia
 %\end{center}
 \vspace{0.2cm}
-El \'{a}rea de la regi\'{o}n encerrada por la elipse $\frac{x^{2}}{a^{2}}+%
+El área de la región encerrada por la elipse $\frac{x^{2}}{a^{2}}+%
 \frac{y^{2}}{b^{2}}=1$ puede obtenerse de la siguiente forma:
 \vspace{0.2cm}
 
 \noindent
-\begin{minipage}{\textwidth}
-	\centering
-	\captionof{figure}{Área de elipse}
-	\begin{minipage}{0.52\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{Gráficas/elipse}
-	\end{minipage}
-	
-	\vspace{0.3em}
-	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboración propia.}
-\end{minipage}
+\begin{figure}[htbp]
+    \centering
+    \caption{Área de elipse}
+    \includegraphics[width=0.52\textwidth]{Gráficas/elipse}
+    \vspace{0.3em}
+    \propia
+\end{figure}
 
 %\begin{center}-------
 %\centerline{ \graf{Área de elipse}}
@@ -362,7 +354,7 @@ A=4b\int_{0}^{1}\sqrt{1-u^{2}}adu
 \]
 
 \begin{ejemplo}\sl
-\textnormal{Usemos ahora la inversa de una funci\'{o}n trigonométrica:}
+\textnormal{Usemos ahora la inversa de una función trigonométrica:}
 $\displaystyle{\int_{1}^{2}\sec^{-1}\left( \sqrt{x}\right) dx}$.
 \end{ejemplo}
 
@@ -375,17 +367,13 @@ En la figura puede verse la región a la que se le mide el área con la integral
 
 
 \noindent
-\begin{minipage}{\textwidth}
-	\centering
-	\captionof{figure}{Región para inversa de secante}
-	\begin{minipage}{0.45\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{Gráficas/GrafArcsec.eps}
-	\end{minipage}
-	
-	\vspace{0.3em}
-	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboración propia.}
-\end{minipage}
+\begin{figure}[htbp]
+    \centering
+    \caption{Región para inversa de secante}
+    \includegraphics[width=0.45\textwidth]{Gráficas/GrafArcsec.eps}
+    \vspace{0.3em}
+    \propia
+\end{figure}
 
 
 
@@ -407,8 +395,8 @@ En la figura puede verse la región a la que se le mide el área con la integral
 %\bigskip
 
 
-\subsection*{Integraci\'{o}n de funciones pares e impares en un intervalo
-sim\'{e}trico}
+\subsection*{Integración de funciones pares e impares en un intervalo
+simétrico}
 
 Si una función tiene algún tipo de simetría, su integral se puede simplificar. Si es par, simétrica respecto al eje $y$, entonces su integral en un intervalo $[-a,a]$ es el doble de la integral en el intervalo $[0,a]$, y si la función es impar, simétrica respecto al origen, su integral en el intervalo $[-a,a]$ es igual a $0$.
 \vspace{0.3cm}
@@ -424,9 +412,9 @@ labelsep=0.5em,        % Espacio entre la etiqueta (a.) y el texto
 align=left             % Fuerza la alineación de la etiqueta a la izquierda
 ]
 
-\item Si $f$ es una funci\'{o}n par y continua en el intervalo $\left[ -a,a\right],$ entonces \linebreak$\displaystyle{\int_{-a}^{a}f\left( x\right)dx=2\int_{0}^{a}f\left( x\right)dx.}$
+\item Si $f$ es una función par y continua en el intervalo $\left[ -a,a\right],$ entonces \linebreak$\displaystyle{\int_{-a}^{a}f\left( x\right)dx=2\int_{0}^{a}f\left( x\right)dx.}$
 \vskip0.7cm	
-\item Si $f$ es una funci\'{o}n impar y continua en el intervalo $\left[ -a,a\right],$ entonces
+\item Si $f$ es una función impar y continua en el intervalo $\left[ -a,a\right],$ entonces
 \linebreak$\displaystyle{\int_{-a}^{a}f\left( x\right) dx=0.}$
 \end{enumerate}
 \end{teorema}
@@ -477,7 +465,7 @@ En las siguientes figuras se ilustran las partes a) y b) del teorema:
 		\caption{Función impar} % La leyenda va DENTRO y ABAJO
 	\end{subfigure}
 	
-	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboración propia.}
+	\propia
 \end{figure}
 
 
@@ -502,8 +490,8 @@ En las siguientes figuras se ilustran las partes a) y b) del teorema:
 \end{ejemplo}
 \begin{align*}
 \int_{-1}^{1}&\left( 2+4x+6x^{2}-2x^{3}+5x^{4}-50x^{5}\right) dx\\
-&=\int_{-1}^{1}\underset{\text{funci\'{o}n impar}}{\underbrace{\left(
-4x-2x^{3}-50x^{5}\right) }}dx+\int_{-1}^{1}\underset{\text{funci\'{o}n par}}{%
+&=\int_{-1}^{1}\underset{\text{función impar}}{\underbrace{\left(
+4x-2x^{3}-50x^{5}\right) }}dx+\int_{-1}^{1}\underset{\text{función par}}{%
 \underbrace{\left( 2+6x^{2}+5x^{4}\right) }}dx\\
 &=0+2\int_{0}^{1}\left( 2+6x^{2}+5x^{4}\right) dx
 =2\left( 2x+2x^{3}+x^{5}\right)\Big\vert_{0}^{1}\\
@@ -526,14 +514,14 @@ Recordemos que seno es impar, es decir, el integrando completo es impar, entonce
 \]
 
 \begin{ejemplo}\sl
-\textnormal{Suponga que \textit{$f$} es una funci\'{o}n par y que {\small \textit{$\displaystyle{\int_{0}^{32}f\left( x\right)
-dx=20.}$}} Eval\'{u}e}
+\textnormal{Suponga que \textit{$f$} es una función par y que {\small \textit{$\displaystyle{\int_{0}^{32}f\left( x\right)
+dx=20.}$}} Evalúe}
 \[
 \displaystyle{\int_{-2}^{2}x^{4}f\left( x^{5}\right) dx}
 \]
 \end{ejemplo}
 
-\textit{Solución}. Si en {\footnotesize $\displaystyle{\int_{-2}^{2}x^{4}f\left( x^{5}\right) dx}$} hacemos la sustitución $\ u=x^{5}\rightarrow du=5x^{4}dx\rightarrow x^{4}dx=\frac{1}{5}du$ y cambiamos límites de integraci\'{o}n. Si $x=-2$, entonces {\footnotesize $u=\left( -2\right)^{5}=-32$} y, si $x=2$, entonces {\footnotesize $u=2^{5}=32$.}
+\textit{Solución}. Si en {\footnotesize $\displaystyle{\int_{-2}^{2}x^{4}f\left( x^{5}\right) dx}$} hacemos la sustitución $\ u=x^{5}\rightarrow du=5x^{4}dx\rightarrow x^{4}dx=\frac{1}{5}du$ y cambiamos límites de integración. Si $x=-2$, entonces {\footnotesize $u=\left( -2\right)^{5}=-32$} y, si $x=2$, entonces {\footnotesize $u=2^{5}=32$.}
 \[
 \int_{-2}^{2}x^{4}f\left( x^{5}\right) dx=\frac{1}{5}\int_{-32}^{32}f\left(
 u\right) du\underset{f\text{ es par}}{\underbrace{=}}\frac{2}{5}%
@@ -569,11 +557,11 @@ dx$, $v=g\left( x\right)$, y $dv=g^{\prime}\left( x\right) dx$, se tiene que \eq
 \int udv=uv-\int vdu
 \end{equation}
 
-Esta f\'{o}rmula identifica el m\'{e}todo de integración por partes. Veamos su uso con algunos casos particulares:
+Esta fórmula identifica el método de integración por partes. Veamos su uso con algunos casos particulares:
 
 \subsection*{Integrales de la forma \ $\displaystyle\int P(x)f(x)dx$}\label{ProdFunciones}
 
-Tomemos el caso en donde $P\left( x\right) $ es un polinomio y $f(x)$ es una funci\'{o}n de tipo seno, coseno o exponencial, o $P(x)$ es una funci\'{o}n lineal y $f(x)$ es $\sec ^{2}x,\ \csc^{2}x,\ \tan ^{2}x,\ \cot ^{2}x.$
+Tomemos el caso en donde $P\left( x\right) $ es un polinomio y $f(x)$ es una función de tipo seno, coseno o exponencial, o $P(x)$ es una función lineal y $f(x)$ es $\sec ^{2}x,\ \csc^{2}x,\ \tan ^{2}x,\ \cot ^{2}x.$
 \vskip0.2cm
 \begin{ejemplo}
 Tomemos los siguientes casos:
@@ -715,17 +703,13 @@ En ella se muestran las derivadas de $u$ y las integrales de $dv$ (la tabla se c
 
 \vskip0.3cm
 \noindent
-\begin{minipage}{\textwidth}
-	\centering
-	\captionof{figure}{Tabla Partes}
-	\begin{minipage}{0.70\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{Gráficas/TablaPartes.eps}
-	\end{minipage}
-	
-	\vspace{0.3em}
-	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboración propia.}
-\end{minipage}
+\begin{figure}[htbp]
+    \centering
+    \caption{Tabla Partes}
+    \includegraphics[width=0.70\textwidth]{Gráficas/TablaPartes.eps}
+    \vspace{0.3em}
+    \propia
+\end{figure}
 
 
 %\begin{center}--------
@@ -758,17 +742,13 @@ Con esta última integral podemos encontrar la tabla respectiva y tenemos
 
 
 \noindent
-\begin{minipage}{\textwidth}
-	\centering
-	\captionof{figure}{Tabla para integrar}
-	\begin{minipage}{0.69\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{Gráficas/TablaPartesERaiz}
-	\end{minipage}
-	
-	\vspace{0.3em}
-	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboración propia.}
-\end{minipage}
+\begin{figure}[htbp]
+    \centering
+    \caption{Tabla para integrar}
+    \includegraphics[width=0.69\textwidth]{Gráficas/TablaPartesERaiz}
+    \vspace{0.3em}
+    \propia
+\end{figure}
 
 
 
@@ -828,7 +808,7 @@ entonces,
 
 \subsection*{Integrales de funciones inversas}
 
-Algunas integrales pueden simplificarse usando las funciones inversas de las funciones que se pide integrar o de alguna de las funciones dentro del integrando. Eso se logra con una sustitución, y quizás así se obtenga una integral que se pueda hacer por el m\'{e}todo de partes o integraci\'{o}n tabular. Por ejemplo, en la función $f(x)=e^{\sqrt[3]{x}}$, se tiene la función $g(x)=\sqrt[3]{x}$ con inversa $g^{-1}(x)=x^3$, es decir, una expresión polinómica que puede ser más manejable que el radical de la función original; entonces, en la integral $\displaystyle{\int e^{\sqrt[3]{x}}dx}$, la sustitución $y=\sqrt[3]{x}\rightarrow y^3=x$ la convierte en
+Algunas integrales pueden simplificarse usando las funciones inversas de las funciones que se pide integrar o de alguna de las funciones dentro del integrando. Eso se logra con una sustitución, y quizás así se obtenga una integral que se pueda hacer por el método de partes o integración tabular. Por ejemplo, en la función $f(x)=e^{\sqrt[3]{x}}$, se tiene la función $g(x)=\sqrt[3]{x}$ con inversa $g^{-1}(x)=x^3$, es decir, una expresión polinómica que puede ser más manejable que el radical de la función original; entonces, en la integral $\displaystyle{\int e^{\sqrt[3]{x}}dx}$, la sustitución $y=\sqrt[3]{x}\rightarrow y^3=x$ la convierte en
 \[
 \int e^{\sqrt[3]{x}}dx=\int e^{y}3y^{2}dy
 \]
@@ -856,7 +836,7 @@ Ahora bien, usando la tabla de integración por partes\footnote{Esta es otra man
 \hline % Crea la línea superior
  &  & & $e^{y}$ & función \\
 \hline % Crea la línea superior
-\text{funci\'{o}n } & $y^{3}$ & $\underrightarrow{+}$ & $e^{y}$ & $\leftarrow \text{integral}$ \\
+\text{función } & $y^{3}$ & $\underrightarrow{+}$ & $e^{y}$ & $\leftarrow \text{integral}$ \\
 \hline % Línea de separación
 \text{derivada}\rightarrow & $3y^{2}$ & $\xrightarrow{-}$ & $e^{y}$ &
 $\leftarrow \text{integral}$ \\
@@ -893,7 +873,7 @@ $\displaystyle{\int \sen^{-1} xdx }$
 \textbf{Operación} & \textbf{Derivar ($\mathbf{y}$)} & \textbf{Signo} & \textbf{Integrar ($\mathbf{\cos y}$)} & \textbf{Función} \\
 \hline
 \hline
-\text{funci\'{o}n } & $y$ & $\underrightarrow{+}$ & $\sen y$ & $\leftarrow \text{integral}$ \\
+\text{función } & $y$ & $\underrightarrow{+}$ & $\sen y$ & $\leftarrow \text{integral}$ \\
 \hline
 \text{derivada}\rightarrow & $1$ & $\underrightarrow{-}$ & $-\cos y$ & $\leftarrow \text{integral}$ \\
 \hline
@@ -958,7 +938,7 @@ $\displaystyle{\int (\sin^{-1} x )^2  dx }$
 		\textbf{Operación} & \textbf{Derivar ($\mathbf{y^2}$)} & \textbf{Signo} & \textbf{Integrar ($\mathbf{\cos y}$)} & \textbf{Función} \\
 		\hline
 		\hline
-		\text{funci\'{o}n } & $y^{2}$ & $\underrightarrow{+}$ & $\sen y$ & $\leftarrow \text{integral}$ \\
+		\text{función } & $y^{2}$ & $\underrightarrow{+}$ & $\sen y$ & $\leftarrow \text{integral}$ \\
 		\hline
 		\text{derivada}\rightarrow & $2y$ & $\underrightarrow{-}$ & $-\cos y$ & $\leftarrow \text{integral}$ \\
 		\hline
@@ -982,7 +962,7 @@ y con ello,
 
 
 
-\subsection*{La integral como una inc\'{o}gnita en una ecuaci\'{o}n}
+\subsection*{La integral como una incógnita en una ecuación}
 
 En esta sección explicaremos cómo usar el método de integración por partes para calcular integrales que llegan a repetirse (salvo algún factor) después de aplicar el método en por lo menos una vez. Lo que hacemos acá, entonces, es manejar como una incógnita la integral para luego despejarla y así calcular su valor.
 
@@ -1041,7 +1021,7 @@ I&=\frac{1}{10}e^{4x}(\sen (2x)+2\cos (2x))+C\notag
 
 \subsection*{Fórmulas de recurrencia para integrales}
 
-El m\'{e}todo de integración por partes, con frecuencia, se usa para obtener algunas f\'{o}rmulas de recurrencia, es decir, expresiones que dependen de un paso anterior para poder encontrarlas.
+El método de integración por partes, con frecuencia, se usa para obtener algunas fórmulas de recurrencia, es decir, expresiones que dependen de un paso anterior para poder encontrarlas.
 \begin{ejemplo}\sl
 \textnormal{Tomemos, por ejemplo, \textit{$\displaystyle{\int \sen ^{n}xdx}$} para \textit{$n$} un número entero y usemos integración por partes.}
 \end{ejemplo}
@@ -1188,9 +1168,9 @@ Recordemos que las funciones seno y coseno cumplen la identidad $\cos^2x=1-\sen^
 \[
 \int F(a^{2}-\left( \beta(x\pm \alpha\right) )^{2})dx
 \]
-puede tomarse la sustituci\'{o}n trigonom\'{e}trica \ $\beta(x\pm \alpha)=a\sen
+puede tomarse la sustitución trigonométrica \ $\beta(x\pm \alpha)=a\sen
 (\theta )$ con $\frac{-\pi }{2}\leq \theta \leq \frac{\pi }{2}$ (recordemos que el intervalo se toma, ya que la
-funci\'{o}n seno tiene inversa allí). Luego, $\beta dx=a\cos (\theta )d\theta$; entonces, $dx=\cfrac{a\cos (\theta )}{\beta}%
+función seno tiene inversa allí). Luego, $\beta dx=a\cos (\theta )d\theta$; entonces, $dx=\cfrac{a\cos (\theta )}{\beta}%
 d\theta $, y, por tanto, \
 \vspace{-2mm}
 \begin{eqnarray*}
@@ -1201,7 +1181,7 @@ d\theta $, y, por tanto, \
 &=&\int F(a^{2}(1-\sen ^{2}(\theta )))\frac{a\cos (\theta )}{\beta}d\theta \\
 &=&\int F(a^{2}(\cos ^{2}(\theta )))\frac{a\cos (\theta )}{\beta}d\theta
 \end{eqnarray*}
-cuya integral final es m\'{a}s sencilla de encontrar.
+cuya integral final es más sencilla de encontrar.
 
 \begin{ejemplo}\sl
 \textnormal{Calcule} $\displaystyle{\int \frac{x}{\sqrt{25-9(x+3)^{2}}}dx}$
@@ -1235,18 +1215,13 @@ opuesto sobre hipotenusa) o con identidades:
 
 \vskip0.2cm
 \noindent
-\begin{minipage}{\textwidth}
-	\centering
-	\captionof{figure}{Triángulo rectángulo de la sustitución}
-	\begin{minipage}{0.37\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{Gráficas/TriangSustSeno5_3.eps}
-	\end{minipage}
-	\hspace{1em}
-	
-	\vspace{0.3em}
-	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboración propia.}
-\end{minipage}
+\begin{figure}[htbp]
+    \centering
+    \caption{Triángulo rectángulo de la sustitución}
+    \includegraphics[width=0.37\textwidth]{Gráficas/TriangSustSeno5_3.eps}
+    \vspace{0.3em}
+    \propia
+\end{figure}
 \vskip0.2cm
 
 %\begin{center}--------
@@ -1255,7 +1230,7 @@ opuesto sobre hipotenusa) o con identidades:
 %\end{center}
 
 \begin{ejemplo}\sl
-\textnormal{Eval\'{u}e la integral} $\displaystyle{\int \frac{1-x}{-20-4x^{2}+24x}dx}$.
+\textnormal{Evalúe la integral} $\displaystyle{\int \frac{1-x}{-20-4x^{2}+24x}dx}$.
 \end{ejemplo}
 \textit{Solución.} Completando el trinomio cuadrado perfecto para $20-4x^{2}+24x,$ se tiene
 {\small
@@ -1278,7 +1253,7 @@ Luego,
 
 \vskip0.5cm
 
-As\'{\i}; entonces, tomando la sustituci\'{o}n $x-3=2\sen(\theta ),$ con $\frac{-\pi }{2}< \theta < \frac{\pi }{2}$ y $dx=2\cos (\theta
+As\'{\i}; entonces, tomando la sustitución $x-3=2\sen(\theta ),$ con $\frac{-\pi }{2}< \theta < \frac{\pi }{2}$ y $dx=2\cos (\theta
 )d\theta$, y dado que $x-3=2\sen(\theta )$ o, mejor, $x=2\sen(\theta )+3$,
 
 \scalebox{0.8}{$
@@ -1335,18 +1310,13 @@ Para tener las expresiones del último renglón, se parte de la sustitución $x=
 
 \vskip0.2cm
 \noindent
-\begin{minipage}{\textwidth}
-	\centering
-	\captionof{figure}{Triángulo en la sustitución}
-	\begin{minipage}{0.34\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{Gráficas/TriangSustSeno.eps}
-	\end{minipage}
-	\hspace{1em} 
-	
-	\vspace{0.3em}
-	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboración propia.}
-\end{minipage}
+\begin{figure}[htbp]
+    \centering
+    \caption{Triángulo en la sustitución}
+    \includegraphics[width=0.34\textwidth]{Gráficas/TriangSustSeno.eps}
+    \vspace{0.3em}
+    \propia
+\end{figure}
 \vskip0.2cm
 
 %\begin{center}-------
@@ -1384,18 +1354,13 @@ entonces,
 }
 
 \noindent
-\begin{minipage}{\textwidth}
-	\centering
-	\captionof{figure}{Triángulo en la sustitución}
-	\begin{minipage}{0.28\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{Gráficas/TriangSustSeno2.eps}
-	\end{minipage}
-	\hspace{1em}
-	
-	\vspace{0.3em}
-	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboración propia.}
-\end{minipage}
+\begin{figure}[htbp]
+    \centering
+    \caption{Triángulo en la sustitución}
+    \includegraphics[width=0.28\textwidth]{Gráficas/TriangSustSeno2.eps}
+    \vspace{0.3em}
+    \propia
+\end{figure}
 
 
 
@@ -1431,9 +1396,9 @@ Recordemos que las funciones secante y tangente cumplen la identidad $\sec^2\the
 \[
 \int F(a^{2}+\left( \beta (x\pm \alpha \right) )^{2})dx\text{ con } \beta \neq 0
 \]
-puede tomarse la sustituci\'{o}n trigonom\'{e}trica \ $\beta (x\pm a)=a\tan
+puede tomarse la sustitución trigonométrica \ $\beta (x\pm a)=a\tan
 (\theta )$ con $\frac{-\pi }{2}<\theta <\frac{\pi }{2}$ (recordemos que la
-funci\'{o}n tangente tiene inversa en ese intervalo). Luego, $\beta dx=a\sec ^{2}(\theta)d\theta,$; entonces, $dx=\cfrac{a\sec ^{2}(\theta )}{\beta}d\theta $, y, por tanto,
+función tangente tiene inversa en ese intervalo). Luego, $\beta dx=a\sec ^{2}(\theta)d\theta,$; entonces, $dx=\cfrac{a\sec ^{2}(\theta )}{\beta}d\theta $, y, por tanto,
 \begin{eqnarray*}
 \int (F(a^{2}+\left( \beta (x\pm \alpha \right) )^{2})dx &=&\int
 F(a^{2}+(a(\tan (\theta ))^{2}))\frac{a\sec ^{2}(\theta )}{\beta }d\theta \\
@@ -1471,17 +1436,13 @@ Para tener las expresiones del último renglón, se parte de la sustitución $x=
 
 \vskip0.3cm
 \noindent
-\begin{minipage}{\textwidth}
-	\centering
-	\captionof{figure}{Triángulo con los datos de la sustitución}
-	\begin{minipage}{0.28\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{Gráficas/SustTrigonTang.eps}
-	\end{minipage}
-	
-	\vspace{0.3em}
-	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboración propia.}
-\end{minipage}
+\begin{figure}[htbp]
+    \centering
+    \caption{Triángulo con los datos de la sustitución}
+    \includegraphics[width=0.28\textwidth]{Gráficas/SustTrigonTang.eps}
+    \vspace{0.3em}
+    \propia
+\end{figure}
 
 
 %\begin{center}---------
@@ -1522,7 +1483,7 @@ De manera similar a las dos anteriores secciones, recordemos que las funciones s
 \int F(\left( \beta (x\pm \alpha \right) )^{2}-a^{2})dx\text{ con } \beta\neq 0
 \]
 }
-puede tomarse la sustituci\'{o}n trigonom\'{e}trica\ $\beta (x\pm a)=a\sec(\theta )$ con $0\leq \theta <\frac{\pi }{2}$ o $\pi \leq \theta <\frac{3\pi}{2}$ (la funci\'{o}n secante tiene inversa en este intervalo). Luego, $\beta dx=a\sec \theta \tan \theta d\theta$ y, con ello, $dx=\cfrac{a\sec \theta\tan \theta }{\beta }d\theta $. Por tanto,
+puede tomarse la sustitución trigonométrica\ $\beta (x\pm a)=a\sec(\theta )$ con $0\leq \theta <\frac{\pi }{2}$ o $\pi \leq \theta <\frac{3\pi}{2}$ (la función secante tiene inversa en este intervalo). Luego, $\beta dx=a\sec \theta \tan \theta d\theta$ y, con ello, $dx=\cfrac{a\sec \theta\tan \theta }{\beta }d\theta $. Por tanto,
 {\small
 \begin{eqnarray*}
 \int F(\left( \beta (x\pm \alpha \right) )^{2}-a^{2})dx &=&\int F((a\sec\theta)^{2}-a^{2})\frac{a\sec \theta\tan \theta}{\beta }d\theta
@@ -1534,7 +1495,7 @@ puede tomarse la sustituci\'{o}n trigonom\'{e}trica\ $\beta (x\pm a)=a\sec(\thet
 \end{eqnarray*}
 }
 
-cuya integral última es m\'{a}s sencilla, como antes.
+cuya integral última es más sencilla, como antes.
 
 \begin{ejemplo}\sl \textnormal{Encontremos el valor de} $\displaystyle{\int\frac{dx}{\sqrt{x^{2}-9}}}$.
 \end{ejemplo}
@@ -1563,18 +1524,13 @@ Para tener las expresiones del último renglón, se parte de la sustitución $x=
 %\vspace{-0.6cm}
 
 \noindent
-\begin{minipage}{\textwidth}
-	\centering
-	\captionof{figure}{Triángulo con los datos de la sustitución}
-	\begin{minipage}{0.35\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{Gráficas/SustTrigonSec}
-	\end{minipage}
-	\hspace{1em} 
-	
-	\vspace{0.3em}
-	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboración propia.}
-\end{minipage}
+\begin{figure}[htbp]
+    \centering
+    \caption{Triángulo con los datos de la sustitución}
+    \includegraphics[width=0.35\textwidth]{Gráficas/SustTrigonSec}
+    \vspace{0.3em}
+    \propia
+\end{figure}
 
 
 %\begin{center}--------
@@ -1611,18 +1567,13 @@ Con ello,
 Las expresiones del último renglón se obtienen partiendo de la sustitución {\small $\dfrac{e^{t}}{10}=\sec\theta$} y se procede ya sea con identidades o usando el triángulo rectángulo (recuerde que secante es hipotenusa sobre cateto adyacente):
 \vskip0.3cm
 \noindent
-\begin{minipage}{\textwidth}
-	\centering
-	\captionof{figure}{Triángulo con los datos de la sustitución}
-	\begin{minipage}{0.35\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{Gráficas/SustTrigonSec2.eps}
-	\end{minipage}
-	\hspace{1em}
-	
-	\vspace{0.3em}
-	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboración propia.}
-\end{minipage}
+\begin{figure}[htbp]
+    \centering
+    \caption{Triángulo con los datos de la sustitución}
+    \includegraphics[width=0.35\textwidth]{Gráficas/SustTrigonSec2.eps}
+    \vspace{0.3em}
+    \propia
+\end{figure}
 
 
 %\begin{center}---------
@@ -2410,7 +2361,7 @@ Si $u=-\frac{1}{3}\rightarrow -\frac{1}{3}B=1\rightarrow B=-3.$
 
 %\group
 
-\textnormal{Calcule cada una de las siguientes integrales. Use una sustituci\'{o}n adecuada.}\\
+\textnormal{Calcule cada una de las siguientes integrales. Use una sustitución adecuada.}\\
 
 {\small
 \begin{enumerate}
