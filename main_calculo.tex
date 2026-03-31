@@ -1,0 +1,64 @@
+\documentclass[12pt,twoside,spanish]{book}
+\input{preambulo}
+\usepackage{answers}
+
+\def\texttitulo{Cálculo integral} 
+\def\textsubtitulo{}
+\def\loauthors{Carmen Segura, Edilberto Sarmiento, Pablo Solarte}
+\def\texttitulocorto{Cálculo integral}	
+	
+%\addbibresource{Referencias/references.bib}
+	
+% 3. COMIENZO DEL DOCUMENTO
+\begin{document}
+
+\cleardoublepage
+\input{portada.tex}
+\cleardoublepage
+\input{portada_dos}
+\cleardoublepage
+
+% === 5. PÁGINAS PRELIMINARES ===
+\include{resumen3_calculo}
+\cleardoublepage
+
+\renewcommand*\contentsname{\lhseries Contenido}
+
+\pagestyle{plain}
+% Genera la tabla de contenido
+\tableofcontents
+
+\cleardoublepage
+\pagestyle{esstyle}	
+
+%AGRADECIMIENTOS
+%\cleardoublepage
+%\include{Originales/agradecimiento}
+\cleardoublepage
+			
+% 5. INCLUSIÓN DE LOS ARCHIVOS DE CONTENIDO
+%\include{legal}
+%\include{Resumen}
+%\include{abstract_calculo}
+\include{Introduccion_calculo}
+\include{CapIntegDefinid}
+\include{CapTeoremFundCalcu}
+\include{CapMetodosIntegr}
+\include{CapAplicaciones}
+\include{CapIntegNumer}
+
+%\includepdf[pages=-,
+%  pagecommand={
+%    \begin{tikzpicture}[remember picture,overlay]
+%      \node[opacity=0,inner sep=0pt] at (current page.center)
+%        {\includegraphics[width=\paperwidth,height=\paperheight]{overlay.pdf}};
+%    \end{tikzpicture}
+%  }
+%]{Respuestas.pdf}
+%
+%\clearpage
+%\pagestyle{plain}
+%\printbibliography[title={\normalfont\lhseries Referencias}]
+%\nocite{*}
+%\includepdf[]{Colofón}
+\end{document}

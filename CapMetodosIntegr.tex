@@ -1,0 +1,2697 @@
+\chapter{Métodos de integración}\label{MetodIntegrac}
+
+Ciertas integrales que inicialmente no están en la tabla resumen de la página \pageref{TablaResumen} se calculan por medio de algún método. En este capítulo se trabajará la regla de sustitución; se realizarán integrales de funciones trigonométricas por medio de sustituciones, además se mostrarán fórmulas de recurrencia para potencias de las funciones tangente y cotangente; usando la integral definida como área, se resuelven algunas integrales de funciones inversas con sustitución, y se establecen las propiedades de las integrales de funciones pares e impares en un intervalo simétrico. De igual manera, en el presente capitulo se explicará el método de integración por partes; se calcularán las integrales de un producto de un polinomio por una función de tipo seno, coseno o exponencial, y se presenta un modo abreviado para el uso del método de partes llamado \textit{integración tabular}. Con el método de partes, se integran funciones inversas, se trabaja con la integral como una incógnita en una ecuación —también llamadas \textit{integrales circulares}— y se construyen fórmulas de recurrencia para integrales (potencias de funciones trigonométricas). Asimismo se realizarán sustituciones trigonométricas y se presenta el método de fracciones parciales para la integración de funciones racionales. Por último, se realizará la integración de funciones racionales de seno y coseno por medio de la sustitución de Weierstrass.
+
+Cuando se denota la derivada utilizando la notación de Leibniz, esto representa un símbolo, no un cociente. Las cantidades $dy$ y $dx$ tienen significados separados.
+Cuando se realiza una sustitución, es necesario trabajar con diferencial.
+
+\begin{defi} \sl
+ \textnormal{Sea \textit{$y=f(x)$} una función diferenciable. La diferencial \textit{$dx$} es una variable independiente y la diferencial \textit{$dy$} es igual a} $f^{\prime}(x)dx$.
+\end{defi}
+
+La diferencial representa la magnitud con que la recta tangente sube o baja cuando la variable independiente se desplaza una cantidad pequeña horizontalmente.
+
+\section{Integración trigonométrica y método de sustitución}
+
+Para calcular una integral que tenga la forma {\footnotesize $\displaystyle{\int f(g(x))g^{\prime}(x)dx}$}, es decir, una integral en la que se tenga una composición de dos funciones y la derivada de la función interna (salvo, quizás, constantes) multiplique a esa composición\footnote{El hecho de que se tenga $g^\prime(x)$ no es completamente estricto. Puede tenerse una expresión muy similar a la derivada de $g$ de tal manera que la sustitución también funcione.}, puede hacerse la sustituci\'{o}n
+\[u=g(x), \qquad du=g^{\prime}(x)dx\]
+
+que la convierte en
+\begin{align*}
+\int f(g(x))g^{\prime}(x)dx&=\int f(u)\, du\\
+&=F(u)\text{\ para $F$ antiderivada de $f$}\\
+&=F(g(x))\text{ en términos de la variable original.}
+\end{align*}
+
+\begin{ejemplo}\sl
+\textnormal{Si se quiere calcular la integral {\footnotesize \textit{$\displaystyle{\int e^{x^2}xdx}$}}, donde el $x$ que multiplica a la exponencial es la derivada (salvo el $2$) de \textit{$x^2$}, entonces podemos hacer la sustitución}.
+\end{ejemplo}
+\[
+u=x^2, du=2xdx \text{ y } xdx=\frac{du}{2}
+\]
+que nos lleva a
+\begin{align*}
+\int e^{x^2}x\, dx&=\int e^{u}\frac{du}{2}=\int \frac{e^u}{2}\, du
+=\frac{1}{2}\int e^u\, du\\
+&=\frac{1}{2}e^u+C=\frac{1}{2}e^{x^2}+C
+\end{align*}
+
+Ahora bien, si la integral es definida, entonces puede hacerse un cambio de límites de integración en el momento de hacer la sustitución. Entonces, si se quiere calcular la integral
+\[
+\int_{a}^{b}f(g(x))g^{\prime}(x)\,dx,
+\]
+además de la sustitución:
+\vspace{-2mm}
+\[
+u=g(x),\qquad du=g^{\prime}(x)dx
+\]
+tenemos en cuenta que, si $x=a$, entonces $u=g\left( a\right)$ y, si $x=b$, entonces $u=g\left( b\right)$; con ello,
+\begin{align*}
+\int_{a}^{b}f(g(x))g^{\prime}(x)\,dx&=
+\int_{g(a)}^{g(b)}f(u)du \text{, cambiando los limites de integraci\'{o}n}\\
+&=F(u)\Big\vert_{g(a)}^{g(b)}=F(g(b))-F(g(a))
+\end{align*}
+
+%\clearpage
+
+En la última línea se evalúa la antiderivada de $f$ en los nuevos límites. Ya no es necesario regresar a la variable original, como en el caso de las integrales indefinidas.
+
+\vspace{-0.3mm}
+
+\begin{ejemplo}\sl
+\textnormal{Encuentre el valor de la integral} $\displaystyle{\int_{2}^{17}\frac{x}{\sqrt[4]{x-1}}\,dx}$
+\end{ejemplo}
+\vskip0.3cm
+\textit{Solución}. Hacemos la sustitución $u=\sqrt[4]{x-1}=(x-1)^{1/4}$, de donde
+\[
+\frac{du}{dx}=\frac{1}{4}(x-1)^{-3/4}=\frac{1}{4}\left((x-1)^{1/4}\right)^{-3}
+\]
+o también\footnote{O pudo hacerse también $u=\sqrt[4]{x-1}\rightarrow u^{4}=x-1\rightarrow x=u^{4}+1\rightarrow dx=4u^{3}du.$}
+\[
+dx=4\frac{du}{\left((x-1)^{1/4}\right)^{-3}}=4\frac{du}{\left(u\right)^{-3}}=4 u^3du
+\]
+Ahora, si $x=2$, entonces $u=\sqrt[4]{2-1}=1$ y, si $x=17$, entonces $u=\sqrt[4]{17-1}=2$; con ello, la integral se convierte en
+\[
+\int_{2}^{17}\frac{x}{\sqrt[4]{x-1}}dx=\int_{1}^{2}\frac{x}{u}4u^{3}du=\int_{1}^{2}x\times 4u^{2}du
+\]
+pero la nueva integral debe depender únicamente de $u$, lo cual no se da en este caso. Debemos, entonces, reemplazar el $x$ sobrante por algo equivalente. Recordemos que $u=\sqrt[4]{x-1}$, entonces $u^{4}=x-1\rightarrow x=u^{4}+1$; con ello,
+
+{\small
+\begin{align*}
+\int_{2}^{17}\frac{x}{\sqrt[4]{x-1}}dx&=\int_{1}^{2}x\times 4u^{2}du=\int_{1}^{2}\left( u^{4}+1\right)4u^{2}du=4\int_{1}^{2}\left( u^{6}+u^{2}\right) du\\
+&=4\left( \frac{u^{7}}{7}+\frac{u^{3}}{3}\right)\Big\vert_{1}^{2}du=4\left( \left(
+\frac{128}{7}+\frac{8}{3}\right) -\left( \frac{1}{7}+\frac{1}{3}\right)
+\right)\\
+&=4\left( \frac{127}{7}+\frac{7}{3}\right) =\frac{1720}{21} 
+\end{align*}
+}
+\vspace{0.3cm}
+
+\begin{ejemplo}\sl
+\textnormal{Calcule} $\displaystyle{\int \left( 1+\sen x\right) ^{2}\cos xdx}$.
+\end{ejemplo}
+
+\vspace{0.2cm}
+\textit{Solución.} Si $u=1+\sen x$, $du=\cos xdx$:
+{\small
+\begin{align*}
+\int \left( 1+\sen x\right)^{2}\cos xdx
+&=\int u^{2}du=\frac{1}{3}u^{3}+C=\frac{1}{3}\left( 1+\sen x\right) ^{3}+C
+\end{align*}
+}
+\clearpage
+
+\begin{ejemplo}\sl
+\textnormal{Halle} $\displaystyle{\int x\sqrt[3]{x+1}dx}$.
+\end{ejemplo}
+
+\textit{Solución}. Al sustituir $y=\sqrt[3]{x+1}$, entonces $y^{3}=x+1\rightarrow x=y^{3}-1\rightarrow dx=3y^{2}dy$, luego
+{\small
+\begin{align*}
+\int x\sqrt[3]{x+1}dx&=\int \left( y^{3}-1\right) y \times 3y^{2}dy=3\int \left(
+y^{6}-y^{3}\right) dy=3\left( \frac{1}{7}y^{7}-\frac{1}{4}y^{4}\right)\\
+&=3\left( \frac{1}{7}\sqrt[3]{x+1}^{7}-\frac{1}{4}\sqrt[3]{x+1}^{4}\right) +C
+\end{align*}
+}
+
+\begin{ejemplo}\sl
+\textnormal{Encuentre} $\displaystyle{\int_{0}^{\frac{\pi }{4}}\sec ^{4}\theta \tan ^{3}\theta d\theta}$.
+\end{ejemplo}
+
+\textit{Solución}. En este caso no se tiene una composición explícita (salvo elevar a la $4$ o a la $3$), luego no es claro que la forma dada aplique para una sustitución como se había planteado. Pero, si inicialmente la reescribimos como
+\vspace{0.2cm}
+
+\scalebox{0.9}{$
+	\begin{aligned}
+\int_{0}^{\frac{\pi }{4}}\sec ^{4}\theta \tan ^{3}\theta d\theta&=\int_{0}^{\frac{\pi }{4}}\sec ^{2}\theta \tan ^{3}\theta \sec ^{2}\theta d\theta =\int_{0}^{\frac{\pi }{4}}\left( \tan ^{2}\theta +1\right) \tan ^{3}\theta
+\sec ^{2}\theta d\theta
+	\end{aligned}
+	$}
+\vspace{0.2cm}
+
+pensando en que la derivada de $\tan \theta$ es $\sec^2\theta$, entonces puede ser claro que podemos hacer la sustitución:
+\[
+u=\tan \theta, \ du=\sec ^{2}\theta d\theta
+\]
+y como es definida, si $x=0,\ u=\tan 0=0$ y si $x=\frac{\pi }{4},\ u=\tan
+\frac{\pi }{4}=1$, para tener
+
+\begin{align*}
+\int_{0}^{\frac{\pi }{4}}\sec ^{4}\theta \tan ^{3}\theta d\theta&=\int_{0}^{\frac{\pi }{4}}\left( \tan ^{2}\theta +1\right) \tan ^{3}\theta\sec ^{2}\theta d\theta\\%=\int_{0}^{\frac{\pi }{4}}\sec ^{2}\theta \tan ^{3}\theta \sec ^{2}\theta d\theta \\
+&%=\int_{0}^{\frac{\pi }{4}}\left( \tan ^{2}\theta +1\right) \tan ^{3}\theta\sec ^{2}\theta d\theta 
+=\int_{0}^{1}\left( u^{2}+1\right) u^{3}du=\int_{0}^{1}\left(
+u^{5}+u^{3}\right) du \\
+&=\left(\frac{u^{6}}{6}+\frac{u^{4}}{4}\right)\Big\vert_{0}^{1} =\frac{1}{6}+\frac{1}{4}=\frac{5}{12}
+\end{align*}
+
+\subsection*{Integrales de funciones trigonom\'{e}tricas}
+
+Usando una sustitución adecuada y la integral $\int \frac{1}{u}du$, se pueden calcular las integrales de las funciones trigonométricas.\\
+
+Iniciemos con la integral de $\tan x:$
+\vspace{0.2cm}
+
+\scalebox{0.8}{$
+	\begin{aligned}
+\int \tan xdx&=\int \frac{\sen x}{\cos x}dx,\quad u=\cos x \rightarrow du=-\sen xdx\rightarrow \sen xdx=-du=\int \frac{-du}{u}\\
+&=-\ln \left\vert u\right\vert+C =\ln \left\vert \frac{1}{u}\right\vert+C=\ln \left\vert \frac{1}{\cos x}\right\vert+C\\
+& =\ln \left\vert \sec
+x\right\vert +C
+	\end{aligned}
+	$}
+
+\vspace{0.2cm}
+
+Para el caso de $\cot x,$
+{\small
+\begin{align*}
+\int \cot xdx&=\int \frac{\cos x}{\sen x}dx,\quad u=\sen x \rightarrow du=\cos xdx\\
+&=\int \frac{du}{u}=\ln \left\vert u\right\vert =\ln \left\vert \sen
+x\right\vert +C
+\end{align*}
+}
+
+Si la función es $\sec x$,
+{\small
+\begin{align*}
+\int \sec xdx & =\int \frac{\sec x\left( \sec x+\tan x\right) }{\sec x+\tan x}dx =\int \frac{\left( \sec x\tan x+\sec ^{2}x\right) dx}{\sec x+\tan x},\\
+&\quad u=\sec x+\tan x\qquad du=\left( \sec x\tan x+\sec ^{2}x\right) dx\\
+&=\int \frac{du}{u}=\ln \left\vert u\right\vert =\ln \left\vert \sec x+\tan
+x\right\vert +C
+\end{align*}
+}
+
+Si la función es $\csc x$,
+{\small
+\begin{align*}
+\int \csc xdx&=\int \frac{\csc x\left( \csc x-\cot x\right) }{\csc x-\cot x}dx=\int \frac{\left( -\csc x\cot x+\csc ^{2}x\right) dx}{\sec x+\tan x},\\
+&\quad u=\csc x-\cot x\qquad du=\left( -\csc x\cot x+\csc ^{2}x\right) dx\\
+&=\int \frac{du}{u}=\ln \left\vert u\right\vert =\ln \left\vert \csc x-\cot
+x\right\vert +C
+\end{align*}
+}
+
+\subsection*{Sustituci\'{o}n y f\'{o}rmulas de recurrencia}
+
+Las funciones tangente y cotangente tienen unas propiedades particulares que nos permiten aplicar el método de sustituci\'{o}n para obtener ciertas f\'{o}rmulas de recurrencia. Tomemos inicialmente
+\[
+\int \tan ^{n}xdx\text{ con $n\geq 2$}
+\]
+En principio, modificamos el exponente y luego usamos identidades para reescribirla:
+{\small
+\begin{align*}
+\int \tan ^{n}xdx&=\int \tan ^{n-2}x\tan ^{2}xdx\\
+&=\int \tan ^{n-2}x\left( \sec ^{2}x-1\right) dx \ (\text{se usó que }\tan ^{2}x=\sec ^{2}x-1)\\
+&=\int \tan ^{n-2}x\sec ^{2}xdx-\int \tan ^{n-2}xdx\ (\text{se distribuye})\\
+&\quad \text{se sustituye } u=\tan x,\ du=\sec ^{2}xdx \text{ en la primera integral}\\
+&=\int u^{n-2}du-\int \tan ^{n-2}xdx\\
+&=\frac{1}{n-1}u^{n-1}-\int \tan^{n-2}xdx\\
+&=\frac{1}{n-1}\tan ^{n-1}x-\int \tan ^{n-2}xdx
+\end{align*}
+}
+
+Es decir, se tiene la f\'{o}rmula de recurrencia:
+\begin{equation*}
+\int \tan ^{n}xdx=\frac{1}{n-1}\tan ^{n-1}x-\int \tan ^{n-2}xdx,\ \ n\geq 2
+\end{equation*}
+
+Por ejemplo, para $2\leq n\leq 8$,
+
+\begin{itemize}[leftmargin=1.2em, itemindent=0pt,       labelwidth=\labelwidth,labelsep=0.5em,]
+
+\item $n=2:\int \tan ^{2}xdx=\tan x-\int \tan ^{0}xdx=\tan x-x +C$
+
+\item $n=3:\int \tan ^{3}xdx=\frac{1}{2}\tan ^{2}x-\int \tan xdx=\frac{1}{2}\tan
+x-\ln \left\vert \sec x\right\vert +C$
+
+\item $n=4:\int \tan ^{4}xdx=\frac{1}{3}\tan ^{3}x-\int \tan ^{2}xdx=\frac{1}{3}%
+\tan ^{3}x-\tan x+x+C$
+
+\item $n=5:\int \tan ^{5}xdx=\frac{1}{4}\tan ^{4}x-\int \tan ^{3}xdx=\frac{1}{4}%
+\tan ^{4}x-\frac{1}{2}\tan x+\ln \left\vert \sec x\right\vert +C$
+
+\item $n=6:\int \tan ^{6}xdx=\frac{1}{5}\tan ^{5}x-\int \tan ^{4}xdx=\frac{1}{5}%
+\tan ^{5}x-\frac{1}{3}\tan ^{3}x+\tan x-x+C$
+
+\item $n=7:\int \tan ^{7}xdx=\frac{1}{6}\tan ^{6}x-\int \tan ^{5}xdx=\frac{1}{6}%
+\tan ^{6}x-\frac{1}{4}\tan ^{4}x+\frac{1}{2}\tan x-\ln \left\vert \sec
+x\right\vert +C$
+
+\item $n=8:\int \tan ^{8}xdx=\frac{1}{7}\tan ^{7}x-\int \tan ^{6}xdx=\frac{1}{7}%
+\tan ^{7}x-\frac{1}{5}\tan ^{5}x+\frac{1}{3}\tan ^{3}x-\tan x+x+C$
+
+\end{itemize}
+
+\vskip0.2cm
+
+Veamos ahora, para el caso de cotangente, de manera similar al caso anterior,
+
+\begin{align*}
+	\int \cot ^{n}xdx&=\int \cot ^{n-2}x\cot ^{2}xdx=\int \cot ^{n-2}x\left( \csc ^{2}x-1\right) dx\\
+	&=\int \cot ^{n-2}x\csc ^{2}xdx-\int \cot ^{n-2}xdx
+	\intertext{hacemos $u=\cot x,\ du=-\csc ^{2}xdx$}
+	&=\int (-u^{n-2})du-\int \cot ^{n-2}xdx\\
+	&=-\frac{1}{n-1}u^{n-1}-\int \cot ^{n-2}xdx\\
+	&=-\frac{1}{n-1}\cot ^{n-1}x-\int \cot ^{n-2}xdx
+\end{align*}
+
+
+Es decir, se tiene la f\'{o}rmula de recurrencia:
+
+\begin{equation*}
+\int \cot ^{n}xdx=-\frac{1}{n-1}\cot ^{n-1}x-\int \cot ^{n-2}xdx,\ \ n\geq 2
+\end{equation*}
+
+En el caso de $2\leq n\leq 8$, se tiene
+
+\begin{itemize}[leftmargin=1.2em, itemindent=0pt,       labelwidth=\labelwidth,labelsep=0.5em,]
+
+\item $n=2:\int \cot ^{2}xdx=\cot x-\int \cot ^{0}xdx=-\cot x-x+C$
+
+\item $n=3:\int \cot ^{3}xdx=-\frac{1}{2}\cot ^{2}x-\int \cot xdx=-\frac{1}{2}\cot
+x-\ln \left\vert \sen x\right\vert +C$
+
+\item $n=4:\int \cot ^{4}xdx=-\frac{1}{3}\cot ^{3}x-\int \cot ^{2}xdx=-\frac{1}{3}\cot ^{3}x+\cot x+x+C$
+
+\item $n=5:\int \cot ^{5}xdx=-\frac{1}{4}\cot ^{4}x-\int \cot ^{3}xdx=-\frac{1}{4}
+\cot ^{4}x+\frac{1}{2}\cot x+\ln \left\vert \sen x\right\vert +C$
+
+\item $n=6:\int \cot ^{6}xdx=-\frac{1}{5}\cot ^{5}x-\int \cot ^{4}xdx=-\frac{1}{5}\cot ^{5}x+\frac{1}{3}\cot ^{3}x-\tan x-x+C$
+
+\item $n=7:\int \cot ^{7}xdx=-\frac{1}{6}\cot ^{6}x-\int \cot ^{5}xdx=-\frac{1}{6}
+\cot ^{6}x+\frac{1}{4}\cot ^{4}x-\frac{1}{2}\tan x-\ln \left\vert \sen
+x\right\vert +C$
+
+\item $n=8:\int \cot ^{8}xdx=-\frac{1}{7}\cot ^{7}x-\int \cot ^{6}xdx=-\frac{1}{7}%
+\cot ^{7}x+\frac{1}{5}\cot ^{5}x-\frac{1}{3}\tan ^{3}x+\tan x+x+C$
+
+\end{itemize}
+
+\vspace{0.2cm}
+\begin{ejemplo}\sl
+\textnormal{Área de una elipse.}
+\end{ejemplo}
+\vspace{0.2cm}
+\textit{Solución.} Recuerde que {\small $\displaystyle\int_{0}^{1}\sqrt{1-x^{2}}dx$} es el área de un cuarto de círculo de radio $1$, es decir,
+\[
+\displaystyle\int_{0}^{1}\sqrt{1-x^{2}}dx=\frac{\pi }{4}
+\]
+\vspace{0.2cm}
+
+\noindent
+\begin{minipage}{\textwidth}
+	\centering
+	\captionof{figure}{Cuarto de círculo}
+	\begin{minipage}{0.40\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{Gráficas/CuartoCircul}
+	\end{minipage}
+	
+	\vspace{0.3em}
+	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboración propia.}
+\end{minipage}
+
+%\begin{center}--------
+%\centerline{ \graf{Cuarto de círculo}}
+%\includegraphics[scale=0.3]{CuartoCircul}
+%\textbf{Fuente:} elaboración propia
+%\end{center}
+\vspace{0.2cm}
+El \'{a}rea de la regi\'{o}n encerrada por la elipse $\frac{x^{2}}{a^{2}}+%
+\frac{y^{2}}{b^{2}}=1$ puede obtenerse de la siguiente forma:
+\vspace{0.2cm}
+
+\noindent
+\begin{minipage}{\textwidth}
+	\centering
+	\captionof{figure}{Área de elipse}
+	\begin{minipage}{0.52\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{Gráficas/elipse}
+	\end{minipage}
+	
+	\vspace{0.3em}
+	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboración propia.}
+\end{minipage}
+
+%\begin{center}-------
+%\centerline{ \graf{Área de elipse}}
+%\includegraphics[scale=0.07]{elipse}
+%\textbf{Fuente:} elaboración propia
+%\end{center}
+\vspace{0.2cm}
+Si despejamos $y$,
+{\small
+\begin{align*}
+&\frac{y^{2}}{b^{2}}=1-\frac{x^{2}}{a^{2}} \Rightarrow
+y^{2}=b^{2}\left( 1-\frac{x^{2}}{a^{2}}\right)\Rightarrow
+y=\sqrt{b^{2}\left( 1-\frac{x^{2}}{a^{2}}\right) }\Rightarrow
+y=b\sqrt{1-\frac{x^{2}}{a^{2}}}
+\end{align*}
+}
+
+Por simetría de la elipse, la integral que mide el área de la región encerrada es
+\[
+A=4\int_{0}^{a}b\sqrt{1-\left( \frac{x}{a}\right) ^{2}}dx
+\]
+y con las sustituciones $u=\frac{x}{a},\ du=\frac{1}{a}dx,\ dx=a\,du$, si $x=0$, entonces $u=0$ y, si $x=a$, entonces $u=1$. Con ello,
+\[
+A=4b\int_{0}^{1}\sqrt{1-u^{2}}adu
+=4ab\int_{0}^{1}\sqrt{1-x^{2}}dx
+=4ab\frac{\pi }{4}=\pi ab
+\]
+
+\begin{ejemplo}\sl
+\textnormal{Usemos ahora la inversa de una funci\'{o}n trigonométrica:}
+$\displaystyle{\int_{1}^{2}\sec^{-1}\left( \sqrt{x}\right) dx}$.
+\end{ejemplo}
+
+\textit{Solución}. Por la definición de función inversa y al reescribir, se tiene,
+\[
+y=\sec^{-1}\left( \sqrt{x}\right) \Leftrightarrow \sec y=\sqrt{x}%
+\Leftrightarrow \sec ^{2}y=x
+\]
+En la figura puede verse la región a la que se le mide el área con la integral dada:
+
+
+\noindent
+\begin{minipage}{\textwidth}
+	\centering
+	\captionof{figure}{Región para inversa de secante}
+	\begin{minipage}{0.45\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{Gráficas/GrafArcsec.eps}
+	\end{minipage}
+	
+	\vspace{0.3em}
+	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboración propia.}
+\end{minipage}
+
+
+
+%\begin{center}
+%\centerline{ \graf{Región para inversa de secante}}
+%\includegraphics[scale=0.3]{GrafArcsec}
+%\textbf{Fuente:} elaboración propia
+%\end{center}
+\vspace{-5mm}
+\begin{align*}
+\int_{1}^{2}\sec^{-1}\left( \sqrt{x}\right) dx
+&=a\left( R_{2}\right) =a\left( R\right) -a\left( R_{1}\right)
+=2\ast \frac{\pi }{4}-\int_{0}^{\frac{\pi }{4}}\sec ^{2}ydy\\
+&=\frac{\pi }{2}-\left( \tan y\right)\Big\vert_{0}^{\frac{\pi }{4}}
+=\frac{\pi }{2}-\tan \frac{\pi }{4}
+=\frac{\pi }{2}-1=0,57
+\end{align*}
+%\vspace{-15mm}
+%\bigskip
+
+
+\subsection*{Integraci\'{o}n de funciones pares e impares en un intervalo
+sim\'{e}trico}
+
+Si una función tiene algún tipo de simetría, su integral se puede simplificar. Si es par, simétrica respecto al eje $y$, entonces su integral en un intervalo $[-a,a]$ es el doble de la integral en el intervalo $[0,a]$, y si la función es impar, simétrica respecto al origen, su integral en el intervalo $[-a,a]$ es igual a $0$.
+\vspace{0.3cm}
+
+\begin{teorema}
+\leavevmode\par
+\begin{enumerate}[
+label={\alph*.}, % Si quieres las letras en negrita
+leftmargin=0pt,        % <--- ¡LA CLAVE! Elimina el margen izquierdo
+itemindent=0pt,        % Asegura que el texto de la línea comience sin sangría
+labelwidth=*,          % Permite que la etiqueta ocupe el espacio necesario
+labelsep=0.5em,        % Espacio entre la etiqueta (a.) y el texto
+align=left             % Fuerza la alineación de la etiqueta a la izquierda
+]
+
+\item Si $f$ es una funci\'{o}n par y continua en el intervalo $\left[ -a,a\right],$ entonces \linebreak$\displaystyle{\int_{-a}^{a}f\left( x\right)dx=2\int_{0}^{a}f\left( x\right)dx.}$
+\vskip0.7cm	
+\item Si $f$ es una funci\'{o}n impar y continua en el intervalo $\left[ -a,a\right],$ entonces
+\linebreak$\displaystyle{\int_{-a}^{a}f\left( x\right) dx=0.}$
+\end{enumerate}
+\end{teorema}
+
+%\clearpage
+\vskip0.3cm
+\textit{Demostración}.
+\par
+\noindent
+\vskip0.3cm 
+a. {\small $\displaystyle{\int_{-a}^{a}f\left( x\right) dx=\int_{-a}^{0}f\left( x\right)
+dx+\int_{0}^{a}f\left( x\right) dx}$}. Si $u=-x$, es decir, $x=-u$ y $dx=-du$, en la primera integral, entonces {\small \[\displaystyle{\int_{-a}^{a}f\left( x\right) dx=\int_{a}^{0}f\left( -u\right) \left( -du\right) +\int_{0}^{a}f\left( x\right) dx}.\]} E intercambiando los límites de integración y usando la
+paridad de $f$,
+{\small
+\begin{align*}
+\int_{-a}^{a}f\left( x\right) dx&=\int_{a}^{0}f\left( -u\right) \left( -du\right) +\int_{0}^{a}f\left( x\right) dx=\int_{0}^{a}f\left( u\right) du+\int_{0}^{a}f\left( x\right) dx\\
+&=\int_{0}^{a}f\left( x\right) dx+\int_{0}^{a}f\left( x\right) dx=2\int_{0}^{a}f\left( x\right) dx
+\end{align*}
+}
+
+b. De manera similar al caso anterior,
+\begin{align*}
+\int_{-a}^{a}f\left( x\right) dx&=\int_{-a}^{0}f\left( x\right)dx+\int_{0}^{a}f\left( x\right) dx\\ 
+\intertext{ si u=-x,\ x=-u y dx=-du,}
+&=\int_{a}^{0}f\left( -u\right) \left( -du\right) +\int_{0}^{a}f\left(
+x\right) dx
+\end{align*}
+y dado que $f$ es impar,
+\[=-\int_{0}^{a}f\left( u\right) du+\int_{0}^{a}f\left( x\right) dx=-\int_{0}^{a}f\left( x\right) dx+\int_{0}^{a}f\left( x\right) dx
+=0\]
+
+
+En las siguientes figuras se ilustran las partes a) y b) del teorema:
+
+\vspace{-4mm}
+\noindent
+\begin{figure}[H] % Usamos el entorno Figure, no Minipage
+	\centering
+	\begin{subfigure}{0.30\linewidth} % Usamos subfigure en lugar de minipage
+		\centering
+		\includegraphics[width=\linewidth]{Gráficas/GrafPar.eps}
+		\caption{Función par} % La leyenda va DENTRO y ABAJO
+	\end{subfigure}
+	\hspace{1em}
+	\begin{subfigure}{0.30\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{Gráficas/GrafImpar.eps}
+		\caption{Función impar} % La leyenda va DENTRO y ABAJO
+	\end{subfigure}
+	
+	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboración propia.}
+\end{figure}
+
+
+%\begin{multicols}{2}
+
+%\begin{center}----------
+%\centerline{ \graf{Función par}}
+%\includegraphics[scale=0.25]{GrafPar}
+%\textbf{Fuente:} elaboración propia
+%\end{center}
+
+%\begin{center}---------
+%\centerline{ \graf{Función impar}}
+%\includegraphics[scale=0.3]{GrafImpar}
+%\textbf{Fuente:} elaboración propia
+%\end{center}
+
+%\end{multicols}
+
+\vspace{-5mm}
+\begin{ejemplo}\sl \textnormal{Usemos las propiedades anteriores para polinomios en intervalos simétricos.}
+\end{ejemplo}
+\begin{align*}
+\int_{-1}^{1}&\left( 2+4x+6x^{2}-2x^{3}+5x^{4}-50x^{5}\right) dx\\
+&=\int_{-1}^{1}\underset{\text{funci\'{o}n impar}}{\underbrace{\left(
+4x-2x^{3}-50x^{5}\right) }}dx+\int_{-1}^{1}\underset{\text{funci\'{o}n par}}{%
+\underbrace{\left( 2+6x^{2}+5x^{4}\right) }}dx\\
+&=0+2\int_{0}^{1}\left( 2+6x^{2}+5x^{4}\right) dx
+=2\left( 2x+2x^{3}+x^{5}\right)\Big\vert_{0}^{1}\\
+&=10
+\end{align*}
+
+\begin{ejemplo}\sl
+\textnormal{Calcule} $\displaystyle{\int_{-\pi }^{\pi }\frac{\sen ^{7}\left( x^{3}\right) }{x^{4}+1}dx}$.
+\end{ejemplo}
+
+\textit{Solución.} Dado que el intervalo es simétrico, veamos la paridad de la función que se integra:
+\[
+f\left( -x\right) =\frac{\sen ^{7}\left( \left( -x\right) ^{3}\right) }{%
+\left( -x\right) ^{4}+1}=-\frac{\sen ^{7}\left( x^{3}\right) }{x^{4}+1}%
+=-f\left( x\right)
+\]
+Recordemos que seno es impar, es decir, el integrando completo es impar, entonces
+\[
+{\int_{-\pi }^{\pi }\frac{\sen ^{7}\left( x^{3}\right) }{x^{4}+1}dx=0}
+\]
+
+\begin{ejemplo}\sl
+\textnormal{Suponga que \textit{$f$} es una funci\'{o}n par y que {\small \textit{$\displaystyle{\int_{0}^{32}f\left( x\right)
+dx=20.}$}} Eval\'{u}e}
+\[
+\displaystyle{\int_{-2}^{2}x^{4}f\left( x^{5}\right) dx}
+\]
+\end{ejemplo}
+
+\textit{Solución}. Si en {\footnotesize $\displaystyle{\int_{-2}^{2}x^{4}f\left( x^{5}\right) dx}$} hacemos la sustitución $\ u=x^{5}\rightarrow du=5x^{4}dx\rightarrow x^{4}dx=\frac{1}{5}du$ y cambiamos límites de integraci\'{o}n. Si $x=-2$, entonces {\footnotesize $u=\left( -2\right)^{5}=-32$} y, si $x=2$, entonces {\footnotesize $u=2^{5}=32$.}
+\[
+\int_{-2}^{2}x^{4}f\left( x^{5}\right) dx=\frac{1}{5}\int_{-32}^{32}f\left(
+u\right) du\underset{f\text{ es par}}{\underbrace{=}}\frac{2}{5}%
+\int_{0}^{32}f\left( u\right) du=\frac{2}{5}\ast 20=8
+\]
+
+\section{Integración por partes}
+
+El método de \textit{integración por partes} se deduce a partir de la derivada de un producto de funciones, a saber:
+
+Sean $f$ y $g$ funciones derivables. Por la regla del producto para las derivadas, se tiene que
+\[
+\frac{d}{dx}\left( f\left( x\right) g\left( x\right) \right) =f^{\prime}\left(
+x\right) g\left( x\right) +f\left( x\right) g^{\prime}\left( x\right)
+\]
+Si de acá se despeja $f\left( x\right) g^{\prime}\left( x\right) $, se obtiene
+\[
+f\left( x\right) g^{\prime}\left( x\right) =\frac{d}{dx}\left( f\left( x\right)g\left( x\right) \right) -g\left( x\right) f^{\prime}\left( x\right)
+\]
+que, integrando ambos lados, se convierte en
+\begin{align}\label{partes}
+\int f\left( x\right) g^{\prime}\left( x\right) dx&=\int \frac{d}{dx}\left(
+f\left( x\right) g\left( x\right) \right) dx-\int g\left( x\right)
+f^{\prime}\left( x\right) dx\notag\\
+&=f\left( x\right) g\left(
+x\right) -\int g\left( x\right) f^{\prime}\left( x\right) dx
+\end{align}
+Ello nos dice que la integral de un producto particular, es decir, un producto en el que uno de los factores es fácil de integrar (la integral de $g^\prime$ es $g$) y preferiblemente el otro factor se simplifica al derivarlo, se puede reescribir como en \eqref{partes}.
+
+Ahora bien, si hacemos $u=f\left( x\right)$, $du=f^{\prime}\left( x\right)
+dx$, $v=g\left( x\right)$, y $dv=g^{\prime}\left( x\right) dx$, se tiene que \eqref{partes} se convierte en
+\begin{equation}\label{partesformula}
+\int udv=uv-\int vdu
+\end{equation}
+
+Esta f\'{o}rmula identifica el m\'{e}todo de integración por partes. Veamos su uso con algunos casos particulares:
+
+\subsection*{Integrales de la forma \ $\displaystyle\int P(x)f(x)dx$}\label{ProdFunciones}
+
+Tomemos el caso en donde $P\left( x\right) $ es un polinomio y $f(x)$ es una funci\'{o}n de tipo seno, coseno o exponencial, o $P(x)$ es una funci\'{o}n lineal y $f(x)$ es $\sec ^{2}x,\ \csc^{2}x,\ \tan ^{2}x,\ \cot ^{2}x.$
+\vskip0.2cm
+\begin{ejemplo}
+Tomemos los siguientes casos:
+\end{ejemplo}
+
+\begin{enumerate}[leftmargin=1.2em,   itemindent=0pt,       labelwidth=\labelwidth,labelsep=0.5em,]
+	
+\item $\displaystyle{\int (3x+1) e^{2x}dx}$
+
+En la integral, la función $3x+1$ se simplifica al derivarla, pues $(3x+1)^\prime=3$ (es una constante), entonces podemos hacer que $u=3x+1$ y $dv$ el resto: $\displaystyle{\int \underbrace{(3x+1)}_u \underbrace{e^{2x}dx}_{dv}}$; entonces,
+
+\vskip0.5cm
+\begin{center}
+%\centerline{ \graf{Tabla para integrar}}
+\begin{tabular}{lllll}
+$u=3x+1$ & $\Rightarrow$ & $\frac{du}{dx} =3$ & $\Rightarrow$ & $du=3dx$\\
+$dv=e^{2x}dx$ & $\Rightarrow$ & $v =\int e^{2x}dx$ & $\Rightarrow$ & $v=\frac{1}{2}e^{2x}$
+\end{tabular}
+\end{center}
+Con ello,
+
+\scalebox{0.9}{$
+	\begin{aligned}
+\displaystyle{\int (3x+1) e^{2x}dx}&=uv-\int vdu=(3x+1)\frac{1}{2}e^{2x}-\int \frac{1}{2}e^{2x}\cdot 3dx\\
+&=\frac{1}{2}(3x+1)e^{2x}-\frac{3}{2}\int e^{2x}dx=\frac{1}{2}(3x+1)e^{2x}-\frac{3}{4}e^{2x}+D
+	\end{aligned}
+	$}
+
+
+
+\item $\displaystyle{\int x^{2}\sen \left(\frac{1}{2}x\right)dx}$
+
+En este caso podemos tomar las siguientes sustituciones:
+\begin{center}
+\begin{tabular}{lllll}
+$u=x^{2}$ & $\Rightarrow$ & $\frac{du}{dx} =2x$ & $\Rightarrow$ & $du=2x dx$.\\
+$dv=\sen \left(\frac{1}{2}x\right)dx$ & $\Rightarrow$ & $v =\int \sen \left(\frac{1}{2}x\right)dx$ & $\Rightarrow$ & $v=-2\cos\left(\frac{1}{2}x\right)$
+\end{tabular}
+\end{center}
+\vskip0.2cm
+entonces, con las sustituciones tenemos
+\vskip0.2cm
+
+\scalebox{0.9}{$
+	\begin{aligned}
+\displaystyle{\int x^{2}\sen \left(\frac{1}{2}x\right)dx}&=uv-\int vdu=-2x^{2}\cos\left(\frac{1}{2}x\right)-\int -4x\cos \left(\frac{1}{2}x\right)\,dx\\
+&= -2x^{2}\cos \left(\frac{1}{2}x\right)+\int 4x\cos \left(\frac{1}{2}x\right)dx
+	\end{aligned}
+	$}
+\vskip0.3cm
+
+pero la última integral no es inmediata y tiene la forma deseada en integración por partes. Usaremos nuevamente el método con la integral {\small $\displaystyle{\int 4x\cos \left(\frac{1}{2}x\right)dx}$:}
+\vskip0.2cm
+
+\begin{center}
+\begin{tabular}{lllll}
+$u=4x$ & $\Rightarrow$ & $\frac{du}{dx} =4$ & $\Rightarrow$ & $du=4dx$\\
+$dv=\cos \left(\frac{1}{2}x\right)dx$ & $\Rightarrow$ & $v =\int \cos \left(\frac{1}{2}x\right)dx$ & $\Rightarrow$ & $v=2\sen\left(\frac{1}{2}x\right)$
+\end{tabular}
+\end{center}
+\vskip0.2cm
+
+y así,
+{\small
+\begin{align*}
+\displaystyle{\int 4x\cos \left(\frac{1}{2}x\right)dx}&=uv-\int vdu=8\sen\left(\frac{1}{2}x\right)-8\int \sen\left(\frac{1}{2}x\right)dx\\
+&=8\sen\left(\frac{1}{2}x\right)+16 \cos\left(\frac{1}{2}x\right)+C
+\end{align*}
+}
+
+y agrupando toda la información, se tiene
+{\small
+\begin{align*}
+\int x^{2}\sen \left(\frac{1}{2}x\right)dx&=-2x^{2}\cos \left(\frac{1}{2}x\right)+\int 4x\cos \left(\frac{1}{2}x\right)dx,\\
+&=-2x^{2}\cos \left(\frac{1}{2}x\right)+8\sen \left(\frac{1}{2}x\right)+16\cos \left(\frac{1}{2}x\right)+C
+\end{align*}
+}
+
+\item $\displaystyle{\int (2\theta +1)\sec^{2}\theta d\theta}$
+
+En este caso,
+\vskip0.3cm
+\begin{center}
+\begin{tabular}{lllll}
+$u=2\theta +1$ & $\Rightarrow$ & $\frac{du}{d\theta} =2$ & $\Rightarrow$ & $du=2d\theta$\\
+$dv=\sec ^{2}\theta d\theta$ & $\Rightarrow$ & $v =\int \sec ^{2}\theta d\theta d\theta$ & $\Rightarrow$ & $v=\tan \theta$
+\end{tabular}
+\end{center}
+y así, la integral se convierte en
+\begin{align*}
+\int (2\theta +1)\sec ^{2}\theta d\theta&=uv-\int vdu=(2\theta +1)\tan \theta -2\int \tan \theta d\theta\\
+&=(2\theta +1)\tan \theta -2\ln |\sec \theta |+C 
+\end{align*}
+
+\item $\displaystyle{\int 8y\cot ^{2}(2y)dy}$
+
+En este caso $u=8y$, $du=8dy$ y también \[v=\displaystyle{\int\cot^{2}(2y)dy}=\displaystyle{\int\left(\csc^{2}(2y)-1\right) dy}=-\frac{1}{2}\cot (2y)-y\] entonces,
+\vspace{-2mm}
+{\small
+\begin{align*}
+\int 8y\cot ^{2}(2y)dy&=8y\left(-\frac{1}{2}\cot (2y)-y\right)-8\int\left( -\frac{1}{2}\cot (2y)-y\right)dy\\
+&=-4y\cot (2y)-8y^{2}+4\int \cot (2y)dy+8\frac{y^{2}}{2}\\
+&=-4y\cot (2y)-8y^{2}+2\ln |\sec (2y)|+4y^{2}\\
+&=-4y\cot (2y)-4y^{2}+2\ln |\sec (2y)|+B 
+\end{align*}
+}
+
+\end{enumerate}
+
+\subsection*{Integración tabular}\label{tabular}
+
+En esta sección incluimos una forma abreviada de aplicar reiteradamente el método de integración por partes para integrales como las estudiadas en la sección \ref{ProdFunciones}\footnote{En \textcite{thomas_calculo_2010} pueden encontrarse otros ejemplos que también desarrollan el método.}. Por ejemplo, en la integral
+{\footnotesize $\displaystyle{\int x^{5}e^{2x}dx}$}, al aplicar partes por primera vez con las sustituciones $u=x^5$ y $dv=e^{2x}$, el término $5x^4$, la derivada de $x^5$ aparece en la siguiente integral; por tanto, debemos aplicar partes nuevamente. 
+
+Al aplicar partes varias veces en expresiones en donde $dv$ (o $v$) no cambia significativamente, puede obtenerse la solución de la integral usando ciertas tablas. Para el ejemplo, la tabla se ve de la siguiente manera:
+\renewcommand{\arraystretch}{1.5}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Funciones} & \textbf{\boldmath$x^{5}$} & \textbf{\boldmath$e^{2x}$} & \textbf{\boldmath$\rightarrow$} & \textbf{integral} \\
+\hline
+derivada$\rightarrow$ & $5x^{4}$ & $\frac{1}{2}e^{2x}$ & $\leftarrow$ & integral\\
+\hline
+derivada$\rightarrow$ & $20x^{3}$ & $\frac{1}{4}e^{2x}$ & $\leftarrow$ & integral\\
+\hline
+derivada$\rightarrow$ & $60x^{2}$ & $\frac{1}{8}e^{2x}$ & $\leftarrow$ & integral\\
+\hline
+derivada$\rightarrow$ & $120x$ & $\frac{1}{16}e^{2x}$ & $\leftarrow$ & integral\\
+\hline
+derivada$\rightarrow$ & $120$ & $\frac{1}{32}e^{2x}$ & $\leftarrow$ & integral\\
+\hline
+derivada$\rightarrow$ & $0$ & $\frac{1}{64}e^{2x}$ & $\leftarrow$ & integral\\
+\hline
+\end{tabular}
+\end{center}
+
+\vskip0.3cm
+En ella se muestran las derivadas de $u$ y las integrales de $dv$ (la tabla se cierra cuando $u=0$). Con esos datos, la integral dada se calcula multiplicando en diagonal y sumando esos resultados, como se muestra a continuación:
+
+\vskip0.3cm
+\noindent
+\begin{minipage}{\textwidth}
+	\centering
+	\captionof{figure}{Tabla Partes}
+	\begin{minipage}{0.70\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{Gráficas/TablaPartes.eps}
+	\end{minipage}
+	
+	\vspace{0.3em}
+	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboración propia.}
+\end{minipage}
+
+
+%\begin{center}--------
+%\includegraphics[scale=0.04]{TablaPartes}
+%\textbf{Fuente:} elaboración propia
+%\end{center}
+%
+\vskip0.3cm
+\resizebox{\linewidth}{!}{%
+\begin{minipage}{\dimexpr\linewidth-2\tabcolsep\relax} % Usamos minipage para asegurar que align* se comporte dentro de resizebox
+\begin{align*}
+\int x^{5}e^{2x}dx&=x^{5}\frac{1}{2}e^{2x}-5x^{4}\frac{1}{4}e^{2x}+20x^{3}\frac{1}{8}e^{2x}
+-60x^{2}\frac{1}{16}e^{2x}+120x\frac{1}{32}e^{2x}-120\frac{1}{64}e^{2x}+C\\
+&=\frac{1}{2}x^{5}e^{2x}-\frac{5}{4}x^{4}e^{2x}+\frac{5}{2}x^{3}e^{2x}
+-\frac{15}{4}x^{2}e^{2x}+\frac{15}{4}xe^{2x}-\frac{15}{8}e^{2x}+C
+\end{align*}
+\end{minipage}
+}
+
+\vskip0.3cm
+\begin{ejemplo}\sl
+\textnormal{La integral \textit{$\displaystyle{\int e^{\sqrt{x}}dx}$}, inicialmente, no tiene la forma del caso anterior, pero puede reescribirse:}
+\end{ejemplo}
+Supongamos que $y=\sqrt{x}$, entonces $y^2=x$ y $2ydy=dx$, es decir,
+\[
+\int e^{\sqrt{x}}dx=\int e^{y}2ydy=\int 2y e^{y}dy
+\]
+Con esta última integral podemos encontrar la tabla respectiva y tenemos
+\vskip0.3cm
+
+
+\noindent
+\begin{minipage}{\textwidth}
+	\centering
+	\captionof{figure}{Tabla para integrar}
+	\begin{minipage}{0.69\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{Gráficas/TablaPartesERaiz}
+	\end{minipage}
+	
+	\vspace{0.3em}
+	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboración propia.}
+\end{minipage}
+
+
+
+%\begin{center}----------
+%\centerline{ \graf{Tabla para integrar}}
+%\includegraphics[scale=0.35]{TablaPartesERaiz}
+%\textbf{Fuente:} elaboración propia
+%\end{center}
+
+
+%\begin{center}
+
+%\begin{tabular}{lccl}
+%funciones & $2y$ & $e^{y}$ & \\
+%derivada$\rightarrow$ & $2$ & $e^{y}$ & $\leftarrow$ integral\\
+%derivada$\rightarrow$ & $0$ & $e^{y}$ & $\leftarrow$ integral
+%\end{tabular}
+%%\end{center}
+\vskip0.3cm
+Entonces,
+\[
+\int e^{\sqrt{x}}dx=\int e^{y} 2ydy=2ye^{y}-2e^{y}+C=(2\sqrt{x}-2)e^{\sqrt{x}}+C
+\]
+
+\subsection*{Integral de la forma $\displaystyle{\int P(x)\ln xdx}$ ($P\left( x\right)$ un polinomio)}
+
+En este caso, la función que se simplifica al derivarla es $\ln x$; por tanto, debe tomarse $u=\ln x,$ \ $dv=P\left( x\right) dx,$ con lo cual la nueva integral será de un polinomio, por ejemplo,
+\begin{ejemplo}\sl
+\textnormal{Tomemos} $\displaystyle{\int (x^{3}+x^{2})\ln xdx}$.
+\end{ejemplo}
+
+\textit{Solución}. Siguiendo la sugerencia en las sustituciones, se tiene
+\begin{align*}
+u&=\ln x & dv&=(x^{3}+x^{2})dx\\
+du&=\frac{1}{x}dx & v&=\frac{1}{4}x^{4}+\frac{1}{3}x^{3}
+\end{align*}
+entonces,
+\begin{align*}
+\int (x^{3}+x^{2})\ln xdx&=\ln x\left(\frac{1}{4}x^{4}+\frac{1}{3}x^{3}\right)-\int \left(\frac{1}{4}x^{4}+\frac{1}{3}x^{3}\right)\frac{1}{x}dx\\
+&=\left(\frac{1}{4}x^{4}+\frac{1}{3}x^{3}\right)\ln x-\int\left( \frac{1}{4}x^{3}+\frac{1}{3}x^{2}\right) dx\\
+&=\left(\frac{1}{4}x^{4}+\frac{1}{3}x^{3}\right)\ln x-\left(\frac{1}{16}x^{4}+\frac{1}{9}x^{3}\right)+E
+\end{align*}
+
+\begin{ejemplo}\sl
+\textnormal{La integral \textit{$\displaystyle{\int \ln xdx}$} puede incluirse en el caso anterior.}
+\end{ejemplo}
+
+\textit{Solución}. Hacemos las sustituciones
+\begin{align*}
+u&=\ln x & dv&=1\cdot dx\\
+du&=\frac{1}{x}dx & v&=x
+\end{align*}
+entonces,
+\begin{align*}
+\int \ln xdx&=x\ln x-\int \frac{1}{x}xdx=x\ln x-\int\ dx=x\ln x-x+C
+\end{align*}
+
+\subsection*{Integrales de funciones inversas}
+
+Algunas integrales pueden simplificarse usando las funciones inversas de las funciones que se pide integrar o de alguna de las funciones dentro del integrando. Eso se logra con una sustitución, y quizás así se obtenga una integral que se pueda hacer por el m\'{e}todo de partes o integraci\'{o}n tabular. Por ejemplo, en la función $f(x)=e^{\sqrt[3]{x}}$, se tiene la función $g(x)=\sqrt[3]{x}$ con inversa $g^{-1}(x)=x^3$, es decir, una expresión polinómica que puede ser más manejable que el radical de la función original; entonces, en la integral $\displaystyle{\int e^{\sqrt[3]{x}}dx}$, la sustitución $y=\sqrt[3]{x}\rightarrow y^3=x$ la convierte en
+\[
+\int e^{\sqrt[3]{x}}dx=\int e^{y}3y^{2}dy
+\]
+que puede calcularse usando tabulación por partes:
+\begin{align*}
+\int e^{\sqrt[3]{x}}dx&=\int e^{y}3y^{2}dy=3y^{2}e^{y}-6ye^{y}+6e^{y}+C\\
+&=(3y^{2}-6y+6)e^{y}+C\\
+&=e^{\sqrt[3]{x}}(3\sqrt[3]{x}^{2}-6\sqrt[3]{x}%
++6)+C
+\end{align*}
+
+Algo similar pasa en los siguientes ejemplos.
+\begin{ejemplo}\sl
+\textnormal{Tomemos} $\displaystyle{\int \ln ^{3}xdx }$.
+\end{ejemplo}
+
+\textit{Solución. } Sustituimos y construimos la tabla de las funciones resultantes. Si $y=\ln x$, entonces $e^y= x$ y $e^ydy= dx$, con lo cual $\ln ^{3}xdx=y^3e^ydy$.
+
+Ahora bien, usando la tabla de integración por partes\footnote{Esta es otra manera de hacer la tabla de integración por partes que se usó arriba.}, se tiene
+
+\vskip0.2cm
+\renewcommand{\arraystretch}{1.5}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|} % Los "|" crean las líneas verticales
+\hline % Crea la línea superior
+ &  & & $e^{y}$ & función \\
+\hline % Crea la línea superior
+\text{funci\'{o}n } & $y^{3}$ & $\underrightarrow{+}$ & $e^{y}$ & $\leftarrow \text{integral}$ \\
+\hline % Línea de separación
+\text{derivada}\rightarrow & $3y^{2}$ & $\xrightarrow{-}$ & $e^{y}$ &
+$\leftarrow \text{integral}$ \\
+\hline % Línea de separación
+\text{derivada}\rightarrow & $6y$ & $\underrightarrow{+}$ & $e^{y}$ & $\leftarrow
+\text{integral}$ \\
+\hline % Línea de separación
+\text{derivada}\rightarrow & $6$ & $\underrightarrow{-}$ & $e^{y}$ & $\leftarrow
+\text{integral}$ \\
+\hline % Línea de separación
+\text{derivada}\rightarrow & $0$ & $\underrightarrow{+}$ & $e^{y}$ & $\leftarrow
+\text{integral}$ \\
+\hline % Línea inferior
+\end{tabular}
+\end{center}
+\vskip0.3cm
+
+y con ello,
+{\small
+\begin{align*}
+\int \ln ^{3}xdx&=\int y^{3}e^{y}dy=y^{3}e^{y}-3y^{2}e^{y}+6ye^{y}-6e^{y}+C\\
+&=e^{y}(y^{3}-3y^{2}+6y-6)+C=x(\ln ^{3}x-3\ln ^{2}x+6\ln x-6)+C
+\end{align*}
+}
+
+\begin{ejemplo}\sl
+$\displaystyle{\int \sen^{-1} xdx }$
+\end{ejemplo}
+\textit{Solución}. Nuevamente hacemos la sustitución que elimine, para este caso, la función trigonométrica inversa: si $y=\sen^{-1} x$, entonces $\sen y= x$ y $\cos ydy= dx$ y, por tanto, $\sen^{-1} xdx=y\cos ydy$. Por otro lado, construyendo la tabla de partes se tiene
+\renewcommand{\arraystretch}{1.5}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Operación} & \textbf{Derivar ($\mathbf{y}$)} & \textbf{Signo} & \textbf{Integrar ($\mathbf{\cos y}$)} & \textbf{Función} \\
+\hline
+\hline
+\text{funci\'{o}n } & $y$ & $\underrightarrow{+}$ & $\sen y$ & $\leftarrow \text{integral}$ \\
+\hline
+\text{derivada}\rightarrow & $1$ & $\underrightarrow{-}$ & $-\cos y$ & $\leftarrow \text{integral}$ \\
+\hline
+\text{derivada}\rightarrow & $0$ & $\underrightarrow{+}$ & $-\sen y$ & $\leftarrow \text{integral}$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\vskip0.3cm
+y así,
+{\small
+\begin{align*}
+\int \sen^{-1} x dx&=\int y\cos ydy=y(\sen y)-(-\cos y)+B=y\sen y+\cos y+B\\
+&=x\sen^{-1} x+\sqrt{1-\sen^{2}y}+B=x\sen^{-1} x+\sqrt{1-x^{2}}+B
+\end{align*}
+}
+
+\begin{ejemplo}\sl
+$\displaystyle{\int \tan^{-1} xdx }$
+\end{ejemplo}
+\textit{Solución.} De manera similar a los ejemplos anteriores, si $y=\tan^{-1} x$, entonces $\tan y= x$ y $\sec^2 ydy= dx$; por tanto, $\tan^{-1} xdx=y\sec^2 ydy$.
+
+Por otro lado, la tabla de integración por partes se ve de la siguiente manera:
+
+\renewcommand{\arraystretch}{1.5}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Operación} & \textbf{Derivar ($\mathbf{y}$)} & \textbf{Signo} & \textbf{Integrar ($\mathbf{\sec^{2} y}$)} & \textbf{Función} \\
+\hline
+\hline
+\textbf{función} & $y$ & $\underrightarrow{+}$ & $\tan y$ & $\leftarrow \text{integral}$ \\
+\hline
+\text{derivada}\rightarrow & $1$ & $\underrightarrow{-}$ & $\ln \left\vert \sec y \right\vert$ & $\leftarrow \text{integral}$ \\
+\hline
+\text{derivada}\rightarrow & $0$ & $\underrightarrow{+}$ & & \text{ } \\ % Se deja vacío el contenido de la última integral
+\hline
+\end{tabular}
+\end{center}
+\vskip0.3cm
+
+y con ello,
+
+\vskip0.3cm
+\scalebox{0.9}{$
+	\begin{aligned}
+\int \tan^{-1} x dx&=\int y\sec^2 ydy=y\tan y-\ln |\sec y|+C\\
+&=x\tan^{-1} x-\ln |\sqrt{\tan ^{2}y+1}|+C=x\tan^{-1} x-\ln \sqrt{x^{2}+1}+C
+	\end{aligned}
+	$}
+\vskip0.3cm
+\begin{ejemplo}\sl
+$\displaystyle{\int (\sin^{-1} x )^2  dx }$
+\end{ejemplo}
+\textit{Solución.} Si $y=\sin^{-1} x$, entonces $\sin y= x$ y $\cos ydy= dx$; por tanto, $(\sin^{-1} x)^2dx=y^2\cos ydy$ y la tabla
+
+
+\renewcommand{\arraystretch}{1.5}
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		\textbf{Operación} & \textbf{Derivar ($\mathbf{y^2}$)} & \textbf{Signo} & \textbf{Integrar ($\mathbf{\cos y}$)} & \textbf{Función} \\
+		\hline
+		\hline
+		\text{funci\'{o}n } & $y^{2}$ & $\underrightarrow{+}$ & $\sen y$ & $\leftarrow \text{integral}$ \\
+		\hline
+		\text{derivada}\rightarrow & $2y$ & $\underrightarrow{-}$ & $-\cos y$ & $\leftarrow \text{integral}$ \\
+		\hline
+		\text{derivada}\rightarrow & $2$ & $\underrightarrow{+}$ & $-\sen y$ & $\leftarrow \text{integral}$ \\
+		\hline
+		\text{derivada}\rightarrow & $0$ & $\underrightarrow{+}$ & $\cos y$ & $\leftarrow \text{integral}$ \\ % ¡Se respeta el signo +!
+		\hline
+	\end{tabular}
+\end{center}
+
+\vskip0.3cm
+y con ello,
+\vskip0.3cm
+
+\resizebox{\textwidth}{!}{$
+	\begin{aligned}
+\int &(\sen^{-1}x)^{2}dx=\int y^2\cos ydy=y^{2}(\sen y)-2y(-\cos y)+2(-\sen y)+B\\
+&=y^{2}\sen y+2y\cos y-2\sen y+B=x(\sen^{-1}x)^{2}+2\sqrt{1-x^{2}}\sen^{-1}x-2x+B
+	\end{aligned}
+	$}
+
+
+
+\subsection*{La integral como una inc\'{o}gnita en una ecuaci\'{o}n}
+
+En esta sección explicaremos cómo usar el método de integración por partes para calcular integrales que llegan a repetirse (salvo algún factor) después de aplicar el método en por lo menos una vez. Lo que hacemos acá, entonces, es manejar como una incógnita la integral para luego despejarla y así calcular su valor.
+
+\begin{ejemplo}\sl 
+\textnormal{Una función que suele generar confusión para integrar es \textit{$\sec^3\theta$}. A continuación se muestra cuál es el manejo de} {\small $\displaystyle{\int \sec ^{3}\theta d\theta }$.}
+\end{ejemplo}
+
+\textit{Solución}. Para iniciar, hagamos que $S=\displaystyle{\int \sec ^{3}\theta d\theta=\int \sec\theta \sec^{2}\theta d\theta}$. Al aplicar partes, tenemos
+\begin{align*}
+u&=\sec \theta & dv&=\sec ^{2}\theta d\theta\\
+du&=\sen \theta \tan \theta d\theta & v&=\tan \theta
+\end{align*}
+entonces,
+\begin{align}\label{S}
+S&=\int \sec ^{3}\theta d\theta=\int \sec\theta \sec^{2}\theta d\theta\notag\\
+S&=\sec \theta \tan \theta -\int \sec \theta \tan ^{2}\theta d\theta\notag
+\end{align}
+pero,
+{\small
+\begin{align}
+S&=\sec \theta \tan \theta -\int \sec \theta (\sec ^{2}\theta -1)d\theta\notag\\
+S&=\sec \theta \tan \theta -\underbrace{\int \sec ^{3}\theta d\theta }_{\leftarrow S}+\int\sec \theta d\theta \\
+2S&=\sec \theta \tan \theta +\ln |\sec \theta +\tan \theta |+C\notag\\
+S&=\frac{1}{2}\left(\sec \theta \tan \theta +\ln |\sec \theta +\tan \theta |\right)+D\notag
+\end{align}
+}
+Note que en la línea \eqref{S} aparece la integral inicial; por tanto; podemos manejarla como a las incógnitas en una ecuación lineal y agruparlas a un solo lado de la igualdad para luego despejar. 
+
+\begin{ejemplo}\sl
+\textnormal{Encontremos el valor de} $\displaystyle{\int e^{4x}\cos (2x)dx}$.
+\end{ejemplo}
+\textit{Solución.} Por el método de integración por partes, se tiene
+{\small
+\begin{align*}
+u&=e^{4x} & dv&=\cos (2x)dx \\
+du&=4e^{4x}dx & v&=\frac{1}{2}\sen (2x)
+\end{align*}
+}
+\vspace{-1mm}
+y llamemos $I$ a nuestra integral:
+
+
+\scalebox{0.9}{$
+	\begin{aligned}
+I&=\int e^{4x}\cos (2x)dx\notag\\
+I&=\frac{1}{2}e^{4x}\sen (2x)-\underbrace{\int 2e^{4x}\sen (2x)dx}_{\text{partes nuevamente}}\notag\\
+I&=\frac{1}{2}e^{4x}\sen (2x)-2\left(-\frac{1}{2}e^{4x}\cos(2x)+2\int e^{4x}\cos (2x)dx \right)\notag\\
+I&=\frac{1}{2}e^{4x}\sen (2x)+\frac{2}{2}e^{4x}\cos (2x)-\underbrace{4\int e^{4x}\cos
+	(2x)dx}_{\leftarrow I}\\
+4I+I&=\frac{1}{2}e^{4x}(\sen (2x)+2\cos (2x))\notag\\
+5I&=\frac{1}{2}e^{4x}(\sen (2x)+2\cos (2x))\notag\\
+I&=\frac{1}{10}e^{4x}(\sen (2x)+2\cos (2x))+C\notag
+	\end{aligned}
+	$}
+
+
+\subsection*{Fórmulas de recurrencia para integrales}
+
+El m\'{e}todo de integración por partes, con frecuencia, se usa para obtener algunas f\'{o}rmulas de recurrencia, es decir, expresiones que dependen de un paso anterior para poder encontrarlas.
+\begin{ejemplo}\sl
+\textnormal{Tomemos, por ejemplo, \textit{$\displaystyle{\int \sen ^{n}xdx}$} para \textit{$n$} un número entero y usemos integración por partes.}
+\end{ejemplo}
+\textit{Solución}
+{\small
+\begin{align*}
+A&=\int \sen ^{n}xdx=\int \sen ^{n-1}x\sen xdx\\
+& (u=\sen ^{n-1}x,\ du=(n-1)\sen^{n-2}x\cos x\,dx\text{ y } dv=\sen x\, dx,\ v=-\cos x)\\
+A&=-\sen ^{n-1}x\cos x+\int (n-1)\sen ^{n-2}x\cos ^{2}xdx\\
+A&=-\sen ^{n-1}x\cos x+\int (n-1)\sen ^{n-2}x(1-\sen ^{2}x)dx\\
+A&=-\sen ^{n-1}x\cos x+(n-1)\int \sen ^{n-2}xdx-\underbrace{(n-1)\int \sen ^{n}xdx}_{\leftarrow A}\\
+A&+(n-1)A=-\sen ^{n-1}x\cos x+(n-1)\int \sen ^{n-2}xdx\\
+nA&=-\sen ^{n-1}x\cos x+(n-1)\int \sen ^{n-2}xdx\\
+A&=-\frac{1}{n}\sen ^{n-1}x\cos +\frac{n-1}{n}\int \sen ^{n-2}xdx
+\end{align*}
+}
+Y así se tiene la fórmula de recurrencia:
+\begin{equation}\label{PotSeno}
+\int \sen ^{n}xdx=-\frac{1}{n}\sen ^{n-1}x\cos x+\frac{n-1}{n}\int
+\sen ^{n-2}xdx\ ,\ n\geq 2
+\end{equation}
+
+Veamos el uso de la fórmula \eqref{PotSeno} para algunos valores de $n$:
+{\small
+\begin{align*}
+n&=1 &\rightarrow& &\int \sen xdx&=-\frac{1}{1}\sen^0x\cos x+\frac{0}{1}\int(\sen x)^{-1}dx\\
+& & & & &=-\cos x\\
+n&=2 &\rightarrow& &\int \sen ^{2}xdx&=-\frac{1}{2}\sen ^{2-1}x\cos x+\frac{2-1}{2}\int \sen ^{2-2}xdx\\
+& & & & &=-\frac{1}{2}\sen x\cos x+\frac{1}{2}x\\
+n&=3 &\rightarrow& &\int \sen ^{3}xdx&=-\frac{1}{3}\sen ^{3-1}x\cos x+
+\frac{3-1}{3}\int \sen ^{3-2}xdx\\
+& & & & & =-\frac{1}{3}\sen^{2}x\cos x+\frac{2}{3}\int \sen xdx\\
+& & & & &=-\frac{1}{3}\sen^{2}x\cos x-\frac{2}{3}\cos x
+\end{align*}
+}
+
+\begin{ejemplo}\sl
+\textnormal{Algo similar pasa con} $\displaystyle{\int \cos^{n}xdx}$.
+\end{ejemplo}
+\textit{Solución}
+{\small
+\begin{align*}
+C&=\int \cos ^{n}xdx=\int \cos ^{n-1}x\cos xdx\\
+& (u=\cos ^{n-1}x,\ du=-(n-1)\cos^{n-2}x\sen x\,dx\text{ y } dv=\cos x\, dx,\ v=\sen x)\\
+C&=\cos ^{n-1}x\sen x+\int (n-1)\cos ^{n-2}x\sen ^{2}xdx\\
+C&=\cos ^{n-1}x\sen x+\int (n-1)\cos ^{n-2}x(1-\cos ^{2}x)dx\\
+C&=\cos ^{n-1}x\sen x+(n-1)\int \cos ^{n-2}xdx-\underbrace{(n-1)\int \cos ^{n}xdx}_{\leftarrow C}\\
+C&+(n-1)C=\cos ^{n-1}x\sen x+(n-1)\int \cos ^{n-2}xdx\\
+nC&=\cos ^{n-1}x\sen x+(n-1)\int \cos ^{n-2}xdx
+\end{align*}
+}
+con lo cual
+\begin{equation}\label{PotCoseno}
+\int \cos^{n}xdx=\frac{1}{n}\cos ^{n-1}x\sen x +\frac{n-1}{n}\int \cos ^{n-2}xdx\ ,\ n\geq 2
+\end{equation}
+
+\begin{ejemplo}\sl
+\textnormal{Tomemos ahora} $\displaystyle{ \int \sec ^{n}\theta d\theta}$.
+\end{ejemplo}
+\textit{Solución.}
+Hacemos
+{\small
+\[
+I=\int \sec ^{n}\theta d\theta=\int \sec ^{n-2}\theta \sec ^{2}\theta d\theta
+\]
+}
+y
+\begin{align*}
+u&=\sec ^{n-2}\theta & dv&=\sec ^{2}\theta d\theta \\
+du&=(n-2)\sec ^{n-3}\theta \sec \theta \tan \theta d\theta & v&=\tan \theta
+\end{align*}
+entonces,
+{\small
+\begin{align*}
+I&=\int \sec ^{n}\theta d\theta\\
+I&=\sec ^{n-2}\theta \tan \theta -\int (n-2)\sec ^{n-2}\theta \tan^{2}\theta d\theta\\
+I&=\sec ^{n-2\ }\theta \tan \theta -\int (n-2)\sec ^{n-2\ }\theta (\sec
+^{2}\theta -1)d\theta \\
+I&=\sec ^{n-2\ }\theta \tan \theta -(n-2)\int \sec ^{n\ }\theta d\theta
++(n-2)\int \sec ^{n-2}\theta d\theta \\
+I+(n-2)I&=\sec ^{n-2}\theta \tan \theta +(n-2)\int \sec ^{n-2}\theta d\theta\\
+(n-1)I&=\sec ^{n-2}\theta \tan \theta +(n-2)\int \sec ^{n-2}\theta d\theta\\
+I&=\frac{1}{n-1}\sec ^{n-2}\theta \tan \theta +\frac{n-2%
+}{n-1}\int \sec ^{n-2}\theta d\theta
+\end{align*}
+}
+es decir,
+\[
+\int \sec ^{n}\theta d\theta =\frac{1}{n-1}\sec ^{n-2}\theta \tan \theta +%
+\frac{n-2}{n-1}\int \sec ^{n-2}\theta d\theta\ ,\ n\geq 2
+\]
+
+\begin{ejemplo}\sl
+\textnormal{Procediendo de manera similar a los anteriores casos, el lector puede verificar que}
+\[
+\int \csc ^{n}\theta d\theta=\frac{-1}{n-1}\csc ^{n-2}\theta \cot \theta +\frac{n-2}{n-1}\int \csc ^{n-2}\theta d\theta\ ,\ n\geq 2
+\]
+\end{ejemplo}
+
+\begin{ejemplo}\sl
+\textnormal{Tomemos ahora potencias de \textit{$a+x^{2}$}, con \textit{$a\in\mathbb{R}$}, es decir,} $\displaystyle{\int \left( a+x^{2}\right)^{n}dx }$.
+\end{ejemplo}
+\textit{Solución.} Supongamos que $I=\displaystyle{\int \left( a+x^{2}\right)^{n}dx }$ y hacemos
+\begin{align*}
+u&=\left( a+x^{2}\right)^{n} & dv&=dx \\
+du&=2nx\left( a+x^{2}\right) ^{n-1}dx & v&=x
+\end{align*}
+con ello,
+\begin{align*}
+ I&= \int \left( a+x^{2}\right) ^{n}dx \\
+ I&=x\left( a+x^{2}\right) ^{n}-2n\int \left( a+x^{2}\right) ^{n-1}x^{2}dx\\
+ I&=x\left( a+x^{2}\right) ^{n}-2n\left( \int \left( a+x^{2}\right)
+^{n-1}\left( a+x^{2}-a\right) dx\right) \\
+I&=x\left( a+x^{2}\right) ^{n}-2n\left( \int \left( a+x^{2}\right)
+^{n}dx-a\int \left( a+x^{2}\right) ^{n-1}dx\right) \\
+I&=x\left( a+x^{2}\right) ^{n}-2n\underbrace{\int \left(
+a+x^{2}\right)^{n}dx}_{\leftarrow I}+2an\int \left( a+x^{2}\right) ^{n-1}dx\\
+I+2nI&=x\left( a+x^{2}\right) ^{n}+2an\int \left( a+x^{2}\right) ^{n-1}dx\\
+\left( 2n+1\right) I&=x\left( a+x^{2}\right) ^{n}+2an\int \left(
+a+x^{2}\right) ^{n-1}dx\\
+I&=\frac{1}{2n+1}x\left( a+x^{2}\right)
+^{n}+\frac{2an}{2n+1}\int \left( a+x^{2}\right) ^{n-1}dx
+\end{align*}
+es decir,
+\[
+\int \left( a+x^{2}\right) ^{n}dx=\frac{1}{2n+1}x\left( a+x^{2}\right)
+^{n}+\frac{2an}{2n+1}\int \left( a+x^{2}\right) ^{n-1}dx
+\]
+
+\section{Integración por sustituciones trigonométricas}
+En esta sección se busca dar herramientas que ayuden a afrontar integrales que contengan expresiones de la forma $a^{2}-\left( \beta(x\pm \alpha\right))^{2},\ a^{2}+\left( \beta(x\pm \alpha\right) )^{2}$ y $\left( \beta(x\pm \alpha\right))^{2}-a^{2},$ donde $a, \beta\in\mathbb{R}-\{0\}$ y $\alpha\in \mathbb{R}.$ Estas expresiones se pueden modificar, en un momento dado, hasta convertirlas en una forma más sencilla, por ejemplo, $a^{2}-\left( \beta(x\pm \alpha\right))^{2}$, al sacarse factor común y demás, puede convertirse en una que tenga la forma $\gamma^2-z^2$, donde $z=x\pm \alpha$. Es por ello por lo que en la mayoría de los libros encontramos las sustituciones trigonométricas con expresiones de la forma $a^2-x^2,\ a^2+x^2$ y $x^2-a^2$, para $a\in\mathbb{R}$ y que pueden estar dentro de ciertas funciones que consiguen ser radicales de índice par. Usaremos las propiedades de las funciones trigonométricas, como son las identidades y la forma de sus funciones inversas.
+\vskip0.2cm
+
+Recordemos que las funciones trigonométricas tienen inversa si se restringe su dominio. Por ejemplo, la función seno puede tener inversa en el intervalo $-\frac{\pi}{2}\leq\theta\leq\frac{\pi}{2}$, es decir, si en algún caso $x=2\sen \theta$, entonces podemos despejar $\theta$ y escribir $\sen^{-1}(x/2)=\theta$ siempre y cuando $-\frac{\pi}{2}\leq\theta\leq\frac{\pi}{2}$. Ahora bien, ese intervalo no es único. Podríamos hacer el despeje también si $\frac{3\pi}{2}\leq\theta\leq\frac{5\pi}{2}$.
+\vskip0.2cm
+
+Por otro lado, dado que se tendrán expresiones que involucran raíces cuadradas, por ejemplo, $\sqrt{x^2-9}$, en donde haremos la sustitución $x=3\sec\theta$, necesitamos que $0\leq\theta<\frac{\pi}{2}\cup \frac{\pi}{2}<\theta\leq\pi$ para que la inversa de secante exista. Además, buscaremos que la tangente que aparece en algún momento sea positiva. En algunos casos también tomaremos $0\leq\theta<\frac{\pi}{2}$para conseguir signos positivos de la secante según sea el caso.
+
+En las líneas de adelante precisamos los párrafos anteriores.
+
+\subsection*{Sustitución trigonométrica seno}
+
+Recordemos que las funciones seno y coseno cumplen la identidad $\cos^2x=1-\sen^2x$; entonces, si una integral tiene la forma
+\[
+\int F(a^{2}-\left( \beta(x\pm \alpha\right) )^{2})dx
+\]
+puede tomarse la sustituci\'{o}n trigonom\'{e}trica \ $\beta(x\pm \alpha)=a\sen
+(\theta )$ con $\frac{-\pi }{2}\leq \theta \leq \frac{\pi }{2}$ (recordemos que el intervalo se toma, ya que la
+funci\'{o}n seno tiene inversa allí). Luego, $\beta dx=a\cos (\theta )d\theta$; entonces, $dx=\cfrac{a\cos (\theta )}{\beta}%
+d\theta $, y, por tanto, \
+\vspace{-2mm}
+\begin{eqnarray*}
+\int F(a^{2}-\left( \beta(x\pm \alpha\right) )^{2})dx &=&\int F(a^{2}-(a\sen
+(\theta ))^{2})\frac{a\cos (\theta )}{\beta}d\theta \\
+&=&\int F(a^{2}-a^{2}\sen ^{2}(\theta ))\frac{a\cos (\theta )}{\beta}d\theta
+\\
+&=&\int F(a^{2}(1-\sen ^{2}(\theta )))\frac{a\cos (\theta )}{\beta}d\theta \\
+&=&\int F(a^{2}(\cos ^{2}(\theta )))\frac{a\cos (\theta )}{\beta}d\theta
+\end{eqnarray*}
+cuya integral final es m\'{a}s sencilla de encontrar.
+
+\begin{ejemplo}\sl
+\textnormal{Calcule} $\displaystyle{\int \frac{x}{\sqrt{25-9(x+3)^{2}}}dx}$
+\end{ejemplo}
+\textit{Solución.} Siguiendo las líneas anteriores,
+\begin{align*}
+\text{si }3\left( x+3\right) &=5\sen\theta\quad \rightarrow\quad \theta =\sen^{-1} \left(\frac{3}{5}(x+3)\right),\ -\frac{\pi }{2}< \theta < \frac{\pi
+}{2}\\
+x&=\frac{5}{3}\sen\theta -3\\
+dx&=\frac{5}{3}\cos \theta d\theta
+\end{align*}
+lo que nos lleva a que
+\begin{align*}
+\sqrt{25-9(x+3)^{2}}&=\sqrt{25-(3\left( x+3\right) )^{2}}=\sqrt{%
+25-25\sen^{2}\theta }\\
+&=\sqrt{25\left( 1-\sen^{2}\theta \right) }=5\sqrt{\cos
+^{2}\theta }=5\cos \theta
+\end{align*}
+y la integral se convierte en
+{\small
+\begin{align*}
+\int \frac{xdx}{\sqrt{25-9(x+3)^{2}}}&=\int \frac{\left( \frac{5}{3}\sen\theta -3\right) \frac{5}{3}\cos \theta d\theta }{5\cos \theta }=\frac{1}{3}\int \left( \frac{5}{3}\sen\theta -3\right) d\theta\\
+&=-\frac{5}{9}\cos\theta-\theta+C =-\frac{5\cos\theta}{9}-\theta+C \\
+&=-\frac{\sqrt{25-9(x+3)^{2}}}{9}-\sen^{-1}\left( \frac{3}{5}\left( x+3\right) \right) +C
+\end{align*}
+}
+
+Para tener las expresiones del último renglón, se parte de la sustitución $3(x+3) = 5 \sen\theta$ o
+$3(x+3)/5= \sen\theta$, y se procede usando el triángulo rectángulo (recuerde que seno es cateto
+opuesto sobre hipotenusa) o con identidades:
+
+\vskip0.2cm
+\noindent
+\begin{minipage}{\textwidth}
+	\centering
+	\captionof{figure}{Triángulo rectángulo de la sustitución}
+	\begin{minipage}{0.37\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{Gráficas/TriangSustSeno5_3.eps}
+	\end{minipage}
+	\hspace{1em}
+	
+	\vspace{0.3em}
+	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboración propia.}
+\end{minipage}
+\vskip0.2cm
+
+%\begin{center}--------
+%\includegraphics[scale=0.35]{TriangSustSeno5_3}
+%\textbf{Figura:} elaboración propia
+%\end{center}
+
+\begin{ejemplo}\sl
+\textnormal{Eval\'{u}e la integral} $\displaystyle{\int \frac{1-x}{-20-4x^{2}+24x}dx}$.
+\end{ejemplo}
+\textit{Solución.} Completando el trinomio cuadrado perfecto para $20-4x^{2}+24x,$ se tiene
+{\small
+\begin{align*}
+-20-4x^{2}+24x&=-20-4(x^{2}-6x)=-20-4(x^{2}-6x+(3)^{2}-(3)^{2}) \\
+&=-20-4(x^{2}-6x+9-9)=-20-4((x-3)^{2}-9)\\
+&=-20-4(x-3)^{2}+36=16-4(x-3)^{2}\\
+&=4^{2}-(2(x-3))^{2}
+\end{align*}
+}
+Luego,
+
+\scalebox{0.8}{$
+	\begin{aligned}
+\int \frac{1-x}{-20-4x^{2}+24x}dx&=\int \frac{(1-x)dx}{%
+	16-(2(x-3))^{2}}=\int \frac{(1-x)dx}{16-4(x-3)^{2}}=\frac{1}{4}\int \frac{%
+	(1-x)dx}{4-(x-3)^{2}}
+	\end{aligned}
+	$}
+
+\vskip0.5cm
+
+As\'{\i}; entonces, tomando la sustituci\'{o}n $x-3=2\sen(\theta ),$ con $\frac{-\pi }{2}< \theta < \frac{\pi }{2}$ y $dx=2\cos (\theta
+)d\theta$, y dado que $x-3=2\sen(\theta )$ o, mejor, $x=2\sen(\theta )+3$,
+
+\scalebox{0.8}{$
+	\begin{aligned}
+\int& \frac{(1-x)dx}{16-(2(x-3))^{2}}=\frac{1}{4}\int \frac{%
+	1-(2\sen(\theta )+3)}{4-(2\sen(\theta ))^{2}}(2\cos (\theta ))d\theta
+=\frac{1}{2}\int \frac{-2-2\sen(\theta )}{4(1-\sen^{2}(\theta ))}\cos (\theta )d\theta\\
+&=\frac{-1}{4}\int \frac{1+\sen(\theta )}{\cos
+	^{2}(\theta )}\cos (\theta )d\theta=\frac{-1}{4}\int \frac{1+sen(\theta )}{\cos
+	(\theta )}d\theta
+=\frac{-1}{4}\int \left( \frac{1}{\cos (\theta )}+
+\frac{\sen(\theta )}{\cos (\theta )}\right) d\theta\\
+&=\frac{-1}{4}\int \left( \sec (\theta )+\tan (\theta
+)\right) d\theta
+=\frac{-1}{4}\left( \ln \left\vert \sec (\theta
+)+\tan (\theta )\right\vert +\ln \left\vert \sec (\theta )\right\vert
+\right) +C\\
+&=\frac{-1}{4}\left( \ln \left\vert (\sec (\theta
+)+\tan (\theta ))\sec (\theta )\right\vert \right) +C=\frac{-1}{4}\left( \ln \left\vert \sec ^{2}(\theta
+)+\tan (\theta )\sec (\theta )\right\vert \right) +C\\
+&%\int \frac{(1-x)dx}{16-(2(x-3))^{2}}
+=\frac{-1}{4}\left( \ln \left\vert
+\sec ^{2}(\theta )+\tan (\theta )\sec (\theta )\right\vert \right) +C \\
+%\end{align*}
+%\begin{align*}
+& =\frac{-1}{4}\left( \ln \left\vert \left( \frac{%
+	2}{\sqrt{4-(x-3)^{2}}}\right) ^{2}+\frac{(x-3)}{\sqrt{4-(x-3)^{2}}}%
+\frac{2}{\sqrt{4-(x-3)^{2}}} \right\vert \right) +C\\
+%&=\frac{-1}{4}\left( \ln \left\vert \frac{4}{\left(\sqrt{%4-(x-3)^{2}}\right)^{2}}+\frac{2(x-3)}{\left(\sqrt{4-(x-3)^{2}}\right)^{2}}\right\vert\right) +C\\
+&=\frac{-1}{4}\left( \ln \left\vert \frac{4+2(x-3)}{
+	4-(x-3)^{2}}\right\vert \right) +C=\frac{-1}{4}\left( \ln \left\vert \frac{%
+	2(2+(x-3))}{4-(x-3)^{2}}\right\vert \right) +C\\
+&=\frac{-1}{4}\left(\ln 2+\ln \left\vert \frac{(2+(x-3))}{4-(x-3)^{2}}\right\vert \right) +C\ (\text{recuerde que $\ln(ab)=\ln a+\ln b$})\\
+&=\frac{-1}{4}\left( \ln \left\vert \frac{2+x-3}{%
+	4-(x-3)^{2}}\right\vert \right) +D\ (\text{acá, $D=-\frac{1}{4}\ln2+C$})\\
+&=\ln \left( \left\vert \frac{x-1}{4-(x-3)^{2}}\right\vert \right) ^{\frac{-1}{4}}+D%\\
+%&
+=\ln \frac{1}{\left( \left\vert \frac{x-1}{4-(x-3)^{2}}\right\vert \right) ^{\frac{1}{4}}}+D\\
+&=\ln \left\vert \frac{4-(x-3)^{2}}{x-1}\right\vert ^{%
+	\frac{1}{4}}+D%\\
+%&
+=\ln \left\vert \frac{(2+x-3)(2-x+3)}{x-1}\right\vert
+^{\frac{1}{4}}+D\\
+&=\ln \left\vert \frac{(x-1)(5-x)}{x-1}\right\vert ^{\frac{1}{4}}+D%\\
+%&
+=\ln \left\vert 5-x\right\vert ^{\frac{1}{4}}+D
+	\end{aligned}
+	$}
+
+\vskip0.2cm
+
+Para tener las expresiones del último renglón, se parte de la sustitución $x=4\sen\theta$ o $\dfrac{x}{4}=\sen\theta$ y se procede ya sea con identidades o usando el triángulo rectángulo (recuerde que seno es cateto opuesto sobre hipotenusa):
+%\clearpage
+
+\vskip0.2cm
+\noindent
+\begin{minipage}{\textwidth}
+	\centering
+	\captionof{figure}{Triángulo en la sustitución}
+	\begin{minipage}{0.34\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{Gráficas/TriangSustSeno.eps}
+	\end{minipage}
+	\hspace{1em} 
+	
+	\vspace{0.3em}
+	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboración propia.}
+\end{minipage}
+\vskip0.2cm
+
+%\begin{center}-------
+%\centerline{ \graf{Triángulo en la sustitución}}
+%\includegraphics[scale=0.4]{TriangSustSeno}
+%\textbf{Fuente:} elaboración propia
+%\end{center}
+
+\vskip0.2cm
+\begin{ejemplo}\sl \textnormal{Calcule} $\displaystyle{\int \frac{\sqrt{16-x^{2}}}{x}dx}$.
+\end{ejemplo}
+\textit{Solución.} Si $x=4\sen \theta $, con $\theta\in \left[\frac{-\pi }{2},\frac{\pi }{2}\right]-\{0\}$, entonces $dx=4\cos \theta d\theta $ y
+\vskip0.2cm
+\scalebox{0.9}{$
+	\begin{aligned}
+\sqrt{16-x^{2}}&=\sqrt{16-16\sen ^{2}\theta }=\sqrt{16(1-\sen ^{2}\theta )} =4\sqrt{\cos ^{2}\theta}=4|\cos ^{2}\theta |=4\cos \theta
+	\end{aligned}
+	$}
+\vskip0.2cm
+entonces,
+{\small
+\begin{align*}
+\int \frac{\sqrt{16-x^{2}}}{x}dx&=\int \frac{4\cos \theta \cos \theta d\theta }{4\sen \theta } =4\int \frac{\cos ^{2}\theta }{\sen \theta }d\theta %\\
+%&
+=4\int \frac{1-\sen ^{2}\theta }{\sen \theta }d\theta %\\
+\end{align*}
+}
+
+{\footnotesize
+\begin{align*}
+&=4\int \left(\frac{1}{\sen \theta }-\sen \theta \right)d\theta=4\int\csc\theta-\sen \theta d\theta\\
+&=4(\ln |\csc \theta -\cot \theta |+\cos \theta)+C
+=4\left(\ln \left|\frac{4}{x}-\frac{\sqrt{16-x^{2}}}{x}\right|+\frac{\sqrt{16-x^{2}}}{4}\right)+C
+\end{align*}
+}
+
+\noindent
+\begin{minipage}{\textwidth}
+	\centering
+	\captionof{figure}{Triángulo en la sustitución}
+	\begin{minipage}{0.28\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{Gráficas/TriangSustSeno2.eps}
+	\end{minipage}
+	\hspace{1em}
+	
+	\vspace{0.3em}
+	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboración propia.}
+\end{minipage}
+
+
+
+
+%\begin{center}--------
+%\centerline{ \graf{Triángulo en la sustitución}}
+%\includegraphics[scale=0.35]{TriangSustSeno2}
+%\textbf{Fuente:} elaboración propia
+%\end{center}
+\vskip0.4cm
+\begin{ejemplo}\sl
+\textnormal{Calcule} $\displaystyle{\int_{0}^{\ln \sqrt{2}}\frac{e^{z}dz}{\left( 4-e^{2z}\right) ^{\frac{3}{2}}}}$.
+\end{ejemplo}
+\textit{Solución.} En este caso, $e^{z}=2\sen\theta$, para $\frac{\pi }{6}\leq \theta \leq \frac{\pi }{4}$, es decir,
+\begin{equation}\label{theta}
+\theta=\sen^{-1}\left(\frac{1}{2}e^{z}\right)
+\end{equation}
+y también, al derivar $e^z=2\sen\theta$, se tiene $e^{z}dz=\cos \theta d\theta$. Por otro lado,
+\[
+\left( 1-e^{2z}\right)^{\frac{3}{2}}=\left( 1-(e^{z})^2\right)^{\frac{3}{2}}=\left( 1-\sen^{2}\theta \right) ^{\frac{3}{2}}=\left( \cos^{2}\theta \right) ^{\frac{3}{2}}=\cos ^{3}\theta \]
+Ahora bien, la integral que nos dieron es definida; entonces, al cambiar de variable los límites van a cambiar. Hagamos ese cambio de límites: si $z=0$, entonces en \eqref{theta}, $\theta =\sen^{-1} \left( \frac{1}{2}e^0\right)=\sen^{-1} \left( \frac{1}{2}\right)=\frac{\pi }{6}$, y si $z=\ln \sqrt{2}$, entonces {\small $\theta=\sen^{-1} \left(\frac{1}{2}e^{\ln\sqrt{2}}\right) =\sen^{-1} \left(\frac{\sqrt{2}}{2}\right) =\frac{\pi }{4}$.} Así,
+{\small
+\begin{align*}
+\int_{0}^{\ln \sqrt{2}}\frac{e^{z}dz}{\left( 1-e^{2z}\right) ^{\frac{3}{2}}}&=\int_{\frac{\pi }{6}}^{\frac{\pi }{4}}\frac{\cos \theta d\theta }{\cos^{3}\theta }=\int_{\frac{\pi }{6}}^{\frac{\pi }{4}}\frac{d\theta }{\cos^{2}\theta } =\int_{\frac{\pi }{6}}^{\frac{\pi }{4}}\sec ^{2}\theta d\theta
+\\
+&= \tan \theta\ \Big|_{\frac{\pi }{6}}^{\frac{\pi }{4}}=\tan \frac{\pi }{4}-\tan \frac{\pi }{6}=1-\frac{\sqrt{3}}{3}
+\end{align*}
+}
+
+\subsection*{Sustitución trigonométrica tangente}
+
+Recordemos que las funciones secante y tangente cumplen la identidad $\sec^2\theta=1+\tan^2\theta$; entonces, si una integral tiene la forma
+\[
+\int F(a^{2}+\left( \beta (x\pm \alpha \right) )^{2})dx\text{ con } \beta \neq 0
+\]
+puede tomarse la sustituci\'{o}n trigonom\'{e}trica \ $\beta (x\pm a)=a\tan
+(\theta )$ con $\frac{-\pi }{2}<\theta <\frac{\pi }{2}$ (recordemos que la
+funci\'{o}n tangente tiene inversa en ese intervalo). Luego, $\beta dx=a\sec ^{2}(\theta)d\theta,$; entonces, $dx=\cfrac{a\sec ^{2}(\theta )}{\beta}d\theta $, y, por tanto,
+\begin{eqnarray*}
+\int (F(a^{2}+\left( \beta (x\pm \alpha \right) )^{2})dx &=&\int
+F(a^{2}+(a(\tan (\theta ))^{2}))\frac{a\sec ^{2}(\theta )}{\beta }d\theta \\
+&=&\int F(a^{2}(1+\tan ^{2}(\theta ))\frac{a\sec ^{2}(\theta )}{\beta }%
+d\theta \\
+&=&\int F(a^{2}(\sec ^{2}(\theta )))\frac{a\sec ^{2}(\theta )}{\beta }%
+d\theta
+\end{eqnarray*}
+con la última integral mucho más fácil de calcular que la original.
+
+\vskip0.3cm
+\begin{ejemplo}\sl \textnormal{Encontremos el valor de} $\displaystyle{\int\frac{\sqrt{4+x^{2}}}{x}dx}$.
+\end{ejemplo}
+\textit{Solución.} Si $x=2\tan \theta $ para $\theta\in \left(-\frac{\pi}{2},\frac{\pi}{2}\right)-\{0\}$, entonces $dx=2\sec ^{2}\theta d\theta $ y
+{\small
+\begin{align*}
+\sqrt{4+x^{2}}&=\sqrt{4+4\tan ^{2}\theta }=\sqrt{4(1+\tan ^{2}\theta )}=2\sqrt{\sec ^{2}\theta }=2|\sec \theta |=2\sec \theta
+\end{align*}
+}
+Notemos que la última igualdad no tiene el valor absoluto porque en el conjunto $\left(-\frac{\pi}{2},\frac{\pi}{2}\right)-\{0\}$ la función secante es positiva.
+
+Con ello,
+\vskip0.3cm
+\scalebox{0.8}{$
+	\begin{aligned}
+\int \frac{\sqrt{4+x^{2}}}{x}dx&=\int \frac{2\sec \theta 2\sec ^{2}\theta }{2\tan \theta }d\theta =\int \frac{2\sec \theta (\tan ^{2}\theta +1)}{\tan \theta }d\theta \\
+&=2\int \left(\frac{\sec \theta \tan ^{2}\theta }{\tan \theta }+\frac{\sec \theta}{\tan \theta }\right)d\theta
+=2\int \left( \sec \theta\tan\theta +\csc \theta\right) d\theta\\
+&=2\left( \sec\theta+\ln\vert\csc\theta-\cot\theta\vert\right) +C=2\left( \frac{\sqrt{4+x^2}}{2}+\ln\left\vert \frac{x^2+4}{x}-\frac{2}{x}\right\vert\right) +C
+	\end{aligned}
+	$}
+
+\vskip0.3cm
+Para tener las expresiones del último renglón, se parte de la sustitución $x=2\tan\theta$ o $\frac{x}{2}=\tan\theta$ y se procede ya sea con identidades o usando el triángulo rectángulo (recuerde que tangente es cateto opuesto sobre cateto adyacente):
+
+\vskip0.3cm
+\noindent
+\begin{minipage}{\textwidth}
+	\centering
+	\captionof{figure}{Triángulo con los datos de la sustitución}
+	\begin{minipage}{0.28\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{Gráficas/SustTrigonTang.eps}
+	\end{minipage}
+	
+	\vspace{0.3em}
+	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboración propia.}
+\end{minipage}
+
+
+%\begin{center}---------
+%\centerline{ \graf{Triángulo con los datos de la sustitución}}
+%\includegraphics[scale=0.3]{SustTrigonTang}
+%\textbf{Fuente:} elaboración propia
+%\end{center}
+\vskip0.3cm
+\begin{ejemplo}\sl \textnormal{Hallemos el valor de} $\displaystyle{\int_{0}^{1}\frac{x^{2}}{\sqrt{1+x^{2}}^{\,3}}dx}$.
+\end{ejemplo}
+\textit{Solución.} Si $x=\tan \theta $ para $0\leq\theta\leq\frac{\pi}{4}$, entonces $dx=\sec ^{2}\theta d\theta $ y $\theta =\tan^{-1} x $.\\
+
+Cambiando los límites de integración, si $x=0, \theta =\tan^{-1} 0 =0 $, y si $x=1, \theta =\tan^{-1} 1 =\frac{\pi}{4} $. Ahora la raíz se transforma:
+{\small
+\begin{align*}
+\sqrt{1+x^{2}}^{\,3}
+=\sqrt{1+\tan ^{2}\theta}^{\,3}
+=\sqrt{\sec ^{2}\theta }^{\,3}=|\sec\theta|^{3}
+=\sec^{3} \theta
+\end{align*}
+}
+Con ello, la integral se convierte en
+
+{\small
+\begin{align*}
+\int_{0}^{1}&\frac{x^{2}}{\sqrt{1+x^{2}}^{3}}dx=\int_{0}^{\frac{\pi}{4}}\frac{\tan^{2}\theta\sec^{2}\theta d\theta}{\sec^{3}\theta}
+=\int_{0}^{\frac{\pi}{4}}\frac{\tan^{2}\theta d\theta}{\sec\theta}
+=\int_{0}^{\frac{\pi}{4}}\frac{(\sec^{2}\theta-1) d\theta}{\sec\theta}\\
+&=\int_{0}^{\frac{\pi}{4}}(\sec\theta-\cos\theta) d\theta
+=\left( \ln\vert\sec\theta+\tan\theta\vert-\sin\theta \right)\big|_{0}^{\frac{\pi}{4}}= \ln\vert\sqrt{2}+1\vert-\frac{\sqrt{2}}{2}
+\end{align*}
+}
+
+\subsection*{Sustitución trigonométrica secante}
+De manera similar a las dos anteriores secciones, recordemos que las funciones secante y tangente cumplen la identidad $\tan^2\theta=\sec^2\theta-1$; entonces, si una integral tiene la forma
+{\small
+\[
+\int F(\left( \beta (x\pm \alpha \right) )^{2}-a^{2})dx\text{ con } \beta\neq 0
+\]
+}
+puede tomarse la sustituci\'{o}n trigonom\'{e}trica\ $\beta (x\pm a)=a\sec(\theta )$ con $0\leq \theta <\frac{\pi }{2}$ o $\pi \leq \theta <\frac{3\pi}{2}$ (la funci\'{o}n secante tiene inversa en este intervalo). Luego, $\beta dx=a\sec \theta \tan \theta d\theta$ y, con ello, $dx=\cfrac{a\sec \theta\tan \theta }{\beta }d\theta $. Por tanto,
+{\small
+\begin{eqnarray*}
+\int F(\left( \beta (x\pm \alpha \right) )^{2}-a^{2})dx &=&\int F((a\sec\theta)^{2}-a^{2})\frac{a\sec \theta\tan \theta}{\beta }d\theta
+\\
+&=&\int F(a^{2}(\sec ^{2}\theta-1))\frac{a\sec \theta\tan\theta}{%
+\beta }d\theta \\
+&=&\int F(a^{2}\tan ^{2}\theta )\frac{a\sec \theta\tan\theta}{%
+\beta }d\theta
+\end{eqnarray*}
+}
+
+cuya integral última es m\'{a}s sencilla, como antes.
+
+\begin{ejemplo}\sl \textnormal{Encontremos el valor de} $\displaystyle{\int\frac{dx}{\sqrt{x^{2}-9}}}$.
+\end{ejemplo}
+
+\textit{Solución.} Si $x=3\sec \theta $ para $0< \theta <\pi/2\ \cup\ \pi< \theta< 3\pi/2$, entonces $dx=3\sec\theta\tan\theta d\theta $ y
+{\small
+\begin{align*}
+\sqrt{x^{2}-9}&=\sqrt{9\sec ^{2}\theta-9 }=\sqrt{9(\sec ^{2}\theta-1 )}\\
+&=3\sqrt{\tan ^{2}\theta }=3|\tan\theta |\\
+&=3\tan \theta
+\end{align*}
+}
+Con ello,
+{\small
+\begin{align*}
+\int\frac{dx}{\sqrt{x^{2}-9}}
+&=\int \frac{3\sec\theta\tan\theta }{3\tan \theta }d\theta =\int \sec \theta d\theta
+\\
+&=\ln\vert\sec\theta+\tan\theta\vert +C\\
+&=\ln\left|\frac{x}{3}+\frac{\sqrt{x^{2}-9}}{3}\right| +C
+\end{align*}
+}
+
+Para tener las expresiones del último renglón, se parte de la sustitución $x=3\sec\theta$ o $\dfrac{x}{3}=\sec\theta$ y se procede ya sea con identidades o usando el triángulo rectángulo (recuerde que secante es hipotenusa sobre cateto adyacente):
+%\newpage
+%\vspace{-0.6cm}
+
+\noindent
+\begin{minipage}{\textwidth}
+	\centering
+	\captionof{figure}{Triángulo con los datos de la sustitución}
+	\begin{minipage}{0.35\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{Gráficas/SustTrigonSec}
+	\end{minipage}
+	\hspace{1em} 
+	
+	\vspace{0.3em}
+	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboración propia.}
+\end{minipage}
+
+
+%\begin{center}--------
+%\centerline{ \graf{Triángulo con los datos de la sustitución}}
+%\includegraphics[scale=0.3]{SustTrigonSec}
+%\textbf{Fuente:} elaboración propia
+%\end{center}
+\vskip0.3cm
+\begin{ejemplo}\sl \textnormal{Encontremos el valor de} {\small $\displaystyle{\int e^{t} \sqrt{e^{2t}-100}dt}$.}
+\end{ejemplo}
+
+\textit{Solución.} Si $e^{t}=10\sec \theta $ para $0\leq \theta <\pi/2$, entonces $e^{t}dt=10\sec\theta\tan\theta d\theta $ y
+{\small
+\begin{align*}
+\sqrt{(e^{t})^{2}-100}&=\sqrt{100\sec ^{2}\theta-100 }=\sqrt{100(\sec ^{2}\theta-1 )} \\
+&=10\sqrt{\tan ^{2}\theta }=10|\tan\theta |
+=10\tan \theta
+\end{align*}
+}
+Con ello,
+{\footnotesize
+\begin{align*}
+\int& e^{t} \sqrt{e^{2t}-100}dt
+=\int10\tan \theta10\sec\theta\tan\theta d\theta d\theta
+=100\int \tan^{2}\theta \sec \theta d\theta \\
+&=100\int (\sec^{2}\theta-1) \sec \theta d\theta
+=100\int (\sec^{3}\theta-\sec \theta) d\theta \\
+&=100\left(\frac{1}{2}(\sec\theta\tan\theta+\ln\vert\sec\theta+\tan\theta\vert))-\ln\vert\sec\theta+\tan\theta\vert\right) +C\\
+&=50(\sec\theta\tan\theta-\ln\vert\sec\theta+\tan\theta\vert)+C\\
+&=50\left (\frac{e^{t}}{10}\frac{\sqrt{e^{2t}-100}}{10}-\ln\left|\frac{e^{t}}{10}+\frac{\sqrt{e^{2t}-100}}{10}\right|\right) +C
+\end{align*}
+}
+
+Las expresiones del último renglón se obtienen partiendo de la sustitución {\small $\dfrac{e^{t}}{10}=\sec\theta$} y se procede ya sea con identidades o usando el triángulo rectángulo (recuerde que secante es hipotenusa sobre cateto adyacente):
+\vskip0.3cm
+\noindent
+\begin{minipage}{\textwidth}
+	\centering
+	\captionof{figure}{Triángulo con los datos de la sustitución}
+	\begin{minipage}{0.35\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{Gráficas/SustTrigonSec2.eps}
+	\end{minipage}
+	\hspace{1em}
+	
+	\vspace{0.3em}
+	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboración propia.}
+\end{minipage}
+
+
+%\begin{center}---------
+%\centerline{ \graf{Triángulo con los datos de la sustitución}}
+%\includegraphics[scale=0.35]{SustTrigonSec2}
+%\textbf{Fuente:} elaboración propia
+%\end{center}
+\vskip0.3cm
+\begin{ejemplo}\sl
+\textnormal{Encontremos el valor de} $\displaystyle{\int_{1}^{\sqrt{2}}\frac{\sqrt{x^{2}-1}}{x}dx}$.
+\end{ejemplo}
+
+\textit{Solución.} Tomando $x=\sec \theta $ con $\theta \in \left[ 0,\frac{\pi }{%
+4}\right],$ entonces $\theta =\sec^{-1}\left( x\right)$ y $dx=\sec \theta \tan \theta d\theta $.
+
+Si $x=1$, entonces $\theta =\sec ^{-1}\left( 1\right) =0$, y si $x=\sqrt{2}$, entonces $\theta =\sec ^{-1}\left( \sqrt{2}\right) =\frac{\pi }{4}$. Con ello,
+{\footnotesize
+\begin{eqnarray*}
+\int_{1}^{\sqrt{2}}\frac{\sqrt{x^{2}-1}}{x}dx &=& \int_{0}^{\frac{\pi }{4%
+}} \frac{\sqrt{%
+\sec ^{2}\left( \theta \right) -1}}{\sec \left( \theta \right) }\sec \left(
+\theta \right) \tan \left( \theta \right) d\theta \\
+&=&\int_{0}^{\frac{\pi }{4}} \tan \left( \theta \right) \sqrt{\tan ^{2}\left( \theta
+\right) }d\theta =\int_{0}^{\frac{\pi }{4}} \tan \left(
+\theta \right) \sqrt{\tan ^{2}\left( \theta \right) }d\theta
+\end{eqnarray*}
+}
+Como $\tan \left( \theta \right) >0$ cuando $\theta \in \left[ 0,\frac{\pi }{%
+4}\right] $, entonces la integral anterior se ve de la siguiente manera:
+{\small
+\begin{eqnarray*}
+&=&\int_{0}^{\frac{\pi }{4}} \tan ^{2}\left( \theta \right) d\theta =\int_{0}^{\frac{\pi }{4}} \left( \sec ^{2}\left( \theta \right) -1\right)
+d\theta=\left( \tan \left( \theta \right)-\theta \right)\big|_{0}^{\frac{\pi }{4}} \\
+&=&\tan \left( \frac{\pi }{4}\right) -\frac{\pi }{4}-\left( \tan \left(
+0\right) -0\right) =1-\frac{\pi }{4}
+\end{eqnarray*}
+}
+entonces
+\[
+\int_{1}^{\sqrt{2}}\frac{\sqrt{x^{2}-1}}{x}dx=1-\frac{\pi }{4}
+\]
+
+\section{Integración por fracciones parciales}
+
+En esta sección se toman fracciones racionales {\footnotesize $\cfrac{p(x)}{q(x)}$,} es decir, fracciones que se forman con dos polinomios $p$ y $q$ con $q\ne0$. Según el grado de los polinomios, la fracción puede simplificarse de maneras diferentes. Por ejemplo, si el grado $q(x)$ es menor o igual que el grado de $p(x)$, entonces puede hacerse la división de $p(x)$ entre $q(x)$ y escribir
+\[
+\frac{p(x)}{q(x)}=c(x)+\frac{r(x)}{q(x)}
+\]
+con $c$ y $r$ polinomios y el grado de $r$ menor al de $q$. Por ejemplo, si tenemos la fracción $\cfrac{x^3+2x^2-5}{x^2+3x-1}$, podemos hacer la división,
+\def\arraystretch{1.5}
+\[
+\begin{array}{c|c} % Definición de dos columnas separadas por una línea vertical
+	\begin{array}{rcccl} % Primera sub-tabla: El dividendo y los restos
+		x^3 & + & 2x^2 & - & 5 \\
+		-x^3 & - & 3x^2 & + & x \\
+		\cline{1-5}
+		& - & x^2 & + & x-5 \\
+		& & x^2 & + & 3x-1 \\
+		\cline{2-5}
+		& & & 4x & -6 \\
+	\end{array}
+	&
+	\begin{array}{rcccl} % Segunda sub-tabla: El divisor y el cociente
+		x^2 & + & 3x & - & 1 \\
+		\cline{1-5}
+		x & - & 1 & &
+	\end{array}
+\end{array}
+\]
+con lo cual tenemos
+\[
+\cfrac{x^3+2x^2-5}{x^2+3x-1}=x-1+\frac{4x-6}{x^2+3x-1}
+\]
+es decir, la fracción original se descompone en fracciones más simples. Veamos cómo se simplificaría la segunda fracción; mejor dicho, tomemos fracciones en las que el numerador tenga grado menor que el denominador. Para ello tenemos varios casos.
+
+\subsection*{Caso I: en $\frac{p(x)}{q(x)}$, el grado de $p$ es menor que el grado de $q$ y además $q$ se factoriza en factores lineales distintos}
+
+Supongamos, entonces, que $q(x)=(a_1x+b_1)(a_2x+b_2)\cdots(a_nx+b_n)$ con factores (lineales) diferentes y $a_1,\ a_2,\ \ldots,\ a_n$ diferentes de cero. Entonces {\scriptsize $\cfrac{p(x)}{q(x)}$} se descompone en fracciones parciales de la forma
+\begin{align}\label{FraccLinDif}
+\frac{p(x)}{q(x)}&=\frac{p(x)}{(a_1x+b_1)(a_2x+b_2)\cdots(a_nx+b_n)}\notag\\
+&=\frac{A_1}{a_1x+b_1}+\frac{A_2}{a_2x+b_2}+\ldots+\frac{A_n}{a_nx+b_n}
+\end{align}
+con $A_1,\ A_2,\ldots,\ A_n$ constantes.
+
+Cuando busquemos calcular la integral, la descomposición facilita los cálculos, pues
+{\small
+\begin{align*}
+\int \frac{p(x)}{q(x)}dx&=\int\frac{A_1}{a_1x+b_1}dx+\int\frac{A_2}{a_2x+b_2}dx
++\ldots+\int\frac{A_n}{a_nx+b_n}dx\\
+&=\frac{A_1}{a_1}\ln\vert a_1x+b_1\vert+\frac{A_2}{a_2}\ln\vert a_2x+b_2\vert+\ldots+\frac{A_n}{a_n}\ln\vert a_nx+b_n\vert+C
+\end{align*}
+}
+
+\begin{ejemplo}\sl
+\textnormal{Calcule} $\displaystyle{\int \frac{x^{2}dx}{(x-1)(x+1)(x-2)}}$.
+\end{ejemplo}
+\textit{Solución.} El denominador ya está factorizado y, efectivamente, tiene grado mayor que el numerador. Entonces, la descomposición en fracciones parciales del integrando es
+{\small
+\begin{equation}\label{EjemFraccDesc}
+\frac{x^{2}}{(x-1)(x+1)(x-2)}=\frac{A}{x-1}+\frac{B}{x+1}+\frac{C}{x-2}
+\end{equation}
+}
+con $A,\ B$ y $C$ constantes. Ahora bien, si calculamos las sumas del lado derecho de la igualdad, tenemos que
+{\footnotesize
+\begin{align}\label{EjemFracc}
+&\frac{x^{2}}{(x-1)(x+1)(x-2)}=\frac{(x+1)(x-2)A+(x-1)(x-2)B+
+(x-1)(x+1)C}{(x-1)(x+1)(x-2)}
+\end{align}
+}
+
+es decir, dos fracciones con el mismo denominador; por tanto, el numerador también debe ser el mismo, es decir,
+\begin{equation}\label{EjemFracc2}
+(x+1)(x-2)A+(x-1)(x-2)B+(x-1)(x+1)C=x^{2}
+\end{equation}
+y esa igualdad debe tenerse para cualquier valor de $x$. Usemos, entonces, valores convenientes de $x$ para hallar el valor de las constantes $A,\ B$ y $C$ para que la descomposición en \eqref{EjemFraccDesc} esté completa. Reemplazamos en \eqref{EjemFracc2} todas las $x$ por valores que, en lo posible, hagan cero algunos términos, por ejemplo $x=-1,\ x=2$ y $x=1$. Entonces:
+
+Si $x=-1$,
+{\small
+\begin{align*}
+(-1+1)(-1-2)A+(-1-1)(-1-2)B+(-1-1)(-1+1)C&=(-1)^{2} \\
+(0)A+(6)B+(0)C&=1 \\
+B&=\frac{1}{6}
+\end{align*}
+}
+
+Si $x=2$,
+\begin{align*}
+(2+1)(2-2)A+(2-1)(2-2)B+(2-1)(2+1)C&=2^{2} \\
+(0)A+(0)B+(3)C&=4 \\
+C&=\frac{4}{3}
+\end{align*}
+
+Si $x=1$,
+\begin{align*}
+(1+1)(1-2)A+(1-1)(1-2)B+(1-1)(1+1)C&=1^{2} \\
+(-2)A+(0)B+(0)C&=1 \\
+A&=-\frac{1}{2}
+\end{align*}
+Entonces \eqref{EjemFraccDesc} se convierte en
+\[
+\frac{x^{2}}{(x-1)(x+1)(x-2)}=\frac{-1/2}{x-1}+\frac{1/6}{x+1}+\frac{4/3}{x-2}
+\]
+con lo cual podemos calcular la integral dada:
+\begin{align*}
+\int &\frac{x^{2}}{(x-1)(x+1)(x-2)}dx=\int\left( \frac{-1/2}{x-1}+\frac{1/6}{x+1}+\frac{4/3}{x-2}\right)\, dx \\
+ &=-\frac{1}{2}\int \frac{1}{x-1}\, dx + \frac{1}{6}\int\frac{1}{x+1}\, dx +\frac{4}{3}\int\frac{1}{x-2}\, dx \\
+ &=-\frac{1}{2}\ln\vert x-1 \vert+\frac{1}{6}\ln\vert x+1 \vert+\frac{4}{3}\ln\vert x-2\vert+C \\
+ &=-\ln\vert x-1 \vert^{1/2}+\ln\vert x+1 \vert^{1/6}+\ln\vert x-2\vert^{4/3}+C \\
+ &=\ln\left\vert\frac{(x+1)^{1/6}(x-2)^{4/3}}{(x-1)^{1/2}} \right\vert+C
+\end{align*}
+
+La forma anterior de calcular los coeficientes en las fracciones parciales
+se puede abreviar, como veremos en el siguiente ejemplo:
+\vskip0.3cm
+\begin{ejemplo}\sl
+\textnormal{Calcular} $\displaystyle\int_{0}^{1}\frac{2x^{2}+10x+14}{\left( x+1\right) \left(
+x+2\right) \left( x+3\right) \left( x+4\right) }dx$
+\end{ejemplo}
+\textit{Solución.} Planteamiento de las fracciones parciales:
+\begin{equation}\label{ejerfracpar2caso1}
+\frac{A}{x+1}+\frac{B}{x+2}+\frac{C}{x+3}+\frac{D}{x+4}=\frac{2x^{2}+10x+14%
+}{\left( x+1\right) \left( x+2\right) \left( x+3\right) \left( x+4\right) }
+\end{equation}
+Multiplicamos \ref{ejerfracpar2caso1} por $x+1$ y luego reemplazamos $x$ por $-1:$
+$$\left( A+\frac{B\left( x+1\right) }{x+2}+\frac{C\left( x+1\right) }{x+3}+%
+\frac{D\left( x+1\right) }{x+4}=\frac{2x^{2}+10x+14}{\left( x+2\right)
+\left( x+3\right) \left( x+4\right) }\right) _{x=-1}$$
+entonces obtenemos
+$$A=\frac{6}{6}=1$$
+Multiplicamos \ref{ejerfracpar2caso1} por $x+2$ y luego reemplazamos $x$ por $-2$%
+; en la parte izquierda solo quedará $B$:
+
+$$B=\left. \frac{2x^{2}+10x+14}{\left( x+1\right) \left( x+3\right) \left(
+x+4\right) }\right\vert _{x=-2}$$
+entonces obtenemos $$B=\frac{2}{-2}=-1$$
+
+Multiplicamos \ref{ejerfracpar2caso1} por $x+3$ y luego reemplazamos $x$ por $-3$%
+; en la parte izquierda solo quedará $C$:
+
+$$C=\left. \frac{2x^{2}+10x+14}{\left( x+1\right) \left( x+2\right) \left(
+x+4\right) }\right\vert _{x=-3}$$ entonces obtenemos $$C=\frac{2}{2}=1$$
+
+Multiplicamos \ref{ejerfracpar2caso1} por $x+4$ y luego reemplazamos $x$ por $-4$%
+; en la parte izquierda solo quedará $D$:
+
+$$D=\left. \frac{2x^{2}+10x+14}{\left( x+1\right) \left( x+2\right) \left(
+x+3\right) }\right\vert _{x=-4}$$ entonces obtenemos $$D=\frac{6}{-6}=-1$$
+
+As\'{\i}, la integral queda
+
+{\footnotesize
+\begin{align*}
+\int_{0}^{1}&\frac{2x^{2}+10x+14}{\left( x+1\right) \left( x+2\right) \left(
+x+3\right) \left( x+4\right) }dx=\int_{0}^{1}\left( \frac{1}{x+1}-\frac{1}{%
+x+2}+\frac{1}{x+3}-\frac{1}{x+4}\right) dx
+\\&=\big( \ln \left\vert
+x+1\right\vert -\ln \left\vert x+2\right\vert +\ln \left\vert x+3\right\vert-\ln \left\vert x+4\right\vert \big)\vert _{0}^{1}
+\\&=\ln \left\vert \frac{\left( x+1\right) \left( x+3\right) }{\left(
+x+2\right) \left( x+4\right) }\right\vert _{0}^{1}=\ln \frac{8}{15}-\ln
+\frac{3}{8}=\ln \frac{64}{45}
+\end{align*}
+}
+
+\subsection*{Caso II: el denominador en $\frac{p(x)}{q(x)}$ se descompone en factores lineales, pero algunos se repiten}\label{repetidos}
+
+Supongamos que la factorización de $q$ tiene el factor $(ax+b)^n$, es decir, el término $ax+b$ se repite $n$ veces y $a\ne0$. Entonces, por cada factor de esa forma, la descomposición es
+\[
+\frac{A_{1}}{(ax+b)}+\frac{A_{2}}{(ax+b)^{2}}+\frac{%
+A_{3}}{(ax+b)^{3}}+\ldots+\frac{A_{n}}{(ax+b)^{n}}
+\]
+Cuando estemos integrando, para $k\ne 1$, usamos la fórmula
+\[
+\int \frac{A}{(ax+b)^{k}}dx=A\int (ax+b)^{-k}dx=\frac{A}{a}\frac{(ax+b)^{-k+1}}{-k+1}
+\]
+Y si $k= 1$,
+\[
+\int \frac{A}{\left( ax+b\right)}dx=\frac{A}{a}\ln\vert ax+b\vert
+\]
+\begin{ejemplo}\sl
+\textnormal{Calcule} $\displaystyle{\int \frac{x^{3}}{(x-2)^{4}}dx}.$
+\end{ejemplo}
+\textit{Solución}. La descomposición en fracciones parciales toma la siguiente forma:
+\begin{align*}
+\frac{x^{3}}{(x-2)^{4}}&=\frac{A}{(x-2)}+\frac{B}{(x-2)^{2}}+%
+\frac{C}{(x-2)^{3}}+\frac{D}{(x-2)^{4}} \\
+&=\frac{(x-2)^{3}A+(x-2)^{2}B+(x-2)C+D}{(x-2)^{4}}
+\end{align*}
+Ahora igualamos numeradores:
+\begin{equation}\label{Ejem2Fracc}
+(x-2)^{3}A+(x-2)^{2}B+(x-2)C+D=x^{3}
+\end{equation}
+y reemplazamos $x$ por valores convenientes:
+
+Si $x=2$,
+\begin{align*}
+(2-2)^{3}A+(2-2)^{2}B+(2-2)C+D&=2^{3} \\
+D&=8
+\end{align*}
+Note que en \eqref{Ejem2Fracc} no es posible reemplazar $x$ por algún otro valor que elimine términos diferentes a los del paso anterior. En este caso, dado que la igualdad se tiene para todo $x$, entonces debe mantenerse con las derivadas, es decir, derivamos con respecto a $x$ ambos lados de \eqref{Ejem2Fracc}\footnote{ Puede también descomponerse el lado izquierdo de \eqref{Ejem2Fracc}, simplificar y luego igualar los coeficientes respectivos de los dos polinomios.}:
+\[
+3(x-2)^{2}A+2(x-2)B+C+0=3x^2
+\]
+y reemplazamos nuevamente a $x$ por $2$ en la anterior igualdad:
+\begin{align*}
+3(2-2)^{2}A+2(2-2)B+C&=3\times2^{2} \\
+C&=12
+\end{align*}
+Derivamos por segunda vez:
+\[
+6(x-2)A+2B+0=6x
+\]
+y reemplazamos una vez más por $2$:
+\begin{align*}
+6(2-2)A+2B&=6\times 2 \\
+B&=6
+\end{align*}
+Y la siguiente derivada nos dice que
+\[
+6A+0=6\ \Rightarrow\ A=1
+\]
+Entonces tenemos que
+{\small
+\begin{align*}
+\int \frac{x^{3}}{(x-2)^{4}}dx&=\int\left( \frac{1}{(x-2)}+\frac{6}{(x-2)^{2}}+%
+\frac{12}{(x-2)^{3}}+\frac{8}{(x-2)^{4}}\right)\, dx\\
+&=\ln |x-2|-\frac{6}{x-2}-\frac{12}{2(x-2)^{2}}-\frac{8}{3(x-2)^{3}}+C\\
+&=\ln |x-2|-\frac{6}{x-2}-\frac{6}{(x-2)^{2}}-\frac{8}{3(x-2)^{3}}+C 
+\end{align*}
+}
+
+\subsection*{Caso III: la factorización del denominador en $\frac{p(x)}{q(x)}$ tiene factores cuadráticos irreducibles}
+
+Recordemos que un término cuadrático $ax^{2}+bx+c$ es irreducible si no se puede factorizar en términos lineales con coeficientes reales, o también si sus raíces son imaginarias (es decir, si $b^2-4ac<0$). Por ejemplo, $x^{2}+4$, $x^{2}+4x+5$, $2x^2+3x+2$, entre otros.
+
+Para la descomposición en fracciones parciales, tenemos en cuenta que por cada factor cuadrático irreducible $ax^2+bx+c$ se tiene un término de la forma {\footnotesize $\cfrac{Ax+B}{ax^2+bx+c}$.} Por ejemplo,
+{\footnotesize
+\[
+\frac{P(x)}{(a_{1}x^{2}+b_{1}x+c_{1})(a_{2}x^{2}+b_{2}x+c_{2})}=\frac{Ax+B}{%
+a_{1}x^{2}+b_{1}x+c_{1}}+\frac{Cx+D}{a_{2}x^{2}+b_{2}x+c_{2}}
+\]
+}
+
+Si los factores cuadráticos son repetidos, la descomposición se hace de manera similar a lo realizado en la sección \ref{repetidos}. Por ejemplo,
+{\footnotesize
+\begin{align*}
+\frac{P(x)}{(a_{1}x^{2}+b_{1}x+c_{1})^{3}}&=\frac{Ax+B}{%
+a_{1}x^{2}+b_{1}x+c_{1}}+\frac{Cx+D}{(a_{1}x^{2}+b_{1}x+c_{1})^{2}}
++\frac{Ex+F}{(a_{1}x^{2}+b_{1}x+c_{1})^{3}}
+\end{align*}
+}
+
+Para integrar, debe completarse cuadrados en el factor irreducible y luego hacer una sustitución o una sustitución trigonométrica.
+
+\vskip0.2cm
+\begin{ejemplo}\sl
+\textnormal{Calcule} $\displaystyle{\int \frac{x+1}{(x^{2}+1)(x^{2}+4)}dx}$.
+\end{ejemplo}
+\textit{Solución.} La descomposición en fracciones parciales del integrando es
+{\small
+\begin{align*}
+\frac{x+1}{(x^{2}+1)(x^{2}+4)}&=\frac{Ax+B}{x^{2}+1}+\frac{Cx+D}{x^{2}+4}\\
+&=\frac{(x^{2}+4)(Ax+B)+(x^{2}+1)(Cx+D)}{(x^{2}+1)(x^{2}+4)}
+\end{align*}
+}
+Al igualar numeradores,
+\[
+(x^{2}+4)(Ax+B)+(x^{2}+1)(Cx+D)=x+1
+\]
+Tengamos en cuenta que en esta igualdad, dado que los factores son irreducibles, no es posible encontrar valores de $x$ que hagan cero algún término, entonces ahora, para encontrar las constantes, descomponemos el lado izquierdo de la igualdad y agrupamos términos:
+\[
+(A+C)x^3+(B+D)x^2+(4A+C)x+4B+D=0x^3+0x^2+x+1
+\]
+Ahora igualamos términos según el coeficiente de potencias de $x$:
+\begin{align}
+\text{Coeficientes de } x^3:& & A+C&=0 \label{Fraccecua1}\\
+\text{Coeficientes de } x^2:& & B+D&=0 \label{Fraccecua2}\\
+\text{Coeficientes de } x\ :& & 4A+C&=1 \label{Fraccecua3}\\
+\text{Coeficientes de } x^0:& & 4B+D&=1 \label{Fraccecua4}
+\end{align}
+y solucionamos el sistema de ecuaciones resultante. Por ejemplo, de
+\eqref{Fraccecua1} y \eqref{Fraccecua3}, $3A=1$, es decir, $A=1/3$. Luego $C=-1/3$. Y de \eqref{Fraccecua2} y \eqref{Fraccecua4}, $3B=1$, es decir, $B=1/3$ y $D=-1/3$. En total, la descomposición de $\cfrac{x+1}{(x^{2}+1)(x^{2}+4)}$ es
+\[
+\frac{x+1}{(x^{2}+1)(x^{2}+4)}=\frac{\frac{1}{3}x+\frac{1}{3}}{%
+x^{2}+1}+\frac{\frac{-1}{3}x-\frac{1}{3}}{x^{2}+4}
+\]
+lo que nos lleva a que la integral es
+
+\resizebox{\textwidth}{!}{$
+	\begin{aligned}
+\int &\frac{x+1}{(x^{2}+1)(x^{2}+4)}dx=\int\left( \frac{\frac{1}{3}x+\frac{1}{3}}{x^{2}+1}+
+\frac{\frac{-1}{3}x-\frac{1}{3}}{x^{2}+4}\right)dx
+=\int \frac{\frac{1}{3}x+\frac{1}{3}}{x^{2}+1}dx+\int \frac{\frac{-1}{3}x-\frac{1}{3}}{x^{2}+4}dx\\
+&=\frac{1}{3}\int \frac{x}{x^{2}+1}dx+\frac{1}{3}\int \frac{1}{x^{2}+1}dx-\frac{1}{3}\int \frac{x}{x^{2}+4}dx-\frac{1}{3}\int \frac{1}{x^{2}+4}dx
+	\end{aligned}
+	$}
+
+\vskip0.3cm
+Ahora bien, las integrales anteriores deben solucionarse haciendo algunas sustituciones. En su orden, la primera integral se soluciona con la sustitución $u=x^{2}+1$, de donde $du=2xdx$ y $\frac{du}{2}=xdx$. Y la tercera integral con la sustitución $z=x^{2}+4,$ $dz=2xdx$ y, as\'{\i}, $\frac{dz}{2}=xdx$.
+
+Por otro lado, la cuarta integral usa una sustitución trigonométrica: $x=2\tan \theta $ para $\theta \in \left( -\frac{\pi }{2},\frac{\pi }{2}\right)$ y de donde $\tan ^{-1}\left( \frac{x}{2}\right) =\theta $ y
+$dx=2\sec ^{2}\left( \theta \right) d\theta $ o usando la tabla de la página \pageref{TablaIntegrales}.
+Por tanto,
+
+\vskip0.3cm
+
+\resizebox{\textwidth}{!}{$
+	\begin{aligned}
+\int \frac{x+1}{(x^{2}+1)(x^{2}+4)}dx&=\frac{1}{3}\int \frac{x}{x^{2}+1}dx+\frac{1}{3}\int \frac{1}{x^{2}+1}dx-\frac{1}{3}\int \frac{x}{x^{2}+4}dx-\frac{1}{3}\int \frac{1}{x^{2}+4}dx\\
+&=\frac{1}{3}\int \frac{du}{2u}+\frac{1}{3}\tan ^{-1}\left( x\right)-\frac{1}{3}\int \frac{x}{x^{2}+4}dx-\frac{1}{3}\int \frac{1}{x^{2}+4}dx\\
+%&=\frac{1}{3}\int \frac{du}{2u}+\frac{1}{3}\tan ^{-1}\left( x\right) -\frac{1%}{3}\int \frac{dz}{2z}-\frac{1}{3}\int \frac{2\sec ^{2}\left( \theta \right)d\theta }{4\tan ^{2}\left( \theta \right) +4}\\
+&=\frac{1}{6}\ln \left\vert u\right\vert +\frac{1}{3}\tan ^{-1}\left(
+x\right) -\frac{1}{3}\int \frac{x}{x^{2}+4}dx-\frac{1}{3}\int \frac{1}{x^{2}+4}dx\\
+%&=\frac{1}{6}\ln \left\vert x^{2}+1\right\vert +\frac{1}{3}\tan ^{-1}\left(x\right) -\frac{1}{6}\ln \left\vert x^{2}+4\right\vert -\frac{1}{3}\int\frac{\sec ^{2}\left( \theta \right) d\theta }{2\left( \sec ^{2}\left(\theta \right) \right) }\\
+&=\frac{1}{6}\ln \left\vert x^{2}+1\right\vert +\frac{1}{3}\tan ^{-1}\left(
+x\right) -\frac{1}{6}\ln \left\vert x^{2}+4\right\vert %-\frac{1}{6}\intd\theta\\
+%&=\frac{1}{6}\ln \left\vert x^{2}+1\right\vert +\frac{1}{3}\tan ^{-1}\left(
+%x\right) -\frac{1}{6}\ln \left\vert x^{2}+4\right\vert -\frac{1}{6}\theta +C\\
+%&=\frac{1}{6}\ln \left\vert x^{2}+1\right\vert +\frac{1}{3}\tan ^{-1}\left(
+%x\right) -\frac{1}{6}\ln \left\vert x^{2}+4\right\vert
+-\frac{1}{6}\tan^{-1}\left( \frac{x}{2}\right) +C\\
+&=\frac{1}{6}\ln \left\vert \frac{x^{2}+1}{x^{2}+4}\right\vert +\frac{1}{3}%
+\tan ^{-1}\left( x\right) -\frac{1}{6}\tan ^{-1}\left( \frac{x}{2}\right) +C
+	\end{aligned}
+	$}
+
+
+
+\section{Fracciones parciales con una sustitución previa}
+En esta sección se muestran algunos ejemplos en los cuales las fracciones parciales se aplican después de haber modificado o reescrito el integrando.
+
+\begin{ejemplo}\sl
+\textnormal{Calcule}
+{\small $\displaystyle{\int \frac{dx}{x+2\sqrt{x}-3}}$.}
+\end{ejemplo}
+\textit{Solución.} Tomemos inicialmente la sustitución {\small $y=\sqrt{x}\rightarrow y^{2}=x\rightarrow 2ydy=dx$,} entonces
+{\small
+\[
+\int \frac{dx}{x+2\sqrt{x}-3}=\int \frac{2ydy}{y^{2}+2y-3}=\int \frac{2ydy}{%
+\left( y+3\right) \left( y-1\right) }
+\]
+}
+
+Esta última puede solucionarse con fracciones parciales:
+{\small
+\[
+\frac{2y}{\left( y+3\right) \left( y-1\right) }=\frac{A}{y+3}+\frac{B}{y-1}=%
+\frac{\left( y-1\right) A+\left( y+3\right) B}{\left( y+3\right) \left(
+y-1\right) }
+\]
+}
+
+es decir, {\small$\left( y-1\right) A+\left( y+3\right) B=2y$.}
+
+Si $y=-3\ \rightarrow\ -4A=-6\ \rightarrow\ A=\frac{3}{2}$.
+
+Si $y=1\ \rightarrow\ 4B=2\ \rightarrow\ B=\frac{1}{2}$.
+
+Entonces
+
+\resizebox{\textwidth}{!}{$
+	\begin{aligned}
+\int \frac{dx}{x+2\sqrt{x}-3}&=\int \frac{2ydy}{\left( y+3\right) \left(
+	y-1\right) }=\int\left(\frac{\frac{3}{2}}{y+3}+\frac{\frac{1}{2}}{y-1}\right) dy\\
+&=\frac{3}{2}\int \frac{1}{y+3}\,dy+ \frac{1}{2}\int\frac{1}{y-1} dy=\frac{3}{2}\ln \left\vert y+3\right\vert +\frac{1}{2}\ln\left\vert y-1\right\vert+C\\
+&=\frac{1}{2}\ln \left\vert \left( y+3\right)^{3}\left( y-1\right) \right\vert+C=\frac{1}{2}\ln \left\vert \left( \sqrt{x}+3\right)^{3}\left( \sqrt{x}%
+-1\right) \right\vert +C
+	\end{aligned}
+	$}
+
+
+
+\begin{ejemplo}
+Calcule $\displaystyle{\int \frac{dx}{x-7\sqrt[3]{x}+6}}$.
+\end{ejemplo}
+\textit{Solución.} Hacemos la sustitución $y=\sqrt[3]{x}\ \rightarrow\ y^{3}=x\ \rightarrow\ 3y^{2}dy=dx$, luego
+\begin{align*}
+\int \frac{dx}{x-7\sqrt[3]{x}+6}&=\int \frac{3y^{2}dy}{y^{3}-7y+6}=\int
+\frac{3y^{2}dy}{\left( y-1\right) \left( y-2\right) \left( y+3\right) }
+\end{align*}
+Ahora descomponemos el integrando en fracciones parciales:
+{\small
+\begin{align*}
+&\frac{3y^{2}}{\left( y-1\right) \left( y-2\right) \left( y+3\right) }=\frac{%
+A}{y-1}+\frac{B}{y-2}+\frac{C}{y+3} \\
+&=\frac{\left( y-2\right) \left(
+y+3\right) A+\left( y-1\right) \left( y+3\right) B+\left( y-1\right) \left(
+y-2\right) C}{\left( y-1\right) \left( y-2\right) \left( y+3\right) }
+\end{align*}
+}
+Igualamos numeradores:
+\[
+\left( y-2\right) \left( y+3\right) A+\left( y-1\right) \left( y+3\right)
+B+\left( y-1\right) \left( y-2\right) C=3y^{2}
+\]
+
+Si $y=1 \rightarrow -4A=3\rightarrow A=-\frac{3}{4}$.
+
+Si $y=2\rightarrow 5B=12\rightarrow B=\frac{12}{5}$.
+
+Si $y=-3\rightarrow 20C=27\rightarrow C=\frac{27}{20}$.
+
+Entonces,
+
+\resizebox{\textwidth}{!}{$
+	\begin{aligned}
+\int &\frac{dx}{x-7\sqrt[3]{x}+6}=\int \frac{3y^{2}dy}{\left( y-1\right) \left( y-2\right) \left( y+3\right) }
+=\int \frac{-\frac{3}{4}}{y-1}dy+\int \frac{\frac{12}{5}}{y-2}dy+\int \frac{%
+	\frac{27}{20}}{y+3}dy \\
+&=-\frac{3}{4}\ln \left\vert y-1\right\vert +\frac{12}{5}%
+\ln \left\vert y-2\right\vert +\frac{27}{20}\ln \left\vert y+3\right\vert+D=\ln \left\vert \frac{\left( y-2\right)^{\frac{12}{5}}\left( y+3\right) ^{
+		\frac{27}{20}}}{\left( y-1\right) ^{\frac{3}{4}}}\right\vert +D\\
+&=\ln \left\vert \frac{\left( \sqrt[3]{x}-2\right)^{\frac{12}{5}}\left(\sqrt[3]{x}+3\right)^
+	{\frac{27}{20}}}{\left(\sqrt[3]{x}-1\right) ^{\frac{3}{4}}}\right\vert +D
+	\end{aligned}
+	$}
+
+\vskip0.2cm
+
+\begin{ejemplo}\sl
+\textnormal{Calcule} $\displaystyle{\int \frac{dx}{\sqrt{x}+\sqrt[4]{x}-2}}$.
+\end{ejemplo}
+\textit{Solución.} La sustitución ahora es $y=\sqrt[4]{x}\rightarrow y^{2}=\sqrt{x}\rightarrow y^{4}=x\rightarrow 4y^{3}dy=dx$. Entonces,
+\begin{align*}
+\int \frac{dx}{\sqrt{x}+\sqrt[4]{x}-2}&=\int \frac{4y^{3}dy}{y^{2}+y-2}\quad \substack{\text{hacemos la división}\\\text{de los polinomios}} \\
+&=\int\left( 4y-4+\frac{12y-8}{y^{2}+y-2}\right)\, dy
+%&=2y^{2}-4y+\int \frac{4y-8}{\left(y+2\right) \left( y-1\right) }dy\quad \substack{\text{ descomponemos en}\\ \text{fracciones parciales}}\\
+%&=2y^{2}-4y+\int \frac{\frac{16}{3}}{y+2}dy+\int \frac{-\frac{4}{3}}{y-1}%
+%dy\\
+%&=2y^{2}-4y+\frac{16}{3}\ln \left\vert y+2\right\vert -\frac{4}{3}\ln
+%\left\vert y-1\right\vert+C\\
+%&=2\sqrt{x}-4\sqrt[4]{x}+\frac{16}{3}\ln \left\vert \sqrt[4]{x}+2\right\vert
+%-\frac{4}{3}\ln \left\vert \sqrt[4]{x}-1\right\vert +C
+\end{align*}
+La primera parte es fácil de integrar:
+\[
+\int (4y-4) dy=2y^{2}-4y=2\sqrt{x}-4\sqrt[4]{x}
+\]
+Recordemos que $y=\sqrt[4]{x}$.
+
+Pero para la segunda usamos fracciones parciales. Su descomposición es la siguiente:
+{\small
+\[
+\frac{12y-8}{y^{2}+y-2}=\frac{12y-8}{\left( y+2\right) \left( y-1\right) }=%
+\frac{A}{y+2}+\frac{B}{y-1}=\frac{A\left( y-1\right) +B\left( y+2\right) }{%
+\left( y+2\right) \left( y-1\right) }
+\]
+}
+de donde $12y-8=A\left( y-1\right) +B\left( y+2\right)$.
+
+Si $y=1$, entonces $12-8=3B$ y $B=\frac{4}{3}$. Si $y=-2$, entonces $-32=-3A$ y $A=\frac{32}{3}$. Con ello, la integral de la segunda parte es
+\begin{align*}
+ \int \frac{12y-8}{y^{2}+y-2}dy&=\int \frac{\frac{32}{3}}{y+2}dy+\int \frac{%
+\frac{4}{3}}{y-1}dy \\
+ &=\frac{32}{3}\ln \left\vert y+2\right\vert +\frac{4}{3}%
+\ln \left\vert y-1\right\vert +C \\
+ &=\frac{32}{3}\ln \left\vert \sqrt[4]{x}+2\right\vert +\frac{4}{3}\ln
+\left\vert \sqrt[4]{x}-1\right\vert +C
+\end{align*}
+Por tanto, la integral completa es
+\[
+\int \frac{dx}{\sqrt{x}+\sqrt[4]{x}-2}=2\sqrt{x}-4\sqrt[4]{x}+\frac{32}{3}\ln \left\vert \sqrt[4]{x}+2\right\vert +\frac{4}{3}\ln
+\left\vert \sqrt[4]{x}-1\right\vert +C
+\]
+
+\section{Integración de funciones racionales seno y coseno}
+
+Las expresiones de la forma {\small $\displaystyle\int \frac{P(\sen x,\cos x)dx}{Q(\sen x,\cos x)}$} donde $P$ y $Q$ son polinomios se llaman una \textit{función racional de seno y coseno}.
+
+La sustitución de Weierstrass nos permite transformar estas integrales en integrales de funciones racionales que se pueden calcular por el método de fracciones parciales.
+
+La sustitución es la siguiente. Tomamos $u=\tan \left(x/2\right)$, con $-\pi<x<\pi$; esto equivale a $\cfrac{x}{2}=\tan^{-1} u$, de donde $x=2\tan^{-1} u$ y $dx=\cfrac{2}{u^{2}+1}du$.
+
+Ahora bien. Queremos manejar expresiones que dependan de seno y coseno. Las anteriores expresiones no dependen explícitamente de seno y coseno. Usemos la información que nos dan las identidades trigonométricas para involucrar senos y cosenos:
+\begin{align*}
+\sen x&=\sen (2(x/2)) =2\sen (x/2)\cos (x/2) =\frac{2\sen (x/2)}{\cos (x/2)}\cos^2(x/2) \\
+&=2\tan (x/2)\frac{1}{\sec ^{2}(x/2)} =\frac{2\tan (x/2)}{\tan ^{2}(x/2)+1} =\frac{2u}{u^{2}+1}
+\end{align*}
+es decir,
+\begin{equation}\label{Senox/2}
+\sen x=\frac{2u}{u^{2}+1}
+\end{equation}
+Por otro lado,
+
+\resizebox{\textwidth}{!}{$
+	\begin{aligned}
+\cos x&=\cos (2(x/2)) =2\cos^2(x/2)- 1=\frac{2}{\sec ^{2}(x/2)}-1 =\frac{2}{\tan ^{2}(x/2)+1}-1\\
+&=\frac{2}{u^{2}+1}-1=\frac{2-u^{2}-1}{u^{2}+1}
+=\frac{1-u^{2}}{1+u^{2}}
+	\end{aligned}
+	$}
+
+
+es decir,
+\begin{equation}\label{Cosenox/2}
+\cos x=\frac{1-u^{2}}{1+u^{2}}
+\end{equation}
+En definitiva, podemos resumir la sustitución de Weierstrass de la siguiente manera:
+\vspace{-5mm}
+\begin{align}\label{Sustitx/2}
+u= & \tan \left(\frac{x}{2}\right),\ -\pi< x<\pi & dx=& \frac{2du}{u^{2}+1} \\
+\sen x= & \frac{2u}{u^{2}+1} & \cos x= & \frac{1-u^{2}}{u^{2}+1}\notag%
+\end{align}
+
+Veamos algunos ejemplos.
+
+\begin{ejemplo}\sl
+\textnormal{Calcule} $\displaystyle\int \frac{dx}{\sen x+3\cos x-1}$.
+\end{ejemplo}
+\vskip0.2cm
+\textit{Solución.} Seguimos las sustituciones en \eqref{Sustitx/2} y la integral se ve así:
+{\small
+\begin{align*}
+\int& \frac{dx}{\sen x+3\cos x-1}=\int \frac{\frac{2}{u^{2}+1}}{\frac{2u}{u^{2}+1}+\frac{3-3u^{2}}{u^{2}+1}-%
+\frac{u^{2}+1}{u^{2}+1}}\, du\quad \left(1=\frac{u^{2}+1}{u^{2}+1}\right) \\
+&=\int \frac{\frac{2}{u^{2}+1}}{\frac{2u+3-3u^{2}-u^{2}-1}{u^{2}+1}}\, du%\\
+%&
+=\int \frac{2}{-4u^{2}+2u+2}\, du=\int \frac{2}{-2(2u^{2}-u-1)}\, du \\
+& %\\
+%&
+=-\int \frac{1}{(u-1)(2u+1)}\, du =-\frac{1}{2}\int \frac{1}{(u-1)(u+\frac{1}{2})}\, du
+\end{align*}
+}
+La integral se convirtió en una integral racional en $u$, la que podemos solucionar usando, por ejemplo, fracciones parciales:
+{\small
+\[
+\frac{1}{(u-1)(u+\frac{1}{2})}=\frac{A}{(u-1)}+\frac{B}{(u+\frac{1}{2})}=%
+\frac{A(u+\frac{1}{2})+B(u-1)}{(u-1)(u+\frac{1}{2})}
+\]
+}
+Encontremos las constantes:
+\[
+A\left(u+\frac{1}{2}\right)+B(u-1)=1
+\]
+Si $u=1\rightarrow \frac{3}{2}A=1\rightarrow A=\frac{2}{3}$.
+
+Si $u=-\frac{1}{2}\rightarrow -\frac{3}{2}B=1\rightarrow B=-\frac{2}{3}$.
+
+Ahora volvemos a la integral:
+{\footnotesize
+\begin{align*}
+\int &\frac{dx}{\sen x+3\cos x-1}=-\frac{1}{2}\int \frac{1}{(u-1)(u+\frac{1}{2})}\, du
+=-\frac{1}{2}\int \left(\frac{\frac{2}{3}}{u-1}-\frac{\frac{2}{3}}{u+\frac{1}{2}}\right )du \\
+&=-\frac{1}{2}\left(\frac{2}{3}\ln |u-1|-\frac{2}{3}\ln \left|u+\frac{1}{2}\right|\right)+D =-\frac{1}{3}\left(\ln |u-1|-\ln \left|u+\frac{1}{2}\right|\right)+D\\
+&=-\frac{1}{3}\ln \left|\frac{u-1}{u+\frac{1}{2}}\right|+D=-\frac{1}{3}\ln \left|\frac{\tan \frac{x}{2}-1}{\tan \frac{x}{2}+\frac{1}{2}}\right|+D
+\end{align*}
+}
+
+\begin{ejemplo}\sl
+\textnormal{Calcule} $\displaystyle{\int \frac{dx}{3\sen x+4\cos x+5}}$.
+\end{ejemplo}
+\textit{Solución.} Recordemos que
+{\small
+\[
+u=\tan \left( \frac{x}{2}\right),\ -\pi<x<\pi,\ dx=\frac{2du}{1+u^{2}},\ \sen x=\frac{2u}{1+u^{2}}\text{ y }\cos x=\frac{1-u^{2}}{1+u^{2}}
+\]
+}
+entonces,
+
+{\footnotesize
+\begin{align*}
+\int \frac{dx}{3\sen x+4\cos x+5}
+&= \int \frac{\frac{2du}{1+u^{2}}}{3\frac{2u}{1+u^{2}} + 4\frac{1-u^{2}}{1+u^{2}} + 5\frac{1+u^{2}}{1+u^{2}}} \\
+&= \int \frac{\frac{2}{1+u^{2}}}{\frac{6u}{1+u^{2}} + \frac{4\!-\!4u^{2}}{1+u^{2}} + \frac{5\!+\!5u^{2}}{1+u^{2}}} \, du \\
+&= \int \frac{\frac{2}{1+u^{2}}}{\frac{6u\!+\!4\!-\!4u^{2}\!+\!5\!+\!5u^{2}}{1+u^{2}}} \, du
+= \int \frac{2}{u^{2}\!+\!6u\!+\!9} \, du
+= \int \frac{2}{(u\!+\!3)^{2}} \, du \\
+&= -\frac{2}{u+3} + C
+= -\frac{2}{\tan\left(\frac{x}{2}\right)\!+\!3} + C
+\end{align*}
+}
+
+\begin{ejemplo}\sl
+\textnormal{Calcule} $\displaystyle{\int \frac{dx}{4\sen x+\cos x+4}}.$
+\end{ejemplo}
+\textit{Solución.} Nuevamente, usamos la sustitución de Weierstrass:
+{\small
+\[
+u=\tan \left( \frac{x}{2}\right),\ -\pi<x<\pi,\ dx=\frac{2du}{1+u^{2}},\ \sen x=\frac{2u}{1+u^{2}}\text{ y }\cos x=\frac{1-u^{2}}{1+u^{2}}
+\]
+}
+y tenemos que la integral es
+{\small
+\begin{align*}
+\int \frac{dx}{4\sen x+\cos x+4}&=\int \frac{\frac{2du}{1+u^{2}}}{4\frac{2u}{1+u^{2}}+\frac{1-u^{2}}{1+u^{2}}%
++4\frac{1+u^{2}}{1+u^{2}}}=\int \frac{\frac{2}{1+u^{2}}}{\frac{%
+8u+1-u^{2}+4+4u^{2}}{1+u^{2}}}\, du\\
+&=\int \frac{2}{3u^{2}+8u+5}=\int \frac{2du}{%
+3\left( u^{2}+\frac{8}{3}u+\frac{5}{3}\right) }\, du\\
+&=\int \frac{2}{3\left( u+1\right) \left( u+\frac{5}{3}\right) }\, du=\frac{2}{3%
+}\int \frac{1}{\left( u+1\right) \left( u+\frac{5}{3}\right) }\, du
+\end{align*}
+}
+Por otro lado, por fracciones parciales,
+{\small
+\[
+\frac{1}{\left( u+1\right) \left( u+\frac{5}{3}\right) }=\frac{A}{u+1}%
++\frac{B}{u+\frac{5}{3}}=\frac{A\left( u+\frac{5}{3}\right) +B\left(
+u+1\right) }{\left( u+1\right) \left( u+\frac{5}{3}\right) }
+\]
+}
+y al igualar numeradores, $A\left( u+\frac{5}{3}\right) +B\left( u+1\right) =1.$
+
+Si $u=-1\rightarrow \frac{2}{3}A=1\rightarrow A=\frac{3}{2}$.
+
+Si $u=-\frac{5}{3}\rightarrow -\frac{2}{3}B=1\rightarrow B=-\frac{3}{2}$.
+
+Y volviendo a la integral,
+{\small
+\begin{align*}
+	\frac{2}{3}\int \frac{1}{(u\!+\!1)(u\!+\!\frac{5}{3})} \, du
+	&= \frac{2}{3}\left( \int \frac{\frac{3}{2}}{u\!+\!1} \, du + \int \frac{-\frac{3}{2}}{u\!+\!\frac{5}{3}} \, du \right) \\
+	&= \frac{2}{3}\left( \frac{3}{2}\ln\left|u\!+\!1\right| - \frac{3}{2}\ln\left|u\!+\!\frac{5}{3}\right| \right) + C \\
+	&= \frac{2}{3} \cdot \frac{3}{2} \left( \ln\left|u\!+\!1\right| - \ln\left|u\!+\!\frac{5}{3}\right| \right) + C \\
+	&= \ln\left| \frac{u\!+\!1}{u\!+\!\frac{5}{3}} \right| + C
+	= \ln\left| \frac{\tan\left(\frac{x}{2}\right)\!+\!1}{\tan\left(\frac{x}{2}\right)\!+\!\frac{5}{3}} \right| + C
+\end{align*}
+}
+En conclusión,
+\[
+\int \frac{dx}{4\sen x+\cos x+4}=\ln \left\vert \frac{\tan \left( \frac{x}{2}\right) +1}{\tan
+\left( \frac{x}{2}\right) +\frac{5}{3}}\right\vert +C
+\]
+
+\begin{ejemplo}\sl
+\textnormal{Calcule la integral} $\displaystyle\int \frac{\sen x}{-3\sen x+2\cos x+3}\, dx $.
+\end{ejemplo}
+\textit{Solución.} Como antes,
+{\small
+\[
+u=\tan \left( \frac{x}{2}\right)\ -\pi<x<\pi,\ dx=\frac{2du}{1+u^{2}},\ \sen x=\frac{2u}{1+u^{2}}\text{ y }\cos x=\frac{1-u^{2}}{1+u^{2}}
+\]
+}
+La integral dada se convierte en
+
+\begin{align*}
+	\int \frac{\sen x}{-3\sen x + 2\cos x + 3} \, dx
+	&= \int \frac{\frac{2u}{1+u^{2}} \cdot \frac{2du}{1+u^{2}}}{-3\frac{2u}{1+u^{2}} + 2\frac{1-u^{2}}{1+u^{2}} + 3\frac{1+u^{2}}{1+u^{2}}} \\
+	&= \int \frac{\frac{4u}{(1+u^{2})^{2}}}{\frac{-6u\!+\!2\!-\!2u^{2}\!+\!3\!+\!3u^{2}}{1+u^{2}}} \, du
+	= \int \frac{\frac{4u}{(1+u^{2})^{2}}}{\frac{u^{2}\!-\!6u\!+\!5}{1+u^{2}}} \, du \\
+	&= \int \frac{4u}{(1+u^{2})(u^{2}\!-\!6u\!+\!5)} \, du \\
+	&= \int \frac{4u}{(u^{2}\!+\!1)(u\!-\!1)(u\!-\!5)} \, du
+\end{align*}
+
+Por otro lado,
+{\small
+\begin{align*}
+&\frac{4u}{\left( u^{2}+1\right) \left( u-1\right) \left( u-5\right) }=\frac{%
+A}{u-1}+\frac{B}{u-5}+\frac{Cu+D}{u^{2}+1}\\
+&=\frac{A\left( u^{2}+1\right) \left( u-5\right) +B\left( u^{2}+1\right)
+\left( u-1\right) +\left( Cu+D\right) \left( u-1\right) \left( u-5\right) }{\left( u^{2}+1\right) \left( u-1\right) \left( u-5\right) }
+\end{align*}
+}
+e igualando los numeradores,
+{\small
+\[
+A\left( u^{2}+1\right) \left( u-5\right) +B\left( u^{2}+1\right) \left(
+u-1\right) +\left( Cu+D\right) \left( u-1\right) \left( u-5\right) =4u
+\]
+}
+
+Si $u=1\rightarrow -8A=4\rightarrow A=-\frac{1}{2}$.
+
+Si $u=5\rightarrow 4\times 26B=20\rightarrow B=\frac{5}{26}$.
+
+Si $u=0,\ A=-\frac{1}{2},\ B=\frac{5}{26}$; entonces, $\frac{5}{2}-\frac{5}{26}+5D=0,\ D=-\frac{30}{65}=-\frac{6}{13}$.
+
+Si $u=-1,\ A=-\frac{1}{2},\ B=\frac{5}{26},\ D=-\frac{6}{13}$; con ello, $6-\frac{10}{13}+12\left( -C-\frac{6}{13}\right) =-4$, es decir, $-C=\frac{-6+\frac{10}{13}-4}{12}+\frac{6}{13}=-\frac{4}{13}$ y $C=\frac{4%
+}{13}$.
+
+Al reemplazar esos valores en la integral en términos de $u$, se tiene
+\vspace{-1mm}
+{\small
+\begin{align*}
+\int &\frac{4u}{\left( u^{2}+1\right) \left( u-1\right) \left( u-5\right) }\, du=\int \frac{-\frac{1}{2}}{u-1}\, du+\int \frac{\frac{5}{26}}{u-5}\, du+\int \frac{%
+\frac{4}{13}u-\frac{6}{13}}{u^{2}+1}\, du \\
+&=-\frac{1}{2}\ln \left\vert u-1\right\vert +\frac{5}{26}\ln \left\vert
+u-5\right\vert +\underbrace{\frac{2}{13}\int \frac{2u}{u^{2}+1}\, du}_{\text{sustitución simple } z=u^2+1} -\frac{6}{13}\int \frac{1}{u^{2}+1}du \\
+&=-\frac{1}{2}\ln \left\vert u-1\right\vert +\frac{5}{26}\ln \left\vert
+u-5\right\vert +\frac{2}{13}\ln \left\vert u^{2}+1\right\vert -\frac{6}{13}\tan^{-1} u+E\\
+&=\frac{1}{26}\left( -13\ln \left\vert u-1\right\vert +5\ln \left\vert
+u-5\right\vert +4\ln \left( u^{2}+1\right) -12\tan^{-1} u\right)+E\\
+&=\frac{1}{26}\left( \ln \left\vert \frac{\left( u-5\right) ^{5}\left(
+u^{2}+1\right) ^{4}}{\left( u-1\right) ^{13}}\right\vert -12\tan^{-1} u\right)+E\\
+&=\frac{1}{26}\left( \ln \left\vert \frac{\left( \tan \left( \frac{x}{2}%
+\right) -5\right) ^{5}\left( \tan ^{2}\left( \frac{x}{2}\right) +1\right)
+^{4}}{\left( \tan \left( \frac{x}{2}\right) -1\right) ^{13}}\right\vert
+-12\tan^{-1} \left( \tan \left( \frac{x}{2}\right) \right) \right)+E\\
+&=\frac{1}{26}\left( \ln \left\vert \frac{\left( \tan \left( \frac{x}{2}%
+\right) -5\right) ^{5}\left( \tan ^{2}\left( \frac{x}{2}\right) +1\right)
+^{4}}{\left( \tan \left( \frac{x}{2}\right) -1\right) ^{13}}\right\vert
+-6x\right) +E
+\end{align*}
+}
+es decir,
+
+\resizebox{\textwidth}{!}{$
+	\begin{aligned}
+\int &\frac{\sen x}{-3\sen x+2\cos x+3}\, dx
+=\frac{1}{26}\left( \ln \left\vert \frac{\left( \tan \left( \frac{x}{2}%
+	\right) -5\right) ^{5}\left( \tan ^{2}\left( \frac{x}{2}\right) +1\right)
+	^{4}}{\left( \tan \left( \frac{x}{2}\right) -1\right) ^{13}}\right\vert
+-6x\right) +E
+	\end{aligned}
+	$}
+
+
+\begin{ejemplo}\sl
+\textnormal{Calcule} $\displaystyle\int \frac{dx}{\sen x-3\cos x+3}$.
+\vskip0.3cm
+\end{ejemplo}
+\textit{Solución.} Usamos nuevamente la sustitución de Weierstrass:
+{\small
+\[
+u=\tan \left( \frac{x}{2}\right)\ -\pi<x<\pi,\ dx=\frac{2du}{1+u^{2}},\ \sen x=\frac{2u}{1+u^{2}}\text{ y }\cos x=\frac{1-u^{2}}{1+u^{2}},
+\]
+}
+y tenemos
+{\small
+\begin{align*}
+	\int \frac{dx}{\sen x - 3\cos x + 3}
+	&= \int \frac{\frac{2}{u^{2}+1}}{\frac{2u}{u^{2}+1}
+		- 3\left( \frac{1 - u^{2}}{u^{2}+1} \right)
+		+ 3\left( \frac{u^{2}+1}{u^{2}+1} \right)} \, du \\
+	&= \int \frac{2}{2u - 3(1 - u^{2}) + 3(u^{2} + 1)} \, du
+	= \int \frac{2}{6u^{2} + 2u} \, du \\
+	&= \frac{1}{3} \int \frac{1}{u^{2} + \frac{1}{3}u} \, du
+	= \frac{1}{3} \int \frac{1}{u\left( u + \frac{1}{3} \right)} \, du \\
+	&= \underbrace{\frac{1}{3} \int \left( \frac{3}{u}
+		- \frac{3}{u + \frac{1}{3}} \right) \, du}_{\text{ver aclaración abajo}} \\
+	&= \ln\left| u \right| - \ln\left| u + \frac{1}{3} \right| + C
+	= \ln\left| \frac{u}{u + \frac{1}{3}} \right| + C \\
+	&= \ln\left| \frac{\tan\left( \frac{x}{2} \right)}{\tan\left( \frac{x}{2} \right) + \frac{1}{3}} \right| + C
+\end{align*}
+}
+
+Para la integral $\displaystyle\int \left( \frac{3}{u}-\frac{3}{u+\frac{1}{3}}\right)\, du$ de arriba, se usó, al igual que en las anteriores, descomposición en fracciones parciales para $\cfrac{1}{u\left( u+\frac{1}{3}\right)}$:
+\[
+\frac{1}{u\left( u+\frac{1}{3}\right)}=\frac{A}{u}+\frac{B}{u+\frac{1}{3}}\Rightarrow A\left( u+\frac{1}{3}\right) +Bu=1
+\]
+Si $u=0\rightarrow \frac{1}{3}A=1\rightarrow A=3$.
+
+Si $u=-\frac{1}{3}\rightarrow -\frac{1}{3}B=1\rightarrow B=-3.$
+
+\addcontentsline{toc}{section}{3.7. Ejercicios del capítulo 3 \thechapter}
+
+%\group
+
+\textnormal{Calcule cada una de las siguientes integrales. Use una sustituci\'{o}n adecuada.}\\
+
+{\small
+\begin{enumerate}
+%\begin{multicols}{2}
+\vskip0.2cm
+
+\item {$\displaystyle\int_{0}^{2}\left( 4y+1\right) ^{100}dy$}{ $\frac{9^{101}-1}{404}.$}
+
+\item {$\displaystyle\int_{2}^{5}t(t^{2}+1)^{10}dt$}{$\frac{26^{11}-5^{11}}{22}$}
+
+\item {$\displaystyle\int x\left( \cos x^{2}+\sin x^{2}\right) dx$}{$\frac{1}{2}\left( \sin \left( x^{2}\right) -\cos \left( x^{2}\right) \right) +C$}
+
+\item {$\displaystyle\int z\sqrt{4-z^{2}}dz$}{$-\frac{1}{3}\sqrt{4-z^{2}}^{3}+C$}
+
+\item {$\displaystyle\int_{0}^{3}\frac{w}{\sqrt{25-w^{2}}}dw$}{$1$}
+
+\item {$\displaystyle\int \frac{e^{x}dx}{\sqrt{e^{x}-1}}$}{$2\sqrt{e^{x}-1}+C$}
+
+\item {$\displaystyle\int t(t+1)^{4}dt$}{$ \frac{\left( t+1\right) ^{6}}{6}-\frac{\left( t+1\right) ^{5}}{5}+C$}
+
+\item {$\displaystyle\int y\sqrt{y-1}dy$}{$2\left( \frac{\sqrt{y-1}^{5}}{5}+\frac{\sqrt{y-1}^{3}}{3}\right) +C$}
+
+\item {$\displaystyle\int \frac{2y}{\sqrt[4]{3y-2}}dy$}{$\frac{8}{9}\left(\frac{\sqrt[4]{3y-2}^{7}}{7}+2\frac{\sqrt[4]{3y-2}^{3}}{3}\right) +C$}
+
+\item {$\displaystyle\int 2x\left\vert x\right\vert dx$}{$\frac{2x^{2}\left\vert x\right\vert }{3}+C$}
+
+\item {$\displaystyle\int \frac{\sin t}{\sqrt{4+5\cos t}}dt$}{$ -\frac{2}{5}\sqrt{4+5\cos t}+C$}
+
+\item {$\displaystyle\int \sin ^{5}ydy$}{$\frac{-15\cos y+10\cos ^{3}y-3\cos ^{5}y}{15}+C$}
+
+\item {$\displaystyle\int_{0}^{\frac{\pi }{2}}\cos ^{7}zdz$}{$\frac{16}{35}$}
+
+\item {$\displaystyle\int_{0}^{\frac{\pi }{4}}\tan ^{8}\theta d\theta$}{$\frac{1}{4}\pi -\frac{76}{105}$}
+
+\item {$\displaystyle\int \cot ^{10}\theta d\theta$}{$-\frac{1}{9}\cot ^{9}\theta$ \linebreak $+\frac{1}{7}\cot ^{7}\theta -\frac{1}{5}\cot ^{5}\theta +\frac{1}{3}\cot^{3}\theta -\cot \theta -\theta +C$}
+
+\item {$\displaystyle\int \sec ^{6}tdt$}{$\tan t+\frac{2\tan ^{3}t}{3}+\frac{\tan	^{5}t}{5}+C$}
+
+\item {$\displaystyle\int \csc ^{4}xdx$}{$-\cot \left( x\right) -\frac{\cot	^{3}\left( x\right) }{3}+C$}
+
+\item {$\displaystyle\int \cos ^{6}(2y)dy$}{$\frac{1}{12}\cos ^{5}\left( 2y\right) \sin \left( 2y\right) -\frac{5}{48}%
+\cos ^{3}\left( 2y\right) \sin \left( 2y\right) -\frac{5}{32}\cos \left(
+2y\right) \sin \left( 2y\right) +\frac{5}{16}y+C$}
+
+\item {$\displaystyle\int \sin ^{6}(z)dz$}{$-\frac{1}{6}\sin ^{5}z\cos z-\frac{5}{24}\sin ^{3}z\cos z-\frac{5}{16}\sin
+z\cos z+\frac{5}{16}z+C$}
+
+\item {$\displaystyle\int \tan ^{5}y\sec ^{4}ydy$}{$\frac{\tan ^{6}\left( y\right)}{6}+\frac{\tan ^{7}\left( y\right) }{7}+C$}
+
+\item {$\displaystyle\int \tan ^{7}\left( 7y\right) dy$}{$\frac{1}{7}\left( \frac{\left( \tan \left( 7y\right) \right) ^{6}}{6}-\frac{%
+\left( \tan \left( 7y\right) \right) ^{4}}{4}+\frac{\left( \tan \left(
+7y\right) \right) ^{2}}{2}-\ln \left\vert \sec \left( 7y\right) \right\vert
+\right) +C$}
+
+\item {$\displaystyle\int \cot ^{5}xdx$}{$-\frac{1}{4}\cot ^{4}x+\frac{1}{2}\cot^{2}x+\ln \left\vert \sin x\right\vert +C$}
+
+\item {$\displaystyle\int \sin ^{4}x\cos ^{5}xdx$}{$\frac{\sin ^{5}\left( x\right)}{5}-\frac{2\sin ^{7}\left( x\right) }{7}+\frac{\sin ^{9}\left( x\right) }{9}+C$}
+
+\item {$\displaystyle\int \cot ^{3}y\csc ^{4}ydy$}{$-\left( \frac{\cot ^{6}\left( y\right) }{6}+\frac{\cot ^{4}\left( y\right) 
+}{4}\right) +C$}
+
+\item {$\displaystyle\int_{\frac{1}{2}}^{1}\frac{1}{x^{2}}\sqrt{1+\frac{1}{x}}dx$}{$2\sqrt{3}-\frac{4}{3}\sqrt{2}$}
+
+\item {$\displaystyle\int_{\frac{\pi ^{2}}{16}}^{\frac{\pi ^{2}}{4}}\frac{\sin (\sqrt{y})}{\sqrt{y}}dy$}{$\sqrt{2}$}
+
+\item {$\displaystyle\int \frac{xdx}{\sqrt[3]{x}+\sqrt{x}}$}{$-\frac{2\sqrt{x}}{3}-\frac{2\sqrt[3]{x}}{3}-\frac{8}{9}\sqrt[6]{x}-\frac{16%
+}{27}\ln \left\vert -3\sqrt[6]{x}+2\right\vert +C$}
+
+\item {$\displaystyle\int \frac{dx}{2\sqrt[3]{x}-3\sqrt{x}}$}{$
+	-\frac{8}{9}\sqrt[6]{x}-\frac{2}{3}\sqrt[3]{x}-\frac{2}{3}\sqrt{x}-\frac{16}{27}\ln
+\left\vert \sqrt[3]{u^{6}}-\frac{2}{3}\right\vert +C$}
+
+%\exercise{$\displaystyle\int \cos ^{2}\left( \sin \left( x\right) \right) \cos \left( x\right)dx$}{$\frac{1}{2}\left( \sin \left( x\right) +\sin \left(\sin \left( x\right) \right) \cos \left( \sin \left( x\right) \right)\right) +C$}
+%\end{multicols}
+\end{enumerate}
+
+
+\clearpage
+
+\textnormal{Encuentre el valor de cada una de las siguientes integrales:}
+
+%\begin{multicols}{2}
+\begin{enumerate}
+	
+\item {$\displaystyle{\int \frac{\tan ^{-1}(x)}{1+x^{2}}dx}$}{$\frac{1}{2}\arctan ^{2}x+C$}
+
+\item {$\displaystyle{\int_{1}^{4}\frac{dx}{2x-1}}$}{$\frac{1}{2}\ln 7$}
+
+\item {$\displaystyle{\int_{1}^{2}\frac{(\ln x)}{x}dx}$}{$\frac{1}{2}\ln ^{2}2$}
+
+\item {$\displaystyle{\int e^{x}(1+e^{x})^{10}}$}{$\frac{1}{11}(1+e^{x})^{11}+C$}
+
+\item {$\displaystyle{\int \frac{dx}{x(\ln x)^{4}}}$}{$-\frac{1}{3\ln ^{3}x}$}
+
+\item {$\displaystyle{\int \frac{x+1}{2x+x^{2}}dx}$}{$\frac{1}{2}\ln \left\vert 2x+x^{2}\right\vert +C$}
+
+\item {$\displaystyle{\int \frac{1+x}{1+x^{2}}\,dx}$}{$\frac{1}{2}\ln \left( x^{2}+1\right) +\arctan x +C$}
+
+\item {$\displaystyle{\int \frac{x^{2}+1}{x^{3}+3x+1}\, dx}$}{$\frac{1}{3}\ln \left\vert x^{3}+3x+1\right\vert +C$}
+
+\item {$\displaystyle{\int_{0}^{1}t^{2}\left( 2^{-t^{3}}\right) dt}$}{$\frac{1}{6\ln 2}$}
+
+\item {$\displaystyle{\int_{0}^{3}\frac{dx}{2x+3}}$}{$\frac{1}{2}\ln 3$}
+
+\item {$\displaystyle{\int_{e}^{e^{4}}\frac{1}{x\sqrt{\ln x}}\, dx}$}{$2$}
+
+\item {$\displaystyle{\int xe^{2x}\, dx}$}{$\frac{1}{4}e^{2x}\left( 2x-1\right)+C $}
+
+\item {$\displaystyle{\int x\cos x\, dx}$}{$\cos x+x\sen x+C$}
+
+\item {$\displaystyle{\int_{0}^{\frac{\pi }{2}}x\cos (2x)\, dx}$}{$-\frac{1}{2}$}
+
+\item {$\displaystyle{\int x^{2}e^{-x}\, dx}$}{$-e^{-x}\left( x^{2}+2x+2\right)+C $}
+
+\item {$\displaystyle{\int x\ln x\, dx}$}{$\frac{1}{2}x^{2}\ln x-\frac{1}{4}x^{2}+C$}
+
+\item {$\displaystyle{\int \cos x\ln (\sen x)\, dx}$}{$\left( \sen x\right) \left( \ln \left( \sen x\right)\right.$\linebreak $\left. -1\right)+C $}
+
+\item {$\displaystyle{\int \cos \left( \sqrt[3]{x}\right) \, dx}$}{$\allowbreak 3\sqrt[3]{x}^{2}\sen
+\sqrt[3]{x}-6\sen \sqrt[3]{x}+6\sqrt[3]{x}\cos \sqrt[3]{x}+C$}
+
+\item {$\displaystyle{\int x\left( 5^{x}\right) \, dx}$}{$-\frac{1}{\ln ^{2}5}\left( 5^{x}-5^{x}x\ln 5\right)+C $}
+
+\item {$\displaystyle{\int_{0}^{1}e^{\sqrt{x}}\, dx}$}{$2$}
+
+\item {$\displaystyle{\int e^{\sqrt[3]{x}}\, dx}$}{\linebreak$3e^{\sqrt[3]{x}}\left( \sqrt[3]{x}^{2}-2\sqrt[3]{x}+2\right)+C $}
+
+\item {$\displaystyle{\int \sen (\ln x)\, dx}$}{$\frac{1}{2}x\left( \sen \left( \ln x\right) -\cos\left( \ln x\right) \right)+C $}
+
+\item {$\displaystyle{\int x\sen (\sqrt{x})\, dx}$}{ $6x\sen \sqrt{x}-2\sqrt{x}^{3}\cos \sqrt{x}$ $-12\sen \sqrt{x}+12\sqrt{x}\cos \sqrt{x}+C$}
+
+\item {$\displaystyle{\int \sqrt{t}\ln tdt}$}{$\frac{2}{3}t^{\frac{3}{2}}\ln t-\frac{4}{9}t^{\frac{3}{2}}+C$}
+
+\item {$\displaystyle{\int x\tan ^{-1}x\, dx}$}{$\frac{1}{2}\arctan x-\frac{1}{2}x+\frac{1}{2}x^{2}\arctan x+C$}
+
+\item {$\displaystyle{\int e^{2\theta }\sen \left( 3\theta \right) d\theta }$}{$\frac{2}{13}e^{2\theta }\sen 3\theta -\frac{3}{13}\left( \cos 3\theta \right) e^{2\theta}+C $}
+
+\item {$\displaystyle{\int e^{-5\theta }\cos 7\theta d\theta }$}{$\frac{7}{74}e^{-5\theta }\sen7\theta -\frac{5}{74}\left( \cos 7\theta \right) e^{-5\theta }+C $}
+
+\item {$\displaystyle{\int \cos \left( \ln t\right) dt}$}{$\frac{1}{2}t \left(\cos\ln t\right.$ \linebreak $\left. +\sen\ln t\right) +C$}
+
+\item {$\displaystyle{\int x\sec ^{2}x\, dx}$}{$x\tan x-$ $\ln \left\vert \sec x\right\vert +C$}
+
+\item {$\displaystyle{\int_{0}^{\frac{\pi }{2}}\cos ^{4}\theta d\theta }$}{$\frac{3}{16}\pi $}
+
+\item {$\displaystyle{\int \sen ^{3}x\cos ^{4}x\, dx}$}{$\frac{1}{7}\cos ^{7}x-\frac{1}{5}\cos^{5}x+C $}
+
+\item {$\displaystyle{\int \cot ^{5}x\sen ^{2}x\, dx}$}{$-\frac{1}{2\sen ^{2}x}\times$ \linebreak $\left( 4\sen ^{2}x\ln\sen x-\sen ^{4}x+1\right)+C $}
+
+\item {$\displaystyle{\int_{0}^{\frac{\pi }{4}}\sec ^{6}\theta d\theta}$}{$\frac{28}{15}$}
+
+\item {$\displaystyle{\int \sen \left( 4\ln x\right) dx}$}{ $\frac{x}{17}\left( \sen \left( 4\ln x\right) -4\cos \left( 4\ln x\right) \right)+C$}
+
+\item {$\displaystyle{\int e^{\sqrt[4]{x}}\, dx}$}{$-4e^{\sqrt[4]{x}}\times$ \linebreak $\left( -\sqrt[4]{x}^{3}+3\sqrt[4]{x}^{2}-6\sqrt[4]{x}+6\right)+C $ }
+
+\item {$\displaystyle{\int x\ln ^{3}x\, dx}$}{$\frac{1}{8}x^{2}\left( 4\ln ^{3}x-6\ln ^{2}x+6\ln x-3\right)+C $}
+
+\item {$\displaystyle{\int_{1}^{e}\ln ^{4}x\, dx}$}{$\allowbreak 9e-24$ }
+
+\item {$\displaystyle{\int \left( x^{4}+x^{2}\right) \ln x\, dx}$}{\linebreak$-\frac{1}{225}%
+x^{3}\left( 9x^{2}-45x^{2}\ln x-75\ln x+25\right)+C $}
+
+\item {$\displaystyle{\int \left( x^{8}+x^{4}\right) \ln x\, dx}$}{$-\frac{1}{2025}x^{5}\left(25x^{4}-225x^{4}\ln x-405\ln x+81\right)+C $}
+
+\item {$\displaystyle{\int \arcsin^{2}x\, dx}$}{\linebreak $2\left(\arcsin x\right) \sqrt{1-x^{2}}-2x+x\arcsin ^{2}x+C$ }
+
+\item {$\displaystyle{\int x\arctan x\, dx}$}{$ \frac{1}{2}\tan^{-1} x-\frac{1}{2}x-\frac{1}{%
+4}\pi +\frac{1}{2}x^{2}\tan^{-1} x+C $}
+
+\item {$\displaystyle{\int x\sec^{-1} x\, dx}$}{$\frac{1}{2}\left(x^{2}\sec^{-1}\right.$ \linebreak $\left. x-%
+\sqrt{x^{2}-1}\right)+C$ }
+
+\item {$\displaystyle{\int x\arcsin ^{2}x\, dx}$}{$\left( \frac{1}{8}-\frac{1}{4}\arcsin ^{2}x\right)\left( 1-2x^{2}\right) +\frac{1}{2}x\sqrt{1-x^{2}}\arcsin x+C $}
+
+\item {$\displaystyle{\int \tan ^{6}\theta d\theta }$}{$\frac{1}{5}\tan ^{5}\theta -\frac{1}{3}\tan ^{3}\theta +\tan \theta -\theta+C $}
+
+\item {$\displaystyle{\int \tan ^{5}\theta \sec ^{3}\theta d\theta }$}{$\frac{1}{7}\sec ^{7}\theta
+-\frac{2}{5}\sec ^{5}\theta +\frac{1}{3}\sec ^{3}\theta+C $}
+
+\item {$\displaystyle{\int \frac{dx}{x^{2}\sqrt{1-x^{2}}}}$}{ $-\frac{1}{x}\sqrt{1-x^{2}}+C$}
+
+\item {$\displaystyle{\int \frac{dx}{x^{3}\sqrt{x^{2}-16}}}$}{$\frac{1}{128}\left( \sec^{-1}\left( \frac{x}{4}\right) +\frac{4}{x}\frac{\sqrt{x^{2}-16}}{x}\right) +C$ }
+
+\item {$\displaystyle{\int \frac{\sqrt{9x^{2}-4}}{x}dx}$}{$\frac{\sqrt{9x^{2}-4}}{2}-{\text{arcsec}}\left( \frac{3x}{2}\right) +C$}
+
+\item {$\displaystyle{\int x\sqrt{4-x^{2}}\, dx}$}{$-\frac{1}{3}\left( 4-x^{2}\right) ^{\frac{3}{2}}+C$}
+
+\item {$\displaystyle{\int \frac{x^{3}}{\sqrt{x^{2}+4}}\, dx}$}{$\frac{1}{3}\sqrt{x^{2}+4}\left(
+x^{2}-8\right)+C $ }
+
+\item {$\displaystyle{\int \frac{dx}{x^{2}\sqrt{16x^{2}-9}}}$}{$\frac{1}{9x}\sqrt{16x^{2}-9}+C$ }
+
+\item {$\displaystyle{\int_{1}^{2}\frac{x^{2}}{\sqrt{5-x^{2}}}\, dx}$}{ $\frac{5}{2}\sen^{-1} \frac{2}{5}\sqrt{5}-\frac{5}{2}\sen^{-1} \frac{1}{5}\sqrt{5}$}
+
+\item {$\displaystyle{\int \frac{x}{(x^{2}+4)^{\frac{5}{2}}}\, dx}$}{$-\frac{1}{3\left(x^{2}+4\right) ^{\frac{3}{2}}}+C$ }
+
+\item {$\displaystyle{\int \frac{x}{\sqrt{\left( x+1\right) ^{2}+9}}dx}$}{$\sqrt{\left( x+1\right)^{2}+9}-\ln \left\vert \frac{1}{3}\sqrt{\left( x+1\right)^{2}+9}\right.$ $\left.+\frac{x+1}{3}\right\vert +C$}
+
+\item {$\displaystyle{\int \frac{x^{2}}{\sqrt{4x-x^{2}}}\, dx}$}{$-6\sen^{-1} \left( 1-\frac{1}{2}x\right) -\frac{1}{2}x\sqrt{-x\left( x-4\right) }-3\sqrt{-x\left( x-4\right)
+}+C $}
+
+\item {$\displaystyle{\int \frac{1}{\sqrt{9x^{2}+6x-8}}\, dx}$}{$\frac{1}{3}\ln \left\vert 3x+1+\sqrt{9x^{2}+6x-8}\right\vert +D$}
+
+\item {$\displaystyle{\int \frac{1}{\left( x^{2}+4x+5\right) ^{2}}dx}$}{$\frac{%
+1}{2}\left( \arctan \left( x+2\right) +\frac{x+2}{x^{2}+4x+5}\right) +C$}
+
+\item {$\displaystyle{\int \frac{1}{(5-4x-x^{2})^{\frac{5}{2}}}\, dx}$}{$\frac{x+2}{27\sqrt{5-4x-x^{2}}}\left( \frac{1}{5-4x-x^{2}}+\frac{2}{9}%
+\right) +C$}
+
+\item {$\displaystyle{\int e^{t}\sqrt{9-e^{2t}}dt}$}{$\frac{e^{2t}\sqrt{9-e^{2t}}}{2}+\frac{9}{2}\arcsin \left( \frac{e^{2t}}{3}%
+\right) +C$}
+
+\item {$\displaystyle{\int \sqrt{e^{2t}-9}dt}$}{$3\left( \frac{\sqrt{e^{2t}-9}}{3}-{\text{arcsec}}\left( \frac{e^{t}}{3}%
+\right) \right) +C$}
+
+\item {$\displaystyle{\int \frac{4x-1}{(x-1)(x+2)}\, dx}$}{$\ln \left\vert \left( x-1\right) \left( x+2\right) ^{3}\right\vert +C$}
+
+\item {$\displaystyle{\int \frac{x^{2}+1}{x^{2}-x}\, dx}$}{$x+\ln \left\vert \frac{\left( x-1\right) ^{2}}{x}\right\vert +C$ }
+
+\item {$\displaystyle{\int \frac{3x^{2}-6x+2}{2x^{3}-3x^{2}+x}\, dx}$}{$\ln \left\vert \frac{x^{2}\sqrt{2x-1}}{x-1}\right\vert +C$}
+
+\item {$\displaystyle{\int \frac{1}{(x-1)^{2}(x+4)}\, dx}$}{$-\frac{1}{5\left( x-1\right) }+\frac{1}{25}\ln \left\vert \frac{x+4}{x-1}%
+\right\vert +C$}
+
+\item {$\displaystyle{\int \frac{x^{3}}{(x+2)^{4}}\, dx}$}{$\frac{8}{3\left( x+2\right) ^{3}}-\frac{6}{\left( x+2\right) ^{2}}+\frac{6}{%
+x+2}+\ln \left\vert x+2\right\vert +C$}
+
+\item {$\displaystyle{\int \frac{1}{x^{4}-x^{2}}\, dx}$}{$\frac{1}{x}+\frac{1}{2}\ln \left\vert \frac{x-1}{x+1}\right\vert +C$}
+
+\item {$\displaystyle{\int \frac{x}{x^{2}+x+1}\, dx}$}{$\frac{1}{2}\ln \left( x^{2}+x+1\right) -\frac{\sqrt{3}}{3}\arctan \left( 
+\frac{\left( 2x+1\right) \sqrt{3}}{3}\right) +D$}
+
+\item {$\displaystyle{\int_{0}^{1}\frac{8x^{2}}{x^{4}-16}\, dx}$}{$-\ln \left( 3\right) +2\arctan \left( \frac{1}{2}\right) $}
+
+\item {$\displaystyle{\int \frac{x^{3}-2x^{2}+x+1}{x^{4}+5x^{2}+4}\, dx}$}{$-\frac{3}{2}\arctan \frac{%
+1}{2}x+\frac{1}{2}\ln \left( x^{2}+4\right) +\arctan x+C $}
+
+\item {$\displaystyle{\int \frac{x^{2}+1}{(x^{3}+3x)^{2}}\, dx}$}{$-\frac{1}{3\left( x^{3}+3x\right) }+C$}
+
+\item {$\displaystyle{\int \frac{8x}{(x^{2}+4)^{3}}\, dx}$}{$-\frac{2}{\left( x^{2}+4\right) ^{2}}+C$}
+
+\item {$\displaystyle{\int \frac{dx}{\sqrt{x}+\sqrt[3]{x}-2}}$}{$\frac{6}{5}\ln \left\vert \sqrt[6]{x}-1\right\vert +\frac{12}{5}\ln
+\left\vert 1+\left( \sqrt[6]{x}+1\right) ^{2}\right\vert -\frac{72}{5}%
+\arctan \left( \sqrt[6]{x}+1\right) -3\sqrt[3]{x}+6\sqrt[6]{x}+2\sqrt{x}+C
+$}
+
+%%\end{multicols}
+%%\begin{multicols}{2}
+\item {$\hspace{-0.2cm}\displaystyle{\int\hspace{-0.2cm} \frac{(4x-1)\, dx}{x(x-1)(x+2)(x+1)(x-2)}}$}{$-\frac{1}{4}\ln \left\vert x\right\vert -\frac{1}{2}\ln \left\vert
+x-1\right\vert -\frac{3}{8}\ln \left\vert x+2\right\vert +\frac{5}{6}\ln
+\left\vert x+1\right\vert +\frac{7}{24}\ln \left\vert x-2\right\vert +C$}
+
+\item {$\displaystyle{\int \frac{3x^{2}}{(x-1)(x+2)(x+3)}\, dx}$}{ $\frac{1}{4}\ln \left\vert x-1\right\vert -4\ln \left\vert x+2\right\vert +
+\frac{27}{4}\ln \left\vert x+3\right\vert +C$}
+%%\end{multicols}
+
+%%\begin{multicols}{2}
+\item {$\displaystyle \int \frac{dx}{\sen x-2\cos x+2}$}{$\ln \left\vert \frac{\tan (\frac{x}{2})}{2\tan (\frac{x}{2})+1}%
+\right\vert +C$}
+
+\item {$\displaystyle \int \frac{dx}{4\sen x+3\cos x+4}$}{$\frac{1}{3}\ln \left\vert \frac{\tan (\frac{x}{2})+1}{\tan (\frac{x}{2}%
+)+7}\right\vert +C$}
+
+\item {$\displaystyle \int \frac{\cos xdx}{\sen x+2\cos
+x-2}$}{$\ln \left\vert \frac{\tan \left( \frac{x}{2}\right) }{\left( 2\tan (\frac{x%
+}{2})-1\right) ^{\frac{3}{5}}\left( 1+\tan ^{2}(\frac{x}{2})\right) ^{\frac{1%
+}{5}}}\right\vert +\frac{2x}{5}+C$}
+
+\item {$\displaystyle\int \frac{\sec x}{1+\sen x}dx$}{$-\frac{1}{2}\ln \left\vert 1-\tan ^{2}(\frac{x}{2})\right\vert +\frac{\tan (%
+\frac{x}{2})}{\left( \tan (\frac{x}{2})+1\right) ^{2}}+C$}
+	
+\item {$\displaystyle\int \frac{dx}{2\sen x+\sen 2x}$}{$\frac{1}{4}\left[\ln \left\vert\tan(\frac{x}{2})\right\vert\right.$ \linebreak$\left.+\frac{\tan^{2}(\frac{x}{2})}{2}\right] +C$}
+
+\item {$\displaystyle\int \frac{dx}{2\sen x-\sen 2x}$}{$\frac{1}{4}\left( \frac{-1}{2\tan ^{2}(\frac{x}{2})}+\ln \left\vert \tan (
+	\frac{x}{2})\right\vert \right) +C$}
+	
+\item {$\displaystyle\int \frac{dx}{\sen x+\tan x}$}{$\frac{1}{2}\left( \ln \left\vert \tan (\frac{x}{2})\right\vert -\frac{\tan
+^{2}(\frac{x}{2})}{2}\right) +C$}
+
+\item {$\displaystyle\int \frac{dx}{15\sen x+8\cos x+17}$}{$\linebreak\frac{-2}{9\tan (\frac{x}{2})+15}+C$}
+\end{enumerate}
+}
+%\end{multicols}
+

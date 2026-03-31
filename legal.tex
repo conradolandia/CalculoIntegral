@@ -1,0 +1,85 @@
+% El \begin{document} y \end{document} deben estar en el archivo principal (main.tex), NO aquí.
+
+\thispagestyle{empty}
+\setstretch{1.0}
+\vspace*{1.0cm} % Espacio en blanco superior (ajustar si se necesita más margen arriba)
+
+\begin{multicols}{2}
+	
+	% ===================================
+	% COLUMNA 1: AUTORES Y DATOS TÉCNICOS
+	% ===================================
+	\raggedright % Alineación a la izquierda
+	{\footnotesize % Usar fuente pequeña (ajusta a \small si \footnotesize es muy pequeña)
+		
+		% BLOQUE DE DERECHOS Y AUTORES
+		© Universidad Distrital Francisco José de Caldas \\
+		© Facultad Tecnológica \\
+		\textbf{© Carmen Leonor Pulido Segura, Editora} \\
+		\textbf{© Sertomán Soododoto, Pablo Andrés Acosta Solarte (autores)} 
+		\par\vspace{0.4cm} % Separador de bloque
+		
+		% BLOQUE ISBN Y DOI
+		\textbf{ISBN (impreso):} 978-958-787-xxx \\
+		\textbf{ISBN digital:} 978-958-787-xxx \\
+		\textbf{ISBN epub:} 978-958-787-xxxx \\
+		\textbf{DOI:} \url{https://doi.org/10.69740/xxxxxxUD} \\
+		\textbf{UD:} \url{https://www.udistrital.edu.co} 
+		\par\vspace{0.4cm} % Separador de bloque
+		
+		% BLOQUE DE EDICIÓN Y LÍDERES
+		\textbf{Primera edición, diciembre de 2025}
+		\par\vspace{0.4cm} 
+		\textbf{Líder Unidad de Publicaciones} \\
+		Franklin Wilches Reyes 
+		\par\vspace{0.4cm}
+		
+		\textbf{Gestión editorial} \\
+		Alejandro Moreno Aramburo 
+		\par\vspace{0.4cm}
+		
+		\textbf{Corrección de estilo} \\
+		HIPERTEXTO SAS 
+		\par\vspace{0.4cm}
+		
+		\textbf{Diagramación} \\
+		HIPERTEXTO SAS 
+		\par\vspace{0.4cm}
+		
+		\textbf{Diseño de portada e interiores} \\
+		Johana Delgado Macías
+		\par\vspace{0.4cm}
+	} % Fin del tamaño de fuente
+	
+	\columnbreak % FUERZA el salto a la columna 2
+	
+	% ===================================
+	% COLUMNA 2: LOGOS Y CLÁUSULA LEGAL
+	% ===================================
+	
+	\raggedright % Alineación a la izquierda (por si acaso)
+	
+	% BLOQUE DE LOGOS
+	\begin{center}
+		% >>> LOGO UNIVERSIDAD <<<
+		\includegraphics[width=0.40\linewidth]{Gráficas/logo_}
+		\vspace{0.8cm} % Reducido el espacio
+		% >>> LOGO EDITORIAL <<<
+		\includegraphics[width=0.30\linewidth]{Gráficas/distrital}
+	\end{center}
+	\vspace{0.8cm} % Espacio entre logos y texto legal
+	
+	{\footnotesize % Fuente pequeña para el texto legal
+		\textbf{Editorial UD} \\
+		Universidad Distrital Francisco José de Caldas \\
+		Carrera 24 N.º 34–37, Bogotá D.C., Colombia \\
+		Teléfono: (601) 323 9300, ext. 6202 \\
+		Correo: \url{publicaciones@udistrital.edu.co} \\
+		\par\vspace{0.5cm} % Separador de bloque
+		
+		\textbf{Cláusula de responsabilidad:} \\
+		La Editorial no es responsable de las opiniones e información de la obra. Esta obra se publica exclusivamente con fines académicos. \\
+		Todos los derechos reservados. Hecho en Colombia.
+	} % Fin del tamaño de fuente
+	
+\end{multicols}

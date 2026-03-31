@@ -1,0 +1,1199 @@
+\chapter{Integrales impropias e integraci\'{o}n num\'{e}rica}\label{numerica}
+
+\section{Integrales impropias}
+
+Hasta ahora se trabaj\'{o} con funciones que deb\'{i}an ser continuas en un intervalo cerrado $[a,b]$, en donde se pod\'{i}a calcular la integral definida. En muchos contextos podemos encontrarnos con funciones definidas en un intervalo no finito, o que no son continuas en el intervalo. En ese caso, tenemos integrales impropias. Estas integrales se clasifican en dos grupos.
+
+\subsection*{Intervalos de integraci\'{o}n no acotados}
+
+Un intervalo de la forma $[a,\infty )$, $(\infty,b]$ o $(-\infty ,\infty )$ se dice que es \textit{no acotado}. Las integrales impropias se eval\'{u}an seg\'{u}n el intervalo.
+
+\textbf{Caso I.} Supongamos que $f$ es una funci\'{o}n continua en el intervalo $[a,\infty ).$ La integral impropia $\displaystyle\int_{a}^{\infty }f\left( x\right) dx$ se eval\'{u}a de la siguiente manera:
+\[
+\int_{a}^{\infty }f\left( x\right) dx=\lim_{z\rightarrow \infty
+}\int_{a}^{z}f\left( x\right) dx
+\]
+
+
+\noindent
+\begin{minipage}{\textwidth}
+	\centering
+	\captionof{figure}{Integral impropia a $\infty$}
+	\begin{minipage}{0.40\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{Gráficas/IntegImprIntervDerech}
+	\end{minipage}
+	
+	\vspace{0.3em}
+	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboraci?n propia.}
+\end{minipage}
+
+%\begin{center}------------
+%\centerline{ \graf{Integral impropia a $\infty$}}
+%\includegraphics[scale=0.35]%{IntegImprIntervDerech}
+%\textbf{Fuente:} elaboraci?n propia
+%\end{center}
+\vskip0.3cm
+\textbf{Caso II.} Sea $f$ una funci\'{o}n continua en $(-\infty ,b].$ La integral impropia $\displaystyle\int_{-\infty }^{b}f\left( x\right) dx$ se eval\'{u}a de la siguiente manera:
+\[
+\int_{-\infty }^{b}f\left( x\right) dx=\lim_{w\rightarrow -\infty
+}\int_{w}^{b}f\left( x\right) dx
+\]
+
+
+\noindent
+\begin{minipage}{\textwidth}
+	\centering
+	\captionof{figure}{Integral impropia desde $-\infty$}
+	\begin{minipage}{0.40\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{Gráficas/IntegImprIntervIzqu}
+	\end{minipage}
+	
+	\vspace{0.3em}
+	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboraci?n propia.}
+\end{minipage}
+
+%\begin{center}-------------
+%\centerline{ \graf{Integral impropia desde $-\infty$}}
+%\includegraphics[scale=0.4]{IntegImprIntervIzqu}
+%\textbf{Fuente:} elaboraci?n propia
+%\end{center}
+\vskip0.2cm
+\textbf{Caso III.} Sea $f$ \ una funci\'{o}n continua en $(-\infty ,\infty ).$ La integral impropia $\displaystyle\int_{-\infty }^{\infty }f\left( x\right) dx$ es
+{\small
+\[
+\int_{-\infty }^{\infty }\hspace{-0.3cm}f\left( x\right) dx=\int_{-\infty }^{c}\hspace{-0.3cm}f\left(
+x\right) dx+\int_{c}^{\infty }\hspace{-0.3cm}f\left( x\right) dx=\lim_{w\rightarrow -\infty
+}\int_{w}^{c}\hspace{-0.3cm}f\left( x\right) dx+\lim_{z\rightarrow \infty
+}\int_{c}^{z}\hspace{-0.3cm}f\left( x\right) dx
+\]
+}
+
+
+\noindent
+\begin{minipage}{\textwidth}
+	\centering
+	\captionof{figure}{Integral impropia desde $-\infty$ hasta $\infty$}
+	\begin{minipage}{0.40\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{Gráficas/IntegImprReales}
+	\end{minipage}
+	
+	\vspace{0.3em}
+	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboraci?n propia.}
+\end{minipage}
+
+%\begin{center}------------
+%\centerline{ \graf{Integral impropia desde $-\infty$ hasta $\infty$}}
+%\includegraphics[scale=0.35]{IntegImprReales}
+%\textbf{Fuente:} elaboraci?n propia
+%\end{center}
+\vskip0.2cm
+Se dice que la integral impropia converge si cada uno de los l\'{i}mites que
+define la integral existe y es finito, y diverge si
+alguno de los l\'{i}mites que define la integral no existe o es infinito.
+
+\begin{ejemplo}\sl
+\textnormal{Encuentre el valor de la integral} {\small $\displaystyle \int_{2}^{\infty }\frac{1}{\left( x+1\right) \left( x+2\right) }dx$.}
+\end{ejemplo}
+\textit{Soluci\'{o}n.} Inicialmente, calculamos la integral usando alguno de los m\'{e}todos que ya hemos estudiado. En este caso, planteamos fracciones parciales para calcularla:
+{\small
+\[
+\frac{1}{\left( x+1\right) \left( x+2\right) }=\frac{A}{x+1}+\frac{B}{x+2}\Rightarrow A\left( x+2\right) +B\left( x+1\right) =1
+\]
+}
+
+Si $x=-1$, entonces $A=1$. Si $x=-2$, entonces $-B=1$, es decir, $B=-1$.
+
+Ahora calculamos la integral indefinida:
+{\small
+\begin{align*}
+\int \frac{1}{\left( x+1\right) \left( x+2\right) }dx&=\int \left( \frac{1}{
+x+1}-\frac{1}{x+2}\right) dx\\
+&=\ln \left\vert x+1\right\vert -\ln \left\vert
+x+2\right\vert =\ln \left\vert \frac{x+1}{x+2}\right\vert
+\end{align*}
+}
+
+Y, por \'{u}ltimo, la impropia:
+\vskip0.2cm
+\resizebox{\textwidth}{!}{$
+	\begin{aligned}
+\int_{2}^{\infty }\frac{1}{\left( x+1\right) \left( x+2\right) }%
+dx& =\lim_{z\rightarrow \infty }\int_{2}^{z}\frac{1}{\left( x+1\right) \left(x+2\right) }dx=\left.\lim_{z\rightarrow \infty }\ln \left\vert \frac{x+1}{x+2}\right\vert \right\vert_{2}^{z}\\
+&=\lim_{z\rightarrow \infty }\left( \ln \left\vert \frac{z+1}{z+2}%
+\right\vert -\ln \left( \frac{3}{4}\right) \right)=\ln \left\vert\lim_{z\rightarrow \infty }\frac{z+1}{z+2}\right\vert -\ln \left( \frac{3}{4}\right)\\
+&=\ln \left\vert \lim_{z\rightarrow \infty }\frac{\frac{z}{z}+\frac{1}{z}}{%
+	\frac{z}{z}+\frac{2}{z}}\right\vert -\ln \left( \frac{3}{4}\right)=\ln\left\vert \lim_{z\rightarrow \infty }\frac{1+\frac{1}{z}}{1+\frac{2}{z}}\right\vert -\ln \left( \frac{3}{4}\right)\\
+&=\ln 1+\ln \frac{4}{3}=\ln \frac{4}{3}
+	\end{aligned}
+	$}
+
+\vskip0.2cm
+Es decir, la integral converge y lo hace a $\ln \frac{4}{3}.$
+
+\begin{ejemplo}\sl
+\textnormal{Encuentre el valor de} $\displaystyle \int_{-\infty }^{3}e^{2x}dx$.
+\end{ejemplo}
+\textit{Soluci\'{o}n.} Escribamos esta vez en la forma de la definici\'{o}n dada:
+{\small
+\begin{align*}
+\int_{-\infty }^{3}e^{2x}dx&=\lim_{w\rightarrow -\infty
+}\int_{w}^{3}e^{2x}dx=\left.\lim_{w\rightarrow -\infty }\left( \frac{1}{2}%
+e^{2x}\right)\right\vert_{w}^{3} \\
+&=\lim_{w\rightarrow -\infty }\left( \frac{1}{2}e^{6}-\frac{1}{2}%
+e^{2w}\right)=\frac{1}{2}e^{6}-0=\frac{1}{2}e^{6}=201\text{.}71
+\end{align*}
+}
+La integral converge a $\frac{1}{2}e^{6}.$
+
+\begin{ejemplo}\sl
+\textnormal{Encuentre el valor de} $\displaystyle \int_{2}^{\infty }\frac{2}{\left( x+1\right) ^{2}}dx$.
+\end{ejemplo}
+\textit{Soluci\'{o}n.} Igual que en el ejemplo anterior,
+{\small
+\begin{align*}
+\int_{2}^{\infty }\frac{2}{\left( x+1\right) ^{2}}dx&=\lim_{z\rightarrow
+\infty }\int_{2}^{z}\frac{2}{\left( x+1\right) ^{2}}dx=\left.\lim_{z\rightarrow
+\infty }\left( \frac{-2}{x+1}\right)\right\vert_{2}^{z} \\
+&=\lim_{z\rightarrow \infty }\left( \frac{-2}{z+1}-\frac{-2}{3}\right) =0+%
+\frac{2}{3}=\frac{2}{3}
+\end{align*}
+}
+
+\begin{ejemplo}\sl
+\textnormal{Diga si la integral \textit{$\displaystyle \int_{1}^{\infty }\frac{8}{x^{3}+x}dx$} converge o diverge. Si converge, diga a qu\'{e} valor lo hace.}
+\end{ejemplo}
+\textit{Soluci\'{o}n.} Para calcular la integral, usemos sustituci\'{o}n trigonom\'{e}trica:
+{\small
+\[
+\int_{1}^{\infty }\frac{8}{x^{3}+x}dx=8\int_{1}^{\infty }\frac{1}{x\left(
+x^{2}+1\right) }dx
+\]
+}
+es decir, si $x=\tan\theta$, entonces $dx=\sec ^{2}\theta d\theta$ y $x^{2}+1=\tan ^{2}\theta +1=\sec ^{2}\theta$. Por otro lado,
+{\small
+\[
+\int \frac{dx}{x\left( x^{2}+1\right) }=\int \frac{\sec ^{2}\theta d\theta }{%
+\tan \theta \sec ^{2}\theta }=\int \frac{1}{\tan \theta }d\theta
+=\int \cot \theta d\theta =\ln \left\vert \sen \theta \right\vert
+\]
+}
+
+Pero $\tan\theta=x$ y tangente es cateto opuesto sobre cateto adyacente, es decir, $\sen\theta=\frac{x}{\sqrt{x^{2}+1}}$. Luego
+{\small
+\[
+\int \frac{dx}{x\left( x^{2}+1\right) }=\ln \left\vert \sen \theta\right\vert=\ln \left\vert \frac{x}{\sqrt{x^{2}+1}} \right\vert=\ln \left\vert \sqrt{
+\frac{x^{2}}{x^{2}+1}}\right\vert =\frac{1}{2}\ln \left\vert \frac{x^{2}}{
+x^{2}+1}\right\vert
+\]
+}
+Con ello,
+\vskip0.2cm
+
+\resizebox{\textwidth}{!}{$
+	\begin{aligned}
+\int_{1}^{\infty }\frac{8}{x^{3}+x}dx&=8\lim_{z\rightarrow \infty }\int_{1}^{z}\frac{1}{x\left( x^{2}+1\right) }dx =8\left.\lim_{z\rightarrow \infty }\frac{1}{2}\ln \left\vert \frac{x^{2}}{x^{2}+1}%
+\right\vert\right\vert_{1}^{z}\\
+&=4\lim_{z\rightarrow \infty }\left( \ln \left\vert \frac{x^{2}}{x^{2}+1}%
+\right\vert -\ln \frac{1}{2}\right) %\\
+%&
+=4\left( \ln \left\vert \lim_{z\rightarrow \infty }\frac{z^{2}}{z^{2}+1}%
+\right\vert -\ln \frac{1}{2}\right) \\
+&=4\left( \ln 1-\ln \frac{1}{2}\right) =4\left( -\ln \frac{1}{2}\right) \\
+&=4\ln 2\approx 2\text{,}7726%
+	\end{aligned}
+	$}
+
+\vskip0.2cm
+Entonces, la integral dada converge a $4\ln 2.$
+
+\begin{ejemplo}\sl
+\textnormal{Diga si la integral \textit{$\displaystyle\int_{2}^{\infty }\frac{x}{x^{4}-1}dx$} converge o diverge. Si converge, diga a qu\'{e} valor lo hace.}
+\end{ejemplo}
+\textit{Soluci\'{o}n.} Si reescribimos la integral y hacemos la sustituci\'{o}n $y=x^2$, tenemos
+\[
+\int_{2}^{\infty }\frac{x}{x^{4}-1}dx=\int_{2}^{\infty }\frac{xdx}{\left(
+x^{2}\right) ^{2}-1}=\int_{4}^{\infty }\frac{\frac{1}{2}dy}{y^{2}-1}
+=\frac{1}{2}\int_{4}^{\infty }\frac{dy}{\left( y-1\right) \left( y+1\right)}
+\]
+Ahora usemos fracciones parciales para la \'{u}ltima integral, y tenemos que
+
+\begin{align*}
+\frac{1}{2}\int_{4}^{\infty }&\frac{dy}{\left( y-1\right) \left( y+1\right)} =\frac{1}{2}\lim_{z\rightarrow \infty }\int_{4}^{z} \frac{\frac{1}{2}}{y-1}-\frac{\frac{1}{2}}{y+1}\, dy \\
+&=\frac{1}{4}\lim_{z\rightarrow \infty }\left( \ln \left\vert y-1\right\vert
+-\ln \left\vert y+1\right\vert \right)\big\vert_{4}^{z} %\\
+%&
+=\frac{1}{4}\left.\lim_{z\rightarrow \infty }\left( \ln \left\vert \frac{y-1}{y+1}\right\vert \right)\right\vert_{4}^{z} \\
+&=\frac{1}{4}\lim_{z\rightarrow \infty }\left( \ln \left\vert \frac{z-1}{z+1}%
+\right\vert -\ln \frac{3}{5}\right) %\\
+%&
+=\frac{1}{4}\left( \ln \left\vert \lim_{z\rightarrow \infty }\frac{z-1}{z+1}%
+\right\vert -\ln \frac{3}{5}\right) \\
+&=\frac{1}{4}\left( \ln \left\vert 1\right\vert -\ln \frac{3}{5}\right) =%
+\frac{1}{4}\left( -\ln \frac{3}{5}\right) %\\
+%&
+=\frac{1}{4}\ln \frac{5}{3}=0\text{,}12771
+\end{align*}
+
+\begin{ejemplo}\sl
+\textnormal{Diga si la integral \textit{$\displaystyle \int_{3}^{\infty}\frac{x}{x^{4}+3x^{2}-4}dx$} converge o diverge. Si converge, diga a qu\'{e} valor lo hace.}
+\end{ejemplo}
+\textit{Soluci\'{o}n.} Reescribamos el integrando y tomemos la sustituci\'{o}n $y=x^2$:
+\begin{align*}
+\int_{3}^{\infty}\frac{x}{x^{4}+3x^{2}-4}dx&=\int_{3}^{\infty }\frac{xdx}{%
+\left( x^{2}\right) ^{2}+3x^{2}-4}
+=\int_{9}^{\infty }\frac{\frac{1}{2}dy}{y^{2}+3y-4} \\
+&=\frac{1}{2}%
+\int_{9}^{\infty }\frac{1}{\left( y+4\right) \left( y-1\right) }dy
+\end{align*}
+Notemos que, si $y=x^2$ y $x=3$, entonces $y=9$, y si $x\to\infty$, entonces $y\to\infty$.
+
+Por otro lado, al tomar fracciones parciales, tenemos que
+\[
+\frac{1}{\left( y+4\right) \left( y-1\right) }=\frac{-\frac{1}{5}}{y+4}+%
+\frac{\frac{1}{5}}{y-1}
+\]
+luego,
+\vskip0.3cm
+
+\resizebox{\textwidth}{!}{$
+	\begin{aligned}
+\int_{3}^{\infty}\frac{x}{x^{4}+3x^{2}-4}dx&=\frac{1}{2}\lim_{z\rightarrow \infty }\int_{9}^{z}\frac{-\frac{1}{5}}{y+4}+%
+\frac{\frac{1}{5}}{y-1}dy =\frac{1}{10}\lim_{z\rightarrow \infty }\int_{9}^{z}\frac{-1}{y+4}+\frac{1}{%
+	y-1}dy \\
+&=\frac{1}{10}\lim_{z\rightarrow \infty }\left.\left( -\ln \left\vert
+y+4\right\vert +\ln \left\vert y-1\right\vert \right)\right\vert_{9}^{z} =\frac{1}{10}\lim_{z\rightarrow \infty }\left.\left( \ln \left\vert \frac{y-1}{y+4}%
+\right\vert \right)\right\vert_{9}^{z} \\
+&=\frac{1}{10}\lim_{z\rightarrow \infty }\left( \ln \left\vert \frac{z-1}{z+4}%
+\right\vert -\ln \frac{8}{13}\right) =\frac{1}{10}\left( \ln \left\vert \lim_{z\rightarrow \infty }\frac{z-1}{z+4}%
+\right\vert +\ln \frac{13}{8}\right) \\
+&=\frac{1}{10}\left( \ln 1+\ln \frac{13}{8}\right) =\frac{1}{10}\ln \frac{13}{8}
+	\end{aligned}
+	$}
+\vskip0.2cm
+
+Es decir, la integral converge y converge a $\frac{1}{10}\ln \frac{13}{8}.$
+
+\begin{ejemplo}\sl
+\textnormal{Diga si la integral {\small\textit{$\displaystyle\int_{1}^{\infty }\frac{dx}{e^{x+2}+e^{4-x}} $}} converge o diverge. Si converge, diga a qu\'{e} valor lo hace.}
+\end{ejemplo}
+\textit{Soluci\'{o}n.} Al reescribir la integral, tenemos
+\begin{align*}
+\int \frac{dx}{e^{x+2}+e^{4-x}}&=\int \frac{dx}{e^{2}\left(
+e^{x}+e^{2-x}\right) }=\frac{1}{e^{2}}\int \frac{e^{x}dx}{e^{x}\left( e^{x}+e^{2}e^{-x}\right) }
+\\
+&=\frac{1}{e^{2}}\int \frac{e^{x}dx}{\left( e^{x}\right) ^{2}+e^{2}e^{x}e^{-x}}=\frac{1}{e^{2}}\int \frac{e^{x}dx}{\left( e^{x}\right) ^{2}+e^{2}}
+\end{align*}
+Ahora tomemos $u=e^{x}$ y $du=e^{x}dx$. Si $x=1$, entonces $u=e^{1}=e$, y si $x\to \infty$, entonces $u=e^{x}\rightarrow \infty$. Con ello, la integral dada es
+
+\vskip0.2cm
+\resizebox{\textwidth}{!}{$
+	\begin{aligned}
+\int_{1}^{\infty }\frac{dx}{e^{x+2}+e^{4-x}}&=\frac{1}{e^{2}}\int_{1}^{\infty }\frac{e^{x}dx}{\left( e^{x}\right)^{2}+e^{2}}
+=\frac{1}{e^{2}}\int_{e}^{\infty }\frac{du}{u^{2}+e^{2}}=\frac{1}{e^{2}}\lim_{z\rightarrow \infty }\int_{e}^{z}\frac{du}{u^{2}+e^{2}} \\
+&=\frac{1}{e^{2}}\lim_{z\rightarrow \infty }\left.\left( \frac{1}{e}\tan^{-1} \left(\frac{u}{e}\right) \right)\right\vert_{e}^{z}=\frac{1}{e^{3}}\lim_{z\rightarrow \infty }\left( \tan^{-1} \left( \frac{z}{e}\right) -\tan^{-1} 1\right)\\
+&=\frac{1}{e^{3}}\left( \frac{\pi }{2}-\frac{\pi }{4}\right) =\frac{\pi }{4e^{3}}
+	\end{aligned}
+	$}
+\vskip0.3cm
+
+La integral converge a $\frac{\pi }{4e^{3}}.$
+
+\begin{ejemplo}\sl
+\textnormal{Diga si la integral {\small \textit{$\displaystyle\int_{2}^{\infty }\frac{x^{2}}{\left( x^{2}+4\right) ^{2}}dx$}} converge o diverge. Si converge, diga a qu\'{e} valor lo hace.}
+\end{ejemplo}
+
+\vskip0.2cm
+\textit{Soluci\'{o}n.} Tomemos $x=2\tan \theta$ y $dx=2\sec ^{2}\theta d\theta$, adem\'{a}s $x^{2}+4=4\tan^{2}\theta +4=4\left( \tan ^{2}\theta +1\right) =4\sec ^{2}\theta $, entonces
+
+\vskip0.2cm
+
+\resizebox{\textwidth}{!}{$
+	\begin{aligned}
+\int \frac{x^{2}}{\left( x^{2}+1\right) ^{2}}dx&=\int \frac{4\tan ^{2}\theta 2\sec ^{2}\theta d\theta }{\left( 4\sec ^{2}\theta \right) ^{2}}=\int\frac{8\tan ^{2}\theta \sec ^{2}\theta d\theta }{16\sec ^{4}\theta }=\frac{1}{2}\int \frac{\tan ^{2}\theta d\theta }{\sec ^{2}\theta }\\
+&=\frac{1}{2}\int\sen ^{2}\theta d\theta=\frac{1}{2}\int \left( \frac{1}{2}-\frac{1}{2}\cos2\theta \right) d\theta
+=\frac{1}{2}\left( \frac{1}{2}\theta -\frac{1}{4}\sen 2\theta \right)\\
+&=\frac{1}{2}\left( \frac{1}{2}\theta -\frac{1}{4}2\sen \theta \cos \theta
+\right) =\frac{1}{4}\left( \theta -\sen \theta \cos \theta \right)\\
+&=\frac{1}{4}\left( \tan^{-1} \left( \frac{x}{2}\right) -\frac{x}{\sqrt{x^{2}+4%
+}}\frac{2}{\sqrt{x^{2}+4}}\right)\\
+&=\frac{1}{4}\left( \tan^{-1} \left( \frac{x}{2}\right) -\frac{2x}{x^{2}+4}\right)
+	\end{aligned}
+	$}
+
+\vskip0.2cm
+
+As\'{i}, la integral impropia es
+{\small
+\begin{align*}
+\int_{2}^{\infty }\frac{x^{2}}{\left( x^{2}+4\right) ^{2}}dx&=\lim_{z\rightarrow \infty }\left.\frac{1}{4}\left( \tan^{-1} \left( \frac{x}{2}\right) -\frac{2x}{x^{2}+4}\right)\right\vert_{2}^{z}\\
+&=\lim_{z\rightarrow \infty }\frac{1}{4}\left( \tan^{-1} \left( \frac{z}{2}%
+\right) -\frac{2z}{z^{2}+4}-\tan^{-1} 1+\frac{1}{2}\right)\\
+&=\frac{1}{4}\left(\frac{\pi }{2}-0-\tan^{-1} 1+\frac{1}{2}\right) =\frac{1}{4}\left( \frac{\pi }{2}-\frac{\pi }{4}+\frac{1}{2}\right)\\ &=\frac{1}{4}\left( \frac{\pi }{4}+\frac{1}{2}\right)=\frac{1}{16}\pi +\frac{1}{8}\approx0\text{,}32135
+\end{align*}
+}
+
+Con ello, concluimos que la integral converge y lo hace a $\frac{1}{16}\pi +\frac{1}{8}$
+
+\begin{ejemplo}\sl
+\textnormal{Diga si la integral {\small \textit{$\displaystyle \int_{1}^{\infty }\frac{4}{x\left( x+1\right) ^{2}}dx$}} converge o diverge. Si converge, diga a qu\'{e} valor lo hace.}
+\end{ejemplo}
+
+\vskip0.2cm
+\textit{Soluci\'{o}n.} Al descomponer en fracciones parciales el integrando, se tiene
+{\small
+\[
+\frac{4}{x\left( x+1\right)^{2}}=\frac{A}{x}+\frac{B}{x\left( x+1\right) }+\frac{C}{x}=\frac{A\left( x+1\right) ^{2}+Bx\left( x+1\right) +Cx}{x\left(
+x+1\right) ^{2}}
+\]
+}
+
+\vskip0.3cm
+es decir, $A\left( x+1\right) ^{2}+Bx\left( x+1\right) +Cx=4$. Ahora, si $x=0$, entonces $A=4$, y si $x=-1$, entonces $-C=4$ o tambi\'{e}n $C=-4.$. Por otro lado, si $x=1$, $A=4$ y $C=-4$, entonces $16+2B-4=4$ o tambi\'{e}n $B=-4.$
+
+Con esos valores,
+{\small
+\begin{align*}
+\int_{1}^{\infty }\frac{4}{x\left( x+1\right) ^{2}}dx&=\int \left( \frac{4}{x}+\frac{-4}{x+1}-\frac{4}{\left( x+1\right) ^{2}}\right) dx\\
+&=4\ln x-4\ln \left( x+1\right) +\frac{4}{x+1}=4\ln \left\vert \frac{x}{x+1}\right\vert +\frac{4}{x+1}
+\end{align*}
+}
+
+Y aplicando l\'{i}mites,
+{\small
+\begin{align*}
+\int_{1}^{\infty }\hspace{-0.3cm}\frac{4}{x\left( x+1\right) ^{2}}dx&=\lim_{z\rightarrow
+\infty }\int_{1}^{z}\frac{4}{x\left( x+1\right) ^{2}}dx=\lim_{z\to
+\infty }\left.\left( 4\ln \left( \frac{x}{x+1}\right) +\frac{4}{x+1}\right)
+\right\vert_{1}^{z}\\
+&=4\lim_{z\rightarrow \infty }\left.\left( \ln \left( \frac{z}{z+1}\right) +\frac{1}{z+1}-\ln \left( \frac{1}{2}\right) -\frac{1}{2}\right)\right\vert_{1}^{z}\\
+&=4\left(\ln 1+0-\ln \left( \frac{1}{2}\right) -\frac{1}{2}\right) \\
+&=-4\ln \left( \frac{1}{2}\right) -2\approx0\text{,}77259
+\end{align*}
+}
+
+\subsection*{Discontinuidad en el intervalo de integraci\'{o}n}
+
+Otro caso de integrales impropias se tiene cuando el integrando es una funci\'{o}n con discontinuidad infinita (as\'{\i}ntota vertical) en el intervalo de integraci\'{o}n.
+
+\textbf{Caso I.} Sea $f$ una funci\'{o}n continua en el intervalo $(a,b]$ y supongamos que $x=a$ es una as\'{\i}ntota vertical de $f$. Entonces, la integral {\small $\displaystyle\int_{a}^{b}f\left( x\right) dx$} es impropia y, para calcularla, se procede con el siguiente l\'{i}mite:
+\[
+\int_{a}^{b}f\left( x\right) dx=\lim_{z\rightarrow a^+}\int_{z}^{b}f\left(
+x\right) dx
+\]
+
+
+\noindent
+\begin{minipage}{\textwidth}
+	\centering
+	\captionof{figure}{Funci\'{o}n discontinua en el l\'{i}mite inferior}
+	\begin{minipage}{0.35\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{Gráficas/IntegImprDisconLimferior}
+	\end{minipage}
+	
+	\vspace{0.3em}
+	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboraci?n propia.}
+\end{minipage}
+
+%\begin{center}-----------
+%\centerline{ \graf{Funci\'{o}n discontinua en el l\'{i}mite inferior}}
+%\includegraphics[scale=0.4]{IntegImprDisconLimferior}
+%\textbf{Fuente:} elaboraci?n propia
+%\end{center}
+\vskip0.2cm
+\textbf{Caso II.} Supongamos que $f$ es una funci\'{o}n continua en $[a,b)$ y que $x=b$ es una as\'{\i}ntota vertical de $f$. La integral impropia {\small $\displaystyle\int_{a}^{b}f\left( x\right) dx$} se define como
+{\small
+\[
+\int_{a}^{b}f\left( x\right) dx=\lim_{w\rightarrow b^-}\int_{a}^{w}f\left(
+x\right) dx
+\]
+}
+
+\noindent
+\begin{minipage}{\textwidth}
+	\centering
+	\captionof{figure}{Funci\'{o}n discontinua en el l\'{i}mite superior}
+	\begin{minipage}{0.35\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{Gráficas/IntegImprDisconLimSuperior}
+	\end{minipage}
+	
+	\vspace{0.3em}
+	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboraci?n propia.}
+\end{minipage}
+
+
+%\begin{center}------------
+%\centerline{ \graf{Funci\'{o}n discontinua en el l\'{i}mite superior}}
+%\includegraphics[scale=0.35]{IntegImprDisconLimSuperior}
+%\textbf{Fuente:} elaboraci?n propia
+%\end{center}
+\vskip0.3cm
+\textbf{Caso III.} Sea $f$ una funci\'{o}n continua en $[a,b]-\left\{ c\right\} $, para c$\in\left( a,b\right)$, y $x=c$ es una as\'{\i}ntota vertical de $f$. La integral impropia {\small $\displaystyle\int_{a}^{b}f\left( x\right) dx$} se define como
+
+\vspace{4mm}
+
+\resizebox{\textwidth}{!}{$
+	\begin{aligned}
+\int_{a}^{b}f\left( x\right) dx&=\int_{a}^{c}f\left( x\right)
+dx+\int_{c}^{b}f\left( x\right) dx=\lim_{w\rightarrow c^-}\int_{a}^{w}f\left(
+x\right) dx+\lim_{z\rightarrow c^+}\int_{z}^{b}f\left( x\right) dx
+	\end{aligned}
+	$}
+
+
+\noindent
+\begin{minipage}{\textwidth}
+	\centering
+	\captionof{figure}{Funci\'{o}n discontinua en un punto del intervalo}
+	\begin{minipage}{0.35\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{Gráficas/IntegImprDisconIntervalo}
+	\end{minipage}
+	
+	\vspace{0.3em}
+	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboraci?n propia.}
+\end{minipage}
+
+%\begin{center}-----------
+%\centerline{ \graf{Funci\'{o}n discontinua en un punto del intervalo}}
+%\includegraphics[scale=0.4]{IntegImprDisconIntervalo}
+%\textbf{Fuente:} elaboraci?n propia
+%\end{center}
+
+Diremos que la integral impropia converge si cada uno de los l\'{i}mites que
+la definen existe y es finito, y es divergente si alguno de los l\'{i}mites que la define no existe o es infinito.
+
+\begin{ejemplo}\sl
+\textnormal{A manera de ejemplo, calculemos la siguiente integral.}
+\end{ejemplo}
+\vspace{-2mm}
+\begin{align*}
+\int_{0}^{1}\frac{\ln x}{\sqrt{x}}dx&=\lim_{z\rightarrow 0^{+}}\int_{z}^{1}%
+\frac{\ln x}{\sqrt{x}}dx=\lim_{z\rightarrow 0^{+}}\left.\left( 2\sqrt{x}\ln x-4\sqrt{x}\right)\right\vert_{z}^{1}\\
+&=\lim_{z\rightarrow 0^{+}}\left.\left( 2\times 1\ln 1-4\sqrt{1}-\left( 2\sqrt{z}\ln z-4\sqrt{z}\right) \right)\right\vert_{z}^{1}\\
+&=\lim_{z\rightarrow 0^{+}}\left( -4-2\sqrt{z}\ln z+4\sqrt{z}\right)
+=-4-0+0=-4
+\end{align*}
+La integral entonces converge a $-4$.
+
+\begin{ejemplo}\sl
+\textnormal{Calcule la siguiente integral:} {\small $\displaystyle{\int_{0}^{1}\frac{dx}{\sqrt{1-x^{2}}}}$.}
+\end{ejemplo}
+
+\textit{Soluci\'{o}n.} En este caso, tenemos una discontinuidad en el l\'{i}mite superior para el integrando; entonces,
+
+\resizebox{\textwidth}{!}{$
+	\begin{aligned}
+\int_{0}^{1}\frac{dx}{\sqrt{1-x^{2}}}= &{\lim_{c\to 1^{-}} \int_{0}^{c}\frac{dx}{\sqrt{1-x^{2}}}} =\underset{c\rightarrow 1^{-}}{\lim }%
+\left( \int \frac{dx}{\sqrt{1-x^{2}}}\right)\Bigg| _{0}^{c} =\underset{c\rightarrow
+	1^{-}}{\lim }\arcsin (x)\big| _{0}^{c}\\
+=&\underset{c\rightarrow 1^{-}}{\lim }\left( \arcsin (c)-\arcsin (1)\right) =%
+\underset{c\rightarrow 1^{-}}{\lim }\left( \arcsin (c)-0\right)\\
+=&\underset{%
+	c\rightarrow 1^{-}}{\lim }\arcsin (c)=\frac{\pi }{2}
+	\end{aligned}
+	$}
+
+
+\begin{ejemplo}\sl
+\textnormal{Calcule la siguiente integral:} $\displaystyle{\int_{-1}^{1}\frac{dx}{x^{\frac{2}{3}}}}$.
+\end{ejemplo}
+
+\textit{Soluci\'{o}n.} En este caso, tenemos una discontinuidad en un punto del intervalo. El integrando es discontinuo en $x=0$, que est\'{a} en el intervalo {\small $[-1,1]$:}
+
+\vskip0.3cm
+
+\resizebox{\textwidth}{!}{$
+	\begin{aligned}
+\int_{-1}^{1}\frac{dx}{x^{\frac{2}{3}}}&= \int_{-1}^{0}\frac{dx}{x^{\frac{2}{3%
+}}}+\int_{0}^{1}\frac{dx}{x^{\frac{2}{3}}}=\lim_{c\rightarrow 0^{-}}\int_{-1}^{c}\frac{dx}{x^{\frac{2}{3}}}%
++\lim_{z\rightarrow 0^{+}}\int_{z}^{1}\frac{dx}{x^{\frac{2}{3}}} \\
+&=\lim_{c\rightarrow 0^{-}}\left( \int \frac{dx}{x^{\frac{2}{3}}}\right)\Bigg|_{-1}^{c}+\lim_{z\rightarrow 0^{+}}\left(\int \frac{dx}{x^{\frac{2}{3}}}\right)\Bigg|_{z}^{1}=\lim_{c\rightarrow 0^{-}}\left( \int x^{-\frac{2}{3}}dx\right)\Bigg|_{-1}^{c}+\lim_{z\rightarrow 0^{+}}\left(\int x^{-\frac{2}{3}}dx\right)\Big|_{z}^{1} \\
+&=\lim_{c\rightarrow 0^{-}}\left( 3x^{\frac{1}{3}}\right)\Big|_{-1}^{c}+\lim_{z\rightarrow 0^{+}}\left( 3x^{\frac{1}{3}}\right)\Big|_{z}^{1}=\lim_{c\rightarrow 0^{-}}\left( 3c^{\frac{1}{3}}-3(-1)^{\frac{1}{3}%
+}\right) +\lim_{z\rightarrow 0^{+}}\left( 3(1)^{\frac{1}{3}}-3(z)^{\frac{1}{3%
+}}\right) \\
+&=\lim_{c\rightarrow 0^{-}}\left( 3c^{\frac{1}{3}}+3\right)+\lim_{z\rightarrow 0^{+}}\left( 3-3(z)^{\frac{1}{3}}\right)
+	\end{aligned}
+	$}
+\vskip0.3cm
+
+Para calcular el l\'{i}mite anterior, recordemos que debemos encontrar el l\'{i}mite de cada t\'{e}rmino; entonces, {\footnotesize $\displaystyle\lim_{c\rightarrow 0^{-}}\left( 3c^{\frac{1}{3}}\right) =3(0)^{\frac{1}{3}}=0,$ $\displaystyle\lim_{c\rightarrow 0^{-}}\left( 3\right) =3,$ $\lim_{z\rightarrow 0^{+}}\left( 3\right) =3$} y {\footnotesize $ \displaystyle\lim_{z\rightarrow 0^{+}}\left( 3(z)^{\frac{1}{3}}\right) =0$.} Con ello se tiene que
+\[\lim_{c\rightarrow 0^{-}}\left( 3c^{\frac{1}{3}}+3\right)
++\lim_{z\rightarrow 0^{+}}\left( 3-3(z)^{\frac{1}{3}}\right) =3+3=6
+\]
+es decir, la integral dada converge a $6.$
+
+\section{Integraci\'{o}n num\'{e}rica}
+
+Cuando una integral definida no se puede evaluar con una antiderivada, se emplean m\'{e}todos num\'{e}ricos como los siguientes.
+
+\subsection*{M\'{e}todo del punto medio}
+
+Supongamos que
+\begin{itemize}
+\item $P=\{x_0,x_1,x_2,\ldots,x_n \}$ con $n\in\mathbb{N}$ es una partici\'{o}n del intervalo $[a,b]$;
+\item $f$ es una funci\'{o}n continua en el intervalo $[a,b]$;
+\item $x_{i}^{*}=\frac{1}{2}\left( x_{i-1}+x_{i}\right)$ es el punto medio del intervalo $[x_{i-1},x_{i}],$ para $i=1,2,\ldots,n$;
+\item $\Delta x=\frac{b-a}{n}$.
+\end{itemize}
+
+\vspace{3mm} 
+Entonces, la integral de $f$ en el intervalo $[a,b]$ puede aproximarse por la suma de Riemann de la funci\'{o}n $f $ en el intervalo, usando el punto medio de cada subintervalo. Llamemos $M_{n}$ a la aproximaci\'{o}n, entonces
+\[
+\int_{a}^{b}f(x)dx\approx M_{n}=\sum\limits_{i=1}^{n}f(x_{i}^{*})\Delta x=\Delta x[f(x_{1}^{* })+f(x_{2}^{*
+})+\ldots +f(x_{n}^{* })]
+\]
+
+\subsubsection*{Error en el m\'{e}todo del punto medio}
+
+Si $f^{\prime}$ es continua y $M$ es una cota superior de $\left\vert
+f^{\prime}\right\vert $ en $\left[ a,b\right] $, entonces el error en el m\'{e}todo del punto medio {\small $E_{m}=\displaystyle\int_{a}^{b}f(x)dx-M_{n}$} satisface
+\[
+\left\vert E_{m}\right\vert \leq \frac{\left( b-a\right) ^{3}}{24n^{2}}M
+\]
+
+\begin{ejemplo}\sl
+\textnormal{Halle una aproximaci\'{o}n de la integral, con $n=5$ para \textit{$\int_{0}^{5}x^{3}dx,$} usando el m\'{e}todo del punto medio.}
+\end{ejemplo}
+
+\textit{Soluci\'{o}n.} Dado que $n=5$, entonces tenemos $5$ subintervalos, y los extremos de cada subintervalo son {\small $0,\ 1,\ 2,\ 3,\ 4$ y $5$.} Los puntos medios de los subintervalos $[0,1],\ [1,2],\ [2,3],\ [3,4]$ y $[4,5]$ son $\frac{1}{2},\ \frac{3}{2},\ \frac{5}{2},\ \frac{7}{2}$ y $\frac{9}{2}$, respectivamente. El ancho de los subintervalos es $\Delta x=\frac{5-0}{5}=1$. Con la anterior informaci\'{o}n tenemos, entonces,
+
+
+{\small
+\begin{eqnarray*}
+\int_{0}^{5}x^{3}dx &\approx& M_{5}=\Delta x\left[f\left(\frac{1}{2}\right)+f\left(\frac{3}{2}\right)+f\left(\frac{5}{2}\right)+f\left(\frac{7}{2}\right)+f\left(\frac{9}{2}\right)\right] \\
+&=&1\left( \left( \frac{1}{2}\right) ^{3}+\left( \frac{3}{2}\right)
+^{3}+\left( \frac{5}{2}\right) ^{3}+\left( \frac{7}{2}\right) ^{3}+\left(
+\frac{9}{2}\right) ^{3}\right) \\
+&=&\frac{1}{8}+\frac{27}{8}+\frac{125}{8}+\frac{343}{8}+\frac{729}{8}=\frac{%
+1225}{8}
+\end{eqnarray*}
+}
+
+es decir,
+\[
+\int_{0}^{5}x^{3}dx \approx \frac{1225}{8}
+\]
+Dado que $f(x)=x^3$ es una funci\'{o}n f\'{a}cilmente integrable, podemos encontrar el valor exacto de la integral, y tenemos
+{\small
+\begin{align*}
+\int_{0}^{5}x^{3}\, dx&=\frac{x^4}{4}\Big|_0^5\\
+&=\frac{5^4}{4}-\frac{0^4}{4}\\
+&=\frac{625}{4}
+\end{align*}
+}
+
+y el error cometido en la aproximaci\'{o}n es
+\[
+\frac{625}{4}-\frac{1225}{8}\approx 3,125
+\]
+un valor que puede disminuirse si se tomara un valor mayor de $n$.
+
+\subsection*{Regla del trapecio}
+
+Sea $f$ una funci\'{o}n continua en el intervalo $[a,b]$. La regla del
+trapecio para aproximar el valor de una integral definida se basa en la aproximaci\'{o}n, por medio de trapecios en lugar de rect\'{a}ngulos, del \'{a}rea de la regi\'{o}n acotada por la gr\'{a}fica de la funci\'{o}n y el eje $x$. 
+\vskip0.3cm
+%\[
+%\FRAME{itbpF}{5.4431in}{2.6169in}{0in}{}{}{Figure}{\special{language
+%"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
+%"USEDEF";valid_file "T";width 5.4431in;height 2.6169in;depth
+%0in;original-width 8.4362in;original-height 4.0343in;cropleft "0";croptop
+%"1";cropright "1";cropbottom "0";tempfilename
+%'PC12IU08.wmf';tempfile-properties "XPR";}}
+%\]
+
+\noindent
+\begin{minipage}{\textwidth}
+	\centering
+	\captionof{figure}{Trapecios en la regi\'{o}n por medir}
+	\begin{minipage}{0.40\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{Gráficas/rtrapecio}
+	\end{minipage}
+	
+	\vspace{0.3em}
+	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboraci?n propia.}
+\end{minipage}
+
+
+
+%\begin{center}------------
+%\centerline{ \graf{Trapecios en la regi\'{o}n por medir}}
+%\includegraphics[scale=0.35]{rtrapecio}
+%\textbf{Fuente:} elaboraci?n propia
+%\end{center}
+\vskip0.3cm
+La longitud de cada subintervalo es $\Delta x=\frac{b-a}{n}$ y el \'{a}rea
+de cada trapecio que est\'{a} sobre el $i$-\'{e}simo subintervalo es $A=\frac{\Delta x}{2}\left( y_{i-1}+y_{i}\right) $, donde $y_{i-1}=f(x_{i-1})$ y $y_{i}=f(x_{i})$, con los $x_i$ en una partici\'{o}n del intervalo $[a,b]$.
+
+\vskip0.2cm
+Con ello, el \'{a}rea que est\'{a} debajo de la curva $y=f(x)$ y encima del
+eje $x$ se aproxima sumando las \'{a}reas de todos los trapecios:
+
+{\small
+\begin{align*}
+\int_{a}^{b}&f(x)dx\approx T_{n}=\frac{1}{2}\left( y_{0}+y_{1}\right) \Delta
+x+\frac{1}{2}\left( y_{1}+y_{2}\right) \Delta x+\frac{1}{2}\left(
+y_{2}+y_{3}\right) \Delta x\\
+&\ +\frac{1}{2}\left( y_{3}+y_{4}\right) \Delta x+\ldots+\frac{1}{2}\left(
+y_{n-2}+y_{n-1}\right) \Delta x+\frac{1}{2}\left( y_{n-1}+y_{n}\right)
+\Delta x\\
+&=\frac{1}{2}\left[ y_{0}+2y_{1}+2y_{2}+2y_{3}+2y_{4}+\ldots +2y_{n-2}+2y_{n-1}+y_{n}\right] \Delta x\\
+&=\frac{1}{2}\left[f(a)+2f(x_{1})+2f(x_{2})+\ldots
++2f(x_{n-2})+2f(x_{n-1})+f(b)\right] \Delta x\\
+&=\frac{1}{2}\left[f(a)+2f(x_{1})+2f(x_{2})+\ldots
++2f(x_{n-1})+f(b)\right] \left( \frac{b-a}{n}\right)
+\end{align*}
+}
+
+
+En general, para aproximar la $\displaystyle\int_{a}^{b}f(x)dx$ por medio de la regla del trapecio, se utiliza
+\[
+T_{n}=\frac{1}{2}\left[ f(a)+2f(x_{1})+2f(x_{2})+\ldots+2f(x_{n-2})+2f(x_{n-1})+f(b)\right] \Delta x
+\]
+Los puntos de la partici?n son $x_{0}=a,\ x_{1}=a+\Delta x,\ x_{2}=a+2\Delta x,\ x_{3}=a+3\Delta x,\ldots,x_{n-1}=a+(n-1)\Delta x$ y $x_{n}=a+n\Delta x=b$\\
+
+y tambi?n \\
+\[
+\Delta x=\frac{b-a}{n}
+\]
+
+\subsubsection*{Error en la regla del trapecio}
+
+La aproximaci\'{o}n con la regla del trapecio lleva a un error que involucra la segunda derivada de $f$. M\'{a}s exactamente, si $f^{\prime\prime}$ es continua y $M$ es una cota superior de $\left\vert
+f^{\prime\prime}\right\vert $ en $\left[ a,b\right] $, entonces el error en la regla del trapecio $E_{T}=\displaystyle\int_{a}^{b}f(x)dx-T_{n}$ satisface
+\[
+\left\vert E_{T}\right\vert \leq \frac{\left( b-a\right) ^{3}}{12n^{2}}M
+\]
+
+\begin{ejemplo}\sl
+\textnormal{Utilice la regla del trapecio para estimar \textit{$\displaystyle\int_{1}^{2}e^{1/x}\,dx$} con \textit{$n=4.$}}
+\end{ejemplo}
+
+De los datos de la integral tenemos que $f(x)=e^{1/x}$, $\Delta x=\frac{2-1}{4}=\frac{1}{4}$; la partici\'{o}n es
+\vskip0.3cm
+\resizebox{\textwidth}{!}{$
+	\begin{aligned}
+P&=\left\{1,1+\frac{1}{4},1+2\left(\frac{1}{4}\right),1+3\left(\frac{1}{4}\right),
+1+4\left(\frac{1}{4}\right)\right\}=\left\{1,\frac{4+1}{4},1+\frac{1}{2},1+\frac{3}{4},1+1\right\}\\
+&=\left\{1,\frac{4+1}{4},\frac{2+1}{2},\frac{4+3}{4},2\right\}=\left\{1,\frac{5}{4},\frac{3}{2},\frac{7}{4},2\right\}
+	\end{aligned}
+	$}
+\vskip0.3cm
+
+entonces,
+{\small
+\begin{align*}
+\int_{1}^{2}e^{1/x}\,dx&\approx T_4=\frac{1}{2}\left[ f(1)+2f\left(\frac{5}{4}\right)+2f\left(\frac{3}{2}\right)+2f\left(\frac{7}{4}\right)+f(2)\right] \left( \frac{1}{4}\right)\\
+&=\frac{1}{2}\left[ e^{1/1}+2e^{4/5}+2e^{2/3}+2e^{4/7}+e^{1/2}\right] \left( \frac{1}{4}\right)\\
+&=\frac{1}{8}\left[ e+2e^{4/5}+2e^{\frac{2}{3}
+}+2e^{4/7}+e^{1/2}\right]\\
+&=0\text{,}125(2\text{,}7183+4,\,\allowbreak
+4511+3,\,\allowbreak 8955+3,\,\allowbreak 5416+1,\,\allowbreak 6487)\\
+&=0\text{,}125(16,\,\allowbreak 255)=2,\,\allowbreak 0319
+\end{align*}
+}
+
+\begin{ejemplo}\sl
+\textnormal{Aproxime la {\small \textit{$\displaystyle\int_{0}^{3}\frac{1}{1+x^{4}}\ dx$}} con \textit{$n=6$} usando la regla del trapecio.}
+\end{ejemplo}
+
+De la integral dada tenemos que {\small $f(x)=\cfrac{1}{1+x^{4}}$;} $\Delta x=\cfrac{3-0}{6}=\cfrac{3}{6}=\cfrac{1}{2}$, y la partici\'{o}n es
+{\small
+\[
+P=\left\{0,1/2,2(1/2),3(1/2),4(1/2),5(1/2%
+),6(1/2)\right\}=\left\{0,\frac{1}{2},1,\frac{3}{2},2,\frac{5}{2},3\right\}
+\]
+}
+Entonces,
+
+\resizebox{\textwidth}{!}{$
+	\begin{aligned}
+\int_{0}^{3}&\frac{1}{1+x^{4}}dx\approx T_6=\frac{1}{2}\left[ f(0)+2f(\frac{1}{2})+2f(1)+2f(\frac{3}{2})+2f(2)
+%\right.\\&\quad \left.
++2f(\frac{5}{2})+f(3)\right] \left( \frac{1}{2}\right)\\
+&=\frac{1}{4}\left[ \frac{1}{1+0^{4}}+2\frac{1}{1+(\frac{1}{2}%
+	)^{4}}+2\frac{1}{1+1^{4}}+2\frac{1}{1+(\frac{3}{2})^{4}}+2\frac{1}{1+2^{4}}
+%\right.\\&\quad\left.
++2\frac{1}{1+(\frac{5}{2})^{4}}+\frac{1}{1+3^{4}}\right]\\
+&=(0\text{,}25)\left[ 1+2(0\text{,}94118)+2(0\text{,}5)+2(0\text{,}16495)
++2(0\text{,}05882)%\right.\\&\quad\left.
++2(0\text{,}02496)+0\text{,}01219\right]\\
+&=(0\text{,}25)(4,\allowbreak 392)=\allowbreak 1,\allowbreak 098
+	\end{aligned}
+	$}
+
+
+
+Con el siguiente ejemplo usamos integraci\'{o}n num\'{e}rica para responder a un interrogante espec\'{i}fico en un contexto aplicado.
+
+\begin{ejemplo}\sl 
+\textnormal{Una alberca mide $30$ pies de ancho y $50$ pies de largo. La tabla 3 muestra la profundidad $h$ del agua a intervalos de $5$ pies. Estime el volumen del agua en la alberca por medio de la regla del trapecio con \textit{$\ n=10,$} aplicada a la integral \textit{$V=\displaystyle\int_{0}^{50}30h(x)dx.$}}
+\end{ejemplo}
+
+\vskip0.3cm
+{\footnotesize
+\begin{center}
+	\captionof{table}{Profundidad \textit{h} del agua}
+	
+	% REDUCE EL ESPACIO HORIZONTAL DE COLUMNA A 3PT
+	\setlength{\tabcolsep}{3pt} 
+	\begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|} % Notar que ajust? las columnas a 12 (l+11c)
+		\hline
+		Posici\'{o}n $x$(pies) & $0$ & $5$ &$10$ & $15$ & $20$ & $25$ & $30$ & $35$ & $40$ & $45$ & $50$\\
+		\hline
+		Profundidad $h(x)$(pies) & $6\text{,}0$& $8\text{,}2$ & $9\text{,}1$ & $9\text{,}9$ & $10\text{,}5$ & $11\text{,}0$ & $11\text{,}5$ & $11\text{,}9$ & $12\text{,}3$ & $12\text{,}7$ & $13\text{,}0$ \\ \hline
+	\end{tabular}
+	
+\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboraci?n propia.}
+	
+\end{center}
+}
+
+\vskip0.3cm
+\textit{Soluci\'{o}n.} Seg\'{u}n la f\'{o}rmula del m\'{e}todo, tenemos
+
+\resizebox{\textwidth}{!}{$
+	\begin{aligned}
+	V&=\int_{0}^{50}30h(x)dx \approx T_{10}=30\left( \frac{1}{2}\right) \left[
+f(0)+2f(5)+2f(10)+2f(x15)+2f(20)\right.\\
+&\quad\left.+2f(25)+2f(30)+2f(35)+2f(40)+2f(45)+f(50)%
+\right] (5) \\
+&=15\left( 5\right) \left[
+6+2(8,2)+2(9,1)+2(9,9)+2(10,5)+2(11)+2(11,5)\right.\\
+&\quad\left.+2(11,9)+2(12,3)+2(12,7)+(13)%
+\right] \\
+&=75\left( 6+16,4+18,2+19,8+21+22+23+23,8+24,6+25,4+13\right) \\
+&=75\left( 213.2\right) =15990
+	\end{aligned}
+	$}
+	
+
+
+\subsection*{M\'{e}todo de Simpson}
+
+Tomemos ahora una funci\'{o}n $f$ continua en $[a,b]$ y una partici\'{o}n del intervalo $[a,b]$ de tal forma que se tenga un n\'{u}mero par de subintervalos de longitud $\Delta x=\frac{b-a}{n}$ (con $n$ par).
+
+\vskip0.2cm
+\noindent
+\begin{minipage}{\textwidth}
+	\centering
+	\captionof{figure}{Par?bolas en la regi?n por medir}
+	\begin{minipage}{0.40\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{Gráficas/simpson.eps}
+	\end{minipage}
+	
+	\vspace{0.3em}
+	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboraci?n propia.}
+\end{minipage}
+
+
+%\begin{center}-----------
+%\centerline{ \graf{Par?bolas en la regi?n por medir}}
+%\includegraphics[scale=0.3]{simpson.eps}
+%\textbf{Fuente:} elaboraci?n propia
+%\end{center}
+\vskip0.2cm
+Para el m\'{e}todo de Simpson, en lugar de usar rect\'{a}ngulos o trapecios como en otros m\'{e}todos, aproximamos el \'{a}rea bajo la curva de la funci\'{o}n $f$ por medio de regiones dadas por partes de par\'{a}bolas. En cada par de subintervalos consecutivos, aproximamos la curva {\footnotesize $y=f(x)\geq 0$} mediante una par\'{a}bola que pasa por los puntos consecutivos {\footnotesize $(x_{i-1},y_{i-1}),(x_{i},y_{i}),(x_{i+1},y_{i+1})$} de la curva.
+
+
+%\begin{center}-No se encontr? la figura
+%\centerline{ \graf{Puntos que forman la par\'{a}bola}}
+%\includegraphics[scale=0.3]{rgsimpson.eps}
+%\textbf{Fuente:} elaboraci?n propia/Falta esta imagen
+%\end{center}
+
+%Verifiquen si esta es la imagen, por favor.
+La ecuaci\'{o}n de una par\'{a}bola es $y=Ax^{2}+Bx+C$; por tanto, el \'{a}rea debajo de la par\'{a}bola desde $x_{0}=-h,\ x_{1}=0$ a $x=h$, con $h=\Delta x=\frac{b-a}{n}$ es
+
+\vskip0.2cm
+\resizebox{\textwidth}{!}{$
+	\begin{aligned}
+A_{1} %&=&\int_{-h}^{h}\left( Ax^{2}+Bx+C\right) dx=\left[ \int \left(
+%Ax^{2}+Bx+C\right) dx\right] _{-h}^{h} \\
+&= \frac{Ax^{3}}{3}+\frac{Bx^{2}}{2}+Cx\Big|_{-h}^{h}\notag
+%\\&
+=\frac{Ah^{3}}{3}+\frac{Bh^{2}}{2}+Ch-\left[ \frac{A(-h)^{3}}{3}+\frac{%
+	B(-h)^{2}}{2}+C(-h)\right]\notag \\
+&=\frac{Ah^{3}}{3}+\frac{Bh^{2}}{2}+Ch-\left[ \frac{-Ah^{3}}{3}+\frac{Bh^{2}%
+}{2}-Ch\right]=\frac{Ah^{3}}{3}+\frac{Bh^{2}}{2}+Ch+\frac{Ah^{3}}{3}-\frac{Bh^{2}}{2}+Ch
+\notag\\
+&=\frac{2Ah^{3}}{3}+2Ch=\frac{h}{3}\left[ 2Ah^{2}+6C\right]
+	\end{aligned}
+	$}
+
+\vskip0.2cm
+Como la curva pasa por los puntos $(-h,f(x_{0})),\ (0,f(x_{1}))$ y $(h,f(x_{2}))$, entonces
+{\small
+\begin{align}
+f(x_{0}) &=A(-h)^{2}+B(-h)+C=Ah^{2}-Bh+C\label{ecua1}\\
+f(x_{1}) &=A(0)^{2}+B(0)+C=C\label{ecua2}\\
+f(x_{2}) &=Ah^{2}+Bh+C\label{ecua3}
+\end{align}
+}
+Sumando las ecuaciones \eqref{ecua1} y \eqref{ecua3},
+{\small
+\begin{equation}\label{ecua4}
+f(x_{0})+f(x_{2})=Ah^{2}-Bh+C+Ah^{2}+Bh+C=2Ah^{2}+2C
+\end{equation}
+}
+que, al reemplazar la ecuaci\'{o}n \eqref{ecua2} en la ecuaci\'{o}n \eqref{ecua4}, se tiene
+{\small
+\begin{align}
+f(x_{0})+f(x_{2})&=2Ah^{2}+2f(x_{1})\notag\\
+f(x_{0})-2f(x_{1})+f(x_{2})&=2Ah^{2}\label{ecua5}
+\end{align}
+}
+y, reemplazando en \eqref{ecua1} las ecuaciones \eqref{ecua5} y \eqref{ecua2}, se tiene que %$\frac{h}{3}\left[ 2Ah^{2}+6C\right] $
+\begin{align*}
+A_{1}&=\frac{2Ah^{3}}{3}+2Ch=\frac{h}{3}\left[
+f(x_{0})-2f(x_{1})+f(x_{2})+6f(x_{1})\right] \\
+&=\frac{h}{3}\left[
+f(x_{0})+4f(x_{1})+f(x_{2})\right]
+\end{align*}
+
+As\'{\i}, el \'{a}rea debajo de la par\'{a}bola que pasa por los puntos {\footnotesize $(x_{2},f(x_{2})),\ (x_{3},f(x_{3}))$} y {\footnotesize $(x_{4},f(x_{4}))$} es {\footnotesize $A_{2}=\frac{h}{3}\left[ f(x_{2})+4f(x_{3})+f(x_{4})\right];$} entonces, por los puntos {\footnotesize $(x_{4},f(x_{4})),\ (x_{5},f(x_{5}))$} y {\footnotesize $(x_{6},f(x_{6}))$,} es {\footnotesize $A_{3}=\frac{h}{3}\left[ f(x_{4})+4f(x_{5})+f(x_{6})\right]$;} y, $\ldots$, por los puntos $(x_{n-2},f(x_{n-2})),\ (x_{n-1},f(x_{n-1}))$ y $(x_{n},f(x_{n}))$ es $A_{n}=\frac{h}{3}\left[ f(x_{n-2})+4f(x_{n-1})+f(x_{n})\right],$que sumando todas las \'{a}reas de las par\'{a}bolas da como resultado. %Por favor, revisen este p?rrafo.
+\vspace{-3mm}
+
+{\small
+\begin{align*}
+\int_{a}^{b}&f(x)dx \approx S_{n} =\frac{h}{3}\left[f(x_{0})+4f(x_{1})+f(x_{2})\right] \frac{h}{3}\left[f(x_{2})+4f(x_{3})+f(x_{4})\right] \\ &\quad+\frac{h}{3}\left[f(x_{4})+4f(x_{5})+f(x_{6})\right] +\ldots %\\
++\frac{h}{3}\left[ f(x_{n-2})+4f(x_{n-1})+f(x_{n})\right] \\
+&=\frac{h}{3}\left[f(x_{0})+4f(x_{1})+2f(x_{2})+4f(x_{3})+f(x_{4})+f(x_{4})+4f(x_{5})\right.\\
+&\quad\left.+f(x_{6})+\ldots+f(x_{n-2})+4f(x_{n-1})+f(x_{n})\right] \\
+&=\frac{h}{3}\left[f(x_{0})+4f(x_{1})+2f(x_{2})+4f(x_{3})+2f(x_{4})+4f(x_{5})+2f(x_{6})\right.\\
+&\quad\left.+\ldots +2f(x_{n-2})+4f(x_{n-1})+f(x_{n})\right]
+\end{align*}
+}
+
+En resumen, para aproximar el valor de $\int_{a}^{b}f(x)dx$ por el m\'{e}todo de Simpson, se usa la expresi\'{o}n
+\vskip0.3cm
+
+\resizebox{\textwidth}{!}{$
+	\begin{aligned}
+S_{n}&=\frac{h}{3}\Big[f(x_{2})+4f(x_{3})+2f(x_{4})+4f(x_{5})+2f(x_{6})+
+%\Big.\\&\quad
++2f(x_{n-2})+4f(x_{n-1})+f(x_{n})\Big]
+	\end{aligned}
+	$}
+\vskip0.3cm
+
+para la partici\'{o}n
+{\small
+\[
+P=\{x_{0}=a,x_{1}=a+\Delta x,x_{2}=a+2\Delta x,\ldots,x_{n}=a+n\Delta x=b\}
+\]
+}
+con $h=\Delta x=\cfrac{b-a}{n}$ y $n$ un n\'{u}mero par.
+
+\subsubsection*{Error en el m\'{e}todo de Simpson}
+
+{\sl \textnormal{Si $f^{\left( 4\right) }$ es continua y $M$ es una cota superior de $%
+\left\vert f^{\left( 4\right) }\right\vert $ en $\left[ a,b\right] $,
+entonces el error en el m\'{e}todo de Simpson $E_{S}=\int_{a}^{b}f(x)dx-S_{n}$
+satisface}
+\[
+\left\vert E_{S}\right\vert \leq \frac{\left( b-a\right) ^{5}}{180n^{4}}M
+\]
+}
+
+\begin{ejemplo}\sl
+\textnormal{Utilice el m\'{e}todo de Simpson para estimar cada una de las siguientes integrales con la informaci\'{o}n dada.}
+\end{ejemplo}
+\begin{enumerate}[leftmargin=1.2em,   itemindent=0pt,       labelwidth=\labelwidth,labelsep=0.5em,]
+	
+\item $\displaystyle\int_{1}^{2}e^{1/x}dx$ con $n=4.$
+
+\textit{Soluci\'{o}n.} En este caso tenemos que $\Delta x=\cfrac{2-1}{4}=\cfrac{1}{4}$ \ y
+{\small
+\[
+P=\{1,1+1/4,1+2(1/4),1+3(1/4),1+4(1/4)\}=\{1,5/4,3/2,7/4,2\}
+\]
+}
+
+por tanto,
+{\small
+\begin{align*}
+\int_{1}^{2}e^{1/x}dx&\approx S_{n}=\frac{1/4}{3}\Big[
+f(1)+4f(5/4)+2f(3/2)+4f(7/4)+f(2)\Big]\\
+&=\frac{1}{12}\Big[ e^{1/1}+4e^{4/5}+2e^{2/3}+4e^{4/7}+e^{1/2}\Big]\\
+&=0\text{,}0833(2,\allowbreak 7183+8.\allowbreak9022+3,\allowbreak 8955+7,\allowbreak 0832+1,\allowbreak 6487)\\
+&=0\text{,}0833(24,\allowbreak 248)\approx\allowbreak 2,0199
+\end{align*}
+}
+
+\item $\displaystyle\int_{0}^{3}\frac{1}{1+x^{4}}dx$ con $n=6.$
+
+\textit{Soluci\'{o}n.} Ahora, $\Delta x=\cfrac{3-0}{6}=\cfrac{3}{6}=\cfrac{1}{2}$ \ y
+
+\resizebox{\textwidth}{!}{$
+	\begin{aligned}
+P&=\{0,1/2,2(1/2),3(1/2),4(1/2),5(1/2),6(1/2)\}
+%\\&
+=\{0,1/2,1,3/2,2,5/2,3\}
+	\end{aligned}
+	$}
+
+
+y entonces,
+
+\resizebox{\textwidth}{!}{$
+	\begin{aligned}
+&\int_{0}^{3}\frac{1}{1+x^{4}}dx\approx S_{6}
+%\\&
+=\frac{1/2}{3}\Big[ f(0)+4f\left(\frac{1}{2}\right)+2f(1)+4f\left(\frac{3}{2}\right)+2f(2)+4f\left(\frac{5}{2}\right)
+%\\&\quad
++f(3)\Big]\\
+&=\frac{1}{6}\left[ \frac{1}{1+0^{4}}+4\frac{1}{1+(%
+	\frac{1}{2})^{4}}+2\frac{1}{1+1^{4}}+4\frac{1}{1+(\frac{3}{2})^{4}}+2\frac{1%
+}{1+2^{4}}
+%\right.\\&\quad\left.
++4\frac{1}{1+(\frac{5}{2})^{4}}+\frac{1}{1+3^{4}}\right]\\
+&=(0\text{,}1666)\left[ 1+4(0\text{,}94118)+2(0\text{,}5)+4(0\text{,}164
+95)+2(0\text{,}05882)
+%\right.\\&\quad\left.
++4(0\text{,}02496)+0\text{,}01219\ \right]\\
+&=(0\text{,}1666)(6,\allowbreak 6542) \approx\allowbreak
+1.106
+	\end{aligned}
+	$}
+
+
+\vskip0.5cm
+\item Usando el m\'{e}todo de Simpson, halle el \'{a}rea de la regi\'{o}n dada en la gr\'{a}fica:
+\vskip0.3cm
+
+\noindent
+\begin{minipage}{\textwidth}
+	\centering
+	\captionof{figure}{Regi\'{o}n por medir}
+	\begin{minipage}{0.40\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{Gráficas/InteNumSimpsEjemp}
+	\end{minipage}
+	
+	\vspace{0.3em}
+	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboraci?n propia.}
+\end{minipage}
+
+
+%\begin{center}------------
+%\centerline{ \graf{Regi\'{o}n por medir}}
+%\includegraphics[scale=0.35]{InteNumSimpsEjemp}
+%\textbf{Fuente:} elaboraci?n propia
+%\end{center}
+\vskip0.3cm
+\textit{Soluci\'{o}n.} Con la informaci\'{o}n en la figura, podemos hacer
+
+
+\resizebox{\textwidth}{!}{$
+	\begin{aligned}
+\text{\'{A}rea}&\approx S_{8}=\frac{1\text{,}8}{3}\Big( 2+4\cdot 2\text{,}5+2\cdot 3\text{,}1+4\cdot 3\text{,}8+2\cdot4+4\cdot 4\text{,}5
+%\\ &\quad
++2\cdot 5\text{,}5+4\cdot 4+0\Big)\\
+&=51\text{,}84
+	\end{aligned}
+	$}
+
+\end{enumerate}
+
+\addcontentsline{toc}{section}{Ejercicios del cap?tulo 5 \thechapter}
+
+%\group
+\vskip0.3cm
+\begin{ejer}{Decida si la integral es convergente o divergente. En caso de ser convergente,calcule la integral impropia dada.}
+\end{ejer}
+\begin{enumerate}
+%\begin{multicols}{3}
+	
+\item {$\displaystyle\int_{1}^{\infty }\frac{1}{x^{0,99}}dx$} {La integral diverge.}
+
+\item {$\displaystyle\int_{1}^{\infty }e^{-4x}dx$} {Converge a $\frac{1}{4e^{4}}$.}
+
+\item {$\displaystyle\int_{-\infty }^{3}e^{2x}dx$} {Converge a $\frac{1}{2}e^{6}$.}
+
+\item {$\displaystyle\int_{-\infty }^{\infty }e^{-x}dx$} {La integral diverge.}
+
+\item {$\displaystyle\int_{e}^{\infty }\frac{1}{x\left( \ln x\right) ^{3}}dx$} {Converge a $\frac{1}{2}$.}
+
+\item {$\displaystyle\int_{0}^{\infty }e^{-x}\sin xdx$} {Converge a $\frac{1}{2}$.}
+
+\item {$\displaystyle\int_{0}^{2}\frac{1}{\sqrt[3]{x-1}}dx$} {Converge a $0$.}
+
+\item {$\displaystyle\int_{0}^{\frac{\pi }{4}}\frac{\sec ^{2}\theta d\theta }{\sqrt{\tan\theta }}$} {Converge a $2$}
+
+\item {$\displaystyle \int_{2}^{\infty }\frac{1}{\left( x+1\right) \left( x+2\right) }dx$} {Converge a $\ln \frac{4}{3}$}
+
+\item {$\displaystyle\int_{1}^{\infty }\frac{1}{x}dx$} {Diverge}
+
+\item {$\displaystyle\int_{2}^{\infty }\frac{2}{\left( x+1\right) ^{2}}dx$} {Converge a $\frac{2}{3}$}
+
+\item {$\displaystyle\int_{1}^{\infty }\frac{8}{x^{3}+x}dx$} {Converge a $4\ln 2$}
+
+\item {$\displaystyle\int_{2}^{\infty }\frac{x}{x^{4}-1}dx$} {Converge a $\frac{1}{4}\ln \frac{5}{3}$}
+
+\item {$\displaystyle\int_{3}^{\infty }\frac{x}{x^{4}+3x^{2}-4}dx$} {Converge a $\frac{1}{10}\ln \frac{13}{8}$}
+
+\item {$\displaystyle\int_{1}^{\infty }\frac{dx}{e^{x+2}+e^{4-x}}$} {Converge a $\frac{\pi }{4e^{3}}$}
+
+\item {$\displaystyle\int_{2}^{\infty }\frac{x^{2}}{\left( x^{2}+4\right) ^{2}}dx$} {Converge a $\frac{1}{16}\pi +\frac{1}{8}$}
+
+\item {$\displaystyle\int_{1}^{\infty }\frac{4}{x\left( x+1\right) ^{2}}dx$} {Converge a $4\ln 2 -2$}
+
+\item {$\displaystyle\int_{3}^{\infty }\frac{x}{\left( x-1\right) ^{2}\left( x+1\right) }dx$} {Converge a $\frac{1}{4}\ln 2+\frac{1}{4}$.}
+
+\item {$\displaystyle\int_{2}^{\infty }\frac{1}{x^{2}-1}dx$} {Converge a $\frac{1}{2}\ln 3$}
+
+\item {$\displaystyle\int_{2}^{\infty }\frac{dx}{x\left( x-1\right) \left( x+1\right) }$} {Converge a $\frac{1}{2}\ln \frac{4}{3}$}
+
+\item {$\displaystyle\int_{2}^{\infty }\frac{10}{\left( x+2\right) \left( x+3\right)}dx $} {Converge a $10\ln 5-20\ln 2 $}
+
+\item {$\displaystyle\int_{1}^{\infty }\frac{10}{x^{3}+4x}dx$} {Converge a $\frac{5}{4}\ln 5 $}
+
+\item {$\displaystyle\int_{-\infty }^{\infty }\frac{3x^{2}dx}{x^{6}+1}$} {Converge a $\pi$}
+
+\item {$\displaystyle\int_{-2}^{3}\frac{1}{x^{3}}dx$} {La integral diverge}
+
+\item {$\displaystyle\int_{-1}^{8}\frac{1}{\sqrt[3]{x}}dx$} {Converge a $\frac{9}{2}$}
+
+\item {$\displaystyle\int_{0}^{1}x\ln xdx$} {Converge a $-\frac{1}{4}$}
+
+\item {$\displaystyle\int_{0}^{\infty }\frac{1}{\left( 1+x\right) \sqrt{x}}dx$} {Converge a $\pi$}
+
+\item {$\displaystyle\int_{0}^{e}\ln ^{2}zdz$} {Converge a $e$}
+%\end{multicols}
+\end{enumerate}
+
+\vskip0.5cm
+
+\begin{ejer}{Aproximar las siguientes integrales usando el m\'{e}todo del punto medio, la regla del trapecio y el m\'{e}todo de Simpson, con el valor de $n$ indicado.}
+\end{ejer}
+\begin{enumerate}
+%\begin{multicols}{2}
+
+\vskip0.2cm
+\item {$\displaystyle\int_{2}^{4}\frac{x}{\ln x}dx$ con $n=6$}{$M_{6}=5,5483,\ T_{6}=5,5598,\ S_{6}=5,5525$}
+
+\vskip0.2cm
+\item {$\displaystyle\int_{0}^{1}\frac{e^{x}}{1+x^{2}}dx$ con $n=10$}{$ M_{10}=1,2711,\ T_{10}=1,2699,\ S_{10}=1,2707$}
+
+\vskip0.2cm
+\item {$\displaystyle\int_{4}^{6}\ln \left( x^{3}+2\right) dx$ con $n=10$}{$M_{10}=9,6509,\ T_{10}=9,6498,\ S_{10}=9,6505$}
+
+\vskip0.2cm
+\item {$\displaystyle\int_{2}^{10}\frac{x^{2}+10x}{\ln x}dx$ con $n=10$}{$ M_{10}=443,59,\ T_{10}=444,66,\ S_{10}=444,01$}
+
+\vskip0.2cm
+\item {$\displaystyle\int_{0}^{3}\sqrt{x^{6}+2}dx$ con $n=8$}{$%
+M_{10}=21,706,\ T_{10}=22,180,\ S_{10}=21,863$}
+%\end{multicols}
+\end{enumerate}
+
+\begin{ejer}{Dada la \textbf{(figura \ref{fig:integral_impropia})}figura 163, aproxime el \'{a}rea abajo de la regi\'{o}n sombreada para $n=6$ utilizando}
+\end{ejer}
+\vskip0.3cm
+\noindent
+\begin{minipage}{\textwidth}
+	\centering
+	\captionof{figure}{?rea para aproximar}
+    \label{fig:integral_impropia}
+	\begin{minipage}{0.45\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{Gráficas/ejempintnum.eps}
+	\end{minipage}
+	
+	\vspace{0.3em}
+	\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboraci?n propia.}
+\end{minipage}
+
+
+%\begin{center}-----------
+    %\includegraphics[scale=0.35]{ejempintnum.eps}
+%\end{center}
+\vskip0.3cm
+\begin{enumerate}
+	
+\item {El m\'{e}todo del punto medio.}{$M_{6}=24,6$ }
+
+\item {La regla del trapecio.}{ $T_{6}=24,1$}
+
+\item {El m\'{e}todo de Simpson.}{$S_{6}=24,4$}
+%\clearpage
+
+\item {Sea $f$\ la funci\'{o}n cuyos datos est\'{a}n en la siguiente tabla.}
+
+\item {Use la tabla para aproximar $\displaystyle\int_{0}^{5}f\left( x\right) dx$ usando el m\'{e}todo del punto medio.}{$M_{5}=11,2$}
+
+\item {Si $-3\leq f^{\prime \prime}\left( x\right) \leq 4$ para todo $x.$ \ Estime el error en la aproximaci\'{o}n de la parte a).}{Error $0,8333$ }
+
+\vskip0.2cm
+
+\item {Utilice los datos de la funci\'{o}n $f$ dados en la tabla 5:
+
+{\small
+\begin{center}
+\captionof{table}{Datos de la funci?n \textit{f}}
+
+\begin{tabular}{|r|r|r|r|r|r|r|r|r|r|r|r|}
+ \hline
+ $x$ & $2$ & $2,5$ & $3$ & $3,5$ & $4$ & $4,5$ & $5$ & $5,5$ & $6$ & $6,5$ & $%
+ 7$ \\ \hline
+ $f\left( x\right) $ & $1$ & $1,8$ & $2,6$ & $3,8$ & $4,8$ & $6$ & $5,2$ & $4$
+ & $3,8$ & $3,2$ & $3$ \\
+\hline
+\end{tabular}
+
+\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboraci?n propia.}
+
+\end{center}}
+}
+
+\item {Para aproximar $\displaystyle\int_{2}^{7}f\left( x\right) dx$ usando la regla del trapecio.}{$T_{10}=\num{8.6}$}
+
+\item {Si $-4\leq f^{\prime \prime}\left( x\right) \leq 6$ para todo $x\in \left[ 2,7\right].$ \ Estime el error en la aproximaci\'{o}n de la parte a).}{Error $0,m625$}
+
+\vskip0.2cm
+
+\item {Utilice los datos de la funci\'{o}n $f$ dados en la tabla
+
+{\footnotesize
+\begin{center}
+
+\captionof{table}{Datos de la funci?n f}
+
+\begin{tabular}{|r|r|r|r|r|r|r|r|r|r|r|r|r|r|}
+ \hline
+ $x$ & $4$ & $4,5$ & $5$ & $5,5$ & $6$ & $6,5$ & $7$ & $7,5$ & $8$ & $8,5$ & $%
+ 9$ & $9,5$ & $10$ \\ \hline
+ $f\left( x\right) $ & $3$ & $3,8$ & $4$ & $4,6$ & $5$ & $5,4$ & $6,6$ & $5,8$
+ & $5$ & $4$ & $3,6$ & $3$ & $2,4$ \\ \hline
+\end{tabular}
+
+\parbox{0.95\linewidth}{\centering\fontsize{8pt}{10pt}\selectfont\textbf{Fuente:} elaboraci?n propia.}
+
+\end{center}}
+}
+
+\item {Para aproximar $\displaystyle\int_{4}^{10}f\left( x\right) dx$ usando la regla del trapecio.}{$S_{12}=26,7$}
+
+\item {Si $-5\leq f^{\left( 4\right) }\left( x\right) \leq 10$ para todo $x\in %
+\left[ 4,10\right] .$ \ Estime el error en la aproximaci\'{o}n de la parte
+a).}{Error $0,00837$}
+
+\vskip0.2cm
+
+\item {Halle $n$ para que $\displaystyle\int_{0}^{1}e^{\frac{1}{4}x^{2}}dx$ tenga magnitud de error menor que $10^{-3},$ usando la regla del trapecio y halle $T_{n}.$}
+
+\vskip0.2cm
+
+\item {Halle $n$ para que $\displaystyle\int_{0}^{1}e^{\frac{1}{4}x^{2}}dx$ tenga magnitud de error menor que $10^{-4},$ usando el m\'{e}todo de Simpson y halle $S_{n}.$}\\
+\item {$n=10$\qquad $T_{10}=1,0905.$\qquad}\\
+\item {$n=4$ \qquad $S_{4}=1,09.$}
+
+\end{enumerate}

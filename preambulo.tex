@@ -1,0 +1,218 @@
+% --- PREÁMBULO FINAL OPTIMIZADO PARA LA EDITORIAL UD ---
+\usepackage[spanish,es-tabla,es-lcroman]{babel}
+% Estilo editorial
+\input{esConfigDir/esConfigFonts} % Definición de fuentes (lhseries, medseries, etc.)
+\input{esConfigDir/esEstilo}
+
+\usepackage{geometry}
+\geometry{
+	paperheight=24.0cm,
+	paperwidth=17.0cm,
+	textwidth=12.5cm,
+	tmargin=2.5cm,
+	bmargin=2.5cm,
+	left=2.5cm,
+	right=2.0cm
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% BIBLIOGRAFÍA 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[backend=biber,style=ieee,sorting=none,isbn=false,doi=true]{biblatex}
+\addbibresource{references.bib}
+\setlength{\bibitemsep}{1.5ex}
+
+\DeclareQuoteStyle{spanish}{``}{''}{`}{'} % Reemplaza las comillas angulares por comillas dobles normales
+
+\DefineBibliographyStrings{spanish}{
+  url = {[En línea]. Disponible en},
+  translator = {trad\adddot},
+  bytranslator = {trad\adddot},
+  version = {versión},
+  and = {and},
+}
+% IEEE + español: delimitador final de lista de autores
+\DeclareDelimFormat{finalnamedelim}{%
+  \ifnumgreater{\value{liststop}}{2}{\finalandcomma\addspace}{}%
+  \bibstring{and}\addspace}
+\DefineBibliographyStrings{english}{%
+  andothers = {et\addabbrvspace al\adddot}%
+}
+
+%\usepackage{showframe}% Similar al calderon, apagar al terminar de maquetar.
+\usepackage[cam, width=215truemm, height=275truemm, lualatex, center]{crop} % Descomentar solo en producción final
+
+% 5. AJUSTES FINALES DE FORMATO DEL PÁRRAFO
+\usepackage[nopatch=footnote]{microtype} % Microtipografía avanzada
+\usepackage{ragged2e} % Para control de alineación
+\usepackage{authblk} % Manejo de autores (plantilla experimento)
+\decimalpoint % Para usar la coma como separador decimal.
+\setlength\parindent{0pt} % Sin sangría al inicio de párrafos, como pide la UD.
+\newcommand{\normalfonts}{\fontsize{12pt}{14.4pt}\selectfont}
+\let\normalsize\normalfonts
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% HYPERREF (después de biblatex para que los enlaces de citas funcionen)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[hidelinks,unicode,naturalnames,bookmarksopen,bookmarksdepth=2,breaklinks=true,hyperfootnotes=false]{hyperref}
+\usepackage{bookmark}
+\urlstyle{same}
+\newcommand{\secref}[1]{``\nameref{#1}''}
+\renewcommand{\textcite}{\cite}
+
+% ÍNDICES Y SUBARCHIVOS
+%\usepackage{makeidx}
+%\usepackage{subfiles}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% CORNISAS Y ESTILO DE PÁGINA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{emptypage}
+
+% Esto asegura que la página izquierda de un capítulo nuevo esté vacía (sin cornisas)
+\renewcommand{\cleardoublepage}{%
+  \clearpage\ifodd\value{page}\else\hbox{}\thispagestyle{empty}\newpage\fi%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% PAQUETES FUNCIONALES Y DE CONTENIDO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% PAQUETES DE MATEMÁTICAS Y FÍSICA
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{bm}
+\usepackage{physics}
+\usepackage{siunitx} % \num, \SI (p. ej. CapAplicaciones, CapIntegNumer); ver \AtBeginDocument\qty abajo
+\usepackage{fontawesome}
+\usepackage{fancyvrb}
+\usepackage{fp}
+\usepackage{calculus}
+\usepackage{calculator}
+\usepackage{mathtools}
+\usepackage{bigints}
+\usepackage{resizegather}
+
+% PAQUETES DE GRÁFICOS E IMÁGENES
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\graphicspath{{./Fig}{./Img}{./Imgn}}
+
+% COLOR Y LAYOUT
+\usepackage{xcolor}
+\definecolor{orcidlogocol}{HTML}{A6CE39}
+\usepackage{academicons}
+\usepackage{multicol}
+\usepackage{esvect}
+\usepackage{relsize}
+\usepackage{pifont}
+\usepackage{etoolbox}
+\usepackage{tcolorbox}
+\tcbuselibrary{breakable,skins}
+
+% Default options for tcolorbox (Instrucción Mathematica and similar)
+\tcbset{
+  enhanced,
+  before skip=1em,
+  after skip=1em,
+}
+
+\newtcolorbox{graybox}[1][]{
+  enhanced,
+  before skip=1em,
+  after skip=1em,
+  colback=gray!5,
+  colframe=gray!80,
+  title={\bf #1}
+}
+
+% FLOATS Y CAPTIONS
+\usepackage{float}
+\usepackage{caption}
+\usepackage{array}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{listings}
+\usepackage{afterpage}
+\usepackage{placeins}
+\usepackage{wrapfig}
+\usepackage{subcaption}
+\usepackage{needspace}
+\usepackage{pdfpages}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% CONFIGURACIONES Y COMANDOS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% COMANDOS PERSONALIZADOS Y ENTORNOS
+\newcommand{\letraverbatim}{\fontsize{9pt}{11.5pt}\selectfont}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\bi}{\int}
+\newcommand{\la}{\langle}
+\newcommand{\ra}{\rangle}
+\newcommand{\ei}[1]{\mathbf{e}_{#1}}
+\newcommand{\ve}[1]{\mathbf{#1}}
+\DeclareMathOperator{\arcsinh}{arcsinh}
+\DeclareMathOperator{\arccosh}{arccosh}
+\DeclareMathOperator{\arctanh}{arctanh}
+\DeclareMathOperator{\arccoth}{arccoth}
+\DeclareMathOperator{\arcsech}{arcsech}
+\DeclareMathOperator{\arccsch}{arccsch}
+\DeclareMathOperator{\rot}{rot}
+\newcommand{\vi}{\mathbf{i}}
+\newcommand{\vj}{\mathbf{j}}
+\newcommand{\vk}{\mathbf{k}}
+\newcommand{\brake}{\\[4pt]}
+% Cajas tcolorbox y atajos (preambulo_experimento)
+\newcommand{\ptc}{\tcbset{colback=gray!10!white,colframe=black!85!blue}\begin{tcolorbox}[breakable,enhanced,title=\bf Parametrizando el sólido]}
+\newcommand{\ptr}{\tcbset{colback=gray!10!white,colframe=black!85!blue}\begin{tcolorbox}[breakable,enhanced,title=\bf Parametrizando la región de Integración]}
+\newcommand{\tc}{\begin{tcolorbox}[breakable,enhanced,title=\bf Instrucción en {\tt Mathematica}]}
+\newcommand{\etc}{\end{tcolorbox}}
+% PSTricks: usar solo con flujo compatible (p. ej. auto-pst-pdf); no cargado aquí por LuaLaTeX.
+
+% Símbolo de final de ejemplo, demostración, etc.
+% Referencia: https://www.ams.org/arc/tex/howto/qed/extra-qed.pdf
+\newcommand{\xqed}[1]{
+  \leavevmode\unskip\penalty9999 \hbox{}\nobreak\hfill
+\quad\hbox{\ensuremath{#1}}}
+\newcommand{\finalm}{\xqed{\square}}
+\newcommand{\finalmf}{\vspace*{-\baselineskip}\xqed{\square}}
+\newcommand{\finaleq}[1][-2.25\baselineskip]{\relax\par\vspace*{#1}\hfill$\square$\par\vspace*{\belowdisplayskip}\relax}
+\let\final\finalm
+
+% ENTORNOS DE TEOREMA Y REDEFINICIONES
+\newtheorem{teorema}{Teorema}[section]
+\newtheorem{prop}{Proposición}[section]
+\newtheorem{defi}{Definición}[section]
+\newtheorem{ejer}{Ejercicio}[section]
+\newtheorem{ejemplo}{Ejemplo}[section]
+\let\sen\sin
+\renewcommand{\proofname}{Demostración}
+% Demostración (macro propia)
+\newcommand{\iniciodemostracion}{\noindent\textbf{Demostración.}\hspace{0.5em}}
+\newcommand{\findemostracion}{\final}
+
+\renewenvironment{proof}
+{\vspace{0.5em}\iniciodemostracion\normalfont\ignorespaces}
+{\findemostracion\vspace{0.5em}\par} %
+
+\renewcommand*{\tablename}{\bf Tabla} % Estilo UD
+\renewcommand*{\figurename}{\bf Figura} % Estilo UD
+
+% AJUSTES DE ÍNDICE Y PROFUNDIDAD DE SECCIONES
+\counterwithout{footnote}{chapter}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+\renewcommand*\contentsname{\lhseries Contenido}
+\renewcommand{\cfttoctitlefont}{\hfill\Huge}
+\renewcommand{\cftdot}{}
+
+% SOLUCIÓN DE CONFLICTOS
+\AtBeginDocument{\RenewCommandCopy\qty\SI} % Solución de conflicto physics
+\makeindex
+
+\raggedbottom

@@ -1,0 +1,166 @@
+\documentclass[12pt]{book}
+\usepackage{exsheets}
+\usepackage{multicol}
+\usepackage[utf8]{inputenc}%utf8 es el estándar actual y no requiere comandos especiales para representar las tildes o la 'ñ'.]
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{csquotes} %Da mejor formato a las citas y tiene en cuenta la ortotipografía de cada idioma.
+\usepackage{microtype} %Maneja mejor el espaciado vertical y horizontal, con lo que facilita la lectura.
+\usepackage{siunitx}
+\usepackage{amsmath}
+\usepackage{verbatim}
+\usepackage{amssymb,latexsym}
+\usepackage{caption}
+\usepackage{capt-of}
+\usepackage{amsthm}
+\theoremstyle{definition}
+\usepackage{pst-all}
+\usepackage{pstricks}
+\usepackage{fancyhdr}
+\usepackage{amsfonts}
+%\usepackage[latin1]{inputenc}
+\usepackage{enumerate}
+\usepackage{pb-diagram}
+\usepackage[mathscr]{euscript}
+\usepackage{multirow}
+\usepackage{graphicx}
+\graphicspath{ {./Gráficas/} }
+\usepackage[stable]{footmisc} % Permite footnotes en títulos y otros lugares
+\usepackage{epstopdf}
+\epstopdfsetup{outdir=./Gráficas/} 
+%\epstopdfDeclareGraphicsRule{.eps}{png}{.png}{convert -density 30 #1 \OutputFile} 
+%\epstopdfDeclareGraphicsRule{.pdf}{png}{.png}{convert -density 30 #1 \OutputFile} 
+%\DeclareGraphicsExtensions{.png,.jpg,.eps,.pdf} 
+\DeclareGraphicsExtensions{.eps,.pdf,.jpg}
+\usepackage{makeidx}
+\usepackage{colortbl}
+\usepackage{xlop}
+%\usepackage[Bjornstrup]{fncychap}
+%\usepackage{./Estilos/answers}
+\usepackage{answers}
+\usepackage{./Estilos/listofanswers}
+%\usepackage{listofanswers}
+\usepackage[stable]{footmisc} %para que deje incluir notas al pie de página desde el título de sección
+\usepackage{hyperref}
+\usepackage{pdfpages}
+\usepackage{chngcntr}
+\counterwithout{footnote}{chapter}
+\newcounter{graf}
+\newcommand{\graf}[1]{\stepcounter{graf}{\textbf{\footnotesize Figura \thegraf. }\footnotesize #1 }}
+%\newcommand{\grafref}[1]{\figurename~\ref{#1}}
+%\newcommand{\graf}{\stepcounter{graf}\textbf{\footnotesize Gráfica \thegraf. }}\footnotesize #1 }
+\makeindex
+\newtheorem{theorem}{Teorema}[chapter]
+\newtheorem{axiom}{Axioma}[chapter]
+\newtheorem{coro}[theorem]{Corolario}
+\newtheorem{definicion}{Definici\'on}[chapter]
+\newtheorem{lemma}{Lema}[chapter]
+\newtheorem{exer}{Ejercicios}[chapter]
+\newtheorem{fig}{Figura}
+\newtheorem{afirmation}{Afirmación}[chapter]
+\newtheorem{proposicion}[theorem]{Proposición}
+\newtheorem{ejemplo}{Ejemplo}[chapter]
+\newtheorem{solucion}{Solución}[chapter]
+\newtheorem{claim}{Claim}
+%\newtheorem{ejem}[defin]{Ejemplo}
+\newcommand{\rta}{\text{\rm Rta}\,}
+\newcommand{\finalm}{\quad $\sharp$}
+\newcommand{\final}{\quad \sharp}
+\newcommand{\fr}{\frac}
+\newcommand{\cfr}{\cfrac}
+\newcommand{\por}{\cdot}
+\newcommand{\pea}{\big[\hspace{-.08cm}\vert\ }
+\newcommand{\pec}{\ \vert\hspace{-.07cm}\big]}
+\newcommand{\itn}{\item }
+\newcommand{\sen}{\text{\rm sen}\,}
+\newcommand{\cm}{\text{.}}
+\newcommand{\func}[1]{\text{\textbf{\,#1}}}
+\newcommand{\vtr}{\overrightarrow}
+\newcommand{\ent}{\Rightarrow}
+\newcommand{\y}{\wedge}
+\newcommand{\dis}{\vee}
+\newcommand{\sii}{\Leftrightarrow}
+\newcommand{\no}{\sim}
+\renewcommand{\exercisesname}{\textsc{Ejercicios}}
+\renewcommand{\answersname}{\Large Respuestas}
+\renewcommand{\groupname}{Capítulo}
+\renewcommand{\bibname}{Referencias Bibliográficas}
+\setlength{\columnsep}{1cm}\setlength{\oddsidemargin}{0.cm}\setlength{\evensidemargin}{0.cm}
+\setlength{\textwidth}{17cm}\setlength{\textheight}{23cm}%\setlength{\hoffset}{-1cm}
+\setlength{\voffset}{-1.7cm}\setlength{\footskip}{.5cm}
+\setcounter{secnumdepth}{3}
+\pagestyle{fancy}
+%...........................................................................%
+\begin{document}
+
+\setlength{\parindent}{0cm} %sin sangría al inicio de párrafo
+\setlength{\parskip}{2mm} %separación adicional entre párrafos
+
+\thispagestyle{empty}
+\frontmatter
+\title{
+{\bf Cálculo integral}
+}
+
+\author{\textbf{Autores}\\
+%{\huge {\ }}\\
+{\large {\ Carmen Leonor Pulido Segura}}\\
+{\large {\ Edilberto Sarmiento Sarmiento}}\\
+{\large {\ Pablo Andrés Acosta Solarte}}\\
+}
+
+\date{}
+\maketitle
+
+\fancyhead{}
+%\fancyhead[LO]%{\textsl{\'{I}ndice general} }
+%\fancyhead[RO]%{\thepage.}
+%\fancyhead[RE]%{\textsl{\'{I}ndice general} }
+%\fancyhead[LE]%{\thepage.}
+\fancyfoot{}
+
+\include{Cálculo integral/Resumen}
+
+\includepdf{Legal.pdf}
+
+\tableofcontents
+
+\thispagestyle{empty}
+\include{Introduccion}
+
+\fancyhead{}
+\fancyhead[LO]{\scriptsize \leftmark}%{Cap\'{i}tulo \thechapter} }
+\fancyhead[RO]{\thepage.}
+\fancyhead[RE]{\scriptsize \rightmark}%Cálculo integral} }
+\fancyhead[LE]{\thepage.}
+\fancyfoot{}
+
+\thispagestyle{empty}
+
+\mainmatter
+
+%\fancyhead{}
+%\fancyhead[LO]{} %\thesection.\ SciBas: \textsc{Grupo de Ciencias Básicas.} }
+%\fancyhead[RO]{\thepage.}
+%\fancyhead[RE]{} %\textsl{Nivelación en Matemáticas: Facultad Tecnológica, Universidad Distrital F. J. C.}\ \thesection.\ }
+%\fancyhead[LE]{\thepage.}
+%\fancyfoot{}
+
+%\begin{multicols}{2}
+\setcounter{page}{1}
+%%\include{CapConjuntos}
+\include{CapIntegDefinid}
+\include{Calculo integral/CapTeoremFundCalcu} %Tener en cuenta, caracter extraño
+\include{CapMetodosIntegr}
+\include{CapAplicaciones}
+\include{CapIntegNumer}
+\printbibliography
+
+\chapter*{Respuestas a los ejercicios}
+\listofanswers
+
+\backmatter
+
+\includepdf{Colofon.pdf}
+
+\end{document}
