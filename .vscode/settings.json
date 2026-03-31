@@ -1,5 +1,6 @@
 {
     "latex-workshop.formatting.latex": "tex-fmt",
+    "latex-workshop.latex.autoBuild.run": "never",
     "latex-workshop.latex.tools": [
       {
         "name": "latexmk",

@@ -5,7 +5,7 @@ Ciertas integrales que inicialmente no están en la tabla resumen de la página 
 Cuando se denota la derivada utilizando la notación de Leibniz, esto representa un símbolo, no un cociente. Las cantidades $dy$ y $dx$ tienen significados separados.
 Cuando se realiza una sustitución, es necesario trabajar con diferencial.
 
-\begin{defi} \sl
+\begin{defi} 
  \textnormal{Sea \textit{$y=f(x)$} una función diferenciable. La diferencial \textit{$dx$} es una variable independiente y la diferencial \textit{$dy$} es igual a} $f^{\prime}(x)dx$.
 \end{defi}
 
@@ -23,7 +23,7 @@ que la convierte en
 &=F(g(x))\text{ en términos de la variable original.}
 \end{align*}
 
-\begin{ejemplo}\sl
+\begin{ejemplo}
 \textnormal{Si se quiere calcular la integral {\footnotesize \textit{$\displaystyle{\int e^{x^2}xdx}$}}, donde el $x$ que multiplica a la exponencial es la derivada (salvo el $2$) de \textit{$x^2$}, entonces podemos hacer la sustitución}.
 \end{ejemplo}
 \[
@@ -58,7 +58,7 @@ En la última línea se evalúa la antiderivada de $f$ en los nuevos límites. Y
 
 \vspace{-0.3mm}
 
-\begin{ejemplo}\sl
+\begin{ejemplo}
 \textnormal{Encuentre el valor de la integral} $\displaystyle{\int_{2}^{17}\frac{x}{\sqrt[4]{x-1}}\,dx}$
 \end{ejemplo}
 \vskip0.3cm
@@ -87,8 +87,8 @@ pero la nueva integral debe depender únicamente de $u$, lo cual no se da en est
 }
 \vspace{0.3cm}
 
-\begin{ejemplo}\sl
-\textnormal{Calcule} $\displaystyle{\int \left( 1+\sen x\right) ^{2}\cos xdx}$.
+\begin{ejemplo}
+Calcule $\displaystyle{\int \left( 1+\sen x\right) ^{2}\cos xdx}$.
 \end{ejemplo}
 
 \vspace{0.2cm}
@@ -101,7 +101,7 @@ pero la nueva integral debe depender únicamente de $u$, lo cual no se da en est
 }
 \clearpage
 
-\begin{ejemplo}\sl
+\begin{ejemplo}
 \textnormal{Halle} $\displaystyle{\int x\sqrt[3]{x+1}dx}$.
 \end{ejemplo}
 
@@ -114,7 +114,7 @@ y^{6}-y^{3}\right) dy=3\left( \frac{1}{7}y^{7}-\frac{1}{4}y^{4}\right)\\
 \end{align*}
 }
 
-\begin{ejemplo}\sl
+\begin{ejemplo}
 \textnormal{Encuentre} $\displaystyle{\int_{0}^{\frac{\pi }{4}}\sec ^{4}\theta \tan ^{3}\theta d\theta}$.
 \end{ejemplo}
 
@@ -288,7 +288,7 @@ x\right\vert +C$
 \end{itemize}
 
 \vspace{0.2cm}
-\begin{ejemplo}\sl
+\begin{ejemplo}
 \textnormal{Área de una elipse.}
 \end{ejemplo}
 \vspace{0.2cm}
@@ -353,7 +353,7 @@ A=4b\int_{0}^{1}\sqrt{1-u^{2}}adu
 =4ab\frac{\pi }{4}=\pi ab
 \]
 
-\begin{ejemplo}\sl
+\begin{ejemplo}
 \textnormal{Usemos ahora la inversa de una función trigonométrica:}
 $\displaystyle{\int_{1}^{2}\sec^{-1}\left( \sqrt{x}\right) dx}$.
 \end{ejemplo}
@@ -370,7 +370,7 @@ En la figura puede verse la región a la que se le mide el área con la integral
 \begin{figure}[htbp]
     \centering
     \caption{Región para inversa de secante}
-    \includegraphics[width=0.45\textwidth]{Gráficas/GrafArcsec.eps}
+    \includegraphics[width=0.45\textwidth]{Gráficas/GrafArcsec.pdf}
     \vspace{0.3em}
     \propia
 \end{figure}
@@ -455,13 +455,13 @@ En las siguientes figuras se ilustran las partes a) y b) del teorema:
 	\centering
 	\begin{subfigure}{0.30\linewidth} % Usamos subfigure en lugar de minipage
 		\centering
-		\includegraphics[width=\linewidth]{Gráficas/GrafPar.eps}
+		\includegraphics[width=\linewidth]{Gráficas/GrafPar.pdf}
 		\caption{Función par} % La leyenda va DENTRO y ABAJO
 	\end{subfigure}
 	\hspace{1em}
 	\begin{subfigure}{0.30\linewidth}
 		\centering
-		\includegraphics[width=\linewidth]{Gráficas/GrafImpar.eps}
+		\includegraphics[width=\linewidth]{Gráficas/GrafImpar.pdf}
 		\caption{Función impar} % La leyenda va DENTRO y ABAJO
 	\end{subfigure}
 	
@@ -486,7 +486,7 @@ En las siguientes figuras se ilustran las partes a) y b) del teorema:
 %\end{multicols}
 
 \vspace{-5mm}
-\begin{ejemplo}\sl \textnormal{Usemos las propiedades anteriores para polinomios en intervalos simétricos.}
+\begin{ejemplo} \textnormal{Usemos las propiedades anteriores para polinomios en intervalos simétricos.}
 \end{ejemplo}
 \begin{align*}
 \int_{-1}^{1}&\left( 2+4x+6x^{2}-2x^{3}+5x^{4}-50x^{5}\right) dx\\
@@ -498,8 +498,8 @@ En las siguientes figuras se ilustran las partes a) y b) del teorema:
 &=10
 \end{align*}
 
-\begin{ejemplo}\sl
-\textnormal{Calcule} $\displaystyle{\int_{-\pi }^{\pi }\frac{\sen ^{7}\left( x^{3}\right) }{x^{4}+1}dx}$.
+\begin{ejemplo}
+Calcule $\displaystyle{\int_{-\pi }^{\pi }\frac{\sen ^{7}\left( x^{3}\right) }{x^{4}+1}dx}$.
 \end{ejemplo}
 
 \textit{Solución.} Dado que el intervalo es simétrico, veamos la paridad de la función que se integra:
@@ -513,7 +513,7 @@ Recordemos que seno es impar, es decir, el integrando completo es impar, entonce
 {\int_{-\pi }^{\pi }\frac{\sen ^{7}\left( x^{3}\right) }{x^{4}+1}dx=0}
 \]
 
-\begin{ejemplo}\sl
+\begin{ejemplo}
 \textnormal{Suponga que \textit{$f$} es una función par y que {\small \textit{$\displaystyle{\int_{0}^{32}f\left( x\right)
 dx=20.}$}} Evalúe}
 \[
@@ -559,7 +559,7 @@ dx$, $v=g\left( x\right)$, y $dv=g^{\prime}\left( x\right) dx$, se tiene que \eq
 
 Esta fórmula identifica el método de integración por partes. Veamos su uso con algunos casos particulares:
 
-\subsection*{Integrales de la forma \ $\displaystyle\int P(x)f(x)dx$}\label{ProdFunciones}
+\subsection*{Integrales de la forma $\displaystyle\int P(x)f(x)dx$}\label{ProdFunciones}
 
 Tomemos el caso en donde $P\left( x\right) $ es un polinomio y $f(x)$ es una función de tipo seno, coseno o exponencial, o $P(x)$ es una función lineal y $f(x)$ es $\sec ^{2}x,\ \csc^{2}x,\ \tan ^{2}x,\ \cot ^{2}x.$
 \vskip0.2cm
@@ -706,7 +706,7 @@ En ella se muestran las derivadas de $u$ y las integrales de $dv$ (la tabla se c
 \begin{figure}[htbp]
     \centering
     \caption{Tabla Partes}
-    \includegraphics[width=0.70\textwidth]{Gráficas/TablaPartes.eps}
+    \includegraphics[width=0.70\textwidth]{Gráficas/TablaPartes.pdf}
     \vspace{0.3em}
     \propia
 \end{figure}
@@ -730,7 +730,7 @@ En ella se muestran las derivadas de $u$ y las integrales de $dv$ (la tabla se c
 }
 
 \vskip0.3cm
-\begin{ejemplo}\sl
+\begin{ejemplo}
 \textnormal{La integral \textit{$\displaystyle{\int e^{\sqrt{x}}dx}$}, inicialmente, no tiene la forma del caso anterior, pero puede reescribirse:}
 \end{ejemplo}
 Supongamos que $y=\sqrt{x}$, entonces $y^2=x$ y $2ydy=dx$, es decir,
@@ -776,7 +776,7 @@ Entonces,
 \subsection*{Integral de la forma $\displaystyle{\int P(x)\ln xdx}$ ($P\left( x\right)$ un polinomio)}
 
 En este caso, la función que se simplifica al derivarla es $\ln x$; por tanto, debe tomarse $u=\ln x,$ \ $dv=P\left( x\right) dx,$ con lo cual la nueva integral será de un polinomio, por ejemplo,
-\begin{ejemplo}\sl
+\begin{ejemplo}
 \textnormal{Tomemos} $\displaystyle{\int (x^{3}+x^{2})\ln xdx}$.
 \end{ejemplo}
 
@@ -792,7 +792,7 @@ entonces,
 &=\left(\frac{1}{4}x^{4}+\frac{1}{3}x^{3}\right)\ln x-\left(\frac{1}{16}x^{4}+\frac{1}{9}x^{3}\right)+E
 \end{align*}
 
-\begin{ejemplo}\sl
+\begin{ejemplo}
 \textnormal{La integral \textit{$\displaystyle{\int \ln xdx}$} puede incluirse en el caso anterior.}
 \end{ejemplo}
 
@@ -821,7 +821,7 @@ que puede calcularse usando tabulación por partes:
 \end{align*}
 
 Algo similar pasa en los siguientes ejemplos.
-\begin{ejemplo}\sl
+\begin{ejemplo}
 \textnormal{Tomemos} $\displaystyle{\int \ln ^{3}xdx }$.
 \end{ejemplo}
 
@@ -862,7 +862,7 @@ y con ello,
 \end{align*}
 }
 
-\begin{ejemplo}\sl
+\begin{ejemplo}
 $\displaystyle{\int \sen^{-1} xdx }$
 \end{ejemplo}
 \textit{Solución}. Nuevamente hacemos la sustitución que elimine, para este caso, la función trigonométrica inversa: si $y=\sen^{-1} x$, entonces $\sen y= x$ y $\cos ydy= dx$ y, por tanto, $\sen^{-1} xdx=y\cos ydy$. Por otro lado, construyendo la tabla de partes se tiene
@@ -891,7 +891,7 @@ y así,
 \end{align*}
 }
 
-\begin{ejemplo}\sl
+\begin{ejemplo}
 $\displaystyle{\int \tan^{-1} xdx }$
 \end{ejemplo}
 \textit{Solución.} De manera similar a los ejemplos anteriores, si $y=\tan^{-1} x$, entonces $\tan y= x$ y $\sec^2 ydy= dx$; por tanto, $\tan^{-1} xdx=y\sec^2 ydy$.
@@ -925,7 +925,7 @@ y con ello,
 	\end{aligned}
 	$}
 \vskip0.3cm
-\begin{ejemplo}\sl
+\begin{ejemplo}
 $\displaystyle{\int (\sin^{-1} x )^2  dx }$
 \end{ejemplo}
 \textit{Solución.} Si $y=\sin^{-1} x$, entonces $\sin y= x$ y $\cos ydy= dx$; por tanto, $(\sin^{-1} x)^2dx=y^2\cos ydy$ y la tabla
@@ -966,7 +966,7 @@ y con ello,
 
 En esta sección explicaremos cómo usar el método de integración por partes para calcular integrales que llegan a repetirse (salvo algún factor) después de aplicar el método en por lo menos una vez. Lo que hacemos acá, entonces, es manejar como una incógnita la integral para luego despejarla y así calcular su valor.
 
-\begin{ejemplo}\sl 
+\begin{ejemplo} 
 \textnormal{Una función que suele generar confusión para integrar es \textit{$\sec^3\theta$}. A continuación se muestra cuál es el manejo de} {\small $\displaystyle{\int \sec ^{3}\theta d\theta }$.}
 \end{ejemplo}
 
@@ -991,7 +991,7 @@ S&=\frac{1}{2}\left(\sec \theta \tan \theta +\ln |\sec \theta +\tan \theta |\rig
 }
 Note que en la línea \eqref{S} aparece la integral inicial; por tanto; podemos manejarla como a las incógnitas en una ecuación lineal y agruparlas a un solo lado de la igualdad para luego despejar. 
 
-\begin{ejemplo}\sl
+\begin{ejemplo}
 \textnormal{Encontremos el valor de} $\displaystyle{\int e^{4x}\cos (2x)dx}$.
 \end{ejemplo}
 \textit{Solución.} Por el método de integración por partes, se tiene
@@ -1022,7 +1022,7 @@ I&=\frac{1}{10}e^{4x}(\sen (2x)+2\cos (2x))+C\notag
 \subsection*{Fórmulas de recurrencia para integrales}
 
 El método de integración por partes, con frecuencia, se usa para obtener algunas fórmulas de recurrencia, es decir, expresiones que dependen de un paso anterior para poder encontrarlas.
-\begin{ejemplo}\sl
+\begin{ejemplo}
 \textnormal{Tomemos, por ejemplo, \textit{$\displaystyle{\int \sen ^{n}xdx}$} para \textit{$n$} un número entero y usemos integración por partes.}
 \end{ejemplo}
 \textit{Solución}
@@ -1058,7 +1058,7 @@ n&=3 &\rightarrow& &\int \sen ^{3}xdx&=-\frac{1}{3}\sen ^{3-1}x\cos x+
 \end{align*}
 }
 
-\begin{ejemplo}\sl
+\begin{ejemplo}
 \textnormal{Algo similar pasa con} $\displaystyle{\int \cos^{n}xdx}$.
 \end{ejemplo}
 \textit{Solución}
@@ -1078,7 +1078,7 @@ con lo cual
 \int \cos^{n}xdx=\frac{1}{n}\cos ^{n-1}x\sen x +\frac{n-1}{n}\int \cos ^{n-2}xdx\ ,\ n\geq 2
 \end{equation}
 
-\begin{ejemplo}\sl
+\begin{ejemplo}
 \textnormal{Tomemos ahora} $\displaystyle{ \int \sec ^{n}\theta d\theta}$.
 \end{ejemplo}
 \textit{Solución.}
@@ -1114,14 +1114,14 @@ es decir,
 \frac{n-2}{n-1}\int \sec ^{n-2}\theta d\theta\ ,\ n\geq 2
 \]
 
-\begin{ejemplo}\sl
+\begin{ejemplo}
 \textnormal{Procediendo de manera similar a los anteriores casos, el lector puede verificar que}
 \[
 \int \csc ^{n}\theta d\theta=\frac{-1}{n-1}\csc ^{n-2}\theta \cot \theta +\frac{n-2}{n-1}\int \csc ^{n-2}\theta d\theta\ ,\ n\geq 2
 \]
 \end{ejemplo}
 
-\begin{ejemplo}\sl
+\begin{ejemplo}
 \textnormal{Tomemos ahora potencias de \textit{$a+x^{2}$}, con \textit{$a\in\mathbb{R}$}, es decir,} $\displaystyle{\int \left( a+x^{2}\right)^{n}dx }$.
 \end{ejemplo}
 \textit{Solución.} Supongamos que $I=\displaystyle{\int \left( a+x^{2}\right)^{n}dx }$ y hacemos
@@ -1183,8 +1183,8 @@ d\theta $, y, por tanto, \
 \end{eqnarray*}
 cuya integral final es más sencilla de encontrar.
 
-\begin{ejemplo}\sl
-\textnormal{Calcule} $\displaystyle{\int \frac{x}{\sqrt{25-9(x+3)^{2}}}dx}$
+\begin{ejemplo}
+Calcule $\displaystyle{\int \frac{x}{\sqrt{25-9(x+3)^{2}}}dx}$
 \end{ejemplo}
 \textit{Solución.} Siguiendo las líneas anteriores,
 \begin{align*}
@@ -1218,7 +1218,7 @@ opuesto sobre hipotenusa) o con identidades:
 \begin{figure}[htbp]
     \centering
     \caption{Triángulo rectángulo de la sustitución}
-    \includegraphics[width=0.37\textwidth]{Gráficas/TriangSustSeno5_3.eps}
+    \includegraphics[width=0.37\textwidth]{Gráficas/TriangSustSeno5_3.pdf}
     \vspace{0.3em}
     \propia
 \end{figure}
@@ -1229,7 +1229,7 @@ opuesto sobre hipotenusa) o con identidades:
 %\textbf{Figura:} elaboración propia
 %\end{center}
 
-\begin{ejemplo}\sl
+\begin{ejemplo}
 \textnormal{Evalúe la integral} $\displaystyle{\int \frac{1-x}{-20-4x^{2}+24x}dx}$.
 \end{ejemplo}
 \textit{Solución.} Completando el trinomio cuadrado perfecto para $20-4x^{2}+24x,$ se tiene
@@ -1253,7 +1253,7 @@ Luego,
 
 \vskip0.5cm
 
-As\'{\i}; entonces, tomando la sustitución $x-3=2\sen(\theta ),$ con $\frac{-\pi }{2}< \theta < \frac{\pi }{2}$ y $dx=2\cos (\theta
+Así; entonces, tomando la sustitución $x-3=2\sen(\theta ),$ con $\frac{-\pi }{2}< \theta < \frac{\pi }{2}$ y $dx=2\cos (\theta
 )d\theta$, y dado que $x-3=2\sen(\theta )$ o, mejor, $x=2\sen(\theta )+3$,
 
 \scalebox{0.8}{$
@@ -1313,7 +1313,7 @@ Para tener las expresiones del último renglón, se parte de la sustitución $x=
 \begin{figure}[htbp]
     \centering
     \caption{Triángulo en la sustitución}
-    \includegraphics[width=0.34\textwidth]{Gráficas/TriangSustSeno.eps}
+    \includegraphics[width=0.34\textwidth]{Gráficas/TriangSustSeno.pdf}
     \vspace{0.3em}
     \propia
 \end{figure}
@@ -1326,7 +1326,7 @@ Para tener las expresiones del último renglón, se parte de la sustitución $x=
 %\end{center}
 
 \vskip0.2cm
-\begin{ejemplo}\sl \textnormal{Calcule} $\displaystyle{\int \frac{\sqrt{16-x^{2}}}{x}dx}$.
+\begin{ejemplo} Calcule $\displaystyle{\int \frac{\sqrt{16-x^{2}}}{x}dx}$.
 \end{ejemplo}
 \textit{Solución.} Si $x=4\sen \theta $, con $\theta\in \left[\frac{-\pi }{2},\frac{\pi }{2}\right]-\{0\}$, entonces $dx=4\cos \theta d\theta $ y
 \vskip0.2cm
@@ -1357,7 +1357,7 @@ entonces,
 \begin{figure}[htbp]
     \centering
     \caption{Triángulo en la sustitución}
-    \includegraphics[width=0.28\textwidth]{Gráficas/TriangSustSeno2.eps}
+    \includegraphics[width=0.28\textwidth]{Gráficas/TriangSustSeno2.pdf}
     \vspace{0.3em}
     \propia
 \end{figure}
@@ -1371,8 +1371,8 @@ entonces,
 %\textbf{Fuente:} elaboración propia
 %\end{center}
 \vskip0.4cm
-\begin{ejemplo}\sl
-\textnormal{Calcule} $\displaystyle{\int_{0}^{\ln \sqrt{2}}\frac{e^{z}dz}{\left( 4-e^{2z}\right) ^{\frac{3}{2}}}}$.
+\begin{ejemplo}
+Calcule $\displaystyle{\int_{0}^{\ln \sqrt{2}}\frac{e^{z}dz}{\left( 4-e^{2z}\right) ^{\frac{3}{2}}}}$.
 \end{ejemplo}
 \textit{Solución.} En este caso, $e^{z}=2\sen\theta$, para $\frac{\pi }{6}\leq \theta \leq \frac{\pi }{4}$, es decir,
 \begin{equation}\label{theta}
@@ -1410,7 +1410,7 @@ d\theta
 con la última integral mucho más fácil de calcular que la original.
 
 \vskip0.3cm
-\begin{ejemplo}\sl \textnormal{Encontremos el valor de} $\displaystyle{\int\frac{\sqrt{4+x^{2}}}{x}dx}$.
+\begin{ejemplo} \textnormal{Encontremos el valor de} $\displaystyle{\int\frac{\sqrt{4+x^{2}}}{x}dx}$.
 \end{ejemplo}
 \textit{Solución.} Si $x=2\tan \theta $ para $\theta\in \left(-\frac{\pi}{2},\frac{\pi}{2}\right)-\{0\}$, entonces $dx=2\sec ^{2}\theta d\theta $ y
 {\small
@@ -1439,7 +1439,7 @@ Para tener las expresiones del último renglón, se parte de la sustitución $x=
 \begin{figure}[htbp]
     \centering
     \caption{Triángulo con los datos de la sustitución}
-    \includegraphics[width=0.28\textwidth]{Gráficas/SustTrigonTang.eps}
+    \includegraphics[width=0.28\textwidth]{Gráficas/SustTrigonTang.pdf}
     \vspace{0.3em}
     \propia
 \end{figure}
@@ -1451,7 +1451,7 @@ Para tener las expresiones del último renglón, se parte de la sustitución $x=
 %\textbf{Fuente:} elaboración propia
 %\end{center}
 \vskip0.3cm
-\begin{ejemplo}\sl \textnormal{Hallemos el valor de} $\displaystyle{\int_{0}^{1}\frac{x^{2}}{\sqrt{1+x^{2}}^{\,3}}dx}$.
+\begin{ejemplo} \textnormal{Hallemos el valor de} $\displaystyle{\int_{0}^{1}\frac{x^{2}}{\sqrt{1+x^{2}}^{\,3}}dx}$.
 \end{ejemplo}
 \textit{Solución.} Si $x=\tan \theta $ para $0\leq\theta\leq\frac{\pi}{4}$, entonces $dx=\sec ^{2}\theta d\theta $ y $\theta =\tan^{-1} x $.\\
 
@@ -1497,7 +1497,7 @@ puede tomarse la sustitución trigonométrica\ $\beta (x\pm a)=a\sec(\theta )$ c
 
 cuya integral última es más sencilla, como antes.
 
-\begin{ejemplo}\sl \textnormal{Encontremos el valor de} $\displaystyle{\int\frac{dx}{\sqrt{x^{2}-9}}}$.
+\begin{ejemplo} \textnormal{Encontremos el valor de} $\displaystyle{\int\frac{dx}{\sqrt{x^{2}-9}}}$.
 \end{ejemplo}
 
 \textit{Solución.} Si $x=3\sec \theta $ para $0< \theta <\pi/2\ \cup\ \pi< \theta< 3\pi/2$, entonces $dx=3\sec\theta\tan\theta d\theta $ y
@@ -1539,7 +1539,7 @@ Para tener las expresiones del último renglón, se parte de la sustitución $x=
 %\textbf{Fuente:} elaboración propia
 %\end{center}
 \vskip0.3cm
-\begin{ejemplo}\sl \textnormal{Encontremos el valor de} {\small $\displaystyle{\int e^{t} \sqrt{e^{2t}-100}dt}$.}
+\begin{ejemplo} \textnormal{Encontremos el valor de} {\small $\displaystyle{\int e^{t} \sqrt{e^{2t}-100}dt}$.}
 \end{ejemplo}
 
 \textit{Solución.} Si $e^{t}=10\sec \theta $ para $0\leq \theta <\pi/2$, entonces $e^{t}dt=10\sec\theta\tan\theta d\theta $ y
@@ -1570,7 +1570,7 @@ Las expresiones del último renglón se obtienen partiendo de la sustitución {\
 \begin{figure}[htbp]
     \centering
     \caption{Triángulo con los datos de la sustitución}
-    \includegraphics[width=0.35\textwidth]{Gráficas/SustTrigonSec2.eps}
+    \includegraphics[width=0.35\textwidth]{Gráficas/SustTrigonSec2.pdf}
     \vspace{0.3em}
     \propia
 \end{figure}
@@ -1582,7 +1582,7 @@ Las expresiones del último renglón se obtienen partiendo de la sustitución {\
 %\textbf{Fuente:} elaboración propia
 %\end{center}
 \vskip0.3cm
-\begin{ejemplo}\sl
+\begin{ejemplo}
 \textnormal{Encontremos el valor de} $\displaystyle{\int_{1}^{\sqrt{2}}\frac{\sqrt{x^{2}-1}}{x}dx}$.
 \end{ejemplo}
 
@@ -1667,8 +1667,8 @@ Cuando busquemos calcular la integral, la descomposición facilita los cálculos
 \end{align*}
 }
 
-\begin{ejemplo}\sl
-\textnormal{Calcule} $\displaystyle{\int \frac{x^{2}dx}{(x-1)(x+1)(x-2)}}$.
+\begin{ejemplo}
+Calcule $\displaystyle{\int \frac{x^{2}dx}{(x-1)(x+1)(x-2)}}$.
 \end{ejemplo}
 \textit{Solución.} El denominador ya está factorizado y, efectivamente, tiene grado mayor que el numerador. Entonces, la descomposición en fracciones parciales del integrando es
 {\small
@@ -1728,7 +1728,7 @@ con lo cual podemos calcular la integral dada:
 La forma anterior de calcular los coeficientes en las fracciones parciales
 se puede abreviar, como veremos en el siguiente ejemplo:
 \vskip0.3cm
-\begin{ejemplo}\sl
+\begin{ejemplo}
 \textnormal{Calcular} $\displaystyle\int_{0}^{1}\frac{2x^{2}+10x+14}{\left( x+1\right) \left(
 x+2\right) \left( x+3\right) \left( x+4\right) }dx$
 \end{ejemplo}
@@ -1762,7 +1762,7 @@ Multiplicamos \ref{ejerfracpar2caso1} por $x+4$ y luego reemplazamos $x$ por $-4
 $$D=\left. \frac{2x^{2}+10x+14}{\left( x+1\right) \left( x+2\right) \left(
 x+3\right) }\right\vert _{x=-4}$$ entonces obtenemos $$D=\frac{6}{-6}=-1$$
 
-As\'{\i}, la integral queda
+Así, la integral queda
 
 {\footnotesize
 \begin{align*}
@@ -1792,8 +1792,8 @@ Y si $k= 1$,
 \[
 \int \frac{A}{\left( ax+b\right)}dx=\frac{A}{a}\ln\vert ax+b\vert
 \]
-\begin{ejemplo}\sl
-\textnormal{Calcule} $\displaystyle{\int \frac{x^{3}}{(x-2)^{4}}dx}.$
+\begin{ejemplo}
+Calcule $\displaystyle{\int \frac{x^{3}}{(x-2)^{4}}dx}.$
 \end{ejemplo}
 \textit{Solución}. La descomposición en fracciones parciales toma la siguiente forma:
 \begin{align*}
@@ -1868,8 +1868,8 @@ a_{1}x^{2}+b_{1}x+c_{1}}+\frac{Cx+D}{(a_{1}x^{2}+b_{1}x+c_{1})^{2}}
 Para integrar, debe completarse cuadrados en el factor irreducible y luego hacer una sustitución o una sustitución trigonométrica.
 
 \vskip0.2cm
-\begin{ejemplo}\sl
-\textnormal{Calcule} $\displaystyle{\int \frac{x+1}{(x^{2}+1)(x^{2}+4)}dx}$.
+\begin{ejemplo}
+Calcule $\displaystyle{\int \frac{x+1}{(x^{2}+1)(x^{2}+4)}dx}$.
 \end{ejemplo}
 \textit{Solución.} La descomposición en fracciones parciales del integrando es
 {\small
@@ -1911,7 +1911,7 @@ lo que nos lleva a que la integral es
 	$}
 
 \vskip0.3cm
-Ahora bien, las integrales anteriores deben solucionarse haciendo algunas sustituciones. En su orden, la primera integral se soluciona con la sustitución $u=x^{2}+1$, de donde $du=2xdx$ y $\frac{du}{2}=xdx$. Y la tercera integral con la sustitución $z=x^{2}+4,$ $dz=2xdx$ y, as\'{\i}, $\frac{dz}{2}=xdx$.
+Ahora bien, las integrales anteriores deben solucionarse haciendo algunas sustituciones. En su orden, la primera integral se soluciona con la sustitución $u=x^{2}+1$, de donde $du=2xdx$ y $\frac{du}{2}=xdx$. Y la tercera integral con la sustitución $z=x^{2}+4,$ $dz=2xdx$ y, así, $\frac{dz}{2}=xdx$.
 
 Por otro lado, la cuarta integral usa una sustitución trigonométrica: $x=2\tan \theta $ para $\theta \in \left( -\frac{\pi }{2},\frac{\pi }{2}\right)$ y de donde $\tan ^{-1}\left( \frac{x}{2}\right) =\theta $ y
 $dx=2\sec ^{2}\left( \theta \right) d\theta $ o usando la tabla de la página \pageref{TablaIntegrales}.
@@ -1944,8 +1944,8 @@ x\right) -\frac{1}{6}\ln \left\vert x^{2}+4\right\vert %-\frac{1}{6}\intd\theta\
 \section{Fracciones parciales con una sustitución previa}
 En esta sección se muestran algunos ejemplos en los cuales las fracciones parciales se aplican después de haber modificado o reescrito el integrando.
 
-\begin{ejemplo}\sl
-\textnormal{Calcule}
+\begin{ejemplo}
+Calcule
 {\small $\displaystyle{\int \frac{dx}{x+2\sqrt{x}-3}}$.}
 \end{ejemplo}
 \textit{Solución.} Tomemos inicialmente la sustitución {\small $y=\sqrt{x}\rightarrow y^{2}=x\rightarrow 2ydy=dx$,} entonces
@@ -2032,8 +2032,8 @@ Entonces,
 
 \vskip0.2cm
 
-\begin{ejemplo}\sl
-\textnormal{Calcule} $\displaystyle{\int \frac{dx}{\sqrt{x}+\sqrt[4]{x}-2}}$.
+\begin{ejemplo}
+Calcule $\displaystyle{\int \frac{dx}{\sqrt{x}+\sqrt[4]{x}-2}}$.
 \end{ejemplo}
 \textit{Solución.} La sustitución ahora es $y=\sqrt[4]{x}\rightarrow y^{2}=\sqrt{x}\rightarrow y^{4}=x\rightarrow 4y^{3}dy=dx$. Entonces,
 \begin{align*}
@@ -2119,8 +2119,8 @@ u= & \tan \left(\frac{x}{2}\right),\ -\pi< x<\pi & dx=& \frac{2du}{u^{2}+1} \\
 
 Veamos algunos ejemplos.
 
-\begin{ejemplo}\sl
-\textnormal{Calcule} $\displaystyle\int \frac{dx}{\sen x+3\cos x-1}$.
+\begin{ejemplo}
+Calcule $\displaystyle\int \frac{dx}{\sen x+3\cos x-1}$.
 \end{ejemplo}
 \vskip0.2cm
 \textit{Solución.} Seguimos las sustituciones en \eqref{Sustitx/2} y la integral se ve así:
@@ -2161,8 +2161,8 @@ Ahora volvemos a la integral:
 \end{align*}
 }
 
-\begin{ejemplo}\sl
-\textnormal{Calcule} $\displaystyle{\int \frac{dx}{3\sen x+4\cos x+5}}$.
+\begin{ejemplo}
+Calcule $\displaystyle{\int \frac{dx}{3\sen x+4\cos x+5}}$.
 \end{ejemplo}
 \textit{Solución.} Recordemos que
 {\small
@@ -2185,8 +2185,8 @@ entonces,
 \end{align*}
 }
 
-\begin{ejemplo}\sl
-\textnormal{Calcule} $\displaystyle{\int \frac{dx}{4\sen x+\cos x+4}}.$
+\begin{ejemplo}
+Calcule $\displaystyle{\int \frac{dx}{4\sen x+\cos x+4}}.$
 \end{ejemplo}
 \textit{Solución.} Nuevamente, usamos la sustitución de Weierstrass:
 {\small
@@ -2237,7 +2237,7 @@ En conclusión,
 \left( \frac{x}{2}\right) +\frac{5}{3}}\right\vert +C
 \]
 
-\begin{ejemplo}\sl
+\begin{ejemplo}
 \textnormal{Calcule la integral} $\displaystyle\int \frac{\sen x}{-3\sen x+2\cos x+3}\, dx $.
 \end{ejemplo}
 \textit{Solución.} Como antes,
@@ -2320,8 +2320,8 @@ es decir,
 	$}
 
 
-\begin{ejemplo}\sl
-\textnormal{Calcule} $\displaystyle\int \frac{dx}{\sen x-3\cos x+3}$.
+\begin{ejemplo}
+Calcule $\displaystyle\int \frac{dx}{\sen x-3\cos x+3}$.
 \vskip0.3cm
 \end{ejemplo}
 \textit{Solución.} Usamos nuevamente la sustitución de Weierstrass:

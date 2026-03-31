@@ -11,8 +11,7 @@
 	textwidth=12.5cm,
 	tmargin=2.5cm,
 	bmargin=2.5cm,
-	left=2.5cm,
-	right=2.0cm
+	left=2.5cm
 }
 
 
@@ -86,8 +85,14 @@
 \usepackage{amsfonts}
 \usepackage{amsthm}
 \usepackage{bm}
+\usepackage{siunitx} % \num, \SI — antes de physics para que siunitx no avise al cargar
 \usepackage{physics}
-\usepackage{siunitx} % \num, \SI (p. ej. CapAplicaciones, CapIntegNumer); ver \AtBeginDocument\qty abajo
+\AtBeginDocument{\RenewCommandCopy\qty\SI} % physics redefine \qty; restaurar definición de siunitx
+% El aviso de siunitx+physics usa expl3 (no \WarningFilter); silenciar solo ese mensaje:
+% https://tex.stackexchange.com/q/681700
+\ExplSyntaxOn
+\msg_redirect_name:nnn { siunitx } { physics-pkg } { none }
+\ExplSyntaxOff
 \usepackage{fontawesome}
 \usepackage{fancyvrb}
 \usepackage{fp}
@@ -211,8 +216,6 @@
 \renewcommand{\cfttoctitlefont}{\hfill\Huge}
 \renewcommand{\cftdot}{}
 
-% SOLUCIÓN DE CONFLICTOS
-\AtBeginDocument{\RenewCommandCopy\qty\SI} % Solución de conflicto physics
 \makeindex
 
 \raggedbottom
