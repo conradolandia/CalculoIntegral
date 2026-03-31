@@ -59,7 +59,7 @@ Además, el contador no necesariamente debe iniciar en $1$ y puede tomar nombres
 \underset{k=5}{\underbrace{6^{3}-5^{3}}}=6^{3}-2^{3}$
 \end{enumerate}
 \end{ejemplo}
-\vskip0.3cm
+
 Para escribir una suma en notación compacta, es decir, como sumatoria, debe identificarse la expresión que generan los números que se están sumando.
 
 \begin{ejemplo}
@@ -147,14 +147,14 @@ a_{k}-a_{k-1}\right) =a_{n}-a_{m-1},\text{ para } n\geq m
 %\begin{claim}
 A continuación, se presenta una idea de las demostraciones de estas propie- \\ dades. 
 Sus demostraciones formales se realizan usando inducción matemá- \\ tica.
-\vskip0.2cm
+
 
 
 \begin{enumerate}[leftmargin=1.2em, itemindent=0pt,       labelwidth=\labelwidth, labelsep=0.5em,]
 
 \item $\overset{n}{\underset{k=1}{\sum }}c=\underset{k=1}{\underbrace{c}}+%
 \underset{k=2}{\underbrace{c}}+\ldots +\underset{k=n}{\underbrace{c}}=cn$
-\vskip0.3cm
+
 
 \item Al usar la propiedad distributiva y usar $n$ veces el mismo término, se tiene
 \begin{align*}
@@ -223,7 +223,7 @@ b_{1}+b_{2}+\ldots +b_{n}\right)=\overset{n}{\underset{k=1}{\sum }}a_{k}+\overse
 \end{enumerate}
 
 A continuación, se construyen algunas fórmulas para cierto tipo de sumas que se usarán más adelante.
-\vskip0.3cm
+
 \begin{ejemplo}
 \textnormal {Supongamos que quieren sumarse los primeros $n$ números naturales. Por ejemplo, si se suman los naturales del $1$ al $7$, tenemos
 \[
@@ -256,7 +256,7 @@ n+1\right)\\
 S&=\frac{n\left( n+1\right) }{2}
 \end{align*}
 Por tanto, la suma de los $n$ primeros números naturales es igual a {\footnotesize $\cfrac{n\left( n+1\right) }{2}$} o también a {\footnotesize $\cfrac{n^2}{2}+\cfrac{n}{2}$.} 
-\vskip0.2cm
+
 En nuestro ejemplo de sumar los primeros $11$ números, pudimos simplemente hacer
 {\small
 \begin{align*}
@@ -268,7 +268,7 @@ En nuestro ejemplo de sumar los primeros $11$ números, pudimos simplemente hace
 
 
 o también,
-\vspace{-4mm}
+
 {\footnotesize
 \begin{align*}
 \sum_{k=1}^{152} k&=1+2+3+\ldots+150+151+152=\frac{n\left( n+1\right) }{2}\\
@@ -280,19 +280,16 @@ Veamos ahora qué pasa cuando sumamos los cuadrados de los primeros naturales.
 
 \begin{ejemplo}
 \textnormal {Supongamos que queremos calcular la suma}
-
-{\footnotesize
 \[
 T=\sum_{k=1}^{n}k^{2}=1^{2}+2^{2}+3^{2}+\ldots +n^{2}
 \]
-}
 \end{ejemplo}
+
 Para deducir la fórmula de esta suma, usaremos la expresión para $(a+b)^3$, es decir,
 \[
 (a+b)^3=a^3+3a^2b+3ab^2+b^3=a^3+b^3+3a^2b+3ab^2
 \]
 entonces,
-
 \begin{align*}
 1^3&=(1+0)^3=1+0^3+3\cdot 0+3\cdot 0^2\\
 2^3&=(1+1)^3=1+1^3+3\cdot 1+3\cdot 1^2\\
@@ -407,7 +404,7 @@ Si descomponemos las expresiones dentro de los paréntesis y cancelamos término
 }
 
 La siguiente es una propiedad que en cierta forma extiende las fórmulas que dimos anteriormente.
-\vskip0.3cm
+
 \begin{teorema}\label{SumPotenDeK}
 \textnormal {Supongamos que \textit{$m$} y \textit{$n$} son números naturales; entonces,
 {\small
@@ -435,7 +432,7 @@ donde $f$ es un polinomio de grado $m,$ $m\geq 1$.
 P\left( 1\right):\sum_{k=1}^{n}k^1=\sum_{k=1}^{n}k=\frac{n^{2}}{2}+\underset{f\left( n\right) }{\underbrace{\frac{n}{2}}}
 \]
 con $f\left( n\right)=\cfrac{n}{2}$ siendo el polinomio de grado $1$.
-\vskip0.3cm
+
 \item Supongamos ahora que el resultado es válido para todo número natural menor o igual a $m$ y
 probemos que también es válido para $m+1$: por un lado, por la propiedad telescópica de las sumas, tenemos que
 \begin{equation}\label{pruebam1}
@@ -502,7 +499,7 @@ f(n)=\hspace{-0.1cm}\frac{\binom{m+2}{m}}{m+2}\left(\hspace{-0.1cm} \frac{n^{m+1
 el polinomio de grado $m+1$, con lo que se demuestra lo que se quería probar. 
 %\end{itemize}
 
-\vskip0.2cm
+
 Las siguientes propiedades involucran funciones trigonométricas:
 
 \begin{teorema}\label{SumSenoCoseno} \textnormal{Supongamos que \textit{$n$} es un número natural, entonces}
@@ -514,9 +511,9 @@ Las siguientes propiedades involucran funciones trigonométricas:
 \end{itemize}
 \end{teorema}
 
-\vskip0.2cm
+
 \textit{Demostración}
-\vskip0.2cm
+
 
 \begin{enumerate}[leftmargin=1.2em,   itemindent=0pt,       labelwidth=\labelwidth,
 	labelsep=0.5em,]
@@ -625,7 +622,7 @@ es decir,
 \sum_{k=1}^{n}b^{k}=\frac{b^{n+1}-b}{b-1}
 \]
 }
-\vskip0.2cm
+
 
 \section{El área bajo la figura de una función}\label{area}
 
@@ -747,7 +744,7 @@ P=\left\{
 \end{enumerate}
 \end{ejemplo}
 
-\vskip0.2cm
+
 \textit{Solución}
 \begin{enumerate}[leftmargin=1.2em,   itemindent=0pt,       labelwidth=\labelwidth,
 	labelsep=0.5em,]
@@ -889,7 +886,7 @@ x_{5}+\hspace{-0.1cm}f(2\text{,}75)\Delta x_{6}\\
 \end{equation}
 \textnormal{siempre que el límite exista.}
 \end{defi}
-\vskip0.2cm
+
 
 Si usamos la notación \textit{epsilon-delta} para límites, tenemos
 que la integral de la función $f$ en el intervalo $[a,b]$ es un número $I$ para el que se tiene que, dado un $\varepsilon >0,$ existe un número $\delta >0,$ tal que, para cada partición $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ con $\left\Vert
@@ -967,13 +964,13 @@ Vemos, entonces, que, al hacer dos elecciones distintas de $x_k^*$, obtenemos re
  \textnormal{Propiedades de la integral definida: sean \textit{$f$} y \textit{$g$} funciones integrables en el intervalo \textit{$[a,b]$}, y \textit{$\alpha$} y \textit{$\beta$}, constantes reales; entonces,}
 \renewcommand{\labelenumi}{\normalfont\theenumi.}
  \begin{enumerate}[leftmargin=1.2em, itemindent=0pt,       labelwidth=\labelwidth,labelsep=0.5em,]
-\vskip0.2cm
+
 
  \item $\displaystyle\int_{a}^{a}f\left( x\right) dx=0$
- \vskip0.2cm
+ 
  
  \item $\displaystyle\int_{a}^{b}f\left( x\right) dx=-\int_{b}^{a}f\left( x\right) dx$
- \vskip0.2cm
+ 
  
  \item \textnormal{Propiedad aditiva:}
  \[
@@ -1166,9 +1163,9 @@ existe un \textit{$\delta >0$} tal que para cada par de puntos \textit{$x,\ y$} 
 \end{enumerate}
 \end{teorema}
 
-\vskip0.2cm
+
 \textit{Demostración}
-\vskip0.2cm
+
 
 \begin{enumerate}[leftmargin=1.2em,   itemindent=0pt,       labelwidth=\labelwidth,labelsep=0.5em,]
 
@@ -1341,7 +1338,7 @@ En esta sección, usando la definición de integral, se encuentra el
 valor de algunas integrales definidas y se obtienen fórmulas para
 otras.
 
-\vskip0.2cm
+
 \begin{ejemplo}
 \textnormal{Usemos la definición para calcular las siguientes integrales:}
 \end{ejemplo}
@@ -1408,9 +1405,9 @@ n^{2}}{2}+\frac{n}{2}\right) +\frac{68}{n}\cdot n\right) \\
 
 \end{enumerate}
 
-\vskip0.2cm
+
 En los siguientes ejemplos encontramos algunas fórmulas de integrales que se usarán más adelante.
-\vskip0.2cm
+
 
 \begin{ejemplo}
 \textnormal{Usando la definición de integral para funciones continuas, se
@@ -1489,7 +1486,7 @@ a^{2}+a\left( b-a\right) ^{2}+\frac{a\left( b-a\right) ^{2}}{n}+\frac{%
 \end{align*}
 }
 es decir,
-\vskip0.3cm
+
 {\small
 \begin{equation}\label{x2}
 \text{\fbox{$\displaystyle{\int_{a}^{b}x^2\, dx=\frac{b^{3}-a^{3}}{3}}$}}
@@ -1570,7 +1567,7 @@ con lo cual entonces,
 \begin{equation}\label{xm}
 \text{\fbox{$\displaystyle{\int_{a}^{b}x^m\, dx=\frac{b^{m+1}-a^{m+1}}{m+1}}$}}
 \end{equation}
-\vskip0.2cm
+
 
 \item { \textnormal{Tomemos ahora algunas funciones trigonométricas. Iniciemos con}} $\cos x$,
 {\small
@@ -1602,15 +1599,15 @@ Ahora,
 \]
 
 y así,
-\vskip0.2cm
+
 {\small
 \begin{equation}\label{cos}
 \text{\fbox{$\displaystyle{\int_{a}^{b}\cos x\,dx=\sen b-\sen a}$}}
 \end{equation}
 }
-\vskip0.2cm
 
-\item { \textnormal{De manera similar, calculemos la integral de}} $\sen x$:
+
+\item De manera similar, calculemos la integral de $\sen x$:
 
 \begin{center}
 \begin{minipage}{0.97\textwidth}
@@ -1639,11 +1636,11 @@ xdx%\\&
 \end{align*}
 y, en conclusión,
 
-\vskip0.2cm
+
 \begin{equation}\label{sen}
 \text{\fbox{$\displaystyle{\int_{a}^{b}\sen x\,dx=\cos a-\cos b}$}}
 \end{equation}
-\vskip0.2cm
+
 
 \item { \textnormal{Para finalizar, tomemos una función exponencial con base \textit{$b$}, es decir, \textit{$f(x)=b^x$}, y calculemos la \textit{$\int_\alpha^\beta b^x$:}}}
 \begin{align*}
@@ -1746,21 +1743,21 @@ f(x)=
 calculemos $\displaystyle\int_{-2}^2 f(x)\, dx.$
 \end{ejemplo}
 
-\vskip0.2cm
+
 \textit{Solución.} Con la figura señalando la región entre $-2$ y $2$:
 
 
 
-\vskip0.4cm
+
 \noindent
 \begin{figure}[H]
     \centering
     \caption{Función a trozos entre $-2$ y $2$}
     \includegraphics[width=0.45\textwidth]{Gráficas/graf6.pdf}
-    \vspace{0.3em}
+    
     \propia
 \end{figure}
-\vskip0.2cm
+
 
 
 %\begin{center}
@@ -1772,7 +1769,7 @@ calculemos $\displaystyle\int_{-2}^2 f(x)\, dx.$
 
 Entonces, teniendo en cuenta los intervalos de definición de $f$, es decir,
 %\clearpage
-\vskip0.4cm
+
 
 \begin{center}
 \textbf{Función que incluye valor absoluto}
@@ -1785,7 +1782,7 @@ Valor de $f$ & $2x-1$ & $3x^{2}-2$ & $4x^{3}$ \\
 \hline
 \end{tabular}
 \end{center}
-\vskip0.3cm
+
 
 tenemos que la integral de $f$ es
 {\small
@@ -1807,7 +1804,7 @@ $=2\frac{\left( -1\right) ^{2}-\left( -2\right) ^{2}}{2}\!-\!\left(-1-\left(-2\r
 
 La función valor absoluto puede expresarse como una función a
 trozos teniendo en cuenta el signo de la expresión en su interior:
-\vskip0.3cm
+
 \begin{center}
 \textbf{Función parte entera}
 
@@ -1819,20 +1816,20 @@ Valor de $\left\vert x^{2}-1\right\vert $ & $x^{2}-1$ & $-\left(
 x^{2}-1\right) $ & $x^{2}-1$ \\ \hline
 \end{tabular}
 \end{center}
-\vskip0.3cm
+
 La figura de la función por integrar se muestra a continuación:
 
 
-\vskip0.4cm
+
 \noindent
 \begin{figure}[H]
     \centering
     \caption{Valor absoluto de una parábola}
     \includegraphics[width=0.40\textwidth]{Gráficas/graf7.pdf}
-    \vspace{0.3em}
+    
     \propia
 \end{figure}
-\vskip0.2cm
+
 
 
 %\begin{center}
@@ -1862,7 +1859,7 @@ x^{2}-1\right) dx\\
 
 
 Recordemos que $\big[\hspace{-0.05cm}| x|\hspace{-0.07cm}\big]$ es la parte entera de $x$, es decir, el entero más cercano a $x$ por su izquierda. Por ejemplo, {\small $\big[\hspace{-0.05cm}| 2\text{.}3|\hspace{-0.07cm}\big]=2$}. La figura de $f(x)=\big[\hspace{-0.05cm}| x|\hspace{-0.07cm}\big]$ se muestra a continuación:
-\vspace{-0.15cm}
+
 
 \begin{figure}[h]
 	\centering
@@ -1894,22 +1891,20 @@ dx&=\int_{1}^{2}\big[\hspace{-0.05cm}| x|\hspace{-0.07cm}\big] dx+\int_{2}^{3}\b
 \begin{ejemplo}
 \textnormal{En algunos casos, podemos encontrar el valor de la integral usando su interpretación geométrica y no algún método específico como, por ejemplo, buscando el área de una región:} %Por favor, revise la oración anterior.
 \end{ejemplo}
-\begin{enumerate}[leftmargin=1.2em,   itemindent=0pt,       labelwidth=\labelwidth,labelsep=0.5em,]
-\vskip0.3cm
+\begin{parrafonumerado}
 
-\item Tomemos {\small $f(x)=\sqrt{1-x^{2}}$} para $x$ entre {\small $-1$} y {\small $1$}. Su figura es media circunferencia de radio $1$; por tanto, {\footnotesize $\displaystyle \int_{-1}^{1}\sqrt{1-x^{2}}dx$} es el área de medio círculo de radio $1$:
-%\vspace{-0.35cm}
+\item Tomemos $f(x)=\sqrt{1-x^{2}}$ para $x$ entre $-1$ y $1$. Su figura es media circunferencia de radio $1$; por tanto, $\int_{-1}^{1}\sqrt{1-x^{2}}dx$ es el área de medio círculo de radio $1$:
+%
 
-\vskip0.2cm
+
 \noindent
 \begin{figure}[H]
     \centering
     \caption{ Área de medio círculo de radio $1$}
     \includegraphics[width=0.45\textwidth]{Gráficas/graf9.pdf}
-    \vspace{0.3em}
     \propia
 \end{figure}
-\vskip0.2cm
+
 
 
 %\begin{center}
@@ -1931,16 +1926,16 @@ y dado que el área de un círculo es $\pi(\text{radio})^2$, entonces
 es el área de un cuarto de círculo de radio $a$:
 
 
-\vskip0.2cm
+
 \noindent
 \begin{figure}[H]
     \centering
     \caption{Un cuarto de círculo}
     \includegraphics[width=0.45\textwidth]{Gráficas/graf10.pdf}
-    \vspace{0.3em}
+    
     \propia
 \end{figure}
-\vskip0.2cm
+
 
 
 %\begin{center}
@@ -1950,7 +1945,7 @@ es el área de un cuarto de círculo de radio $a$:
 
 %\textbf{Figura:} elaboración propia
 %\end{center}
-%\vspace{-12mm}
+%
 Por tanto,
 \[
 \int_{0}^{a}\sqrt{a^{2}-x^{2}}dx=\frac{a^2\pi}{4}
@@ -1972,16 +1967,16 @@ $\sqrt{3}\leq x<2$ & $\Rightarrow$ & $\big[\hspace{-0.05cm}| x^2|\hspace{-0.07cm
 y su figura, entonces, es
 
 
-\vskip0.2cm
+
 \noindent
 \begin{figure}[H]
     \centering
     \caption{Área bajo $\big[\hspace{-0.05cm}| x^2|\hspace{-0.07cm}\big]$}
     \includegraphics[width=0.45\textwidth]{Gráficas/grafPartEntex2.pdf}
-    \vspace{0.3em}
+    
     \propia
 \end{figure}
-\vskip0.2cm
+
 
 
 %\begin{center}
@@ -2002,7 +1997,7 @@ Con los datos, entonces, el valor de la integral es
 &\approx 1\text{.}8537.
 \end{align*}
 }
-\end{enumerate}
+\end{parrafonumerado}
 
 \section{Integrales de funciones inversas}
 
@@ -2018,16 +2013,16 @@ por la figura de $y^3$, el eje $y$ y la recta $y=2$, es decir, es
 igual a {\footnotesize $\displaystyle\int_{0}^{2}y^{3}dy$}. Entonces,
 
 
-\vskip0.2cm
+
 \noindent
 \begin{figure}[H]
     \centering
     \caption{Área bajo $y=\sqrt[3]{x}$}
     \includegraphics[width=0.45\textwidth]{Gráficas/graf11.pdf}
-    \vspace{0.3em}
+    
     \propia
 \end{figure}
-\vskip0.2cm
+
 
 
 %\begin{center}
@@ -2050,21 +2045,21 @@ igual a {\footnotesize $\displaystyle\int_{0}^{2}y^{3}dy$}. Entonces,
 \textnormal{Calcular} $\displaystyle\int_{1}^{9}\log _{3}x\, dx$.
 \end{ejemplo}
 
-\vskip0.2cm
+
 \textit{Solución.} Similarmente al ejemplo anterior:
-\vskip0.2cm
 
 
-\vskip0.2cm
+
+
 \noindent
 \begin{figure}[H]
     \centering
     \caption{$\displaystyle\int_{1}^{9}\log _{3}x\, dx$}
     \includegraphics[width=0.45\textwidth]{Gráficas/graf12.pdf}
-    \vspace{0.3em}
+    
     \propia
 \end{figure}
-\vskip0.2cm
+
 
 
 %\begin{center}
@@ -2091,16 +2086,16 @@ La inversa de $y=\log _{3}x$ es $x=3^{y}$; entonces
 
 
 
-\vskip0.2cm
+
 \noindent
 \begin{figure}[H]
     \centering
     \caption{Área bajo $y=\sen^{-1} x$}
     \includegraphics[width=0.40\textwidth]{Gráficas/graf13.pdf}
-    \vspace{0.3em}
+    
     \propia
 \end{figure}
-\vskip0.2cm
+
 
 
 %\begin{center}
@@ -2132,17 +2127,17 @@ La inversa de $y=\log _{3}x$ es $x=3^{y}$; entonces
 \textit{Demostración}. Con la información del teorema se tiene la figura 11.
 
 
-\vskip0.2cm
+
 \noindent
 \begin{figure}[H]
     \centering
     \caption{Prueba del teorema}
     \label{fig:prueba_teorema}
     \includegraphics[width=0.44\textwidth]{Gráficas/graf14.pdf}
-    \vspace{0.3em}
+    
     \propia
 \end{figure}
-\vskip0.2cm
+
 
 
 %\begin{center}
@@ -2209,19 +2204,19 @@ anterior,
 \begin{multicols}{3}
 a. $\displaystyle\sum_{k=1}^{5}\left( k^{2}-(k+2)^{2}\right)$
 
-\vspace{1em}
+
 b. $\displaystyle\sum_{k=2}^{6}\left(2^{-k+1}-2^{-k}\right)$
 
-\vspace{1em}
+
 c. $\displaystyle\sum_{k=3}^{8}\left( \frac{1}{k}-\frac{1}{k+2}\right)$
 
-\vspace{1em}
+
 d. $\displaystyle\sum_{k=1}^{8}\sen(k\pi)$
 
-\vspace{1em}
+
 e. $\displaystyle\sum_{k=1}^{n}(-1)^{k}k^{2}$
 
-\vspace{1em}
+
 f. $\displaystyle\sum_{k=1}^{n}\left( \frac{k}{k+1}-\frac{k+1}{k+2} \right)$
 \end{multicols}
 }
@@ -2269,55 +2264,55 @@ f. $\displaystyle\sum_{k=1}^{n}\left( \frac{k}{k+1}-\frac{k+1}{k+2} \right)$
 a. $1+5+9+13+\ldots +81$\\
 % $\displaystyle\sum_{k=0}^{20}\left( 4k+1\right)$
 
-\vspace{1em}
+
 b. $\frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\cdots +\frac{1}{2048}$\\
 % $\displaystyle\sum_{k=1}^{11}\frac{1}{2^{k}}$
 
-\vspace{1em}
+
 c. $\frac{1}{3}+\frac{1}{8}+\frac{1}{13}+\cdots +\frac{1}{203}$\\
 % $\displaystyle\sum_{k=0}^{40}\frac{1}{5k+3}$
 
-\vspace{1em}
+
 d. $\frac{2}{7}+\frac{3}{8}+\frac{4}{9}+\cdots +\frac{100}{105}$\\
 % $\displaystyle\sum_{k=2}^{100}\frac{k}{k+5}$
 
-\vspace{1em}
+
 e. $\frac{\sen(1)}{n}+\frac{\sen(2)}{n}+\frac{\sen(3)}{n}+\cdots +\frac{\sen(n)}{n}$
 % $\displaystyle\sum_{k=1}^{n}\frac{\sen k}{n}$
 
-\vspace{1em}
+
 f. $1+2+3+4+\cdots +10$
 % $\displaystyle\sum_{k=0}^{9}(k+1)$
 
-\vspace{1em}
+
 g. $\sqrt{3}+\sqrt{4}+\sqrt{5}+\sqrt{6}+\sqrt{7}$
 % $\displaystyle\sum_{k=1}^{5}\sqrt{k+2}$
 
-\vspace{1em}
+
 h. $\frac{1}{2}+\frac{2}{3}+\frac{3}{4}+\frac{4}{5}+\cdots +\frac{19}{20}$
 % $\displaystyle\sum_{k=0}^{18}\frac{k+1}{k+2}$
 
-\vspace{1em}
+
 i. $\frac{3}{7}+\frac{4}{8}+\frac{5}{9}+\frac{6}{10}+\cdots +\frac{23}{27}$
 % $\displaystyle\sum_{k=0}^{20}\frac{k+3}{k+7}$
 
-\vspace{1em}
+
 j. $2+4+6+8+\cdots +2n$
 % $\displaystyle\sum_{k=1}^{n}2k$
 
-\vspace{1em}
+
 k. $1+3+5+7+\cdots +(2n-1)$
 % $\displaystyle\sum_{k=0}^{n-1}(2k+1)$
 
-\vspace{1em}
+
 l. $1+2+4+8+16+32$
 % $\displaystyle\sum_{k=0}^{5}2^{k}$
 
-\vspace{1em}
+
 m. $\frac{1}{1}+\frac{1}{4}+\frac{1}{9}+\frac{1}{16}+\frac{1}{25}+\frac{1}{36}$
 % $\displaystyle\sum_{k=0}^{5}\frac{1}{(k+1)^{2}}$
 
-\vspace{1em}
+
 n. $1-x+x^{2}-x^{3}+\cdots +(-1)^{n}x^{n}$
 % $\displaystyle\sum_{k=1}^{n+1}(-1)^{k-1}x^{k-1}$
 \end{multicols}
@@ -2356,31 +2351,31 @@ n. $1-x+x^{2}-x^{3}+\cdots +(-1)^{n}x^{n}$
 a. $\displaystyle\sum_{k=1}^{n}\left[ \left( 2k-1\right) ^{3}-\left( 2k+1\right) ^{3}\right]$
 % $-8n^{3}-12n^{2}-6n$
 
-\vspace{1em}
+
 b. $\displaystyle\sum_{k=1}^{n}\left[ \left( k-1\right) ^{2}-\left( k+1\right) ^{2}\right]$
 % $-2n^{2}-2n$
 
-\vspace{1em}
+
 c. $\displaystyle\sum_{k=1}^{n}\left[ \left( k-2\right) ^{4}-\left( k+2\right) ^{4}\right]$
 % $-4n^{4}-8n^{3}-36n^{2}-32n$
 
-\vspace{1em}
+
 d. $\displaystyle\sum_{k=0}^{n}\left( 2^{k}+\frac{1}{3^{k}}\right)$
 % $2^{n+1}-\frac{1}{2}\left( \frac{1}{3} \right)^{n}+\frac{1}{2}$
 
-\vspace{1em}
+
 e. $\displaystyle\sum_{k=1}^{n}\frac{4^{k}-5^{k}}{6^{k}}$
 % $5\left( \frac{5}{6} \right)^{n}-2\left( \frac{2}{3} \right)^{n}-3$
 
-\vspace{1em}
+
 f. $\displaystyle\sum_{k=1}^{200}\left( 3\sen(4k)+2\cos(3k)\right)$
 % $\frac{3}{2\sen 2}\left( \cos 2-\cos 802 \right) - \frac{1}{\sen \frac{3}{2}} \left( \sen \frac{3}{2}-\sen \frac{1203}{2} \right)$
 
-\vspace{1em}
+
 g. $\displaystyle\sum_{k=1}^{100}\left( \sen(5k)+\cos(5k) \right)$
 % $\frac{1}{2\sen \frac{5}{2}}\left( \cos \frac{5}{2}-\cos \frac{1005}{2}-\sen \frac{5}{2}+\sen \frac{1005}{2} \right)$
 
-\vspace{1em}
+
 h. $\displaystyle\sum_{k=1}^{n}\left( \sen k+\cos k \right)$
 % $\frac{1}{2\sen \frac{1}{2}}\left( \cos \frac{1}{2}-\sen \frac{1}{2}-\cos \left( n+\frac{1}{2} \right)+\sen \left( n+\frac{1}{2} \right) \right)$
 \end{multicols}
@@ -2406,34 +2401,34 @@ h. $\displaystyle\sum_{k=1}^{n}\left( \sen k+\cos k \right)$
 %  n}\right) $}{$\sen 1$}
 % %\end{multicols}
 % \subexercise{$\displaystyle\lim_{n\rightarrow \infty}\sum_{k=1}^{n}\left[ \left( 2+\frac{k}{n}\right) ^{3}-2\left( 2+\frac{k}{n}\right) ^{2}+1\right] \frac{1}{n}$}{$\frac{55}{12}$}
-\vspace{-4mm}
+
 \begin{ejer}{Calcule cada uno de los siguientes límites:}
 
 {\small
 a. $\displaystyle\lim_{n\rightarrow \infty }\sum_{k=1}^{n}\left[ \left( \frac{3k}{n}-1\right) ^{3}-2\right] \frac{3}{n}$
 % $-\frac{9}{4}$
 
-\vspace{1em}
+
 b. $\displaystyle\lim_{n\rightarrow \infty }\sum_{k=1}^{n}\left[ 3\left( 1+\frac{k}{n}\right) ^{2}-\left( 1+\frac{k}{n}\right) \right] \frac{1}{n}$
 % $\frac{11}{2}$
 
-\vspace{1em}
+
 c. $\displaystyle\lim_{n\rightarrow \infty }\sum_{k=1}^{n}\frac{1}{n}\left( 2^{\frac{k}{n}}\right)$
 % $\frac{1}{\ln 2}$
 
-\vspace{1em}
+
 d. $\displaystyle\lim_{n\rightarrow \infty }\sum_{k=1}^{n}\frac{4}{n}e^{\frac{k}{n}}$
 % $4e - 4$
 
-\vspace{1em}
+
 e. $\displaystyle\lim_{n\rightarrow \infty }\sum_{k=1}^{n}\frac{4}{n}\sen \left( \frac{k}{n} \right)$
 % $4 - 4\cos 1$
 
-\vspace{1em}
+
 f. $\displaystyle\lim_{n\rightarrow \infty }\sum_{k=1}^{n}\frac{1}{n}\cos \left( \frac{k}{n} \right)$
 % $\sen 1$
 
-\vspace{1em}
+
 g. $\displaystyle\lim_{n\rightarrow \infty}\sum_{k=1}^{n}\left[ \left( 2+\frac{k}{n}\right) ^{3}-2\left( 2+\frac{k}{n}\right) ^{2}+1\right] \frac{1}{n}$
 }
 \end{ejer}
@@ -2464,33 +2459,33 @@ g. $\displaystyle\lim_{n\rightarrow \infty}\sum_{k=1}^{n}\left[ \left( 2+\frac{k
 % \subexercise{$f\left( x\right) =2^{x}-1$ \ $P=\left\{
 % 0,0.5,1,2.5,3,3.6,4. 1,5\right\} $ partición de $\left[ 0,5\right] ,$
 % use el extremo derecho.}{$ 53,842$}
-\vskip0.4cm
+
 \begin{ejer}{Escriba una suma de Riemann para cada función y partición dadas, usando el punto indicado de cada subintervalo:}
-\vskip0.4cm
+
 a. $f(x) = 9 - 3x^{2}$,\quad $P = \{0, 0.3, 0.5, 0.8, 1\}$,\quad partición de $[0,1]$, use el extremo derecho.
 % $7{,}593$
 
-\vspace{1em}
+
 b. $f(x) = x^{2} + x^{3}$,\quad $P = \{-1, -0.5, -0.8, 0, 0.5, 1\}$,\quad partición de $[-1,1]$, use el extremo derecho.
 % $1{,}2506$
 
-\vspace{1em}
+
 c. $f(x) = 20 - x^{3}$,\quad $P = \{0, 0.5, 1.5, 1.8, 2\}$,\quad partición de $[0,2]$, use el extremo izquierdo.
 % $37{,}696$
 
-\vspace{1em}
+
 d. $f(x) = x^{4} - 1$,\quad $P = \{-1, -0.5, 0, 0.5, 1, 2, 3\}$,\quad partición de $[-1,3]$, use el extremo izquierdo.
 % $13{,}563$
 
-\vspace{1em}
+
 e. $f(x) = 20 - 4x^{2}$,\quad $P = \{0, 0.5, 1.5, 1.8, 2, 2.5, 3\}$,\quad partición de $[0,3]$, use el punto medio.
 % $24{,}47$
 
-\vspace{1em}
+
 f. $f(x) = x^{3} - 1$,\quad $P = \{-1, -0.5, 0, 0.5, 1, 2, 3, 3.6, 4\}$,\quad partición de $[-1,4]$, use el punto medio.
 % $57{,}51$
 
-\vspace{1em}
+
 g. $f(x) = 2^{x} - 1$,\quad $P = \{0, 0.5, 1, 2.5, 3, 3.6, 4.1, 5\}$,\quad partición de $[0,5]$, use el extremo derecho.
 % $53{,}842$
 
@@ -2511,7 +2506,7 @@ g. $f(x) = 2^{x} - 1$,\quad $P = \{0, 0.5, 1, 2.5, 3, 3.6, 4.1, 5\}$,\quad parti
 
 % \subexercise{$\displaystyle\int_{0}^{3}2\left( 3^{x}\right) dx$}{$\dfrac{52}{\ln 3}$}
 % %\end{multicols}
-\vskip0.4cm
+
 \begin{ejer}{Calcule cada una de las siguientes integrales usando la definición:}
 
 \begin{multicols}{3}
@@ -2519,11 +2514,11 @@ g. $f(x) = 2^{x} - 1$,\quad $P = \{0, 0.5, 1, 2.5, 3, 3.6, 4.1, 5\}$,\quad parti
 a. $\displaystyle\int_{0}^{2}\left( x^{2}-2\right) dx$
 % $-\dfrac{4}{3}$
 
-\vspace{1em}
+
 b. $\displaystyle\int_{0}^{1}\left(x^{2}-x\right) dx$
 % $-\dfrac{1}{6}$
 
-\vspace{1em}
+
 c. $\displaystyle\int_{-1}^{1}x^{3}dx$
 % $0$
 \end{minipage}
@@ -2532,7 +2527,7 @@ c. $\displaystyle\int_{-1}^{1}x^{3}dx$
 d. $\displaystyle\int_{-2}^{2}\left( x^{3}+2\right) dx$
 % $8$
 
-\vspace{1em}
+
 e. $\displaystyle\int_{-1}^{2}\left( 2x^{3}-1\right) dx$
 % $\dfrac{9}{2}$
 \end{minipage}
@@ -2541,7 +2536,7 @@ e. $\displaystyle\int_{-1}^{2}\left( 2x^{3}-1\right) dx$
 f. $\displaystyle\int_{0}^{2}2^{x}dx$
 % $\dfrac{3}{\ln 2}$
 
-\vspace{1em}
+
 g. $\displaystyle\int_{0}^{3}2\cdot 3^{x}dx$
 % $\dfrac{52}{\ln 3}$
 \end{minipage}
@@ -2612,66 +2607,66 @@ g. $\displaystyle\int_{0}^{3}2\cdot 3^{x}dx$
 \begin{multicols}{2}
 a. $\displaystyle\int_{0}^{2}\left( 4x^{3}-8x^{2}+7x+8\right) dx$
 
-\vspace{1em}
+
 b. $\displaystyle\int_{-2}^{1}\left( 5x^{3}-7x^{2}+4x-3\right) dx$
 
-\vspace{1em}
+
 c. $\displaystyle\int_{-2}^{2}\left( x^{4}+2x^{3}-x+1\right) dx$
 
-\vspace{1em}
+
 d. $\displaystyle\int_{-1}^{2}\left( 2x^{5}-10x^{3}\right) dx$
 
-\vspace{1em}
+
 e. $\displaystyle\int_{0}^{3}\left( e^{x}+2^{x}+3\right) dx$
 
-\vspace{1em}
+
 f. $\displaystyle\int_{0}^{3}\left( 4^{x}+3^{x}+3x\right) dx$
 
-\vspace{1em}
+
 g. $\displaystyle\int_{0}^{3}\left(5^{x}+4^{x}+4x^{2}\right) dx$
 
-\vspace{1em}
+
 h. $\displaystyle\int_{-1}^{2}\left\vert x\right\vert dx$
 
-\vspace{1em}
+
 i. $\displaystyle\int_{-1}^{4}\left\vert x^{2}-2x-3\right\vert dx$
 
-\vspace{1em}
+
 j. $\displaystyle\int_{-4}^{4}\left\vert x^{2}-9\right\vert dx$
 
-\vspace{1em}
+
 k. $\displaystyle\int_{-1}^{2}\left[ \left\vert x\right\vert \right] dx$
 
-\vspace{1em}
+
 l. $\displaystyle\int_{1}^{4}\left[ \left\vert 2x\right\vert \right] dx$
 
-\vspace{1em}
+
 m. $\displaystyle\int_{-1}^{4}\left[ \left\vert 3x\right\vert \right] dx$
 
-\vspace{1em}
+
 n. $\displaystyle\int_{0}^{4}\left[ \left\vert x^{2}\right\vert \right] dx$
 
-\vspace{1em}
+
 o. $\displaystyle\int_{0}^{2}\left[ \left\vert 2x^{2}\right\vert \right] dx$
 
-\vspace{1em}
+
 p. $\displaystyle\int_{0}^{2}\left[ \left\vert x^{3}\right\vert \right] dx$
 
-\vspace{1em}
+
 q. $\displaystyle\int_{-2}^{2}f(x)\,dx$, si $f(x)=
 \begin{cases}
 x^{2}-4, & \text{si }x<0 \\
 4-x^{2}, & \text{si }x\geq 0
 \end{cases}$
 
-\vspace{2em}
+
 r. $\displaystyle\int_{-1}^{3}f(x)\,dx$, si $f(x)=
 \begin{cases}
 x^{3}-5x^{2}+x+2, & \text{si }x<1 \\ % <-- ¡AQUÍ ESTÁ EL CAMBIO!
 4x^{3}-x^{2}+2, & \text{si }x\geq 1
 \end{cases}$
 
-\vspace{2em}
+
 s. $\displaystyle\int_{-2}^{3}f(x)\,dx$, si $f(x)=
 \begin{cases}
 	x^{2}-4x, & \text{si }x<0 \\ % <-- ¡Agregar salto de línea!
@@ -2718,40 +2713,40 @@ s. $\displaystyle\int_{-2}^{3}f(x)\,dx$, si $f(x)=
 % \right. ;x=-1,x=4$ y el eje $x.$}{$\allowbreak e^{4}-e^{\pi}+14$}
 
 \begin{ejer}{Halle el área limitada por la curva y las rectas dadas:}
-\vskip0.4cm
+
 
 a. $y=5x^{4},\ x=1,\ x=3$ y el eje $x$.
 % $242$
 
-\vspace{1em}
+
 b. $y=3x+x^{2}-x;\ x=0,\ x=5$ y el eje $x$.
 % $\dfrac{200}{3}$
 
-\vspace{1em}
+
 c. $y=e^{x}+x^{3}+1;\ x=0,\ x=2$ y el eje $x$.
 % $e^{2}+5$
 
-\vspace{1em}
+
 d. $y=x^{2}+2^{x}+x;\ x=1,\ x=3$ y el eje $x$.
 % $\dfrac{2}{3\ln 2}\left( 19\ln 2+9\right)$
 
-\vspace{1em}
+
 e. $y=2\sen x;\ x=0,\ x=\pi$ y el eje $x$.
 % $4$
 
-\vspace{1em}
+
 f. $y=5\cos x;\ x=\dfrac{3\pi}{2},\ x=2\pi$ y el eje $x$.
 % $5$
 
-\vspace{1em}
+
 g. $y=2\cos x+3\sen x;\ x=0,\ x=\dfrac{\pi}{2}$ y el eje $x$.
 % $5$
 
-\vspace{1em}
+
 h. $y=3\cos x+\sen x+x^{2};\ x=-\dfrac{\pi}{2},\ x=\dfrac{\pi}{2}$ y el eje $x$.
 % $\dfrac{1}{12}\pi^{3}+6$
 
-\vspace{1em}
+
 i. $f(x)=\left\{
 \begin{array}{ccc}
 16-x^{2} & \text{si} & x<4 \\
@@ -2760,7 +2755,7 @@ x+4 & \text{si} & x\geq 4
 \right.;\ x=0,\ x=6$ y el eje $x$.
 % $\dfrac{182}{3}$
 
-\vspace{1em}
+
 j. $f(x)=\left\{
 \begin{array}{ccc}
 2\sen x & \text{si} & x\geq 0 \\
@@ -2769,7 +2764,7 @@ j. $f(x)=\left\{
 \right.;\ x=-\dfrac{\pi}{2},\ x=\dfrac{\pi}{4}$ y el eje $x$.
 % $5-\sqrt{2}$
 
-\vspace{1em}
+
 k. $f(x)=\left\{
 \begin{array}{ccc}
 2^{x} & \text{si} & x<-1 \\
@@ -2778,7 +2773,7 @@ k. $f(x)=\left\{
 \right.;\ x=-2,\ x=2$ y el eje $x$.
 % $\dfrac{2}{\ln 2}$
 
-\vspace{1em}
+
 l. $f(x)=\left\{
 \begin{array}{ccc}
 3x^{2}+2x+2 & \text{si} & x\leq 0 \\
@@ -2809,37 +2804,37 @@ e^{x} & & x>\pi
  %\end{multicols}
 
 \begin{ejer}{Use nociones geométricas para encontrar el valor de cada una de las siguientes integrales:}
-\vskip0.4cm
+
 
 \begin{multicols}{2}
 a. $\displaystyle\int_{-2}^{2}\sqrt{4-x^{2}}dx$
 % $2\pi$
 
-\vspace{1em}
+
 b. $\displaystyle\int_{0}^{10}\sqrt{100-x^{2}}dx$
 % $25\pi$
 
-\vspace{1em}
+
 c. $\displaystyle\int_{-2}^{8}\left( 4+\sqrt{25-\left( x-3\right) ^{2}}\right) dx$
 % $\dfrac{25\pi}{2}+40$
 
-\vspace{1em}
+
 d. $\displaystyle\int_{-1}^{6}\left( 1+\sqrt{49-\left( x+1\right) ^{2}}\right) dx$
 % $\dfrac{49\pi}{4}+7$
 
-\vspace{1em}
+
 e. $\displaystyle\int_{0}^{4}\big[\hspace{-0.05cm}| x|\hspace{-0.07cm}\big] dx$
 % $6$
 
-\vspace{1em}
+
 f. $\displaystyle\int_{0}^{3}\big[\hspace{-0.05cm}| 2x|\hspace{-0.07cm}\big] dx$
 % $7{,}5$
 
-\vspace{1em}
+
 g. $\displaystyle\int_{0}^{2}\big[\hspace{-0.05cm}| x^2|\hspace{-0.07cm}\big] dx$
 % $1{,}8537$
 
-\vspace{1em}
+
 h. $\displaystyle\int_{0}^{9} \big[\hspace{-0.05cm}| \sqrt{x}|\hspace{-0.07cm}\big] dx$
 % $13$
 \end{multicols}
@@ -2871,35 +2866,35 @@ h. $\displaystyle\int_{0}^{9} \big[\hspace{-0.05cm}| \sqrt{x}|\hspace{-0.07cm}\b
 a. $\displaystyle\int_{0}^{9}\sqrt{x}\,dx$
 % $18$
 
-\vspace{1em}
+
 b. $\displaystyle\int_{0}^{16}\sqrt[4]{x}\,dx$
 % $\dfrac{128}{5}$
 
-\vspace{1em}
+
 c. $\displaystyle\int_{0}^{4}\sqrt[5]{8x}\,dx$
 % $\dfrac{20}{3}$
 
-\vspace{1em}
+
 d. $\displaystyle\int_{0}^{7}\log_{2}(x+1)\,dx$
 % $24-\dfrac{7}{\ln 2}$
 
-\vspace{1em}
+
 e. $\displaystyle\int_{0}^{e-1}\ln(x+1)\,dx$
 % $1$
 
-\vspace{1em}
+
 f. $\displaystyle\int_{1}^{25}\log_{5}x\,dx$
 % $50-\dfrac{24}{\ln 5}$
 
-\vspace{1em}
+
 g. $\displaystyle\int_{0}^{\frac{1}{2}}\arcsin(2x)\,dx$
 % $\dfrac{1}{4}\pi - \dfrac{1}{2}$
 
-\vspace{1em}
+
 h. $\displaystyle\int_{0}^{3}\arcsin\left(\dfrac{x}{3}\right)\,dx$
 % $\dfrac{3}{2}\pi - 3$
 
-\vspace{1em}
+
 i. $\displaystyle\int_{0}^{1}\arccos(1 - x)\,dx$
 % $1$
 \end{multicols}
