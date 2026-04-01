@@ -1,0 +1,108 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{Stewart_2012}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=37b12c56a8629449e8994f442b4d8c35}{%
+           family={Stewart},
+           familyi={S\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cengage Learning}%
+      }
+      \strng{namehash}{37b12c56a8629449e8994f442b4d8c35}
+      \strng{fullhash}{37b12c56a8629449e8994f442b4d8c35}
+      \strng{fullhashraw}{37b12c56a8629449e8994f442b4d8c35}
+      \strng{bibnamehash}{37b12c56a8629449e8994f442b4d8c35}
+      \strng{authorbibnamehash}{37b12c56a8629449e8994f442b4d8c35}
+      \strng{authornamehash}{37b12c56a8629449e8994f442b4d8c35}
+      \strng{authorfullhash}{37b12c56a8629449e8994f442b4d8c35}
+      \strng{authorfullhashraw}{37b12c56a8629449e8994f442b4d8c35}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Cálculo de una variable. Trascendentes tempranas}
+      \field{year}{2012}
+    \endentry
+    \entry{Zill_Wright_2011}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=ce0689f2d52c5a0939d5509701e4f498}{%
+           family={Zill},
+           familyi={Z\bibinitperiod},
+           given={Dennis\bibnamedelima G.},
+           giveni={D\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=f5d7cb2383d57d85b690656148b0e617}{%
+           family={Wright},
+           familyi={W\bibinitperiod},
+           given={Warren\bibnamedelima S.},
+           giveni={W\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Mc-Graw-Hill}%
+      }
+      \strng{namehash}{53456eef4fa4989bbe0f9bd60464337a}
+      \strng{fullhash}{53456eef4fa4989bbe0f9bd60464337a}
+      \strng{fullhashraw}{53456eef4fa4989bbe0f9bd60464337a}
+      \strng{bibnamehash}{53456eef4fa4989bbe0f9bd60464337a}
+      \strng{authorbibnamehash}{53456eef4fa4989bbe0f9bd60464337a}
+      \strng{authornamehash}{53456eef4fa4989bbe0f9bd60464337a}
+      \strng{authorfullhash}{53456eef4fa4989bbe0f9bd60464337a}
+      \strng{authorfullhashraw}{53456eef4fa4989bbe0f9bd60464337a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Cálculo trascendentes tempranas}
+      \field{year}{2011}
+    \endentry
+    \entry{thomas_calculo_2010}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=29aea1e2950ea1d9bd548d591d18a37e}{%
+           family={Thomas},
+           familyi={T\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Addison Wesley}%
+      }
+      \strng{namehash}{29aea1e2950ea1d9bd548d591d18a37e}
+      \strng{fullhash}{29aea1e2950ea1d9bd548d591d18a37e}
+      \strng{fullhashraw}{29aea1e2950ea1d9bd548d591d18a37e}
+      \strng{bibnamehash}{29aea1e2950ea1d9bd548d591d18a37e}
+      \strng{authorbibnamehash}{29aea1e2950ea1d9bd548d591d18a37e}
+      \strng{authornamehash}{29aea1e2950ea1d9bd548d591d18a37e}
+      \strng{authorfullhash}{29aea1e2950ea1d9bd548d591d18a37e}
+      \strng{authorfullhashraw}{29aea1e2950ea1d9bd548d591d18a37e}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Cálculo: una variable}
+      \field{year}{2010}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

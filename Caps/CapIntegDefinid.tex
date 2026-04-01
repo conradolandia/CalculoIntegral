@@ -1,4 +1,4 @@
-\chapter[Integral definida]{Integral definida}\label{definida}
+\chapter{Integral definida}\label{definida}
 
 El primer capítulo comienza con la notación de sumatoria, las propiedades del operador de suma y el cálculo de algunas fórmulas para sumas. A continuación se estudian las particiones de un intervalo para llegar al concepto de integral definida, donde se presentan sus propiedades, también se evalúan algunas integrales definidas usando la definición y empleando propiedades de áreas, en particular, para calcular integrales de funciones inversas.
 
@@ -1110,18 +1110,16 @@ definida no depende de la variable de integración; es decir, si la función dep
 }
 
 \begin{teorema}
-\leavevmode\\[-1.2ex] % Salto de línea pequeño, ajusta -1.2ex a tu gusto
-\renewcommand{\labelenumi}{\textup{\theenumi.}}
-\begin{enumerate}[leftmargin=1.2em,   itemindent=0pt,       labelwidth=\labelwidth,labelsep=0.5em,]
+\begin{parrafonumerado}
  \item \textnormal{Si \textit{$f$} es una función continua y creciente en el intervalo \textit{$[a,b]$}, entonces \textit{$f$} es integrable en \textit{$[a,b].$}}
  \item \textnormal{Si \textit{$f$} es una función continua y decreciente en el intervalo \textit{$[a,b]$}, entonces \textit{$f$} es integrable en \textit{$[a,b].$}}
-\end{enumerate}
+\end{parrafonumerado}
 \end{teorema}
 
 
 \textit{Demostración}
 
-\begin{enumerate}[leftmargin=1.2em,   itemindent=0pt,       labelwidth=\labelwidth,labelsep=0.5em,]
+\begin{parrafonumerado}
 \item Sea $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ una partición de $[a,b].$ Como $f$ es continua en $[x_{k-1},x_{k}]$, entonces $f$ toma estos valores: máximo $M_{k}$ y mínimo $m_{k}$ en $[x_{k-1},x_{k}]$ para $1\leq k\leq n$. Así que
 {\small
 \[
@@ -1149,25 +1147,23 @@ luego
 y $f$ es integrable en $[a,b]$.
 
 \item Este caso es similar al anterior. 
-\end{enumerate}
+\end{parrafonumerado}
 
 \begin{teorema}
-\leavevmode\\[-1.2ex] % Salto de línea pequeño, ajusta -1.2ex a tu gusto
-\renewcommand{\labelenumi}{\textup{\theenumi.}}
-\begin{enumerate}[leftmargin=1.2em,   itemindent=0pt,       labelwidth=\labelwidth,labelsep=0.5em,]
+\begin{parrafonumerado}
 \item \textnormal{Si \textit{$f$} es una función continua en \textit{$[a,b]$}, entonces \textit{$f$} es
 uniformemente continua en \textit{$[a,b]$}. Es decir, dado un \textit{$\varepsilon >0$},
 existe un \textit{$\delta >0$} tal que para cada par de puntos \textit{$x,\ y$} en \textit{$[a,b],$} si \textit{$\left\vert x-y\right\vert <\delta ,$} entonces \textit{$\left\vert f\left( x\right)-f\left( y\right) \right\vert <\varepsilon .$}}
 
 \item \textnormal{Si \textit{$f$} es una función continua en \textit{$[a,b]$}, entonces \textit{$f$} es integrable en \textit{$[a,b].$}}
-\end{enumerate}
+\end{parrafonumerado}
 \end{teorema}
 
 
 \textit{Demostración}
 
 
-\begin{enumerate}[leftmargin=1.2em,   itemindent=0pt,       labelwidth=\labelwidth,labelsep=0.5em,]
+\begin{parrafonumerado}
 
 \item Supongamos, por reducción al absurdo, que existe $\varepsilon _{0}>0$,
 tal que para cada $\delta >0$ existen $x,y$ en $[a,b]$ con $\left\vert
@@ -1265,7 +1261,7 @@ x_{k}=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }\overset{n}{%
 }
 
 y $f$ es integrable en $[a,b].$
-\end{enumerate}
+\end{parrafonumerado}
 
 \begin{defi}
 \textnormal{{Integral definida de una función continua}. Sea \textit{$P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$} una partición regular del
@@ -1446,7 +1442,7 @@ entonces
 \end{equation}
 }
 
-\item { \textnormal{Integral de la función}} $f(x)=x^2$:
+\item Integral de la función $f(x)=x^2$:
 {\footnotesize
 \begin{align*}
 &\int_{a}^{b}x^{2}dx=\lim_{n\to \infty}\sum_{k=1}^{n}\left( a+k\frac{b-a}{n}%
@@ -1608,9 +1604,6 @@ y así,
 
 
 \item De manera similar, calculemos la integral de $\sen x$:
-
-\begin{center}
-\begin{minipage}{0.97\textwidth}
 \begin{align*}
 &\int_{0}^{b}\sen x\, dx=\underset{n\rightarrow \infty }{\lim }\sum\limits_{k=1}^{n}\sen \left( k\frac{b}{n}\right) \frac{b}{n}
 =\underset{n\rightarrow \infty }{\lim }\frac{b}{n}\sum\limits_{k=1}^{n}
@@ -1623,8 +1616,6 @@ y así,
 2\sen\left( \frac{1}{2}u\right) }{u}}\\
 &=\frac{\cos 0-\cos b\cos 0+0}{2\cdot \frac{1}{2}}=1-\cos b
 \end{align*}
-\end{minipage}
-\end{center}
 
 Por otro lado,
 \begin{align*}
