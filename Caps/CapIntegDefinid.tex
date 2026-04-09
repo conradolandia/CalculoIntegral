@@ -337,7 +337,7 @@ Por ejemplo, calculemos la suma de los cuadrados de $1$ hasta $30$, es decir, co
 \begin{ejemplo}
   Hagamos ahora que $n$, el límite de la suma, en la expresión
   \[
-    \underset{n\rightarrow \infty }{\lim }\sum_{k=1}^{n}\left( \left(
+    \lim_{n\to\infty}\sum_{k=1}^{n}\left( \left(
     2\frac{k}{n}-1\right) ^{2}+2\left( 2\frac{k}{n}-1\right) +1\right) \frac{1}{n}
   \]
   tienda a infinito.
@@ -345,10 +345,10 @@ Por ejemplo, calculemos la suma de los cuadrados de $1$ hasta $30$, es decir, co
 Si descomponemos las expresiones dentro de los paréntesis y cancelamos términos similares, tenemos
 \begin{gather*}
   \begin{aligned}
-    \underset{n\rightarrow \infty }{\lim }\sum_{k=1}^{n}\left( \left( 2\frac{k}{n}-1\right) ^{2}+2\left( 2\frac{k}{n}-1\right) +1\right) \frac{1}{n}
-    &= \underset{n\rightarrow \infty }{\lim }\sum_{k=1}^{n}\left( 4\frac{k^{2}}{n^{2}}-4\frac{k}{n}+1+4\frac{k}{n}-2+1\right) \frac{1}{n}\\
-    &= \underset{n\rightarrow \infty }{\lim }\sum_{k=1}^{n}4\frac{k^{2}}{n^{3}} = \underset{n\rightarrow \infty }{\lim }\frac{4}{n^{3}}\sum_{k=1}^{n}k^{2}\\
-    &= \underset{n\rightarrow \infty }{\lim }\frac{4}{n^{3}}\left( \frac{n^{3}}{3}+\frac{n^{2}}{2}+\frac{n}{6}\right)\\
+    \lim_{n\to\infty}\sum_{k=1}^{n}\left( \left( 2\frac{k}{n}-1\right) ^{2}+2\left( 2\frac{k}{n}-1\right) +1\right) \frac{1}{n}
+    &= \lim_{n\to\infty}\sum_{k=1}^{n}\left( 4\frac{k^{2}}{n^{2}}-4\frac{k}{n}+1+4\frac{k}{n}-2+1\right) \frac{1}{n}\\
+    &= \lim_{n\to\infty}\sum_{k=1}^{n}4\frac{k^{2}}{n^{3}} = \lim_{n\to\infty}\frac{4}{n^{3}}\sum_{k=1}^{n}k^{2}\\
+    &= \lim_{n\to\infty}\frac{4}{n^{3}}\left( \frac{n^{3}}{3}+\frac{n^{2}}{2}+\frac{n}{6}\right)\\
     &= \underset{n\rightarrow \infty}{\lim}\left(\frac{4}{3}+\frac{2}{n}+\frac{4}{6n^{2}}\right)=\frac{4}{3}
   \end{aligned}
 \end{gather*}
@@ -587,12 +587,12 @@ A_\mathcal{R}(n)=\frac{16}{n^{4}}\left(\frac{n(n+1)}{2}\right)^2 +4
 \]
 que es la suma de las áreas de los rectángulos, pero el área exacta de la región $\mathcal{R}$ se obtiene cuando $n$ tiende a infinito; luego, si $a\left( \mathcal{R}\right) $ denota el área de $\mathcal{R}$, entonces
 \begin{align*}
-a\left( \mathcal{R}\right)& =\underset{n\rightarrow \infty }{\lim }\left[ \frac{16}{n^{4}}\left(\frac{n(n+1)}{2}\right)^2 +4\right]\\
+a\left( \mathcal{R}\right)& =\lim_{n\to\infty}\left[ \frac{16}{n^{4}}\left(\frac{n(n+1)}{2}\right)^2 +4\right]\\
 &=\underset{n\rightarrow\infty }{\lim}\left(\frac{16}{n^{4}}\frac{n^{2}\left( n+1\right) ^{2}}{4} +4\right)\\
-&=\underset{n\rightarrow \infty }{\lim }\left( \frac{16}{4}\frac{
+&=\lim_{n\to\infty}\left( \frac{16}{4}\frac{
 \left( n+1\right) ^{2}}{n^{2}} +4\right)\\
-&=4\underset{n\rightarrow \infty }{\lim }\left( \frac{\left( n+1\right) }{n}\frac{\left( n+1\right) }{n}+1\right)\\
-&=4\underset{n\rightarrow \infty }{\lim }\left[ \left( 1+\frac{1}{n}\right) \left( 1+\frac{1}{n}\right) +1\right]\\
+&=4\lim_{n\to\infty}\left( \frac{\left( n+1\right) }{n}\frac{\left( n+1\right) }{n}+1\right)\\
+&=4\lim_{n\to\infty}\left[ \left( 1+\frac{1}{n}\right) \left( 1+\frac{1}{n}\right) +1\right]\\
 &=4( 1\cdot 1+1)=8
 \end{align*}
 Con ello, entonces, el área de la región $\mathcal{R}$ es igual a $8$.
@@ -827,7 +827,7 @@ Si $f$ es integrable en el intervalo $[a,b]$, entonces
 \begin{parrafonumerado}
 \item ${\int_{a}^{b}f(x)dx}=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }\sum_{k=1}^{n}f(x_{k}^{\ast })\Delta x_{k}$, con $P$ una partición cualquiera de $[a,b]$ y $x_{k}^{\ast }$ un punto cualquiera del subintervalo $\left[ x_{k-1},x_{k}\right]$.
 
-\item ${\int_{a}^{b}f(x)dx}=\underset{n\rightarrow \infty }{\lim }\sum_{k=1}^{n}f(x_{k})\Delta x,$ con $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ una partición regular del intervalo $[a,b]$, $\Delta x=\frac{b-a}{n}$\; y\; $x_{k}=a+k\Delta x=a+k\frac{b-a}{n},$ $1\leq k\leq n$.
+\item ${\int_{a}^{b}f(x)dx}=\lim_{n\to\infty}\sum_{k=1}^{n}f(x_{k})\Delta x,$ con $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ una partición regular del intervalo $[a,b]$, $\Delta x=\frac{b-a}{n}$\; y\; $x_{k}=a+k\Delta x=a+k\frac{b-a}{n},$ $1\leq k\leq n$.
 \end{parrafonumerado}
 \end{teorema}
 
@@ -1096,7 +1096,7 @@ Sea $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ una partición regular del
 intervalo $[a,b]$, $\Delta x=\frac{b-a}{n}$ y $x_{k}=a+k\Delta x=a+k\frac{b-a}{n}$ para $1\leq k\leq n$. Entonces, la integral entre $a$ y $b$ de
 una función continua $f(x)$ es dada por
 \[
-\int_{a}^{b}f(x)dx=\underset{n\rightarrow \infty }{\lim }\overset{n}{%
+\int_{a}^{b}f(x)dx=\lim_{n\to\infty}\overset{n}{%
 \underset{k=1}{\sum }}f(x_{k})\Delta x
 \]
 cada vez que el límite exista.
@@ -1126,14 +1126,14 @@ con ello, $f\left( x_{k}\right)=2x_{k}+1=\frac{4k}{n}+1$\ y\ $f(x_{k})\Delta x=\
 Entonces, y recordando las fórmulas de la sección \ref{FormSumas} del capítulo \ref{definida}, tenemos
 \begin{gather*}
 \begin{aligned}
-\int_{0}^{2}(2x+1)dx&=\underset{n\rightarrow \infty }{\lim }\overset{n}{%
+\int_{0}^{2}(2x+1)dx&=\lim_{n\to\infty}\overset{n}{%
 \underset{k=1}{\sum }}f(x_{k})\Delta x_{k} \\
-&=\underset{n\rightarrow \infty }{\lim }\sum_{k=1}^{n}
+&=\lim_{n\to\infty}\sum_{k=1}^{n}
 \left( \frac{8}{n^{2}}k+\frac{2}{n}\right) \\
-&=\underset{n\rightarrow \infty }{\lim }\left( \frac{8}{n^{2}}\overset{n}{
+&=\lim_{n\to\infty}\left( \frac{8}{n^{2}}\overset{n}{
 \underset{k=1}{\sum }}k+\frac{2}{n}\sum_{k=1}^{n}1\right)\\
-&=\underset{n\rightarrow \infty }{\lim }\left( \frac{8}{n^{2}}\left( \frac{n^{2}}{2}+\frac{n}{2}\right) +\frac{2}{n}\cdot n\right) \\
-&=\underset{n\rightarrow \infty }{\lim }\left( 4+\frac{4}{n}+2\right) =6
+&=\lim_{n\to\infty}\left( \frac{8}{n^{2}}\left( \frac{n^{2}}{2}+\frac{n}{2}\right) +\frac{2}{n}\cdot n\right) \\
+&=\lim_{n\to\infty}\left( 4+\frac{4}{n}+2\right) =6
 \end{aligned}
 \end{gather*}
 
@@ -1156,16 +1156,16 @@ f(x_{k})\Delta x=\frac{192k^{2}}{n^{3}}-\frac{208k}{n^{2}}+\frac{68}{n}
 \]
 y, con ello,
 \begin{align*}
-&\int_{-2}^{2}(3x^{2}-x+3)\,dx=\underset{n\rightarrow \infty }{\lim }\sum_{k=1}^{n}f(x_{k})\Delta x_{k} \\
-&=\underset{n\rightarrow \infty }{\lim }\sum_{k=1}^{n}
+&\int_{-2}^{2}(3x^{2}-x+3)\,dx=\lim_{n\to\infty}\sum_{k=1}^{n}f(x_{k})\Delta x_{k} \\
+&=\lim_{n\to\infty}\sum_{k=1}^{n}
 \left( \frac{192k^{2}}{n^{3}}-\frac{208k}{n^{2}}+\frac{68}{n}\right) \\&
-=\underset{n\rightarrow \infty }{\lim }\left( \frac{192}{n^{3}}%
+=\lim_{n\to\infty}\left( \frac{192}{n^{3}}%
 \sum\limits_{k=1}^{n}k^{2}-\frac{208}{n^{2}}\sum\limits_{k=1}^{n}k+\frac{68%
 }{n}\sum\limits_{k=1}^{n}1\right) \\
-&=\underset{n\rightarrow \infty }{\lim }\left( \frac{192}{n^{3}}\left( \frac{%
+&=\lim_{n\to\infty}\left( \frac{192}{n^{3}}\left( \frac{%
 n^{3}}{3}+\frac{n^{2}}{2}+\frac{n}{6}\right) -\frac{208}{n^{2}}\left( \frac{%
 n^{2}}{2}+\frac{n}{2}\right) +\frac{68}{n}\cdot n\right) \\
-&=\underset{n\rightarrow \infty }{\lim }\left( \frac{192}{3}+\frac{192}{2n}+%
+&=\lim_{n\to\infty}\left( \frac{192}{3}+\frac{192}{2n}+%
 \frac{192}{6n^{2}}-104-\frac{104}{n}+68\right) \\
 &=64-104+68=28
 \end{align*}
@@ -1182,8 +1182,8 @@ obtienen las siguientes fórmulas:}
 \begin{parrafonumerado}
 \item Integral de la función constante, $f(x)=c$:
 \begin{align}\label{c}
-\int_{a}^{b}cdx&=\underset{n\rightarrow \infty }{\lim }\sum\limits_{k=1}^{n}c\frac{b-a}{n}=\underset{n\rightarrow \infty }{\lim }\frac{b-a}{n}\sum\limits_{k=1}^{n}c=\underset{n\rightarrow \infty }{\lim }\left( \frac{b-a}{n}\right) cn\notag\\
-&=\underset{n\rightarrow \infty }{\lim }c(b-a)=c(b-a)
+\int_{a}^{b}cdx&=\lim_{n\to\infty}\sum\limits_{k=1}^{n}c\frac{b-a}{n}=\lim_{n\to\infty}\frac{b-a}{n}\sum\limits_{k=1}^{n}c=\lim_{n\to\infty}\left( \frac{b-a}{n}\right) cn\notag\\
+&=\lim_{n\to\infty}c(b-a)=c(b-a)
 \end{align}
 entonces
 \begin{empheq}[box=\fbox]{align}
@@ -1192,12 +1192,12 @@ entonces
 
 \item Integral de la función identidad, $f(x)=x$:
 \begin{align*}
-\int_{a}^{b}xdx &= \underset{n\rightarrow \infty }{\lim }\sum\limits_{k=1}^{n}\left( a+k\frac{b-a}{n}\right) \frac{b-a}{n} \\
-&=\underset{n\rightarrow \infty }{\lim }\sum\limits_{k=1}^{n}\left( a\left( \frac{b-a}{n}\right) +k\left( \frac{b-a}{n}\right) ^{2} \right) \\
-&=\underset{n\rightarrow \infty }{\lim }\left( a\left( b-a\right) + \left( \frac{b-a}{n}\right)^{2}\sum\limits_{k=1}^{n}k \right) \\
-&=\underset{n\rightarrow \infty }{\lim }\left( a\left( b-a\right) + \left( \frac{b-a}{n}\right) ^{2}\left( \frac{n^{2}}{2}+\frac{n}{2}\right) \right) \\
-&=\underset{n\rightarrow \infty }{\lim }\left( a\left( b-a\right) + \frac{\left( b-a\right) ^{2}}{n^{2}}\left( \frac{n^{2}}{2}+\frac{n}{2}\right) \right) \\
-&=\underset{n\rightarrow \infty }{\lim }\left( a\left( b-a\right) + \frac{\left( b-a\right) ^{2}}{2} + \frac{\left( b-a\right) ^{2}}{2n} \right) \\
+\int_{a}^{b}xdx &= \lim_{n\to\infty}\sum\limits_{k=1}^{n}\left( a+k\frac{b-a}{n}\right) \frac{b-a}{n} \\
+&=\lim_{n\to\infty}\sum\limits_{k=1}^{n}\left( a\left( \frac{b-a}{n}\right) +k\left( \frac{b-a}{n}\right) ^{2} \right) \\
+&=\lim_{n\to\infty}\left( a\left( b-a\right) + \left( \frac{b-a}{n}\right)^{2}\sum\limits_{k=1}^{n}k \right) \\
+&=\lim_{n\to\infty}\left( a\left( b-a\right) + \left( \frac{b-a}{n}\right) ^{2}\left( \frac{n^{2}}{2}+\frac{n}{2}\right) \right) \\
+&=\lim_{n\to\infty}\left( a\left( b-a\right) + \frac{\left( b-a\right) ^{2}}{n^{2}}\left( \frac{n^{2}}{2}+\frac{n}{2}\right) \right) \\
+&=\lim_{n\to\infty}\left( a\left( b-a\right) + \frac{\left( b-a\right) ^{2}}{2} + \frac{\left( b-a\right) ^{2}}{2n} \right) \\
 &= a\left( b-a\right) + \frac{\left( b-a\right) ^{2}}{2} = \frac{2ab-2a^{2}+b^{2}-2ab+a^{2}}{2} = \frac{b^{2}-a^{2}}{2}
 \end{align*}
 entonces
@@ -1210,27 +1210,27 @@ entonces
 \begin{aligned}
 &\int_{a}^{b}x^{2}dx=\lim_{n\to \infty}\sum_{k=1}^{n}\left( a+k\frac{b-a}{n}%
 \right) ^{2}\frac{\left( b-a\right) }{n} \\
-&=\underset{n\rightarrow \infty }{\lim }\sum\limits_{k=1}^{n}\left(
+&=\lim_{n\to\infty}\sum\limits_{k=1}^{n}\left(
 a^{2}+2ak\frac{b-a}{n}+\left( k\frac{b-a}{n}\right) ^{2}\right) \left( \frac{%
 b-a}{n}\right) \\
-&=\underset{n\rightarrow \infty }{\lim }\sum\limits_{k=1}^{n}\left(
+&=\lim_{n\to\infty}\sum\limits_{k=1}^{n}\left(
 a^{2}+2ak\frac{b-a}{n}+k^{2}\frac{(b-a)^{2}}{n^{2}}\right) \left( \frac{b-a}{%
 n}\right) \\
-&=\underset{n\rightarrow \infty }{\lim }\frac{b-a}{n}\sum\limits_{k=1}^{n}%
+&=\lim_{n\to\infty}\frac{b-a}{n}\sum\limits_{k=1}^{n}%
 \left( a^{2}+2ak\frac{b-a}{n}+k^{2}\frac{(b-a)^{2}}{n^{2}}\right) \\
-&=\underset{n\rightarrow \infty }{\lim }\frac{b-a}{n}\left[
+&=\lim_{n\to\infty}\frac{b-a}{n}\left[
 \sum\limits_{k=1}^{n}a^{2}+2a\frac{b-a}{n}\sum\limits_{k=1}^{n}k+\frac{%
 (b-a)^{2}}{n^{2}}\sum\limits_{k=1}^{n}k^{2}\right] \\
-&=\underset{n\rightarrow \infty }{\lim }\frac{b-a}{n}\left[ a^{2}n+2a\frac{%
+&=\lim_{n\to\infty}\frac{b-a}{n}\left[ a^{2}n+2a\frac{%
 b-a}{n}\left( \frac{n^{2}}{2}+\frac{n}{2}\right) +\frac{(b-a)^{2}}{n^{2}}%
 \left( \frac{n^{3}}{3}+\frac{n^{2}}{2}+\frac{n}{6}\right) \right]\\
-&=\underset{n\rightarrow \infty }{\lim }\frac{b-a}{n}\left[
+&=\lim_{n\to\infty}\frac{b-a}{n}\left[
 a^{2}n+a\left(
 b-a\right) n+a\left( b-a\right) +\frac{(b-a)^{2}n}{3}+\frac{(b-a)^{2}}{2}+\frac{(b-a)^{2}}{6n}\right] \\
 %\end{align*}
 %
 %\begin{align*}
-&=\underset{n\rightarrow \infty }{\lim }\left[ \left( b-a\right)
+&=\lim_{n\to\infty}\left[ \left( b-a\right)
 a^{2}+a\left( b-a\right) ^{2}+\frac{a\left( b-a\right) ^{2}}{n}+\frac{%
 (b-a)^{3}}{3}+\frac{(b-a)^{3}}{2n}+\frac{(b-a)^{3}}{6n^{2}}\right] \\
 %\end{align*}
@@ -1250,12 +1250,15 @@ es decir,
 \end{empheq}
 
 \item  Integral de la función $f(x)=x^3$:
-\item
 \begin{gather*}
 \begin{aligned}
 \int_{a}^{b}x^{3}dx &= \lim_{n\to\infty} \sum_{k=1}^{n} \left( a+k\frac{b-a}{n}\right)^{3} \frac{(b-a)}{n} \\
-&= \lim_{n\to\infty} \sum_{k=1}^{n} \left( a^{3} + 3a^{2}k\frac{b-a}{n} + 3a\left( k\frac{b-a}{n} \right)^{2} + \left( k\frac{b-a}{n} \right)^{3} \right) \left( \frac{b-a}{n} \right) \\
-&= \lim_{n\to\infty} \sum_{k=1}^{n} \left( a^{3}\frac{b-a}{n} + 3a^{2}k\left( \frac{b-a}{n} \right)^{2} + 3ak^{2}\left( \frac{b-a}{n} \right)^{3} + k^{3}\left( \frac{b-a}{n} \right)^{4} \right) \\
+&= \lim_{n\to\infty} \sum_{k=1}^{n} \left( a^{3} + 3a^{2}k\frac{b-a}{n} + 3a\left( k\frac{b-a}{n} \right)^{2} + \left( k\frac{b-a}{n} \right)^{3} \right) \left( \frac{b-a}{n} \right)
+\end{aligned}
+\end{gather*}
+\begin{gather*}
+\begin{aligned}
+&= \lim_{n\to\infty} \sum_{k=1}^{n} \left( a^{3}\frac{b-a}{n} + 3a^{2}k\left( \frac{b-a}{n} \right)^{2} + 3ak^{2}\left( \frac{b-a}{n} \right)^{3} + k^{3}\left( \frac{b-a}{n} \right)^{4} \right)\\
 &= \lim_{n\to\infty} \left[ a^{3}\left( \frac{b-a}{n} \right) n + 3a^{2}\left( \frac{b-a}{n} \right)^{2} \left( \frac{n^{2}}{2}+\frac{n}{2} \right) \right. \\
 &\quad \left. + 3a\left( \frac{n^{3}}{3}+\frac{n^{2}}{2}+\frac{n}{6} \right) \left( \frac{b-a}{n} \right)^{3} + \left( \frac{n^{4}}{4}+\frac{n^{3}}{2} + \frac{n^{2}}{4} \right) \left( \frac{b-a}{n} \right)^{4} \right] \\
 &= a^{3}(b-a) + \lim_{n\to\infty} \left[ 3a^{2}\frac{(b-a)^{2}}{n} \left( \frac{n}{2}+\frac{1}{2} \right) + 3a\left( \frac{n^{2}}{3}+\frac{n}{2}+\frac{1}{6} \right) \frac{(b-a)^{3}}{n^{2}} \right. \\
@@ -1271,19 +1274,19 @@ es decir,
 
 \item  Tomemos ahora $m$ un entero positivo y calculemos la integral de $f\left( x\right) =x^{m}$. Si inicialmente tomamos la integral $\int_{0}^{b}x^{m}dx$, es decir, con límite inferior igual a $0$, tenemos
 \begin{equation*}
-\int_{0}^{b}x^{m}dx=\underset{n\rightarrow \infty }{\lim }%
+\int_{0}^{b}x^{m}dx=\lim_{n\to\infty}%
 \sum\limits_{k=1}^{n}\left( k\frac{b}{n}\right) ^{m}\frac{b}{n}
-=\underset{n\rightarrow \infty }{\lim }\left( \frac{b}{n}\right)
+=\lim_{n\to\infty}\left( \frac{b}{n}\right)
 ^{m+1}\sum\limits_{k=1}^{n}k^{m}
 \end{equation*}
 y por el teorema \ref{SumPotenDeK} se tiene que
 \begin{equation*}
-=\underset{n\rightarrow \infty }{\lim }\left( \frac{b}{n}\right)
+=\lim_{n\to\infty}\left( \frac{b}{n}\right)
 ^{m+1}\left( \frac{n^{m+1}}{m+1}+f\left( n\right)\right)
 \end{equation*}
 donde $f\left( n\right)$ es un polinomio de grado $m$ en la variable $n$.
 \begin{equation*}
-=\underset{n\rightarrow \infty }{\lim }b^{m+1}\left( \frac{1}{m+1}+\frac{f\left( n\right) }{n^{m+1}}\right)=\frac{b^{m+1}}{m+1}
+=\lim_{n\to\infty}b^{m+1}\left( \frac{1}{m+1}+\frac{f\left( n\right) }{n^{m+1}}\right)=\frac{b^{m+1}}{m+1}
 \end{equation*}
 
 Por otro lado,
@@ -1298,17 +1301,16 @@ con lo cual entonces,
 \end{empheq}
 
 \item Tomemos ahora algunas funciones trigonométricas. Iniciemos con $\cos x$,
-\begin{equation*}
-\int_{0}^{b}\cos x\,dx=\underset{n\rightarrow \infty }{\lim }\sum\limits_{k=1}^{n}\cos \left( k\frac{b}{n}\right) \frac{b}{n}
-=\underset{n\rightarrow \infty }{\lim }\frac{b}{n}\sum\limits_{k=1}^{n}
+\begin{align*}
+\int_{0}^{b}\cos x\,dx&=\lim_{n\to\infty}\sum\limits_{k=1}^{n}\cos \left( k\frac{b}{n}\right) \frac{b}{n} \\
+&=\lim_{n\to\infty}\frac{b}{n}\sum\limits_{k=1}^{n}
 \cos \left( k\frac{b}{n}\right)
-\end{equation*}
+\end{align*}
 aplicando el teorema \ref{SumSenoCoseno}, $a$ con $x=\frac{b}{n}$, resulta
 \begin{equation*}
-=\underset{n\rightarrow \infty }{\lim }\frac{b}{n}\frac{\sen\left( \left( n+\frac{1}{2}\right) \frac{b}{n}\right) -\sen\left( \frac{1}{2}\frac{b}{n}%
+=\lim_{n\to\infty}\frac{b}{n}\frac{\sen\left( \left( n+\frac{1}{2}\right) \frac{b}{n}\right) -\sen\left( \frac{1}{2}\frac{b}{n}%
 \right) }{2\sen\left( \frac{1}{2}\frac{b}{n}\right) }
 \end{equation*}
-
 sustituyendo $u=\frac{b}{n}$, que tiende a cero cuando $n\rightarrow \infty$,
 \begin{align*}
 &=\underset{u\rightarrow 0}{\lim }u\frac{\sen\left( b+\frac{1}{2}u\right)
@@ -1329,10 +1331,10 @@ y así,
 
 \item De manera similar, calculemos la integral de $\sen x$:
 \begin{align*}
-&\int_{0}^{b}\sen x\, dx=\underset{n\rightarrow \infty }{\lim }\sum\limits_{k=1}^{n}\sen \left( k\frac{b}{n}\right) \frac{b}{n}
-=\underset{n\rightarrow \infty }{\lim }\frac{b}{n}\sum\limits_{k=1}^{n}
+&\int_{0}^{b}\sen x\, dx=\lim_{n\to\infty}\sum\limits_{k=1}^{n}\sen \left( k\frac{b}{n}\right) \frac{b}{n}
+=\lim_{n\to\infty}\frac{b}{n}\sum\limits_{k=1}^{n}
 \sen \left( k\frac{b}{n}\right)\\
-&=\underset{n\rightarrow \infty }{\lim }\frac{b}{n}\frac{\cos \left( \frac{1}{2}\frac{b}{n}\right) -\cos \left( \left( n+\frac{1}{2}\right) \frac{b}{n}\right) }{2\sen\left( \frac{1}{2}\frac{b}{n}\right)}\\
+&=\lim_{n\to\infty}\frac{b}{n}\frac{\cos \left( \frac{1}{2}\frac{b}{n}\right) -\cos \left( \left( n+\frac{1}{2}\right) \frac{b}{n}\right) }{2\sen\left( \frac{1}{2}\frac{b}{n}\right)}\\
 &=\underset{u\rightarrow 0}{\lim }u\frac{\cos \left( \frac{1}{2}u\right)
 -\cos \left( b+\frac{1}{2}u\right) }{2\sen\left( \frac{1}{2}u\right) }\\
 &=\underset{u\rightarrow 0}{\lim }\frac{\cos \left( \frac{1}{2}u\right)
@@ -1342,13 +1344,15 @@ y así,
 \end{align*}
 
 Por otro lado,
-\begin{align*}
+\begin{gather*}
+\begin{aligned}
 \int_{a}^{b}\sen xdx&=\int_{a}^{0}\sen xdx+\int_{0}^{b}\sen
 xdx%\\&
 =\int_{0}^{b}\sen xdx-\int_{0}^{a}\sen xdx\\
 &=1-\cos b-\left( 1-\cos a\right)%\\&
 =\cos a-\cos b
-\end{align*}
+\end{aligned}
+\end{gather*}
 y, en conclusión,
 \begin{empheq}[box=\fbox]{equation}
 \int_{a}^{b}\sen x\,dx=\cos a-\cos b\label{sen}
@@ -1356,13 +1360,13 @@ y, en conclusión,
 
 \item { Para finalizar, tomemos una función exponencial con base $b$, es decir, $f(x)=b^x$, y calculemos la \textit{$\int_\alpha^\beta b^x$:}}
 \begin{align*}
-\int_{0}^{\beta}b^{x}dx&=\underset{n\rightarrow \infty }{\lim }\sum\limits_{k=1}^{n}b^{\left( k \beta/n\right) }\frac{\beta}{n}
-=\underset{n\rightarrow \infty }{\lim }\frac{\beta}{n}\sum\limits_{k=1}^{n}%
+\int_{0}^{\beta}b^{x}dx&=\lim_{n\to\infty}\sum\limits_{k=1}^{n}b^{\left( k \beta/n\right) }\frac{\beta}{n}
+=\lim_{n\to\infty}\frac{\beta}{n}\sum\limits_{k=1}^{n}%
 \left( b^{\beta/n}\right) ^{k}\\
 &\quad \text{y aplicando la fórmula de la suma geométrica,}\\
-&=\underset{n\rightarrow \infty }{\lim }\frac{\beta}{n}\frac{\left( b^{\beta/n}\right)^{n+1}-b^{\beta/n}}{b^{\beta/n}-1}
-=\underset{n\rightarrow \infty }{\lim }\frac{\frac{\beta}{n}\left( b^{\beta}b^{\beta/n}-b^{\beta/n}\right)}{b^{\beta/n}-1}\\
-&=\underset{n\rightarrow \infty }{\lim }\frac{\frac{\beta}{n}\left( \left(
+&=\lim_{n\to\infty}\frac{\beta}{n}\frac{\left( b^{\beta/n}\right)^{n+1}-b^{\beta/n}}{b^{\beta/n}-1}
+=\lim_{n\to\infty}\frac{\frac{\beta}{n}\left( b^{\beta}b^{\beta/n}-b^{\beta/n}\right)}{b^{\beta/n}-1}\\
+&=\lim_{n\to\infty}\frac{\frac{\beta}{n}\left( \left(
 b^{\beta}-1\right) b^{\beta/n}\right) }{b^{\beta/n}-1}
 \end{align*}
 haciendo $u=\frac{\beta}{n}$, que tiende a cero cuando $n\rightarrow \infty$,
