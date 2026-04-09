@@ -1,6 +1,6 @@
 \chapter{Integral definida}\label{definida}
 
-El primer capítulo comienza con la notación de sumatoria, las propiedades del operador de suma y el cálculo de algunas fórmulas para sumas. A continuación se estudian las particiones de un intervalo para llegar al concepto de integral definida, donde se presentan sus propiedades, también se evalúan algunas integrales definidas usando la definición y empleando propiedades de áreas, en particular, para calcular integrales de funciones inversas.
+El primer capítulo comienza con la notación de sumatoria, las propiedades del operador de suma y el cálculo de algunas fórmulas para sumas. A continuación se estudian las particiones de un intervalo para llegar al concepto de integral definida, donde se presentan sus propiedades, y también se evalúan algunas integrales definidas usando la definición y empleando propiedades de áreas, en particular, para calcular integrales de funciones inversas.
 
 Muchas de las aplicaciones de la integral definida se usan en la tecnología y la ingeniería, y se explicarán en un capítulo posterior.
 
@@ -8,15 +8,15 @@ Muchas de las aplicaciones de la integral definida se usan en la tecnología y l
 
 Dado un conjunto de números reales $a_{1},a_{2},\ldots ,a_{n},$ con $n$ un número natural, denotamos la suma
 \[
-a_{1}+a_{2}+\ldots +a_{n}
+  a_{1}+a_{2}+\ldots +a_{n}
 \]
 como
 \[
-\sum_{k=1}^n a_k
+  \sum_{k=1}^n a_k
 \]
 es decir,
 \[
-a_{1}+a_{2}+\ldots +a_{n}=\sum_{k=1}^n a_k
+  a_{1}+a_{2}+\ldots +a_{n}=\sum_{k=1}^n a_k
 \]
 
 El símbolo $\sum $ denota, entonces, una suma o sumatoria. La variable $k$ (que usualmente se conoce como el \textit{contador}), recorre el conjunto de enteros positivos menores o iguales que $n$.
@@ -24,505 +24,434 @@ El símbolo $\sum $ denota, entonces, una suma o sumatoria. La variable $k$ (que
 En la expresión anterior, $k$ va desde $1$ hasta $n$. El límite inferior es $1$ y el límite superior es $n$.
 
 \begin{ejemplo}
-\textit Si vamos a sumar los números del $1$ al $12$, es decir,
-\[
-1+2+3+4+5+6+7+8+9+10+11+12
-\]
-simplemente escribimos
-\[
-\sum_{k=1}^{12} k
-\]
-Estamos allí diciendo que
-\[
-\sum_{k=1}^{12} k=\underbrace{1}_{\text{si }k=1}+\underbrace{2}_{\text{si }k=2}+\underbrace{3}_{\text{si }k=3}+\ldots+\underbrace{11}_{\text{si }k=11}+\underbrace{12}_{\text{si }k=12}
-\]
+  \textit Si vamos a sumar los números del $1$ al $12$, es decir,
+  \[
+    1+2+3+4+5+6+7+8+9+10+11+12
+  \]
+  simplemente escribimos
+  \[
+    \sum_{k=1}^{12} k
+  \]
+  Estamos allí diciendo que
+  \[
+    \sum_{k=1}^{12} k=\underbrace{1}_{\text{si }k=1}+\underbrace{2}_{\text{si }k=2}+\underbrace{3}_{\text{si }k=3}+\ldots+\underbrace{11}_{\text{si }k=11}+\underbrace{12}_{\text{si }k=12}
+  \]
 \end{ejemplo}
 
 Además, el contador no necesariamente debe iniciar en $1$ y puede tomar nombres diferentes a $k$. El límite inferior de la sumatoria depende de la expresión que vaya a sumarse. A continuación, se muestran otros ejemplos.
 
-\begin{ejemplo}
-\begin{enumerate}[leftmargin=1.2em, itemindent=0pt, labelwidth=\labelwidth, labelsep=0.5em,]
-\item $\displaystyle{\sum_{k=1}^3\frac{1}{k}}=
- \underset{k=1}{\underbrace{\frac{1}{1}}}+
- \underset{k=2}{\underbrace{\frac{1}{2}}}+
- \underset{k=3}{\underbrace{\frac{1}{3}}}=\frac{11}{6}$
+\begin{ejemplo}\leavevmode
+  \begin{parrafonumerado}
+  \item $\displaystyle{\sum_{k=1}^3\frac{1}{k}}=
+    \underset{k=1}{\underbrace{\frac{1}{1}}}+
+    \underset{k=2}{\underbrace{\frac{1}{2}}}+
+    \underset{k=3}{\underbrace{\frac{1}{3}}}=\frac{11}{6}$
 
-\item $\displaystyle{\sum_{i=1}^4 }\left( 2^{i}-2^{i-1}\right) =\underset{i=1}{\underbrace{2^{1}-2^{0}}}+
- \underset{i=2}{\underbrace{2^{2}-2^{1}}}+
- \underset{i=3}{\underbrace{2^{3}-2^{2}}}+
- \underset{i=4}{\underbrace{2^{4}-2^{3}}}=2^{4}-2^{0}=15$
+  \item $\displaystyle{\sum_{i=1}^4 }\left( 2^{i}-2^{i-1}\right) =\underset{i=1}{\underbrace{2^{1}-2^{0}}}+
+    \underset{i=2}{\underbrace{2^{2}-2^{1}}}+
+    \underset{i=3}{\underbrace{2^{3}-2^{2}}}+
+    \underset{i=4}{\underbrace{2^{4}-2^{3}}}=2^{4}-2^{0}=15$
 
-\item $\displaystyle{\sum_{k=2}^5 }\left( \left( k+1\right)
-^{3}-k^{3}\right) =\underset{k=2}{\underbrace{3^{3}-2^{3}}}+
-\underset{k=3}{\underbrace{4^{3}-3^{3}}}+
-\underset{k=4}{\underbrace{5^{3}-4^{3}}}+
-\underset{k=5}{\underbrace{6^{3}-5^{3}}}=6^{3}-2^{3}$
-\end{enumerate}
+  \item $\displaystyle{\sum_{k=2}^5 }\left( \left( k+1\right)
+    ^{3}-k^{3}\right) =\underset{k=2}{\underbrace{3^{3}-2^{3}}}+
+    \underset{k=3}{\underbrace{4^{3}-3^{3}}}+
+    \underset{k=4}{\underbrace{5^{3}-4^{3}}}+
+    \underset{k=5}{\underbrace{6^{3}-5^{3}}}=6^{3}-2^{3}$
+  \end{parrafonumerado}
 \end{ejemplo}
 
 Para escribir una suma en notación compacta, es decir, como sumatoria, debe identificarse la expresión que generan los números que se están sumando.
 
 \begin{ejemplo}
-\textit Al tener la suma
-\[
-3+7+11+15+19+23+27
-\]
+  Al tener la suma
+  \[
+    3+7+11+15+19+23+27
+  \]
 \end{ejemplo}
 los sumandos cumplen la expresión $3+4k$, para $k$ desde $0$ hasta $6$, así que
 \[
-3+7+11+15+19+23+27=\overset{6}{\underset{k=0}{\sum }}\left( 3+4k\right).
+  3+7+11+15+19+23+27=\overset{6}{\underset{k=0}{\sum }}\left( 3+4k\right)
 \]
 
 \begin{ejemplo}
-Si ahora la suma es
-\[
-1+(-4)+9+(-16)+25+(-36)+49=1-4+9-16+25-36+49
-\]
+  Si ahora la suma es
+  \[
+    1+(-4)+9+(-16)+25+(-36)+49=1-4+9-16+25-36+49
+  \]
 \end{ejemplo}
 donde los signos cambian de un término al siguiente, entonces debemos incluir en la fórmula la expresión $(-1)^k$ o $(-1)^{k+1}$. Además, los números que se suman son cuadrados perfectos, es decir, se tienen con la fórmula $k^{2}$; entonces,
 \[
-1-4+9-16+25-36+49=\overset{7}{\underset{k=1}{\sum }}\left( -1\right)^{k+1}k^{2}
+  1-4+9-16+25-36+49=\overset{7}{\underset{k=1}{\sum }}\left( -1\right)^{k+1}k^{2}
 \]
 
 \begin{ejemplo}
-Si tomamos
-\[
-1+\frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\ldots +\frac{1}{4096}
-\]
+  Si tomamos
+  \[
+    1+\frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\ldots +\frac{1}{4096}
+  \]
 \end{ejemplo}
 
 los términos de la suma están dados por $\frac{1}{2^{k}}$. El límite superior se tiene al resolver $\frac{1}{2^{k}}=\frac{1}{4096}$, es decir, {\small $2^{k}=4096$}. Tomando logaritmo en base $2$, se tiene que {\small $k=\log _{2}4096=12$}. Entonces
 
 \[
-1+\frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\ldots +\frac{1}{4096}=\overset{12}{
-\underset{k=0}{\sum }}\frac{1}{2^{k}}.
+  1+\frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\ldots +\frac{1}{4096}=\overset{12}{
+  \underset{k=0}{\sum }}\frac{1}{2^{k}}
 \]
 
 \textbf{Propiedades de la sumatoria}:\label{FormSumas} a continuación, se presentan las propiedades más comunes que cumplen las sumatorias:
 
 \begin{prop}
-Sean $a_{1},\ a_{2},\ldots,a_{n}$, $b_{1},\ b_{2},\ldots,b_{n}$, $c$ y $d$ números reales. La sumatoria satisface las siguientes propiedades:
+  Sean $a_{1},\ a_{2},\ldots,a_{n}$, $b_{1},\ b_{2},\ldots,b_{n}$, $c$ y $d$ números reales. La sumatoria satisface las siguientes propiedades:
 \end{prop}
-\begin{enumerate}[leftmargin=1.2em, itemindent=0pt,       labelwidth=\labelwidth,labelsep=0.5em,]
+\begin{parrafonumerado}
 
 \item Suma de una constante:
-\[
-\overset{n}{\underset{k=1}{\sum }}c=cn
-\]
+  \[
+    \overset{n}{\underset{k=1}{\sum }}c=cn
+  \]
 
 \item Propiedad homogénea:
-\[
-\overset{n}{\underset{k=1}{\sum }}ca_{k}=c
-\overset{n}{\underset{k=1}{\sum }}a_{k}
-\]
+  \[
+    \overset{n}{\underset{k=1}{\sum }}ca_{k}=c
+    \overset{n}{\underset{k=1}{\sum }}a_{k}
+  \]
 
 \item Propiedad aditiva:
-\[
-\overset{n}{\underset{k=1}{\sum }}
-\left( a_{k}+b_{k}\right) =\overset{n}{\underset{k=1}{\sum }}a_{k}+
-\overset{n}{\underset{k=1}{\sum }}b_{k}
-\]
+  \[
+    \overset{n}{\underset{k=1}{\sum }}
+    \left( a_{k}+b_{k}\right) =\overset{n}{\underset{k=1}{\sum }}a_{k}+
+    \overset{n}{\underset{k=1}{\sum }}b_{k}
+  \]
 
 \item Propiedad de la resta:
-\[
-\overset{n}{\underset{k=1}{\sum }}%
-\left( a_{k}-b_{k}\right) =\overset{n}{\underset{k=1}{\sum }}a_{k}-%
-\overset{n}{\underset{k=1}{\sum }}b_{k}
-\]
+  \[
+    \overset{n}{\underset{k=1}{\sum }}%
+    \left( a_{k}-b_{k}\right) =\overset{n}{\underset{k=1}{\sum }}a_{k}-%
+    \overset{n}{\underset{k=1}{\sum }}b_{k}
+  \]
 
 \item Propiedad de linealidad:
-\[
-\overset{n}{\underset{k=1}{\sum }}%
-\left( ca_{k}+db_{k}\right) =c\overset{n}{\underset{k=1}{\sum }}a_{k}+d%
-\overset{n}{\underset{k=1}{\sum }}b_{k}
-\]
+  \[
+    \overset{n}{\underset{k=1}{\sum }}%
+    \left( ca_{k}+db_{k}\right) =c\overset{n}{\underset{k=1}{\sum }}a_{k}+d%
+    \overset{n}{\underset{k=1}{\sum }}b_{k}
+  \]
 
 \item Propiedad telescópica:
-\[
-\overset{n}{\underset{k=m}{\sum }}\left(
-a_{k}-a_{k-1}\right) =a_{n}-a_{m-1},\text{ para } n\geq m
-\]
-\end{enumerate}
+  \[
+    \overset{n}{\underset{k=m}{\sum }}\left(
+    a_{k}-a_{k-1}\right) =a_{n}-a_{m-1},\text{ para } n\geq m
+  \]
+\end{parrafonumerado}
 
-%\begin{claim}
-A continuación, se presenta una idea de las demostraciones de estas propie- \\ dades. 
-Sus demostraciones formales se realizan usando inducción matemá- \\ tica.
+\textls[-15]{A continuación, se presenta una idea de las demostraciones de estas propiedades.
+Sus demostraciones formales se realizan usando inducción matemática.}
 
-
-
-\begin{enumerate}[leftmargin=1.2em, itemindent=0pt,       labelwidth=\labelwidth, labelsep=0.5em,]
+\begin{parrafonumerado}
 
 \item $\overset{n}{\underset{k=1}{\sum }}c=\underset{k=1}{\underbrace{c}}+%
-\underset{k=2}{\underbrace{c}}+\ldots +\underset{k=n}{\underbrace{c}}=cn$
-
+  \underset{k=2}{\underbrace{c}}+\ldots +\underset{k=n}{\underbrace{c}}=cn$
 
 \item Al usar la propiedad distributiva y usar $n$ veces el mismo término, se tiene
-\begin{align*}
-c\overset{n}{\underset{k=1}{\sum }}a_{k}&=c\left( a_{1}+a_{2}+\ldots
-+a_{n}\right)%\\
-%&
-=ca_{1}+ca_{2}+\ldots +ca_{n}=\overset{n}{\underset{k=1}{\sum }}ca_{k}
-\end{align*}
+  \begin{align*}
+    c\overset{n}{\underset{k=1}{\sum }}a_{k}&=c\left( a_{1}+a_{2}+\ldots
+    +a_{n}\right)%\\
+    %&
+    =ca_{1}+ca_{2}+\ldots +ca_{n}=\overset{n}{\underset{k=1}{\sum }}ca_{k}
+  \end{align*}
 
 \item Para este caso se usan las propiedades asociativa y conmutativa de números reales, y se tiene
-{\footnotesize
-\begin{align*}
-\overset{n}{\underset{k=1}{\sum }}\left( a_{k}+b_{k}\right)
-&=\left(a_{1}+b_{1}\right) +\left( a_{2}+b_{2}\right) +\ldots +\left(
-a_{n}+b_{n}\right) \\
-&=\left( a_{1}+a_{2}+\ldots +a_{n}\right) +\left(
-b_{1}+b_{2}+\ldots +b_{n}\right)=\overset{n}{\underset{k=1}{\sum }}a_{k}+\overset{n}{\underset{k=1}{\sum }}b_{k}
-\end{align*}
-}
+  \begin{align*}
+    \overset{n}{\underset{k=1}{\sum }}\left( a_{k}+b_{k}\right)
+    &=\left(a_{1}+b_{1}\right) +\left( a_{2}+b_{2}\right) +\ldots +\left(
+    a_{n}+b_{n}\right) \\
+    &=\left( a_{1}+a_{2}+\ldots +a_{n}\right) +\left(
+    b_{1}+b_{2}+\ldots +b_{n}\right)\\
+    &=\overset{n}{\underset{k=1}{\sum }}a_{k}+\overset{n}{\underset{k=1}{\sum }}b_{k}
+  \end{align*}
 
 \item Al manipular las expresiones se tiene
-{\footnotesize
-\begin{align*}
-\overset{n}{\underset{k=1}{\sum }}\left( a_{k}-b_{k}\right) &=\overset{n}{ \underset{k=1}{\sum }}\left( a_{k}+\left( -1\right) b_{k}\right)%\\
-%&
-=\overset{n}{\underset{k=1}{\sum }}a_{k}+\overset{n}{\underset{k=1}{\sum }}\left( -1\right) b_{k} \text{\quad \scriptsize (Propiedad homogénea)}\\
-&=\overset{n}{\underset{k=1}{\sum }}a_{k}+\left(-1\right) \overset{n}{\underset{k=1}{\sum }}b_{k}=\overset{n}{\underset{k=1}{\sum }}a_{k}-\overset{n}{\underset{k=1}{\sum }}b_{k}
-\end{align*}
-}
+  \begin{align*}
+    \overset{n}{\underset{k=1}{\sum }}\left( a_{k}-b_{k}\right) &=\overset{n}{ \underset{k=1}{\sum }}\left( a_{k}+\left( -1\right) b_{k}\right)\\
+    &=\overset{n}{\underset{k=1}{\sum }}a_{k}+\overset{n}{\underset{k=1}{\sum }}\left( -1\right) b_{k} \quad \text{\small (Propiedad homogénea)}\\
+    &=\overset{n}{\underset{k=1}{\sum }}a_{k}+\left(-1\right) \overset{n}{\underset{k=1}{\sum }}b_{k}\\
+    &=\overset{n}{\underset{k=1}{\sum }}a_{k}-\overset{n}{\underset{k=1}{\sum }}b_{k}
+  \end{align*}
 
 \item En este caso,
-\begin{align*}
-\overset{n}{\underset{k=1}{\sum }}\left( ca_{k}+db_{k}\right) &=\overset{n}{\underset{k=1}{\sum }}ca_{k}+\overset{n}{\underset{k=1}{\sum }}db_{k}=c\overset{n}{\underset{k=1}{\sum }}a_{k}+d\overset{n}{\underset{k=1}{\sum }}b_{k}
-\end{align*}
+  \begin{align*}
+    \overset{n}{\underset{k=1}{\sum }}\left( ca_{k}+db_{k}\right) &=\overset{n}{\underset{k=1}{\sum }}ca_{k}+\overset{n}{\underset{k=1}{\sum }}db_{k}=c\overset{n}{\underset{k=1}{\sum }}a_{k}+d\overset{n}{\underset{k=1}{\sum }}b_{k}
+  \end{align*}
 
 \item Para justificar esta propiedad, se descompone la sumatoria y se cancelan los términos semejantes:
-\begin{align*}
-&=\overset{n}{\underset{k=m}{\sum }}\left( a_{k}-a_{k-1}\right)\\
-&= a_{m}-a_{m-1}+ a_{m+1}-a_{m}+ a_{m+2}-a_{m+1} +\\
-&\qquad \ldots + a_{n-1}-a_{n-2} + a_{n}-a_{n-1}\\
-&=-a_{m-1}+ a_{m}-a_{m} + a_{m+1}-a_{m+1}+ a_{m+2}-a_{m+2} \\ 
-&\qquad \ldots + a_{n-1}-a_{n-1} +a_{n}\\ 
-&=a_{n}-a_{m-1}
-\end{align*}
-
-
-%Prueba por inducción sobre $n$.
-%
-%Sea $P\left( n\right) :\overset{n}{\underset{k=m}{\sum }}\left(
-%a_{k}-a_{k-1}\right) =a_{n}-a_{m-1}$ \ $\ n\geq m$
-%
-%i) $P\left( m\right) :\overset{m}{\underset{k=m}{\sum }}\left(
-%a_{k}-a_{k-1}\right) =a_{m}-a_{m-1}$ es una afirmación verdadera
-%
-%ii)$P\left( n\right) \Rightarrow P\left( n+1\right) $
-%
-%$\overset{n+1}{\underset{k=m}{\sum }}\left( a_{k}-a_{k-1}\right) =\overset{n}%
-%{\underset{k=m}{\sum }}\left( a_{k}-a_{k-1}\right) +\left(
-%a_{n+1}-a_{n}\right) $
-%
-%$\qquad \qquad \qquad \ \ \ =a_{n}-a_{m-1}+a_{n+1}-a_{n}$ \ \ por hipotesis
-%de inducción
-%
-%$\qquad \qquad \qquad \ \ \ =a_{n+1}-a_{m-1}.$
-
-\end{enumerate}
+  \begin{align*}
+    &=\overset{n}{\underset{k=m}{\sum }}\left( a_{k}-a_{k-1}\right)\\
+    &= a_{m}-a_{m-1}+ a_{m+1}-a_{m}+ a_{m+2}-a_{m+1} +\\
+    &\phantom{= a_{m}} \ldots + a_{n-1}-a_{n-2} + a_{n}-a_{n-1}\\
+    &=-a_{m-1}+ a_{m}-a_{m} + a_{m+1}-a_{m+1}+ a_{m+2}-a_{m+2} \\
+    &\phantom{= a_{m}} \ldots + a_{n-1}-a_{n-1} +a_{n}\\
+    &=a_{n}-a_{m-1}
+  \end{align*}
+\end{parrafonumerado}
 
 A continuación, se construyen algunas fórmulas para cierto tipo de sumas que se usarán más adelante.
 
 \begin{ejemplo}
-\textnormal {Supongamos que quieren sumarse los primeros $n$ números naturales. Por ejemplo, si se suman los naturales del $1$ al $7$, tenemos
-\[
-1+2+3+4+5+6+7=28
-\]
-o también
-\[
-1+2+3+4+5+6+7+8+9+10+11=66
-\]
-que puede hacerse} \textit{a mano}. \textnormal {Pero, si la suma incluye muchos más términos, hacerlo a mano ya no es tan cómodo. Veamos, a continuación, lo que puede hacerse:}
+  Supongamos que quieren sumarse los primeros $n$ números naturales. Por ejemplo, si se suman los naturales del $1$ al $7$, tenemos
+  \[1+2+3+4+5+6+7=28\]
+  o también
+  \[1+2+3+4+5+6+7+8+9+10+11=66\]
+  que puede hacerse a mano. Pero, si la suma incluye muchos más términos, hacerlo a mano ya no es tan cómodo. Veamos, a continuación, lo que puede hacerse:
 \end{ejemplo}
 
 Supongamos que quieren sumarse los $n$ primeros números naturales. Sea $S$ dicha suma:
 \[
-S=1+2+3+\ldots +n
+  S=1+2+3+\ldots +n
 \]
 Por ser la suma conmutativa, tenemos que $S$ también es igual a
 \[
-S=n+\left( n-1\right) +\left( n-2\right) +\ldots +2+1
+  S=n+\left( n-1\right) +\left( n-2\right) +\ldots +2+1
 \]
 Y al sumar las dos expresiones, tenemos
-
 \begin{align*}
-S&=1+2+3+\ldots +n \\
-S&=n+\left( n-1\right) +\left( n-2\right) +\ldots +2+1\\
-2S&=\left( n+1\right) +\left( n-1+2\right) +\left( n-2+3\right) +\cdots +\left(n+1\right)\\
-2S&=\left( n+1\right) +\left( n+1\right) +\left( n+1\right) +\cdots +\left(
-n+1\right)\\
-2S&=n\left( n+1\right)\\
-S&=\frac{n\left( n+1\right) }{2}
+  S&=1+2+3+\ldots +n \\
+  S&=n+\left( n-1\right) +\left( n-2\right) +\ldots +2+1\\
+  2S&=\left( n+1\right) +\left( n-1+2\right) +\left( n-2+3\right) +\cdots +\left(n+1\right)\\
+  2S&=\left( n+1\right) +\left( n+1\right) +\left( n+1\right) +\cdots +\left(
+  n+1\right)\\
+  2S&=n\left( n+1\right)\\
+  S&=\frac{n\left( n+1\right) }{2}
 \end{align*}
-Por tanto, la suma de los $n$ primeros números naturales es igual a {\footnotesize $\cfrac{n\left( n+1\right) }{2}$} o también a {\footnotesize $\cfrac{n^2}{2}+\cfrac{n}{2}$.} 
+Por tanto, la suma de los $n$ primeros números naturales es igual a $\frac{n\left( n+1\right) }{2}$ o también a $\frac{n^2}{2}+\frac{n}{2}$.
 
 En nuestro ejemplo de sumar los primeros $11$ números, pudimos simplemente hacer
-{\small
 \begin{align*}
-1+2+3+4+5+6+7+8+9+10+11&=\frac{n\left( n+1\right) }{2}\\
-&=\frac{11\left(11+1\right) }{2}\\
-&=11\times 6=66
+  1+2+3+4+5+6+7+8+9+10+11&=\frac{n\left( n+1\right) }{2}\\
+  &=\frac{11\left(11+1\right) }{2}\\
+  &=11\times 6=66
 \end{align*}
-}
-
-
-o también,
-
-{\footnotesize
+o también
 \begin{align*}
-\sum_{k=1}^{152} k&=1+2+3+\ldots+150+151+152=\frac{n\left( n+1\right) }{2}\\
-&=\frac{152\left(152+1\right)}{2}=76\times 153=11628
+  \sum_{k=1}^{152} k&=1+2+3+\ldots+150+151+152=\frac{n\left( n+1\right) }{2}\\
+  &=\frac{152\left(152+1\right)}{2}=76\times 153=11628
 \end{align*}
-}
-
 Veamos ahora qué pasa cuando sumamos los cuadrados de los primeros naturales.
 
 \begin{ejemplo}
-\textnormal {Supongamos que queremos calcular la suma}
-\[
-T=\sum_{k=1}^{n}k^{2}=1^{2}+2^{2}+3^{2}+\ldots +n^{2}
-\]
+  Supongamos que queremos calcular la suma
+  \[
+    T=\sum_{k=1}^{n}k^{2}=1^{2}+2^{2}+3^{2}+\ldots +n^{2}
+  \]
 \end{ejemplo}
 
 Para deducir la fórmula de esta suma, usaremos la expresión para $(a+b)^3$, es decir,
-\[
-(a+b)^3=a^3+3a^2b+3ab^2+b^3=a^3+b^3+3a^2b+3ab^2
-\]
+\[(a+b)^3=a^3+3a^2b+3ab^2+b^3=a^3+b^3+3a^2b+3ab^2\]
 entonces,
 \begin{align*}
-1^3&=(1+0)^3=1+0^3+3\cdot 0+3\cdot 0^2\\
-2^3&=(1+1)^3=1+1^3+3\cdot 1+3\cdot 1^2\\
-3^3&=(1+2)^3=1+2^3+3\cdot 2+3\cdot 2^2\\
-4^3&=(1+3)^3=1+3^3+3\cdot 3+3\cdot 3^2\\
-&\vdots \\
-(n+1)^3&=(1+n)^3=1+n^3+3\cdot n+3\cdot n^2\\
+  1^3&=(1+0)^3=1+0^3+3\cdot 0+3\cdot 0^2\\
+  2^3&=(1+1)^3=1+1^3+3\cdot 1+3\cdot 1^2\\
+  3^3&=(1+2)^3=1+2^3+3\cdot 2+3\cdot 2^2\\
+  4^3&=(1+3)^3=1+3^3+3\cdot 3+3\cdot 3^2\\
+  &\enspace\vdots \\
+  (n+1)^3&=(1+n)^3=1+n^3+3\cdot n+3\cdot n^2
 \end{align*}
-Al sumar las anteriores igualdades, y recordando que con $T$ denotamos la suma por calcular, tenemos
-{\small
-\begin{align*}
-1^3+2^3+&\ldots+n^3+(n+1)^3=\underbrace{1+1+1+\ldots+1}_{\text{$n+1$ veces}}+0^3+1^3+2^3+\ldots+n^3\\
-&\quad+3(0+1+2+\ldots+n)+3(0^2+1^2+2^2+\ldots+n^2)\\
-&=(n+1)+(1^3+2^3+\ldots+n^3)+3\frac{n(n+1)}{2}+3(T)
-\end{align*}
-}
-Se usó acá la fórmula para la suma de los $n$ primeros números naturales. Por otro lado, al cancelar los cubos $1^3,\ 2^3,\ \ldots,\ n^3$, la expresión se convierte en
-\begin{align*}
-(n+1)^3&=(n+1)+3\frac{n(n+1)}{2}+3(T)\\
-(n+1)^3-(n+1)-3\frac{n(n+1)}{2}&=3(T)\\
-2(n+1)^3-2(n+1)-3n(n+1)&=6(T)\\
-(n+1)\left(2(n+1)^2-2-3n\right)&=6(T)\\
-(n+1)\left(2n^2+4n+2-2-3n\right)&=6(T)\\
-(n+1)\left(2n^2+n\right)&=6(T)\\
-\end{align*}
+Al sumar las anteriores igualdades, y recordando que con $T$ denotamos la suma por calcular, tenemos \enlargethispage*{\baselineskip}
+\begin{gather*}
+  \begin{aligned}
+    1^3+2^3+&\ldots+n^3+(n+1)^3=\underbrace{1+1+1+\ldots+1}_{\text{$n+1$ veces}}+0^3+1^3+2^3+\ldots+n^3\\
+    &\quad+3(0+1+2+\ldots+n)+3(0^2+1^2+2^2+\ldots+n^2)\\
+    &=(n+1)+(1^3+2^3+\ldots+n^3)+3\frac{n(n+1)}{2}+3(T)
+  \end{aligned}
+\end{gather*}
+\textls[-10]{Se usó acá la fórmula para la suma de los $n$ primeros números naturales. Por otro lado, al cancelar los cubos $1^3,\ 2^3,\ \ldots,\ n^3$, la expresión se convierte en}
+\begin{small}
+  \begin{align*}
+    (n+1)^3&=(n+1)+3\frac{n(n+1)}{2}+3(T)\\
+    (n+1)^3-(n+1)-3\frac{n(n+1)}{2}&=3(T)\\
+    2(n+1)^3-2(n+1)-3n(n+1)&=6(T)\\
+    (n+1)\left(2(n+1)^2-2-3n\right)&=6(T)\\
+    (n+1)\left(2n^2+4n+2-2-3n\right)&=6(T)\\
+    (n+1)\left(2n^2+n\right)&=6(T)\\
+  \end{align*}
+\end{small}
+
 Con ello,
-\[
-T=\frac{(n+1)\left(2n^2+n\right)}{6}=\frac{n(n+1)(2n+1)}{6}
-\]
+\[T=\frac{(n+1)\left(2n^2+n\right)}{6}=\frac{n(n+1)(2n+1)}{6}\]
 es decir,
-\[
-1^{2}+2^{2}+3^{2}+\ldots +n^{2}=\frac{n(n+1)(2n+1)}{6}
-\]
+\[1^{2}+2^{2}+3^{2}+\ldots +n^{2}=\frac{n(n+1)(2n+1)}{6}\]
 O al descomponer la fracción, también tenemos que
-\[
-1^{2}+2^{2}+3^{2}+\ldots +n^{2}=\frac{n^3}{3}+\frac{n^2}{2}+\frac{n}{6}
-\]
+\[1^{2}+2^{2}+3^{2}+\ldots +n^{2}=\frac{n^3}{3}+\frac{n^2}{2}+\frac{n}{6}\]
 Por ejemplo, calculemos la suma de los cuadrados de $1$ hasta $30$, es decir, con $n=30$:
-{\small
 \[
-\sum_{k=1}^{30}k^2=\frac{30(30+1)(2\cdot30+1)}{6}=5(31)(61)=9455
+  \sum_{k=1}^{30}k^2=\frac{30(30+1)(2\cdot30+1)}{6}=5(31)(61)=9455
 \]
-}
+
 \begin{ejemplo}\label{SumaCubos}
-\textnormal {La suma de los cubos de los primeros} $n$ \textnormal {naturales puede conseguirse de manera similar a la anterior, solo que usando $(a+b)^4=a^4+4a^3b+6a^2b^2+4ab^3+b^4$. En definitiva,
-\[
-\sum_{k=1}^{n}k^{3}=\left(\frac{n(n+1)}{2}\right)^2
-\]
-o también}
-\[
-\sum_{k=1}^{n}k^{3}=\frac{n^4}{4}+\frac{n^3}{2}+\frac{n^2}{4}.
-\]
+  \textnormal {La suma de los cubos de los primeros} $n$ \textnormal {naturales puede conseguirse de manera similar a la anterior, solo que usando $(a+b)^4=a^4+4a^3b+6a^2b^2+4ab^3+b^4$. En definitiva,
+    \[
+      \sum_{k=1}^{n}k^{3}=\left(\frac{n(n+1)}{2}\right)^2
+    \]
+  o también}
+  \[
+    \sum_{k=1}^{n}k^{3}=\frac{n^4}{4}+\frac{n^3}{2}+\frac{n^2}{4}
+  \]
 
 \end{ejemplo}
 
 \begin{ejemplo}
-\textnormal {Calculemos las siguientes sumas utilizando las fórmulas anteriores}:
+  \textnormal {Calculemos las siguientes sumas utilizando las fórmulas anteriores}:
 \end{ejemplo}
-\begin{enumerate}[leftmargin=1.2em,   itemindent=0pt,       labelwidth=\labelwidth,labelsep=0.5em,]
+\begin{parrafonumerado}
 
 \item Tenemos la expresión
-\[
-\sum_{k=1}^{50}\left( 5k^{3}+2k^{2}-3k\right)
-\]
-Calculemos su valor:
-\begin{align*}
-\sum_{k=1}^{50}(5k^{3}&+2k^{2}-3k)=5\sum_{k=1}^{50}k^{3}+2\sum_{k=1}^{50}k^{2}-3\sum_{k=1}^{50}k\\
-&=5\left( \frac{50^{2}\left( 51\right) ^{2}}{4}\right) +2\left( \frac{
-50\left( 51\right) \left( 101\right) }{6}\right) -3\left( \frac{50\left(
-51\right) }{2}\right) \\
-&=8213 600
-\end{align*}
+  \[
+    \sum_{k=1}^{50}\left( 5k^{3}+2k^{2}-3k\right)
+  \]
+  Calculemos su valor:
+  \begin{align*}
+    \sum_{k=1}^{50}(5k^{3}&+2k^{2}-3k)=5\sum_{k=1}^{50}k^{3}+2\sum_{k=1}^{50}k^{2}-3\sum_{k=1}^{50}k\\
+    &=5\left( \frac{50^{2}\left( 51\right) ^{2}}{4}\right) +2\left( \frac{
+    50\left( 51\right) \left( 101\right) }{6}\right) -3\left( \frac{50\left(
+    51\right) }{2}\right) \\
+    &=8\,213\,600
+  \end{align*}
 
 \item Ahora encontremos una expresión para
-\[
-\sum_{k=1}^{n}\left(2k^{3}+3k^{2}-4k+5\right)
-\]
-en términos de $n$:
-{\footnotesize
-\begin{align*}
-\sum_{k=1}^{n}( 2k^{3}+&3k^{2}-4k+5)
-=2\sum_{k=1}^{n}k^{3}+3\sum_{k=1}^{n}k^{2}-4\sum_{k=1}^{n}k+\sum_{k=1}^{n}5\\
-&=2\left( \frac{n^{4}}{4}+\frac{n^{3}}{2}+\frac{n^{2}}{4}\right) +3\left(
-\frac{n^{3}}{3}+\frac{n^{2}}{2}+\frac{n}{6}\right)%\\
-%&\quad
--4\left( \frac{n^{2}}{2}+\frac{n}{2}\right) +5n\\
-&=\frac{n^{4}}{2}+n^{3}+\frac{n^{2}}{2}+n^{3}+\frac{3n^{2}}{2}+\frac{n}{2}\quad -2n^{2}-2n+5n\\
-&=\frac{n^{4}}{2}+2n^{3}+\frac{7}{2}n
-\end{align*}
-}
-\end{enumerate}
+  \[
+    \sum_{k=1}^{n}\left(2k^{3}+3k^{2}-4k+5\right)
+  \]
+  en términos de $n$:
+  \begin{gather*}
+    \begin{aligned}
+      \sum_{k=1}^{n}( 2k^{3}+&3k^{2}-4k+5)
+      =2\sum_{k=1}^{n}k^{3}+3\sum_{k=1}^{n}k^{2}-4\sum_{k=1}^{n}k+\sum_{k=1}^{n}5\\
+      &=2\left( \frac{n^{4}}{4}+\frac{n^{3}}{2}+\frac{n^{2}}{4}\right) +3\left(
+      \frac{n^{3}}{3}+\frac{n^{2}}{2}+\frac{n}{6}\right)%\\
+      -4\left( \frac{n^{2}}{2}+\frac{n}{2}\right) +5n\\
+      &=\frac{n^{4}}{2}+n^{3}+\frac{n^{2}}{2}+n^{3}+\frac{3n^{2}}{2}+\frac{n}{2} -2n^{2}-2n+5n\\
+      &=\frac{n^{4}}{2}+2n^{3}+\frac{7}{2}n
+    \end{aligned}
+  \end{gather*}
+\end{parrafonumerado}
 
 \begin{ejemplo}
-\textnormal {Hagamos ahora que $n$, el límite de la suma, en la expresión
-{\small
-\[
-\underset{n\rightarrow \infty }{\lim }\sum_{k=1}^{n}\left( \left(
-2\frac{k}{n}-1\right) ^{2}+2\left( 2\frac{k}{n}-1\right) +1\right) \frac{1}{n}
-\]
-}
-tienda a infinito.}
+  Hagamos ahora que $n$, el límite de la suma, en la expresión
+  \[
+    \underset{n\rightarrow \infty }{\lim }\sum_{k=1}^{n}\left( \left(
+    2\frac{k}{n}-1\right) ^{2}+2\left( 2\frac{k}{n}-1\right) +1\right) \frac{1}{n}
+  \]
+  tienda a infinito.
 \end{ejemplo}
 Si descomponemos las expresiones dentro de los paréntesis y cancelamos términos similares, tenemos
-{\footnotesize
-\begin{align*}
-\underset{n\rightarrow \infty }{\lim }\sum_{k=1}^{n}\left( \left( 2\frac{k}{n}-1\right) ^{2}+2\left( 2\frac{k}{n}-1\right) +1\right) \frac{1}{n} \\
-= \underset{n\rightarrow \infty }{\lim }\sum_{k=1}^{n}\left( 4\frac{k^{2}}{n^{2}}-4\frac{k}{n}+1+4\frac{k}{n}-2+1\right) \frac{1}{n}\\
-= \underset{n\rightarrow \infty }{\lim }\sum_{k=1}^{n}4\frac{k^{2}}{n^{3}} = \underset{n\rightarrow \infty }{\lim }\frac{4}{n^{3}}\sum_{k=1}^{n}k^{2}\\
-= \underset{n\rightarrow \infty }{\lim }\frac{4}{n^{3}}\left( \frac{n^{3}}{3}+\frac{n^{2}}{2}+\frac{n}{6}\right)\\
-= \underset{n\rightarrow \infty}{\lim}\left(\frac{4}{3}+\frac{2}{n}+\frac{4}{6n^{2}}\right)=\frac{4}{3}
-\end{align*}
-}
+\begin{gather*}
+  \begin{aligned}
+    \underset{n\rightarrow \infty }{\lim }\sum_{k=1}^{n}\left( \left( 2\frac{k}{n}-1\right) ^{2}+2\left( 2\frac{k}{n}-1\right) +1\right) \frac{1}{n}
+    &= \underset{n\rightarrow \infty }{\lim }\sum_{k=1}^{n}\left( 4\frac{k^{2}}{n^{2}}-4\frac{k}{n}+1+4\frac{k}{n}-2+1\right) \frac{1}{n}\\
+    &= \underset{n\rightarrow \infty }{\lim }\sum_{k=1}^{n}4\frac{k^{2}}{n^{3}} = \underset{n\rightarrow \infty }{\lim }\frac{4}{n^{3}}\sum_{k=1}^{n}k^{2}\\
+    &= \underset{n\rightarrow \infty }{\lim }\frac{4}{n^{3}}\left( \frac{n^{3}}{3}+\frac{n^{2}}{2}+\frac{n}{6}\right)\\
+    &= \underset{n\rightarrow \infty}{\lim}\left(\frac{4}{3}+\frac{2}{n}+\frac{4}{6n^{2}}\right)=\frac{4}{3}
+  \end{aligned}
+\end{gather*}
 
 La siguiente es una propiedad que en cierta forma extiende las fórmulas que dimos anteriormente.
 
 \begin{teorema}\label{SumPotenDeK}
-\textnormal {Supongamos que \textit{$m$} y \textit{$n$} son números naturales; entonces,
-{\small
-\[
-\sum_{k=1}^{n}k^{m}=\frac{n^{m+1}}{m+1}+f\left( n\right)
-\]
-}
-donde \textit{$f$} es un polinomio de grado \textit{$m$}}.
+  Supongamos que $m$ y $n$ son números naturales; entonces,
+  \[
+    \sum_{k=1}^{n}k^{m}=\frac{n^{m+1}}{m+1}+f\left( n\right)
+  \]
+  donde $f$ es un polinomio de grado $m$.
 \end{teorema}
 
-\textit{Demostración}. Usemos inducción\footnote{Para recordar sobre inducción matemática puede consultarse \textcite{Stewart_2012}.} sobre $m.$
+\textit{Demostración}. Usemos inducción\footnote{Puede consultarse Stewart~\textcite{Stewart_2012}, páginas 820-827.} sobre $m.$
 Supongamos que $P\left( m\right)$ está definida como
-{\small
-\[
-P\left( m\right):\sum_{k=1}^{n}k^{m}=\frac{n^{m+1}}{m+1}+f\left( n\right)
-\]
-}
+\begin{equation*}
+  P\left( m\right):\sum_{k=1}^{n}k^{m}=\frac{n^{m+1}}{m+1}+f\left( n\right)
+\end{equation*}
 donde $f$ es un polinomio de grado $m,$ $m\geq 1$.
 
-\begin{itemize}[leftmargin=1.2em,   itemindent=0pt,       labelwidth=\labelwidth,labelsep=0.5em,]
-
-
+\begin{parrafoitemize}
 \item Es claro que $P$ es cierta si $m=1$, pues ya vimos que
-\[
-P\left( 1\right):\sum_{k=1}^{n}k^1=\sum_{k=1}^{n}k=\frac{n^{2}}{2}+\underset{f\left( n\right) }{\underbrace{\frac{n}{2}}}
-\]
-con $f\left( n\right)=\cfrac{n}{2}$ siendo el polinomio de grado $1$.
+  \begin{equation*}
+    P\left( 1\right):\sum_{k=1}^{n}k^1=\sum_{k=1}^{n}k=\frac{n^{2}}{2}+\underset{f\left( n\right) }{\underbrace{\frac{n}{2}}}
+  \end{equation*}
+  con $f(n)=\frac{n}{2}$ siendo el polinomio de grado $1$.
 
 \item Supongamos ahora que el resultado es válido para todo número natural menor o igual a $m$ y
-probemos que también es válido para $m+1$: por un lado, por la propiedad telescópica de las sumas, tenemos que
-\begin{equation}\label{pruebam1}
-\sum_{k=1}^{n}\left( k^{m+2}-\left( k-1\right) ^{m+2}\right)=n^{m+2}
-\end{equation}
-\end{itemize}
-y por otro lado, usando el teorema del binomio\footnote{Para recordar sobre inducción matemática puede consultarse \textcite{Stewart_2012}.}
-en el segundo término dentro de la suma, tenemos que
-{\footnotesize
-\begin{align}\label{pruebam2}
-&\sum_{k=1}^{n}\left( k^{m+2}-\left( k-1\right)^{m+2}\right)
-=\sum_{k=1}^{n}\left( k^{m+2}-\sum_{i=0}^{m+2}\binom{m+2}{i}k^{i}(-1)^{m+2-i}\right)\notag\\
-&=\sum_{k=1}^{n}\left[ k^{m+2}-k^{m+2}+(m+2)k^{m+1}-\binom{m+2}{m}k^{m}
--\sum_{i=0}^{m-1}(-1)^{m+2-i}\binom{m+2}{i}k^{i}\right]\notag\\
-&=\sum_{k=1}^{n}(m+2)k^{m+1}-\sum_{k=1}^{n}\binom{m+2}{m}k^{m}
--\sum_{i=0}^{m-1}\left[(-1)^{m+2-i}\binom{m+2}{i}\left(\sum_{k=1}^{n}k^{i}\right)\right]
-\end{align}
-}
-
-Al igualar \eqref{pruebam1} y \eqref{pruebam2}, tenemos
-
-{\small
-\[
-\sum_{k=1}^{n}(m+2) k^{m+1}-\hspace{-0.15cm}\sum_{k=1}^{n}\hspace{-0.17cm}\binom{m+2}{m}k^{m}
--\hspace{-0.15cm}\sum_{i=0}^{m-1}\hspace{-0.1cm}(-1)^{m+2-i}\binom{m+2}{i}\hspace{-0.15cm}\sum_{k=1}^{n}k^{i} \hspace{-0.15cm}=n^{m+2}
-\]
-}
-
-o también
-{\small
-\[
-\left(m+2\right)\hspace{-0.15cm}\sum_{k=1}^{n}k^{m+1}=n^{m+2}+\hspace{-0.15cm}\sum_{k=1}^{n}\binom{m+2}{m}%
-k^{m}+\hspace{-0.15cm}\sum_{i=0}^{m-1}\left[( -1) ^{m+2-i}\binom{m+2}{i}\hspace{-0.15cm}\sum_{k=1}^{n}k^{i}\right]
-\]
-}
-de donde
-{\small
-\[
-\sum_{k=1}^{n}k^{m+1}=\frac{n^{m+2}}{m+2}+\frac{\binom{m+2}{m}}{m+2}%
-\sum_{k=1}^{n}k^{m}+\sum_{i=0}^{m-1}\left[\left( -1\right) ^{m+2-i}\frac{\binom{m+2}{i}}{m+2}\sum_{k=1}^{n}k^{i}\right]
-\]
-}
-y, usando la hipótesis de inducción, obtenemos
-{\small
-\begin{align*}
-\sum_{k=1}^{n}k^{m+1}
-= \frac{n^{m+2}}{m+2}
-+ \frac{\binom{m+2}{m}}{m+2} \left( \frac{n^{m+1}}{m+1} + f_{m}(n) \right) \\
-\hspace{0pt}
-+ \sum_{i=0}^{m-1} (-1)^{m+2-i} \frac{\binom{m+2}{i}}{m+2} \left( \frac{n^{i+1}}{i+1} + f_{i}(n) \right)
-\end{align*}
-}
-
-con $f_{m}\left( n\right) $ como un polinomio de grado $m$ en la variable $n$ y los $f_{i}\left( n\right) $ como polinomios de grado $i$ en la variable $n$ para $0\leq i\leq m-1$. Por tanto,
-\[
-\sum_{k=1}^{n}k^{m+1}=\frac{n^{m+2}}{m+2}+f(n)
-\]
-con
-\[
-f(n)=\hspace{-0.1cm}\frac{\binom{m+2}{m}}{m+2}\left(\hspace{-0.1cm} \frac{n^{m+1}}{m+1}+f_{m}\left( n\right) \hspace{-0.1cm}\right)
-+\hspace{-0.1cm}\sum_{i=0}^{m-1}\left( -1\right) ^{m+2-i}\hspace{-0.1cm}\frac{\binom{m+2}{i}}{m+2}\left(\hspace{-0.1cm}
-\frac{n^{i+1}}{i+1}+f_{i}\left( n\right)\hspace{-0.1cm} \right)
-\]
-el polinomio de grado $m+1$, con lo que se demuestra lo que se quería probar. 
-%\end{itemize}
-
+  probemos que también es válido para $m+1$: por un lado, por la propiedad telescópica de las sumas, tenemos que
+  \begin{equation}\label{pruebam1}
+    \sum_{k=1}^{n}\left( k^{m+2}-\left( k-1\right) ^{m+2}\right)=n^{m+2}
+  \end{equation}
+  y por otro lado, usando el teorema del binomio\footnote{Para recordar sobre inducción matemática, puede consultarse Stewart~\textcite{Stewart_2012}, páginas 814-819.},
+  en el segundo término dentro de la suma, tenemos que
+  \begin{gather}
+    \begin{aligned}
+      &\sum_{k=1}^{n}\left( k^{m+2}-\left( k-1\right)^{m+2}\right)
+      =\sum_{k=1}^{n}\left( k^{m+2}-\sum_{i=0}^{m+2}\binom{m+2}{i}k^{i}(-1)^{m+2-i}\right)\\
+      &=\sum_{k=1}^{n}\left[ k^{m+2}-k^{m+2}+(m+2)k^{m+1}-\binom{m+2}{m}k^{m}
+      -\sum_{i=0}^{m-1}(-1)^{m+2-i}\binom{m+2}{i}k^{i}\right]\\
+      &=\sum_{k=1}^{n}(m+2)k^{m+1}-\sum_{k=1}^{n}\binom{m+2}{m}k^{m}
+      -\sum_{i=0}^{m-1}\left[(-1)^{m+2-i}\binom{m+2}{i}\left(\sum_{k=1}^{n}k^{i}\right)\right]
+    \end{aligned}\label{pruebam2}
+  \end{gather}
+  Al igualar \eqref{pruebam1} y \eqref{pruebam2}, tenemos
+  \begin{gather*}
+    \sum_{k=1}^{n}(m+2) k^{m+1}-\hspace{-0.15cm}\sum_{k=1}^{n}\hspace{-0.17cm}\binom{m+2}{m}k^{m}
+    -\hspace{-0.15cm}\sum_{i=0}^{m-1}\hspace{-0.1cm}(-1)^{m+2-i}\binom{m+2}{i}\hspace{-0.15cm}\sum_{k=1}^{n}k^{i} \hspace{-0.15cm}=n^{m+2}
+  \end{gather*}
+  o también
+  \begin{gather*}
+    \left(m+2\right)\hspace{-0.15cm}\sum_{k=1}^{n}k^{m+1}=n^{m+2}+\hspace{-0.15cm}\sum_{k=1}^{n}\binom{m+2}{m}%
+    k^{m}+\hspace{-0.15cm}\sum_{i=0}^{m-1}\left[( -1) ^{m+2-i}\binom{m+2}{i}\hspace{-0.15cm}\sum_{k=1}^{n}k^{i}\right]
+  \end{gather*}
+  de donde
+  \begin{gather*}
+    \sum_{k=1}^{n}k^{m+1}=\frac{n^{m+2}}{m+2}+\frac{\binom{m+2}{m}}{m+2}%
+    \sum_{k=1}^{n}k^{m}+\sum_{i=0}^{m-1}\left[\left( -1\right) ^{m+2-i}\frac{\binom{m+2}{i}}{m+2}\sum_{k=1}^{n}k^{i}\right]
+  \end{gather*}
+  y, usando la hipótesis de inducción, obtenemos
+  \begin{gather*}
+    \begin{aligned}
+      \sum_{k=1}^{n}k^{m+1}
+      = \frac{n^{m+2}}{m+2}
+      &+ \frac{\binom{m+2}{m}}{m+2} \left( \frac{n^{m+1}}{m+1} + f_{m}(n) \right) \\
+      &+ \sum_{i=0}^{m-1} (-1)^{m+2-i} \frac{\binom{m+2}{i}}{m+2} \left( \frac{n^{i+1}}{i+1} + f_{i}(n) \right)
+    \end{aligned}
+  \end{gather*}
+  con $f_{m}\left( n\right) $ como un polinomio de grado $m$ en la variable $n$ y los $f_{i}\left( n\right) $ como polinomios de grado $i$ en la variable $n$ para $0\leq i\leq m-1$. Por tanto,
+  \[
+    \sum_{k=1}^{n}k^{m+1}=\frac{n^{m+2}}{m+2}+f(n)
+  \]
+  con
+  \begin{gather*}
+    f(n)=\hspace{-0.1cm}\frac{\binom{m+2}{m}}{m+2}\left(\hspace{-0.1cm} \frac{n^{m+1}}{m+1}+f_{m}\left( n\right) \hspace{-0.1cm}\right)
+    +\hspace{-0.1cm}\sum_{i=0}^{m-1}\left( -1\right) ^{m+2-i}\hspace{-0.1cm}\frac{\binom{m+2}{i}}{m+2}\left(\hspace{-0.1cm}
+    \frac{n^{i+1}}{i+1}+f_{i}\left( n\right)\hspace{-0.1cm} \right)
+  \end{gather*}
+  el polinomio de grado $m+1$, con lo que se demuestra lo que se quería probar.
+\end{parrafoitemize}
 
 Las siguientes propiedades involucran funciones trigonométricas:
 
-\begin{teorema}\label{SumSenoCoseno} \textnormal{Supongamos que \textit{$n$} es un número natural, entonces}
-\begin{itemize}[leftmargin=1.2em,   itemindent=0pt,labelwidth=\labelwidth,labelsep=0.5em,]
-	
-\item[\textnormal{a)}] $\sum\limits_{k=1}^{n}\cos kx=\cfrac{\sen\left(( n+\frac{1}{2})x\right)-\sen\frac{x}{2} }{2\sen\frac{x}{2} }$
-\item[\textnormal{b)}] $\sum\limits_{k=1}^{n}\sen kx=\cfrac{\cos \frac{x}{2} -\cos
-\left( \left( n+\frac{1}{2}\right) x\right) }{2\sen\frac{x}{2}}$
-\end{itemize}
+\begin{teorema}\label{SumSenoCoseno} Supongamos que $n$ es un número natural, entonces
+\begin{parrafonumerado}[label=\alph*)]
+
+\item $\sum\limits_{k=1}^{n}\cos kx=\cfrac{\sen\left(( n+\frac{1}{2})x\right)-\sen\frac{x}{2} }{2\sen\frac{x}{2} }$
+\item $\sum\limits_{k=1}^{n}\sen kx=\cfrac{\cos \frac{x}{2} -\cos
+  \left( \left( n+\frac{1}{2}\right) x\right) }{2\sen\frac{x}{2}}$
+\end{parrafonumerado}
 \end{teorema}
 
+\clearpage
 
-\textit{Demostración}
-
-
-\begin{enumerate}[leftmargin=1.2em,   itemindent=0pt,       labelwidth=\labelwidth,
-	labelsep=0.5em,]
-\item [a)] Usando las identidades $\sen\left( A\pm B\right) =\sen A\cos B\pm \sen B\cos A$, tenemos:
+\emph{Demostración}
+\begin{parrafonumerado}[label=\alph*)]
+\item Usando las identidades $\sen\left( A\pm B\right) =\sen A\cos B\pm \sen B\cos A$, tenemos:
 \begin{align*}
 \sen&\left( \left( k+\frac{1}{2}\right) x\right) -\sen\left( \left( k-\frac{1}{2}\right) x\right)\\
 &=\sen kx\cos\frac{x}{2}+\sen\frac{x}{2}\cos kx-
 %&\qquad
- \left(\sen kx\cos \frac{x}{2}-\sen\frac{x}{2}\cos kx\right)\\
+\left(\sen kx\cos \frac{x}{2}-\sen\frac{x}{2}\cos kx\right)\\
 &=2\sen\frac{x}{2}\cos kx,
 \end{align*}
 y con ello,
@@ -541,88 +470,80 @@ x\right) -\sen\left( \left( 1-\frac{1}{2}\right) x\right) \right]\\
 \end{align*}
 que es como se quería demostrar.
 
-\item [b)] Usemos ahora $\cos \left( A\pm B\right) =\cos A\cos B\mp \sen B\sen A$. Entonces,
+\item Usemos ahora $\cos \left( A\pm B\right) =\cos A\cos B\mp \sen B\sen A$. Entonces,
 \begin{align*}
 \cos &\left( \left( k-\frac{1}{2}\right) x\right) -\cos \left( \left( k+\frac{1}{2}\right) x\right)\\
- &=\cos kx\cos \frac{x}{2}+\sen \frac{x}{2}\sen
+&=\cos kx\cos \frac{x}{2}+\sen \frac{x}{2}\sen
 kx-\left( \cos kx\cos \frac{x}{2}-\sen \frac{x}{2}\sen kx\right)\\
 &=2\sen \frac{x}{2}\sen kx
 \end{align*}
 luego
 \[
 \sen kx=\frac{1}{2\sen\frac{x}{2}}\left[ \cos \left( \left( k-\frac{1%
-}{2}\right) x\right) -\cos \left( \left( k+\frac{1}{2}\right) x\right) %
+  }{2}\right) x\right) -\cos \left( \left( k+\frac{1}{2}\right) x\right) %
 \right]
 \]
 y, por tanto,
-{\small
-\begin{align*}
-\sum\limits_{k=1}^{n}\sen kx&=\sum\limits_{k=1}^{n}\frac{1}{2\sen\frac{x}{2}}\left[ \cos \left( \left( k-\frac{1}{2}\right) x\right) -\cos \left(
-\left( k+\frac{1}{2}\right) x\right) \right]\\
-&=\frac{1}{2\sen\frac{x}{2}}\sum\limits_{k=1}^{n}\left[ \cos \left( \left(
-k-\frac{1}{2}\right) x\right) -\cos \left( \left( k+\frac{1}{2}\right)
-x\right) \right]\\
-&\text{(aplicando propiedad telescópica)}\\ \
-&=\frac{1}{2\sen\frac{x}{2}}\left[ \cos \left( \left( 1-\frac{1}{2}\right)
-x\right) -\cos \left( \left( n+\frac{1}{2}\right) x\right) \right] \\
-&=\frac{\cos \frac{x}{2} -\cos \left( \left( n+\frac{1}{2}%
-\right) x\right) }{2\sen \frac{x}{2}}
-\end{align*}
-}
-
+\begin{gather*}
+\begin{aligned}
+  \sum\limits_{k=1}^{n}\sen kx&=\sum\limits_{k=1}^{n}\frac{1}{2\sen\frac{x}{2}}\left[ \cos \left( \left( k-\frac{1}{2}\right) x\right) -\cos \left(
+  \left( k+\frac{1}{2}\right) x\right) \right]\\
+  &=\frac{1}{2\sen\frac{x}{2}}\sum\limits_{k=1}^{n}\left[ \cos \left( \left(
+    k-\frac{1}{2}\right) x\right) -\cos \left( \left( k+\frac{1}{2}\right)
+  x\right) \right]\\
+  &\text{(aplicando propiedad telescópica)}\\
+  &=\frac{1}{2\sen\frac{x}{2}}\left[ \cos \left( \left( 1-\frac{1}{2}\right)
+  x\right) -\cos \left( \left( n+\frac{1}{2}\right) x\right) \right] \\
+  &=\frac{\cos \frac{x}{2} -\cos \left( \left( n+\frac{1}{2}%
+  \right) x\right) }{2\sen \frac{x}{2}}
+\end{aligned}
+\end{gather*}
 como se quería probar.
-\end{enumerate}
+\end{parrafonumerado}
+
+\enlargethispage*{\baselineskip}
 
 \begin{ejemplo}
-\textnormal{Pruebe que para \textit{$n$} y \textit{$m$}, números naturales, con \textit{$m\leq n$}, se tiene que} \[
-\displaystyle{\sum_{k=m}^{n}k}=\cfrac{\left( n-m+2\right) \left( m+n-1\right) }{2}
+Pruebe que para $n$ y $m$, números naturales, con $m\leq n$, se tiene que
+\[
+\sum_{k=m}^{n}k=\cfrac{\left( n-m+2\right) \left( m+n-1\right) }{2}
 \]
 \end{ejemplo}
 
-\textit{Solución}. Tengamos en cuenta que
+\emph{Solución.} Tengamos en cuenta que
 \[
 \sum_{k=1}^n k=\sum_{k=1}^{m-1} k+ \sum_{k=m}^n k
 \]
 por lo que
-{\small
-\begin{align*}
-\sum_{k=m}^{n}k&=\sum_{k=1}^{n}k-\sum_{k=1}^{m-1}k%\\&
+\begin{gather*}
+\begin{aligned}
+\sum_{k=m}^{n}k&=\sum_{k=1}^{n}k-\sum_{k=1}^{m-1}k
 =\frac{n^{2}}{2}+\frac{n}{2}-\frac{\left( m-1\right) ^{2}}{2}+\frac{m-1}{2}\\
-&=\frac{\left( n+m-1\right)\left( n-m+1\right) }{2}+\frac{n+m-1}{2}%\\&
-=\frac{\left( n-m+2\right) \left( m+n-1\right) }{2} 
-\end{align*}
-}
+&=\frac{\left( n+m-1\right)\left( n-m+1\right) }{2}+\frac{n+m-1}{2}\\
+&=\frac{\left( n-m+2\right) \left( m+n-1\right) }{2}
+\end{aligned}
+\end{gather*}
 
-\begin{ejemplo} \textnormal{Supongamos que \textit{$n$} es un número natural y que \textit{$b$} es un número real distinto de $1$. Entonces}
-
-{\small
+\begin{ejemplo} Suma geométrica: supongamos que $n$ es un número natural y que $b$ es un número real distinto de $1$. Entonces
 \[
-\displaystyle{\sum_{k=1}^{n}b^{k}}=\cfrac{b^{n+1}-b}{b-1}
+\sum_{k=1}^{n}b^{k}=\cfrac{b^{n+1}-b}{b-1}
 \]
-}
-
-
 \end{ejemplo}
 
-\textit{Solución}. Supongamos que {\small $X=\displaystyle{\sum_{k=1}^{n}b^{k}}$} y multipliquemos ambos lados por {\small $b-1:$}
-{\small
+\emph{Solución.} Supongamos que  $X=\sum_{k=1}^{n}b^{k}$ y multipliquemos ambos lados por $b-1$:
 \begin{align*}
 \left( b-1\right) X&=\left( b-1\right) \sum_{k=1}^{n}b^{k}\\
 \left( b-1\right) X&=\sum_{k=1}^{n}\left( b^{k+1}-b^{k}\right)\text{ (propiedad telescópica)}\\
 \left( b-1\right) X&=b^{n+1}-b
 \end{align*}
-}
 por tanto,
 \[
 X=\frac{b^{n+1}-b}{b-1}
 \]
 es decir,
-{\small
 \[
 \sum_{k=1}^{n}b^{k}=\frac{b^{n+1}-b}{b-1}
 \]
-}
-
 
 \section{El área bajo la figura de una función}\label{area}
 
@@ -636,22 +557,23 @@ la función. En símbolos,
 y\leq x^{3}+2\right\}
 \]
 
-Para hallar el área de $\mathcal{R}$, comenzamos aproximándola por medio de la suma del área de rectángulos con base de igual longitud y ubicados sobre el eje $x$. Las alturas de los rectángulos están dadas por la figura de la función, como se ilustra en la figura 1.
+Para hallar el área de $\mathcal{R}$, comenzamos aproximándola por medio de la suma del área de rectángulos con base de igual longitud y ubicados sobre el eje $x$. Las alturas de los rectángulos están dadas por la figura de la función, como se ilustra en la figura~\ref{rectangulos-bajo-la-funcion}.
 
 \begin{figure}[H]
-    \centering
-    \caption{Rectángulos bajo la función}
-    \includegraphics[width=9cm]{Gráficas/graf1.pdf}
-    \propia
+\centering
+\caption{Rectángulos bajo la función}\label{rectangulos-bajo-la-funcion}
+\includegraphics[width=9cm]{Gráficas/graf1.pdf}
+\propia
 \end{figure}
 
-Recordemos que el área de un rectángulo de base {\small $B$} y altura {\small $H$} está dada por {\small $B\times H$}. En nuestro caso, si usamos $n$ rectángulos sobre el intervalo $[0,2]$, entonces la base de cada uno mide $\frac{2-0}{n}=\frac{2}{n}$; la altura, que está dada por la función $f(x)=x^3+2$, es igual, por ejemplo, a $x_k^3+2$, con $x_k$ un extremo del rectángulo (puede ser el extremo derecho), es decir, $x_k=\frac{2k}{n}$. Con ello, el $k-$ésimo rectángulo tiene área
-{\small
+Recordemos que el área de un rectángulo de base {\small $B$} y altura {\small $H$} está dada por {\small $B\times H$}. En nuestro caso, si usamos $n$ rectángulos sobre el intervalo $[0,2]$, entonces la base de cada uno mide $\frac{2-0}{n}=\frac{2}{n}$; la altura, que está dada por la función $f(x)=x^3+2$, es igual, por ejemplo, a $x_k^3+2$, con $x_k$ un extremo del rectángulo (puede ser el extremo derecho), es decir, $x_k=\frac{2k}{n}$.
+
+Con ello, el $k$-ésimo rectángulo tiene área
 \[
 \frac{2}{n} \left( \left(\frac{2k}{n}\right)^3+2 \right)
 \]
-}
-En total, $A_\mathcal{R}(n)$; la suma de las áreas de los $n$ rectángulos es
+
+En total, $A_\mathcal{R}(n)$, la suma de las áreas de los $n$ rectángulos, es
 \begin{align*}
 A_\mathcal{R}(n)&=\frac{2}{n}\left( \left( \frac{2}{n}\right)^{3}+2\right) +\frac{2}{n}\left( \left( \frac{4}{n}\right)^{3}+2\right)+\frac{2}{n}\left(\left( \frac{6}{n}\right) ^{3}+2\right) \\
 &\quad +\ldots+\frac{2}{n}\left(\left(\frac{2k}{n}\right)^{3}+2\right)+\ldots +\frac{2}{n}\left( \left( \frac{2n}{n}\right) ^{3}+2\right)\\
@@ -669,27 +591,24 @@ A_\mathcal{R}(n)=\frac{16}{n^{4}}\left(\frac{n(n+1)}{2}\right)^2 +4
 \]
 que es la suma de las áreas de los rectángulos, pero el área exacta de la región $\mathcal{R}$ se obtiene cuando $n$ tiende a infinito; luego, si $a\left( \mathcal{R}\right) $ denota el área de $\mathcal{R}$, entonces
 \begin{align*}
-a\left( \mathcal{R}\right)& =\underset{n\rightarrow \infty }{\lim }\left[ \frac{16}{n^{4}}\left(\frac{n(n+1)}{2}\right)^2 +4\right]%\\
-%&
-%=\underset{n\rightarrow \infty }{\lim }\left( \frac{16}{n^{4}}\frac{n^{2}\left( n+1\right) ^{2}}{4}+4\right)\\
-=\underset{n\rightarrow\infty }{\lim}\left(\frac{16}{n^{4}}\frac{n^{2}\left( n+1\right) ^{2}}{4} +4\right)\\
+a\left( \mathcal{R}\right)& =\underset{n\rightarrow \infty }{\lim }\left[ \frac{16}{n^{4}}\left(\frac{n(n+1)}{2}\right)^2 +4\right]\\ \displaybreak
+&=\underset{n\rightarrow\infty }{\lim}\left(\frac{16}{n^{4}}\frac{n^{2}\left( n+1\right) ^{2}}{4} +4\right)\\
 &=\underset{n\rightarrow \infty }{\lim }\left( \frac{16}{4}\frac{
-\left( n+1\right) ^{2}}{n^{2}} +4\right)
-=4\underset{n\rightarrow \infty }{\lim }\left( \frac{\left( n+1\right) }{n}\frac{\left( n+1\right) }{n}+1\right)\\
+\left( n+1\right) ^{2}}{n^{2}} +4\right)\\
+&=4\underset{n\rightarrow \infty }{\lim }\left( \frac{\left( n+1\right) }{n}\frac{\left( n+1\right) }{n}+1\right)\\
 &=4\underset{n\rightarrow \infty }{\lim }\left[ \left( 1+\frac{1}{n}\right) \left( 1+\frac{1}{n}\right) +1\right]\\
 &=4( 1\cdot 1+1)=8
 \end{align*}
-Con ello, entonces, el área de la región $\mathcal{R}$ es igual a $8$. 
-
+Con ello, entonces, el área de la región $\mathcal{R}$ es igual a $8$.
 
 \section{Particiones y sumas de Riemann}
 
-\begin{defi}
-Partición. \textnormal{Una partición del intervalo \textit{$[a,b]$} es un conjunto \textit{$P$} de puntos \textit{$x_{0},x_{1},x_{2},\ldots ,x_{n}$} tales que}
+\begin{defi}[Partición]
+Una partición del intervalo $[a,b]$ es un conjunto $P$ de puntos $x_{0},x_{1},x_{2},\ldots ,x_{n}$ tales que
 \[
 a=x_{0}<x_{1}<x_{2}<\cdots <x_{n}=b
 \]
-\textnormal{con \textit{$n$} como un número natural.}
+con $n$ como un número natural.
 \end{defi}
 
 Toda partición con $n$ elementos divide al intervalo en $n$ subintervalos cerrados de la forma $[x_{k-1},x_{k}]$ con $1\leq k\leq n$. La longitud de cada subintervalo se denota por $\Delta x_{k}$ y además
@@ -700,63 +619,61 @@ o también
 \[
 x_{k}=x_{k-1}+\Delta x_{k}
 \]
-La \textit{norma} de la partición es la longitud del mayor subintervalo y se denota por $\left\Vert P\right\Vert$:
+
+La \emph{norma} de la partición es la longitud del mayor subintervalo y se denota por $\left\Vert P\right\Vert$:
 \[
 \left\Vert P\right\Vert =\max \left\{ \Delta x_{1,}\Delta
-x_{2},\Delta x_{3},\ldots ,\Delta x_{n}\right\} 
+x_{2},\Delta x_{3},\ldots ,\Delta x_{n}\right\}
 \]
 
 Una partición $P$ es regular si todos los subintervalos tienen la misma longitud, en este caso,
+
 \[
 \left\Vert P\right\Vert =\Delta x_{k}:=\Delta x=\frac{b-a}{n}
 \]
+
 Si la partición es regular, entonces
 \[
 x_{k}=x_{k-1}+\Delta x=x_{k-2}+2\Delta x=\ldots=x_0+k\Delta x
 \]
-\begin{ejemplo} 
+
+\begin{ejemplo}
 Trabajemos con particiones:
-\renewcommand{\labelenumi}{\normalfont\theenumi.}
-\begin{enumerate}[leftmargin=1.2em,   itemindent=0pt,       labelwidth=\labelwidth,labelsep=0.5em,]
-\item  \textnormal{Dado el intervalo $\left[ 0,3\right] $, encuentre una partición regular con $6$ subintervalos.}
 
-\item \textnormal{Si el intervalo $\left[ 0,3\right] $ se divide en subintervalos mediante la partición}
+\begin{parrafonumerado}
+\item  Dado el intervalo $\left[ 0,3\right] $, encuentre una partición regular con $6$ subintervalos.
 
+\item Si el intervalo $\left[ 0,3\right] $ se divide en subintervalos mediante la partición
 \[
-\textit{P}=\left\{ 0,\frac{3}{5},\frac{6}{5},\frac{8}{5},2,\frac{5}{2},3\right\}
+  \textit{P}=\left\{ 0,\frac{3}{5},\frac{6}{5},\frac{8}{5},2,\frac{5}{2},3\right\}
 \]
-\textnormal{encuentre cada subintervalo y también} $\left\Vert P\right\Vert$.
+encuentre cada subintervalo y también $\left\Vert P\right\Vert$.
 
 \item \textnormal{Si el intervalo $\left[ -4,4\right] $ se divide en subintervalos
 mediante la partición regular}
 \[
-\textit{P}=\left\{ -4,-3,-2,-1,0,1,2,3,4\right\}
+  \textit{P}=\left\{ -4,-3,-2,-1,0,1,2,3,4\right\}
 \]
-\textnormal{encuentre los subintervalos y} \textit{$\left\Vert P\right\Vert $.}
+encuentre los subintervalos y \textit{$\left\Vert P\right\Vert $.}
 
-\item \textnormal{Si el intervalo $\left[ -2,3\right] $ se divide en subintervalos mediante la partición}
+\item Si el intervalo $\left[ -2,3\right] $ se divide en subintervalos mediante la partición
 \[
-P=\left\{
--2,\frac{-7}{5},-1,\frac{-4}{5},\frac{-1}{5},\frac{3}{5},\frac{6}{5},\frac{8}{5},2,\frac{5}{2},3\right\}
+  P=\left\{
+  -2,\frac{-7}{5},-1,\frac{-4}{5},\frac{-1}{5},\frac{3}{5},\frac{6}{5},\frac{8}{5},2,\frac{5}{2},3\right\}
 \]
-\textnormal{encuentre cada subintervalo y también} $\left\Vert P\right\Vert$.
+encuentre cada subintervalo y también $\left\Vert P\right\Vert$.
 
-\end{enumerate}
+\end{parrafonumerado}
 \end{ejemplo}
 
-
-\textit{Solución}
-\begin{enumerate}[leftmargin=1.2em,   itemindent=0pt,       labelwidth=\labelwidth,
-	labelsep=0.5em,]
-
+\emph{Solución.}
+\begin{parrafonumerado}
 
 \item Si la partición tiene $6$ subintervalos, entonces podemos tomar una partición regular con {\small $n=6$}, lo que lleva a que {\small $\Delta x=\frac{3-0}{6}=\frac{1}{2}$}; por tanto, {\small $x_0=0,\ x_1=0+1/2,\ x_2=0+2/2,\ldots$}, es decir,
-
-{\small
 \[
 P=\left\{ 0,\frac{1}{2},1,\frac{3}{2},2,\frac{5}{2},3\right\}
 \]
-}
+
 \item Dado que cada elemento de la partición es el extremo de cada subintervalo, entonces los subintervalos son
 \[
 \left[ 0,\frac{3}{5}\right],\ \left[ \frac{3}{5},\frac{6}{5}\right],\ \left[ \frac{6}{5},\frac{8}{5}\right],\ \left[ \frac{8}{5},2\right],\ \left[ 2,\frac{5}{2}\right]\text{ y } \left[ \frac{5}{2},3\right]
@@ -771,7 +688,7 @@ Por otro lado, como la partición no es regular, entonces debemos hacer explíci
 Y, por último, la norma de la partición es
 \[
 \left\Vert P\right\Vert=\max \left\{ \frac{3}{5},\frac{3}{5},\frac{2}{5},%
-\frac{2}{5},\frac{1}{2},\frac{1}{2}\right\} =\frac{3}{5} 
+\frac{2}{5},\frac{1}{2},\frac{1}{2}\right\} =\frac{3}{5}
 \]
 
 \item En este caso, la partición es regular; entonces,
@@ -783,41 +700,44 @@ y
 \left\Vert P\right\Vert =\frac{4-(-4)}{8}=1
 \]
 
-\item Dado que cada elemento de la partición es el extremo de cada subintervalo, entonces los subintervalos son
-\begin{align*}
-&\left[ -2,\frac{-7}{5}\right],\ \left[ \frac{-7}{5},-1\right],\
+\item Dado que cada elemento de la partición es el extremo de cada subintervalo, entonces los subintervalos son:
+\begin{gather*}
+\left[ -2,\frac{-7}{5}\right],\ \left[ \frac{-7}{5},-1\right],\
 \left[ -1,\frac{-4}{5}\right],\ \left[
 \frac{-4}{5},\frac{-1}{5}\right],\ \left[
-\frac{-1}{5},\frac{3}{5}\right],\
-\left[\frac{3}{5},\frac{6}{5}\right],\\
-&\left[ \frac{6}{5},\frac{8}{5}\right],\ \left[
-\frac{8}{5},2\right],\ \left[ 2,\frac{5}{2}\right]\text{ y }
+\frac{-1}{5},\frac{3}{5}\right],\\
+\left[\frac{3}{5},\frac{6}{5}\right],\
+\left[ \frac{6}{5},\frac{8}{5}\right],\
+\left[ \frac{8}{5},2\right],\
+\left[ 2,\frac{5}{2}\right]\text{ y }
 \left[ \frac{5}{2},3\right]
-\end{align*}
+\end{gather*}
 Por otro lado, como la partición no es regular, entonces debemos
 hacer explícita cada una de las longitudes de los intervalos;
 entonces,
 \begin{align*}
-\Delta x_{1}&=\frac{-7}{5}+2=\frac{3}{5} & \Delta x_{2}&=-1+\frac{7}{5}=\frac{2}{5}\\
-\Delta x_{3}&=\frac{-4}{5}+1=\frac{1}{5} & \Delta
-x_{4}&=\frac{-1}{5}+
-\frac{4}{5}=\frac{3}{5}\\
-\Delta x_{5}&=\frac{3}{5}+\frac{1}{5}=\frac{4}{5} &\Delta x_{6}&=\frac{6}{5}-\frac{3}{5}=\frac{3}{5}\\
-\Delta x_{7}&=\frac{8}{5}-\frac{6}{5}=\frac{2}{5}& \Delta x_{8}&=2-\frac{8}{5}=\frac{2}{5}&\\
-\Delta x_{9}&=\frac{5}{2}-2=\frac{1}{2}& \Delta
-x_{10}&=3-\frac{5}{2}=\frac{1}{2}
+\Delta x_{1}&=\frac{-7}{5}+2=\frac{3}{5} &
+\Delta x_{2}&=-1+\frac{7}{5}=\frac{2}{5}\\
+\Delta x_{3}&=\frac{-4}{5}+1=\frac{1}{5} &
+\Delta x_{4}&=\frac{-1}{5}+\frac{4}{5}=\frac{3}{5}\\
+\Delta x_{5}&=\frac{3}{5}+\frac{1}{5}=\frac{4}{5} &
+\Delta x_{6}&=\frac{6}{5}-\frac{3}{5}=\frac{3}{5}\\
+\Delta x_{7}&=\frac{8}{5}-\frac{6}{5}=\frac{2}{5}&
+\Delta x_{8}&=2-\frac{8}{5}=\frac{2}{5}&\\
+\Delta x_{9}&=\frac{5}{2}-2=\frac{1}{2}&
+\Delta x_{10}&=3-\frac{5}{2}=\frac{1}{2}
 \end{align*}
 Y, por último, la norma de la partición es
 \[
 \left\Vert P\right\Vert=\max \left\{ \frac{3}{5},\frac{2}{5},\frac{1}{5},\frac{3}{5},%
 \frac{4}{5},\frac{3}{5},\frac{2}{5},\frac{2}{5},\frac{1}{2},\frac{1}{2}\right\}
-=\frac{4}{5} 
+=\frac{4}{5}
 \]
 
-\end{enumerate}
+\end{parrafonumerado}
 
-\begin{defi} 
-\textnormal{Sumas de Riemann para funciones. Sea \textit{$f$} una función definida en el intervalo \textit{$\left[ a,b\right] $} y sea \textit{$P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$} una partición de \textit{$\left[ a,b\right] $}. Si \textit{$x_{k}^{\ast }$} es un punto en el subintervalo \textit{$\left[ x_{k-1},x_{k}\right] $} y \textit{$\Delta x_{k}=x_{k}-x_{k-1},$} entonces la suma de Riemann para \textit{$f$} en el intervalo \textit{$\left[ a,b\right] $} está dada por}
+\begin{defi}[Sumas de Riemann para funciones]
+Sea $f$ una función definida en el intervalo $\left[ a,b\right] $ y sea $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ una partición de $\left[ a,b\right] $. Si $x_{k}^{\ast }$ es un punto en el subintervalo $\left[ x_{k-1},x_{k}\right] $ y $\Delta x_{k}=x_{k}-x_{k-1},$ entonces la suma de Riemann para $f$ en el intervalo $\left[ a,b\right] $ está dada por
 \[
 \sum_{k=1}^{n}f(x_{k}^{\ast })\Delta x_{k}
 \]
@@ -825,13 +745,13 @@ Y, por último, la norma de la partición es
 Veamos algunos ejemplos:
 
 \begin{ejemplo}
-\textnormal{Dadas la función \textit{$f(x)=16-x^{2}$} definida en el intervalo $\left[ 0,4\right]$, la partición \textit{$P=\left\{ 0,1,2,3,4\right\} $ y $x_{k}^{\ast }$} el extremo izquierdo de cada subintervalo, encuentre la suma de Riemann para \textit{$f$}.}
+Dadas la función $f(x)=16-x^{2}$ definida en el intervalo $\left[ 0,4\right]$, la partición $P=\left\{ 0,1,2,3,4\right\} $ y $x_{k}^{\ast }$ el extremo izquierdo de cada subintervalo, encuentre la suma de Riemann para $f$.
 \end{ejemplo}
 
-\textit{Solución.} Las longitudes de los subintervalos son
+\emph{Solución.} Las longitudes de los subintervalos son
 \[
-\bigtriangleup x_{1}=\bigtriangleup x_{2}=\bigtriangleup
-x_{3}=\bigtriangleup x_{4}=1
+\Delta x_{1}=\Delta x_{2}=\Delta
+x_{3}=\Delta x_{4}=1
 \]
 y los puntos $x_k^*$ son
 \[
@@ -840,186 +760,156 @@ x_{1}^{\ast }=0,\ x_{2}^{\ast }=1,\ x_{3}^{\ast }=2,\ x_{4}^{\ast }=3
 Teniendo entonces toda la información necesaria para la suma de Riemann, ya podemos calcularla:
 \begin{align*}
 \sum_{k=1}^{4}f(x_{k}^{\ast })\Delta x_{k}&=f(0)\Delta x_{1}+f(1)\Delta x_{2}+f(2)\Delta x_{3}+f(3)\Delta x_{4}\\
-&=16\cdot 1+15\cdot 1+12\cdot 1+7\cdot1=50 
+&=16\cdot 1+15\cdot 1+12\cdot 1+7\cdot1=50
 \end{align*}
 
 \begin{ejemplo}
-Encuentre la suma de Riemann para la función \textit{$f(x)=\frac{1}{x+1}$} en
-el intervalo $\left[ 0,3\right] $, con partición \textit{$P=\left\{0,0\text{,}6,1\text{,}2,1\text{,}6,2,2\text{,}5,3\right\}$}, y puntos en cada uno de los intervalos \textit{$x_{1}^{\ast }=0\text{,}3,$ $x_{2}^{\ast }=0\text{,}9,$ $x_{3}^{\ast }=1\text{,}4,$ $x_{4}^{\ast}=1\text{,}8,$ $x_{5}^{\ast }=$ $2\text{,}25,$ $x_{6}^{\ast }=2\text{,}75$.}
+Encuentre la suma de Riemann para la función $f(x)=\frac{1}{x+1}$ en
+el intervalo $\left[ 0,3\right] $, con partición $P=\left\{0,0.6,1.2,1.6,2,2.5,3\right\}$, y puntos en cada uno de los intervalos \textit{$x_{1}^{\ast }=0.3,$ $x_{2}^{\ast }=0.9,$ $x_{3}^{\ast }=1.4,$ $x_{4}^{\ast}=1.8,$ $x_{5}^{\ast }=$ $2.25,$ $x_{6}^{\ast }=2.75$.}
 \end{ejemplo}
 
-\textit{Solución}. Las longitudes de los subintervalos son
+\emph{Solución.} Las longitudes de los subintervalos son
 \begin{align*}
-\Delta x_{1}&=0\text{,}6-0=0\text{,}6 &
-\Delta x_{2}&=1\text{,}2-0\text{,}6=0\text{,}6\\
-\Delta x_{3}&=1\text{,}6-1\text{,}2=0\text{,}4&
-\Delta x_{4}&=2-1\text{,}6=0\text{,}4 \\
-\Delta x_{5}&=2\text{,}5-2=0\text{,}5&
-\Delta x_{6}&=3-2\text{,}5=0\text{,}5
+\Delta x_{1}&=0.6-0=0.6 &
+\Delta x_{2}&=1.2-0.6=0.6\\
+\Delta x_{3}&=1.6-1.2=0.4&
+\Delta x_{4}&=2-1.6=0.4 \\
+\Delta x_{5}&=2.5-2=0.5&
+\Delta x_{6}&=3-2.5=0.5
 \end{align*}
 Con ello, la suma de Riemann es
-{\small
-\begin{align*}
-\sum_{k=1}^{6}\hspace{-0.1cm}f(x_{k}^{\ast })&\Delta x_{k}\hspace{-0.1cm}=\hspace{-0.1cm}f(0\text{,}3)\Delta
-x_{1}+\hspace{-0.1cm}f(0\text{,}9)\Delta x_{2}+f(1\text{,}4)\Delta
-x_{3}+f(1\text{,}8)\Delta x_{4}\\&\quad
-+\hspace{-0.1cm}f(2\text{,}25)\Delta
-x_{5}+\hspace{-0.1cm}f(2\text{,}75)\Delta x_{6}\\
-&=(0\text{,}76)(0\text{,}6)+(0\text{,}52)(0\text{,}6)+(0\text{,}41)(0\text{,}4)+(0\text{,}35)(0\text{,}4)\\&\quad
-+(0\text{,}30)(0\text{,}5)+(0\text{,}26)(0\text{,}5)\\
-&=1\text{.}352
-\end{align*}
-}
+\begin{gather*}
+\begin{aligned}
+\sum_{k=1}^{6} f(x_{k}^{\ast })\Delta x_{k} &= f(0.3)\Delta
+x_{1}+ f(0.9)\Delta x_{2}+f(1.4)\Delta x_{3}\\[-0.9em]
+&\quad +f(1.8)\Delta x_{4} + f(2.25)\Delta x_{5}+ f(2.75)\Delta x_{6}\\
+&=(0.76)(0.6)+(0.52)(0.6)+(0.41)(0.4)\\
+&\quad +(0.35)(0.4)+(0.30)(0.5)+(0.26)(0.5)\\
+&=1.352
+\end{aligned}
+\end{gather*}
 
-%\begin{definicion}
-%El área $A$ de la región $\mathcal{R}$ que se encuentra debajo de la figura de la función continua y positiva $f,$ es igual al límite, cuando existe, de la suma de las áreas de los rectángulos de aproximación:
-%\end{definicion}
-%\[
-%A=\lim_{n\to\infty}[f(x_{1}^*)\Delta x_1+f(x_{2}^*)\Delta x_2+\cdots +f(x_{n}^*)\Delta x_n].
-%\]
-
-\begin{defi}
-\textnormal{Integral definida de una función acotada. Sean \textit{$f$} una función acotada en el intervalo \textit{$[a,b]$; $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$} una partición cualquiera del intervalo \textit{$[a,b]$}, y \textit{$x_{k}^{\ast }$}, un punto elegido en el subintervalo \textit{$\left[x_{k-1},x_{k}\right]$}. Entonces la integral entre $a$ y $b$ de $f$ está dada por}
+\begin{defi}[Integral definida de una función acotada]
+Sean $f$ una función acotada en el intervalo $[a,b]$; $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ una partición cualquiera del intervalo $[a,b]$, y $x_{k}^{\ast }$, un punto elegido en el subintervalo $\left[x_{k-1},x_{k}\right]$. Entonces la integral entre $a$ y $b$ de $f$ está dada por
 \begin{equation}\label{defintegral}
 \int_{a}^{b}f(x)dx=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }
 \overset{n}{\underset{k=1}{\sum }}f(x_{k}^{\ast })\Delta x_{k}
 \end{equation}
-\textnormal{siempre que el límite exista.}
+siempre que el límite exista.
 \end{defi}
 
-
-Si usamos la notación \textit{epsilon-delta} para límites, tenemos
+Si usamos la notación \emph{epsilon-delta} para límites, tenemos
 que la integral de la función $f$ en el intervalo $[a,b]$ es un número $I$ para el que se tiene que, dado un $\varepsilon >0,$ existe un número $\delta >0,$ tal que, para cada partición $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ con $\left\Vert
 P\right\Vert <\delta $ y cada elección de $x_{k}^{\ast }$ en el
-subintervalo $\left[ x_{k-1},x_{k}\right]$, se cumple $\left\vert \overset{n}{\underset{k=1}{\sum }}f(x_{k}^{\ast })\Delta x_{k}-I\right\vert
+subintervalo $\left[ x_{k-1},x_{k}\right]$, se cumple $\left\vert \sum_{k=1}^{n}f(x_{k}^{\ast })\Delta x_{k}-I\right\vert
 <\varepsilon .$
 
-Cuando se satisfaga esta condición, se dice que $f$ es \textit{integrable}
+Cuando se satisfaga esta condición, se dice que $f$ es \emph{integrable}
 en el intervalo $[a,b]$.
 
 \begin{ejemplo}
-\textnormal{Integral de una función constante} $f(x)=c$.
+Integral de una función constante $f(x)=c$.
 \end{ejemplo}
 Supongamos que $f$ es constante, es decir, $f(x)=c$, con $c\in\mathbb{R}$; entonces,
 \begin{align*}
 \int_{a}^{b}f(x)dx&=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }%
-\overset{n}{\underset{k=1}{\sum }}f(x_{k}^{\ast })\Delta x_{k}
-=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }\overset{n}{\underset{k=1}{\sum
-}}c\cdot \Delta x_{k}=c\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }\overset{n}{\underset{k=1}{\sum
-}}\Delta x_{k}\\
+\sum_{k=1}^{n}f(x_{k}^{\ast })\Delta x_{k}\\
+&=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }\sum_{k=1}^{n}c\cdot \Delta x_{k}\\
+&=c\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }\sum_{k=1}^{n}\Delta x_{k}\\
 &=c\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }
-\left( b-a\right)=c\left( b-a\right)
+\left( b-a\right)\\
+&=c\left( b-a\right)
 \end{align*}
 es decir,
 \[
 \int_{a}^{b} c\,dx = c(b-a)
 \]
-%\begin{center} Falta referencia 
-%\centerline{ \graf{Función escalonada izquierda}}
-
-%\fbox{$\displaystyle{\int_{a}^{b} c\, dx=c\left( b-a\right)}$}
-%\end{center}
 
 El siguiente teorema, que se demuestra usando la definición de integral, nos garantiza poder trabajar con particiones regulares, que son más manejables en el cálculo de integrales por medio de sumas de Riemann.
 
 \begin{teorema}
-\textnormal{Si \textit{$f$} es integrable en el intervalo \textit{$[a,b]$}, entonces}
-\begin{enumerate}
-\item $\displaystyle{\int_{a}^{b}f(x)dx}=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }\overset{n}{\underset{k=1}{\sum }}f(x_{k}^{\ast })\Delta x_{k}$, \textnormal{con \textit{$P$} una partición cualquiera de \textit{$[a,b]$} y \textit{$x_{k}^{\ast }$} un punto cualquiera del subintervalo \textit{$\left[ x_{k-1},x_{k}\right].$}}
+Si $f$ es integrable en el intervalo $[a,b]$, entonces
+\begin{parrafonumerado}
+\item ${\int_{a}^{b}f(x)dx}=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }\sum_{k=1}^{n}f(x_{k}^{\ast })\Delta x_{k}$, con $P$ una partición cualquiera de $[a,b]$ y $x_{k}^{\ast }$ un punto cualquiera del subintervalo $\left[ x_{k-1},x_{k}\right]$.
 
-\item $\displaystyle{\int_{a}^{b}f(x)dx}=\underset{n\rightarrow \infty }{\lim }\overset{n}{\underset{k=1}{\sum }}f(x_{k})\Delta x,$ con $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ una partición regular del intervalo $[a,b]$, $\Delta x=\frac{b-a}{n}$ y $x_{k}=a+k\Delta x=a+k\frac{b-a}{n},$ $1\leq k\leq n.$
-\end{enumerate}
+\item ${\int_{a}^{b}f(x)dx}=\underset{n\rightarrow \infty }{\lim }\sum_{k=1}^{n}f(x_{k})\Delta x,$ con $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ una partición regular del intervalo $[a,b]$, $\Delta x=\frac{b-a}{n}$\; y\; $x_{k}=a+k\Delta x=a+k\frac{b-a}{n},$ $1\leq k\leq n$.
+\end{parrafonumerado}
 \end{teorema}
 
-\begin{ejemplo} \textnormal{Una función que no es integrable. Tomemos el siguiente caso.}
-\end{ejemplo}
-Supongamos que $0\leq x\leq 3$ y que
+\begin{ejemplo} Una función que no es integrable. Tomemos el siguiente caso. Supongamos que $0\leq x\leq 3$ y que
 \[
-f(x)=\begin{cases}
-5 & \text{ si $x$ es racional}\\
--1 & \text{si $x$ es irracional}.
+f(x)=
+\begin{cases}
+  5 & \text{ si $x$ es racional}\\
+  -1 & \text{si $x$ es irracional}.
 \end{cases}
 \]
+Si tomamos una partición $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ de $[0,3]$, entonces tenemos dos posibilidades:
 
-Si tomamos una partición $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ de $[0,3]$,
-entonces tenemos dos posibilidades:
-\begin{itemize}[leftmargin=1.2em, itemindent=0pt,     labelwidth=\labelwidth,labelsep=0.5em,]
-
-
+\begin{parrafoitemize}
 \item Si se elige en el subintervalo $\left[ x_{k-1},x_{k}\right] $ un punto $x_{k}^{\ast }$ racional, se tiene
 \[
-\overset{n}{\underset{k=1}{\sum }}f(x_{k}^{\ast })\Delta x_{k}=5\left(
-3-0\right) =15
+  \overset{n}{\underset{k=1}{\sum }}f(x_{k}^{\ast })\Delta x_{k}=5\left(
+  3-0\right) =15
 \]
 
 \item Por otro lado, si se elige en el subintervalo $\left[x_{k-1},x_{k}\right]$ un punto $x_{k}^{\ast }$ irracional; entonces,
 \[
-\overset{n}{\underset{k=1}{\sum }}f(x_{k}^{\ast })\Delta x_{k}=-1\left(
-3-0\right)=-3
+  \overset{n}{\underset{k=1}{\sum }}f(x_{k}^{\ast })\Delta x_{k}=-1\left(
+  3-0\right)=-3
 \]
-\end{itemize}
+\end{parrafoitemize}
 Vemos, entonces, que, al hacer dos elecciones distintas de $x_k^*$, obtenemos resultados distintos del límite, entonces la función $f$ no es integrable en el intervalo $[0,3].$
+\end{ejemplo}
 
 \begin{teorema}\label{PropIntegral}
- \textnormal{Propiedades de la integral definida: sean \textit{$f$} y \textit{$g$} funciones integrables en el intervalo \textit{$[a,b]$}, y \textit{$\alpha$} y \textit{$\beta$}, constantes reales; entonces,}
-\renewcommand{\labelenumi}{\normalfont\theenumi.}
- \begin{enumerate}[leftmargin=1.2em, itemindent=0pt,       labelwidth=\labelwidth,labelsep=0.5em,]
+Propiedades de la integral definida: sean $f$ y $g$ funciones integrables en el intervalo $[a,b]$, y $\alpha$ y $\beta$, constantes reales; entonces,
+\begin{parrafonumerado}
+\item $\int_{a}^{a}f\left( x\right) dx=0$
+\item $\int_{a}^{b}f\left( x\right) dx=-\int_{b}^{a}f\left( x\right) dx$
 
+\item Propiedad aditiva:
+\[
+  \int_{a}^{b}\left( f(x)+g(x)\right)dx=\int_{a}^{b}f(x)dx+\int_{a}^{b}g(x)dx
+\]
 
- \item $\displaystyle\int_{a}^{a}f\left( x\right) dx=0$
- 
- 
- \item $\displaystyle\int_{a}^{b}f\left( x\right) dx=-\int_{b}^{a}f\left( x\right) dx$
- 
- 
- \item \textnormal{Propiedad aditiva:}
- \[
- \int_{a}^{b}\left( f(x)+g(x)\right)dx=\int_{a}^{b}f(x)dx+\int_{a}^{b}g(x)dx
- \]
-
- \item \textnormal{Propiedad homogénea:} \[\int_{a}^{b}\alpha f(x)dx=\alpha \int_{a}^{b}f(x)dx\]
- \item \textnormal{Propiedad de linealidad:} \[\int_{a}^{b}\left( \alpha f(x)+\beta g(x)\right) dx=\alpha \int_{a}^{b}f(x)dx+\beta \int_{a}^{b}g(x)dx\]
- \item \textnormal{Propiedad de aditividad en el intervalo:} \[\int_{a}^{b}f(x)dx=\int_{a}^{c}f(x)dx+\int_{c}^{b}f(x)dx\] \textnormal{para \textit{$c$} entre \textit{$a$} y \textit{$b$}}\footnote{La condición de que $c$ está entre $a$ y $b$ no es necesaria. Acá se incluye solo por ser el caso que se toma en la demostración de más adelante}
- \item \textnormal{Positividad:} $f\geq 0$ en $[a,b]$, entonces $\int_{a}^{b}f(x)dx\geq 0$.
- \item \textnormal{Monotonía: sean \textit{$f$} y \textit{$g$} tales que \textit{$f\left( x\right)\leq g\left( x\right) $} para todo \textit{$x\in \left[ a,b\right],$} entonces \textit{$\int_{a}^{b}f(x)dx\leq \int_{a}^{b}g(x)dx$.}}
- \item \textnormal{Desigualdad máximo-mínimo: si existen \textit{$f(c)=m $} y \textit{$f(d)=M$} los valores mínimo y máximo de \textit{$f$} en \textit{$[a,b]$}, entonces \textit{$m(b-a)\leq \int_{a}^{b}f(x)dx\leq M(b-a).$}}
- \end{enumerate}
+\item Propiedad homogénea: \[\int_{a}^{b}\alpha f(x)dx=\alpha \int_{a}^{b}f(x)dx\]
+\item Propiedad de linealidad: \[\int_{a}^{b}\left( \alpha f(x)+\beta g(x)\right) dx=\alpha \int_{a}^{b}f(x)dx+\beta \int_{a}^{b}g(x)dx\]
+\item Propiedad de aditividad en el intervalo: \[\int_{a}^{b}f(x)dx=\int_{a}^{c}f(x)dx+\int_{c}^{b}f(x)dx\] para $c$ entre $a$ y $b$\footnote{La condición de que $c$ está entre $a$ y $b$ no es necesaria. Acá se incluye solo por ser el caso que se toma en la demostración de más adelante}
+\item Positividad: $f\geq 0$ en $[a,b]$, entonces $\int_{a}^{b}f(x)dx\geq 0$.
+\item Monotonía: sean $f$ y $g$ tales que $f\left( x\right)\leq g\left( x\right) $ para todo $x\in \left[ a,b\right],$ entonces \textit{$\int_{a}^{b}f(x)dx\leq \int_{a}^{b}g(x)dx$.}
+\item Desigualdad máximo-mínimo: si existen $f(c)=m $ y $f(d)=M$ los valores mínimo y máximo de $f$ en $[a,b]$, entonces $m(b-a)\leq \int_{a}^{b}f(x)dx\leq M(b-a).$
+\end{parrafonumerado}
 \end{teorema}
-\clearpage
+
 \textit{Demostración}
-%\begin{proof}
-\begin{enumerate}[leftmargin=1.2em,   itemindent=0pt,       labelwidth=\labelwidth,labelsep=0.5em,]
-\item Como $b=a,$ $\triangle x_{k}=0$ y
-{\small
+\begin{parrafonumerado}
+\item Como $b=a$, $\triangle x_{k}=0$ y
 \[
 \int_{a}^{a}f\left( x\right) dx=\underset{\left\Vert P\right\Vert
- \rightarrow 0}{\lim }\overset{n}{\underset{k=1}{\sum }}f(x_{k}^{\ast
+\rightarrow 0}{\lim }\overset{n}{\underset{k=1}{\sum }}f(x_{k}^{\ast
 })\triangle x_{k}=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }0=0
 \]
-}
 
 \item Si $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ es una partición de $\left[
 a,b\right] ,$ donde $\triangle x_{k}=x_{k}-x_{k-1},$ así $-\triangle x_{k}=-\left( x_{k-1}-x_{k}\right) $ y
-{\footnotesize
 \begin{align*}
 \int_{a}^{b}f\left( x\right) dx&=\underset{\left\Vert P\right\Vert
- \rightarrow 0}{\lim }\overset{n}{\underset{k=1}{\sum }}f(x_{k}^{\ast
+\rightarrow 0}{\lim }\overset{n}{\underset{k=1}{\sum }}f(x_{k}^{\ast
 })\triangle x_{k}%\\&
 =-\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }%
 \overset{n}{\underset{k=1}{\sum }}f(x_{k}^{\ast })\left( -\triangle
 x_{k}\right) =-\int_{b}^{a}f\left( x\right) dx
 \end{align*}
-}
 
 \item Descompongamos la expresión en la integral:
-{\small
 \begin{align*}
 \int_{a}^{b}\left( f(x)+g(x)\right) dx&=\underset{\left\Vert
 P\right\Vert \rightarrow 0}{\lim }\overset{n}{\underset{k=1}{\sum }}\left(
 f+g\right) (x_{k}^{\ast })\Delta x_{k}\\
 &=\underset{\left\Vert P\right\Vert
 \rightarrow 0}{\lim }\left( \overset{n}{\underset{k=1}{\sum }}f(x_{k}^{\ast
-})\Delta x_{k}+\overset{n}{\underset{k=1}{\sum }}g(x_{k}^{\ast
+  })\Delta x_{k}+\overset{n}{\underset{k=1}{\sum }}g(x_{k}^{\ast
 })\Delta x_{k}\right)\\
 &=\underset{\left\Vert P\right\Vert
 \rightarrow 0}{\lim }\overset{n}{\underset{k=1}{\sum }}f(x_{k}^{\ast
@@ -1027,141 +917,111 @@ f+g\right) (x_{k}^{\ast })\Delta x_{k}\\
 \overset{n}{\underset{k=1}{\sum }}g(x_{k}^{\ast })\Delta x_{k}\\
 &=\int_{a}^{b}f(x)dx+\int_{a}^{b}g(x)dx
 \end{align*}
-}
 
 \item Igual que en el caso anterior,
-{\footnotesize
 \begin{align*}
 \int_{a}^{b}\alpha f(x)dx&=\underset{\left\Vert P\right\Vert \rightarrow 0%
 }{\lim }\overset{n}{\underset{k=1}{\sum }}\alpha f(x_{k}^{\ast })\Delta
-x_{k}%\\&
-=\alpha \underset{\left\Vert P\right\Vert \rightarrow 0%
+x_{k}\\
+&=\alpha \underset{\left\Vert P\right\Vert \rightarrow 0%
 }{\lim }\overset{n}{\underset{k=1}{\sum }}f(x_{k}^{\ast })\Delta x_{k}
-%\\&
 =\alpha \int_{a}^{b}f(x)dx
 \end{align*}
-}
 
 \item Se deduce de los puntos 3 y 4.
 
-\item Supongamos que la participación de $[a,b]$ es $P=\{x_{0},x_{1},x_{2},\ldots, x_{j}=c,x_{j+1},\ldots ,x_{n}\}$. Entonces, $P_{1}=\{x_{0},x_{1},x_{2},\ldots, x_{j}=c\}$ es una partición de $[a,c],$ y \newline$P_{2}=\{x_{j}=c,x_{j+1},\ldots ,x_{n}\}$ es partición de $[c,b]$; entonces,
-{\footnotesize
+\item Supongamos que la participación de $[a,b]$ es $P=\{x_{0},x_{1},x_{2},\ldots, x_{j}=c,x_{j+1},\ldots ,x_{n}\}$. Entonces, $P_{1}=\{x_{0},x_{1},x_{2},\ldots, x_{j}=c\}$ es una partición de $[a,c],$ y $P_{2}=\{x_{j}=c,x_{j+1},\ldots ,x_{n}\}$ es partición de $[c,b]$; entonces,
 \begin{align*}
-\int_{a}^{b}f(x)dx&=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }\overset{n}{\underset{k=1}{\sum }}f(x_{k}^{\ast })\Delta x_{k}%\\&
-=\underset{\left\Vert P_{1}\right\Vert \rightarrow 0}{
+\int_{a}^{b}f(x)dx&=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }\overset{n}{\underset{k=1}{\sum }}f(x_{k}^{\ast })\Delta x_{k}\\
+&=\underset{\left\Vert P_{1}\right\Vert \rightarrow 0}{
 \lim }\overset{j}{\underset{k=1}{\sum }}f(x_{k}^{\ast })\Delta x_{k}+%
-\underset{\left\Vert P_{2}\right\Vert \rightarrow 0}{\lim }\overset{n}{%
-\underset{k=j}{\sum }}f(x_{k}^{\ast })\Delta x_{k}\\
+\underset{\left\Vert P_{2}\right\Vert \rightarrow 0}{\lim }\overset{n}{\underset{k=j}{\sum }}f(x_{k}^{\ast })\Delta x_{k}\\
 &=\int_{a}^{c}f(x)dx+\int_{c}^{b}f(x)dx
 \end{align*}
-}
 
 \item Si $f\geq 0$, entonces $f(x_k^*)\geq 0$ para todo $x_k^*$ en $[a,b]$, y dado que por definición $\Delta x_{k}\geq 0$, entonces $f(x_k^*) \Delta x_{k}\geq 0$; por tanto,
-{\small
 \[
 \overset{n}{\underset{k=1}{\sum }}f(x_{k}^{\ast })\Delta x_{k}\geq 0
 \]
-}
 y
-{\small
 \[
 \underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }%
 \overset{n}{\underset{k=1}{\sum }}f(x_{k}^{\ast })\Delta x_{k}\geq 0
 \]
-}
 lo que nos lleva a que
-{\small
 \[
 \int_{a}^{b}f(x)dx=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }
 \overset{n}{\underset{k=1}{\sum }}f(x_{k}^{\ast })\Delta x_{k}\geq 0
 \]
-}
 
 \item Sea $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ una partición de $[a,b]$. Por hipótesis, $f\left( x_{k}\right) \leq g\left( x_{k}\right)$ para $1\leq k\leq n,$ entonces
-{\small
 \[
 \int_{a}^{b}f(x)dx=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }
 \overset{n}{\underset{k=1}{\sum }}f(x_{k}^{\ast })\Delta x_{k}\leq
 \underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }\overset{n}{\underset{
 k=1}{\sum }}g(x_{k}^{\ast })\Delta x_{k}=\int_{a}^{b}g(x)dx
 \]
-}
 
 \item Por hipótesis, $m\leq f(x)\leq M$ para todo $x\in [a,b],$ entonces por la propiedad $8$ se tiene que
 \[
 \int_{a}^{b}mdx\leq \int_{a}^{b}f(x)dx\leq \int_{a}^{b}Mdx
 \]
-
 y, por tanto,
-
 \[
 m(b-a)\leq \int_{a}^{b}f(x)dx\leq M(b-a)
 \]
-\end{enumerate}
+\end{parrafonumerado}
 
-%\end{proof}
-
-{\scriptsize
 \textbf{Nota:} tengamos en cuenta que el valor de la integral
 definida no depende de la variable de integración; es decir, si la función depende de $x$ e integramos con respecto a $x$, o si depende de $u$ e integramos con respecto a $u$, etc., el valor de la integral no cambia. Solo depende de la función y de los límites de integración:
 \[
 \int_a^bf(x)\,dx=\int_a^b f(u)\, du=\ldots
 \]
-}
 
-\begin{teorema}
+\begin{teorema}\leavevmode
 \begin{parrafonumerado}
- \item \textnormal{Si \textit{$f$} es una función continua y creciente en el intervalo \textit{$[a,b]$}, entonces \textit{$f$} es integrable en \textit{$[a,b].$}}
- \item \textnormal{Si \textit{$f$} es una función continua y decreciente en el intervalo \textit{$[a,b]$}, entonces \textit{$f$} es integrable en \textit{$[a,b].$}}
+\item Si $f$ es una función continua y creciente en el intervalo $[a,b]$, entonces $f$ es integrable en $[a,b].$
+\item Si $f$ es una función continua y decreciente en el intervalo $[a,b]$, entonces $f$ es integrable en $[a,b].$
 \end{parrafonumerado}
 \end{teorema}
-
 
 \textit{Demostración}
 
 \begin{parrafonumerado}
 \item Sea $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ una partición de $[a,b].$ Como $f$ es continua en $[x_{k-1},x_{k}]$, entonces $f$ toma estos valores: máximo $M_{k}$ y mínimo $m_{k}$ en $[x_{k-1},x_{k}]$ para $1\leq k\leq n$. Así que
-{\small
 \[
 \overset{n}{\underset{k=1}{\sum }}m_{k}\Delta x_{k}\leq \overset{n}{%
 \underset{k=1}{\sum }}f(x_{k}^{\ast })\Delta x_{k}\leq \overset{n}{%
 \underset{k=1}{\sum }}M_{k}\Delta x_{k}
 \]
-}
 para $x_{k}^{\ast }\in [x_{k-1},x_{k}]$.
 
 Ahora, como $f$ es creciente, los intervalos $[m_{k},M_{k}]$ forman una
 partición de $[f(a),f(b)]$ y
-{\small
 \[
 \overset{n}{\underset{k=1}{\sum }}M_{k}\Delta x_{k}-\overset{n}{\underset{k=1}{\sum }}m_{k}\Delta x_{k}\leq \overset{n}{\underset{k=1}{\sum }}\left( M_{k}-m_{k}\right) \left\Vert P\right\Vert =\left\Vert P\right\Vert
 (f(b)-f(a))
 \]
-}
 luego
-{\small
 \[
 \underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }\overset{n}{\underset{k=1}{\sum }}M_{k}\Delta x_{k}=\underset{\left\Vert P\right\Vert\rightarrow 0}{\lim }\overset{n}{\underset{k=1}{\sum }}m_{k}\Delta x_{k}=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }\overset{n}{\underset{k=1}{\sum }}f(x_{k}^{\ast })\Delta x_{k}
 \]
-}
 y $f$ es integrable en $[a,b]$.
 
-\item Este caso es similar al anterior. 
+\item Este caso es similar al anterior.
 \end{parrafonumerado}
 
 \begin{teorema}
 \begin{parrafonumerado}
-\item \textnormal{Si \textit{$f$} es una función continua en \textit{$[a,b]$}, entonces \textit{$f$} es
-uniformemente continua en \textit{$[a,b]$}. Es decir, dado un \textit{$\varepsilon >0$},
-existe un \textit{$\delta >0$} tal que para cada par de puntos \textit{$x,\ y$} en \textit{$[a,b],$} si \textit{$\left\vert x-y\right\vert <\delta ,$} entonces \textit{$\left\vert f\left( x\right)-f\left( y\right) \right\vert <\varepsilon .$}}
+\item Si $f$unción continua en $[a,b]$s $f$
+uniformemente continua en $[a,b]$. Es decir, dado un $\varepsilon >0$,
+existe un $\delta >0$ tal que para cada par de puntos $x,\ y$ en $[a,b]$, si $\left\vert x-y\right\vert <\delta$, entonces $\left\vert f\left( x\right)-f\left( y\right) \right\vert <\varepsilon$.
 
-\item \textnormal{Si \textit{$f$} es una función continua en \textit{$[a,b]$}, entonces \textit{$f$} es integrable en \textit{$[a,b].$}}
+\item Si $f$ es una función continua en $[a,b]$, entonces $f$ es integrable en $[a,b]$.
 \end{parrafonumerado}
 \end{teorema}
 
-
 \textit{Demostración}
-
 
 \begin{parrafonumerado}
 
@@ -1179,64 +1039,49 @@ a_{2}<b_{2},\ \left\vert b_{2}-a_{2}\right\vert <\delta $ y
 $\left\vert f\left( b_{2}\right) -f\left( a_{2}\right) \right\vert
 \geq \varepsilon _{0}$.
 
-Ahora bien, por inducción matemática, tenemos entonces que para $\delta _{n}=\frac{b-a}{2^{n}}$ existen $a_{n},b_{n}$ \ en $[a,b]$ con $%
-a_{n}<b_{n},\ \left\vert b_{n}-a_{n}\right\vert <\delta $ y\linebreak
+\textls[-15]{Ahora bien, por inducción matemática, tenemos entonces que para $\delta _{n}=\frac{b-a}{2^{n}}$ existen $a_{n},b_{n}$ en $[a,b]$ con
+$a_{n}<b_{n}$, $\left\vert b_{n}-a_{n}\right\vert <\delta $ y
 $\left\vert f\left( b_{n}\right) -f\left( a_{n}\right) \right\vert
-\geq \varepsilon _{0}.$ Con ello, el conjunto $A=\left\{ a_{n}\right\} _{n\in \mathbb{Z}_{+}}$ es no vací%
-o y acotado superiormente. Si $\alpha=\text{Sup}A$, entonces\footnote{ El
+\geq \varepsilon _{0}$.} Con ello, el conjunto $A=\left\{ a_{n}\right\} _{n\in \mathbb{Z}_{+}}$ es no vacío y acotado superiormente. Si $\alpha=\text{Sup}A$, entonces\footnote{El
 $\text{Sup}A$ es el valor más pequeño entre las cotas superiores
-de $A$.} está en el intervalo $\lbrack a,b].$
+de $A$.} está en el intervalo $\lbrack a,b]$.
 
-Además, como $f$ es continua en $[a,b]$, entonces $f$ es continua en $\alpha $; luego, para $%
-\varepsilon _{0}$ existe $\delta ,$ tal que, si $x\in \left( \alpha
+\textls[-15]{Además, como $f$ es continua en $[a,b]$, entonces $f$ es continua en $\alpha $; luego, para $\varepsilon _{0}$ existe $\delta ,$ tal que, si $x\in \left( \alpha
 -\delta ,\alpha +\delta \right) $, entonces $\left\vert f\left(
 x\right) -f\left( \alpha \right) \right\vert <\frac{\varepsilon
-_{0}}{2}$.
+_{0}}{2}$.}
 
 Para $\delta >0,$ existe $n\in \mathbb{Z}_{+},$ tal que $\delta _{n}=\frac{1%
-}{2^{n}}<\varepsilon _{0},$ luego, $\left[ a_{n},b_{n}\right] \subset \left(
-\alpha -\delta ,\alpha +\delta \right) ,$ así que $\left\vert f\left(
-a_{n}\right) -f\left( \alpha \right) \right\vert <\frac{\varepsilon _{0}}{2}$
-y $\left\vert f\left( b_{n}\right) -f\left( \alpha \right) \right\vert <%
-\frac{\varepsilon _{0}}{2}.$
+}{2^{n}}<\varepsilon _{0}$, luego, $\left[ a_{n},b_{n}\right] \subset \left(
+\alpha -\delta ,\alpha +\delta \right)$, así que $\left\vert f\left(
+a_{n}\right) -f\left( \alpha \right) \right\vert <\frac{\varepsilon _{0}}{2}$ y $\left\vert f\left( b_{n}\right) -f\left( \alpha \right) \right\vert < \frac{\varepsilon _{0}}{2}$.
 
-Luego \
-{\footnotesize
+Luego
 \begin{align*}
 \left\vert f\left( b_{n}\right) -f\left( a_{n}\right) \right\vert
-&=\left\vert f\left( b_{n}\right) -\alpha +\alpha -f\left( a_{n}\right)
-\right\vert \leq \left\vert f\left( b_{n}\right) -\alpha \right\vert
+&=\left\vert f\left( b_{n}\right) -\alpha +\alpha -f\left( a_{n}\right) \right\vert\\
+&\leq \left\vert f\left( b_{n}\right) -\alpha \right\vert
 +\left\vert \alpha -f\left( a_{n}\right) \right\vert <\varepsilon _{0},
 \end{align*}
-}
 lo que es una contradicción.
 
-\item Sean $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ una partición de $[a,b]$
-y $\varepsilon >0.$ \ Como $f$ es continua en $[x_{k-1},x_{k}]$,
-entonces $f$ toma valores máximo $f(d_{k})$ y mínimo
-$f(c_{k})$ \ $1\leq k\leq n.$ \ Así que \
-{\small
+\item Sean $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ una partición de $[a,b]$ y $\varepsilon >0$. Como $f$ es continua en $[x_{k-1},x_{k}]$, entonces $f$ toma valores máximo $f(d_{k})$ y mínimo $f(c_{k})$ \ $1\leq k\leq n$. Así que
 \[
 \overset{n}{\underset{k=1}{\sum }}f(c_{k})\Delta x_{k}\leq \overset{n}{%
 \underset{k=1}{\sum }}f(x_{k}^{\ast })\Delta x_{k}\leq \overset{n}{%
 \underset{k=1}{\sum }}f(d_{k})\Delta x_{k}
 \]
-}
-
-para $x_{k}^{\ast }\in
-\lbrack x_{k-1},x_{k}]$
+para $x_{k}^{\ast }\in \lbrack x_{k-1},x_{k}]$
 
 Como $f$ es uniformemente continua en $[x_{k-1},x_{k}]$, $1\leq
 k\leq n$,\ existe $\delta _{k},$ tal que, si $\left\vert
 d_{k}-c_{k}\right\vert <\delta _{k}$, entonces $\left\vert
 f\left( d_{k}\right) -f\left( c_{k}\right) \right\vert <\frac{\varepsilon }{%
-b-a}.$
+b-a}$.
 
-Supongamos ahora que $\delta =\text{máx}\left\{ \delta _{k}:1\leq
-k\leq n\right\}.$
+Supongamos ahora que $\delta =\text{máx}\left\{ \delta _{k}:1\leq k\leq n\right\}$.
 
-Si $\left\Vert P\right\Vert <\delta ,$ entonces
-{\small
+Si $\left\Vert P\right\Vert <\delta$, entonces
 \begin{align*}
 \left\vert \overset{n}{\underset{k=1}{\sum }}f(d_{k})\Delta x_{k}-%
 \overset{n}{\underset{k=1}{\sum }}f(c_{k})\Delta x_{k}\right\vert &=%
@@ -1246,11 +1091,7 @@ f(d_{k})-f(c_{k})\right\vert \Delta x_{k}\\
 \overset{n}{\underset{k=1}{\sum }}\Delta x_{k}%\\&
 =\frac{\varepsilon }{b-a}\left( b-a\right) =\varepsilon
 \end{align*}
-}
-
 luego
-
-{\small
 \[
 \underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }\overset{n}{\underset%
 {k=1}{\sum }}f(c_{k})\Delta x_{k}=\underset{\left\Vert P\right\Vert
@@ -1258,75 +1099,20 @@ luego
 x_{k}=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }\overset{n}{%
 \underset{k=1}{\sum }}f(x_{k}^{\ast })\Delta x_{k}
 \]
-}
-
 y $f$ es integrable en $[a,b].$
 \end{parrafonumerado}
 
 \begin{defi}
-\textnormal{{Integral definida de una función continua}. Sea \textit{$P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$} una partición regular del
-intervalo \textit{$[a,b]$, $\Delta x=\frac{b-a}{n}$} y \textit{$x_{k}=a+k\Delta x=a+k\frac{b-a}{n}$} para \textit{$1\leq k\leq n$}. Entonces, la integral entre \textit{$a$} y \textit{$b$} de
+Integral definida de una función continua.
+Sea $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ una partición regular del
+intervalo $[a,b]$, $\Delta x=\frac{b-a}{n}$ y $x_{k}=a+k\Delta x=a+k\frac{b-a}{n}$ para $1\leq k\leq n$. Entonces, la integral entre $a$ y $b$ de
 una función continua $f(x)$ es dada por
 \[
 \int_{a}^{b}f(x)dx=\underset{n\rightarrow \infty }{\lim }\overset{n}{%
 \underset{k=1}{\sum }}f(x_{k})\Delta x
 \]
- cada vez que el límite exista.}
+cada vez que el límite exista.
 \end{defi}
-
-%\textcolor{green}{quitar}
-%\section{\textcolor[rgb]{1.00,0.00,0.00}{Funciones escalonadas}}\textcolor{green}{quitar}
-%
-%\textcolor{green}{agregar}\\
-
-%%\textbf{NOTA: Funciones escalonadas}
-%%
-%%En la definición de integral definida aparecen de manera natural las funciones escalonadas, es decir, aquellas definidas a trozos que en cada intervalo $[a,b]$ toma un número finito de valores. Un ejemplo conocido es la función \textit{parte entera}.
-%%
-%%Ahora bien, dada una función $f(x)$ podemos asociarle, a manera de \textit{aproximación}, una función escalonada $s(x)$ por medio de la siguiente fórmula en el intervalo $[a,b]$. La primera usará el extremo derecho y la segunda el extremo izquierdo \textcolor[rgb]{1.00,0.00,0.00}{¿de qué?}.
-%%
-%%\[
-%%s(x)=f(x_{k}),\text{ para } x_{k-1}\leq x<x_{k}.
-%%\]
-%%Con ello, $a+(k-1)\Delta x\leq x<a+k\Delta x$ o también, $k-1\leq \frac{x-a}{\Delta x}<k$ es decir, $k=\left\lfloor \frac{x-a}{\Delta x}\right\rfloor +1$, por tanto, la fórmula puede verse como
-%%\[
-%%s(x)=f(x_{k}),\ k=\left\lfloor \frac{x-a}{\Delta x}\right\rfloor +1.
-%%\]
-%%Si $s_i$ es la función escalonada al tomar el extremo izquierdo, entonces,
-%%\[
-%%s_{i}(x)=f\left(a+\left(\left\lfloor \frac{x-a}{\Delta x}\right\rfloor +1\right)\Delta
-%%x\right).
-%%\]
-%%Y si $s_d$ es la función escalonada al tomar el extremo derecho, entonces,
-%%\[
-%%s_{d}(x)=f\left(a+\left\lfloor \frac{x-a}{\Delta x}\right\rfloor \Delta x\right).
-%%\]
-%%
-%%
-%%\begin{ejemplo}
-%%si $f(x)=x^{2},a=-1,b=2,n=5,$ obtenemos las siguientes funciones escalonadas
-%%de aproximación:
-%%\end{ejemplo}
-%%
-%%\textcolor[rgb]{1.00,0.00,0.00}{¿?} $(-1+(\left\lfloor \frac{x+1}{3/5}\right\rfloor +1)(3/5))^{2},x^{2}$
-%%
-%%\textcolor[rgb]{1.00,0.00,0.00}{señalar la escala en las figuras (subdivisiones)}
-%%
-%%\begin{center}
-
-%%\includegraphics[scale=0.07]{graf2.pdf}
-%%
-%%%\end{center}
-%%
-%%
-%%Y también, \textcolor[rgb]{1.00,0.00,0.00}{¿?} $(-1+\left\lfloor \frac{x+1}{3/5}\right\rfloor (3/5))^{2},x^{2}$
-%%
-%%\begin{center}
-
-%%\includegraphics[scale=0.07]{graf3.pdf}
-%%
-%%\end{center}
-%%
 
 \section{Integrales usando la definición}
 
@@ -1334,13 +1120,12 @@ En esta sección, usando la definición de integral, se encuentra el
 valor de algunas integrales definidas y se obtienen fórmulas para
 otras.
 
-
 \begin{ejemplo}
-\textnormal{Usemos la definición para calcular las siguientes integrales:}
+Usemos la definición para calcular las siguientes integrales:
 \end{ejemplo}
-\begin{enumerate}[leftmargin=1.2em,   itemindent=0pt,       labelwidth=\labelwidth,labelsep=0.5em,]
-	
-\item \textnormal{Encontremos el valor de} $\displaystyle{\int_{0}^{2}(2x+1)dx}$.
+\begin{parrafonumerado}
+
+\item Encontremos el valor de $\int_{0}^{2}(2x+1)dx$.
 
 De la integral dada podemos identificar que
 \begin{align*}
@@ -1365,10 +1150,10 @@ Entonces, y recordando las fórmulas de la sección \ref{FormSumas} del capítul
 
 es decir,
 \[
-\int_{0}^{2}(2x+1)dx=6 
+\int_{0}^{2}(2x+1)dx=6
 \]
 
-\item \textnormal{Calculemos ahora} $\displaystyle{\int_{-2}^{2}(3x^{2}-x+3)dx}$.
+\item Calculemos ahora $\int_{-2}^{2}(3x^{2}-x+3)dx$.
 
 De la integral tenemos que $\Delta x=\frac{b-a}{n}=\frac{2-\left( -2\right)}{n}=\frac{4}{n}$, $x_{k}=a+k\Delta x=-2+\frac{4k}{n}$ y $f\left( x\right)=3x^{2}-x+3$. Entonces,
 \begin{align*}
@@ -1399,31 +1184,27 @@ n^{2}}{2}+\frac{n}{2}\right) +\frac{68}{n}\cdot n\right) \\
 \end{align*}
 }
 
-\end{enumerate}
-
+\end{parrafonumerado}
 
 En los siguientes ejemplos encontramos algunas fórmulas de integrales que se usarán más adelante.
-
 
 \begin{ejemplo}
 \textnormal{Usando la definición de integral para funciones continuas, se
 obtienen las siguientes fórmulas:}
 \end{ejemplo}
 
-\begin{enumerate}[leftmargin=1.2em,   itemindent=0pt,       labelwidth=\labelwidth,labelsep=0.5em,]
- \item { \textnormal{Integral de la función constante}}, $f(x)=c$:
-{\small
+\begin{parrafonumerado}
+\item Integral de la función constante, $f(x)=c$:
 \begin{align}\label{c}
 \int_{a}^{b}cdx&=\underset{n\rightarrow \infty }{\lim }\sum\limits_{k=1}^{n}c\frac{b-a}{n}=\underset{n\rightarrow \infty }{\lim }\frac{b-a}{n}\sum\limits_{k=1}^{n}c=\underset{n\rightarrow \infty }{\lim }\left( \frac{b-a}{n}\right) cn\notag\\
 &=\underset{n\rightarrow \infty }{\lim }c(b-a)=c(b-a)
-\\\text{entonces}
-\notag\\
-&\qquad\text{\fbox{$\displaystyle{\int_{a}^{b} c\, dx=c\left( b-a\right)}$}}
 \end{align}
-}
+entonces
+\begin{empheq}[box=\fbox]{align}
+\int_{a}^{b} c\, dx=c\left( b-a\right)
+\end{empheq}
 
-\item { \textnormal{Integral de la función identidad,}} $f(x)=x$:
-{\small
+\item Integral de la función identidad, $f(x)=x$:
 \begin{align*}
 \int_{a}^{b}xdx &= \underset{n\rightarrow \infty }{\lim }\sum\limits_{k=1}^{n}\left( a+k\frac{b-a}{n}\right) \frac{b-a}{n} \\
 &=\underset{n\rightarrow \infty }{\lim }\sum\limits_{k=1}^{n}\left( a\left( \frac{b-a}{n}\right) +k\left( \frac{b-a}{n}\right) ^{2} \right) \\
@@ -1433,18 +1214,14 @@ obtienen las siguientes fórmulas:}
 &=\underset{n\rightarrow \infty }{\lim }\left( a\left( b-a\right) + \frac{\left( b-a\right) ^{2}}{2} + \frac{\left( b-a\right) ^{2}}{2n} \right) \\
 &= a\left( b-a\right) + \frac{\left( b-a\right) ^{2}}{2} = \frac{2ab-2a^{2}+b^{2}-2ab+a^{2}}{2} = \frac{b^{2}-a^{2}}{2}
 \end{align*}
-}
-
 entonces
-{\small
-\begin{equation}\label{x}
-\text{\fbox{$\displaystyle{\int_{a}^{b}x\, dx=\frac{b^{2}-a^{2}}{2}}$}}
-\end{equation}
-}
+\begin{empheq}[box=\fbox]{equation}
+\int_{a}^{b}x\, dx=\frac{b^{2}-a^{2}}{2} \label{x}
+\end{empheq}
 
 \item Integral de la función $f(x)=x^2$:
-{\footnotesize
-\begin{align*}
+\begin{gather*}
+\begin{aligned}
 &\int_{a}^{b}x^{2}dx=\lim_{n\to \infty}\sum_{k=1}^{n}\left( a+k\frac{b-a}{n}%
 \right) ^{2}\frac{\left( b-a\right) }{n} \\
 &=\underset{n\rightarrow \infty }{\lim }\sum\limits_{k=1}^{n}\left(
@@ -1479,19 +1256,16 @@ a^{2}+a\left( b-a\right) ^{2}+\frac{a\left( b-a\right) ^{2}}{n}+\frac{%
 %&
 =\left( b-a\right) \frac{(ab+b^{2}+a^{2})}{3} \\
 &=\frac{ab^{2}+b^{3}+a^{2}b-a^{2}b-ab^{2}-a^{3}}{3}=\frac{b^{3}-a^{3}}{3}
-\end{align*}
-}
+\end{aligned}
+\end{gather*}
 es decir,
+\begin{empheq}[box=\fbox]{equation}
+\int_{a}^{b}x^2\, dx=\frac{b^{3}-a^{3}}{3}\label{x2}
+\end{empheq}
 
-{\small
-\begin{equation}\label{x2}
-\text{\fbox{$\displaystyle{\int_{a}^{b}x^2\, dx=\frac{b^{3}-a^{3}}{3}}$}}
-\end{equation}
-}
-
-\item { \textnormal{Integral de la función}} $f(x)=x^3$:
-{\footnotesize
-\begin{align*}
+\item  Integral de la función $f(x)=x^3$:
+\begin{gather*}
+\begin{aligned}
 &\int_{a}^{b}x^{3}dx=\underset{n\rightarrow \infty }{\lim }\sum\limits_{k=1}^{n}\left( a+k\frac{b-a}{n}\right) ^{3}\frac{\left(
 b-a\right) }{n}\\
 &=\underset{n\rightarrow \infty }{\lim }\sum\limits_{k=1}^{n}
@@ -1528,30 +1302,29 @@ n}{2}\right)\right. \\
 b-a\right) ^{3}+\frac{\left( b-a\right) ^{4}}{4}%\\&
 =\allowbreak \frac{1}{4}
 b^{4}-\frac{1}{4}a^{4}=\frac{b^{4}-a^{4}}{4}
-\end{align*}
-}
-
+\end{aligned}
+\end{gather*}
 es decir,
-{\small
-\begin{equation}\label{x3}
-\text{\fbox{$\displaystyle{\int_{a}^{b}x^3\, dx=\frac{b^{4}-a^{4}}{4}}$}}
-\end{equation}
-}
+\begin{empheq}[box=\fbox]{equation}
+\int_{a}^{b}x^3\, dx=\frac{b^{4}-a^{4}}{4}\label{x3}
+\end{empheq}
 
-\item { \textnormal{Tomemos ahora $m$ un entero positivo y calculemos la integral de}} $f\left( x\right) =x^{m}$:
-
-\textnormal{Si inicialmente tomamos la integral $\int_{0}^{b}x^{m}dx$, es decir, con límite inferior igual a $0$, tenemos}
-\begin{align*}
-\int_{0}^{b}x^{m}dx&=\underset{n\rightarrow \infty }{\lim }%
+\item  Tomemos ahora $m$ un entero positivo y calculemos la integral de $f\left( x\right) =x^{m}$. Si inicialmente tomamos la integral $\int_{0}^{b}x^{m}dx$, es decir, con límite inferior igual a $0$, tenemos
+\begin{equation*}
+\int_{0}^{b}x^{m}dx=\underset{n\rightarrow \infty }{\lim }%
 \sum\limits_{k=1}^{n}\left( k\frac{b}{n}\right) ^{m}\frac{b}{n}
 =\underset{n\rightarrow \infty }{\lim }\left( \frac{b}{n}\right)
-^{m+1}\sum\limits_{k=1}^{n}k^{m}\\
-&\quad \intertext{y por el teorema \ref{SumPotenDeK} se tiene que}\\
-&=\underset{n\rightarrow \infty }{\lim }\left( \frac{b}{n}\right)
-^{m+1}\left( \frac{n^{m+1}}{m+1}+f\left( n\right) \ \right)\\
-&\quad \intertext{donde $f\left( n\right)$ es un polinomio de grado $m$ en la variable $n$.}\\
-&=\underset{n\rightarrow \infty }{\lim }b^{m+1}\left( \frac{1}{m+1}+\frac{f\left( n\right) }{n^{m+1}}\right)=\frac{b^{m+1}}{m+1}
-\end{align*}
+^{m+1}\sum\limits_{k=1}^{n}k^{m}
+\end{equation*}
+y por el teorema \ref{SumPotenDeK} se tiene que
+\begin{equation*}
+=\underset{n\rightarrow \infty }{\lim }\left( \frac{b}{n}\right)
+^{m+1}\left( \frac{n^{m+1}}{m+1}+f\left( n\right)\right)
+\end{equation*}
+donde $f\left( n\right)$ es un polinomio de grado $m$ en la variable $n$.
+\begin{equation*}
+=\underset{n\rightarrow \infty }{\lim }b^{m+1}\left( \frac{1}{m+1}+\frac{f\left( n\right) }{n^{m+1}}\right)=\frac{b^{m+1}}{m+1}
+\end{equation*}
 
 Por otro lado,
 \begin{align*} \int_{a}^{b}x^{m}dx&=\int_{a}^{0}x^{m}dx+\int_{0}^{b}x^{m}dx%\\&
@@ -1560,25 +1333,23 @@ Por otro lado,
 =\frac{b^{m+1}-a^{m+1}}{m+1}
 \end{align*}
 con lo cual entonces,
-\begin{equation}\label{xm}
-\text{\fbox{$\displaystyle{\int_{a}^{b}x^m\, dx=\frac{b^{m+1}-a^{m+1}}{m+1}}$}}
-\end{equation}
+\begin{empheq}[box=\fbox]{equation}
+\int_{a}^{b}x^m\, dx=\frac{b^{m+1}-a^{m+1}}{m+1}\label{xm}
+\end{empheq}
 
-
-\item { \textnormal{Tomemos ahora algunas funciones trigonométricas. Iniciemos con}} $\cos x$,
-{\small
-\begin{align*}
-\int_{0}^{b}\cos xdx&=\underset{n\rightarrow \infty }{\lim }\sum\limits_{k=1}^{n}\cos \left( k\frac{b}{n}\right) \frac{b}{n}
-=\underset{n\rightarrow \infty }{\lim }\frac{b}{n}\sum\limits_{k=1}^{n}%
-\cos \left( k\frac{b}{n}\right)\\
-&\ \intertext{ aplicando el teorema \ref{SumSenoCoseno} $a$ con $x=\frac{b}{n}$, resulta}\\
-&=\underset{n\rightarrow \infty }{\lim }\frac{b}{n}\frac{\sen\left( \left( n+\frac{1}{2}\right) \frac{b}{n}\right) -\sen\left( \frac{1}{2}\frac{b}{n}%
+\item Tomemos ahora algunas funciones trigonométricas. Iniciemos con $\cos x$,
+\begin{equation*}
+\int_{0}^{b}\cos x\,dx=\underset{n\rightarrow \infty }{\lim }\sum\limits_{k=1}^{n}\cos \left( k\frac{b}{n}\right) \frac{b}{n}
+=\underset{n\rightarrow \infty }{\lim }\frac{b}{n}\sum\limits_{k=1}^{n}
+\cos \left( k\frac{b}{n}\right)
+\end{equation*}
+aplicando el teorema \ref{SumSenoCoseno}, $a$ con $x=\frac{b}{n}$, resulta
+\begin{equation*}
+=\underset{n\rightarrow \infty }{\lim }\frac{b}{n}\frac{\sen\left( \left( n+\frac{1}{2}\right) \frac{b}{n}\right) -\sen\left( \frac{1}{2}\frac{b}{n}%
 \right) }{2\sen\left( \frac{1}{2}\frac{b}{n}\right) }
-\end{align*}
-}
+\end{equation*}
 
-\text{sustituyendo $u=\frac{b}{n}$, que tiende a cero cuando $n\rightarrow \infty$,}
-{\small
+sustituyendo $u=\frac{b}{n}$, que tiende a cero cuando $n\rightarrow \infty$,
 \begin{align*}
 &=\underset{u\rightarrow 0}{\lim }u\frac{\sen\left( b+\frac{1}{2}u\right)
 -\sen\left( \frac{1}{2}u\right) }{2\sen\left( \frac{1}{2}u\right) }\\&
@@ -1586,22 +1357,15 @@ con lo cual entonces,
 }{u}}\\
 &=\underset{u\rightarrow 0}{\lim }\frac{\sen b\cos 0+0-0}{2\cdot \frac{1}{2}}=\sen b
 \end{align*}
-}
 Ahora,
-\[
-\scalebox{0.8}{$
-	\int_a^b\!\cos x\,dx = \int_a^0\!\cos x\,dx + \int_0^b\!\cos x\,dx = \int_0^b\!\cos x\,dx - \int_0^a\!\cos x\,dx = \sen b - \sen a
-	$}
-\]
-
+\begin{align*}
+\int_a^b\!\cos x\,dx &= \int_a^0\!\cos x\,dx + \int_0^b\!\cos x\,dx \\
+&= \int_0^b\!\cos x\,dx - \int_0^a\!\cos x\,dx = \sen b - \sen a
+\end{align*}
 y así,
-
-{\small
-\begin{equation}\label{cos}
-\text{\fbox{$\displaystyle{\int_{a}^{b}\cos x\,dx=\sen b-\sen a}$}}
-\end{equation}
-}
-
+\begin{empheq}[box=\fbox]{equation}
+\int_{a}^{b}\cos x\,dx=\sen b-\sen a \label{cos}
+\end{empheq}
 
 \item De manera similar, calculemos la integral de $\sen x$:
 \begin{align*}
@@ -1626,14 +1390,11 @@ xdx%\\&
 =\cos a-\cos b
 \end{align*}
 y, en conclusión,
+\begin{empheq}[box=\fbox]{equation}
+\int_{a}^{b}\sen x\,dx=\cos a-\cos b\label{sen}
+\end{empheq}
 
-
-\begin{equation}\label{sen}
-\text{\fbox{$\displaystyle{\int_{a}^{b}\sen x\,dx=\cos a-\cos b}$}}
-\end{equation}
-
-
-\item { \textnormal{Para finalizar, tomemos una función exponencial con base \textit{$b$}, es decir, \textit{$f(x)=b^x$}, y calculemos la \textit{$\int_\alpha^\beta b^x$:}}}
+\item { Para finalizar, tomemos una función exponencial con base $b$, es decir, $f(x)=b^x$, y calculemos la \textit{$\int_\alpha^\beta b^x$:}}
 \begin{align*}
 \int_{0}^{\beta}b^{x}dx&=\underset{n\rightarrow \infty }{\lim }\sum\limits_{k=1}^{n}b^{\left( k \beta/n\right) }\frac{\beta}{n}
 =\underset{n\rightarrow \infty }{\lim }\frac{\beta}{n}\sum\limits_{k=1}^{n}%
@@ -1642,16 +1403,20 @@ y, en conclusión,
 &=\underset{n\rightarrow \infty }{\lim }\frac{\beta}{n}\frac{\left( b^{\beta/n}\right)^{n+1}-b^{\beta/n}}{b^{\beta/n}-1}
 =\underset{n\rightarrow \infty }{\lim }\frac{\frac{\beta}{n}\left( b^{\beta}b^{\beta/n}-b^{\beta/n}\right)}{b^{\beta/n}-1}\\
 &=\underset{n\rightarrow \infty }{\lim }\frac{\frac{\beta}{n}\left( \left(
-b^{\beta}-1\right) b^{\beta/n}\right) }{b^{\beta/n}-1}\\
-&\quad \intertext{haciendo $u=\frac{\beta}{n}$, que tiende a cero cuando $n\rightarrow \infty$,}\\
-&=\underset{u\rightarrow 0}{\lim }\frac{u\left( \left( b^{\beta}-1\right)
+b^{\beta}-1\right) b^{\beta/n}\right) }{b^{\beta/n}-1}
+\end{align*}
+haciendo $u=\frac{\beta}{n}$, que tiende a cero cuando $n\rightarrow \infty$,
+\begin{equation*}
+=\underset{u\rightarrow 0}{\lim }\frac{u\left( \left( b^{\beta}-1\right)
 b^{u}\right) }{b^{u}-1}
 =\left( b^{\beta}-1\right) \underset{u\rightarrow 0}{\lim }b^{u}\underset{%
-u\rightarrow 0}{\lim }\frac{u}{b^{u}-1}\\
-&\quad\intertext{y aplicando la regla de L'Hopital en el último límite,}\\
-&=\left( b^{\beta}-1\right) \underset{u\rightarrow 0}{\lim }\frac{1}{b^{u}\ln b}
+u\rightarrow 0}{\lim }\frac{u}{b^{u}-1}
+\end{equation*}
+y aplicando la regla de L'Hopital en el último límite,
+\begin{equation*}
+=\left( b^{\beta}-1\right) \underset{u\rightarrow 0}{\lim }\frac{1}{b^{u}\ln b}
 =\left( b^{\beta}-1\right) \frac{1}{\ln b}=\frac{b^{\beta}-1}{\ln b}
-\end{align*}
+\end{equation*}
 y la integral original es
 \begin{align*}
 \int_{\alpha}^{\beta}b^{x}dx&=\int_{\alpha}^{0}b^{x}dx+\int_{0}^{\beta}b^{x}dx=%
@@ -1659,28 +1424,25 @@ y la integral original es
 &=\frac{b^{\beta}-1}{\ln b}-\frac{b^{\alpha}-1}{\ln b}=\frac{b^{\beta}-b^{\alpha}}{\ln b}
 \end{align*}
 que nos permite concluir que
-\begin{equation}
-\label{bx}
-\text{
-\fbox{$\displaystyle{\int_{\alpha}^{\beta}b^x\,dx=\frac{b^{\beta}-b^{\alpha}}{\ln b}}$}}
-\end{equation}
-\end{enumerate}
+\begin{empheq}[box=\fbox]{equation}
+\int_{\alpha}^{\beta}b^x\,dx=\frac{b^{\beta}-b^{\alpha}}{\ln b}\label{bx}
+\end{empheq}
+\end{parrafonumerado}
 
 \begin{ejemplo}
-\textnormal{Calcular las integrales usando las propiedades y fórmulas anteriores.}
+Calcular las integrales usando las propiedades y fórmulas anteriores.
 \end{ejemplo}
 \begin{multicols}{2}
-\begin{enumerate}[leftmargin=1.2em,   itemindent=0pt,       labelwidth=\labelwidth,labelsep=0.5em,]
-
-\item $\displaystyle{\int_{1}^{4}3x^{3}-2x+1 dx}$
-\item $\displaystyle{\int_{\frac{\pi }{6}}^{\frac{\pi }{2}}\cos xdx}$
-\item $\displaystyle{\int_{\frac{\pi }{3}}^{\frac{\pi }{2}}\sin xdx}$
-\item $\displaystyle{\int_{-1}^{2}2^{2x}dx}$
-\end{enumerate}
+\begin{parrafonumerado}
+\item ${\int_{1}^{4}3x^{3}-2x+1 dx}$
+\item ${\int_{\frac{\pi }{6}}^{\frac{\pi }{2}}\cos xdx}$
+\item ${\int_{\frac{\pi }{3}}^{\frac{\pi }{2}}\sin xdx}$
+\item ${\int_{-1}^{2}2^{2x}dx}$
+\end{parrafonumerado}
 \end{multicols}
 
-\textit{Solución}
-\begin{enumerate}[leftmargin=1.2em,   itemindent=0pt,       labelwidth=\labelwidth,labelsep=0.5em,]
+\emph{Solución}
+\begin{parrafonumerado}
 \item Para este caso, tenemos solo potencias de $x$; entonces,
 {\small
 \begin{align*}
@@ -1712,8 +1474,7 @@ que nos permite concluir que
 \frac{1023}{4\ln 4}
 \end{align*}
 }
-\end{enumerate}
-
+\end{parrafonumerado}
 
 \section{Integrales de funciones acotadas y continuas a trozos}
 
@@ -1722,7 +1483,7 @@ Supongamos que $P=\{x_0,x_1,\ldots,x_n \}$ es una partición del intervalo $[a,b
 \int_{a}^{b}f(x)dx=\sum_{k=1}^{n}\int_{x_{k-1}}^{x_{k}}f(x)dx
 \]
 \begin{ejemplo}
-\textnormal{La definición anterior nos permite manejar con comodidad las funciones a trozos: si}
+La definición anterior nos permite manejar con comodidad las funciones a trozos: si
 \[
 f(x)=
 \begin{cases}
@@ -1731,25 +1492,18 @@ f(x)=
 4x^{3}, & \text{si } x>1.
 \end{cases}
 \]
-calculemos $\displaystyle\int_{-2}^2 f(x)\, dx.$
+calculemos $\int_{-2}^2 f(x)\, dx.$
 \end{ejemplo}
 
+\emph{Solución.} Con la figura señalando la región entre $-2$ y $2$:
 
-\textit{Solución.} Con la figura señalando la región entre $-2$ y $2$:
-
-
-
-
-\noindent
 \begin{figure}[H]
-    \centering
-    \caption{Función a trozos entre $-2$ y $2$}
-    \includegraphics[width=0.45\textwidth]{Gráficas/graf6.pdf}
-    
-    \propia
+\centering
+\caption{Función a trozos entre $-2$ y $2$}
+\includegraphics[width=0.45\textwidth]{Gráficas/graf6.pdf}
+
+\propia
 \end{figure}
-
-
 
 %\begin{center}
 
@@ -1760,7 +1514,6 @@ calculemos $\displaystyle\int_{-2}^2 f(x)\, dx.$
 
 Entonces, teniendo en cuenta los intervalos de definición de $f$, es decir,
 %\clearpage
-
 
 \begin{center}
 \textbf{Función que incluye valor absoluto}
@@ -1773,7 +1526,6 @@ Valor de $f$ & $2x-1$ & $3x^{2}-2$ & $4x^{3}$ \\
 \hline
 \end{tabular}
 \end{center}
-
 
 tenemos que la integral de $f$ es
 {\small
@@ -1790,7 +1542,7 @@ $=2\frac{\left( -1\right) ^{2}-\left( -2\right) ^{2}}{2}\!-\!\left(-1-\left(-2\r
 }
 
 \begin{ejemplo}
-\textnormal{Calcular el valor de} $\displaystyle\int_{-3}^{2}\left\vert x^{2}-1\right\vert dx$.
+Calcular el valor de $\int_{-3}^{2}\left\vert x^{2}-1\right\vert dx$.
 \end{ejemplo}
 
 La función valor absoluto puede expresarse como una función a
@@ -1810,18 +1562,13 @@ x^{2}-1\right) $ & $x^{2}-1$ \\ \hline
 
 La figura de la función por integrar se muestra a continuación:
 
-
-
-\noindent
 \begin{figure}[H]
-    \centering
-    \caption{Valor absoluto de una parábola}
-    \includegraphics[width=0.40\textwidth]{Gráficas/graf7.pdf}
-    
-    \propia
+\centering
+\caption{Valor absoluto de una parábola}
+\includegraphics[width=0.40\textwidth]{Gráficas/graf7.pdf}
+
+\propia
 \end{figure}
-
-
 
 %\begin{center}
 %\centerline{ \graf{Medio círculo}}
@@ -1830,7 +1577,7 @@ La figura de la función por integrar se muestra a continuación:
 %\textbf{Figura:} elaboración propia
 %\end{center}
 
-Entonces, 
+Entonces,
 {\footnotesize
 \begin{align*}
 \int_{-3}^{2}\left\vert x^{2}-1\right\vert dx&=\int_{-3}^{-1}\left(
@@ -1845,22 +1592,19 @@ x^{2}-1\right) dx\\
 }
 
 \begin{ejemplo}
-\textnormal{Determine el valor de} $\displaystyle\int_{1}^{\frac{9}{2}}\big[\hspace{-0.06cm}| x|\hspace{-0.07cm}\big] dx.$
+Determine el valor de $\int_{1}^{\frac{9}{2}}\big[\hspace{-0.06cm}| x|\hspace{-0.07cm}\big] dx.$
 \end{ejemplo}
 
-
-Recordemos que $\big[\hspace{-0.05cm}| x|\hspace{-0.07cm}\big]$ es la parte entera de $x$, es decir, el entero más cercano a $x$ por su izquierda. Por ejemplo, {\small $\big[\hspace{-0.05cm}| 2\text{.}3|\hspace{-0.07cm}\big]=2$}. La figura de $f(x)=\big[\hspace{-0.05cm}| x|\hspace{-0.07cm}\big]$ se muestra a continuación:
-
+Recordemos que $\big[\hspace{-0.05cm}| x|\hspace{-0.07cm}\big]$ es la parte entera de $x$, es decir, el entero más cercano a $x$ por su izquierda. Por ejemplo, {\small $\big[\hspace{-0.05cm}| 2.3|\hspace{-0.07cm}\big]=2$}. La figura de $f(x)=\big[\hspace{-0.05cm}| x|\hspace{-0.07cm}\big]$ se muestra a continuación:
 
 \begin{figure}[h]
-	\centering
-	\caption{Área bajo la curva de $f(x)=\big[\hspace{-0.05cm}| x|\hspace{-0.07cm}\big]$}
-	
-	\includegraphics[width=0.6\linewidth]{Gráficas/graf8.pdf}
-	
-	\propia
-\end{figure}
+\centering
+\caption{Área bajo la curva de $f(x)=\big[\hspace{-0.05cm}| x|\hspace{-0.07cm}\big]$}
 
+\includegraphics[width=0.6\linewidth]{Gráficas/graf8.pdf}
+
+\propia
+\end{figure}
 
 %\begin{center}
 
@@ -1880,23 +1624,19 @@ dx&=\int_{1}^{2}\big[\hspace{-0.05cm}| x|\hspace{-0.07cm}\big] dx+\int_{2}^{3}\b
 \end{align*}
 
 \begin{ejemplo}
-\textnormal{En algunos casos, podemos encontrar el valor de la integral usando su interpretación geométrica y no algún método específico como, por ejemplo, buscando el área de una región:} %Por favor, revise la oración anterior.
+En algunos casos, podemos encontrar el valor de la integral usando su interpretación geométrica y no algún método específico como, por ejemplo, buscando el área de una región: %Por favor, revise la oración anterior.
 \end{ejemplo}
 \begin{parrafonumerado}
 
 \item Tomemos $f(x)=\sqrt{1-x^{2}}$ para $x$ entre $-1$ y $1$. Su figura es media circunferencia de radio $1$; por tanto, $\int_{-1}^{1}\sqrt{1-x^{2}}dx$ es el área de medio círculo de radio $1$:
 %
 
-
-\noindent
 \begin{figure}[H]
-    \centering
-    \caption{ Área de medio círculo de radio $1$}
-    \includegraphics[width=0.45\textwidth]{Gráficas/graf9.pdf}
-    \propia
+\centering
+\caption{ Área de medio círculo de radio $1$}
+\includegraphics[width=0.45\textwidth]{Gráficas/graf9.pdf}
+\propia
 \end{figure}
-
-
 
 %\begin{center}
 
@@ -1916,18 +1656,13 @@ y dado que el área de un círculo es $\pi(\text{radio})^2$, entonces
 \]
 es el área de un cuarto de círculo de radio $a$:
 
-
-
-\noindent
 \begin{figure}[H]
-    \centering
-    \caption{Un cuarto de círculo}
-    \includegraphics[width=0.45\textwidth]{Gráficas/graf10.pdf}
-    
-    \propia
+\centering
+\caption{Un cuarto de círculo}
+\includegraphics[width=0.45\textwidth]{Gráficas/graf10.pdf}
+
+\propia
 \end{figure}
-
-
 
 %\begin{center}
 %\centerline%{ \graf{Un cuarto de círculo}
@@ -1957,18 +1692,13 @@ $\sqrt{3}\leq x<2$ & $\Rightarrow$ & $\big[\hspace{-0.05cm}| x^2|\hspace{-0.07cm
 
 y su figura, entonces, es
 
-
-
-\noindent
 \begin{figure}[H]
-    \centering
-    \caption{Área bajo $\big[\hspace{-0.05cm}| x^2|\hspace{-0.07cm}\big]$}
-    \includegraphics[width=0.45\textwidth]{Gráficas/grafPartEntex2.pdf}
-    
-    \propia
+\centering
+\caption{Área bajo $\big[\hspace{-0.05cm}| x^2|\hspace{-0.07cm}\big]$}
+\includegraphics[width=0.45\textwidth]{Gráficas/grafPartEntex2.pdf}
+
+\propia
 \end{figure}
-
-
 
 %\begin{center}
 %\centerline%{ \graf{Área bajo $y=\sqrt[3]{x}$}}
@@ -1985,7 +1715,7 @@ Con los datos, entonces, el valor de la integral es
 &=1\cdot \left( \sqrt{2}-1\right) +2\cdot \left( \sqrt{3}-\sqrt{2}\right)
 +3\cdot \left( 2-\sqrt{3}\right)\\
 &=\sqrt{2}-1 +2\sqrt{3}-2\sqrt{2}+6-3\sqrt{3}=5-\sqrt{2}-\sqrt{3}\\
-&\approx 1\text{.}8537.
+&\approx 1.8537.
 \end{align*}
 }
 \end{parrafonumerado}
@@ -1993,28 +1723,23 @@ Con los datos, entonces, el valor de la integral es
 \section{Integrales de funciones inversas}
 
 \begin{ejemplo}
-\textnormal{Queremos calcular} $\displaystyle\int_{0}^{8}\sqrt[3]{x}dx$.
+Queremos calcular $\int_{0}^{8}\sqrt[3]{x}dx$.
 \end{ejemplo}
 
-\textit{Solución.} La función inversa de $y=\sqrt[3]{x}$ es $x=y^{3}$. Según la
+\emph{Solución.} La función inversa de $y=\sqrt[3]{x}$ es $x=y^{3}$. Según la
 figura, el área de $\mathcal{R}_{2}$ es igual a la resta del área
 del rectángulo $\mathcal{R}$ con el área de $\mathcal{R}_{1}$.
 Pero el área de $\mathcal{R}_{1}$ es el área de la región acotada
 por la figura de $y^3$, el eje $y$ y la recta $y=2$, es decir, es
-igual a {\footnotesize $\displaystyle\int_{0}^{2}y^{3}dy$}. Entonces,
+igual a {\footnotesize $\int_{0}^{2}y^{3}dy$}. Entonces,
 
-
-
-\noindent
 \begin{figure}[H]
-    \centering
-    \caption{Área bajo $y=\sqrt[3]{x}$}
-    \includegraphics[width=0.45\textwidth]{Gráficas/graf11.pdf}
-    
-    \propia
+\centering
+\caption{Área bajo $y=\sqrt[3]{x}$}
+\includegraphics[width=0.45\textwidth]{Gráficas/graf11.pdf}
+
+\propia
 \end{figure}
-
-
 
 %\begin{center}
 %\centerline%{ \graf{Área bajo $y=\log _{3}x$}}
@@ -2033,25 +1758,18 @@ igual a {\footnotesize $\displaystyle\int_{0}^{2}y^{3}dy$}. Entonces,
 }
 
 \begin{ejemplo}
-\textnormal{Calcular} $\displaystyle\int_{1}^{9}\log _{3}x\, dx$.
+Calcular $\int_{1}^{9}\log _{3}x\, dx$.
 \end{ejemplo}
 
+\emph{Solución.} Similarmente al ejemplo anterior:
 
-\textit{Solución.} Similarmente al ejemplo anterior:
-
-
-
-
-\noindent
 \begin{figure}[H]
-    \centering
-    \caption{$\displaystyle\int_{1}^{9}\log _{3}x\, dx$}
-    \includegraphics[width=0.45\textwidth]{Gráficas/graf12.pdf}
-    
-    \propia
+\centering
+\caption{$\int_{1}^{9}\log _{3}x\, dx$}
+\includegraphics[width=0.45\textwidth]{Gráficas/graf12.pdf}
+
+\propia
 \end{figure}
-
-
 
 %\begin{center}
 
@@ -2064,30 +1782,24 @@ La inversa de $y=\log _{3}x$ es $x=3^{y}$; entonces
 {\small
 \begin{align*}
 \int_{1}^{9}\log _{3}xdx&= \text{área}\left( \mathcal{R}_{2}\right) =\text{área}\left( \mathcal{R}\right)
- -\text{área}\left( \mathcal{R}_{1}\right) \\
+-\text{área}\left( \mathcal{R}_{1}\right) \\
 &=9\times 2-\int_{0}^{2}3^{y}dy =18-\frac{3^{2}-1}{\ln
 3}=18-\frac{8}{\ln 3}
 \end{align*}
 }
 
 \begin{ejemplo}
-\textnormal{Calcular} $\displaystyle\int_{0}^{1}\sen^{-1} x\, dx$.
+Calcular $\int_{0}^{1}\sen^{-1} x\, dx$.
 \end{ejemplo}
-\textit{Solución.} Si $y=\sen^{-1} x$, entonces $x=\sen y$. Por la región dada:
+\emph{Solución.} Si $y=\sen^{-1} x$, entonces $x=\sen y$. Por la región dada:
 
-
-
-
-\noindent
 \begin{figure}[H]
-    \centering
-    \caption{Área bajo $y=\sen^{-1} x$}
-    \includegraphics[width=0.40\textwidth]{Gráficas/graf13.pdf}
-    
-    \propia
+\centering
+\caption{Área bajo $y=\sen^{-1} x$}
+\includegraphics[width=0.40\textwidth]{Gráficas/graf13.pdf}
+
+\propia
 \end{figure}
-
-
 
 %\begin{center}
 %\centerline %{ \graf{Área bajo $y=\sen^{-1} x$}}
@@ -2107,7 +1819,7 @@ La inversa de $y=\log _{3}x$ es $x=3^{y}$; entonces
 }
 
 \begin{teorema}\label{inversa}
-\textnormal{Si \textit{$f$} es positiva, creciente e integrable en el intervalo $\left[ 0,x_0%
+\textnormal{Si $f$ es positiva, creciente e integrable en el intervalo $\left[ 0,x_0%
 \right]$, entonces}
 \[
 \int_{0}^{x_0}f^{-1}\left( t\right) dt=x_0f^{-1}\left( x_0\right)
@@ -2117,19 +1829,14 @@ La inversa de $y=\log _{3}x$ es $x=3^{y}$; entonces
 
 \textit{Demostración}. Con la información del teorema se tiene la figura 11.
 
-
-
-\noindent
 \begin{figure}[H]
-    \centering
-    \caption{Prueba del teorema}
-    \label{fig:prueba_teorema}
-    \includegraphics[width=0.44\textwidth]{Gráficas/graf14.pdf}
-    
-    \propia
+\centering
+\caption{Prueba del teorema}
+\label{fig:prueba_teorema}
+\includegraphics[width=0.44\textwidth]{Gráficas/graf14.pdf}
+
+\propia
 \end{figure}
-
-
 
 %\begin{center}
 %\centerline %{ \graf{Prueba del teorema \ref{inversa}}}
@@ -2148,46 +1855,17 @@ Partamos del lado izquierdo de la igualdad:
 \end{align*}
 
 \begin{ejemplo}
-\textnormal{Evalúe} $\displaystyle\int_{0}^{32}\sqrt[5]{x}\,dx$.
+Evalúe $\int_{0}^{32}\sqrt[5]{x}\,dx$.
 \end{ejemplo}
 La función $f^{-1}(x)=\sqrt[5]{x}$ es positiva, continua y
 creciente en el intervalo $[0,32]$, y $f(x)=x^{5}$. Por el teorema
 anterior,
 {\footnotesize
 \begin{align*}
-	\int_{0}^{32}\sqrt[5]{x}\,dx &= 32\times f^{-1}(32)\!-\!\int_{f^{-1}\left( 0\right) }^{f^{-1}\left(32\right) }f\left( y\right) dy = 32\times 2\!-\!\int_{0}^{2} y^{5}\,dy = 64\!-\!\dfrac{2^{6}}{6} = \dfrac{160}{3}
+\int_{0}^{32}\sqrt[5]{x}\,dx &= 32\times f^{-1}(32)\!-\!\int_{f^{-1}\left( 0\right) }^{f^{-1}\left(32\right) }f\left( y\right) dy = 32\times 2\!-\!\int_{0}^{2} y^{5}\,dy = 64\!-\!\dfrac{2^{6}}{6} = \dfrac{160}{3}
 \end{align*}
 }
-\addcontentsline{toc}{section}{1.7 Ejercicios del capítulo 1 \thechapter}
-
-%\group
-%\begin{multicols}
-
-%\end{multicols}
-% \exercise {En cada caso, escriba la suma de manera expandida:}
-% %\begin{multicols}{3}
-% \subexercise{$\displaystyle\sum_{k=1}^{5}\left( k^{2}-(k+2)^{2}\right)$}{$1^{2}-3^{2}+2^{2}-4^{2}+3^{2}-5^{2}+4^{2}-6^{2}
-% +5^{2}-7^{2}=-80$}
-
-% \subexercise{$\displaystyle\sum_{k=2}^{6}\left(2^{-k+1}-2^{-k}\right)$}{$2^{-1}-2^{-2}
-% +2^{-2}-2^{-3}+2^{-3}-2^{-4}+2^{-4}-2^{-5}+2^{-5}-2^{-6}=2^{-1}-2^{-6}=%
-%  \frac{31}{64}$}
-
-% \subexercise{$\displaystyle\sum_{k=3}^{8}\left( \frac{1}{k}-\frac{1}{k+2%
-% }\right)$}{$\frac{1}{3}%
-% -\frac{1}{5}+\frac{1}{4}-\frac{1}{6}+\frac{1}{5}-\frac{1}{7}+\frac{1}{6}-%
-% \frac{1}{8}+\frac{1}{7}-\frac{1}{9}+\frac{1}{8}-\frac{1}{10}=\frac{67}{180}$}
-
-% \subexercise{$\displaystyle\sum_{k=1}^{8}\left(\sen(k\pi )\right)$}{$\sen\pi +\sen2\pi +\sen3\pi +\sen4\pi +\sen5\pi +\sen6\pi +\sen7\pi +\sen8\pi =0$}
-
-% \subexercise{$\displaystyle\sum_{k=1}^{n}\left(-1\right) ^{k}k^{2}$}{$-1^{2}+2^{2}-3^{2}+4^{2}-\cdots \left( -1\right) ^{n}n^{2}.$}
-
-% \subexercise{$\displaystyle\sum_{k=1}^{n}\left( \frac{k}{k+1}-\frac{k+1}{k+2%
-% }\right) $}{$\frac{1%
-% }{2}-\frac{2}{3}+\frac{2}{3}-\frac{3}{4}+\frac{3}{4}-\frac{4}{5}+\cdots +%
-% \frac{n-1}{n}-\frac{n}{n+1}+\frac{n}{n+1}-\frac{n+1}{n+2}=\frac{1}{2}-\frac{%
-% n+1}{n+2}$}
-% %\end{multicols}
+\addcontentsline{toc}{section}{Ejercicios del capítulo~\thechapter}
 
 \begin{ejer}{En cada caso, escriba la suma de manera expandida:}
 
@@ -2195,24 +1873,18 @@ anterior,
 \begin{multicols}{3}
 a. $\displaystyle\sum_{k=1}^{5}\left( k^{2}-(k+2)^{2}\right)$
 
-
 b. $\displaystyle\sum_{k=2}^{6}\left(2^{-k+1}-2^{-k}\right)$
-
 
 c. $\displaystyle\sum_{k=3}^{8}\left( \frac{1}{k}-\frac{1}{k+2}\right)$
 
-
 d. $\displaystyle\sum_{k=1}^{8}\sen(k\pi)$
 
-
 e. $\displaystyle\sum_{k=1}^{n}(-1)^{k}k^{2}$
-
 
 f. $\displaystyle\sum_{k=1}^{n}\left( \frac{k}{k+1}-\frac{k+1}{k+2} \right)$
 \end{multicols}
 }
 \end{ejer}
-
 
 % \exercise{Exprese cada una de las sumas en notación de sumatoria:}
 
@@ -2255,60 +1927,46 @@ f. $\displaystyle\sum_{k=1}^{n}\left( \frac{k}{k+1}-\frac{k+1}{k+2} \right)$
 a. $1+5+9+13+\ldots +81$\\
 % $\displaystyle\sum_{k=0}^{20}\left( 4k+1\right)$
 
-
 b. $\frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\cdots +\frac{1}{2048}$\\
 % $\displaystyle\sum_{k=1}^{11}\frac{1}{2^{k}}$
-
 
 c. $\frac{1}{3}+\frac{1}{8}+\frac{1}{13}+\cdots +\frac{1}{203}$\\
 % $\displaystyle\sum_{k=0}^{40}\frac{1}{5k+3}$
 
-
 d. $\frac{2}{7}+\frac{3}{8}+\frac{4}{9}+\cdots +\frac{100}{105}$\\
 % $\displaystyle\sum_{k=2}^{100}\frac{k}{k+5}$
-
 
 e. $\frac{\sen(1)}{n}+\frac{\sen(2)}{n}+\frac{\sen(3)}{n}+\cdots +\frac{\sen(n)}{n}$
 % $\displaystyle\sum_{k=1}^{n}\frac{\sen k}{n}$
 
-
 f. $1+2+3+4+\cdots +10$
 % $\displaystyle\sum_{k=0}^{9}(k+1)$
-
 
 g. $\sqrt{3}+\sqrt{4}+\sqrt{5}+\sqrt{6}+\sqrt{7}$
 % $\displaystyle\sum_{k=1}^{5}\sqrt{k+2}$
 
-
 h. $\frac{1}{2}+\frac{2}{3}+\frac{3}{4}+\frac{4}{5}+\cdots +\frac{19}{20}$
 % $\displaystyle\sum_{k=0}^{18}\frac{k+1}{k+2}$
-
 
 i. $\frac{3}{7}+\frac{4}{8}+\frac{5}{9}+\frac{6}{10}+\cdots +\frac{23}{27}$
 % $\displaystyle\sum_{k=0}^{20}\frac{k+3}{k+7}$
 
-
 j. $2+4+6+8+\cdots +2n$
 % $\displaystyle\sum_{k=1}^{n}2k$
-
 
 k. $1+3+5+7+\cdots +(2n-1)$
 % $\displaystyle\sum_{k=0}^{n-1}(2k+1)$
 
-
 l. $1+2+4+8+16+32$
 % $\displaystyle\sum_{k=0}^{5}2^{k}$
 
-
 m. $\frac{1}{1}+\frac{1}{4}+\frac{1}{9}+\frac{1}{16}+\frac{1}{25}+\frac{1}{36}$
 % $\displaystyle\sum_{k=0}^{5}\frac{1}{(k+1)^{2}}$
-
 
 n. $1-x+x^{2}-x^{3}+\cdots +(-1)^{n}x^{n}$
 % $\displaystyle\sum_{k=1}^{n+1}(-1)^{k-1}x^{k-1}$
 \end{multicols}
 \end{ejer}
-
 
 % \exercise{Encuentre el valor de cada una de las siguientes expresiones:}
 
@@ -2342,37 +2000,29 @@ n. $1-x+x^{2}-x^{3}+\cdots +(-1)^{n}x^{n}$
 a. $\displaystyle\sum_{k=1}^{n}\left[ \left( 2k-1\right) ^{3}-\left( 2k+1\right) ^{3}\right]$
 % $-8n^{3}-12n^{2}-6n$
 
-
 b. $\displaystyle\sum_{k=1}^{n}\left[ \left( k-1\right) ^{2}-\left( k+1\right) ^{2}\right]$
 % $-2n^{2}-2n$
-
 
 c. $\displaystyle\sum_{k=1}^{n}\left[ \left( k-2\right) ^{4}-\left( k+2\right) ^{4}\right]$
 % $-4n^{4}-8n^{3}-36n^{2}-32n$
 
-
 d. $\displaystyle\sum_{k=0}^{n}\left( 2^{k}+\frac{1}{3^{k}}\right)$
 % $2^{n+1}-\frac{1}{2}\left( \frac{1}{3} \right)^{n}+\frac{1}{2}$
-
 
 e. $\displaystyle\sum_{k=1}^{n}\frac{4^{k}-5^{k}}{6^{k}}$
 % $5\left( \frac{5}{6} \right)^{n}-2\left( \frac{2}{3} \right)^{n}-3$
 
-
 f. $\displaystyle\sum_{k=1}^{200}\left( 3\sen(4k)+2\cos(3k)\right)$
 % $\frac{3}{2\sen 2}\left( \cos 2-\cos 802 \right) - \frac{1}{\sen \frac{3}{2}} \left( \sen \frac{3}{2}-\sen \frac{1203}{2} \right)$
 
-
 g. $\displaystyle\sum_{k=1}^{100}\left( \sen(5k)+\cos(5k) \right)$
 % $\frac{1}{2\sen \frac{5}{2}}\left( \cos \frac{5}{2}-\cos \frac{1005}{2}-\sen \frac{5}{2}+\sen \frac{1005}{2} \right)$
-
 
 h. $\displaystyle\sum_{k=1}^{n}\left( \sen k+\cos k \right)$
 % $\frac{1}{2\sen \frac{1}{2}}\left( \cos \frac{1}{2}-\sen \frac{1}{2}-\cos \left( n+\frac{1}{2} \right)+\sen \left( n+\frac{1}{2} \right) \right)$
 \end{multicols}
 }
 \end{ejer}
-
 
 % \exercise{Calcule cada uno de los siguientes límites:}
 % %\begin{multicols}{2}
@@ -2399,32 +2049,25 @@ h. $\displaystyle\sum_{k=1}^{n}\left( \sen k+\cos k \right)$
 a. $\displaystyle\lim_{n\rightarrow \infty }\sum_{k=1}^{n}\left[ \left( \frac{3k}{n}-1\right) ^{3}-2\right] \frac{3}{n}$
 % $-\frac{9}{4}$
 
-
 b. $\displaystyle\lim_{n\rightarrow \infty }\sum_{k=1}^{n}\left[ 3\left( 1+\frac{k}{n}\right) ^{2}-\left( 1+\frac{k}{n}\right) \right] \frac{1}{n}$
 % $\frac{11}{2}$
-
 
 c. $\displaystyle\lim_{n\rightarrow \infty }\sum_{k=1}^{n}\frac{1}{n}\left( 2^{\frac{k}{n}}\right)$
 % $\frac{1}{\ln 2}$
 
-
 d. $\displaystyle\lim_{n\rightarrow \infty }\sum_{k=1}^{n}\frac{4}{n}e^{\frac{k}{n}}$
 % $4e - 4$
-
 
 e. $\displaystyle\lim_{n\rightarrow \infty }\sum_{k=1}^{n}\frac{4}{n}\sen \left( \frac{k}{n} \right)$
 % $4 - 4\cos 1$
 
-
 f. $\displaystyle\lim_{n\rightarrow \infty }\sum_{k=1}^{n}\frac{1}{n}\cos \left( \frac{k}{n} \right)$
 % $\sen 1$
-
 
 g. $\displaystyle\lim_{n\rightarrow \infty}\sum_{k=1}^{n}\left[ \left( 2+\frac{k}{n}\right) ^{3}-2\left( 2+\frac{k}{n}\right) ^{2}+1\right] \frac{1}{n}$
 }
 \end{ejer}
 % $\frac{55}{12}$
-
 
 % \exercise{Escriba una suma de Riemann para cada función y partición dadas, usando el punto indicado de cada subintervalo:}
 
@@ -2456,26 +2099,20 @@ g. $\displaystyle\lim_{n\rightarrow \infty}\sum_{k=1}^{n}\left[ \left( 2+\frac{k
 a. $f(x) = 9 - 3x^{2}$,\quad $P = \{0, 0.3, 0.5, 0.8, 1\}$,\quad partición de $[0,1]$, use el extremo derecho.
 % $7{,}593$
 
-
 b. $f(x) = x^{2} + x^{3}$,\quad $P = \{-1, -0.5, -0.8, 0, 0.5, 1\}$,\quad partición de $[-1,1]$, use el extremo derecho.
 % $1{,}2506$
-
 
 c. $f(x) = 20 - x^{3}$,\quad $P = \{0, 0.5, 1.5, 1.8, 2\}$,\quad partición de $[0,2]$, use el extremo izquierdo.
 % $37{,}696$
 
-
 d. $f(x) = x^{4} - 1$,\quad $P = \{-1, -0.5, 0, 0.5, 1, 2, 3\}$,\quad partición de $[-1,3]$, use el extremo izquierdo.
 % $13{,}563$
-
 
 e. $f(x) = 20 - 4x^{2}$,\quad $P = \{0, 0.5, 1.5, 1.8, 2, 2.5, 3\}$,\quad partición de $[0,3]$, use el punto medio.
 % $24{,}47$
 
-
 f. $f(x) = x^{3} - 1$,\quad $P = \{-1, -0.5, 0, 0.5, 1, 2, 3, 3.6, 4\}$,\quad partición de $[-1,4]$, use el punto medio.
 % $57{,}51$
-
 
 g. $f(x) = 2^{x} - 1$,\quad $P = \{0, 0.5, 1, 2.5, 3, 3.6, 4.1, 5\}$,\quad partición de $[0,5]$, use el extremo derecho.
 % $53{,}842$
@@ -2485,50 +2122,46 @@ g. $f(x) = 2^{x} - 1$,\quad $P = \{0, 0.5, 1, 2.5, 3, 3.6, 4.1, 5\}$,\quad parti
 % %\begin{multicols}{3}
 % \subexercise{$\displaystyle{\int_{0}^{2}\left( x^{2}-2\right) dx}$}{$-\dfrac{4}{3}$}
 
-% \subexercise{$\displaystyle\int_{0}^{1}\left(x^{2}-x\right) dx$}{$-\dfrac{1}{6}$}
+% \subexercise{$\int_{0}^{1}\left(x^{2}-x\right) dx$}{$-\dfrac{1}{6}$}
 
-% \subexercise{$\displaystyle\int_{-1}^{1}x^{3}dx$}{$0$}
+% \subexercise{$\int_{-1}^{1}x^{3}dx$}{$0$}
 
-% \subexercise{$\displaystyle\int_{-2}^{2}\left( x^{3}+2\right) dx$}{$8$}
+% \subexercise{$\int_{-2}^{2}\left( x^{3}+2\right) dx$}{$8$}
 
-% \subexercise{$\displaystyle\int_{-1}^{2}\left( 2x^{3}-1\right) dx$}{$\dfrac{9}{2}$}
+% \subexercise{$\int_{-1}^{2}\left( 2x^{3}-1\right) dx$}{$\dfrac{9}{2}$}
 
-% \subexercise{$\displaystyle\int_{0}^{2}\left(2^{x}\right) dx$}{$\dfrac{3}{\ln 2}$}
+% \subexercise{$\int_{0}^{2}\left(2^{x}\right) dx$}{$\dfrac{3}{\ln 2}$}
 
-% \subexercise{$\displaystyle\int_{0}^{3}2\left( 3^{x}\right) dx$}{$\dfrac{52}{\ln 3}$}
+% \subexercise{$\int_{0}^{3}2\left( 3^{x}\right) dx$}{$\dfrac{52}{\ln 3}$}
 % %\end{multicols}
 
 \begin{ejer}{Calcule cada una de las siguientes integrales usando la definición:}
 
 \begin{multicols}{3}
 \begin{minipage}[t]{\linewidth}
-a. $\displaystyle\int_{0}^{2}\left( x^{2}-2\right) dx$
+a. $\int_{0}^{2}\left( x^{2}-2\right) dx$
 % $-\dfrac{4}{3}$
 
-
-b. $\displaystyle\int_{0}^{1}\left(x^{2}-x\right) dx$
+b. $\int_{0}^{1}\left(x^{2}-x\right) dx$
 % $-\dfrac{1}{6}$
 
-
-c. $\displaystyle\int_{-1}^{1}x^{3}dx$
+c. $\int_{-1}^{1}x^{3}dx$
 % $0$
 \end{minipage}
 
 \begin{minipage}[t]{\linewidth}
-d. $\displaystyle\int_{-2}^{2}\left( x^{3}+2\right) dx$
+d. $\int_{-2}^{2}\left( x^{3}+2\right) dx$
 % $8$
 
-
-e. $\displaystyle\int_{-1}^{2}\left( 2x^{3}-1\right) dx$
+e. $\int_{-1}^{2}\left( 2x^{3}-1\right) dx$
 % $\dfrac{9}{2}$
 \end{minipage}
 
 \begin{minipage}[t]{\linewidth}
-f. $\displaystyle\int_{0}^{2}2^{x}dx$
+f. $\int_{0}^{2}2^{x}dx$
 % $\dfrac{3}{\ln 2}$
 
-
-g. $\displaystyle\int_{0}^{3}2\cdot 3^{x}dx$
+g. $\int_{0}^{3}2\cdot 3^{x}dx$
 % $\dfrac{52}{\ln 3}$
 \end{minipage}
 \end{multicols}
@@ -2538,77 +2171,58 @@ g. $\displaystyle\int_{0}^{3}2\cdot 3^{x}dx$
 \begin{ejer}{Calcule usando las propiedades de la integral:}
 
 \begin{multicols}{2}
-a. $\displaystyle\int_{0}^{2}\left( 4x^{3}-8x^{2}+7x+8\right) dx$
+a. $\int_{0}^{2}\left( 4x^{3}-8x^{2}+7x+8\right) dx$
 
+b. $\int_{-2}^{1}\left( 5x^{3}-7x^{2}+4x-3\right) dx$
 
-b. $\displaystyle\int_{-2}^{1}\left( 5x^{3}-7x^{2}+4x-3\right) dx$
+c. $\int_{-2}^{2}\left( x^{4}+2x^{3}-x+1\right) dx$
 
+d. $\int_{-1}^{2}\left( 2x^{5}-10x^{3}\right) dx$
 
-c. $\displaystyle\int_{-2}^{2}\left( x^{4}+2x^{3}-x+1\right) dx$
+e. $\int_{0}^{3}\left( e^{x}+2^{x}+3\right) dx$
 
+f. $\int_{0}^{3}\left( 4^{x}+3^{x}+3x\right) dx$
 
-d. $\displaystyle\int_{-1}^{2}\left( 2x^{5}-10x^{3}\right) dx$
+g. $\int_{0}^{3}\left(5^{x}+4^{x}+4x^{2}\right) dx$
 
+h. $\int_{-1}^{2}\left\vert x\right\vert dx$
 
-e. $\displaystyle\int_{0}^{3}\left( e^{x}+2^{x}+3\right) dx$
+i. $\int_{-1}^{4}\left\vert x^{2}-2x-3\right\vert dx$
 
+j. $\int_{-4}^{4}\left\vert x^{2}-9\right\vert dx$
 
-f. $\displaystyle\int_{0}^{3}\left( 4^{x}+3^{x}+3x\right) dx$
+k. $\int_{-1}^{2}\left[ \left\vert x\right\vert \right] dx$
 
+l. $\int_{1}^{4}\left[ \left\vert 2x\right\vert \right] dx$
 
-g. $\displaystyle\int_{0}^{3}\left(5^{x}+4^{x}+4x^{2}\right) dx$
+m. $\int_{-1}^{4}\left[ \left\vert 3x\right\vert \right] dx$
 
+n. $\int_{0}^{4}\left[ \left\vert x^{2}\right\vert \right] dx$
 
-h. $\displaystyle\int_{-1}^{2}\left\vert x\right\vert dx$
+o. $\int_{0}^{2}\left[ \left\vert 2x^{2}\right\vert \right] dx$
 
+p. $\int_{0}^{2}\left[ \left\vert x^{3}\right\vert \right] dx$
 
-i. $\displaystyle\int_{-1}^{4}\left\vert x^{2}-2x-3\right\vert dx$
-
-
-j. $\displaystyle\int_{-4}^{4}\left\vert x^{2}-9\right\vert dx$
-
-
-k. $\displaystyle\int_{-1}^{2}\left[ \left\vert x\right\vert \right] dx$
-
-
-l. $\displaystyle\int_{1}^{4}\left[ \left\vert 2x\right\vert \right] dx$
-
-
-m. $\displaystyle\int_{-1}^{4}\left[ \left\vert 3x\right\vert \right] dx$
-
-
-n. $\displaystyle\int_{0}^{4}\left[ \left\vert x^{2}\right\vert \right] dx$
-
-
-o. $\displaystyle\int_{0}^{2}\left[ \left\vert 2x^{2}\right\vert \right] dx$
-
-
-p. $\displaystyle\int_{0}^{2}\left[ \left\vert x^{3}\right\vert \right] dx$
-
-
-q. $\displaystyle\int_{-2}^{2}f(x)\,dx$, si $f(x)=
+q. $\int_{-2}^{2}f(x)\,dx$, si $f(x)=
 \begin{cases}
 x^{2}-4, & \text{si }x<0 \\
 4-x^{2}, & \text{si }x\geq 0
 \end{cases}$
 
-
-r. $\displaystyle\int_{-1}^{3}f(x)\,dx$, si $f(x)=
+r. $\int_{-1}^{3}f(x)\,dx$, si $f(x)=
 \begin{cases}
 x^{3}-5x^{2}+x+2, & \text{si }x<1 \\ % <-- ¡AQUÍ ESTÁ EL CAMBIO!
 4x^{3}-x^{2}+2, & \text{si }x\geq 1
 \end{cases}$
 
-
-s. $\displaystyle\int_{-2}^{3}f(x)\,dx$, si $f(x)=
+s. $\int_{-2}^{3}f(x)\,dx$, si $f(x)=
 \begin{cases}
-	x^{2}-4x, & \text{si }x<0 \\ % <-- ¡Agregar salto de línea!
-	4x-x^{2}, & \text{si }0\leq x\leq 2 \\ % <-- ¡Agregar salto de línea!
-	5-7x, & \text{si }x>2
+x^{2}-4x, & \text{si }x<0 \\ % <-- ¡Agregar salto de línea!
+4x-x^{2}, & \text{si }0\leq x\leq 2 \\ % <-- ¡Agregar salto de línea!
+5-7x, & \text{si }x>2
 \end{cases}$
 \end{multicols}
 \end{ejer}
-
 
 % \exercise{Halle el área limitada por la curva y las rectas dadas:}
 
@@ -2647,38 +2261,29 @@ s. $\displaystyle\int_{-2}^{3}f(x)\,dx$, si $f(x)=
 
 \begin{ejer}{Halle el área limitada por la curva y las rectas dadas:}
 
-
 a. $y=5x^{4},\ x=1,\ x=3$ y el eje $x$.
 % $242$
-
 
 b. $y=3x+x^{2}-x;\ x=0,\ x=5$ y el eje $x$.
 % $\dfrac{200}{3}$
 
-
 c. $y=e^{x}+x^{3}+1;\ x=0,\ x=2$ y el eje $x$.
 % $e^{2}+5$
-
 
 d. $y=x^{2}+2^{x}+x;\ x=1,\ x=3$ y el eje $x$.
 % $\dfrac{2}{3\ln 2}\left( 19\ln 2+9\right)$
 
-
 e. $y=2\sen x;\ x=0,\ x=\pi$ y el eje $x$.
 % $4$
-
 
 f. $y=5\cos x;\ x=\dfrac{3\pi}{2},\ x=2\pi$ y el eje $x$.
 % $5$
 
-
 g. $y=2\cos x+3\sen x;\ x=0,\ x=\dfrac{\pi}{2}$ y el eje $x$.
 % $5$
 
-
 h. $y=3\cos x+\sen x+x^{2};\ x=-\dfrac{\pi}{2},\ x=\dfrac{\pi}{2}$ y el eje $x$.
 % $\dfrac{1}{12}\pi^{3}+6$
-
 
 i. $f(x)=\left\{
 \begin{array}{ccc}
@@ -2688,7 +2293,6 @@ x+4 & \text{si} & x\geq 4
 \right.;\ x=0,\ x=6$ y el eje $x$.
 % $\dfrac{182}{3}$
 
-
 j. $f(x)=\left\{
 \begin{array}{ccc}
 2\sen x & \text{si} & x\geq 0 \\
@@ -2697,138 +2301,120 @@ j. $f(x)=\left\{
 \right.;\ x=-\dfrac{\pi}{2},\ x=\dfrac{\pi}{4}$ y el eje $x$.
 % $5-\sqrt{2}$
 
-
 k. $f(x)=\left\{
 \begin{array}{ccc}
-2^{x} & \text{si} & x<-1 \\
-\dfrac{1}{2^{x}} & \text{si} & x\geq -1
+  2^{x} & \text{si} & x<-1 \\
+  \dfrac{1}{2^{x}} & \text{si} & x\geq -1
 \end{array}
 \right.;\ x=-2,\ x=2$ y el eje $x$.
 % $\dfrac{2}{\ln 2}$
 
-
 l. $f(x)=\left\{
-\begin{array}{ccc}
-3x^{2}+2x+2 & \text{si} & x\leq 0 \\
-6\sen x & \text{si} & 0<x\leq \pi \\
-e^{x} & & x>\pi
-\end{array}
-\right.;\ x=-1,\ x=4$ y el eje $x$.
-% $e^{4}-e^{\pi}+14$
+  \begin{array}{ccc}
+    3x^{2}+2x+2 & \text{si} & x\leq 0 \\
+    6\sen x & \text{si} & 0<x\leq \pi \\
+    e^{x} & & x>\pi
+  \end{array}
+  \right.;\ x=-1,\ x=4$ y el eje $x$.
+  % $e^{4}-e^{\pi}+14$
 \end{ejer}
 \clearpage
 % \exercise{Use nociones geométricas para encontrar el valor de cada una de las siguientes integrales:}
 % %\begin{multicols}{2}
-% \subexercise{$\displaystyle\int_{-2}^{2}\sqrt{4-x^{2}}dx$}{$2\pi$}
+% \subexercise{$\int_{-2}^{2}\sqrt{4-x^{2}}dx$}{$2\pi$}
 
-% \subexercise{$\displaystyle\int_{0}^{10}\sqrt{100-x^{2}}dx$}{$25\pi$}
+% \subexercise{$\int_{0}^{10}\sqrt{100-x^{2}}dx$}{$25\pi$}
 
-% \subexercise{$\displaystyle\int_{-2}^{8}\left( 4+\sqrt{25-\left( x-3\right) ^{2}}\right) dx$}{$\frac{25\pi}{2}+40$}
+% \subexercise{$\int_{-2}^{8}\left( 4+\sqrt{25-\left( x-3\right) ^{2}}\right) dx$}{$\frac{25\pi}{2}+40$}
 
-% \subexercise{$\displaystyle\int_{-1}^{6}\left( 1+\sqrt{49-\left( x+1\right) ^{2}}\right) dx$}{$\frac{49\pi}{4}+7$}
+% \subexercise{$\int_{-1}^{6}\left( 1+\sqrt{49-\left( x+1\right) ^{2}}\right) dx$}{$\frac{49\pi}{4}+7$}
 
-% \subexercise{$\displaystyle\int_{0}^{4}\big[\hspace{-0.05cm}| x|\hspace{-0.07cm}\big] dx$}{$6$}
+% \subexercise{$\int_{0}^{4}\big[\hspace{-0.05cm}| x|\hspace{-0.07cm}\big] dx$}{$6$}
 
-% \subexercise{$\displaystyle\int_{0}^{3}\big[\hspace{-0.05cm}| 2x|\hspace{-0.07cm}\big] dx$}{$7,5$}
+% \subexercise{$\int_{0}^{3}\big[\hspace{-0.05cm}| 2x|\hspace{-0.07cm}\big] dx$}{$7,5$}
 
-% \subexercise{$\displaystyle\int_{0}^{2}\big[\hspace{-0.05cm}| x^2|\hspace{-0.07cm}\big] dx$}{$1,8537$}
+% \subexercise{$\int_{0}^{2}\big[\hspace{-0.05cm}| x^2|\hspace{-0.07cm}\big] dx$}{$1,8537$}
 
-% \subexercise{$\displaystyle\int_{0}^{9} \big[\hspace{-0.05cm}| \sqrt{x}|\hspace{-0.07cm}\big] dx$}{$13$}
- %\end{multicols}
+% \subexercise{$\int_{0}^{9} \big[\hspace{-0.05cm}| \sqrt{x}|\hspace{-0.07cm}\big] dx$}{$13$}
+%\end{multicols}
 
 \begin{ejer}{Use nociones geométricas para encontrar el valor de cada una de las siguientes integrales:}
 
+  \begin{multicols}{2}
+    a. $\int_{-2}^{2}\sqrt{4-x^{2}}dx$
+    % $2\pi$
 
-\begin{multicols}{2}
-a. $\displaystyle\int_{-2}^{2}\sqrt{4-x^{2}}dx$
-% $2\pi$
+    b. $\int_{0}^{10}\sqrt{100-x^{2}}dx$
+    % $25\pi$
 
+    c. $\int_{-2}^{8}\left( 4+\sqrt{25-\left( x-3\right) ^{2}}\right) dx$
+    % $\dfrac{25\pi}{2}+40$
 
-b. $\displaystyle\int_{0}^{10}\sqrt{100-x^{2}}dx$
-% $25\pi$
+    d. $\int_{-1}^{6}\left( 1+\sqrt{49-\left( x+1\right) ^{2}}\right) dx$
+    % $\dfrac{49\pi}{4}+7$
 
+    e. $\int_{0}^{4}\big[\hspace{-0.05cm}| x|\hspace{-0.07cm}\big] dx$
+    % $6$
 
-c. $\displaystyle\int_{-2}^{8}\left( 4+\sqrt{25-\left( x-3\right) ^{2}}\right) dx$
-% $\dfrac{25\pi}{2}+40$
+    f. $\int_{0}^{3}\big[\hspace{-0.05cm}| 2x|\hspace{-0.07cm}\big] dx$
+    % $7{,}5$
 
+    g. $\int_{0}^{2}\big[\hspace{-0.05cm}| x^2|\hspace{-0.07cm}\big] dx$
+    % $1{,}8537$
 
-d. $\displaystyle\int_{-1}^{6}\left( 1+\sqrt{49-\left( x+1\right) ^{2}}\right) dx$
-% $\dfrac{49\pi}{4}+7$
-
-
-e. $\displaystyle\int_{0}^{4}\big[\hspace{-0.05cm}| x|\hspace{-0.07cm}\big] dx$
-% $6$
-
-
-f. $\displaystyle\int_{0}^{3}\big[\hspace{-0.05cm}| 2x|\hspace{-0.07cm}\big] dx$
-% $7{,}5$
-
-
-g. $\displaystyle\int_{0}^{2}\big[\hspace{-0.05cm}| x^2|\hspace{-0.07cm}\big] dx$
-% $1{,}8537$
-
-
-h. $\displaystyle\int_{0}^{9} \big[\hspace{-0.05cm}| \sqrt{x}|\hspace{-0.07cm}\big] dx$
-% $13$
-\end{multicols}
+    h. $\int_{0}^{9} \big[\hspace{-0.05cm}| \sqrt{x}|\hspace{-0.07cm}\big] dx$
+    % $13$
+  \end{multicols}
 \end{ejer}
 % \exercise{Calcule las integrales usando propiedades de áreas y de funciones inversas:}
 % %\begin{multicols}{3}
-% \subexercise{$\displaystyle\int_{0}^{9}\sqrt{x}dx$}{$18$}
+% \subexercise{$\int_{0}^{9}\sqrt{x}dx$}{$18$}
 
-% \subexercise{$\displaystyle\int_{0}^{16}\sqrt[4]{x}dx$}{$\frac{128}{5}$}
+% \subexercise{$\int_{0}^{16}\sqrt[4]{x}dx$}{$\frac{128}{5}$}
 
-% \subexercise{$\displaystyle\int_{0}^{4}\sqrt[5]{8x}dx$}{$\frac{20}{3}$}
+% \subexercise{$\int_{0}^{4}\sqrt[5]{8x}dx$}{$\frac{20}{3}$}
 
-% \subexercise{$\displaystyle\int_{0}^{7}\log _{2}\left( x+1\right) dx$}{$ 24-\frac{7}{\ln 2}$}
+% \subexercise{$\int_{0}^{7}\log _{2}\left( x+1\right) dx$}{$ 24-\frac{7}{\ln 2}$}
 
-% \subexercise{$\displaystyle\int_{0}^{e-1}\ln \left( x+1\right) dx$}{$ 1$}
+% \subexercise{$\int_{0}^{e-1}\ln \left( x+1\right) dx$}{$ 1$}
 
-% \subexercise{$\displaystyle\int_{1}^{25}\log _{5}xdx$}{$50-\frac{24}{\ln 5}$}
+% \subexercise{$\int_{1}^{25}\log _{5}xdx$}{$50-\frac{24}{\ln 5}$}
 
-% \subexercise{$\displaystyle\int_{0}^{\frac{1}{2}}\arcsin \left( 2x\right) dx$}{$\frac{1}{4}\pi -\frac{1}{2}$}
+% \subexercise{$\int_{0}^{\frac{1}{2}}\arcsin \left( 2x\right) dx$}{$\frac{1}{4}\pi -\frac{1}{2}$}
 
-% \subexercise{$\displaystyle\int_{0}^{3}\arcsin \left( \frac{x}{3}\right) dx$}{$\frac{3}{2}\pi-3$}
+% \subexercise{$\int_{0}^{3}\arcsin \left( \frac{x}{3}\right) dx$}{$\frac{3}{2}\pi-3$}
 
-% \subexercise{$\displaystyle\int_{0}^{1}\arccos \left( 1-x\right) dx$}{$1$}
+% \subexercise{$\int_{0}^{1}\arccos \left( 1-x\right) dx$}{$1$}
 % %\end{multicols}
 
 \begin{ejer}{Calcule las integrales usando propiedades de áreas y de funciones inversas:}
 
-\begin{multicols}{3}
-a. $\displaystyle\int_{0}^{9}\sqrt{x}\,dx$
-% $18$
+  \begin{multicols}{3}
+    a. $\int_{0}^{9}\sqrt{x}\,dx$
+    % $18$
 
+    b. $\int_{0}^{16}\sqrt[4]{x}\,dx$
+    % $\dfrac{128}{5}$
 
-b. $\displaystyle\int_{0}^{16}\sqrt[4]{x}\,dx$
-% $\dfrac{128}{5}$
+    c. $\int_{0}^{4}\sqrt[5]{8x}\,dx$
+    % $\dfrac{20}{3}$
 
+    d. $\int_{0}^{7}\log_{2}(x+1)\,dx$
+    % $24-\dfrac{7}{\ln 2}$
 
-c. $\displaystyle\int_{0}^{4}\sqrt[5]{8x}\,dx$
-% $\dfrac{20}{3}$
+    e. $\int_{0}^{e-1}\ln(x+1)\,dx$
+    % $1$
 
+    f. $\int_{1}^{25}\log_{5}x\,dx$
+    % $50-\dfrac{24}{\ln 5}$
 
-d. $\displaystyle\int_{0}^{7}\log_{2}(x+1)\,dx$
-% $24-\dfrac{7}{\ln 2}$
+    g. $\int_{0}^{\frac{1}{2}}\arcsin(2x)\,dx$
+    % $\dfrac{1}{4}\pi - \dfrac{1}{2}$
 
+    h. $\int_{0}^{3}\arcsin\left(\dfrac{x}{3}\right)\,dx$
+    % $\dfrac{3}{2}\pi - 3$
 
-e. $\displaystyle\int_{0}^{e-1}\ln(x+1)\,dx$
-% $1$
-
-
-f. $\displaystyle\int_{1}^{25}\log_{5}x\,dx$
-% $50-\dfrac{24}{\ln 5}$
-
-
-g. $\displaystyle\int_{0}^{\frac{1}{2}}\arcsin(2x)\,dx$
-% $\dfrac{1}{4}\pi - \dfrac{1}{2}$
-
-
-h. $\displaystyle\int_{0}^{3}\arcsin\left(\dfrac{x}{3}\right)\,dx$
-% $\dfrac{3}{2}\pi - 3$
-
-
-i. $\displaystyle\int_{0}^{1}\arccos(1 - x)\,dx$
-% $1$
-\end{multicols}
+    i. $\int_{0}^{1}\arccos(1 - x)\,dx$
+    % $1$
+  \end{multicols}
 \end{ejer}

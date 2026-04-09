@@ -1,11 +1,11 @@
-\documentclass[12pt,twoside,spanish]{book}
+\documentclass[draft,12pt,twoside,spanish]{book}
 \input{preambulo}
 
-\def\texttitulo{Cálculo integral} 
+\def\texttitulo{Cálculo integral}
 \def\textsubtitulo{}
-\def\loauthors{Carmen Segura, Edilberto Sarmiento, Pablo Solarte}
-\def\texttitulocorto{Cálculo integral}	
-	
+\def\loauthors{Carmen Leonor Pulido Segura, Edilberto Sarmiento Sarmiento, Pablo Andrés Acosta Solarte}
+\def\texttitulocorto{Cálculo integral}
+
 % 3. COMIENZO DEL DOCUMENTO
 \begin{document}
 
@@ -16,27 +16,31 @@
 \cleardoublepage
 
 % === 5. PÁGINAS PRELIMINARES ===
+\pagestyle{empty}
+
 \include{resumen3_calculo}
-\cleardoublepage
 
-\renewcommand*\contentsname{\lhseries Contenido}
+\clearpage
 
-\pagestyle{plain}
+%\include{legal}
+
+%\clearpage
+
 % Genera la tabla de contenido
+\renewcommand*\contentsname{\lhseries Contenido}
+\addtocontents{toc}{\protect\thispagestyle{empty}}
+\addtocontents{toc}{\protect\enlargethispage*{\baselineskip}}
 \tableofcontents
 
 \cleardoublepage
-\pagestyle{esstyle}	
+\pagestyle{esstyle}
 
-%AGRADECIMIENTOS
+% AGRADECIMIENTOS
 %\cleardoublepage
 %\include{Originales/agradecimiento}
-\cleardoublepage
-			
+%\cleardoublepage
+
 % 5. INCLUSIÓN DE LOS ARCHIVOS DE CONTENIDO
-%\include{legal}
-%\include{Resumen}
-%\include{abstract_calculo}
 \include{Caps/Introduccion_calculo}
 \include{Caps/CapIntegDefinid}
 \include{Caps/CapTeoremFundCalcu}
