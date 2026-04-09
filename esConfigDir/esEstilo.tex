@@ -118,13 +118,13 @@
 \setlist[enumerate,2]{label={\alph*)}, ref={\alph*}}
 \setlist[enumerate,3]{label={\smallcaps{\roman*})}, ref={\roman*}}
 
-%Listas en párrafos (sin indentado)
+%Listas en párrafos
 \newlist{parrafonumerado}{enumerate}{1}
-\setlist[parrafonumerado,1]{leftmargin=0pt,itemindent=1.5em,labelwidth=\itemindent,labelsep=0pt,align=left,label={\arabic*)}, ref={\arabic*}, font={\normalfont\upshape}}
+\setlist[parrafonumerado,1]{label={\arabic*)}, ref={\arabic*}, font={\normalfont\upshape}}
 
-% Funciones de ejemplos
-\newlist{funciones}{enumerate}{1}
-\setlist[funciones]{leftmargin=14pt, labelsep=7pt, labelwidth=8pt, align=left, label={\arabic*)}, ref={\arabic*}, font={\normalfont\upshape}}
+%Listas en párrafos (sin indentado)
+\newlist{parrafonoin}{enumerate}{1}
+\setlist[parrafonoin,1]{leftmargin=0pt,itemindent=1.5em,labelwidth=\itemindent,labelsep=0pt,align=left,label={\arabic*)}, ref={\arabic*}, font={\normalfont\upshape}}
 
 % Bullets
 \setlist[itemize]{labelsep=7pt, font={\normalfont\upshape}}
@@ -133,7 +133,7 @@
 \setlist[itemize,3]{label=\textasteriskcentered}
 
 \newlist{parrafoitemize}{itemize}{1}
-\setlist[parrafoitemize,1]{leftmargin=0pt,itemindent=1.5em,labelwidth=\itemindent,labelsep=0pt,align=left,label=$\bullet$, font={\normalfont\upshape}}
+\setlist[parrafoitemize,1]{leftmargin=0pt,itemindent=1.5em,labelwidth=\itemindent,labelsep=0pt,align=left,label=$\bullet$,font={\normalfont\upshape}}
 
 \usepackage{setspace}
 \linespread{1.1}

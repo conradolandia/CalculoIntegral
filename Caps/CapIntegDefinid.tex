@@ -41,7 +41,7 @@ En la expresión anterior, $k$ va desde $1$ hasta $n$. El límite inferior es $1
 Además, el contador no necesariamente debe iniciar en $1$ y puede tomar nombres diferentes a $k$. El límite inferior de la sumatoria depende de la expresión que vaya a sumarse. A continuación, se muestran otros ejemplos.
 
 \begin{ejemplo}\leavevmode
-  \begin{parrafonumerado}
+  \begin{parrafonoin}
   \item $\displaystyle{\sum_{k=1}^3\frac{1}{k}}=
     \underset{k=1}{\underbrace{\frac{1}{1}}}+
     \underset{k=2}{\underbrace{\frac{1}{2}}}+
@@ -57,7 +57,7 @@ Además, el contador no necesariamente debe iniciar en $1$ y puede tomar nombres
     \underset{k=3}{\underbrace{4^{3}-3^{3}}}+
     \underset{k=4}{\underbrace{5^{3}-4^{3}}}+
     \underset{k=5}{\underbrace{6^{3}-5^{3}}}=6^{3}-2^{3}$
-  \end{parrafonumerado}
+  \end{parrafonoin}
 \end{ejemplo}
 
 Para escribir una suma en notación compacta, es decir, como sumatoria, debe identificarse la expresión que generan los números que se están sumando.
@@ -377,23 +377,24 @@ donde $f$ es un polinomio de grado $m,$ $m\geq 1$.
   \end{equation*}
   con $f(n)=\frac{n}{2}$ siendo el polinomio de grado $1$.
 
-\item Supongamos ahora que el resultado es válido para todo número natural menor o igual a $m$ y
-  probemos que también es válido para $m+1$: por un lado, por la propiedad telescópica de las sumas, tenemos que
+\item \textls[-10]{Supongamos ahora que el resultado es válido para todo número natural menor o igual a $m$ y probemos que también es válido para $m+1$: por un lado, por la propiedad telescópica de las sumas, tenemos que}
   \begin{equation}\label{pruebam1}
     \sum_{k=1}^{n}\left( k^{m+2}-\left( k-1\right) ^{m+2}\right)=n^{m+2}
   \end{equation}
   y por otro lado, usando el teorema del binomio\footnote{Para recordar sobre inducción matemática, puede consultarse Stewart~\textcite{Stewart_2012}, páginas 814-819.},
   en el segundo término dentro de la suma, tenemos que
-  \begin{gather}
-    \begin{aligned}
-      &\sum_{k=1}^{n}\left( k^{m+2}-\left( k-1\right)^{m+2}\right)
-      =\sum_{k=1}^{n}\left( k^{m+2}-\sum_{i=0}^{m+2}\binom{m+2}{i}k^{i}(-1)^{m+2-i}\right)\\
-      &=\sum_{k=1}^{n}\left[ k^{m+2}-k^{m+2}+(m+2)k^{m+1}-\binom{m+2}{m}k^{m}
-      -\sum_{i=0}^{m-1}(-1)^{m+2-i}\binom{m+2}{i}k^{i}\right]\\
-      &=\sum_{k=1}^{n}(m+2)k^{m+1}-\sum_{k=1}^{n}\binom{m+2}{m}k^{m}
-      -\sum_{i=0}^{m-1}\left[(-1)^{m+2-i}\binom{m+2}{i}\left(\sum_{k=1}^{n}k^{i}\right)\right]
-    \end{aligned}\label{pruebam2}
-  \end{gather}
+  \begin{equation}
+    \resizebox{.9\textwidth}{!}{$
+      \begin{aligned}[b]
+        &\sum_{k=1}^{n}\left( k^{m+2}-\left( k-1\right)^{m+2}\right)
+        =\sum_{k=1}^{n}\left( k^{m+2}-\sum_{i=0}^{m+2}\binom{m+2}{i}k^{i}(-1)^{m+2-i}\right)\\
+        &=\sum_{k=1}^{n}\left[ k^{m+2}-k^{m+2}+(m+2)k^{m+1}-\binom{m+2}{m}k^{m}
+        -\sum_{i=0}^{m-1}(-1)^{m+2-i}\binom{m+2}{i}k^{i}\right]\\
+        &=\sum_{k=1}^{n}(m+2)k^{m+1}-\sum_{k=1}^{n}\binom{m+2}{m}k^{m}
+        -\sum_{i=0}^{m-1}\left[(-1)^{m+2-i}\binom{m+2}{i}\left(\sum_{k=1}^{n}k^{i}\right)\right]
+      \end{aligned}
+    $}\label{pruebam2}
+  \end{equation}
   Al igualar \eqref{pruebam1} y \eqref{pruebam2}, tenemos
   \begin{gather*}
     \sum_{k=1}^{n}(m+2) k^{m+1}-\hspace{-0.15cm}\sum_{k=1}^{n}\hspace{-0.17cm}\binom{m+2}{m}k^{m}
@@ -442,16 +443,13 @@ Las siguientes propiedades involucran funciones trigonométricas:
 \end{parrafonumerado}
 \end{teorema}
 
-\clearpage
+\emph{Demostración.}
 
-\emph{Demostración}
 \begin{parrafonumerado}[label=\alph*)]
 \item Usando las identidades $\sen\left( A\pm B\right) =\sen A\cos B\pm \sen B\cos A$, tenemos:
 \begin{align*}
-\sen&\left( \left( k+\frac{1}{2}\right) x\right) -\sen\left( \left( k-\frac{1}{2}\right) x\right)\\
-&=\sen kx\cos\frac{x}{2}+\sen\frac{x}{2}\cos kx-
-%&\qquad
-\left(\sen kx\cos \frac{x}{2}-\sen\frac{x}{2}\cos kx\right)\\
+\sen&\left( \left( k+\frac{1}{2}\right) x\right) -\sen\left( \left( k-\frac{1}{2}\right) x\right)\displaybreak \\
+&=\sen kx\cos\frac{x}{2}+\sen\frac{x}{2}\cos kx- \left(\sen kx\cos \frac{x}{2}-\sen\frac{x}{2}\cos kx\right)\\
 &=2\sen\frac{x}{2}\cos kx,
 \end{align*}
 y con ello,
@@ -500,8 +498,6 @@ y, por tanto,
 \end{gather*}
 como se quería probar.
 \end{parrafonumerado}
-
-\enlargethispage*{\baselineskip}
 
 \begin{ejemplo}
 Pruebe que para $n$ y $m$, números naturales, con $m\leq n$, se tiene que
@@ -566,16 +562,16 @@ Para hallar el área de $\mathcal{R}$, comenzamos aproximándola por medio de la
 \propia
 \end{figure}
 
-Recordemos que el área de un rectángulo de base {\small $B$} y altura {\small $H$} está dada por {\small $B\times H$}. En nuestro caso, si usamos $n$ rectángulos sobre el intervalo $[0,2]$, entonces la base de cada uno mide $\frac{2-0}{n}=\frac{2}{n}$; la altura, que está dada por la función $f(x)=x^3+2$, es igual, por ejemplo, a $x_k^3+2$, con $x_k$ un extremo del rectángulo (puede ser el extremo derecho), es decir, $x_k=\frac{2k}{n}$.
-
-Con ello, el $k$-ésimo rectángulo tiene área
+Recordemos que el área de un rectángulo de base $B$ y altura $H$ está dada por $B\times H$. En nuestro caso, si usamos $n$ rectángulos sobre el intervalo $[0,2]$, entonces la base de cada uno mide $\frac{2-0}{n}=\frac{2}{n}$; la altura, que está dada por la función $f(x)=x^3+2$, es igual, por ejemplo, a $x_k^3+2$, con $x_k$ un extremo del rectángulo (puede ser el extremo derecho), es decir, $x_k=\frac{2k}{n}$. Con ello, el $k$-ésimo rectángulo tiene área
 \[
 \frac{2}{n} \left( \left(\frac{2k}{n}\right)^3+2 \right)
 \]
 
+\enlargethispage*{\baselineskip}
+
 En total, $A_\mathcal{R}(n)$, la suma de las áreas de los $n$ rectángulos, es
 \begin{align*}
-A_\mathcal{R}(n)&=\frac{2}{n}\left( \left( \frac{2}{n}\right)^{3}+2\right) +\frac{2}{n}\left( \left( \frac{4}{n}\right)^{3}+2\right)+\frac{2}{n}\left(\left( \frac{6}{n}\right) ^{3}+2\right) \\
+A_\mathcal{R}(n)&=\frac{2}{n}\left( \left( \frac{2}{n}\right)^{3}+2\right) +\frac{2}{n}\left( \left( \frac{4}{n}\right)^{3}+2\right)+\frac{2}{n}\left(\left( \frac{6}{n}\right) ^{3}+2\right) \\ \displaybreak
 &\quad +\ldots+\frac{2}{n}\left(\left(\frac{2k}{n}\right)^{3}+2\right)+\ldots +\frac{2}{n}\left( \left( \frac{2n}{n}\right) ^{3}+2\right)\\
 &=\frac{2}{n}\left(\frac{2^{3}}{n^{3}}+\frac{4^{3}}{n^{3}}+\frac{6^{3}}{n^{3}}
 +\ldots+\frac{2^{3}k^{3}}{n^{3}}+\ldots+\frac{2^{3}n^{3}}{n^{3}}+2n\right)\\
@@ -591,7 +587,7 @@ A_\mathcal{R}(n)=\frac{16}{n^{4}}\left(\frac{n(n+1)}{2}\right)^2 +4
 \]
 que es la suma de las áreas de los rectángulos, pero el área exacta de la región $\mathcal{R}$ se obtiene cuando $n$ tiende a infinito; luego, si $a\left( \mathcal{R}\right) $ denota el área de $\mathcal{R}$, entonces
 \begin{align*}
-a\left( \mathcal{R}\right)& =\underset{n\rightarrow \infty }{\lim }\left[ \frac{16}{n^{4}}\left(\frac{n(n+1)}{2}\right)^2 +4\right]\\ \displaybreak
+a\left( \mathcal{R}\right)& =\underset{n\rightarrow \infty }{\lim }\left[ \frac{16}{n^{4}}\left(\frac{n(n+1)}{2}\right)^2 +4\right]\\
 &=\underset{n\rightarrow\infty }{\lim}\left(\frac{16}{n^{4}}\frac{n^{2}\left( n+1\right) ^{2}}{4} +4\right)\\
 &=\underset{n\rightarrow \infty }{\lim }\left( \frac{16}{4}\frac{
 \left( n+1\right) ^{2}}{n^{2}} +4\right)\\
@@ -627,7 +623,6 @@ x_{2},\Delta x_{3},\ldots ,\Delta x_{n}\right\}
 \]
 
 Una partición $P$ es regular si todos los subintervalos tienen la misma longitud, en este caso,
-
 \[
 \left\Vert P\right\Vert =\Delta x_{k}:=\Delta x=\frac{b-a}{n}
 \]
@@ -717,7 +712,7 @@ hacer explícita cada una de las longitudes de los intervalos;
 entonces,
 \begin{align*}
 \Delta x_{1}&=\frac{-7}{5}+2=\frac{3}{5} &
-\Delta x_{2}&=-1+\frac{7}{5}=\frac{2}{5}\\
+\Delta x_{2}&=-1+\frac{7}{5}=\frac{2}{5}\\ \displaybreak
 \Delta x_{3}&=\frac{-4}{5}+1=\frac{1}{5} &
 \Delta x_{4}&=\frac{-1}{5}+\frac{4}{5}=\frac{3}{5}\\
 \Delta x_{5}&=\frac{3}{5}+\frac{1}{5}=\frac{4}{5} &
@@ -887,8 +882,6 @@ para $c$ entre $a$ y $b$.\footnote{La condición de que $c$ está entre $a$ y $b
 \end{parrafonumerado}
 \end{teorema}
 
-\enlargethispage*{\baselineskip}
-
 \textit{Demostración.}
 \begin{parrafonumerado}
 \item Como $b=a$, $\triangle x_{k}=0$ y
@@ -936,7 +929,7 @@ x_{k}\\
 
 \item Se deduce de los puntos 3 y 4.
 
-\item Supongamos que la participación de $[a,b]$ es $P=\{x_{0},x_{1},x_{2},\ldots, x_{j}=c,x_{j+1},\ldots ,x_{n}\}$. Entonces, $P_{1}=\{x_{0},x_{1},x_{2},\ldots, x_{j}=c\}$ es una partición de $[a,c],$ y $P_{2}=\{x_{j}=c,x_{j+1},\ldots ,x_{n}\}$ es partición de $[c,b]$; entonces,
+\item Supongamos que la participación de $[a,b]$ es $P=\{x_{0},x_{1},x_{2},\ldots, x_{j}$ $= c,x_{j+1},\ldots ,x_{n}\}$. Entonces, $P_{1}=\{x_{0},x_{1},x_{2},\ldots, x_{j}=c\}$ es una partición de $[a,c],$ y $P_{2}=\{x_{j}=c,x_{j+1},\ldots ,x_{n}\}$ es partición de $[c,b]$; entonces,
 
 \begin{align*}
 \int_{a}^{b}f(x)dx&=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }\sum_{k=1}^{n}f(x_{k}^{\ast })\Delta x_{k}\\
@@ -962,12 +955,12 @@ lo que nos lleva a que
 \]
 
 \item Sea $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ una partición de $[a,b]$. Por hipótesis, $f\left( x_{k}\right) \leq g\left( x_{k}\right)$ para $1\leq k\leq n,$ entonces
-\[
+\begin{gather*}
 \int_{a}^{b}f(x)dx=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }
 \sum_{k=1}^{n}f(x_{k}^{\ast })\Delta x_{k}\leq
 \underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }
 \sum_{k=1}^{n}g(x_{k}^{\ast })\Delta x_{k}=\int_{a}^{b}g(x)dx
-\]
+\end{gather*}
 
 \item Por hipótesis, $m\leq f(x)\leq M$ para todo $x\in [a,b],$ entonces por la propiedad $8$ se tiene que
 \[
@@ -1005,10 +998,10 @@ para $x_{k}^{\ast }\in [x_{k-1},x_{k}]$.
 
 Ahora, como $f$ es creciente, los intervalos $[m_{k},M_{k}]$ forman una
 partición de $[f(a),f(b)]$ y
-\[
+\begin{gather*}
 \sum_{k=1}^{n}M_{k}\Delta x_{k}-\sum_{k=1}^{n}m_{k}\Delta x_{k}\leq \sum_{k=1}^{n}\left( M_{k}-m_{k}\right) \left\Vert P\right\Vert =\left\Vert P\right\Vert
 (f(b)-f(a))
-\]
+\end{gather*}
 luego
 \[
 \underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }\sum_{k=1}^{n}M_{k}\Delta x_{k}=\underset{\left\Vert P\right\Vert\rightarrow 0}{\lim }\sum_{k=1}^{n}m_{k}\Delta x_{k}=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }\sum_{k=1}^{n}f(x_{k}^{\ast })\Delta x_{k}
@@ -1124,24 +1117,25 @@ Usemos la definición para calcular las siguientes integrales:
 
 De la integral dada podemos identificar que
 \begin{align*}
-\Delta x&=\frac{b-a}{n}=\frac{2}{n},\ %&
-x_{k}=a+k\Delta x=\frac{2k}{n}\ \text{ y } %\\
-f\left( x\right) =2x+1
+\Delta x=\frac{b-a}{n}=\frac{2}{n},\quad
+x_{k}=a+k\Delta x = \frac{2k}{n}\quad\text{y} \quad
+f\left( x\right) = 2x+1
 \end{align*}
 con ello, $f\left( x_{k}\right)=2x_{k}+1=\frac{4k}{n}+1$\ y\ $f(x_{k})\Delta x=\frac{8k}{n^{2}}+\frac{2}{n}$.
 
 Entonces, y recordando las fórmulas de la sección \ref{FormSumas} del capítulo \ref{definida}, tenemos
-{\small
-\begin{align*}
+\begin{gather*}
+\begin{aligned}
 \int_{0}^{2}(2x+1)dx&=\underset{n\rightarrow \infty }{\lim }\overset{n}{%
-\underset{k=1}{\sum }}f(x_{k})\Delta x_{k} =\underset{n\rightarrow \infty }{\lim }\sum_{k=1}^{n}
-\left( \frac{8}{n^{2}}k+\frac{2}{n}\right) \\&
-=\underset{n\rightarrow \infty }{\lim }\left( \frac{8}{n^{2}}\overset{n}{
+\underset{k=1}{\sum }}f(x_{k})\Delta x_{k} \\
+&=\underset{n\rightarrow \infty }{\lim }\sum_{k=1}^{n}
+\left( \frac{8}{n^{2}}k+\frac{2}{n}\right) \\
+&=\underset{n\rightarrow \infty }{\lim }\left( \frac{8}{n^{2}}\overset{n}{
 \underset{k=1}{\sum }}k+\frac{2}{n}\sum_{k=1}^{n}1\right)\\
-&=\underset{n\rightarrow \infty }{\lim }\left( \frac{8}{n^{2}}\left( \frac{n^{2}}{2}+\frac{n}{2}\right) +\frac{2}{n}\cdot n\right) \\&
-=\underset{n\rightarrow \infty }{\lim }\left( 4+\frac{4}{n}+2\right) =6
-\end{align*}
-}
+&=\underset{n\rightarrow \infty }{\lim }\left( \frac{8}{n^{2}}\left( \frac{n^{2}}{2}+\frac{n}{2}\right) +\frac{2}{n}\cdot n\right) \\
+&=\underset{n\rightarrow \infty }{\lim }\left( 4+\frac{4}{n}+2\right) =6
+\end{aligned}
+\end{gather*}
 
 es decir,
 \[
@@ -1154,15 +1148,13 @@ De la integral tenemos que $\Delta x=\frac{b-a}{n}=\frac{2-\left( -2\right)}{n}=
 \begin{align*}
 f\left( x_{k}\right) &=3\left( x_{k}\right) ^{2}-x_{k}+3 %\\&
 =3\left( \frac{4k}{n}-2\right) ^{2}-\left( \frac{4k}{n}-2\right) +3 \\
-&=3\left( \frac{16k^{2}}{n^{2}}-\frac{16k}{n}+4\right) -\frac{4k}{n}+5 %\\&
-=\frac{48k^{2}}{n^{2}}-\frac{52k}{n}+17
+&=3\left( \frac{16k^{2}}{n^{2}}-\frac{16k}{n}+4\right) -\frac{4k}{n}+5 =\frac{48k^{2}}{n^{2}}-\frac{52k}{n}+17
 \end{align*}
 con lo que
 \[
 f(x_{k})\Delta x=\frac{192k^{2}}{n^{3}}-\frac{208k}{n^{2}}+\frac{68}{n}
 \]
 y, con ello,
-{\small
 \begin{align*}
 &\int_{-2}^{2}(3x^{2}-x+3)\,dx=\underset{n\rightarrow \infty }{\lim }\sum_{k=1}^{n}f(x_{k})\Delta x_{k} \\
 &=\underset{n\rightarrow \infty }{\lim }\sum_{k=1}^{n}
@@ -1177,7 +1169,6 @@ n^{2}}{2}+\frac{n}{2}\right) +\frac{68}{n}\cdot n\right) \\
 \frac{192}{6n^{2}}-104-\frac{104}{n}+68\right) \\
 &=64-104+68=28
 \end{align*}
-}
 
 \end{parrafonumerado}
 
@@ -1259,44 +1250,18 @@ es decir,
 \end{empheq}
 
 \item  Integral de la función $f(x)=x^3$:
+\item
 \begin{gather*}
 \begin{aligned}
-&\int_{a}^{b}x^{3}dx=\underset{n\rightarrow \infty }{\lim }\sum\limits_{k=1}^{n}\left( a+k\frac{b-a}{n}\right) ^{3}\frac{\left(
-b-a\right) }{n}\\
-&=\underset{n\rightarrow \infty }{\lim }\sum\limits_{k=1}^{n}
-\left( a^{3}+3a^{2}k\frac{b-a}{n}+3a\left( k\frac{b-a}{n}\right) ^{2}
-+\left( k\frac{b-a}{n}\right) ^{3}\right) \left( \frac{b-a}{n}\right)\\
-&=\underset{n\rightarrow \infty }{\lim }\sum\limits_{k=1}^{n}%
-\left( a^{3}\left( \frac{b-a}{n}\right) +3a^{2}k\left( \frac{b-a}{n}\right) \left( \frac{b-a}{n}\right)\right.\\
-&\quad\left.+3a\left( k\frac{b-a}{n}\right) ^{2}\left( \frac{%
-b-a}{n}\right) +\left( k\frac{b-a}{n}\right) ^{3}\left( \frac{b-a}{n}\right)
-\right)\\
-&=\underset{n\rightarrow \infty }{\lim }\sum\limits_{k=1}^{n}%
-\left( a^{3}\left( \frac{b-a}{n}\right) +3a^{2}\left(
-\frac{b-a}{n}\right)
-^{2}k\right.%\\&\quad
-\left.+3ak^{2}\left( \frac{b-a}{n}\right) ^{3}+k^{3}\left( \frac{b-a}{n}%
-\right) ^{4}\right) \\
-%\end{align*}
-%
-%\begin{align*}
-&=\underset{n\rightarrow \infty }{\lim }\left( a^{3}\left( \frac{b-a}{n}%
-\right) n+3a^{2}\left( \frac{b-a}{n}\right) ^{2}\left( \frac{n^{2}}{2}+\frac{%
-n}{2}\right)\right. \\
-&\quad\left.+3a\left( \frac{n^{3}}{3}+\frac{n^{2}}{2}+\frac{n}{6}\right)
-\left( \frac{b-a}{n}\right) ^{3}%\right. \\&\quad\left.
-+\left( \frac{n^{4}}{4}+\frac{n^{3}}{2}+%
-\frac{n^{2}}{4}.\right) \left( \frac{b-a}{n}\right) ^{4}\right)
-\\
-&=a^{3}\left( b-a\right) +\underset{n\rightarrow \infty }{\lim }\left( 3a^{2}\frac{\left( b-a\right) ^{2}}{n}\left(\frac{n}{2}+\frac{1}{2}\right)
-%\right. \\&\quad\left.
-+3a\left( \frac{n^{2}}{3}+\frac{n}{2}+\frac{1}{6}\right) \frac{\left(b-a\right) ^{3}}{n^{2}}\right. \\
-&\quad\left.+\left( \frac{n^{3}}{4}+\frac{n^{2}}{2}+\frac{n}{4}%
-\right) \frac{\left( b-a\right) ^{4}}{n^{3}}\right)\\
-&=a^{3}\left( b-a\right) +3a^{2}\frac{\left( b-a\right) ^{2}}{2}+a\left(
-b-a\right) ^{3}+\frac{\left( b-a\right) ^{4}}{4}%\\&
-=\allowbreak \frac{1}{4}
-b^{4}-\frac{1}{4}a^{4}=\frac{b^{4}-a^{4}}{4}
+\int_{a}^{b}x^{3}dx &= \lim_{n\to\infty} \sum_{k=1}^{n} \left( a+k\frac{b-a}{n}\right)^{3} \frac{(b-a)}{n} \\
+&= \lim_{n\to\infty} \sum_{k=1}^{n} \left( a^{3} + 3a^{2}k\frac{b-a}{n} + 3a\left( k\frac{b-a}{n} \right)^{2} + \left( k\frac{b-a}{n} \right)^{3} \right) \left( \frac{b-a}{n} \right) \\
+&= \lim_{n\to\infty} \sum_{k=1}^{n} \left( a^{3}\frac{b-a}{n} + 3a^{2}k\left( \frac{b-a}{n} \right)^{2} + 3ak^{2}\left( \frac{b-a}{n} \right)^{3} + k^{3}\left( \frac{b-a}{n} \right)^{4} \right) \\
+&= \lim_{n\to\infty} \left[ a^{3}\left( \frac{b-a}{n} \right) n + 3a^{2}\left( \frac{b-a}{n} \right)^{2} \left( \frac{n^{2}}{2}+\frac{n}{2} \right) \right. \\
+&\quad \left. + 3a\left( \frac{n^{3}}{3}+\frac{n^{2}}{2}+\frac{n}{6} \right) \left( \frac{b-a}{n} \right)^{3} + \left( \frac{n^{4}}{4}+\frac{n^{3}}{2} + \frac{n^{2}}{4} \right) \left( \frac{b-a}{n} \right)^{4} \right] \\
+&= a^{3}(b-a) + \lim_{n\to\infty} \left[ 3a^{2}\frac{(b-a)^{2}}{n} \left( \frac{n}{2}+\frac{1}{2} \right) + 3a\left( \frac{n^{2}}{3}+\frac{n}{2}+\frac{1}{6} \right) \frac{(b-a)^{3}}{n^{2}} \right. \\
+&\quad \left. + \left( \frac{n^{3}}{4}+\frac{n^{2}}{2}+\frac{n}{4} \right) \frac{(b-a)^{4}}{n^{3}} \right] \\
+&= a^{3}(b-a) + \frac{3}{2}a^{2}(b-a)^{2} + a(b-a)^{3} + \frac{1}{4}(b-a)^{4} \\
+&= \frac{1}{4}b^{4} - \frac{1}{4}a^{4} = \frac{b^{4}-a^{4}}{4}
 \end{aligned}
 \end{gather*}
 es decir,
