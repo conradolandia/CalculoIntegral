@@ -107,34 +107,34 @@ los términos de la suma están dados por $\frac{1}{2^{k}}$. El límite superior
 
 \item Suma de una constante:
   \[
-    \overset{n}{\underset{k=1}{\sum }}c=cn
+    \sum_{k=1}^{n}c=cn
   \]
 
 \item Propiedad homogénea:
   \[
-    \overset{n}{\underset{k=1}{\sum }}ca_{k}=c
-    \overset{n}{\underset{k=1}{\sum }}a_{k}
+    \sum_{k=1}^{n}ca_{k}=c
+    \sum_{k=1}^{n}a_{k}
   \]
 
 \item Propiedad aditiva:
   \[
-    \overset{n}{\underset{k=1}{\sum }}
-    \left( a_{k}+b_{k}\right) =\overset{n}{\underset{k=1}{\sum }}a_{k}+
-    \overset{n}{\underset{k=1}{\sum }}b_{k}
+    \sum_{k=1}^{n}
+    \left( a_{k}+b_{k}\right) =\sum_{k=1}^{n}a_{k}+
+    \sum_{k=1}^{n}b_{k}
   \]
 
 \item Propiedad de la resta:
   \[
-    \overset{n}{\underset{k=1}{\sum }}%
-    \left( a_{k}-b_{k}\right) =\overset{n}{\underset{k=1}{\sum }}a_{k}-%
-    \overset{n}{\underset{k=1}{\sum }}b_{k}
+    \sum_{k=1}^{n}%
+    \left( a_{k}-b_{k}\right) =\sum_{k=1}^{n}a_{k}-%
+    \sum_{k=1}^{n}b_{k}
   \]
 
 \item Propiedad de linealidad:
   \[
-    \overset{n}{\underset{k=1}{\sum }}%
-    \left( ca_{k}+db_{k}\right) =c\overset{n}{\underset{k=1}{\sum }}a_{k}+d%
-    \overset{n}{\underset{k=1}{\sum }}b_{k}
+    \sum_{k=1}^{n}%
+    \left( ca_{k}+db_{k}\right) =c\sum_{k=1}^{n}a_{k}+d%
+    \sum_{k=1}^{n}b_{k}
   \]
 
 \item Propiedad telescópica:
@@ -149,38 +149,38 @@ Sus demostraciones formales se realizan usando inducción matemática.}
 
 \begin{parrafonumerado}
 
-\item $\overset{n}{\underset{k=1}{\sum }}c=\underset{k=1}{\underbrace{c}}+%
+\item $\sum_{k=1}^{n}c=\underset{k=1}{\underbrace{c}}+%
   \underset{k=2}{\underbrace{c}}+\ldots +\underset{k=n}{\underbrace{c}}=cn$
 
 \item Al usar la propiedad distributiva y usar $n$ veces el mismo término, se tiene
   \begin{align*}
-    c\overset{n}{\underset{k=1}{\sum }}a_{k}&=c\left( a_{1}+a_{2}+\ldots
+    c\sum_{k=1}^{n}a_{k}&=c\left( a_{1}+a_{2}+\ldots
     +a_{n}\right)%\\
     %&
-    =ca_{1}+ca_{2}+\ldots +ca_{n}=\overset{n}{\underset{k=1}{\sum }}ca_{k}
+    =ca_{1}+ca_{2}+\ldots +ca_{n}=\sum_{k=1}^{n}ca_{k}
   \end{align*}
 
 \item Para este caso se usan las propiedades asociativa y conmutativa de números reales, y se tiene
   \begin{align*}
-    \overset{n}{\underset{k=1}{\sum }}\left( a_{k}+b_{k}\right)
+    \sum_{k=1}^{n}\left( a_{k}+b_{k}\right)
     &=\left(a_{1}+b_{1}\right) +\left( a_{2}+b_{2}\right) +\ldots +\left(
     a_{n}+b_{n}\right) \\
     &=\left( a_{1}+a_{2}+\ldots +a_{n}\right) +\left(
     b_{1}+b_{2}+\ldots +b_{n}\right)\\
-    &=\overset{n}{\underset{k=1}{\sum }}a_{k}+\overset{n}{\underset{k=1}{\sum }}b_{k}
+    &=\sum_{k=1}^{n}a_{k}+\sum_{k=1}^{n}b_{k}
   \end{align*}
 
 \item Al manipular las expresiones se tiene
   \begin{align*}
-    \overset{n}{\underset{k=1}{\sum }}\left( a_{k}-b_{k}\right) &=\overset{n}{ \underset{k=1}{\sum }}\left( a_{k}+\left( -1\right) b_{k}\right)\\
-    &=\overset{n}{\underset{k=1}{\sum }}a_{k}+\overset{n}{\underset{k=1}{\sum }}\left( -1\right) b_{k} \quad \text{\small (Propiedad homogénea)}\\
-    &=\overset{n}{\underset{k=1}{\sum }}a_{k}+\left(-1\right) \overset{n}{\underset{k=1}{\sum }}b_{k}\\
-    &=\overset{n}{\underset{k=1}{\sum }}a_{k}-\overset{n}{\underset{k=1}{\sum }}b_{k}
+    \sum_{k=1}^{n}\left( a_{k}-b_{k}\right) &=\overset{n}{ \underset{k=1}{\sum }}\left( a_{k}+\left( -1\right) b_{k}\right)\\
+    &=\sum_{k=1}^{n}a_{k}+\sum_{k=1}^{n}\left( -1\right) b_{k} \quad \text{\small (Propiedad homogénea)}\\
+    &=\sum_{k=1}^{n}a_{k}+\left(-1\right) \sum_{k=1}^{n}b_{k}\\
+    &=\sum_{k=1}^{n}a_{k}-\sum_{k=1}^{n}b_{k}
   \end{align*}
 
 \item En este caso,
   \begin{align*}
-    \overset{n}{\underset{k=1}{\sum }}\left( ca_{k}+db_{k}\right) &=\overset{n}{\underset{k=1}{\sum }}ca_{k}+\overset{n}{\underset{k=1}{\sum }}db_{k}=c\overset{n}{\underset{k=1}{\sum }}a_{k}+d\overset{n}{\underset{k=1}{\sum }}b_{k}
+    \sum_{k=1}^{n}\left( ca_{k}+db_{k}\right) &=\sum_{k=1}^{n}ca_{k}+\sum_{k=1}^{n}db_{k}=c\sum_{k=1}^{n}a_{k}+d\sum_{k=1}^{n}b_{k}
   \end{align*}
 
 \item Para justificar esta propiedad, se descompone la sumatoria y se cancelan los términos semejantes:
@@ -793,7 +793,7 @@ x_{1}+ f(0.9)\Delta x_{2}+f(1.4)\Delta x_{3}\\[-0.9em]
 Sean $f$ una función acotada en el intervalo $[a,b]$; $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ una partición cualquiera del intervalo $[a,b]$, y $x_{k}^{\ast }$, un punto elegido en el subintervalo $\left[x_{k-1},x_{k}\right]$. Entonces la integral entre $a$ y $b$ de $f$ está dada por
 \begin{equation}\label{defintegral}
 \int_{a}^{b}f(x)dx=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }
-\overset{n}{\underset{k=1}{\sum }}f(x_{k}^{\ast })\Delta x_{k}
+\sum_{k=1}^{n}f(x_{k}^{\ast })\Delta x_{k}
 \end{equation}
 siempre que el límite exista.
 \end{defi}
@@ -821,9 +821,9 @@ Supongamos que $f$ es constante, es decir, $f(x)=c$, con $c\in\mathbb{R}$; enton
 &=c\left( b-a\right)
 \end{align*}
 es decir,
-\[
+\begin{empheq}[box=\fbox]{equation*}
 \int_{a}^{b} c\,dx = c(b-a)
-\]
+\end{empheq}
 
 El siguiente teorema, que se demuestra usando la definición de integral, nos garantiza poder trabajar con particiones regulares, que son más manejables en el cálculo de integrales por medio de sumas de Riemann.
 
@@ -836,12 +836,13 @@ Si $f$ es integrable en el intervalo $[a,b]$, entonces
 \end{parrafonumerado}
 \end{teorema}
 
-\begin{ejemplo} Una función que no es integrable. Tomemos el siguiente caso. Supongamos que $0\leq x\leq 3$ y que
+\begin{ejemplo}[Una función que no es integrable]
+Tomemos el siguiente caso. Supongamos que $0\leq x\leq 3$ y que
 \[
 f(x)=
 \begin{cases}
   5 & \text{ si $x$ es racional}\\
-  -1 & \text{si $x$ es irracional}.
+  -1 & \text{si $x$ es irracional}
 \end{cases}
 \]
 Si tomamos una partición $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ de $[0,3]$, entonces tenemos dos posibilidades:
@@ -849,13 +850,13 @@ Si tomamos una partición $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ de $[0,3]$, en
 \begin{parrafoitemize}
 \item Si se elige en el subintervalo $\left[ x_{k-1},x_{k}\right] $ un punto $x_{k}^{\ast }$ racional, se tiene
 \[
-  \overset{n}{\underset{k=1}{\sum }}f(x_{k}^{\ast })\Delta x_{k}=5\left(
+  \sum_{k=1}^{n}f(x_{k}^{\ast })\Delta x_{k}=5\left(
   3-0\right) =15
 \]
 
-\item Por otro lado, si se elige en el subintervalo $\left[x_{k-1},x_{k}\right]$ un punto $x_{k}^{\ast }$ irracional; entonces,
+\item Por otro lado, si se elige en el subintervalo $\left[x_{k-1},x_{k}\right]$ un punto $x_{k}^{\ast }$ irracional, entonces
 \[
-  \overset{n}{\underset{k=1}{\sum }}f(x_{k}^{\ast })\Delta x_{k}=-1\left(
+  \sum_{k=1}^{n}f(x_{k}^{\ast })\Delta x_{k}=-1\left(
   3-0\right)=-3
 \]
 \end{parrafoitemize}
@@ -873,66 +874,72 @@ Propiedades de la integral definida: sean $f$ y $g$ funciones integrables en el 
   \int_{a}^{b}\left( f(x)+g(x)\right)dx=\int_{a}^{b}f(x)dx+\int_{a}^{b}g(x)dx
 \]
 
-\item Propiedad homogénea: \[\int_{a}^{b}\alpha f(x)dx=\alpha \int_{a}^{b}f(x)dx\]
-\item Propiedad de linealidad: \[\int_{a}^{b}\left( \alpha f(x)+\beta g(x)\right) dx=\alpha \int_{a}^{b}f(x)dx+\beta \int_{a}^{b}g(x)dx\]
-\item Propiedad de aditividad en el intervalo: \[\int_{a}^{b}f(x)dx=\int_{a}^{c}f(x)dx+\int_{c}^{b}f(x)dx\] para $c$ entre $a$ y $b$\footnote{La condición de que $c$ está entre $a$ y $b$ no es necesaria. Acá se incluye solo por ser el caso que se toma en la demostración de más adelante}
+\item Propiedad homogénea:
+\[\int_{a}^{b}\alpha f(x)dx=\alpha \int_{a}^{b}f(x)dx\]
+\item Propiedad de linealidad:
+\[\int_{a}^{b}\left( \alpha f(x)+\beta g(x)\right) dx=\alpha \int_{a}^{b}f(x)dx+\beta \int_{a}^{b}g(x)dx\]
+\item Propiedad de aditividad en el intervalo:
+\[\int_{a}^{b}f(x)dx=\int_{a}^{c}f(x)dx+\int_{c}^{b}f(x)dx\]
+para $c$ entre $a$ y $b$.\footnote{La condición de que $c$ está entre $a$ y $b$ no es necesaria. Acá se incluye solo por ser el caso que se toma en la demostración de más adelante.}
 \item Positividad: $f\geq 0$ en $[a,b]$, entonces $\int_{a}^{b}f(x)dx\geq 0$.
-\item Monotonía: sean $f$ y $g$ tales que $f\left( x\right)\leq g\left( x\right) $ para todo $x\in \left[ a,b\right],$ entonces \textit{$\int_{a}^{b}f(x)dx\leq \int_{a}^{b}g(x)dx$.}
-\item Desigualdad máximo-mínimo: si existen $f(c)=m $ y $f(d)=M$ los valores mínimo y máximo de $f$ en $[a,b]$, entonces $m(b-a)\leq \int_{a}^{b}f(x)dx\leq M(b-a).$
+\item Monotonía: sean $f$ y $g$ tales que $f\left( x\right)\leq g\left( x\right)$ para todo $x\in \left[ a,b\right]$, entonces $\int_{a}^{b}f(x)dx\leq \int_{a}^{b}g(x)dx$.
+\item Desigualdad máximo-mínimo: si existen $f(c)=m $ y $f(d)=M$ los valores mínimo y máximo de $f$ en $[a,b]$, entonces $m(b-a)\leq \int_{a}^{b}f(x)dx\leq M(b-a)$.
 \end{parrafonumerado}
 \end{teorema}
 
-\textit{Demostración}
+\enlargethispage*{\baselineskip}
+
+\textit{Demostración.}
 \begin{parrafonumerado}
 \item Como $b=a$, $\triangle x_{k}=0$ y
 \[
 \int_{a}^{a}f\left( x\right) dx=\underset{\left\Vert P\right\Vert
-\rightarrow 0}{\lim }\overset{n}{\underset{k=1}{\sum }}f(x_{k}^{\ast
+\rightarrow 0}{\lim }\sum_{k=1}^{n}f(x_{k}^{\ast
 })\triangle x_{k}=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }0=0
 \]
 
-\item Si $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ es una partición de $\left[
-a,b\right] ,$ donde $\triangle x_{k}=x_{k}-x_{k-1},$ así $-\triangle x_{k}=-\left( x_{k-1}-x_{k}\right) $ y
+\item Si $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ es una partición de $\left[a,b\right]$, donde $\triangle x_{k}=x_{k}-x_{k-1}$, así $-\triangle x_{k}=-\left( x_{k-1}-x_{k}\right)$ y
 \begin{align*}
 \int_{a}^{b}f\left( x\right) dx&=\underset{\left\Vert P\right\Vert
-\rightarrow 0}{\lim }\overset{n}{\underset{k=1}{\sum }}f(x_{k}^{\ast
-})\triangle x_{k}%\\&
-=-\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }%
-\overset{n}{\underset{k=1}{\sum }}f(x_{k}^{\ast })\left( -\triangle
+\rightarrow 0}{\lim }\sum_{k=1}^{n}f(x_{k}^{\ast
+})\triangle x_{k}\\
+&=-\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }
+\sum_{k=1}^{n}f(x_{k}^{\ast })\left( -\triangle
 x_{k}\right) =-\int_{b}^{a}f\left( x\right) dx
 \end{align*}
 
 \item Descompongamos la expresión en la integral:
 \begin{align*}
 \int_{a}^{b}\left( f(x)+g(x)\right) dx&=\underset{\left\Vert
-P\right\Vert \rightarrow 0}{\lim }\overset{n}{\underset{k=1}{\sum }}\left(
+P\right\Vert \rightarrow 0}{\lim }\sum_{k=1}^{n}\left(
 f+g\right) (x_{k}^{\ast })\Delta x_{k}\\
 &=\underset{\left\Vert P\right\Vert
-\rightarrow 0}{\lim }\left( \overset{n}{\underset{k=1}{\sum }}f(x_{k}^{\ast
-  })\Delta x_{k}+\overset{n}{\underset{k=1}{\sum }}g(x_{k}^{\ast
+\rightarrow 0}{\lim }\left( \sum_{k=1}^{n}f(x_{k}^{\ast
+  })\Delta x_{k}+\sum_{k=1}^{n}g(x_{k}^{\ast
 })\Delta x_{k}\right)\\
 &=\underset{\left\Vert P\right\Vert
-\rightarrow 0}{\lim }\overset{n}{\underset{k=1}{\sum }}f(x_{k}^{\ast
+\rightarrow 0}{\lim }\sum_{k=1}^{n}f(x_{k}^{\ast
 })\Delta x_{k}+\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }%
-\overset{n}{\underset{k=1}{\sum }}g(x_{k}^{\ast })\Delta x_{k}\\
+\sum_{k=1}^{n}g(x_{k}^{\ast })\Delta x_{k}\\
 &=\int_{a}^{b}f(x)dx+\int_{a}^{b}g(x)dx
 \end{align*}
 
 \item Igual que en el caso anterior,
 \begin{align*}
 \int_{a}^{b}\alpha f(x)dx&=\underset{\left\Vert P\right\Vert \rightarrow 0%
-}{\lim }\overset{n}{\underset{k=1}{\sum }}\alpha f(x_{k}^{\ast })\Delta
+}{\lim }\sum_{k=1}^{n}\alpha f(x_{k}^{\ast })\Delta
 x_{k}\\
 &=\alpha \underset{\left\Vert P\right\Vert \rightarrow 0%
-}{\lim }\overset{n}{\underset{k=1}{\sum }}f(x_{k}^{\ast })\Delta x_{k}
+}{\lim }\sum_{k=1}^{n}f(x_{k}^{\ast })\Delta x_{k}
 =\alpha \int_{a}^{b}f(x)dx
 \end{align*}
 
 \item Se deduce de los puntos 3 y 4.
 
 \item Supongamos que la participación de $[a,b]$ es $P=\{x_{0},x_{1},x_{2},\ldots, x_{j}=c,x_{j+1},\ldots ,x_{n}\}$. Entonces, $P_{1}=\{x_{0},x_{1},x_{2},\ldots, x_{j}=c\}$ es una partición de $[a,c],$ y $P_{2}=\{x_{j}=c,x_{j+1},\ldots ,x_{n}\}$ es partición de $[c,b]$; entonces,
+
 \begin{align*}
-\int_{a}^{b}f(x)dx&=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }\overset{n}{\underset{k=1}{\sum }}f(x_{k}^{\ast })\Delta x_{k}\\
+\int_{a}^{b}f(x)dx&=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }\sum_{k=1}^{n}f(x_{k}^{\ast })\Delta x_{k}\\
 &=\underset{\left\Vert P_{1}\right\Vert \rightarrow 0}{
 \lim }\overset{j}{\underset{k=1}{\sum }}f(x_{k}^{\ast })\Delta x_{k}+%
 \underset{\left\Vert P_{2}\right\Vert \rightarrow 0}{\lim }\overset{n}{\underset{k=j}{\sum }}f(x_{k}^{\ast })\Delta x_{k}\\
@@ -941,25 +948,25 @@ x_{k}\\
 
 \item Si $f\geq 0$, entonces $f(x_k^*)\geq 0$ para todo $x_k^*$ en $[a,b]$, y dado que por definición $\Delta x_{k}\geq 0$, entonces $f(x_k^*) \Delta x_{k}\geq 0$; por tanto,
 \[
-\overset{n}{\underset{k=1}{\sum }}f(x_{k}^{\ast })\Delta x_{k}\geq 0
+\sum_{k=1}^{n}f(x_{k}^{\ast })\Delta x_{k}\geq 0
 \]
 y
 \[
 \underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }%
-\overset{n}{\underset{k=1}{\sum }}f(x_{k}^{\ast })\Delta x_{k}\geq 0
+\sum_{k=1}^{n}f(x_{k}^{\ast })\Delta x_{k}\geq 0
 \]
 lo que nos lleva a que
 \[
 \int_{a}^{b}f(x)dx=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }
-\overset{n}{\underset{k=1}{\sum }}f(x_{k}^{\ast })\Delta x_{k}\geq 0
+\sum_{k=1}^{n}f(x_{k}^{\ast })\Delta x_{k}\geq 0
 \]
 
 \item Sea $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ una partición de $[a,b]$. Por hipótesis, $f\left( x_{k}\right) \leq g\left( x_{k}\right)$ para $1\leq k\leq n,$ entonces
 \[
 \int_{a}^{b}f(x)dx=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }
-\overset{n}{\underset{k=1}{\sum }}f(x_{k}^{\ast })\Delta x_{k}\leq
-\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }\overset{n}{\underset{
-k=1}{\sum }}g(x_{k}^{\ast })\Delta x_{k}=\int_{a}^{b}g(x)dx
+\sum_{k=1}^{n}f(x_{k}^{\ast })\Delta x_{k}\leq
+\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }
+\sum_{k=1}^{n}g(x_{k}^{\ast })\Delta x_{k}=\int_{a}^{b}g(x)dx
 \]
 
 \item Por hipótesis, $m\leq f(x)\leq M$ para todo $x\in [a,b],$ entonces por la propiedad $8$ se tiene que
@@ -990,7 +997,7 @@ definida no depende de la variable de integración; es decir, si la función dep
 \begin{parrafonumerado}
 \item Sea $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ una partición de $[a,b].$ Como $f$ es continua en $[x_{k-1},x_{k}]$, entonces $f$ toma estos valores: máximo $M_{k}$ y mínimo $m_{k}$ en $[x_{k-1},x_{k}]$ para $1\leq k\leq n$. Así que
 \[
-\overset{n}{\underset{k=1}{\sum }}m_{k}\Delta x_{k}\leq \overset{n}{%
+\sum_{k=1}^{n}m_{k}\Delta x_{k}\leq \overset{n}{%
 \underset{k=1}{\sum }}f(x_{k}^{\ast })\Delta x_{k}\leq \overset{n}{%
 \underset{k=1}{\sum }}M_{k}\Delta x_{k}
 \]
@@ -999,32 +1006,28 @@ para $x_{k}^{\ast }\in [x_{k-1},x_{k}]$.
 Ahora, como $f$ es creciente, los intervalos $[m_{k},M_{k}]$ forman una
 partición de $[f(a),f(b)]$ y
 \[
-\overset{n}{\underset{k=1}{\sum }}M_{k}\Delta x_{k}-\overset{n}{\underset{k=1}{\sum }}m_{k}\Delta x_{k}\leq \overset{n}{\underset{k=1}{\sum }}\left( M_{k}-m_{k}\right) \left\Vert P\right\Vert =\left\Vert P\right\Vert
+\sum_{k=1}^{n}M_{k}\Delta x_{k}-\sum_{k=1}^{n}m_{k}\Delta x_{k}\leq \sum_{k=1}^{n}\left( M_{k}-m_{k}\right) \left\Vert P\right\Vert =\left\Vert P\right\Vert
 (f(b)-f(a))
 \]
 luego
 \[
-\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }\overset{n}{\underset{k=1}{\sum }}M_{k}\Delta x_{k}=\underset{\left\Vert P\right\Vert\rightarrow 0}{\lim }\overset{n}{\underset{k=1}{\sum }}m_{k}\Delta x_{k}=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }\overset{n}{\underset{k=1}{\sum }}f(x_{k}^{\ast })\Delta x_{k}
+\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }\sum_{k=1}^{n}M_{k}\Delta x_{k}=\underset{\left\Vert P\right\Vert\rightarrow 0}{\lim }\sum_{k=1}^{n}m_{k}\Delta x_{k}=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }\sum_{k=1}^{n}f(x_{k}^{\ast })\Delta x_{k}
 \]
 y $f$ es integrable en $[a,b]$.
 
 \item Este caso es similar al anterior.
 \end{parrafonumerado}
 
-\begin{teorema}
+\begin{teorema}\leavevmode
 \begin{parrafonumerado}
-\item Si $f$unción continua en $[a,b]$s $f$
-uniformemente continua en $[a,b]$. Es decir, dado un $\varepsilon >0$,
-existe un $\delta >0$ tal que para cada par de puntos $x,\ y$ en $[a,b]$, si $\left\vert x-y\right\vert <\delta$, entonces $\left\vert f\left( x\right)-f\left( y\right) \right\vert <\varepsilon$.
+\item Si $f$ es una función continua en $[a,b]$, entonces $f$ es uniformemente continua en $[a,b]$. Es decir, dado un $\varepsilon >0$, existe un $\delta >0$ tal que para cada par de puntos $x,\ y$ en $[a,b]$, si $\left\vert x-y\right\vert <\delta$, entonces $\left\vert f\left( x\right)-f\left( y\right) \right\vert <\varepsilon$.
 
 \item Si $f$ es una función continua en $[a,b]$, entonces $f$ es integrable en $[a,b]$.
 \end{parrafonumerado}
 \end{teorema}
 
-\textit{Demostración}
-
+\emph{Demostración.}
 \begin{parrafonumerado}
-
 \item Supongamos, por reducción al absurdo, que existe $\varepsilon _{0}>0$,
 tal que para cada $\delta >0$ existen $x,y$ en $[a,b]$ con $\left\vert
 f\left( x\right) -f\left( y\right) \right\vert \geq \varepsilon _{0}.$
@@ -1056,18 +1059,11 @@ Para $\delta >0,$ existe $n\in \mathbb{Z}_{+},$ tal que $\delta _{n}=\frac{1%
 \alpha -\delta ,\alpha +\delta \right)$, así que $\left\vert f\left(
 a_{n}\right) -f\left( \alpha \right) \right\vert <\frac{\varepsilon _{0}}{2}$ y $\left\vert f\left( b_{n}\right) -f\left( \alpha \right) \right\vert < \frac{\varepsilon _{0}}{2}$.
 
-Luego
-\begin{align*}
-\left\vert f\left( b_{n}\right) -f\left( a_{n}\right) \right\vert
-&=\left\vert f\left( b_{n}\right) -\alpha +\alpha -f\left( a_{n}\right) \right\vert\\
-&\leq \left\vert f\left( b_{n}\right) -\alpha \right\vert
-+\left\vert \alpha -f\left( a_{n}\right) \right\vert <\varepsilon _{0},
-\end{align*}
-lo que es una contradicción.
+Luego $\vert f( b_{n}) -f( a_{n}) \vert =\vert f( b_{n}) -\alpha +\alpha -f( a_{n}) \vert \leq \vert f( b_{n}) -\alpha \vert +\vert \alpha -f( a_{n}) \vert <\varepsilon _{0}$, lo que es una contradicción.
 
 \item Sean $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ una partición de $[a,b]$ y $\varepsilon >0$. Como $f$ es continua en $[x_{k-1},x_{k}]$, entonces $f$ toma valores máximo $f(d_{k})$ y mínimo $f(c_{k})$ \ $1\leq k\leq n$. Así que
 \[
-\overset{n}{\underset{k=1}{\sum }}f(c_{k})\Delta x_{k}\leq \overset{n}{%
+\sum_{k=1}^{n}f(c_{k})\Delta x_{k}\leq \overset{n}{%
 \underset{k=1}{\sum }}f(x_{k}^{\ast })\Delta x_{k}\leq \overset{n}{%
 \underset{k=1}{\sum }}f(d_{k})\Delta x_{k}
 \]
@@ -1083,27 +1079,26 @@ Supongamos ahora que $\delta =\text{máx}\left\{ \delta _{k}:1\leq k\leq n\right
 
 Si $\left\Vert P\right\Vert <\delta$, entonces
 \begin{align*}
-\left\vert \overset{n}{\underset{k=1}{\sum }}f(d_{k})\Delta x_{k}-%
-\overset{n}{\underset{k=1}{\sum }}f(c_{k})\Delta x_{k}\right\vert &=%
-\overset{n}{\underset{k=1}{\sum }}\left\vert
+\left\vert \sum_{k=1}^{n}f(d_{k})\Delta x_{k}-%
+\sum_{k=1}^{n}f(c_{k})\Delta x_{k}\right\vert &=%
+\sum_{k=1}^{n}\left\vert
 f(d_{k})-f(c_{k})\right\vert \Delta x_{k}\\
 &<\frac{\varepsilon }{b-a}
-\overset{n}{\underset{k=1}{\sum }}\Delta x_{k}%\\&
+\sum_{k=1}^{n}\Delta x_{k}%\\&
 =\frac{\varepsilon }{b-a}\left( b-a\right) =\varepsilon
 \end{align*}
 luego
 \[
 \underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }\overset{n}{\underset%
 {k=1}{\sum }}f(c_{k})\Delta x_{k}=\underset{\left\Vert P\right\Vert
-\rightarrow 0}{\lim }\overset{n}{\underset{k=1}{\sum }}f(d_{k})\Delta
+\rightarrow 0}{\lim }\sum_{k=1}^{n}f(d_{k})\Delta
 x_{k}=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }\overset{n}{%
 \underset{k=1}{\sum }}f(x_{k}^{\ast })\Delta x_{k}
 \]
 y $f$ es integrable en $[a,b].$
 \end{parrafonumerado}
 
-\begin{defi}
-Integral definida de una función continua.
+\begin{defi}[Integral definida de una función continua]
 Sea $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ una partición regular del
 intervalo $[a,b]$, $\Delta x=\frac{b-a}{n}$ y $x_{k}=a+k\Delta x=a+k\frac{b-a}{n}$ para $1\leq k\leq n$. Entonces, la integral entre $a$ y $b$ de
 una función continua $f(x)$ es dada por
@@ -1139,10 +1134,10 @@ Entonces, y recordando las fórmulas de la sección \ref{FormSumas} del capítul
 {\small
 \begin{align*}
 \int_{0}^{2}(2x+1)dx&=\underset{n\rightarrow \infty }{\lim }\overset{n}{%
-\underset{k=1}{\sum }}f(x_{k})\Delta x_{k} =\underset{n\rightarrow \infty }{\lim }\overset{n}{\underset{k=1}{\sum }}
+\underset{k=1}{\sum }}f(x_{k})\Delta x_{k} =\underset{n\rightarrow \infty }{\lim }\sum_{k=1}^{n}
 \left( \frac{8}{n^{2}}k+\frac{2}{n}\right) \\&
 =\underset{n\rightarrow \infty }{\lim }\left( \frac{8}{n^{2}}\overset{n}{
-\underset{k=1}{\sum }}k+\frac{2}{n}\overset{n}{\underset{k=1}{\sum }}1\right)\\
+\underset{k=1}{\sum }}k+\frac{2}{n}\sum_{k=1}^{n}1\right)\\
 &=\underset{n\rightarrow \infty }{\lim }\left( \frac{8}{n^{2}}\left( \frac{n^{2}}{2}+\frac{n}{2}\right) +\frac{2}{n}\cdot n\right) \\&
 =\underset{n\rightarrow \infty }{\lim }\left( 4+\frac{4}{n}+2\right) =6
 \end{align*}
@@ -1169,8 +1164,8 @@ f(x_{k})\Delta x=\frac{192k^{2}}{n^{3}}-\frac{208k}{n^{2}}+\frac{68}{n}
 y, con ello,
 {\small
 \begin{align*}
-&\int_{-2}^{2}(3x^{2}-x+3)\,dx=\underset{n\rightarrow \infty }{\lim }\overset{n}{\underset{k=1}{\sum }}f(x_{k})\Delta x_{k} \\
-&=\underset{n\rightarrow \infty }{\lim }\overset{n}{\underset{k=1}{\sum }}
+&\int_{-2}^{2}(3x^{2}-x+3)\,dx=\underset{n\rightarrow \infty }{\lim }\sum_{k=1}^{n}f(x_{k})\Delta x_{k} \\
+&=\underset{n\rightarrow \infty }{\lim }\sum_{k=1}^{n}
 \left( \frac{192k^{2}}{n^{3}}-\frac{208k}{n^{2}}+\frac{68}{n}\right) \\&
 =\underset{n\rightarrow \infty }{\lim }\left( \frac{192}{n^{3}}%
 \sum\limits_{k=1}^{n}k^{2}-\frac{208}{n^{2}}\sum\limits_{k=1}^{n}k+\frac{68%
