@@ -1,17 +1,20 @@
 \ProvidesPackage{listofanswers}[06/11/2012]
 
-% version 1.2
-
 \newcounter{group}
 \newcounter{exercise}[group]
 \newcounter{subexercise}[exercise]
 
+% Flag: compact subexercise rendering (set by \exercise*)
+\newif\if@compactexercise
+\@compactexercisefalse
+
+% --- Group (one per chapter) -------------------------------------------
 \newcommand{\group}{%
   \refstepcounter{group}
-  \subsection*{\centering\exercisesname.\;\groupname\;\thegroup}
-  \addcontentsline{loa}{group}{\groupname\;\thegroup}
+  \addcontentsline{loa}{group}{\thegroup}
 }
 
+% --- Exercise -----------------------------------------------------------
 \newcommand{\exercise}{%
   \refstepcounter{exercise}
   \@ifstar\exerciseStar\exerciseNoStar
@@ -21,75 +24,80 @@
   \@ifnextchar\bgroup{\exerciseNoStarTwo{#1}}{\exerciseNoStarOne{#1}}
 }
 
-% \newcommand{\exerciseNoStarOne}[1]{%
-%   \textbf{\theexercise.} #1
-% }
+% Exercise without answer — still writes a heading entry
 \newcommand{\exerciseNoStarOne}[1]{%
-\theexercise)\quad #1
+  \@compactexercisefalse
+  \textbf{Ejercicio~\theexercise.} #1
+  \addcontentsline{loa}{exercise}{\theexercise}
 }
 
-% \newcommand{\exerciseNoStarTwo}[2]{%
-%   \textbf{\theexercise.} #1
-%   \addcontentsline{loa}{exercise}{%
-%      \textbf{\theexercise.}~#2\quad
-%   }
-% }
-
+% Exercise with answer — writes heading entry + answer entry
 \newcommand{\exerciseNoStarTwo}[2]{%
-\theexercise)\quad #1
-\addcontentsline{loa}{exercise}{%
-\theexercise)~#2\quad
-}
-}
-
-% \newcommand{\exerciseStar}[2]{%
-%   \textbf{\theexercise*.} #1
-%   \addcontentsline{loa}{exercise}{%
-%      \textbf{\theexercise.}~#2\quad
-%   }
-% }
-\newcommand{\exerciseStar}[2]{%
-\theexercise*)~#1
-\addcontentsline{loa}{exercise}{%
-\theexercise)~#2\quad
-}
+  \@compactexercisefalse
+  \textbf{Ejercicio~\theexercise.} #1
+  \addcontentsline{loa}{exercise}{\theexercise}
+  \addcontentsline{loa}{exerciseanswer}{#2}
 }
 
+% Starred exercise — compact mode: subexercise answers rendered inline
+\newcommand{\exerciseStar}[1]{%
+  \@compactexercisetrue
+  \textbf{Ejercicio~\theexercise.} #1
+  \addcontentsline{loa}{exercise}{\theexercise}
+}
+
+% --- Subexercise --------------------------------------------------------
 \newcommand{\subexercise}[1]{%
-\refstepcounter{subexercise}
-\@ifnextchar\bgroup{\subexerciseTwo{#1}}{\subexerciseOne{#1}}
+  \refstepcounter{subexercise}
+  \@ifnextchar\bgroup{\subexerciseTwo{#1}}{\subexerciseOne{#1}}
 }
 
-% \newcommand{\subexerciseOne}[1]{%
-%   \@alph\thesubexercise) #1
-% }
 \newcommand{\subexerciseOne}[1]{%
-\@alph\thesubexercise.\quad #1
+\@alph\thesubexercise) #1
 }
 
-% \newcommand{\subexerciseTwo}[2]{%
-%   \@alph\thesubexercise) #1
-%    \addcontentsline{loa}{subexercise}{%
-%      \textbf{\theexercise.}~\@alph\thesubexercise)~#2\quad
-%   }
-% }
 \newcommand{\subexerciseTwo}[2]{%
-\@alph\thesubexercise.\quad #1
+\@alph\thesubexercise)~#1
+\if@compactexercise
+\addcontentsline{loa}{subexercisecompact}{%
+\@alph\thesubexercise)~#2%
+}
+\else
 \addcontentsline{loa}{subexercise}{%
-\theexercise.~\@alph\thesubexercise.~#2\quad
+\@alph\thesubexercise)~#2%
 }
+\fi
 }
 
-\newcommand*{\l@group}[2]{
-\subsection*{\centering #1, p. #2}}
+% --- Rendering in the answers chapter -----------------------------------
+% \l@group: section heading
+\newcommand*{\l@group}[2]{%
+\section*{Ejercicios del capítulo~#1}%
+}
 
-\newcommand*{\l@exercise}[2]{\noindent #1}
+% \l@exercise: subsection heading
+\newcommand*{\l@exercise}[2]{%
+\subsection*{Ejercicio~#1}%
+}
 
-\newcommand*{\l@subexercise}[2]{\noindent #1}
+% \l@exerciseanswer: answer paragraph (for exercises with direct answer)
+\newcommand*{\l@exerciseanswer}[2]{%
+\noindent\small #1\par
+}
 
+% \l@subexercise: answer paragraph with letter prefix
+\newcommand*{\l@subexercise}[2]{%
+\noindent #1\par\smallskip
+}
+
+% \l@subexercisecompact: inline answer (\exercise* mode)
+\newcommand*{\l@subexercisecompact}[2]{%
+#1\hskip 1em plus .3em minus .3em
+}
+
+% --- Entry point --------------------------------------------------------
 \newcommand{\listofanswers}{%
 \answershead
-\renewcommand{\thefootnote}{\fnsymbol{footnote}}
 \@starttoc{loa}
 \addcontentsline{toc}{\answerstype}{\answersname}
 }
@@ -103,5 +111,5 @@
 \newcommand{\answerstype}{section}}
 
 \newcommand{\answersname}{Respuestas}
-\newcommand{\exercisesname}{EJERCICIOS}
+\newcommand{\exercisesname}{Ejercicios}
 \newcommand{\groupname}{Grupo}

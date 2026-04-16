@@ -1,32 +1,29 @@
 \chapter{Teorema fundamental del cálculo}\label{antiderivada}
 
-Este capítulo, que presenta uno de los resultados más importantes del cálculo, comienza con la definición de antiderivadas e integrales indefinidas, que se construye a partir de una tabla de derivadas y una tabla de antiderivadas. Además, se resuelven algunos problemas de valor inicial, se presenta el valor promedio de una función y el teorema del valor medio para integrales; a continuación, se definen las funciones de área de acumulación para motivar el teorema fundamental del cálculo (TFC), parte I; después se trabaja con la regla de derivación que este teorema nos proporciona; luego se muestra el TFC, parte II, para calcular integrales definidas a partir de la tabla de integrales indefinidas. %Por favor, revisen si este párrafo expresa lo que quieren decir.
+Este capítulo, que presenta uno de los resultados más importantes del cálculo, comienza con la definición de antiderivadas e integrales indefinidas, que se construye a partir de una tabla de derivadas y una tabla de antiderivadas. Además, se resuelven algunos problemas de valor inicial y se presentan el valor promedio de una función y el teorema del valor medio para integrales; a continuación, se definen las funciones de área de acumulación para motivar el teorema fundamental del cálculo (TFC), parte I; después se trabaja con la regla de derivación que este teorema nos proporciona; luego se muestra el TFC, parte II, para calcular integrales definidas a partir de la tabla de integrales indefinidas.
 
 \section{Antiderivada e integral indefinida}
 
 Sea $f$ una función continua. Una antiderivada de $f$ en un intervalo $I$ es cualquier función derivable $F$ tal que $F^\prime(x)=f(x)$ para todo $x$ en $I$.
 
 \begin{ejemplo}
-  Una antiderivada de $f(x)=3x^{7}\ $es $F(x)=\frac{3}{8}x^{8}$, pues $F^{\,\prime}(x)=\left(\frac{3}{8}x^{8}\right)^{\prime}=3x^{7}=f(x)$. Otra antiderivada es $F(x)=\frac{3}{8}x^{8}+3$ y, para cada constante $C$,\ $F(x)=\frac{3}{8}x^{8}+C$ es también una antiderivada de $f.$
+  \textls[-15]{Una antiderivada de $f(x)=3x^{7}\ $es $F(x)=\frac{3}{8}x^{8}$, pues $F^{\,\prime}(x)=(\frac{3}{8}x^{8})^{\prime}=3x^{7}=f(x)$. Otra antiderivada es $F(x)=\frac{3}{8}x^{8}+3$ y, para cada} constante $C$,\ $F(x)=\frac{3}{8}x^{8}+C$ es también una antiderivada de $f$.
 \end{ejemplo}
 
-\textbf{Propiedades:}\label{PropAntider}
-\begin{itemize}[leftmargin=1.2em, itemindent=0pt,     labelwidth=\labelwidth,labelsep=0.5em,]
+Propiedades:
 
+\begin{itemize}
   \item Si $F$ es una antiderivada de $f$, entonces $F\left( x\right) +C$ \ es también una antiderivada de $f$.
 
   \item La diferencia entre dos antiderivadas de la misma función es una constante.
-
 \end{itemize}
 
 \begin{defi}
-  \textnormal{Dada una función $f$ y $F$ una antiderivada, entonces la familia de todas las antiderivadas de $f$, es decir, $F(x)+C$ con $C$ constante, se llama integral indefinida de $f$ y se denota con
-    \textit{\[
-        \int f(x)dx
-  \]}}
+  Dada una función $f$ y $F$ una antiderivada, entonces la familia de todas las antiderivadas de $f$, es decir, $F(x)+C$ con $C$ constante, se llama integral indefinida de $f$ y se denota con
+  \[\int f(x)dx\]
 \end{defi}
 
-\subsection*{Propiedades de la integral indefinida}
+\subsection{Propiedades de la integral indefinida}
 Supongamos que $f$ y $g$ son funciones con antiderivadas $F$ y $G$ respectivamente. Entonces
 \begin{parrafonumerado}
 \item $\displaystyle{\int f^{\prime }(x)dx=f(x)+C}$
@@ -38,7 +35,7 @@ Supongamos que $f$ y $g$ son funciones con antiderivadas $F$ y $G$ respectivamen
 \item $\displaystyle{\int \alpha f(x)dx=\alpha \int f(x)dx},$ donde $\alpha $ es una constante.
 \end{parrafonumerado}
 
-\subsection*{Algunas integrales indefinidas}
+\subsection{Algunas integrales indefinidas}
 Las siguientes integrales pueden deducirse usando derivadas de funciones conocidas. Por ejemplo, se sabe que para $p$ una constante diferente de $-1$, $(x^p)^\prime=px^{p-1}$ o también $(x^{p+1})^\prime=(p\,+1)x^{p}$, es decir, se tiene la primer propiedad:
 
 \begin{parrafonumerado}
@@ -299,7 +296,7 @@ En resumen, se obtiene la lista de integrales indefinidas\label{TablaResumen}:
   }
 \end{parrafonumerado}
 
-\subsection*{Problemas de valor inicial}
+\subsection{Problemas de valor inicial}
 
 Un problema de valor inicial tiene como datos alguna derivada de una función desconocida $\frac{d^{n}y}{dx^{n}}$, algunos valores iniciales de la
 función $y$ y algunas de las derivadas $\frac{dy}{dx},\frac{d^{2}y}{dx^{2}},...,\frac{d^{n-1}y}{dx^{n-1}}$ en algún punto $x_{0}.$
@@ -456,7 +453,7 @@ y, con ello, la posición de la partícula es
 \section{Teorema del valor medio para integrales}
 En la vida cotidiana aparecen preguntas como ¿cuál es la temperatura promedio de un día en una ciudad? o ¿cuál es la velocidad promedio de un auto en un cierto recorrido? En este apartado se define el valor promedio de una función continua en un intervalo cerrado y se presenta y demuestra el teorema del valor medio para integrales, que nos dice que, dada una función continua en un intervalo cerrado, existe al menos un punto del intervalo donde la función evaluada en este punto multiplicada por la longitud del intervalo es igual a la integral de la función en este intervalo.
 
-\subsection*{Valor promedio de una función}
+\subsection{Valor promedio de una función}
 
 Dados $n$ números reales $y_{1},y_{2},...,y_{n}$, el promedio\ $\overline{y}$%
 \ de estos números es
@@ -602,7 +599,7 @@ En su parte $2$, el teorema
 afirma que las integrales definidas se pueden calcular por medio
 de antiderivadas.
 
-\subsection*{Funciónes de área de acumulación}
+\subsection{Funciónes de área de acumulación}
 
 Sea $f $ una función continua en $\left[ a,b\right] ,$ \textit{la
 función de área de acumulación} de $f$ a partir de $t=a$ es
@@ -685,7 +682,7 @@ $}
 El TFC, en su parte I, es la generalizació%
 n de los dos ejemplos anteriores. Nos dice que, si formamos una función de $x$ por medio de la integral de $f$ en el intervalo {\small $[a,x]$}, entonces la derivada con respecto a $x$ de esa función integral es igual a $f$ evaluada en $x$. O también que {\footnotesize $\int_{a}^{x}f(t)dt$} es una antiderivada de la función $f(x)$.
 
-\subsection*{Teorema fundamental del cálculo, parte I}
+\subsection{Teorema fundamental del cálculo, parte I}
 
 \textnormal{Sea $f$ una función continua en el intervalo $\left[ a,b\right] $ \} y \textit{\ $F(x)=\displaystyle{\int_{a}^{x}f(t)dt}.$} Entonces
 \[
@@ -815,7 +812,7 @@ Por otro lado, si reemplazamos en la ecuación inicial $x$ por $\cfrac{a}{2}$, t
 \]
 por tanto, un número puede ser $a=18$.
 
-\subsection*{Teorema fundamental del cálculo, parte II}
+\subsection{Teorema fundamental del cálculo, parte II}
 
 \textnormal{Si $f$ es una función continua en $[a,b]$, entonces
 \[

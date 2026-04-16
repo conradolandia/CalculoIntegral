@@ -435,9 +435,8 @@ donde $f$ es un polinomio de grado $m,$ $m\geq 1$.
 Las siguientes propiedades involucran funciones trigonométricas:
 
 \begin{teorema}\label{SumSenoCoseno} Supongamos que $n$ es un número natural, entonces
-\begin{parrafonumerado}[label=\alph*)]
-
-\item $\sum\limits_{k=1}^{n}\cos kx=\cfrac{\sen\left(( n+\frac{1}{2})x\right)-\sen\frac{x}{2} }{2\sen\frac{x}{2} }$
+\begin{parrafonumerado}[label=\alph*),ref=\alph*]
+\item $\sum\limits_{k=1}^{n}\cos kx=\cfrac{\sen\left(( n+\frac{1}{2})x\right)-\sen\frac{x}{2} }{2\sen\frac{x}{2} }$\label{SumSentoCosenoA}
 \item $\sum\limits_{k=1}^{n}\sen kx=\cfrac{\cos \frac{x}{2} -\cos
   \left( \left( n+\frac{1}{2}\right) x\right) }{2\sen\frac{x}{2}}$
 \end{parrafonumerado}
@@ -1035,17 +1034,14 @@ a_{2}<b_{2},\ \left\vert b_{2}-a_{2}\right\vert <\delta $ y
 $\left\vert f\left( b_{2}\right) -f\left( a_{2}\right) \right\vert
 \geq \varepsilon _{0}$.
 
-\textls[-15]{Ahora bien, por inducción matemática, tenemos entonces que para $\delta _{n}=\frac{b-a}{2^{n}}$ existen $a_{n},b_{n}$ en $[a,b]$ con
+Ahora bien, por inducción matemática, tenemos entonces que para \textls[-20]{$\delta _{n}=\frac{b-a}{2^{n}}$ existen $a_{n},b_{n}$ en $[a,b]$ con
 $a_{n}<b_{n}$, $\left\vert b_{n}-a_{n}\right\vert <\delta $ y
 $\left\vert f\left( b_{n}\right) -f\left( a_{n}\right) \right\vert
 \geq \varepsilon _{0}$.} Con ello, el conjunto $A=\left\{ a_{n}\right\} _{n\in \mathbb{Z}_{+}}$ es no vacío y acotado superiormente. Si $\alpha=\text{Sup}A$, entonces\footnote{El
 $\text{Sup}A$ es el valor más pequeño entre las cotas superiores
 de $A$.} está en el intervalo $\lbrack a,b]$.
 
-\textls[-15]{Además, como $f$ es continua en $[a,b]$, entonces $f$ es continua en $\alpha $; luego, para $\varepsilon _{0}$ existe $\delta ,$ tal que, si $x\in \left( \alpha
--\delta ,\alpha +\delta \right) $, entonces $\left\vert f\left(
-x\right) -f\left( \alpha \right) \right\vert <\frac{\varepsilon
-_{0}}{2}$.}
+\textls[-20]{Además, como $f$ es continua en $[a,b]$, entonces $f$ es continua en $\alpha $; luego, para $\varepsilon_{0}$ existe $\delta$, tal que, si $x\in ( \alpha -\delta ,\alpha +\delta)$, entonces $\vert f(x)-f(\alpha)\vert <\frac{\varepsilon_{0}}{2}$.}
 
 Para $\delta >0,$ existe $n\in \mathbb{Z}_{+},$ tal que $\delta _{n}=\frac{1%
 }{2^{n}}<\varepsilon _{0}$, luego, $\left[ a_{n},b_{n}\right] \subset \left(
@@ -1060,7 +1056,7 @@ Luego $\vert f( b_{n}) -f( a_{n}) \vert =\vert f( b_{n}) -\alpha +\alpha -f( a_{
 \underset{k=1}{\sum }}f(x_{k}^{\ast })\Delta x_{k}\leq \overset{n}{%
 \underset{k=1}{\sum }}f(d_{k})\Delta x_{k}
 \]
-para $x_{k}^{\ast }\in \lbrack x_{k-1},x_{k}]$
+para $x_{k}^{\ast }\in \lbrack x_{k-1},x_{k}]$.
 
 Como $f$ es uniformemente continua en $[x_{k-1},x_{k}]$, $1\leq
 k\leq n$,\ existe $\delta _{k},$ tal que, si $\left\vert
@@ -1068,10 +1064,11 @@ d_{k}-c_{k}\right\vert <\delta _{k}$, entonces $\left\vert
 f\left( d_{k}\right) -f\left( c_{k}\right) \right\vert <\frac{\varepsilon }{%
 b-a}$.
 
-Supongamos ahora que $\delta =\text{máx}\left\{ \delta _{k}:1\leq k\leq n\right\}$.
+Supongamos ahora que $\delta =\max\left\{ \delta _{k}:1\leq k\leq n\right\}$.
 
 Si $\left\Vert P\right\Vert <\delta$, entonces
-\begin{align*}
+\begin{gather*}
+\begin{aligned}
 \left\vert \sum_{k=1}^{n}f(d_{k})\Delta x_{k}-%
 \sum_{k=1}^{n}f(c_{k})\Delta x_{k}\right\vert &=%
 \sum_{k=1}^{n}\left\vert
@@ -1079,7 +1076,8 @@ f(d_{k})-f(c_{k})\right\vert \Delta x_{k}\\
 &<\frac{\varepsilon }{b-a}
 \sum_{k=1}^{n}\Delta x_{k}%\\&
 =\frac{\varepsilon }{b-a}\left( b-a\right) =\varepsilon
-\end{align*}
+\end{aligned}
+\end{gather*}
 luego
 \[
 \underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }\overset{n}{\underset%
@@ -1121,9 +1119,9 @@ De la integral dada podemos identificar que
 x_{k}=a+k\Delta x = \frac{2k}{n}\quad\text{y} \quad
 f\left( x\right) = 2x+1
 \end{align*}
-con ello, $f\left( x_{k}\right)=2x_{k}+1=\frac{4k}{n}+1$\ y\ $f(x_{k})\Delta x=\frac{8k}{n^{2}}+\frac{2}{n}$.
+Con ello, $f\left( x_{k}\right)=2x_{k}+1=\frac{4k}{n}+1$\ y\ $f(x_{k})\Delta x=\frac{8k}{n^{2}}+\frac{2}{n}$.
 
-Entonces, y recordando las fórmulas de la sección \ref{FormSumas} del capítulo \ref{definida}, tenemos
+Entonces, y recordando las fórmulas de la sección \ref{FormSumas} de este capítulo, tenemos
 \begin{gather*}
 \begin{aligned}
 \int_{0}^{2}(2x+1)dx&=\lim_{n\to\infty}\overset{n}{%
@@ -1146,9 +1144,10 @@ es decir,
 
 De la integral tenemos que $\Delta x=\frac{b-a}{n}=\frac{2-\left( -2\right)}{n}=\frac{4}{n}$, $x_{k}=a+k\Delta x=-2+\frac{4k}{n}$ y $f\left( x\right)=3x^{2}-x+3$. Entonces,
 \begin{align*}
-f\left( x_{k}\right) &=3\left( x_{k}\right) ^{2}-x_{k}+3 %\\&
-=3\left( \frac{4k}{n}-2\right) ^{2}-\left( \frac{4k}{n}-2\right) +3 \\
-&=3\left( \frac{16k^{2}}{n^{2}}-\frac{16k}{n}+4\right) -\frac{4k}{n}+5 =\frac{48k^{2}}{n^{2}}-\frac{52k}{n}+17
+f\left( x_{k}\right) &=3\left( x_{k}\right) ^{2}-x_{k}+3 \\
+&=3\left( \frac{4k}{n}-2\right) ^{2}-\left( \frac{4k}{n}-2\right) +3 \\
+&=3\left( \frac{16k^{2}}{n^{2}}-\frac{16k}{n}+4\right) -\frac{4k}{n}+5 \\
+&=\frac{48k^{2}}{n^{2}}-\frac{52k}{n}+17
 \end{align*}
 con lo que
 \[
@@ -1156,12 +1155,11 @@ f(x_{k})\Delta x=\frac{192k^{2}}{n^{3}}-\frac{208k}{n^{2}}+\frac{68}{n}
 \]
 y, con ello,
 \begin{align*}
-&\int_{-2}^{2}(3x^{2}-x+3)\,dx=\lim_{n\to\infty}\sum_{k=1}^{n}f(x_{k})\Delta x_{k} \\
+\int_{-2}^{2}&(3x^{2}-x+3)\,dx=\lim_{n\to\infty}\sum_{k=1}^{n}f(x_{k})\Delta x_{k} \\
 &=\lim_{n\to\infty}\sum_{k=1}^{n}
-\left( \frac{192k^{2}}{n^{3}}-\frac{208k}{n^{2}}+\frac{68}{n}\right) \\&
-=\lim_{n\to\infty}\left( \frac{192}{n^{3}}%
-\sum\limits_{k=1}^{n}k^{2}-\frac{208}{n^{2}}\sum\limits_{k=1}^{n}k+\frac{68%
-}{n}\sum\limits_{k=1}^{n}1\right) \\
+\left( \frac{192k^{2}}{n^{3}}-\frac{208k}{n^{2}}+\frac{68}{n}\right) \\
+&=\lim_{n\to\infty}\left( \frac{192}{n^{3}}%
+\sum\limits_{k=1}^{n}k^{2}-\frac{208}{n^{2}}\sum\limits_{k=1}^{n}k+\frac{68}{n}\sum\limits_{k=1}^{n}1\right) \\
 &=\lim_{n\to\infty}\left( \frac{192}{n^{3}}\left( \frac{%
 n^{3}}{3}+\frac{n^{2}}{2}+\frac{n}{6}\right) -\frac{208}{n^{2}}\left( \frac{%
 n^{2}}{2}+\frac{n}{2}\right) +\frac{68}{n}\cdot n\right) \\
@@ -1181,10 +1179,10 @@ obtienen las siguientes fórmulas:}
 
 \begin{parrafonumerado}
 \item Integral de la función constante, $f(x)=c$:
-\begin{align}\label{c}
-\int_{a}^{b}cdx&=\lim_{n\to\infty}\sum\limits_{k=1}^{n}c\frac{b-a}{n}=\lim_{n\to\infty}\frac{b-a}{n}\sum\limits_{k=1}^{n}c=\lim_{n\to\infty}\left( \frac{b-a}{n}\right) cn\notag\\
+\begin{align*}
+\int_{a}^{b}cdx&=\lim_{n\to\infty}\sum\limits_{k=1}^{n}c\frac{b-a}{n}=\lim_{n\to\infty}\frac{b-a}{n}\sum\limits_{k=1}^{n}c=\lim_{n\to\infty}\left( \frac{b-a}{n}\right) cn \\
 &=\lim_{n\to\infty}c(b-a)=c(b-a)
-\end{align}
+\end{align*}
 entonces
 \begin{empheq}[box=\fbox]{align}
 \int_{a}^{b} c\, dx=c\left( b-a\right)
@@ -1192,13 +1190,14 @@ entonces
 
 \item Integral de la función identidad, $f(x)=x$:
 \begin{align*}
-\int_{a}^{b}xdx &= \lim_{n\to\infty}\sum\limits_{k=1}^{n}\left( a+k\frac{b-a}{n}\right) \frac{b-a}{n} \\
+\int_{a}^{b}x\,dx &= \lim_{n\to\infty}\sum\limits_{k=1}^{n}\left( a+k\frac{b-a}{n}\right) \frac{b-a}{n} \\
 &=\lim_{n\to\infty}\sum\limits_{k=1}^{n}\left( a\left( \frac{b-a}{n}\right) +k\left( \frac{b-a}{n}\right) ^{2} \right) \\
 &=\lim_{n\to\infty}\left( a\left( b-a\right) + \left( \frac{b-a}{n}\right)^{2}\sum\limits_{k=1}^{n}k \right) \\
 &=\lim_{n\to\infty}\left( a\left( b-a\right) + \left( \frac{b-a}{n}\right) ^{2}\left( \frac{n^{2}}{2}+\frac{n}{2}\right) \right) \\
 &=\lim_{n\to\infty}\left( a\left( b-a\right) + \frac{\left( b-a\right) ^{2}}{n^{2}}\left( \frac{n^{2}}{2}+\frac{n}{2}\right) \right) \\
 &=\lim_{n\to\infty}\left( a\left( b-a\right) + \frac{\left( b-a\right) ^{2}}{2} + \frac{\left( b-a\right) ^{2}}{2n} \right) \\
-&= a\left( b-a\right) + \frac{\left( b-a\right) ^{2}}{2} = \frac{2ab-2a^{2}+b^{2}-2ab+a^{2}}{2} = \frac{b^{2}-a^{2}}{2}
+&= a\left( b-a\right) + \frac{\left( b-a\right) ^{2}}{2} = \frac{2ab-2a^{2}+b^{2}-2ab+a^{2}}{2} \\
+&= \frac{b^{2}-a^{2}}{2}
 \end{align*}
 entonces
 \begin{empheq}[box=\fbox]{equation}
@@ -1284,7 +1283,7 @@ y por el teorema \ref{SumPotenDeK} se tiene que
 =\lim_{n\to\infty}\left( \frac{b}{n}\right)
 ^{m+1}\left( \frac{n^{m+1}}{m+1}+f\left( n\right)\right)
 \end{equation*}
-donde $f\left( n\right)$ es un polinomio de grado $m$ en la variable $n$.
+donde $f\left( n\right)$ es un polinomio de grado $m$ en la variable $n$:
 \begin{equation*}
 =\lim_{n\to\infty}b^{m+1}\left( \frac{1}{m+1}+\frac{f\left( n\right) }{n^{m+1}}\right)=\frac{b^{m+1}}{m+1}
 \end{equation*}
@@ -1295,29 +1294,30 @@ Por otro lado,
 &=\frac{b^{m+1}}{m+1}-\frac{a^{m+1}}{m+1}%\\&
 =\frac{b^{m+1}-a^{m+1}}{m+1}
 \end{align*}
-con lo cual entonces,
+con lo cual, entonces,
 \begin{empheq}[box=\fbox]{equation}
 \int_{a}^{b}x^m\, dx=\frac{b^{m+1}-a^{m+1}}{m+1}\label{xm}
 \end{empheq}
 
-\item Tomemos ahora algunas funciones trigonométricas. Iniciemos con $\cos x$,
+\item \textls[-15]{Tomemos ahora algunas funciones trigonométricas. Iniciemos con $\cos x$:}
 \begin{align*}
 \int_{0}^{b}\cos x\,dx&=\lim_{n\to\infty}\sum\limits_{k=1}^{n}\cos \left( k\frac{b}{n}\right) \frac{b}{n} \\
 &=\lim_{n\to\infty}\frac{b}{n}\sum\limits_{k=1}^{n}
 \cos \left( k\frac{b}{n}\right)
 \end{align*}
-aplicando el teorema \ref{SumSenoCoseno}, $a$ con $x=\frac{b}{n}$, resulta
+aplicando el punto \ref{SumSentoCosenoA} del teorema \ref{SumSenoCoseno} con $x=\frac{b}{n}$, resulta
 \begin{equation*}
 =\lim_{n\to\infty}\frac{b}{n}\frac{\sen\left( \left( n+\frac{1}{2}\right) \frac{b}{n}\right) -\sen\left( \frac{1}{2}\frac{b}{n}%
 \right) }{2\sen\left( \frac{1}{2}\frac{b}{n}\right) }
 \end{equation*}
 sustituyendo $u=\frac{b}{n}$, que tiende a cero cuando $n\rightarrow \infty$,
 \begin{align*}
-&=\underset{u\rightarrow 0}{\lim }u\frac{\sen\left( b+\frac{1}{2}u\right)
+&=\lim_{n \to 0}u\frac{\sen\left( b+\frac{1}{2}u\right)
 -\sen\left( \frac{1}{2}u\right) }{2\sen\left( \frac{1}{2}u\right) }\\&
-=\underset{u\rightarrow 0}{\lim }\frac{\sen b\cos \frac{1}{2}u+\sen\frac{1}{2}u\cos b-\sen\left( \frac{1}{2}u\right) }{\frac{2\sen\left( \frac{1}{2}u\right)
+=\lim_{n \to 0}\frac{\sen b\cos \frac{1}{2}u+\sen\frac{1}{2}u\cos b-\sen\left( \frac{1}{2}u\right) }{\frac{2\sen\left( \frac{1}{2}u\right)
 }{u}}\\
-&=\underset{u\rightarrow 0}{\lim }\frac{\sen b\cos 0+0-0}{2\cdot \frac{1}{2}}=\sen b
+&=\lim_{n \to 0}\frac{\sen b\cos 0+0-0}{2\cdot \frac{1}{2}}\\
+&=\sen b
 \end{align*}
 Ahora,
 \begin{align*}
@@ -1335,9 +1335,9 @@ y así,
 =\lim_{n\to\infty}\frac{b}{n}\sum\limits_{k=1}^{n}
 \sen \left( k\frac{b}{n}\right)\\
 &=\lim_{n\to\infty}\frac{b}{n}\frac{\cos \left( \frac{1}{2}\frac{b}{n}\right) -\cos \left( \left( n+\frac{1}{2}\right) \frac{b}{n}\right) }{2\sen\left( \frac{1}{2}\frac{b}{n}\right)}\\
-&=\underset{u\rightarrow 0}{\lim }u\frac{\cos \left( \frac{1}{2}u\right)
+&=\lim_{n \to 0}u\frac{\cos \left( \frac{1}{2}u\right)
 -\cos \left( b+\frac{1}{2}u\right) }{2\sen\left( \frac{1}{2}u\right) }\\
-&=\underset{u\rightarrow 0}{\lim }\frac{\cos \left( \frac{1}{2}u\right)
+&=\lim_{n \to 0}\frac{\cos \left( \frac{1}{2}u\right)
 -\cos b\cos \frac{1}{2}u+\sen b\sen \left( \frac{1}{2}u\right) }{\frac{
 2\sen\left( \frac{1}{2}u\right) }{u}}\\
 &=\frac{\cos 0-\cos b\cos 0+0}{2\cdot \frac{1}{2}}=1-\cos b
@@ -1346,9 +1346,9 @@ y así,
 Por otro lado,
 \begin{gather*}
 \begin{aligned}
-\int_{a}^{b}\sen xdx&=\int_{a}^{0}\sen xdx+\int_{0}^{b}\sen
-xdx%\\&
-=\int_{0}^{b}\sen xdx-\int_{0}^{a}\sen xdx\\
+\int_{a}^{b}\sen x\,dx&=\int_{a}^{0}\sen x\,dx+\int_{0}^{b}\sen
+x\,dx%\\&
+=\int_{0}^{b}\sen x\,dx-\int_{0}^{a}\sen x\,dx\\
 &=1-\cos b-\left( 1-\cos a\right)%\\&
 =\cos a-\cos b
 \end{aligned}
@@ -1358,30 +1358,29 @@ y, en conclusión,
 \int_{a}^{b}\sen x\,dx=\cos a-\cos b\label{sen}
 \end{empheq}
 
-\item { Para finalizar, tomemos una función exponencial con base $b$, es decir, $f(x)=b^x$, y calculemos la \textit{$\int_\alpha^\beta b^x$:}}
+\item Para finalizar, tomemos una función exponencial con base $b$, es decir, $f(x)=b^x$, y calculemos la $\int_\alpha^\beta b^x$:
 \begin{align*}
 \int_{0}^{\beta}b^{x}dx&=\lim_{n\to\infty}\sum\limits_{k=1}^{n}b^{\left( k \beta/n\right) }\frac{\beta}{n}
 =\lim_{n\to\infty}\frac{\beta}{n}\sum\limits_{k=1}^{n}%
-\left( b^{\beta/n}\right) ^{k}\\
-&\quad \text{y aplicando la fórmula de la suma geométrica,}\\
-&=\lim_{n\to\infty}\frac{\beta}{n}\frac{\left( b^{\beta/n}\right)^{n+1}-b^{\beta/n}}{b^{\beta/n}-1}
-=\lim_{n\to\infty}\frac{\frac{\beta}{n}\left( b^{\beta}b^{\beta/n}-b^{\beta/n}\right)}{b^{\beta/n}-1}\\
+\left( b^{\beta/n}\right) ^{k}
+\intertext{y aplicando la fórmula de la suma geométrica,}
+&=\lim_{n\to\infty}\frac{\beta}{n}\frac{\left( b^{\beta/n}\right)^{n+1}-b^{\beta/n}}{b^{\beta/n}-1} \\
+&=\lim_{n\to\infty}\frac{\frac{\beta}{n}\left( b^{\beta}b^{\beta/n}-b^{\beta/n}\right)}{b^{\beta/n}-1}\\
 &=\lim_{n\to\infty}\frac{\frac{\beta}{n}\left( \left(
 b^{\beta}-1\right) b^{\beta/n}\right) }{b^{\beta/n}-1}
 \end{align*}
 haciendo $u=\frac{\beta}{n}$, que tiende a cero cuando $n\rightarrow \infty$,
 \begin{equation*}
-=\underset{u\rightarrow 0}{\lim }\frac{u\left( \left( b^{\beta}-1\right)
+=\lim_{n \to 0}\frac{u\left( \left( b^{\beta}-1\right)
 b^{u}\right) }{b^{u}-1}
-=\left( b^{\beta}-1\right) \underset{u\rightarrow 0}{\lim }b^{u}\underset{%
-u\rightarrow 0}{\lim }\frac{u}{b^{u}-1}
+=\left( b^{\beta}-1\right) \lim_{n \to 0}b^{u}\lim_{u\to 0}\frac{u}{b^{u}-1}
 \end{equation*}
 y aplicando la regla de L'Hopital en el último límite,
 \begin{equation*}
-=\left( b^{\beta}-1\right) \underset{u\rightarrow 0}{\lim }\frac{1}{b^{u}\ln b}
+=\left( b^{\beta}-1\right) \lim_{n \to 0}\frac{1}{b^{u}\ln b}
 =\left( b^{\beta}-1\right) \frac{1}{\ln b}=\frac{b^{\beta}-1}{\ln b}
 \end{equation*}
-y la integral original es
+y la integral original, es
 \begin{align*}
 \int_{\alpha}^{\beta}b^{x}dx&=\int_{\alpha}^{0}b^{x}dx+\int_{0}^{\beta}b^{x}dx=%
 \int_{0}^{\beta}b^{x}dx-\int_{0}^{\alpha}b^{x}dx\\
@@ -1398,49 +1397,42 @@ Calcular las integrales usando las propiedades y fórmulas anteriores.
 \end{ejemplo}
 \begin{multicols}{2}
 \begin{parrafonumerado}
-\item ${\int_{1}^{4}3x^{3}-2x+1 dx}$
-\item ${\int_{\frac{\pi }{6}}^{\frac{\pi }{2}}\cos xdx}$
-\item ${\int_{\frac{\pi }{3}}^{\frac{\pi }{2}}\sin xdx}$
-\item ${\int_{-1}^{2}2^{2x}dx}$
+\item $\displaystyle{\int_{1}^{4}3x^{3}-2x+1 dx}$
+\item $\displaystyle{\int_{\frac{\pi }{6}}^{\frac{\pi }{2}}\cos x\,dx}$
+\item $\displaystyle{\int_{\frac{\pi }{3}}^{\frac{\pi }{2}}\sin x\,dx}$
+\item $\displaystyle{\int_{-1}^{2}2^{2x}dx}$
 \end{parrafonumerado}
 \end{multicols}
 
 \emph{Solución}
 \begin{parrafonumerado}
 \item Para este caso, tenemos solo potencias de $x$; entonces,
-{\small
 \begin{align*}
-\int_{1}^{4}\left( 3x^{3}-2x+1\right) dx&=3\int_{1}^{4}x^{3}dx-2\int_{1}^{4}xdx+\int_{1}^{4}1dx\\
-&=3\frac{4^{4}-1^{4}}{4}-2\frac{4^{2}-1^{2}}{2}+1\left( 4-1\right) =\frac{717}{4}
+\int_{1}^{4}\left( 3x^{3}-2x+1\right) dx&=3\int_{1}^{4}x^{3}dx-2\int_{1}^{4}x\,dx+\int_{1}^{4}1dx\\
+&=3\frac{4^{4}-1^{4}}{4}-2\frac{4^{2}-1^{2}}{2}+1\left( 4-1\right) \\
+&=\frac{717}{4}
 \end{align*}
-}
 
-\item Ya conocemos de \eqref{cos} la integral definida de coseno de $x$; entonces
-{\small
+\item Ya conocemos de \eqref{cos} la integral definida de coseno de $x$; entonces,
 \begin{align*}
-\int_{\frac{\pi }{6}}^{\frac{\pi }{2}}\cos xdx=\sen \frac{\pi }{2}-\sen
+\int_{\frac{\pi }{6}}^{\frac{\pi }{2}}\cos x\,dx=\sen \frac{\pi }{2}-\sen
 \frac{\pi }{6}=1-\frac{1}{2}=\frac{1}{2}
 \end{align*}
-}
 
 \item Por \eqref{sen}, tenemos
-{\small
 \begin{align*}
-\int_{\frac{\pi }{3}}^{\frac{\pi }{2}}\sen xdx=\cos \frac{\pi }{3}-\cos
+\int_{\frac{\pi }{3}}^{\frac{\pi }{2}}\sen x\,dx=\cos \frac{\pi }{3}-\cos
 \frac{\pi }{2}=\frac{1}{2}
 \end{align*}
-}
 
 \item Y, por último, por \eqref{bx},
-{\small
 \begin{align*}
-\int_{-1}^{4}2^{2x}dx=\int_{-1}^{4}4^{x}dx=\frac{4^{4}-4^{-1}}{\ln 4}=%
-\frac{1023}{4\ln 4}
+\int_{-1}^{4}2^{2x}dx&=\int_{-1}^{4}4^{x}dx\\
+&=\frac{4^{4}-4^{-1}}{\ln 4}=\frac{1023}{4\ln 4}
 \end{align*}
-}
 \end{parrafonumerado}
 
-\section{Integrales de funciones acotadas y continuas a trozos}
+\section{Integrales de funciones acotadas y~continuas~a~trozos}
 
 Supongamos que $P=\{x_0,x_1,\ldots,x_n \}$ es una partición del intervalo $[a,b]$ y sea $f$ una función continua en cada uno de los subintervalos $\left[ x_{k-1},x_{k}\right]$, $1\leq k\leq n$ en la partición. Usando aditividad, podemos definir la integral de $f$ como
 \[
@@ -1451,39 +1443,30 @@ La definición anterior nos permite manejar con comodidad las funciones a trozos
 \[
 f(x)=
 \begin{cases}
-2x-1, & \text{si } x<-1,\\[4pt]
-3x^{2}-2, & \text{si } -1\le x \le 1,\\[4pt]
-4x^{3}, & \text{si } x>1.
+2x-1, & \text{si } x<-1\\[4pt]
+3x^{2}-2, & \text{si } -1\le x \le 1\\[4pt]
+4x^{3}, & \text{si } x>1
 \end{cases}
 \]
-calculemos $\int_{-2}^2 f(x)\, dx.$
+calculemos $\int_{-2}^2 f(x)\,dx$.
 \end{ejemplo}
 
-\emph{Solución.} Con la figura señalando la región entre $-2$ y $2$:
+\emph{Solución.} Con la figura \ref{fig:graf6} señalando la región entre $-2$ y $2$:
 
 \begin{figure}[H]
 \centering
-\caption{Función a trozos entre $-2$ y $2$}
-\includegraphics[width=0.45\textwidth]{Gráficas/graf6.pdf}
-
+\caption{Función a trozos entre $-2$ y $2$}\label{fig:graf6}
+\includegraphics[width=6cm]{Gráficas/graf6.pdf}
 \propia
 \end{figure}
 
-%\begin{center}
-
-%\includegraphics[scale=0.10]{graf6}
-
-%\textbf{Figura:} elaboración propia
-%\end{center}
-
 Entonces, teniendo en cuenta los intervalos de definición de $f$, es decir,
-%\clearpage
 
 \begin{center}
 \textbf{Función que incluye valor absoluto}
 
 \renewcommand{\arraystretch}{1.3}
-\begin{tabular}{|l|l|l|l|}
+\begin{tabular}{|l|c|c|c|}
 \hline
 Intervalo & $x<-1$ & $-1\leq x\leq 1$ & $x>1$ \\ \hline
 Valor de $f$ & $2x-1$ & $3x^{2}-2$ & $4x^{3}$ \\
@@ -1491,19 +1474,21 @@ Valor de $f$ & $2x-1$ & $3x^{2}-2$ & $4x^{3}$ \\
 \end{tabular}
 \end{center}
 
+\vspace{2\parskip}
+
 tenemos que la integral de $f$ es
-{\small
-\begin{align*}
+\begin{gather*}
+\begin{aligned}
 \int_{-2}^{2}f\left( x\right) dx&=\int_{-2}^{-1}f\left( x\right)
 dx+\int_{-1}^{1}f\left( x\right) dx+\int_{1}^{2}f\left( x\right) dx\\
 &=\int_{-2}^{-1}\left( 2x-1\right) dx+\int_{-1}^{1}\left( 3x^{2}-2\right)
 dx+\int_{1}^{2}4x^{3}dx\\
-&=2\int_{-2}^{-1}xdx-\int_{-2}^{-1}dx+3\int_{-1}^{1}x^{2}dx-\int_{-1}^{1}2dx+4\int_{1}^{2}x^{3}dx\\
-&\hspace*{-1.5cm}\makebox[\linewidth][l]{
-$=2\frac{\left( -1\right) ^{2}-\left( -2\right) ^{2}}{2}\!-\!\left(-1-\left(-2\right) \right)\!+\!3\frac{1^{3}-\left( -1\right) ^{3}}{3}\!-\!2\left( 1-\left(-1\right) \right)\!+\!4\frac{2^{4}-1^{4}}{4}$}\\
-&=-3-1+2-4+15=9
-\end{align*}
-}
+&=2\int_{-2}^{-1}x\,dx-\int_{-2}^{-1}dx+3\int_{-1}^{1}x^{2}dx-\int_{-1}^{1}2dx+4\int_{1}^{2}x^{3}dx\\
+&=2\frac{\left( -1\right) ^{2}-\left( -2\right) ^{2}}{2}-\left(-1-\left(-2\right) \right)\\
+&\quad +3\frac{1^{3}-\left( -1\right) ^{3}}{3}-2\left( 1-\left(-1\right) \right)+4\frac{2^{4}-1^{4}}{4}\\
+& = -3-1+2-4+15 = 9
+\end{aligned}
+\end{gather*}
 
 \begin{ejemplo}
 Calcular el valor de $\int_{-3}^{2}\left\vert x^{2}-1\right\vert dx$.
@@ -1512,11 +1497,13 @@ Calcular el valor de $\int_{-3}^{2}\left\vert x^{2}-1\right\vert dx$.
 La función valor absoluto puede expresarse como una función a
 trozos teniendo en cuenta el signo de la expresión en su interior:
 
+\enlargethispage*{\baselineskip}
+
 \begin{center}
 \textbf{Función parte entera}
 
 \renewcommand{\arraystretch}{1.3}
-\begin{tabular}{|l|l|l|l|}
+\begin{tabular}{|l|c|c|c|}
 \hline
 Intervalo & $x<-1$ & $-1\leq x\leq 1$ & $x>1$ \\ \hline
 Valor de $\left\vert x^{2}-1\right\vert $ & $x^{2}-1$ & $-\left(
@@ -1524,26 +1511,21 @@ x^{2}-1\right) $ & $x^{2}-1$ \\ \hline
 \end{tabular}
 \end{center}
 
-La figura de la función por integrar se muestra a continuación:
+\vspace{2\parskip}
 
-\begin{figure}[H]
+La figura de la función por integrar se muestra en la figura~\ref{fig:graf7}.
+
+\begin{figure}[t]
 \centering
 \caption{Valor absoluto de una parábola}
-\includegraphics[width=0.40\textwidth]{Gráficas/graf7.pdf}
-
+\label{fig:graf7}
+\includegraphics[width=8cm]{Gráficas/graf7.pdf}
 \propia
 \end{figure}
 
-%\begin{center}
-%\centerline{ \graf{Medio círculo}}
-%\includegraphics[scale=0.4]{graf7}
-
-%\textbf{Figura:} elaboración propia
-%\end{center}
-
 Entonces,
-{\footnotesize
-\begin{align*}
+\begin{gather*}
+\begin{aligned}
 \int_{-3}^{2}\left\vert x^{2}-1\right\vert dx&=\int_{-3}^{-1}\left(
 x^{2}-1\right) dx+\int_{-1}^{1}\left( 1-x^{2}\right) dx+\int_{1}^{2}\left(
 x^{2}-1\right) dx\\
@@ -1552,36 +1534,28 @@ x^{2}-1\right) dx\\
 +\int_{1}^{2}x^{2}dx-\int_{1}^{2}dx\\
 &=\frac{-1-\left( -27\right) }{3}-2+2-\frac{1-\left( -1\right) }{3}+\frac{8-1}{3}-1%\\&
 =\frac{28}{3}
-\end{align*}
-}
+\end{aligned}
+\end{gather*}
 
 \begin{ejemplo}
-Determine el valor de $\int_{1}^{\frac{9}{2}}\big[\hspace{-0.06cm}| x|\hspace{-0.07cm}\big] dx.$
+Determine el valor de $\int_{1}^{\frac{9}{2}}\piso{x}\,dx$.
 \end{ejemplo}
 
-Recordemos que $\big[\hspace{-0.05cm}| x|\hspace{-0.07cm}\big]$ es la parte entera de $x$, es decir, el entero más cercano a $x$ por su izquierda. Por ejemplo, {\small $\big[\hspace{-0.05cm}| 2.3|\hspace{-0.07cm}\big]=2$}. La figura de $f(x)=\big[\hspace{-0.05cm}| x|\hspace{-0.07cm}\big]$ se muestra a continuación:
+\enlargethispage*{\baselineskip}
 
-\begin{figure}[h]
+Recordemos que $\piso{x}$ es la parte entera de $x$, es decir, el entero más cercano a $x$ por su izquierda. Por ejemplo, $\piso{2.3}=2$. La figura de $f(x)=\piso{x}$ se muestra en la figura~\ref{fig:graf8}.
+
+\begin{figure}[H]
 \centering
-\caption{Área bajo la curva de $f(x)=\big[\hspace{-0.05cm}| x|\hspace{-0.07cm}\big]$}
-
-\includegraphics[width=0.6\linewidth]{Gráficas/graf8.pdf}
-
+\caption{Área bajo la curva de $f(x)=\piso{x}$}
+\label{fig:graf8}
+\includegraphics[width=8cm]{Gráficas/graf8.pdf}
 \propia
 \end{figure}
 
-%\begin{center}
-
-%\includegraphics[scale=0.1]{graf8}
-
-%\textbf{Figura:} elaboración propia
-%\end{center}
-
-Para calcular la integral debemos, entonces, dividir el intervalo de evaluación: {\small $[1,9/2]=[1,2)\cup [2,3)\cup [3,4)\cup [4,9/2) $}; siendo así, tenemos
+Para calcular la integral debemos, entonces, dividir el intervalo de evaluación: $[1,9/2]=[1,2)\cup [2,3)\cup [3,4)\cup [4,9/2)$; siendo así, tenemos
 \begin{align*}
-\int_{1}^{\frac{9}{2}}\big[\hspace{-0.05cm}| x|\hspace{-0.07cm}\big]
-dx&=\int_{1}^{2}\big[\hspace{-0.05cm}| x|\hspace{-0.07cm}\big] dx+\int_{2}^{3}\big[\hspace{-0.05cm}| x|\hspace{-0.07cm}\big] dx+\int_{3}^{4}\big[\hspace{-0.05cm}| x|\hspace{-0.07cm}\big] dx+\int_{4}^{%
-\frac{9}{2}}\big[\hspace{-0.05cm}| x|\hspace{-0.07cm}\big] dx\\
+\int_{1}^{\frac{9}{2}}\piso{x}dx&=\int_{1}^{2}\piso{x} dx+\int_{2}^{3}\piso{x} dx+\int_{3}^{4}\piso{x} dx+\int_{4}^{\frac{9}{2}}\piso{x} dx\\
 &=\int_{1}^{2}1\, dx+\int_{2}^{3}2\, dx+\int_{3}^{4}3\, dx+\int_{4}^{\frac{9}{2}}4\, dx\\
 &=1\cdot(2-1)+2\cdot(3-2)+3\cdot(4-3)+4\cdot(9/2-4)\\
 &=8
@@ -1592,96 +1566,76 @@ En algunos casos, podemos encontrar el valor de la integral usando su interpreta
 \end{ejemplo}
 \begin{parrafonumerado}
 
-\item Tomemos $f(x)=\sqrt{1-x^{2}}$ para $x$ entre $-1$ y $1$. Su figura es media circunferencia de radio $1$; por tanto, $\int_{-1}^{1}\sqrt{1-x^{2}}dx$ es el área de medio círculo de radio $1$:
-%
+\item Tomemos $f(x)=\sqrt{1-x^{2}}$ para $x$ entre $-1$ y $1$. Su figura es media circunferencia de radio $1$; por tanto, $\int_{-1}^{1}\sqrt{1-x^{2}}\,dx$ es el área de medio círculo de radio $1$, como se muestra en la figura~\ref{fig:graf9}.
 
 \begin{figure}[H]
 \centering
-\caption{ Área de medio círculo de radio $1$}
-\includegraphics[width=0.45\textwidth]{Gráficas/graf9.pdf}
+\caption{Área de medio círculo de radio $1$}
+\label{fig:graf9}
+\includegraphics[width=7cm]{Gráficas/graf9.pdf}
 \propia
 \end{figure}
 
-%\begin{center}
-
-%\includegraphics[scale=0.25]{graf9}
-
-%\textbf{Figura:} elaboración propia
-%\end{center}
-
-y dado que el área de un círculo es $\pi(\text{radio})^2$, entonces
+Y, dado que el área de un círculo es $\pi(\text{radio})^2$, entonces
 \[
-\int_{-1}^{1}\sqrt{1-x^{2}}dx=\frac{\pi(1)^2}{2}=\frac{\pi}{2}
+\int_{-1}^{1}\sqrt{1-x^{2}}\,dx=\frac{\pi(1)^2}{2}=\frac{\pi}{2}
 \]
 
 \item Si ahora tomamos $f(x)=\sqrt{a^{2}-x^{2}}$, es decir, una circunferencia de radio $a$, entonces
 \[
 \int_{0}^{a}\sqrt{a^{2}-x^{2}}dx
 \]
-es el área de un cuarto de círculo de radio $a$:
+es el área de un cuarto de círculo de radio $a$, como se muestra en la figura~\ref{fig:graf10}.
 
 \begin{figure}[H]
 \centering
 \caption{Un cuarto de círculo}
-\includegraphics[width=0.45\textwidth]{Gráficas/graf10.pdf}
-
+\label{fig:graf10}
+\includegraphics[width=7cm]{Gráficas/graf10.pdf}
 \propia
 \end{figure}
 
-%\begin{center}
-%\centerline%{ \graf{Un cuarto de círculo}
-
-%\includegraphics[scale=0.25]{graf10}
-
-%\textbf{Figura:} elaboración propia
-%\end{center}
-%
 Por tanto,
 \[
 \int_{0}^{a}\sqrt{a^{2}-x^{2}}dx=\frac{a^2\pi}{4}
 \]
 
-\item Calculemos ahora $\int_{0}^{2}\big[\hspace{-0.05cm}| x^2|\hspace{-0.07cm}\big] dx$. Recordemos que parte entera toma valores enteros, entonces necesitamos saber cuándo $x^{2}=n$ con $n\in\mathbb{Z}$, es decir, $x=\sqrt{n}$. En el intervalo $[0,2]$ los valores de $x$ que cumplen lo anterior son $x=0,1,\sqrt{2},\sqrt{3},2$. Con ellos, la parte entera se comporta de la siguiente manera:
+\item Calculemos ahora $\int_{0}^{2}\piso{x^2} dx$. Recordemos que parte entera toma valores enteros, entonces necesitamos saber cuándo $x^{2}=n$ con $n\in\mathbb{Z}$, es decir, $x=\sqrt{n}$. En el intervalo $[0,2]$ los valores de $x$ que cumplen lo anterior son $x=0,1,\sqrt{2},\sqrt{3},2$. Con ellos, la parte entera se comporta de la siguiente manera:
+
+\vspace{\abovedisplayskip}
 
 \begin{center}
-\centering{Parte entera de $x^2$}
+Parte entera de $x^2$
+
+\vspace{\parskip}
 
 \begin{tabular}{lcl}
-$0\leq x<1$ & $\Rightarrow$ & $\big[\hspace{-0.05cm}| x^2|\hspace{-0.07cm}\big]=0$, \\%¿Puedo quitar estas comas al final de cada expresión?
-$1 \leq x<\sqrt{2}$ & $\Rightarrow$ & $\big[\hspace{-0.05cm}| x^2|\hspace{-0.07cm}\big]=1$, \\
-$\sqrt{2}\leq x<\sqrt{3} $ & $\Rightarrow$ & $\big[\hspace{-0.05cm}| x^2|\hspace{-0.07cm}\big]=2,$ \\
-$\sqrt{3}\leq x<2$ & $\Rightarrow$ & $\big[\hspace{-0.05cm}| x^2|\hspace{-0.07cm}\big]=3,$
+$0\leq x<1$ & $\Rightarrow$ & $\piso{x^2}=0$ \\
+$1 \leq x<\sqrt{2}$ & $\Rightarrow$ & $\piso{x^2}=1$ \\
+$\sqrt{2}\leq x<\sqrt{3} $ & $\Rightarrow$ & $\piso{x^2}=2$ \\
+$\sqrt{3}\leq x<2$ & $\Rightarrow$ & $\piso{x^2}=3$
 \end{tabular}
 \end{center}
+
+\vspace{\belowdisplayskip}
 
 y su figura, entonces, es
 
 \begin{figure}[H]
 \centering
-\caption{Área bajo $\big[\hspace{-0.05cm}| x^2|\hspace{-0.07cm}\big]$}
-\includegraphics[width=0.45\textwidth]{Gráficas/grafPartEntex2.pdf}
-
+\caption{Área bajo $\piso{x^2}$}
+\includegraphics[width=8cm]{Gráficas/grafPartEntex2.pdf}
 \propia
 \end{figure}
 
-%\begin{center}
-%\centerline%{ \graf{Área bajo $y=\sqrt[3]{x}$}}
-
-%\includegraphics[scale=0.25]{grafPartEntex2}
-
-%\textbf{Figura:} elaboración propia
-%\end{center}
-
 Con los datos, entonces, el valor de la integral es
-{\small
 \begin{align*}
-\int_{0}^{2} \big[\hspace{-0.05cm}| x^2|\hspace{-0.07cm}\big]\, dx
+\int_{0}^{2} \piso{x^2}\, dx
 &=1\cdot \left( \sqrt{2}-1\right) +2\cdot \left( \sqrt{3}-\sqrt{2}\right)
 +3\cdot \left( 2-\sqrt{3}\right)\\
 &=\sqrt{2}-1 +2\sqrt{3}-2\sqrt{2}+6-3\sqrt{3}=5-\sqrt{2}-\sqrt{3}\\
 &\approx 1.8537.
 \end{align*}
-}
 \end{parrafonumerado}
 
 \section{Integrales de funciones inversas}
@@ -1690,36 +1644,20 @@ Con los datos, entonces, el valor de la integral es
 Queremos calcular $\int_{0}^{8}\sqrt[3]{x}dx$.
 \end{ejemplo}
 
-\emph{Solución.} La función inversa de $y=\sqrt[3]{x}$ es $x=y^{3}$. Según la
-figura, el área de $\mathcal{R}_{2}$ es igual a la resta del área
-del rectángulo $\mathcal{R}$ con el área de $\mathcal{R}_{1}$.
-Pero el área de $\mathcal{R}_{1}$ es el área de la región acotada
-por la figura de $y^3$, el eje $y$ y la recta $y=2$, es decir, es
-igual a {\footnotesize $\int_{0}^{2}y^{3}dy$}. Entonces,
+\emph{Solución.} La función inversa de $y=\sqrt[3]{x}$ es $x=y^{3}$. Según la figura~\ref{fig:graf11}, el área de $\mathcal{R}_{2}$ es igual a la resta del área del rectángulo $\mathcal{R}$ con el área de $\mathcal{R}_{1}$. Pero el área de $\mathcal{R}_{1}$ es el área de la región acotada por la figura de $y^3$, el eje $y$ y la recta $y=2$, es decir, es igual a $\int_{0}^{2}y^{3}dy$. Entonces,
+\begin{gather*}
+\int_{0}^{8}\sqrt[3]{x}dx=a\left( \mathcal{R}_{2}\right) =a\left(
+\mathcal{R}\right) -a\left(\mathcal{R}_{1}\right) =8\times
+2-\int_{0}^{2}y^{3}dy =16-\frac{16}{4}=12
+\end{gather*}
 
 \begin{figure}[H]
 \centering
 \caption{Área bajo $y=\sqrt[3]{x}$}
-\includegraphics[width=0.45\textwidth]{Gráficas/graf11.pdf}
-
+\label{fig:graf11}
+\includegraphics[width=8cm]{Gráficas/graf11.pdf}
 \propia
 \end{figure}
-
-%\begin{center}
-%\centerline%{ \graf{Área bajo $y=\log _{3}x$}}
-
-%\includegraphics[scale=0.28]{graf11}
-
-%\textbf{Figura:} elaboración propia
-%\end{center}
-
-{\small
-\begin{align*}
-\int_{0}^{8}\sqrt[3]{x}dx&=a\left( \mathcal{R}_{2}\right) =a\left(
-\mathcal{R}\right) -a\left(\mathcal{R}_{1}\right) =8\times
-2-\int_{0}^{2}y^{3}dy =16-\frac{16}{4}=12
-\end{align*}
-}
 
 \begin{ejemplo}
 Calcular $\int_{1}^{9}\log _{3}x\, dx$.
@@ -1730,85 +1668,56 @@ Calcular $\int_{1}^{9}\log _{3}x\, dx$.
 \begin{figure}[H]
 \centering
 \caption{$\int_{1}^{9}\log _{3}x\, dx$}
-\includegraphics[width=0.45\textwidth]{Gráficas/graf12.pdf}
-
+\includegraphics[width=8cm]{Gráficas/graf12.pdf}
 \propia
 \end{figure}
 
-%\begin{center}
-
-%\includegraphics[scale=0.3]{graf12}
-
-%\textbf{Figura:} elaboración propia
-%\end{center}
-
 La inversa de $y=\log _{3}x$ es $x=3^{y}$; entonces
-{\small
 \begin{align*}
-\int_{1}^{9}\log _{3}xdx&= \text{área}\left( \mathcal{R}_{2}\right) =\text{área}\left( \mathcal{R}\right)
+\int_{1}^{9}\log _{3}x\,dx&= \text{área}\left( \mathcal{R}_{2}\right) =\text{área}\left( \mathcal{R}\right)
 -\text{área}\left( \mathcal{R}_{1}\right) \\
-&=9\times 2-\int_{0}^{2}3^{y}dy =18-\frac{3^{2}-1}{\ln
-3}=18-\frac{8}{\ln 3}
+&=9\times 2-\int_{0}^{2}3^{y}dy \\
+&=18-\frac{3^{2}-1}{\ln 3}=18-\frac{8}{\ln 3}
 \end{align*}
-}
 
 \begin{ejemplo}
 Calcular $\int_{0}^{1}\sen^{-1} x\, dx$.
 \end{ejemplo}
 \emph{Solución.} Si $y=\sen^{-1} x$, entonces $x=\sen y$. Por la región dada:
-
-\begin{figure}[H]
-\centering
-\caption{Área bajo $y=\sen^{-1} x$}
-\includegraphics[width=0.40\textwidth]{Gráficas/graf13.pdf}
-
-\propia
-\end{figure}
-
-%\begin{center}
-%\centerline %{ \graf{Área bajo $y=\sen^{-1} x$}}
-
-%\includegraphics[scale=0.3]{graf13}
-
-%\textbf{Figura:} elaboración propia
-%\end{center}
-{\small
-\begin{align*}
+\begin{gather*}
+\begin{aligned}
 \int_{0}^{1}\sen^{-1} x\, dx&= \text{área}\left(
 \mathcal{R}_{2}\right) =\text{área}\left( \mathcal{R}\right)
 -\text{área}\left( \mathcal{R}_{1}\right)
 =1\times \frac{\pi }{2}-\int_{0}^{\frac{\pi }{2}}\sen y\, dy\\
 &=\frac{\pi }{2}-\left( 1-\cos \frac{\pi }{2}\right) =\frac{\pi }{2}-1%
-\end{align*}
-}
+\end{aligned}
+\end{gather*}
+
+\begin{figure}[H]
+\centering
+\caption{Área bajo $y=\sen^{-1} x$}
+\includegraphics[width=9cm]{Gráficas/graf13.pdf}
+\propia
+\end{figure}
 
 \begin{teorema}\label{inversa}
-\textnormal{Si $f$ es positiva, creciente e integrable en el intervalo $\left[ 0,x_0%
-\right]$, entonces}
+Si $f$ es positiva, creciente e integrable en el intervalo $[0,x_0]$, entonces
 \[
 \int_{0}^{x_0}f^{-1}\left( t\right) dt=x_0f^{-1}\left( x_0\right)
 -\int_{f^{-1}\left( 0\right) }^{f^{-1}\left( x_0\right) }f\left( z\right) dz
 \]
 \end{teorema}
 
-\textit{Demostración}. Con la información del teorema se tiene la figura 11.
+\textit{Demostración}. Con la información del teorema se tiene la figura~\ref{fig:prueba_teorema}.
 
 \begin{figure}[H]
 \centering
 \caption{Prueba del teorema}
 \label{fig:prueba_teorema}
-\includegraphics[width=0.44\textwidth]{Gráficas/graf14.pdf}
-
+\includegraphics[width=9cm]{Gráficas/graf14.pdf}
 \propia
 \end{figure}
-
-%\begin{center}
-%\centerline %{ \graf{Prueba del teorema \ref{inversa}}}
-
-%\includegraphics[scale=0.3]{graf14}
-
-%\textbf{Figura:} elaboración propia
-%\end{center}
 
 Partamos del lado izquierdo de la igualdad:
 \begin{align*}
@@ -1824,561 +1733,298 @@ Evalúe $\int_{0}^{32}\sqrt[5]{x}\,dx$.
 La función $f^{-1}(x)=\sqrt[5]{x}$ es positiva, continua y
 creciente en el intervalo $[0,32]$, y $f(x)=x^{5}$. Por el teorema
 anterior,
-{\footnotesize
 \begin{align*}
-\int_{0}^{32}\sqrt[5]{x}\,dx &= 32\times f^{-1}(32)\!-\!\int_{f^{-1}\left( 0\right) }^{f^{-1}\left(32\right) }f\left( y\right) dy = 32\times 2\!-\!\int_{0}^{2} y^{5}\,dy = 64\!-\!\dfrac{2^{6}}{6} = \dfrac{160}{3}
+\int_{0}^{32}\sqrt[5]{x}\,dx &= 32\times f^{-1}(32)-\int_{f^{-1}\left( 0\right) }^{f^{-1}\left(32\right) }f\left( y\right) dy \\
+&= 32\times 2-\int_{0}^{2} y^{5}\,dy = 64-\frac{2^{6}}{6} = \frac{160}{3}
 \end{align*}
-}
-\addcontentsline{toc}{section}{Ejercicios del capítulo~\thechapter}
 
-\begin{ejer}{En cada caso, escriba la suma de manera expandida:}
+\clearpage
 
-{\small
+\section{Ejercicios del capítulo~\thechapter}
+
+\group
+
+\exercise {En cada caso escribir la suma de manera expandida}
+\begin{multicols}{3}\small
+\subexercise{$\displaystyle\sum_{k=1}^{5}\left( k^{2}-(k+2)^{2}\right)$}{$1^{2}-3^{2}+2^{2}-4^{2}+3^{2}-5^{2}+4^{2}-6^{2}
++5^{2}-7^{2}=-80$}
+
+\subexercise{$\displaystyle\sum_{k=2}^{6}\left(2^{-k+1}-2^{-k}\right)$}{$2^{-1}-2^{-2}
++2^{-2}-2^{-3}+2^{-3}-2^{-4}+2^{-4}-2^{-5}+2^{-5}-2^{-6}=2^{-1}-2^{-6}=%
+\frac{31}{64}$}
+
+\subexercise{$\displaystyle\sum_{k=3}^{8}\left( \frac{1}{k}-\frac{1}{k+2%
+}\right)$}{$\frac{1}{3}%
+-\frac{1}{5}+\frac{1}{4}-\frac{1}{6}+\frac{1}{5}-\frac{1}{7}+\frac{1}{6}-%
+\frac{1}{8}+\frac{1}{7}-\frac{1}{9}+\frac{1}{8}-\frac{1}{10}=\frac{67}{180}$}
+
+\subexercise{$\displaystyle\sum_{k=1}^{8}\left(\sen(k\pi )\right)$}{$\sen\pi +\sen2\pi +\sen3\pi +\sen4\pi +\sen5\pi +\sen6\pi +\sen7\pi +\sen8\pi =0$}
+
+\subexercise{$\displaystyle\sum_{k=1}^{n}\left(-1\right) ^{k}k^{2}$}{$-1^{2}+2^{2}-3^{2}+4^{2}-\cdots \left( -1\right) ^{n}n^{2}.$}
+
+\subexercise{$\displaystyle\sum_{k=1}^{n}\left( \frac{k}{k+1}-\frac{k+1}{k+2%
+}\right) $}{$\frac{1%
+}{2}-\frac{2}{3}+\frac{2}{3}-\frac{3}{4}+\frac{3}{4}-\frac{4}{5}+\cdots +%
+\frac{n-1}{n}-\frac{n}{n+1}+\frac{n}{n+1}-\frac{n+1}{n+2}=\frac{1}{2}-\frac{%
+n+1}{n+2}$}
+\end{multicols}
+
+\exercise*{Expresar cada uno de las sumas en notación de sumatoria}
+
+\begin{multicols}{2}
+\subexercise{$1+5+9+13+\ldots +81$}{$\sum_{k=0}^{20}\left( 4k+1\right) $}
+
+\subexercise{$\frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\cdots +
+\frac{1}{2048}$}{$\sum_{k=1}^{11}\frac{1}{2^{k}}$}
+
+\subexercise{$\frac{1}{3}+\frac{1}{8}+\frac{1}{13}+\cdots +\frac{1}{%
+203}$}{$\sum_{k=0}^{40}\frac{1}{5k+3}$}
+
+\subexercise{$\frac{2}{7}+\frac{3}{8}+\frac{4}{9}+\cdots +\frac{100}{105}$}{$\sum_{k=2}^{100}\frac{k}{k+5}$}
+
+\subexercise{\textls[-50]{$\frac{\sen(1)}{n}+\frac{\sen(2)}{n}+\frac{\sen(3)}{n}+\cdots +\frac{\sen(n)}{n}$}}{$\sum_{k=1}^{n}\frac{\sen k}{n}$}
+
+\subexercise{$1+2+3+4+...+10$}{$ \sum_{0}^{9}(k+1)$}
+
+\subexercise{$\displaystyle\sqrt{3}+\sqrt{4}+\sqrt{5}+\sqrt{6}+\sqrt{7}$}{$ \sum_{k=1}^{5}\sqrt{k+2}$}
+
+\subexercise{$\frac{1}{2}+\frac{2}{3}+\frac{3}{4}+\frac{4}{5}+...+\frac{19}{20}$}{$ \sum_{k=0}^{18}\frac{k+1}{k+2}$}
+
+\subexercise{$\frac{3}{7}+\frac{4}{8}+\frac{5}{9}+\frac{6}{10}+...+\frac{23}{27}$}{$\sum_{k=0}^{20}\frac{k+3}{k+7}$}
+
+\subexercise{$2+4+6+8+...+2n$}{$ \sum_{k=1}^{n}2k$}
+
+\subexercise{$1+3+5+7+...+(2n-1)$}{$\sum_{k=0}^{n-1}(2k+1)$}
+
+\subexercise{$1+2+4+8+16+32$}{$ \sum_{k=1}^{5}{2}^{k}$}
+
+\subexercise{$\frac{1}{1}+\frac{1}{4}+\frac{1}{9}+\frac{1}{16}+
+\frac{1}{25}+\frac{1}{36}$}{$\sum_{k=0}^{5}\frac{1}{(k+1)^{2}}$}
+
+\subexercise{$1-x+x^{2}-x^{3}+...+(-1)^{n}x^{n}$}{$\sum_{k=1}^{n+1}(-1)^{k-1}{x^{k-1}}$}
+\end{multicols}
+
+\exercise{Encontrar el valor de cada una de las siguientes expresiones}
+
+\begin{multicols}{2}
+
+\subexercise{$\displaystyle\sum_{k=1}^{n}\left[ \left( 2k-1\right) ^{3}-\left( 2k+1\right) ^{3}\right]$}{$-8n^{3}-12n^{2}-6n$}
+
+\subexercise{$\displaystyle\sum_{k=1}^{n}\left[ \left( k-1\right) ^{2}-\left(
+k+1\right) ^{2}\right] $}{$-2n^{2}-2n$}
+
+\subexercise{$\displaystyle\sum_{k=1}^{n}\left[ \left( k-2\right) ^{4}-\left( k+2\right) ^{4}\right]$}{$-4n^{4}-8n^{3}-36n^{2}-32n$}
+
+\subexercise{$\displaystyle\sum_{k=0}^{n}\left( 2^{k}+\frac{1}{3^{k}}\right)$}{$2^{n+1}-%
+\frac{1}{2}\left( \frac{1}{3}\right) ^{n}+\frac{1}{2}$}
+
+\subexercise{$\displaystyle\sum_{k=1}^{n}\frac{4^{k}-5^{k}}{6^{k}}$}{$5\left( \frac{5}{6}%
+\right) ^{n}-2\left( \frac{2}{3}\right) ^{n}-3$}
+
+\subexercise{$\displaystyle\sum_{k=1}^{200}\left( 3\sen \left( 4k\right) +2\cos 3k\right)$}{$\frac{3}{2\sen 2}\left( \cos 2-\cos 802\right) -\frac{1}{\sen \frac{3}{2}}%
+\left( \sen \frac{3}{2}-\sen \frac{1203}{2}\right) $}
+
+\subexercise{$\displaystyle\sum_{k=1}^{100}\left( \sen \left( 5k\right) +\cos \left( 5k\right) \right)$}{$\frac{1}{2\sen \frac{5}{2}}\left( \cos \frac{5}{2}-\cos \frac{1005}{2}-\sen \frac{5}{2}+\sen \frac{1005}{2}\right) $}
+
+\subexercise{$\displaystyle\sum_{k=1}^{n}\left( \sen k+\cos k\right)$}{$\frac{1}{2\sen \frac{1}{2}}\left( \cos \frac{1}{2}-\sen \frac{1}{2}-\cos \left( n+\frac{1}{2}\right)+\sen \left( n+\frac{1}{2}\right) \right)$}
+\end{multicols}
+
+\clearpage
+
+\exercise*{Calcule cada uno de los siguientes límites}
+
+\subexercise{$\displaystyle\lim_{n\rightarrow \infty }\sum_{k=1}^{n}\left[ \left( \frac{3k}{n}-1\right) ^{3}-2\right] \frac{3}{n}$}{$-\frac{9}{4}$}
+
+\subexercise{$\displaystyle\lim_{n\rightarrow \infty }\sum_{k=1}^{n}\left[ 3\left( 1+\frac{k}{n}\right) ^{2}-\left( 1+\frac{k}{n}\right) \right] \frac{1}{n}$}{$\allowbreak \frac{11}{2}$}
+
+\subexercise{$\displaystyle\lim_{n\rightarrow \infty }\sum_{k=1}^{n}\frac{1}{n}\left( 2^{\frac{k}{n}}\right)$}{$\frac{1}{\ln 2}$}
+
+\subexercise{$\displaystyle\lim_{n\rightarrow \infty }\sum_{k=1}^{n}\frac{4}{n}
+\left( e^{\frac{k}{n}}\right)$}{$4e-4$}
+
+\subexercise{$\displaystyle\lim_{n\rightarrow \infty }\sum_{k=1}^{n}\frac{4}{n}\sen \left( \frac{k}{%
+n}\right)$}{$4-4\cos 1$}
+
+\subexercise{$\displaystyle\lim_{n\rightarrow \infty }\sum_{k=1}^{n}\frac{1}{n}\cos \left( \frac{k}{%
+n}\right) $}{$\sen 1$}
+
+\subexercise{$\displaystyle\lim_{n\rightarrow \infty}\sum_{k=1}^{n}\left[ \left( 2+\frac{k}{n}\right) ^{3}-2\left( 2+\frac{k}{n}\right) ^{2}+1\right] \frac{1}{n}$}{$\frac{55}{12}$}
+
+\exercise*{Escriba una suma de Riemann para cada función y partición dadas y usando el punto indicado de cada subintervalo.}
+
+\subexercise{$f\left( x\right) =9-3x^{2}$\ $P=\left\{ 0,0.3,0.5,0.8,1\right\}$ partición de $\left[ 0,1\right]$; usar el extremo derecho.}{$7.593$}
+
+\subexercise{$f\left( x\right) =x^{2}+x^{3}$ \ $P=\left\{
+-1,-0.5,-0.8,0,0.5,1\right\} $ partición de $\left[ -1,1\right]$; usar
+el extremo derecho.}{$1.2506$}
+
+\subexercise{$f\left( x\right) =20-x^{3}$ \ \ $P=\left\{ 0,0.5,1.5,1.8,2\right\} $ partición de $\left[ 0,2\right]$; usar el extremo izquierdo.}{$33.088$}
+
+\subexercise{$f\left( x\right) =x^{4}-1$ \ \ $P=\left\{ -1,-0.5,0,0.5,1,2,3\right\} $
+partición de $\left[ -1,3\right]$; usar el extremo izquierdo.}{$13.563$}
+
+\subexercise{$f\left( x\right) =20-4x^{2}$ \ $P=\left\{
+0,0.5,1.5,1.8,2,2.5,3\right\} $ partición de $\left[ 0,3\right]$; usar
+el punto medio.}{$24.47$}
+
+\subexercise{$f\left( x\right) =x^{3}-1$ \ $P=\left\{
+-1,-0.5,0,0.5,1,2,3,3.6,4\right\} $ partición de $\left[ -1,4\right]$; usar
+el punto medio.}{$57.51$}
+
+\subexercise{$f\left( x\right) =2^{x}-1$ \ $P=\left\{
+0,0.5,1,2.5,3,3.6,4.1,5\right\} $ partición de $\left[ 0,5\right]$; usar el extremo derecho.}{$53.842$}
+
+\exercise*{Calcular cada una de las siguientes integrales usando la definición.}
 \begin{multicols}{3}
-a. $\displaystyle\sum_{k=1}^{5}\left( k^{2}-(k+2)^{2}\right)$
+\subexercise{$\displaystyle{\int_{0}^{2}\left( x^{2}-2\right) dx}$}{$-\frac{4}{3}$}
 
-b. $\displaystyle\sum_{k=2}^{6}\left(2^{-k+1}-2^{-k}\right)$
+\subexercise{$\displaystyle\int_{0}^{1}\left(x^{2}-x\right) dx$}{$-\frac{1}{6}$}
 
-c. $\displaystyle\sum_{k=3}^{8}\left( \frac{1}{k}-\frac{1}{k+2}\right)$
+\subexercise{$\displaystyle\int_{-1}^{1}x^{3}dx$}{$0$}
 
-d. $\displaystyle\sum_{k=1}^{8}\sen(k\pi)$
+\subexercise{$\displaystyle\int_{-2}^{2}\left( x^{3}+2\right) dx$}{$8$}
 
-e. $\displaystyle\sum_{k=1}^{n}(-1)^{k}k^{2}$
+\subexercise{$\displaystyle\int_{-1}^{2}\left( 2x^{3}-1\right) dx.$}{$\frac{9}{2}$}
 
-f. $\displaystyle\sum_{k=1}^{n}\left( \frac{k}{k+1}-\frac{k+1}{k+2} \right)$
+\subexercise{$\displaystyle\int_{0}^{2}\left(2^{x}\right) dx.$}{$\frac{3}{\ln 2}$}
+
+\subexercise{$\displaystyle\int_{0}^{3}2\left( 3^{x}\right) dx$}{$\frac{52}{\ln 3}$}
 \end{multicols}
-}
-\end{ejer}
 
-% \exercise{Exprese cada una de las sumas en notación de sumatoria:}
-
-% %\begin{multicols}{2}
-% \subexercise{$1+5+9+13+\ldots +81$}{$\sum_{k=0}^{20}\left( 4k+1\right) $}
-
-% \subexercise{$\frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\cdots +
-% \frac{1}{2048}$}{$\sum_{k=1}^{11}\frac{1}{2^{k}}$}
-
-% \subexercise{$\frac{1}{3}+\frac{1}{8}+\frac{1}{13}+\cdots +\frac{1}{%
-% 203}$}{$\sum_{k=0}^{40}\frac{1}{5k+3}$}
-
-% \subexercise{$\frac{2}{7}+\frac{3}{8}+\frac{4}{9}+\cdots +\frac{100}{105}$}{$\sum_{k=2}^{100}\frac{k}{k+5}$}
-
-% \subexercise{$\frac{\sen(1)}{n}+\frac{\sen(2)}{n}+\frac{\sen(3)}{n}+\cdots +\frac{\sen(n)}{n}$}{$\sum_{k=1}^{n}\frac{\sen k}{n}$}
-
-% \subexercise{$1+2+3+4+...+10$}{$ \sum_{0}^{9}(k+1)$}
-
-% \subexercise{$\displaystyle\sqrt{3}+\sqrt{4}+\sqrt{5}+\sqrt{6}+\sqrt{7}$}{$ \sum_{k=1}^{5}\sqrt{k+2}$}
-
-% \subexercise{$\frac{1}{2}+\frac{2}{3}+\frac{3}{4}+\frac{4}{5}+...+\frac{19}{20}$}{$ \sum_{k=0}^{18}\frac{k+1}{k+2}$}
-
-% \subexercise{$\frac{3}{7}+\frac{4}{8}+\frac{5}{9}+\frac{6}{10}+...+\frac{23}{27}$}{$\sum_{k=0}^{20}\frac{k+3}{k+7}$}
-
-% \subexercise{$2+4+6+8+...+2n$}{$ \sum_{k=1}^{n}2k$}
-
-% \subexercise{$1+3+5+7+...+(2n-1)$}{$\sum_{k=0}^{n-1}(2k+1)$}
-
-% \subexercise{$1+2+4+8+16+32$}{$ \sum_{k=0}^{5}{2}^{k}$}
-
-% \subexercise{$\frac{1}{1}+\frac{1}{4}+\frac{1}{9}+\frac{1}{16}+
-% \frac{1}{25}+\frac{1}{36}$}{$\sum_{k=0}^{5}\frac{1}{(k+1)^{2}}$}
-
-% \subexercise{$1-x+x^{2}-x^{3}+...+(-1)^{n}x^{n}$}{$\sum_{k=1}^{n+1}(-1)^{k-1}{x^{k-1}}$}
-% %\end{multicols}
-
-\begin{ejer}{Exprese cada una de las sumas en notación de sumatoria:}
-
+\exercise*{Calcular usando las propiedades de la integral}
 \begin{multicols}{2}
-a. $1+5+9+13+\ldots +81$\\
-% $\displaystyle\sum_{k=0}^{20}\left( 4k+1\right)$
+\subexercise{$\displaystyle\int_{0}^{2}\left( 4x^{3}-8x^{2}+7x+8\right) dx$}{$\frac{74}{3}$}
 
-b. $\frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\cdots +\frac{1}{2048}$\\
-% $\displaystyle\sum_{k=1}^{11}\frac{1}{2^{k}}$
+\subexercise{$\displaystyle\int_{-2}^{1}\left( 5x^{3}-7x^{2}+4x-3\right) dx$}{$-\frac{219}{4}$}
 
-c. $\frac{1}{3}+\frac{1}{8}+\frac{1}{13}+\cdots +\frac{1}{203}$\\
-% $\displaystyle\sum_{k=0}^{40}\frac{1}{5k+3}$
+\subexercise{$\displaystyle\int_{-2}^{2}\left( x^{4}+2x^{3}-x+1\right) dx$}{$\frac{84}{5}$}
 
-d. $\frac{2}{7}+\frac{3}{8}+\frac{4}{9}+\cdots +\frac{100}{105}$\\
-% $\displaystyle\sum_{k=2}^{100}\frac{k}{k+5}$
+\subexercise{$\displaystyle\int_{-1}^{2}\left( 2x^{5}-10x^{3}\right) dx$}{$-\frac{33}{2}$}
 
-e. $\frac{\sen(1)}{n}+\frac{\sen(2)}{n}+\frac{\sen(3)}{n}+\cdots +\frac{\sen(n)}{n}$
-% $\displaystyle\sum_{k=1}^{n}\frac{\sen k}{n}$
+\subexercise{$\displaystyle\int_{0}^{3}\left( e^{x}+2^{x}+3\right) dx$}{ $e^{3}+\frac{7}{\ln 2}+8$}
 
-f. $1+2+3+4+\cdots +10$
-% $\displaystyle\sum_{k=0}^{9}(k+1)$
+\subexercise{$\displaystyle\int_{0}^{3}\left( 4^{x}+3^{x}+3x\right) dx$}{$\frac{63}{2\ln 2}+\frac{26}{\ln 3}+\frac{27}{2}$}
 
-g. $\sqrt{3}+\sqrt{4}+\sqrt{5}+\sqrt{6}+\sqrt{7}$
-% $\displaystyle\sum_{k=1}^{5}\sqrt{k+2}$
+\subexercise{$\displaystyle\int_{0}^{3}\left(5^{x}+4^{x}+4x^{2}\right) dx$}{$\frac{63}{2\ln 2}+\frac{124}{\ln 5}+36$}
 
-h. $\frac{1}{2}+\frac{2}{3}+\frac{3}{4}+\frac{4}{5}+\cdots +\frac{19}{20}$
-% $\displaystyle\sum_{k=0}^{18}\frac{k+1}{k+2}$
+\subexercise{$\displaystyle\int_{-1}^{2}\left\vert x\right\vert dx$}{$\frac{5}{2}$}
 
-i. $\frac{3}{7}+\frac{4}{8}+\frac{5}{9}+\frac{6}{10}+\cdots +\frac{23}{27}$
-% $\displaystyle\sum_{k=0}^{20}\frac{k+3}{k+7}$
+\subexercise{$\displaystyle\int_{-1}^{4}\left\vert x^{2}-2x-3\right\vert dx$}{$13$}
 
-j. $2+4+6+8+\cdots +2n$
-% $\displaystyle\sum_{k=1}^{n}2k$
+\subexercise{$\displaystyle\int_{-4}^{4}\left\vert x^{2}-9\right\vert dx$}{$\frac{128}{3}$}
 
-k. $1+3+5+7+\cdots +(2n-1)$
-% $\displaystyle\sum_{k=0}^{n-1}(2k+1)$
+\subexercise{$\displaystyle\int_{-1}^{2}\left[ \left\vert x\right\vert \right] dx$}{$0$}
 
-l. $1+2+4+8+16+32$
-% $\displaystyle\sum_{k=0}^{5}2^{k}$
+\subexercise{$\displaystyle\int_{1}^{4}\left[ \left\vert 2x\right\vert \right] dx$}{$13.5$}
 
-m. $\frac{1}{1}+\frac{1}{4}+\frac{1}{9}+\frac{1}{16}+\frac{1}{25}+\frac{1}{36}$
-% $\displaystyle\sum_{k=0}^{5}\frac{1}{(k+1)^{2}}$
+\subexercise{$\displaystyle\int_{-1}^{4}\left[ \left\vert 3x\right\vert \right] dx$}{$20$}
 
-n. $1-x+x^{2}-x^{3}+\cdots +(-1)^{n}x^{n}$
-% $\displaystyle\sum_{k=1}^{n+1}(-1)^{k-1}x^{k-1}$
+\subexercise{$\displaystyle\int_{0}^{4}\left[ \left\vert x^{2}\right\vert \right] dx$}{$19.531$}
+
+\subexercise{$\displaystyle\int_{0}^{2}\left[ \left\vert 2x^{2}\right\vert \right] dx$}{$4.47$}
+
+\subexercise{$\displaystyle\int_{0}^{2}\left[ \left\vert x^{3}\right\vert \right] dx$}{$3.27$}
 \end{multicols}
-\end{ejer}
-
-% \exercise{Encuentre el valor de cada una de las siguientes expresiones:}
-
-% %\begin{multicols}{2}
-
-% \subexercise{$\displaystyle\sum_{k=1}^{n}\left[ \left( 2k-1\right) ^{3}-\left( 2k+1\right) ^{3}\right]$}{$-8n^{3}-12n^{2}-6n$}
-
-% \subexercise{$\displaystyle\sum_{k=1}^{n}\left[ \left( k-1\right) ^{2}-\left(
-% k+1\right) ^{2}\right] $}{$-2n^{2}-2n$}
-
-% \subexercise{$\displaystyle\sum_{k=1}^{n}\left[ \left( k-2\right) ^{4}-\left( k+2\right) ^{4}\right]$}{$-4n^{4}-8n^{3}-36n^{2}-32n$}
-
-% \subexercise{$\displaystyle\sum_{k=0}^{n}\left( 2^{k}+\frac{1}{3^{k}}\right)$}{$2^{n+1}-%
-%  \frac{1}{2}\left( \frac{1}{3}\right) ^{n}+\frac{1}{2}$}
-
-% \subexercise{$\displaystyle\sum_{k=1}^{n}\frac{4^{k}-5^{k}}{6^{k}}$}{$5\left( \frac{5}{6}%
-%  \right) ^{n}-2\left( \frac{2}{3}\right) ^{n}-3$}
-
-% \subexercise{$\displaystyle\sum_{k=1}^{200}\left( 3\sen \left( 4k\right) +2\cos 3k\right)$}{$\frac{3}{2\sen 2}\left( \cos 2-\cos 802\right) -\frac{1}{\sen \frac{3}{2}}%
-%  \left( \sen \frac{3}{2}-\sen \frac{1203}{2}\right) $}
-
-% \subexercise{$\displaystyle\sum_{k=1}^{100}\left( \sen \left( 5k\right) +\cos \left( 5k\right) \right)$}{$\frac{1}{2\sen \frac{5}{2}}\left( \cos \frac{5}{2}-\cos \frac{1005}{2}-\sen \frac{5}{2}+\sen \frac{1005}{2}\right) $}
-
-% \subexercise{$\displaystyle\sum_{k=1}^{n}\left( \sen k+\cos k\right)$}{$\frac{1}{2\sen \frac{1}{2}}\left( \cos \frac{1}{2}-\sen \frac{1}{2}-\cos \left( n+\frac{1}{2}\right)\right.$\linebreak $\left.+\sen \left( n+\frac{1}{2}\right) \right)$}
-% %\end{multicols}
 
 \clearpage
-\begin{ejer}{Encuentre el valor de cada una de las siguientes expresiones:}
-{\small
-\begin{multicols}{2}
-a. $\displaystyle\sum_{k=1}^{n}\left[ \left( 2k-1\right) ^{3}-\left( 2k+1\right) ^{3}\right]$
-% $-8n^{3}-12n^{2}-6n$
 
-b. $\displaystyle\sum_{k=1}^{n}\left[ \left( k-1\right) ^{2}-\left( k+1\right) ^{2}\right]$
-% $-2n^{2}-2n$
-
-c. $\displaystyle\sum_{k=1}^{n}\left[ \left( k-2\right) ^{4}-\left( k+2\right) ^{4}\right]$
-% $-4n^{4}-8n^{3}-36n^{2}-32n$
-
-d. $\displaystyle\sum_{k=0}^{n}\left( 2^{k}+\frac{1}{3^{k}}\right)$
-% $2^{n+1}-\frac{1}{2}\left( \frac{1}{3} \right)^{n}+\frac{1}{2}$
-
-e. $\displaystyle\sum_{k=1}^{n}\frac{4^{k}-5^{k}}{6^{k}}$
-% $5\left( \frac{5}{6} \right)^{n}-2\left( \frac{2}{3} \right)^{n}-3$
-
-f. $\displaystyle\sum_{k=1}^{200}\left( 3\sen(4k)+2\cos(3k)\right)$
-% $\frac{3}{2\sen 2}\left( \cos 2-\cos 802 \right) - \frac{1}{\sen \frac{3}{2}} \left( \sen \frac{3}{2}-\sen \frac{1203}{2} \right)$
-
-g. $\displaystyle\sum_{k=1}^{100}\left( \sen(5k)+\cos(5k) \right)$
-% $\frac{1}{2\sen \frac{5}{2}}\left( \cos \frac{5}{2}-\cos \frac{1005}{2}-\sen \frac{5}{2}+\sen \frac{1005}{2} \right)$
-
-h. $\displaystyle\sum_{k=1}^{n}\left( \sen k+\cos k \right)$
-% $\frac{1}{2\sen \frac{1}{2}}\left( \cos \frac{1}{2}-\sen \frac{1}{2}-\cos \left( n+\frac{1}{2} \right)+\sen \left( n+\frac{1}{2} \right) \right)$
-\end{multicols}
-}
-\end{ejer}
-
-% \exercise{Calcule cada uno de los siguientes límites:}
-% %\begin{multicols}{2}
-% \subexercise{$\displaystyle\lim_{n\rightarrow \infty }\sum_{k=1}^{n}\left[ \left( \frac{3k}{n}-1\right) ^{3}-2\right] \frac{3}{n}$}{$-\frac{9}{4}$}
-
-% \subexercise{$\displaystyle\lim_{n\rightarrow \infty }\sum_{k=1}^{n}\left[ 3\left( 1+\frac{k}{n}\right) ^{2}-\left( 1+\frac{k}{n}\right) \right] \frac{1}{n}$}{$\allowbreak \frac{11}{2}$}
-
-% \subexercise{$\displaystyle\lim_{n\rightarrow \infty }\sum_{k=1}^{n}\frac{1}{n}\left( 2^{\frac{k}{n}}\right)$}{$\frac{1}{\ln 2}$\linebreak}
-
-% \subexercise{$\displaystyle\lim_{n\rightarrow \infty }\sum_{k=1}^{n}\frac{4}{n}%
-% \left( e^{\frac{k}{n}}\right)$}{$4e-4$}
-
-% \subexercise{$\displaystyle\lim_{n\rightarrow \infty }\sum_{k=1}^{n}\frac{4}{n}\sen \left( \frac{k}{%
-%  n}\right)$}{$4-4\cos 1$}
-
-% \subexercise{$\displaystyle\lim_{n\rightarrow \infty }\sum_{k=1}^{n}\frac{1}{n}\cos \left( \frac{k}{%
-%  n}\right) $}{$\sen 1$}
-% %\end{multicols}
-% \subexercise{$\displaystyle\lim_{n\rightarrow \infty}\sum_{k=1}^{n}\left[ \left( 2+\frac{k}{n}\right) ^{3}-2\left( 2+\frac{k}{n}\right) ^{2}+1\right] \frac{1}{n}$}{$\frac{55}{12}$}
-
-\begin{ejer}{Calcule cada uno de los siguientes límites:}
-
-{\small
-a. $\displaystyle\lim_{n\rightarrow \infty }\sum_{k=1}^{n}\left[ \left( \frac{3k}{n}-1\right) ^{3}-2\right] \frac{3}{n}$
-% $-\frac{9}{4}$
-
-b. $\displaystyle\lim_{n\rightarrow \infty }\sum_{k=1}^{n}\left[ 3\left( 1+\frac{k}{n}\right) ^{2}-\left( 1+\frac{k}{n}\right) \right] \frac{1}{n}$
-% $\frac{11}{2}$
-
-c. $\displaystyle\lim_{n\rightarrow \infty }\sum_{k=1}^{n}\frac{1}{n}\left( 2^{\frac{k}{n}}\right)$
-% $\frac{1}{\ln 2}$
-
-d. $\displaystyle\lim_{n\rightarrow \infty }\sum_{k=1}^{n}\frac{4}{n}e^{\frac{k}{n}}$
-% $4e - 4$
-
-e. $\displaystyle\lim_{n\rightarrow \infty }\sum_{k=1}^{n}\frac{4}{n}\sen \left( \frac{k}{n} \right)$
-% $4 - 4\cos 1$
-
-f. $\displaystyle\lim_{n\rightarrow \infty }\sum_{k=1}^{n}\frac{1}{n}\cos \left( \frac{k}{n} \right)$
-% $\sen 1$
-
-g. $\displaystyle\lim_{n\rightarrow \infty}\sum_{k=1}^{n}\left[ \left( 2+\frac{k}{n}\right) ^{3}-2\left( 2+\frac{k}{n}\right) ^{2}+1\right] \frac{1}{n}$
-}
-\end{ejer}
-% $\frac{55}{12}$
-
-% \exercise{Escriba una suma de Riemann para cada función y partición dadas, usando el punto indicado de cada subintervalo:}
-
-% \subexercise{$f\left( x\right) =9-3x^{2}$\ $P=\left\{ 0,0.3,0.5,0.8,1\right\}$ partición de $\left[ 0,1\right],$ use el extremo derecho.}{7,593}
-
-% \subexercise{$f\left( x\right) =x^{2}+x^{3}$ \ $P=\left\{
-% -1,-0.5,-0.8,0,0.5,1\right\} $ partición de $\left[ -1,1\right],$ use
-% el extremo derecho.}{1,2506}
-
-% \subexercise{$f\left( x\right) =20-x^{3}$ \ \ $P=\left\{ 0,0.5,1.5,1.8,2\right\} $ partición de $\left[ 0,2\right] ,$ use el extremo izquierdo.}{37,696}
-
-% \subexercise{$f\left( x\right) =x^{4}-1$ \ \ $P=\left\{ -1,-0.5,0,0.5,1,2,3\right\} $
-% partición de $\left[ -1,3\right] ,$ use el extremo izquierdo.}{13,563}
-
-% \subexercise{$f\left( x\right) =20-4x^{2}$ \ $P=\left\{
-% 0,0.5,1.5,1.8,2,2.5,3\right\} $ partición de $\left[ 0,3\right] ,$ use
-% el punto medio.}{24,47}
-
-% \subexercise{$f\left( x\right) =x^{3}-1$ \ $P=\left\{
-% -1,-0.5,0,0.5,1,2,3,3.6,4\right\} $ partición de $\left[ -1,4\right] ,$
-% use el punto medio.}{57,51}
-
-% \subexercise{$f\left( x\right) =2^{x}-1$ \ $P=\left\{
-% 0,0.5,1,2.5,3,3.6,4. 1,5\right\} $ partición de $\left[ 0,5\right] ,$
-% use el extremo derecho.}{$ 53,842$}
-
-\begin{ejer}{Escriba una suma de Riemann para cada función y partición dadas, usando el punto indicado de cada subintervalo:}
-
-a. $f(x) = 9 - 3x^{2}$,\quad $P = \{0, 0.3, 0.5, 0.8, 1\}$,\quad partición de $[0,1]$, use el extremo derecho.
-% $7{,}593$
-
-b. $f(x) = x^{2} + x^{3}$,\quad $P = \{-1, -0.5, -0.8, 0, 0.5, 1\}$,\quad partición de $[-1,1]$, use el extremo derecho.
-% $1{,}2506$
-
-c. $f(x) = 20 - x^{3}$,\quad $P = \{0, 0.5, 1.5, 1.8, 2\}$,\quad partición de $[0,2]$, use el extremo izquierdo.
-% $37{,}696$
-
-d. $f(x) = x^{4} - 1$,\quad $P = \{-1, -0.5, 0, 0.5, 1, 2, 3\}$,\quad partición de $[-1,3]$, use el extremo izquierdo.
-% $13{,}563$
-
-e. $f(x) = 20 - 4x^{2}$,\quad $P = \{0, 0.5, 1.5, 1.8, 2, 2.5, 3\}$,\quad partición de $[0,3]$, use el punto medio.
-% $24{,}47$
-
-f. $f(x) = x^{3} - 1$,\quad $P = \{-1, -0.5, 0, 0.5, 1, 2, 3, 3.6, 4\}$,\quad partición de $[-1,4]$, use el punto medio.
-% $57{,}51$
-
-g. $f(x) = 2^{x} - 1$,\quad $P = \{0, 0.5, 1, 2.5, 3, 3.6, 4.1, 5\}$,\quad partición de $[0,5]$, use el extremo derecho.
-% $53{,}842$
-
-\end{ejer}
-% \exercise{Calcule cada una de las siguientes integrales usando la definición:}
-% %\begin{multicols}{3}
-% \subexercise{$\displaystyle{\int_{0}^{2}\left( x^{2}-2\right) dx}$}{$-\dfrac{4}{3}$}
-
-% \subexercise{$\int_{0}^{1}\left(x^{2}-x\right) dx$}{$-\dfrac{1}{6}$}
-
-% \subexercise{$\int_{-1}^{1}x^{3}dx$}{$0$}
-
-% \subexercise{$\int_{-2}^{2}\left( x^{3}+2\right) dx$}{$8$}
-
-% \subexercise{$\int_{-1}^{2}\left( 2x^{3}-1\right) dx$}{$\dfrac{9}{2}$}
-
-% \subexercise{$\int_{0}^{2}\left(2^{x}\right) dx$}{$\dfrac{3}{\ln 2}$}
-
-% \subexercise{$\int_{0}^{3}2\left( 3^{x}\right) dx$}{$\dfrac{52}{\ln 3}$}
-% %\end{multicols}
-
-\begin{ejer}{Calcule cada una de las siguientes integrales usando la definición:}
-
-\begin{multicols}{3}
-\begin{minipage}[t]{\linewidth}
-a. $\int_{0}^{2}\left( x^{2}-2\right) dx$
-% $-\dfrac{4}{3}$
-
-b. $\int_{0}^{1}\left(x^{2}-x\right) dx$
-% $-\dfrac{1}{6}$
-
-c. $\int_{-1}^{1}x^{3}dx$
-% $0$
-\end{minipage}
-
-\begin{minipage}[t]{\linewidth}
-d. $\int_{-2}^{2}\left( x^{3}+2\right) dx$
-% $8$
-
-e. $\int_{-1}^{2}\left( 2x^{3}-1\right) dx$
-% $\dfrac{9}{2}$
-\end{minipage}
-
-\begin{minipage}[t]{\linewidth}
-f. $\int_{0}^{2}2^{x}dx$
-% $\dfrac{3}{\ln 2}$
-
-g. $\int_{0}^{3}2\cdot 3^{x}dx$
-% $\dfrac{52}{\ln 3}$
-\end{minipage}
-\end{multicols}
-\end{ejer}
-\clearpage
-
-\begin{ejer}{Calcule usando las propiedades de la integral:}
-
-\begin{multicols}{2}
-a. $\int_{0}^{2}\left( 4x^{3}-8x^{2}+7x+8\right) dx$
-
-b. $\int_{-2}^{1}\left( 5x^{3}-7x^{2}+4x-3\right) dx$
-
-c. $\int_{-2}^{2}\left( x^{4}+2x^{3}-x+1\right) dx$
-
-d. $\int_{-1}^{2}\left( 2x^{5}-10x^{3}\right) dx$
-
-e. $\int_{0}^{3}\left( e^{x}+2^{x}+3\right) dx$
-
-f. $\int_{0}^{3}\left( 4^{x}+3^{x}+3x\right) dx$
-
-g. $\int_{0}^{3}\left(5^{x}+4^{x}+4x^{2}\right) dx$
-
-h. $\int_{-1}^{2}\left\vert x\right\vert dx$
-
-i. $\int_{-1}^{4}\left\vert x^{2}-2x-3\right\vert dx$
-
-j. $\int_{-4}^{4}\left\vert x^{2}-9\right\vert dx$
-
-k. $\int_{-1}^{2}\left[ \left\vert x\right\vert \right] dx$
-
-l. $\int_{1}^{4}\left[ \left\vert 2x\right\vert \right] dx$
-
-m. $\int_{-1}^{4}\left[ \left\vert 3x\right\vert \right] dx$
-
-n. $\int_{0}^{4}\left[ \left\vert x^{2}\right\vert \right] dx$
-
-o. $\int_{0}^{2}\left[ \left\vert 2x^{2}\right\vert \right] dx$
-
-p. $\int_{0}^{2}\left[ \left\vert x^{3}\right\vert \right] dx$
-
-q. $\int_{-2}^{2}f(x)\,dx$, si $f(x)=
-\begin{cases}
-x^{2}-4, & \text{si }x<0 \\
-4-x^{2}, & \text{si }x\geq 0
-\end{cases}$
-
-r. $\int_{-1}^{3}f(x)\,dx$, si $f(x)=
-\begin{cases}
-x^{3}-5x^{2}+x+2, & \text{si }x<1 \\ % <-- ¡AQUÍ ESTÁ EL CAMBIO!
-4x^{3}-x^{2}+2, & \text{si }x\geq 1
-\end{cases}$
-
-s. $\int_{-2}^{3}f(x)\,dx$, si $f(x)=
-\begin{cases}
-x^{2}-4x, & \text{si }x<0 \\ % <-- ¡Agregar salto de línea!
-4x-x^{2}, & \text{si }0\leq x\leq 2 \\ % <-- ¡Agregar salto de línea!
-5-7x, & \text{si }x>2
-\end{cases}$
-\end{multicols}
-\end{ejer}
-
-% \exercise{Halle el área limitada por la curva y las rectas dadas:}
-
-% \subexercise{$y=5x^{4},\ x=1,\ x=3$ y el eje $x$.}{$242$}
-
-% \subexercise{$y=3x+x^{2}-x;x=0,x=5$ y el eje $x$.}{$\frac{200}{3}$}
-
-% \subexercise{$y=e^{x}+x^{3}+1;\ x=0,x=2$ y el eje $x$.}{$e^{2}+5$}
-
-% \subexercise{$y=x^{2}+2^{x}+x;$ $x=1,x=3$ y el eje $x$.}{$\frac{2}{3\ln 2}\left( 19\ln 2+9\right) $}
-
-% \subexercise{$y=2\sen x;x=0$, $x=\pi $ y el eje $x$.}{$4$}
-
-% \subexercise{$y=5\cos x;x=\frac{3\pi }{2}$, $x=2\pi $ y el eje $x$.}{$5$}
-
-% \subexercise{$y=2\cos x+3\sen x,x=0$, $y=\frac{\pi }{2}$ y el eje $x$.}{$5$}
-
-% \subexercise{$y=3\cos x+\sen x+x^{2}$; $x=-\frac{\pi }{2},x=\frac{\pi }{2}$ y el eje $
-% x$.}{$\frac{1}{12}\pi ^{3}+6$}
-
-% \subexercise{$f(x)=\left\{ \begin{array}{ccc} 16-x^{2} & si & x<4 \\ x+4 & si & x\geq 4%
-% \end{array}%
-% \right. ;x=0,x=6$ y el eje $x$.}{$\frac{182}{3}$}
-
-% \subexercise{$f(x)=\left\{ \begin{array}{ccc}2\sen x & si & x\geq 0 \\ 3\cos x & si & x<0%
-% \end{array}%
-% \right. ;x=-\frac{^{\pi }}{2},x=\frac{\pi }{4}$ y el eje $x$.}{$5-\sqrt{2}$}
-
-% \subexercise{$f(x)=\left\{ \begin{array}{ccc}2^{x} & si & x<-1 \\ \frac{1}{2^{x}} & si & x\geq -1%
-% \end{array}%
-% \right. ;x=-2,x=2$ y el eje $x$.}{$\frac{2}{\ln 2}$}
-
-% \subexercise{$f(x)=\left\{ \begin{array}{ccc}3x^{2}+2x+2 & si & x\leq 0 \\6\sen x & si & 0<x\leq \pi \\ e^{x} & & \pi <x%
-%  \end{array}%
-% \right. ;x=-1,x=4$ y el eje $x.$}{$\allowbreak e^{4}-e^{\pi}+14$}
-
-\begin{ejer}{Halle el área limitada por la curva y las rectas dadas:}
-
-a. $y=5x^{4},\ x=1,\ x=3$ y el eje $x$.
-% $242$
-
-b. $y=3x+x^{2}-x;\ x=0,\ x=5$ y el eje $x$.
-% $\dfrac{200}{3}$
-
-c. $y=e^{x}+x^{3}+1;\ x=0,\ x=2$ y el eje $x$.
-% $e^{2}+5$
-
-d. $y=x^{2}+2^{x}+x;\ x=1,\ x=3$ y el eje $x$.
-% $\dfrac{2}{3\ln 2}\left( 19\ln 2+9\right)$
-
-e. $y=2\sen x;\ x=0,\ x=\pi$ y el eje $x$.
-% $4$
-
-f. $y=5\cos x;\ x=\dfrac{3\pi}{2},\ x=2\pi$ y el eje $x$.
-% $5$
-
-g. $y=2\cos x+3\sen x;\ x=0,\ x=\dfrac{\pi}{2}$ y el eje $x$.
-% $5$
-
-h. $y=3\cos x+\sen x+x^{2};\ x=-\dfrac{\pi}{2},\ x=\dfrac{\pi}{2}$ y el eje $x$.
-% $\dfrac{1}{12}\pi^{3}+6$
-
-i. $f(x)=\left\{
-\begin{array}{ccc}
-16-x^{2} & \text{si} & x<4 \\
-x+4 & \text{si} & x\geq 4
+\subexercise{$\displaystyle\int_{-2}^{2}f(x)dx$, si $f(x)=\left\{
+\begin{array}{ll}
+x^{2}-4, & \text{ si }x<0 \\
+4-x^{2}, & \text{ si }x\geq 0%
 \end{array}
-\right.;\ x=0,\ x=6$ y el eje $x$.
-% $\dfrac{182}{3}$
+\right.$}{$0$}
 
-j. $f(x)=\left\{
-\begin{array}{ccc}
-2\sen x & \text{si} & x\geq 0 \\
-3\cos x & \text{si} & x<0
+\subexercise{$\displaystyle\int_{-1}^{3}f(x)dx$, si $f(x)=\left\{
+\begin{array}{ll}
+x^{3}-5x^{2}+x+2, & \text{ si }x<1 \\
+4x^{3}-x^{2}+2, & \text{ si }x\geq 1
 \end{array}
-\right.;\ x=-\dfrac{\pi}{2},\ x=\dfrac{\pi}{4}$ y el eje $x$.
-% $5-\sqrt{2}$
+\right. $}{$76$}
 
-k. $f(x)=\left\{
-\begin{array}{ccc}
-  2^{x} & \text{si} & x<-1 \\
-  \dfrac{1}{2^{x}} & \text{si} & x\geq -1
+\subexercise{$\displaystyle\int_{-2}^{3}f(x)dx$, si $f(x)=\left\{
+\begin{array}{ll}
+  x^{2}-4x, & \text{ si }x<0 \\
+  4x-x^{2}, & \text{ si 0}\leq x\leq 2 \\
+  5-7x, & \text{ si }x>2
 \end{array}
-\right.;\ x=-2,\ x=2$ y el eje $x$.
-% $\dfrac{2}{\ln 2}$
+\right. $}{$\frac{7}{2}$}
 
-l. $f(x)=\left\{
-  \begin{array}{ccc}
-    3x^{2}+2x+2 & \text{si} & x\leq 0 \\
-    6\sen x & \text{si} & 0<x\leq \pi \\
-    e^{x} & & x>\pi
-  \end{array}
-  \right.;\ x=-1,\ x=4$ y el eje $x$.
-  % $e^{4}-e^{\pi}+14$
-\end{ejer}
-\clearpage
-% \exercise{Use nociones geométricas para encontrar el valor de cada una de las siguientes integrales:}
-% %\begin{multicols}{2}
-% \subexercise{$\int_{-2}^{2}\sqrt{4-x^{2}}dx$}{$2\pi$}
+\exercise{Hallar el área limitada por la curva y las rectas dadas.}
 
-% \subexercise{$\int_{0}^{10}\sqrt{100-x^{2}}dx$}{$25\pi$}
+\subexercise{$y=5x^{4}$, $x=1$, $x=3$ y el eje $x$.}{$242$}
 
-% \subexercise{$\int_{-2}^{8}\left( 4+\sqrt{25-\left( x-3\right) ^{2}}\right) dx$}{$\frac{25\pi}{2}+40$}
+\subexercise{$y=3x+x^{2}-x$; $x=0$, $x=5$ y el eje $x$.}{$\frac{200}{3}$}
 
-% \subexercise{$\int_{-1}^{6}\left( 1+\sqrt{49-\left( x+1\right) ^{2}}\right) dx$}{$\frac{49\pi}{4}+7$}
+\subexercise{$y=e^{x}+x^{3}+1$; $x=0$, $x=2$ y el eje $x$.}{$e^{2}+5$}
 
-% \subexercise{$\int_{0}^{4}\big[\hspace{-0.05cm}| x|\hspace{-0.07cm}\big] dx$}{$6$}
+\subexercise{$y=x^{2}+2^{x}+x$; $x=1$, $x=3$ y el eje $x$.}{$\frac{2}{3\ln 2}\left( 19\ln 2+9\right) $}
 
-% \subexercise{$\int_{0}^{3}\big[\hspace{-0.05cm}| 2x|\hspace{-0.07cm}\big] dx$}{$7,5$}
+\subexercise{$y=2\sen x$; $x=0$, $x=\pi $ y el eje $x$.}{$4$}
 
-% \subexercise{$\int_{0}^{2}\big[\hspace{-0.05cm}| x^2|\hspace{-0.07cm}\big] dx$}{$1,8537$}
+\subexercise{$y=5\cos x$; $x=\frac{3\pi }{2}$, $x=2\pi $ y el eje $x$.}{$5$}
 
-% \subexercise{$\int_{0}^{9} \big[\hspace{-0.05cm}| \sqrt{x}|\hspace{-0.07cm}\big] dx$}{$13$}
-%\end{multicols}
+\subexercise{$y=2\cos x+3\sen 3x$; $x=0$, $y=\frac{\pi }{2}$ y el eje $x$.}{$5$}
 
-\begin{ejer}{Use nociones geométricas para encontrar el valor de cada una de las siguientes integrales:}
+\subexercise{$y=3\cos x+\sen x+x^{2}$; $x=-\frac{\pi }{2}$, $x=\frac{\pi }{2}$ y el eje $x$.}{$\frac{1}{12}\pi ^{3}+6$}
 
-  \begin{multicols}{2}
-    a. $\int_{-2}^{2}\sqrt{4-x^{2}}dx$
-    % $2\pi$
+\subexercise{$f(x)=\left\{
+  \begin{array}{ccc} 16-x^{2} & \text{si} & x<4 \\ x+4 & \text{si} & x\geq 4%
+  \end{array}%
+\right. ;x=0$, $x=6$ y el eje $x$.}{$\frac{182}{3}$}
 
-    b. $\int_{0}^{10}\sqrt{100-x^{2}}dx$
-    % $25\pi$
+\subexercise{$f(x)=\left\{
+    \begin{array}{ccc}2\sen x & \text{si} & x\geq 0 \\ 3\cos x & \text{si} & x<0%
+    \end{array}%
+  \right. ;x=-\frac{^{\pi }}{2}$, $x=\frac{\pi }{4}$ y el eje $x$.}{$5-\sqrt{2}$}
 
-    c. $\int_{-2}^{8}\left( 4+\sqrt{25-\left( x-3\right) ^{2}}\right) dx$
-    % $\dfrac{25\pi}{2}+40$
+  \subexercise{$f(x)=\left\{
+      \begin{array}{ccc}2^{x} & \text{si} & x<-1 \\ \frac{1}{2^{x}} & \text{si} & x\geq -1%
+      \end{array}%
+    \right. ;x=-2$, $x=2$ y el eje $x$.}{$\frac{2}{\ln 2}$}
 
-    d. $\int_{-1}^{6}\left( 1+\sqrt{49-\left( x+1\right) ^{2}}\right) dx$
-    % $\dfrac{49\pi}{4}+7$
+    \subexercise{$f(x)=\left\{
+        \begin{array}{ccc}3x^{2}+2x+2 & \text{si} & x\leq 0 \\6\sen x & \text{si} & 0<x\leq \pi  \\ e^{x} &  & \pi <x%
+        \end{array}%
+      \right. ;x=-1$, $x=4$ y el eje $x$.}{$\allowbreak e^{4}-e^{\pi}+14$}
 
-    e. $\int_{0}^{4}\big[\hspace{-0.05cm}| x|\hspace{-0.07cm}\big] dx$
-    % $6$
+      \exercise{Usar nociones geométricas para encontrar el valor de cada una de las siguientes integrales}
+      \begin{multicols}{2}
+        \subexercise{$\displaystyle\int_{-2}^{2}\sqrt{4-x^{2}}dx$}{$2\pi$}
 
-    f. $\int_{0}^{3}\big[\hspace{-0.05cm}| 2x|\hspace{-0.07cm}\big] dx$
-    % $7{,}5$
+        \subexercise{$\displaystyle\int_{0}^{10}\sqrt{100-x^{2}}dx$}{$25\pi$}
 
-    g. $\int_{0}^{2}\big[\hspace{-0.05cm}| x^2|\hspace{-0.07cm}\big] dx$
-    % $1{,}8537$
+        \subexercise{$\displaystyle\int_{-2}^{8}\left( 4+\sqrt{25-\left( x-3\right) ^{2}}\right) dx$}{$\frac{25\pi}{2}+40$}
 
-    h. $\int_{0}^{9} \big[\hspace{-0.05cm}| \sqrt{x}|\hspace{-0.07cm}\big] dx$
-    % $13$
-  \end{multicols}
-\end{ejer}
-% \exercise{Calcule las integrales usando propiedades de áreas y de funciones inversas:}
-% %\begin{multicols}{3}
-% \subexercise{$\int_{0}^{9}\sqrt{x}dx$}{$18$}
+        \subexercise{$\displaystyle\int_{-1}^{6}\left( 1+\sqrt{49-\left( x+1\right) ^{2}}\right) dx$}{$\frac{49\pi}{4}+7$}
 
-% \subexercise{$\int_{0}^{16}\sqrt[4]{x}dx$}{$\frac{128}{5}$}
+        \subexercise{$\displaystyle\int_{0}^{4}\big[\hspace{-0.05cm}| x|\hspace{-0.07cm}\big] dx$}{$6$}
 
-% \subexercise{$\int_{0}^{4}\sqrt[5]{8x}dx$}{$\frac{20}{3}$}
+        \subexercise{$\displaystyle\int_{0}^{3}\big[\hspace{-0.05cm}| 2x|\hspace{-0.07cm}\big] dx$}{$7.5$}
 
-% \subexercise{$\int_{0}^{7}\log _{2}\left( x+1\right) dx$}{$ 24-\frac{7}{\ln 2}$}
+        \subexercise{$\displaystyle\int_{0}^{2}\big[\hspace{-0.05cm}| x^2|\hspace{-0.07cm}\big] dx$}{$1.8537$}
 
-% \subexercise{$\int_{0}^{e-1}\ln \left( x+1\right) dx$}{$ 1$}
+        \subexercise{$\displaystyle\int_{0}^{9} \big[\hspace{-0.05cm}| \sqrt{x}|\hspace{-0.07cm}\big] dx$}{$13$}
 
-% \subexercise{$\int_{1}^{25}\log _{5}xdx$}{$50-\frac{24}{\ln 5}$}
+      \end{multicols}
 
-% \subexercise{$\int_{0}^{\frac{1}{2}}\arcsin \left( 2x\right) dx$}{$\frac{1}{4}\pi -\frac{1}{2}$}
+      \exercise{Calcular las integrales usando propiedades de áreas y de funciones inversas.}
+      \begin{multicols}{3}
+        \subexercise{$\displaystyle\int_{0}^{9}\sqrt{x}dx$}{$18$}
 
-% \subexercise{$\int_{0}^{3}\arcsin \left( \frac{x}{3}\right) dx$}{$\frac{3}{2}\pi-3$}
+        \subexercise{$\displaystyle\int_{0}^{16}\sqrt[4]{x}dx$}{$\frac{128}{5}$}
 
-% \subexercise{$\int_{0}^{1}\arccos \left( 1-x\right) dx$}{$1$}
-% %\end{multicols}
+        \subexercise{$\displaystyle\int_{0}^{4}\sqrt[5]{8x}dx$}{$\frac{20}{3}$}
 
-\begin{ejer}{Calcule las integrales usando propiedades de áreas y de funciones inversas:}
+        \subexercise{$\displaystyle\int_{0}^{7}\log _{2}\left( x+1\right) dx$}{$ 24-\frac{7}{\ln 2}$}
 
-  \begin{multicols}{3}
-    a. $\int_{0}^{9}\sqrt{x}\,dx$
-    % $18$
+        \subexercise{$\displaystyle\int_{0}^{e-1}\ln \left( x+1\right) dx$}{$ 1$}
 
-    b. $\int_{0}^{16}\sqrt[4]{x}\,dx$
-    % $\dfrac{128}{5}$
+        \subexercise{$\displaystyle\int_{1}^{25}\log _{5}xdx$}{$50-\frac{24}{\ln 5}$}
 
-    c. $\int_{0}^{4}\sqrt[5]{8x}\,dx$
-    % $\dfrac{20}{3}$
+        \subexercise{$\displaystyle\int_{0}^{\frac{1}{2}}\arcsin \left( 2x\right) dx$}{$\frac{1}{4}\pi -\frac{1}{2}$}
 
-    d. $\int_{0}^{7}\log_{2}(x+1)\,dx$
-    % $24-\dfrac{7}{\ln 2}$
+        \subexercise{$\displaystyle\int_{0}^{3}\arcsin \left( \frac{x}{3}\right) dx$}{$\frac{3}{2}\pi-3$}
 
-    e. $\int_{0}^{e-1}\ln(x+1)\,dx$
-    % $1$
-
-    f. $\int_{1}^{25}\log_{5}x\,dx$
-    % $50-\dfrac{24}{\ln 5}$
-
-    g. $\int_{0}^{\frac{1}{2}}\arcsin(2x)\,dx$
-    % $\dfrac{1}{4}\pi - \dfrac{1}{2}$
-
-    h. $\int_{0}^{3}\arcsin\left(\dfrac{x}{3}\right)\,dx$
-    % $\dfrac{3}{2}\pi - 3$
-
-    i. $\int_{0}^{1}\arccos(1 - x)\,dx$
-    % $1$
-  \end{multicols}
-\end{ejer}
+        \subexercise{$\displaystyle\int_{0}^{1}\arccos \left( 1-x\right) dx$}{$1$}
+      \end{multicols}
