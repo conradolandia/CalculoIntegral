@@ -27,44 +27,44 @@
 % Exercise without answer — still writes a heading entry
 \newcommand{\exerciseNoStarOne}[1]{%
   \@compactexercisefalse
-  \textbf{Ejercicio~\theexercise.} #1
-  \addcontentsline{loa}{exercise}{\theexercise}
+\theexercise)\hspace{0.5em}#1
+\addcontentsline{loa}{exercise}{\theexercise}
 }
 
 % Exercise with answer — writes heading entry + answer entry
 \newcommand{\exerciseNoStarTwo}[2]{%
-  \@compactexercisefalse
-  \textbf{Ejercicio~\theexercise.} #1
-  \addcontentsline{loa}{exercise}{\theexercise}
-  \addcontentsline{loa}{exerciseanswer}{#2}
+\@compactexercisefalse
+\theexercise)\hspace{0.5em}#1
+\addcontentsline{loa}{exercise}{\theexercise}
+\addcontentsline{loa}{exerciseanswer}{#2}
 }
 
 % Starred exercise — compact mode: subexercise answers rendered inline
 \newcommand{\exerciseStar}[1]{%
-  \@compactexercisetrue
-  \textbf{Ejercicio~\theexercise.} #1
-  \addcontentsline{loa}{exercise}{\theexercise}
+\@compactexercisetrue
+\theexercise)\hspace{0.5em}#1
+\addcontentsline{loa}{exercise}{\theexercise}
 }
 
 % --- Subexercise --------------------------------------------------------
 \newcommand{\subexercise}[1]{%
-  \refstepcounter{subexercise}
-  \@ifnextchar\bgroup{\subexerciseTwo{#1}}{\subexerciseOne{#1}}
+\refstepcounter{subexercise}
+\@ifnextchar\bgroup{\subexerciseTwo{#1}}{\subexerciseOne{#1}}
 }
 
 \newcommand{\subexerciseOne}[1]{%
-\@alph\thesubexercise) #1
+\@alph\thesubexercise)\hspace{0.5em}#1l
 }
 
 \newcommand{\subexerciseTwo}[2]{%
-\@alph\thesubexercise)~#1
+\@alph\thesubexercise)\hspace{0.5em}#1
 \if@compactexercise
 \addcontentsline{loa}{subexercisecompact}{%
-\@alph\thesubexercise)~#2%
+\@alph\thesubexercise)\hspace{0.5em}#2%
 }
 \else
 \addcontentsline{loa}{subexercise}{%
-\@alph\thesubexercise)~#2%
+\@alph\thesubexercise)\hspace{0.5em}#2%
 }
 \fi
 }
