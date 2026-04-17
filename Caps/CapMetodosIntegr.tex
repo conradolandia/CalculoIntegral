@@ -13,7 +13,7 @@ La diferencial representa la magnitud con que la recta tangente sube o baja cuan
 
 \section{Integración trigonométrica y método de sustitución}
 
-Para calcular una integral que tenga la forma {\footnotesize $\displaystyle{\int f(g(x))g^{\prime}(x)dx}$}, es decir, una integral en la que se tenga una composición de dos funciones y la derivada de la función interna (salvo, quizás, constantes) multiplique a esa composición\footnote{El hecho de que se tenga $g^\prime(x)$ no es completamente estricto. Puede tenerse una expresión muy similar a la derivada de $g$ de tal manera que la sustitución también funcione.}, puede hacerse la sustitución
+Para calcular una integral que tenga la forma $\int f(g(x))g^{\prime}(x)dx$, es decir, una integral en la que se tenga una composición de dos funciones y la derivada de la función interna (salvo, quizás, constantes) multiplique a esa composición\footnote{El hecho de que se tenga $g^\prime(x)$ no es completamente estricto. Puede tenerse una expresión muy similar a la derivada de $g$ de tal manera que la sustitución también funcione.}, puede hacerse la sustitución
 \[u=g(x), \qquad du=g^{\prime}(x)dx\]
 
 que la convierte en
@@ -24,7 +24,7 @@ que la convierte en
 \end{align*}
 
 \begin{ejemplo}
-  \textnormal{Si se quiere calcular la integral {\footnotesize $\displaystyle{\int e^{x^2}xdx}$}, donde el $x$ que multiplica a la exponencial es la derivada (salvo el $2$) de $x^2$, entonces podemos hacer la sustitución}.
+  Si se quiere calcular la integral $\displaystyle{\int e^{x^2}xdx}$, donde el $x$ que multiplica a la exponencial es la derivada (salvo el $2$) de $x^2$, entonces podemos hacer la sustitución.
 \end{ejemplo}
 \[
   u=x^2, du=2xdx \text{ y } xdx=\frac{du}{2}
@@ -41,7 +41,6 @@ Ahora bien, si la integral es definida, entonces puede hacerse un cambio de lím
   \int_{a}^{b}f(g(x))g^{\prime}(x)\,dx,
 \]
 además de la sustitución:
-
 \[
   u=g(x),\qquad du=g^{\prime}(x)dx
 \]
@@ -51,8 +50,6 @@ tenemos en cuenta que, si $x=a$, entonces $u=g\left( a\right)$ y, si $x=b$, ento
   \int_{g(a)}^{g(b)}f(u)du \text{, cambiando los limites de integración}\\
   &=F(u)\Big\vert_{g(a)}^{g(b)}=F(g(b))-F(g(a))
 \end{align*}
-
-%\clearpage
 
 En la última línea se evalúa la antiderivada de $f$ en los nuevos límites. Ya no es necesario regresar a la variable original, como en el caso de las integrales indefinidas.
 
@@ -475,14 +472,13 @@ Recordemos que seno es impar, es decir, el integrando completo es impar, entonce
 \]
 
 \begin{ejemplo}
-\textnormal{Suponga que $f$ es una función par y que {\small \textit{$\displaystyle{\int_{0}^{32}f\left( x\right)
-dx=20.}$}} Evalúe}
+Suponga que $f$ es una función par y que $\int_{0}^{32}f\left( x\right)dx=20$. Evalúe
 \[
-\displaystyle{\int_{-2}^{2}x^{4}f\left( x^{5}\right) dx}
+\int_{-2}^{2}x^{4}f\left( x^{5}\right) dx
 \]
 \end{ejemplo}
 
-\emph{Solución.} Si en {\footnotesize $\displaystyle{\int_{-2}^{2}x^{4}f\left( x^{5}\right) dx}$} hacemos la sustitución $\ u=x^{5}\rightarrow du=5x^{4}dx\rightarrow x^{4}dx=\frac{1}{5}du$ y cambiamos límites de integración. Si $x=-2$, entonces {\footnotesize $u=\left( -2\right)^{5}=-32$} y, si $x=2$, entonces {\footnotesize $u=2^{5}=32$.}
+\emph{Solución.} Si en $\int_{-2}^{2}x^{4}f\left( x^{5}\right) dx$ hacemos la sustitución $\ u=x^{5}\rightarrow du=5x^{4}dx\rightarrow x^{4}dx=\frac{1}{5}du$ y cambiamos límites de integración. Si $x=-2$, entonces $u=\left( -2\right)^{5}=-32$ y, si $x=2$, entonces $u=2^{5}=32$.
 \[
 \int_{-2}^{2}x^{4}f\left( x^{5}\right) dx=\frac{1}{5}\int_{-32}^{32}f\left(
 u\right) du\underset{f\text{ es par}}{\underbrace{=}}\frac{2}{5}%
@@ -680,7 +676,7 @@ En ella se muestran las derivadas de $u$ y las integrales de $dv$ (la tabla se c
 }
 
 \begin{ejemplo}
-\textnormal{La integral $\displaystyle{\int e^{\sqrt{x}}dx}$, inicialmente, no tiene la forma del caso anterior, pero puede reescribirse:}
+La integral $\int e^{\sqrt{x}}dx$, inicialmente, no tiene la forma del caso anterior, pero puede reescribirse:
 \end{ejemplo}
 Supongamos que $y=\sqrt{x}$, entonces $y^2=x$ y $2ydy=dx$, es decir,
 \[

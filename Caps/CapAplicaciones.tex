@@ -256,20 +256,18 @@ Tomando algunos valores adicionales a aquellos, puede identificarse que las figu
 %\end{center}
 
 Y por otro lado,
-{\small
-  \begin{align*}
-    A&=\int_{-3}^{3}\left( \frac{10x^{2}}{x^{2}+1}-x^{2}\right) dx\ \text{(note que el integrando es par)}\\
-    &=2\int_{0}^{3}\left( \frac{10x^{2}}{x^{2}+1}-x^{2}\right) dx\ \text{(simplificamos con división)}\\
-    &=2\int_{0}^{3}\left( 10-\frac{10}{x^{2}+1}-x^{2}\right) dx\\
-    &=2\left( 10x-\frac{1}{3}x^{3}-10\tan^{-1} x\right)\Bigg\vert_{0}^{3}\\
-    &=2\left(30-9-10\tan^{-1} 3\right) =42-20\tan^{-1} 3\approx 17.019\text{ unidades cuadradas}%
-  \end{align*}
-}
+\begin{align*}
+  A&=\int_{-3}^{3}\left( \frac{10x^{2}}{x^{2}+1}-x^{2}\right) dx\ \text{(note que el integrando es par)}\\
+  &=2\int_{0}^{3}\left( \frac{10x^{2}}{x^{2}+1}-x^{2}\right) dx\ \text{(simplificamos con división)}\\
+  &=2\int_{0}^{3}\left( 10-\frac{10}{x^{2}+1}-x^{2}\right) dx\\
+  &=2\left( 10x-\frac{1}{3}x^{3}-10\tan^{-1} x\right)\Bigg\vert_{0}^{3}\\
+  &=2\left(30-9-10\tan^{-1} 3\right) =42-20\tan^{-1} 3\approx 17.019\text{ unidades cuadradas}%
+\end{align*}
 
 \begin{ejemplo}
-  \textnormal{Halle el área de la región limitada por las figuras de {\footnotesize $y=\sqrt{\frac{1}{2}x+4}$} y {\footnotesize $y=\sqrt{100-x}$} para {\footnotesize $y\geq 0.$}}
+  Halle el área de la región limitada por las figuras de $y=\sqrt{\frac{1}{2}x+4}$ y $y=\sqrt{100-x}$ para $y\geq 0$.
 \end{ejemplo}
-\emph{Solución.} Encontremos los puntos de corte de las curvas dadas: si {\footnotesize $\sqrt{\frac{1}{2}x+4}=\sqrt{100-x}$,} entonces {\footnotesize $\cfrac{1}{2}x+4=100-x$,} es decir, {\footnotesize $\cfrac{3}{2}x=96$} o también $x=64$, con lo cual {\footnotesize $y=\sqrt{100-64}=6.$} La figura de la región, se muestra a continuación:
+\emph{Solución.} Encontremos los puntos de corte de las curvas dadas: si $\sqrt{\frac{1}{2}x+4}=\sqrt{100-x}$, entonces $\cfrac{1}{2}x+4=100-x$, es decir, $\cfrac{3}{2}x=96$ o también $x=64$, con lo cual $y=\sqrt{100-64}=6.$ La figura de la región, se muestra a continuación:
 
 \begin{figure}[H]
   \centering
@@ -302,11 +300,10 @@ Con ello, el área es
 \end{align*}%
 
 \begin{ejemplo}
-  \textnormal{Halle el área de la región limitada por \textit{$y=\cos (x),y=\sen
-  (2x),\,\ x=\frac{\pi }{2}$} y $x=\pi .$}
+  Halle el área de la región limitada por $y=\cos (x),y=\sen (2x)$, $x=\frac{\pi }{2}$ y $x=\pi$.
 \end{ejemplo}
 
-\emph{Solución.} Hallamos los puntos de corte de las dos curvas. Dado que $\sen(2x)=2\sen x\cos x$, entonces $\sen (2x)=\cos x$ implica que $2\sen x\cos x-\cos x=0$ o, también, $\cos x\left( 2\sin x-1\right) =0$, de donde $\cos x=0$ o $\sen x=\frac{1}{2}$, con lo cual $ x=\left( 2n+1\right) \frac{\pi }{2}$, $x=\frac{\pi }{6}+2n\pi$ o $x=\frac{5}{6}\pi +2n\pi$ para $n\in \mathbb{Z}.$
+\emph{Solución.} Hallamos los puntos de corte de las dos curvas. Dado que $\sen(2x)=2\sen x\cos x$, entonces $\sen (2x)=\cos x$ implica que $2\sen x\cos x-\cos x=0$ o, también, $\cos x( 2\sin x-1) =0$, de donde $\cos x=0$ o $\sen x=\frac{1}{2}$, con lo cual $ x=( 2n+1) \frac{\pi }{2}$, $x=\frac{\pi }{6}+2n\pi$ o $x=\frac{5}{6}\pi +2n\pi$ para $n\in \mathbb{Z}$.
 
 Los valores de $x$ en el intervalo $\left[ \frac{\pi }{2},\pi \right] $, intervalo donde se define la región, son: $x=\frac{\pi }{2}$ y $x=\frac{5}{6}\pi $.
 
@@ -314,10 +311,8 @@ Tomemos una tabla de valores para aproximar la figura de la región:
 
 \begin{table}[H]
   \caption{Valores de aproximación}
-
   \renewcommand{\arraystretch}{1.3}
   \begin{tabular}{|l|r|r|r|r|r|}
-
     \hline
     $x$ & $\frac{\pi }{2}$ & $\frac{2\pi }{3}$ & $\frac{5\pi }{6}$ & $\frac{11\pi }{12}$ & \multicolumn{1}{l|}{$\pi $} \\
     \hline
@@ -329,7 +324,6 @@ Tomemos una tabla de valores para aproximar la figura de la región:
     \hline
   \end{tabular}
   \propia
-
 \end{table}
 
 Abajo la figura:
@@ -348,8 +342,7 @@ Abajo la figura:
 %\end{center}
 
 Con ello, el área de la región, usando valor absoluto en la integral, está dada por
-
-\resizebox{\textwidth}{!}{$
+\begin{gather*}
   \begin{aligned}
     A&=\int_{\frac{\pi }{2}}^{\pi }\left\vert \cos x-\sen \left( 2x\right)
     \right\vert dx
@@ -360,7 +353,7 @@ Con ello, el área de la región, usando valor absoluto en la integral, está da
     &=\sen \frac{5}{6}\pi +\frac{1}{2}\cos \frac{5}{3}\pi -\left( \sen \frac{\pi}{2}+\frac{1}{2}\cos \pi \right) -\frac{1}{2}\cos \left( 2\pi \right) -\sen \pi+\frac{1}{2}\cos \left( \frac{5}{3}\pi \right) +\sen \frac{5}{6}\pi \\
     &=\frac{1}{2}\text{unidades cuadradas}%
   \end{aligned}
-$}
+\end{gather*}
 
 \section{Volumen de sólidos con función de área transversal
 conocida}
@@ -431,8 +424,8 @@ Para encontrar el volumen usando secciones transversales, podemos seguir los sig
 \end{parrafonumerado}
 
 \begin{ejemplo}
-  \textnormal{Encuentre el volumen del sólido cuya base es el triángulo con vértices
-  $(0,0),\ (3,3)$ y $(3,-3)$ y cuyas secciones transversales perpendiculares al eje $x$ son cuadrados con un lado sobre el triángulo.}
+  Encuentre el volumen del sólido cuya base es el triángulo con vértices
+  $(0,0)$, $(3,3)$ y $(3,-3)$ y cuyas secciones transversales perpendiculares al eje $x$ son cuadrados con un lado sobre el triángulo.
 \end{ejemplo}
 %%\begin{multicols}{2}
 \emph{Solución.} La base del sólido cuyo volumen quiere calcularse está dada por este triángulo:
@@ -728,7 +721,7 @@ vemos que los límites de la integral van desde $x=r-h$ hasta $r$. Además, la e
 }
 
 \begin{ejemplo}
-  \textnormal{Halle el volumen del sólido cuya base está dada por la región {\small $R=\left\{ \left( x,y\right) :\frac{x^{2}}{100}+\frac{y^{2}}{36}\leq 1\right\} $} y cuyas secciones transversales perpendiculares al eje $x$ son triángulos rectángulos isósceles con un lado sobre la base.}
+  Halle el volumen del sólido cuya base está dada por la región $R=\left\{ \left( x,y\right) :\frac{x^{2}}{100}+\frac{y^{2}}{36}\leq 1\right\} $ y cuyas secciones transversales perpendiculares al eje $x$ son triángulos rectángulos isósceles con un lado sobre la base.
 \end{ejemplo}
 
 \emph{Solución.} La región $R$ del plano $xy$ es una elipse alargada en el eje $x$, como en la figura \ref{fig:elipse_base_solido}:
@@ -800,8 +793,8 @@ En el siguiente enlace podemos encontrar la simulación del sólido y de las sec
 %\end{center}
 
 \begin{ejemplo}
-  \textnormal{Halle el volumen del sólido cuya base es la región limitada por \textit{$y=x\ln
-  x $ y $y=4\ln x$} y cuyas secciones transversales perpendiculares al eje $x$ son cuadrados con un lado sobre la base.}
+  Halle el volumen del sólido cuya base es la región limitada por $y=x\ln
+  x $ y $y=4\ln x$ y cuyas secciones transversales perpendiculares al eje $x$ son cuadrados con un lado sobre la base.
 \end{ejemplo}
 %%\begin{multicols}{2}
 \emph{Solución.} La figura \ref{fig:secciones_transversales_final} muestra las curvas y la región que encierran las funciones dadas:
@@ -1326,8 +1319,8 @@ es decir, para un $x$ dado, la sección transversal es una arandela de radios $\
 Cuando calculamos el volumen de un sólido con estas características (secciones transversales arandelas), decimos que estamos usando el método de las arandelas.
 
 \begin{ejemplo}
-  \textnormal{Halle el volumen del sólido de revolución generado al girar la
-  región limitada por $y=x^{2}$ y $y=x$ en torno a la recta \textit{$y=3$.}}
+  Halle el volumen del sólido de revolución generado al girar la
+  región limitada por $y=x^{2}$ y $y=x$ en torno a la recta $y=3$.
 \end{ejemplo}
 
 \emph{Solución.} La figura 69 nos permite identificar que, al girar la región alrededor de $y=3$, las secciones transversales tienen forma de arandela con radio mayor $R$, medido desde $y=3$ hasta la parábola $y=x^2$: mejor dicho, $R=3-x^2$ y radio menor $r$ medido desde $y=3$ hasta la recta $y=x$, es decir, $r=3-x$. Además, los puntos de corte de las curvas están dados por $x=0$ y $x=1$.
@@ -1400,8 +1393,8 @@ En el siguiente enlace puede encontrarse la simulación del sólido y de las ara
 %\end{center}
 
 \begin{ejemplo}
-  \textnormal{Halle el volumen del sólido de revolución generado al girar la
-  región limitada por $x=y^{2}$ y $x=y+2$ alrededor de la recta \textit{$x=4$.}}
+  Halle el volumen del sólido de revolución generado al girar la
+  región limitada por $x=y^{2}$ y $x=y+2$ alrededor de la recta $x=4$.
 \end{ejemplo}
 
 \emph{Solución.}
@@ -1595,7 +1588,7 @@ En el siguiente enlace puede encontrarse la simulación del sólido y de las ara
 \end{center}
 
 \begin{ejemplo}
-  \textnormal{Halle el volumen del sólido de revolución generado al girar la región limitada por {\footnotesize $y=\cfrac{2x^{2}}{x^{2}+1}$} y $y=x^{2}$ alrededor del eje \textit{$x$.}}
+  Halle el volumen del sólido de revolución generado al girar la región limitada por $y=\cfrac{2x^{2}}{x^{2}+1}$ y $y=x^{2}$ alrededor del eje $x$.
 \end{ejemplo}
 \emph{Solución.} La información suministrada se resume en la siguiente figura \ref{fig:arandelas_arandela}:
 
@@ -1800,8 +1793,8 @@ Con ello, puede calcularse su volumen, que corresponde a $\frac{625}{3}\pi $ uni
 $}
 
 \begin{ejemplo}
-  \textnormal{Halle el volumen del sólido de revolución obtenido al girar la
-  región acotada por $y=x^{2}$ y $y=2x+3$ alrededor del eje \textit{$x$.}}
+  Halle el volumen del sólido de revolución obtenido al girar la
+  región acotada por $y=x^{2}$ y $y=2x+3$ alrededor del eje $x$.
 \end{ejemplo}
 \emph{Solución.} Los puntos de corte de las curvas se encuentran haciendo $x^{2}=2x+3$, es decir, $x^{2}-2x-3=0$, o también $\left( x+1\right)\left( x-3\right) =0$; por tanto, $x=-1$ y $x=3$; al reemplazar esos valores en cualquiera de las expresiones igualadas, tenemos el valor de $y$, es decir, los puntos de corte son $(-1,1)$ y $(3,9)$. La figura \ref{fig:rotar_region} nos muestra la región que encierran las curvas:
 %%\begin{multicols}{2}
@@ -2027,13 +2020,13 @@ En el siguiente enlace puede encontrarse la simulación del sólido y de las ara
 
 %\subsection{Método de capas cilíndricas\footnote{Este método, en lugar de \textit{capas cilíndricas}, suele llamarse también de \textit{casquetes} o \textit{cascarones cilíndricos}.}}
 
-\subsection*{Método de capas cilíndricas\protect\footnote{Este método, en lugar de \textit{capas cilíndricas}, suele llamarse también de \textit{casquetes} o \textit{cascarones cilíndricos}.}}
+\subsection*{Método de capas cilíndricas\protect\footnote{Este método, en lugar de \emph{capas cilíndricas}, suele llamarse también de \emph{casquetes} o \emph{cascarones cilíndricos}.}}
 
 Con este método tenemos una herramienta adicional a las dos anteriores para calcular el volumen de un sólido de revolución. Tengamos en cuenta que no todos se usan necesariamente para la misma situación. Ilustremos la necesidad de este método por medio de un ejemplo:
 
 \begin{ejemplo}
-  \textnormal{Halle el volumen del sólido de revolución que se genera al
-  girar alrededor del eje $y$, la región limitada por las figuras de $y=\frac{1}{16}x^{5}+x+1$, el eje $x$, el eje $y$ y la recta \textit{$x=2$.}}
+  Halle el volumen del sólido de revolución que se genera al
+  girar alrededor del eje $y$, la región limitada por las figuras de $y=\frac{1}{16}x^{5}+x+1$, el eje $x$, el eje $y$ y la recta $x=2$.
 \end{ejemplo}
 
 \emph{Solución.} La región y el sólido que describen el contexto son los siguientes:
@@ -2127,8 +2120,8 @@ V\left( S\right) &=V\left( \cup_{x\in \left[ a,b\right] }C_{x}\right)
 Tenga en cuenta que, si el eje de rotación es diferente a uno de los ejes coordenados, entonces el radio es una función de $x$ en lugar de $x$.
 
 \begin{ejemplo}
-\textnormal{Halle el volumen del sólido de revolución que se tiene al girar la
-región limitada por las figuras de $y=x^{4}+x $, el eje $x$ y la recta $x=1$, en torno a la recta \textit{$x=3$.}}
+Halle el volumen del sólido de revolución que se tiene al girar la
+región limitada por las figuras de $y=x^{4}+x $, el eje $x$ y la recta $x=1$, en torno a la recta $x=3$.
 \end{ejemplo}
 
 \emph{Solución.} La figura \ref{fig:radio_altura_casquillo} muestra la región y el eje de rotación del ejemplo:
@@ -2592,8 +2585,8 @@ es
 }
 
 \begin{ejemplo}
-\textnormal{Halle la longitud de la curva dada por $y=\frac{1}{4}x^{2}-\frac{1}{2}\ln x$ desde el punto $\left( 1,\frac{1}{4}\right)$ hasta el punto \textit{$\left( 4,4-\ln
-2\right) $.}}
+Halle la longitud de la curva dada por $y=\frac{1}{4}x^{2}-\frac{1}{2}\ln x$ desde el punto $\left( 1,\frac{1}{4}\right)$ hasta el punto $\left( 4,4-\ln
+2\right) $.
 \end{ejemplo}
 
 %\begin{center}------------
@@ -2839,7 +2832,7 @@ Similarmente, en el caso alrededor de $x$, si escribimos la curva dada por $x=g\
 }
 
 \begin{ejemplo}
-\textnormal{Halle el área superficial de la superficie de revolución generada al girar la curva dada por {\small $y=\sqrt{8x-x^{2}}$} para {\small $1\leq x\leq 6$} alrededor del eje \textit{$x$.}}
+Halle el área superficial de la superficie de revolución generada al girar la curva dada por $y=\sqrt{8x-x^{2}}$ para $1\leq x\leq 6$ alrededor del eje $x$.
 \end{ejemplo}
 \emph{Solución.} La sección de la figura de la función dada es
 
@@ -3395,8 +3388,8 @@ $}
 Es decir, el trabajo realizado por la fuerza dada al mover la partícula es de {\small$\cfrac{3\sqrt{3}}{2\pi }\, \text{julios}$.}
 
 \begin{ejemplo}
-\textnormal{Se muestra la figura de una función fuerza (en newtons) que se
-incrementa a su máximo valor y luego permanece constante:}
+Se muestra la figura de una función fuerza (en newtons) que se
+incrementa a su máximo valor y luego permanece constante:
 
 \begin{figure}[H]
   \centering
@@ -3410,8 +3403,7 @@ incrementa a su máximo valor y luego permanece constante:}
 %\textbf{Fuente:} elaboración propia
 %\end{center}
 
-\textnormal{\textquestiondown Cuánto trabajo realiza la fuerza al mover un objeto
-una distancia de $8$ m?}
+¿Cuánto trabajo realiza la fuerza al mover un objeto una distancia de $8$ m?
 \end{ejemplo}
 
 \emph{Solución.} Recordemos que una integral definida de una función positiva es el área bajo la figura de la función. Entonces nuestra integral de trabajo, para este caso particular, la podemos manejar de la siguiente manera:
@@ -3810,9 +3802,9 @@ la integral de $\rho \times \text{profundidad}\times \text{ancho}$ horizontal de
 \end{defi}
 
 \begin{ejemplo}
-\textnormal{Una placa en forma de triángulo equilátero de $6$ pies de lado y con la base horizontal se sumerge verticalmente en agua, hasta que la base del triá%
+Una placa en forma de triángulo equilátero de $6$ pies de lado y con la base horizontal se sumerge verticalmente en agua, hasta que la base del triá%
 ngulo coincida con el nivel del agua. Encuentre la fuerza ejercida por el
-agua sobre un lado de la placa.}
+agua sobre un lado de la placa.
 \end{ejemplo}
 
 \emph{Solución.} Ubicamos un sistema de coordenadas como en la figura \ref{fig:placa_triangular} para usar la simetría del triángulo.
@@ -4068,8 +4060,8 @@ m=\int_{a}^{b}\rho \left( x\right) \left( f\left( x\right) -g\left(
 x\right) \right) dx
 \]
 \begin{ejemplo}
-\textnormal{Halle la masa de la lámina que se encuentra sobre la región
-limitada por $y=9-x^{2},y=x+3,$ si la función de densidad es} $\rho
+Halle la masa de la lámina que se encuentra sobre la región
+limitada por $y=9-x^{2},y=x+3,$ si la función de densidad es $\rho
 \left( x\right) =x^{2}$.
 \end{ejemplo}
 \emph{Solución.} Dibujamos la lámina:
@@ -4190,9 +4182,9 @@ M=\int_{a}^{b}x\rho \left( x\right) dx \text{ , y entonces, } \overline{x}=\frac
 \]
 
 \begin{ejemplo}
-\textnormal{Halle el centro de masa de una barra delgada que se encuentra
+Halle el centro de masa de una barra delgada que se encuentra
 sobre el eje $x$ en el intervalo $\left[ 0,5\right] $ y que tiene funció%
-n de densidad variable \textit{$\rho \left( x\right) =\sqrt{4+x}$.}}
+n de densidad variable $\rho \left( x\right) =\sqrt{4+x}$.
 \end{ejemplo}
 
 \emph{Solución.} Las integrales que se tienen en este ejemplo pueden calcularse sin mucha dificultad, por eso no se detallan acá:
@@ -4237,8 +4229,8 @@ y con ello,
 \]
 
 \begin{ejemplo}
-\textnormal{Halle el centro de masa de una barra delgada que se encuentra sobre el eje $x$ en el intervalo $\left[ 1,4\right] $ y que tiene función
-de densidad variable $\rho \left( x\right) =\sqrt{1+3x^{2}}.$}
+Halle el centro de masa de una barra delgada que se encuentra sobre el eje $x$ en el intervalo $\left[ 1,4\right] $ y que tiene función
+de densidad variable $\rho \left( x\right) =\sqrt{1+3x^{2}}$.
 \end{ejemplo}
 
 \emph{Solución.} Con la información anterior,
@@ -4488,8 +4480,7 @@ Con ello, el centro de masa es $\left( \overline{x},\overline{y}\right) =\left( 
 \frac{64}{7}\right) $
 
 \begin{ejemplo}
-\textnormal{Halle el centro de masa de la placa delgada limitada por \textit{$%
-y=x^{2},y=x$}, con función de densidad $\rho \left( x\right) =12x.$}
+Halle el centro de masa de la placa delgada limitada por $y=x^{2}$, $y=x$, con función de densidad $\rho \left( x\right) =12x$.
 \end{ejemplo}
 
 \emph{Solución.} Tenemos
@@ -4527,8 +4518,7 @@ x^{5}}{5}\right) _{0}^{1}\\
 Y, entonces, el centro de masa es $\left( \frac{3}{5},\frac{1}{2}\right) $
 
 \begin{ejemplo}
-\textnormal{Halle el centro de masa de la placa delgada limitada por \textit{$%
-y=x^{2},y=x$}, con función de densidad $\rho \left( x\right) =x^{2}.$}
+Halle el centro de masa de la placa delgada limitada por $y=x^{2},y=x$, con función de densidad $\rho \left( x\right) =x^{2}$.
 \end{ejemplo}
 
 \emph{Solución.} Con las funciones dadas, tenemos

@@ -135,6 +135,8 @@
 \usepackage{listofanswers}
 \usepackage{empheq}
 \usepackage{nicefrac}
+\usepackage{nicematrix}
+\usepackage{gensymb}
 \usepackage[all]{nowidow}
 \usepackage{mleftright}
 \mleftright
@@ -151,7 +153,7 @@
 \usepackage{bookmark}
 \urlstyle{same}
 \newcommand{\secref}[1]{``\nameref{#1}''}
-\renewcommand{\textcite}{\cite}
+%\renewcommand{\textcite}{\cite}
 
 % ÍNDICES Y SUBARCHIVOS
 %\usepackage{makeidx}
@@ -162,12 +164,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % COMANDOS PERSONALIZADOS Y ENTORNOS
-\DeclareMathOperator{\arcsinh}{arcsinh}
-\DeclareMathOperator{\arccosh}{arccosh}
-\DeclareMathOperator{\arctanh}{arctanh}
-\DeclareMathOperator{\arccoth}{arccoth}
-\DeclareMathOperator{\arcsech}{arcsech}
-\DeclareMathOperator{\arccsch}{arccsch}
+\DeclareMathOperator{\Pro}{Pro}
+\DeclareMathOperator{\arcsen}{arcsen}
+\DeclareMathOperator{\sen}{sen}
+\let\arcsin\arcsen
+\let\sin\sen
+
 \newcommand{\piso}[1]{\protect\ensuremath{\big[\mkern-3.5mu| #1 |\mkern-3.5mu\big]}}
 
 % Símbolo de final de ejemplo, demostración, etc.
@@ -196,7 +198,6 @@
 \newtheorem{defi}{Definición}[chapter]
 \newtheorem{ejer}{Ejercicio}
 \newtheorem{ejemplo}{Ejemplo}[chapter]
-\let\sen\sin
 
 % AJUSTES DE ÍNDICE Y PROFUNDIDAD DE SECCIONES
 \counterwithout{footnote}{chapter}

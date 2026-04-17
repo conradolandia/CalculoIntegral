@@ -7,13 +7,13 @@ Este capítulo, que presenta uno de los resultados más importantes del cálculo
 Sea $f$ una función continua. Una antiderivada de $f$ en un intervalo $I$ es cualquier función derivable $F$ tal que $F^\prime(x)=f(x)$ para todo $x$ en $I$.
 
 \begin{ejemplo}
-  \textls[-15]{Una antiderivada de $f(x)=3x^{7}\ $es $F(x)=\frac{3}{8}x^{8}$, pues $F^{\,\prime}(x)=(\frac{3}{8}x^{8})^{\prime}=3x^{7}=f(x)$. Otra antiderivada es $F(x)=\frac{3}{8}x^{8}+3$ y, para cada} constante $C$,\ $F(x)=\frac{3}{8}x^{8}+C$ es también una antiderivada de $f$.
+  \textls[-15]{Una antiderivada de $f(x)=3x^{7}\ $es $F(x)=\frac{3}{8}x^{8}$, pues $F'(x)=(\frac{3}{8}x^{8})'=3x^{7}=f(x)$. Otra antiderivada es $F(x)=\frac{3}{8}x^{8}+3$ y, para cada} constante $C$,\ $F(x)=\frac{3}{8}x^{8}+C$ es también una antiderivada de $f$.
 \end{ejemplo}
 
 Propiedades:
 
 \begin{itemize}
-  \item Si $F$ es una antiderivada de $f$, entonces $F\left( x\right) +C$ \ es también una antiderivada de $f$.
+  \item Si $F$ es una antiderivada de $f$, entonces $F(x) +C$ \ es también una antiderivada de $f$.
 
   \item La diferencia entre dos antiderivadas de la misma función es una constante.
 \end{itemize}
@@ -36,7 +36,7 @@ Supongamos que $f$ y $g$ son funciones con antiderivadas $F$ y $G$ respectivamen
 \end{parrafonumerado}
 
 \subsection{Algunas integrales indefinidas}
-Las siguientes integrales pueden deducirse usando derivadas de funciones conocidas. Por ejemplo, se sabe que para $p$ una constante diferente de $-1$, $(x^p)^\prime=px^{p-1}$ o también $(x^{p+1})^\prime=(p\,+1)x^{p}$, es decir, se tiene la primer propiedad:
+Las siguientes integrales pueden deducirse usando derivadas de funciones conocidas. Por ejemplo, se sabe que para $p$ una constante diferente de $-1$, $(x^p)^\prime=px^{p-1}$ o también $(x^{p+1})^\prime=(p\,+1)x^{p}$, es decir, se tiene la primera propiedad:
 
 \begin{parrafonumerado}
 
@@ -115,58 +115,29 @@ Las siguientes integrales pueden deducirse usando derivadas de funciones conocid
 
 En resumen, se obtiene la lista de integrales indefinidas\label{TablaResumen}:
 
-\[
-  \renewcommand{\arraystretch}{1.6}
-  \begin{tabular}{|c|l|}
-    \hline
-    \textbf{No.} & \textbf{Integral} \\ \hline
+\vspace{\baselineskip}
 
-    1 &
-    $\int m\,dx = mx + C$ \\ \hline
+\begin{center}
+  \begin{NiceTabular}{w{c}{0.8cm}w{c}{8cm}}[cell-space-limits=4pt,hvlines]
+    \textbf{N.\textsuperscript{o}} & \textbf{Integral} \\
+    1 & $\displaystyle\int m\,dx = mx + C$ \\
+    2 & $\displaystyle\int x^{p}\,dx = \frac{1}{p+1}x^{p+1}+C,
+    \quad p\neq -1$ \\
+    3 & $\displaystyle\int \cos(kx)\,dx = \frac{1}{k}\sin(kx)+C$ \\
+    4 & $\displaystyle\int \sin(kx)\,dx = -\frac{1}{k}\cos(kx)+C$ \\
+    5 & $\displaystyle\int \sec^{2}(kx)\,dx = \frac{1}{k}\tan(kx)+C$ \\
+    6 & $\displaystyle\int \csc^{2}(kx)\,dx = -\frac{1}{k}\cot(kx)+C$ \\
+    7 & $\displaystyle\int \sec(kx)\tan(kx)\,dx = \frac{1}{k}\sec(kx)+C$ \\
+    8 & $\displaystyle\int \csc(kx)\cot(kx)\,dx = -\frac{1}{k}\csc(kx)+C$ \\
+    9 & $\displaystyle\int e^{kx}\,dx = \frac{1}{k}e^{kx}+C$ \\
+    10 & $\displaystyle\int \frac{1}{x}\,dx = \ln|x|+C$ \\
+    11 & $\displaystyle\int \frac{1}{\sqrt{a^{2}-x^{2}}}\,dx = \arcsin\left(\frac{x}{a}\right)+C$ \\
+    12 & $\displaystyle\int \frac{1}{a^{2}+x^{2}}\,dx = \frac{1}{a}\arctan\left(\frac{x}{a}\right)+C$ \\
+    13 & $\displaystyle\int \frac{1}{x\sqrt{x^{2}-a^{2}}}\,dx = \frac{1}{a}\arcsec\left(\left|\frac{x}{a}\right|\right)+C$ \\
+  \end{NiceTabular}
+\end{center}
 
-    2 &
-    $\int x^{p}\,dx = \frac{1}{p+1}x^{p+1}+C,
-    \quad p\neq -1$ \\ \hline
-
-    3 &
-    $\int \cos(kx)\,dx = \frac{1}{k}\sin(kx)+C$ \\ \hline
-
-    4 &
-    $\int \sin(kx)\,dx = -\frac{1}{k}\cos(kx)+C$ \\ \hline
-
-    5 &
-    $\int \sec^{2}(kx)\,dx = \frac{1}{k}\tan(kx)+C$ \\ \hline
-
-    6 &
-    $\int \csc^{2}(kx)\,dx = -\frac{1}{k}\cot(kx)+C$ \\ \hline
-
-    7 &
-    $\int \sec(kx)\tan(kx)\,dx = \frac{1}{k}\sec(kx)+C$ \\ \hline
-
-    8 &
-    $\int \csc(kx)\cot(kx)\,dx = -\frac{1}{k}\csc(kx)+C$ \\ \hline
-
-    9 &
-    $\int e^{kx}\,dx = \frac{1}{k}e^{kx}+C$ \\ \hline
-
-    10 &
-    $\int \frac{1}{x}\,dx = \ln|x|+C$ \\ \hline
-
-    11 &
-    $\int \frac{1}{\sqrt{a^{2}-x^{2}}}\,dx
-    = \arcsin\!\left(\frac{x}{a}\right)+C$ \\ \hline
-
-    12 &
-    $\int \frac{1}{a^{2}+x^{2}}\,dx
-    = \frac{1}{a}\arctan\!\left(\frac{x}{a}\right)+C$ \\ \hline
-
-    13 &
-    $\int \frac{1}{x\sqrt{x^{2}-a^{2}}}\,dx
-    = \frac{1}{a}\operatorname{arcsec}
-    \!\left(\left|\frac{x}{a}\right|\right)+C$ \\ \hline
-
-  \end{tabular}
-\]
+\vspace{\baselineskip}
 
 \begin{ejemplo}
   Usemos las fórmulas dadas anteriormente para calcular algunas integrales:
@@ -174,75 +145,79 @@ En resumen, se obtiene la lista de integrales indefinidas\label{TablaResumen}:
 
 \begin{parrafonumerado}
 
-\item $\int \left(3x^{4}-\frac{8}{x^{4}}+7\sqrt{x}+\frac{8}{\sqrt[3]{x}}\right)dx$ \\% Línea en blanco antes de «Solución».
+\item $\int \left(3x^{4}-\frac{8}{x^{4}}+7\sqrt{x}+\frac{8}{\sqrt[3]{x}}\right)dx$
+
+  \vspace{\parskip}
 
   \emph{Solución}
-
-  {\small
+  \begin{small}
     \begin{align*}
       \int &\left(3x^{4}-\frac{8}{x^{4}}+7\sqrt{x}+\frac{8}{\sqrt[3]{x}}\right)dx \\
-      &
-      =3\int x^{4}dx-8\int x^{-4}dx+7\int x^{\frac{1}{2}}dx+8\int x^{-\frac{1}{3}}dx \\
+      &=3\int x^{4}dx-8\int x^{-4}dx+7\int x^{\frac{1}{2}}dx+8\int x^{-\frac{1}{3}}dx \\
       &=\frac{3}{5}x^{5}-\frac{8}{-3}x^{-3}+\frac{\frac{7}{1}}{\frac{3}{2}}x^{\frac{
       3}{2}}+\frac{8}{\frac{2}{3}}x^{\frac{2}{3}} \\
-      &
-      =\frac{3}{5}x^{5}+\frac{8}{3}x^{-3}+\frac{14}{3}x^{\frac{3}{2}}+12x^{\frac{2}{3}}+C
+      &=\frac{3}{5}x^{5}+\frac{8}{3}x^{-3}+\frac{14}{3}x^{\frac{3}{2}}+12x^{\frac{2}{3}}+C
     \end{align*}
-  }
+  \end{small}
 
-\item $\int (\sen x+\cos x-3\sen (2x)+4\cos (3x))dx$ \\% Línea en blanco antes de «Solución».
+\item $\int \bigl(\sen x+\cos x-3\sen (2x)+4\cos (3x)\bigr)dx$
+
+  \vspace{\parskip}
 
   \emph{Solución}
-  {\small
+  \begin{small}
     \begin{align*}
-      \int &(\sen x+\cos x-3\sen (2x)+4\cos (3x))dx\\
-      &
-      =\int \sen xdx+\int \cos xdx-3\int \sen (2x)dx+4\int \cos (3x)dx\\
-      &
-      =-\cos x+\sen x-3\left(-\frac{1}{2}\cos (2x)\right)+4\left(\frac{1}{3}\sen (3x)\right)\\
-      &
-      =-\cos x+\sen x+\frac{3}{2}\cos (2x)+\frac{4}{3}\sen (3x)+C
+      \int &\bigl(\sen x+\cos x-3\sen (2x)+4\cos (3x)\bigr)dx\\
+      &=\int \sen xdx+\int \cos xdx-3\int \sen (2x)dx+4\int \cos (3x)dx\\
+      &=-\cos x+\sen x-3\left(-\frac{1}{2}\cos (2x)\right)+4\left(\frac{1}{3}\sen (3x)\right)\\
+      &=-\cos x+\sen x+\frac{3}{2}\cos (2x)+\frac{4}{3}\sen (3x)+C
     \end{align*}
-  }
+  \end{small}
 
-\item $\int (\csc ^{2}x+3\sec ^{2}(2x)-8\csc ^{2}(7x))dx$ \\% Línea en blanco antes de «Solución».
+  \enlargethispage*{\baselineskip}
+
+\item $\int \bigl(\csc ^{2}x+3\sec ^{2}(2x)-8\csc ^{2}(7x)\bigr)dx$
+
+  \vspace{\parskip}
 
   \emph{Solución}
-  {\small
+  \begin{small}
     \begin{align*}
-      \int &(\csc ^{2}x+3\sec ^{2}(2x)-8\csc ^{2}(7x))dx\\
-      &
-      = \int \csc ^{2}xdx+3\int \sec ^{2}(2x)dx-8\int \csc ^{2}(7x)\\
+      \int \bigl(\csc ^{2}x+&3\sec ^{2}(2x)-8\csc ^{2}(7x)\bigr)dx\\
+      &= \int \csc ^{2}xdx+3\int \sec ^{2}(2x)dx-8\int \csc ^{2}(7x)\\
       &=-\cot x+3\left(\frac{1}{2}\tan (2x)\right)-8\left(-\frac{1}{7}\cot (7x)\right)\\
-      &
-      =-\cot x+\frac{3}{2}\tan (2x)+\frac{8}{7}\cot (7x)+C
+      &=-\cot x+\frac{3}{2}\tan (2x)+\frac{8}{7}\cot (7x)+C
     \end{align*}
-  }
+  \end{small}
 
-\item $\int (\sec (2x)\tan (2x)-5\csc (3x)\cot (3x))dx$ \\% Línea en blanco antes de «Solución».
+\item $\int \bigl(\sec (2x)\tan (2x)-5\csc (3x)\cot (3x)\bigr)dx$
+
+  \vspace{\parskip}
 
   \emph{Solución}
-  {\small
-    \begin{align*}
-      \int (\sec (2x)\tan (2x)-&5\csc (3x)\cot (3x))dx\\
+  \begin{gather*}
+    \begin{aligned}
+      \int \bigl(\sec (2x)\tan (2x)-&5\csc (3x)\cot (3x)\bigr)dx\\
       &=\int \sec (2x)\tan (2x)dx - 5\int \csc (3x)\cot (3x)dx\\
       &=\frac{1}{2}\sec (2x)-5\left(-\frac{1}{3}\csc (3x)\right)+L\\
       &=\frac{1}{2}\sec (2x)+\frac{5}{3}\csc (3x)+L
-    \end{align*}
-  }
+    \end{aligned}
+  \end{gather*}
 
-\item $\int \left(e^{2x}+e^{3x}-e^{4x}-\frac{3}{x}\,\right)dx$ \\% Línea en blanco antes de «Solución».
+\item $\int \left(e^{2x}+e^{3x}-e^{4x}-\frac{3}{x}\,\right)dx$
+
+  \vspace{\parskip}
 
   \emph{Solución}
-  {\small
-    \begin{align*}
-      \int \left(e^{2x}+e^{3x}-e^{4x}-\frac{3}{x}\,\right)&dx=\int e^{2x}dx+\int e^{3x}dx-\int e^{4x}dx-3\int \frac{1}{x}dx\\
-      &=\frac{1}{2}e^{2x}+\frac{1}{3}e^{3x}-\frac{1}{4}e^{4x}-3\ln |x|+B
-    \end{align*}
-  }
+  \begin{align*}
+    \int & \left(e^{2x}+e^{3x}-e^{4x}-\frac{3}{x}\,\right)dx \\
+    &=\int e^{2x}dx+\int e^{3x}dx-\int e^{4x}dx-3\int \frac{1}{x}dx\\
+    &=\frac{1}{2}e^{2x}+\frac{1}{3}e^{3x}-\frac{1}{4}e^{4x}-3\ln |x|+B
+  \end{align*}
 
-\item $\int\left( \frac{4}{\sqrt{16-x^{2}}}+\frac{8}{x\sqrt{x^{2}-9}}-\frac{7}{%
-  x^{2}+100}\,\right)dx$ \\% Línea en blanco antes de «Solución».
+\item $\int\left( \frac{4}{\sqrt{16-x^{2}}}+\frac{8}{x\sqrt{x^{2}-9}}-\frac{7}{x^{2}+100}\,\right)dx$
+
+  \vspace{\parskip}
 
   \emph{Solución}
   \begin{align*}
@@ -263,43 +238,41 @@ En resumen, se obtiene la lista de integrales indefinidas\label{TablaResumen}:
 
 \item Calculemos la integral de $\sen ^{2}x$. Inicialmente, manipulemos la identidad de $\cos(2x)$ para ver lo que sucede:
   \begin{align*}
-    \cos (2x)&=\cos^{2}x-\sen^{2}x%\\
-    %&
-    =1-\sen^{2}x-\sen^{2}x=1-2\sen ^{2}x\quad \Rightarrow\\
-    2\sen^{2}x&=1-\cos (2x)\quad \Rightarrow\quad \sen^{2}x=\frac{1}{2}-\frac{1}{2}\cos (2x)
+    \cos (2x)&=\cos^{2}x-\sen^{2}x\\
+    &=1-\sen^{2}x-\sen^{2}x\\
+    &=1-2\sen ^{2}x \\
+    \Rightarrow 2\sen^{2}x & = 1-\cos (2x)\\
+    \Rightarrow \sen^{2}x & = \frac{1}{2}-\frac{1}{2}\cos (2x)
   \end{align*}
 
   Con ello,
-
-  \scalebox{0.9}{$
-    \begin{aligned}
-      \int \sen ^{2}xdx&=\int\left( \frac{1}{2}-\frac{1}{2}\cos(2x)\right)dx=\frac{1}{2}x-\frac{1}{2}\times \frac{1}{2}\sen (2x)+C \\
-      &=\frac{1}{2}x-\frac{1}{4}\sen (2x)+C
-    \end{aligned}
-  $}
+  \begin{align*}
+    \int \sen ^{2}xdx&=\int\left( \frac{1}{2}-\frac{1}{2}\cos(2x)\right)dx \\
+    &=\frac{1}{2}x-\frac{1}{2}\times \frac{1}{2}\sen (2x)+C \\
+    &=\frac{1}{2}x-\frac{1}{4}\sen (2x)+C
+  \end{align*}
 
 \item Ahora calculemos la integral de $\cos ^{2}x$. La identidad que usamos en el ítem anterior nos sirve también en este caso, pero vista de la siguiente manera:
-  {\small
-    \begin{align*}
-      \cos (2x)&=\cos ^{2}x-\sen ^{2}x=\cos^{2}x-(1-\cos ^{2}x)=2\cos^{2}x-1\quad \Rightarrow\\
-      \cos(2x)+1&=2\cos^{2}\quad \Rightarrow \quad \cos^{2}x=\frac{1}{2}\cos(2x)+\frac{1}{2}
-    \end{align*}
-  }
+  \begin{gather*}
+    \cos (2x)=\cos ^{2}x-\sen ^{2}x
+    =\cos^{2}x-(1-\cos ^{2}x)
+    =2\cos^{2}x-1 \\
+    \Rightarrow \quad \cos(2x)+1=2\cos^{2} \quad
+    \Rightarrow \quad \cos^{2}x=\frac{1}{2}\cos(2x)+\frac{1}{2}
+  \end{gather*}
+  Entonces,
+  \begin{align*}
+    \int \cos ^{2}xdx&=\int\left( \frac{1}{2}+\frac{1}{2}\cos (2x)\,\right) dx\\
+    &=\frac{1}{2}x+\frac{1}{2}\times \frac{1}{2}\sen (2x)+C \\
+    &=\frac{1}{2}x+\frac{1}{4}\sen (2x)+C
+  \end{align*}
 
-  entonces,
-
-  {\small
-    \begin{align*}
-      \int \cos ^{2}xdx&=\int\left( \frac{1}{2}+\frac{1}{2}\cos (2x)\,\right) dx=\frac{1}{2}x+\frac{1}{2}\times \frac{1}{2}\sen (2x)+C \\
-      &=\frac{1}{2}x+\frac{1}{4}\sen (2x)+C
-    \end{align*}
-  }
 \end{parrafonumerado}
 
 \subsection{Problemas de valor inicial}
 
 Un problema de valor inicial tiene como datos alguna derivada de una función desconocida $\frac{d^{n}y}{dx^{n}}$, algunos valores iniciales de la
-función $y$ y algunas de las derivadas $\frac{dy}{dx},\frac{d^{2}y}{dx^{2}},...,\frac{d^{n-1}y}{dx^{n-1}}$ en algún punto $x_{0}.$
+función $y$ y algunas de las derivadas $\frac{dy}{dx},\frac{d^{2}y}{dx^{2}},\ldots,\frac{d^{n-1}y}{dx^{n-1}}$ en algún punto $x_{0}.$
 
 Veamos ahora ciertos contextos en los que las integrales juegan un papel importante.
 
@@ -312,46 +285,45 @@ Veamos ahora ciertos contextos en los que las integrales juegan un papel importa
 \begin{itemize}
   \item Posición inicial: $s(0)=s_{0}$.
   \item Velocidad inicial: $\ v(0)=v_{0}$.
-  \item Gravedad: $g=9,8\frac{m}{s^{2}}$.
+  \item Gravedad: $g=9.8\,\nicefrac{\text{m}}{\text{s}^{2}}$.
   \item Aceleración: $a(t)=-g$.
 \end{itemize}
+
 Con $s_0$ y $v_0$ constantes.
 
-El enunciado nos dice que el objeto cae libremente, es decir, la aceleración es $g=9,8\frac{m}{s^{2}}$, y, dado que la velocidad es la derivada de la posición y la aceleración es la derivada de la velocidad, entonces
-
-{\small
-  \begin{equation}\label{aceleracion}
-    a(t)=s''(t)=-g \quad \text{o, si quieres unidades explícitas:} \quad a(t)=-9.8\text{ cm/s}^2
-  \end{equation}
-}
+El enunciado nos dice que el objeto cae libremente; es decir, la aceleración es $g=9.8\,\nicefrac{\text{m}}{\text{s}^{2}}$, y, dado que la velocidad es la derivada de la posición y la aceleración es la derivada de la velocidad, entonces
+\begin{equation}\label{aceleracion}
+  a(t)=s''(t)=-g
+\end{equation}
+o, si se quieren unidades explícitas:
+\[a(t)=-9.8\,\nicefrac{\text{cm}}{\text{s}^2}\]
 
 Ahora bien, si queremos la posición del objeto, debemos despejar $s$ de \eqref{aceleracion}, es decir, quitar las derivadas de $s$. Recordemos que eso lo podemos hacer por medio de las integrales: $\displaystyle{\int s^{\prime \prime} (t)dt=s^\prime (t)}$; entonces
 \begin{align*}
-  s^\prime (t)&=\int s^{\prime \prime} (t)\,dt=\int a(t)dt=\int -9,8dt=-9,8 t+C_1
+  s^\prime (t)&=\int s^{\prime \prime} (t)\,dt=\int a(t)dt=\int -9.8dt=-9.8 t+C_1
 \end{align*}
-es decir, $s^\prime(t)=v(t)=-9,8t+C_1$, pero $v(0)=v_{0}$, luego $v_0=-9,8\times 0+C_1$, entonces $v_0=C_1$; con ello,
+es decir, $s^\prime(t)=v(t)=-9.8t+C_1$, pero $v(0)=v_{0}$, luego $v_0=-9.8\times 0+C_1$, entonces $v_0=C_1$; con ello,
 \[
-  s^\prime(t)=v(t)=-9,8t+v_0
+  s^\prime(t)=v(t)=-9.8t+v_0
 \]
 Por otro lado, $\displaystyle{\int s^\prime (t)dt=s(t)}$; entonces
 \begin{align*}
-  s(t)&=\int s^\prime (t)dt=\int v(t)dt=\int 9,8t+v_{0}dt=-\frac{9,8}{2}t^{2}+v_{0}t+C_1
+  s(t)&=\int s^\prime (t)dt=\int v(t)dt=\int 9.8t+v_{0}dt=-\frac{9.8}{2}t^{2}+v_{0}t+C_1
 \end{align*}
 pero $s(0)=s_0$, entonces
 \[
-  s_0=-\frac{9,8}{2}\times 0^{2}+v_{0}\times 0+C_1\, \Rightarrow \, s_0=C_1
+  s_0=-\frac{9.8}{2}\times 0^{2}+v_{0}\times 0+C_1\, \Rightarrow \, s_0=C_1
 \]
 y, con ello, la posición de la partícula en las condiciones del enunciado es
 \begin{equation}\label{posicion}
-  s(t)=-4,9t^{2}+v_{0}t+s_{0}
+  s(t)=-4.9t^{2}+v_{0}t+s_{0}
 \end{equation}
 
 \begin{ejemplo}
-  Encuentre el valor de $f$ tal que $f^{\prime \prime \prime}(x)=24x+16\sen (2x)-81\cos (3x)$ sujeta a las condiciones iniciales $f(0)=1,\ f^{\prime}(0)=2$ y $f^{\prime\prime}(0)=0$.
+  \textls[-15]{Encuentre el valor de $f$ tal que $f'''(x)=24x+16\sen (2x)-81\cos (3x)$ sujeta a las condiciones iniciales $f(0)=1$, $f'(0)=2$\; y $f''(0)=0$.}
 \end{ejemplo}
 
 \emph{Solución.} Como en el ejemplo anterior, la idea es quitar las derivadas integrando:
-
 \begin{align*}
   f^{\prime \prime }(x)=\int f^{\prime \prime\prime }(x)\, dx &=\int (24x+16\sen (2x)-81\cos (3x))dx\\
   &=12x^{2}-8\cos (2x)-27\sen (3x)+A
@@ -374,53 +346,52 @@ Al agrupar toda la información encontrada, tenemos que
 \]
 
 \begin{ejemplo}
-  \textnormal{La pendiente de la recta tangente a {\small $y=f(x)$} en el punto {\small $(x,f(x))$} está dada por {\small $f^{\prime }(x)=\cfrac{x^{2}+8}{x^{2}+9}$}. Si {\small $\ f(3)=2$}, encuentre {\small $f(x).$}}
+  La pendiente de la recta tangente a $y=f(x)$ en el punto $(x,f(x))$ está dada por $f^{\prime }(x)=\cfrac{x^{2}+8}{x^{2}+9}$. Si $f(3)=2$, encuentre $f(x)$.
 \end{ejemplo}
 
 \emph{Solución.} Como $f$ es la integral de $f^\prime$ y, además, $\cfrac{x^{2}+8}{x^{2}+9}=1-\cfrac{1}{x^{2}+9}$, entonces
-{\footnotesize
-  \begin{align*}
-    f(x)&=\int f^{\prime }(x)\,dx=\int \frac{x^{2}+8}{x^{2}+9}\, dx =\int \left( 1-\frac{1}{x^{2}+9}\right)\,dx =x-\frac{1}{3}%
-    \tan^{-1} \frac{x}{3}+A
-  \end{align*}
-}
+\begin{align*}
+  f(x)&=\int f^{\prime }(x)\,dx=\int \frac{x^{2}+8}{x^{2}+9}\, dx \\
+  &=\int \left( 1-\frac{1}{x^{2}+9}\right)\,dx \\
+  &=x-\frac{1}{3}\tan^{-1} \frac{x}{3}+A
+\end{align*}
 
 Usando la condición inicial,
+\[
+  f(3)=3-\frac{1}{3}\tan^{-1}(1)+A=2
+\]
+entonces
 \begin{align*}
-  f(3)=3-\frac{1}{3}\tan^{-1}(1)+A&=2, \\
-  \intertext{entonces}
   3-\frac{1}{3}\cdot\frac{\pi }{4}+A&=2\\
   A&=-1+\frac{\pi }{12}
 \end{align*}
 es decir,
-{\small
-  \[
-    f(x)=x-\frac{1}{3}\tan^{-1}\left(\frac{x}{3}\right)-1+\frac{\pi}{12}
-  \]
-}
+\[
+  f(x)=x-\frac{1}{3}\tan^{-1}\left(\frac{x}{3}\right)-1+\frac{\pi}{12}
+\]
 
 \begin{ejemplo}
-  En $t=1/2$, un tren se aproxima a una estación y comienza a desacelerar llevando una velocidad de $120$ millas por hora. La función de aceleración del tren en millas por hora al cuadrado es $a\left( t\right) =-200 t ^{-3}\text{mi}/\text{h}^{2}$, donde $t\geq 1/2.$ ¿Cúal es la distancia recorrida por el tren entre $t=1$ y $t=1.1$ horas?
+  En $t=1/2$, un tren se aproxima a una estación y comienza a desacelerar llevando una velocidad de $120$ millas por hora. La función de aceleración del tren en millas por hora al cuadrado es $a(t) =-200 t ^{-3}\text{mi}/\text{h}^{2}$, donde $t\geq 1/2.$ ¿Cúal es la distancia recorrida por el tren entre $t=1$ y $t=1.1$ horas?
 \end{ejemplo}
 
 \emph{Solución.} Como nos dan la función de aceleración, entonces
 \begin{align*}
-  v\left( t\right) &=\int -200 t^{-3}dt%\\
+  v(t) &=\int -200 t^{-3}dt%\\
   %&
   =100t^{-2}+C \
-  =\frac{100}{t^{2}}+C,
+  =\frac{100}{t^{2}}+C
 \end{align*}
-y como $v\left( 1\right) =120$, entonces $100+C=120$, $C=20$ así, $v\left( t\right)=\frac{100}{t ^{2}}+20$.
+y como $v\left( 1\right) =120$, entonces $100+C=120$, $C=20$; así, $v(t)=\frac{100}{t ^{2}}+20$.
 
-Ahora integramos la función de velocidad $v\left( t\right) $ para obtener la función de posición o distancia:
+Ahora integramos la función de velocidad $v(t) $ para obtener la función de posición o distancia:
 \begin{align*}
-  s\left( t\right) =\int \left( 100t^{-2}+20\right)
+  s(t) =\int \left( 100t^{-2}+20\right)
   dt=-100t^{-1}+20t+B
 \end{align*}
 La distancia total recorrida por el tren es
 \begin{align*}
-  s\left( 1,1\right) -s\left( 1\right) &=-100\left( 1,1\right) ^{-1}+20\left(
-  1,1\right) +B-\left( -100+20+B\right) \\
+  s\left( 1.1\right) -s\left( 1\right) &=-100\left( 1.1\right) ^{-1}+20\left(
+  1.1\right) +B-\left( -100+20+B\right) \\
   &=11.091\, \text{millas}
 \end{align*}
 
@@ -455,50 +426,49 @@ En la vida cotidiana aparecen preguntas como ¿cuál es la temperatura promedio 
 
 \subsection{Valor promedio de una función}
 
-Dados $n$ números reales $y_{1},y_{2},...,y_{n}$, el promedio\ $\overline{y}$%
+Dados $n$ números reales $y_{1},y_{2},\ldots,y_{n}$, el promedio\ $\overline{y}$%
 \ de estos números es
 \[
   \overline{y}=\frac{y_{1}+y_{2}+\cdots+y_{n}}{n}
 \]
-Sea $f$ una función continua en el intervalo $[a,b]$. El \textit{promedio de la
-función} $f$ en el intervalo $[a,b]$ se obtiene al \textit{promediar} las infinitas imágenes $f\left( x\right) $ para $x\in \lbrack a,b]$. Hagámoslo siguiendo el camino tomado con las integrales. Consideremos una partición cualquiera del intervalo $\left[ a,b\right]$: $\left\{ x_{1},x_{2},x_{3},\cdots ,x_{n}\right\} $,
+Sea $f$ una función continua en el intervalo $[a,b]$. El \textit{promedio de la función} $f$ en el intervalo $[a,b]$ se obtiene al \textit{promediar} las infinitas imágenes $f(x) $ para $x\in \lbrack a,b]$. Hagámoslo siguiendo el camino tomado con las integrales. Consideremos una partición cualquiera del intervalo $[a,b]$: $\left\{ x_{1},x_{2},x_{3},\cdots ,x_{n}\right\} $,
 elegimos un punto $x_{k}^{\ast }$ en el $k$-ésimo intervalo $%
 [x_{k-1},x_{k}]$ y promediamos las $n$ imágenes:
-\begin{align*}
+\begin{equation*}
 \left\{ f\left( x_{1}^{\ast
   }\right) ,f\left( x_{2}^{\ast }\right) ,f\left( x_{3}^{\ast }\right) ,\cdots
 ,f\left( x_{n}^{\ast }\right) \right\}
-\end{align*}
-Con ello, el promedio de $f$ en el intervalo $[a,b]$, denotado por $Pro\left( f\right) $, puede aproximarse por
+\end{equation*}
+Con ello, el promedio de $f$ en el intervalo $[a,b]$, denotado por $\Pro\left( f\right) $, puede aproximarse por
 \begin{align*}
-Pro\left( f\right) &\approx \frac{f\left( x_{1}^{\ast }\right) +f\left(
+\Pro\left( f\right) &\approx \frac{f\left( x_{1}^{\ast }\right) +f\left(
   x_{2}^{\ast }\right) +f\left( x_{3}^{\ast }\right) +f\left( x_{4}^{\ast
-}\right) }{n}=\frac{\sum_{k=1}^{n}f\left( x_{k}^{\ast }\right) }{n}
-\\&
-=\frac{\frac{b-a}{n}\sum_{k=1}^{n}f\left( x_{k}^{\ast }\right) }{b-a}=\frac{\sum_{k=1}^{n}f\left( x_{k}^{\ast }\right) \triangle x}{b-a}
+}\right) }{n}\\
+&=\frac{\sum_{k=1}^{n}f\left( x_{k}^{\ast }\right) }{n}\\
+&=\frac{\frac{b-a}{n}\sum_{k=1}^{n}f\left( x_{k}^{\ast }\right) }{b-a}\\
+&=\frac{\sum_{k=1}^{n}f\left( x_{k}^{\ast }\right) \Delta x}{b-a}
 \end{align*}
 Así, haciendo que $n$ tienda a infinito en esta suma (que es una
 suma de Riemann), cuando el límite existe, este es el valor promedio de $f$:
 \begin{align*}
-Pro\left( f\right)&=\lim_{n\rightarrow \infty }\frac{\sum_{k=1}^{n}f\left(
-x_{k}^{\ast }\right) \triangle x}{b-a}=\frac{1}{b-a}\int_{a}^{b}f\left(
+\Pro\left( f\right)&=\lim_{n\rightarrow \infty }\frac{\sum_{k=1}^{n}f\left(
+x_{k}^{\ast }\right) \Delta x}{b-a}=\frac{1}{b-a}\int_{a}^{b}f\left(
 x\right) dx
 \end{align*}
 
 \begin{ejemplo}
-\textnormal{Sea $T\left( t\right) =t^{3}+t$ la temperatura en grados centígrados de una lámina. Halle la temperatura promedio de la lámina para \textit{$0\leq t\leq
-4.$}}
+Sea $T(t) =t^{3}+t$ la temperatura en grados centígrados de una lámina. Halle la temperatura promedio de la lámina para $0\leq t\leq 4$.
 \end{ejemplo}
 
 \emph{Solución.}
 La temperatura promedio es:
-{\small
-\begin{align*}
-  Pro(T)&=\frac{1}{4-0}\int_{0}^{4}T(t)dt %\\&
+\begin{gather*}
+\begin{aligned}
+  \Pro(T)&=\frac{1}{4-0}\int_{0}^{4}T(t)dt %\\&
   =\frac{1}{4}\int_{0}^{4}(t^{3}+t)dt=\frac{1}{4}\left( \frac{4^{4}-0^{4}}{4}+\frac{4^{2}-0^{2}}{2}\right) \\
-  &=\frac{1}{4}\left(64+8\right)=18^{\circ }C
-\end{align*}
-}
+  &=\frac{1}{4}\left(64+8\right)=18\,\degree C
+\end{aligned}
+\end{gather*}
 
 El teorema del valor medio para integrales nos dice que el valor promedio de una función continua $f$ en un intervalo $[a,b]$ es el valor de la función en algún punto del intervalo $(a,b)$.
 \begin{teorema}\label{ValorMedio}
@@ -508,11 +478,11 @@ Si $f$ es una función continua en el intervalo $\left[a,b\right]$, para $a$ y $
 \end{equation}
 
 \end{teorema}
-\textit{Demostración.} Como $f$ es continua en $[a,b]$, por el teorema de valores extremos para funciones continuas\textcite{Zill_Wright_2011}, $f$ alcanza mínimo y máximo en el intervalo, es decir, existen números $d$ y $e$ en el intervalo $[a,b]$ tales que $f\left(d\right) \leq f(x)\leq f(e)$ para todo $x\in[a,b]$. Por otro lado, usando la propiedad de monotonía para integrar\footnote{Ver teorema \ref{PropIntegral}}, se tiene que
+\textit{Demostración.} Como $f$ es continua en $[a,b]$, por el teorema de valores extremos para funciones continuas\footnote{\textcite{Stewart_2012}}, $f$ alcanza mínimo y máximo en el intervalo, es decir, existen números $d$ y $e$ en el intervalo $[a,b]$ tales que $f\left(d\right) \leq f(x)\leq f(e)$ para todo $x\in[a,b]$. Por otro lado, usando la propiedad de monotonía para integrar\footnote{Ver teorema \ref{PropIntegral}}, se tiene que
 \[
 f(d)(b-a)\leq \int_{a}^{b}f(x)dx\leq f(e)(b-a)
 \]
-dividiendo por $b-a$, resulta
+Dividiendo por $b-a$, resulta
 \[
 f\left( d\right) \leq \frac{1}{b-a}\int_{a}^{b}f(x)dx\leq f(e)
 \]
@@ -520,71 +490,49 @@ luego, el valor
 \[
 N=\frac{1}{b-a}\int_{a}^{b}f(x)dx
 \]
-es un número entre dos imágenes de la función, así que, usando el teorema del valor intermedio para funciones continuas\textcite{Zill_Wright_2011}, $f$ toma todos los valores entre dos imágenes, por lo que existe un número $c$ en el intervalo $\left( a,b\right)$, tal que
+es un número entre dos imágenes de la función, así que, usando el teorema del valor intermedio para funciones continuas, $f$ toma todos los valores entre dos imágenes, por lo que existe un número $c$ en el intervalo $\left( a,b\right)$, tal que
 \[
 f(c)=N=\frac{1}{b-a}\int_{a}^{b}f(x)dx
 \]
 como se quería probar.
 
-Si $f$ es una función continua y positiva en el intervalo $\left[a,b\right] $, el teorema anterior dice que el área del rectángulo con base en el intervalo $\left[ a,b\right] $ en el eje $x$ y de altura $
-f\left( c\right) $ es igual al área bajo la curva $y=f\left( x\right) $ en $\left[ a,b\right] .$ Gráficamente, el teorema del valor medio indica que el área bajo la curva es igual al área del rectángulo con base de longitud $b-a$ y altura $f\left( c\right).$
-
-{\small
+Si $f$ es una función continua y positiva en el intervalo $\left[a,b\right] $, el teorema anterior dice que el área del rectángulo con base en el intervalo $[a,b] $ en el eje $x$ y de altura $
+f\left( c\right) $ es igual al área bajo la curva $y=f(x) $ en $[a,b] .$ Gráficamente, el teorema del valor medio indica que el área bajo la curva es igual al área del rectángulo con base de longitud $b-a$ y altura $f\left( c\right)$.
 \[
-  f\left( c\right) =\frac{1}{b-a}\int_{a}^{b}f(x)dx
+f\left( c\right) =\frac{1}{b-a}\int_{a}^{b}f(x)dx
 \]
-}
-
 lo que es equivalente a
-
-{\small
 \[
-  f\left( c\right) \left( b-a\right) =\int_{a}^{b}f(x)dx
+f\left( c\right) \left( b-a\right) =\int_{a}^{b}f(x)dx
 \]
-}
-
-%\vfill
-%
-%\clearpage
 
 \begin{figure}[H]
 \centering
 \caption{Teorema del valor medio}
-\includegraphics[width=0.40\textwidth]{Gráficas/TeorValorMedioInteg}
-
+\includegraphics[width=7cm]{Gráficas/TeorValorMedioInteg}
 \propia
 \end{figure}
 
-%\begin{center}
-%\graf{Teorema del valor medio}
-
-%
-%\includegraphics[scale=0.3]{TeorValorMedioInteg}
-
-%
-%\textbf{Fuente:} elaboración propia
-%\end{center}
-
 \begin{ejemplo}
-Halle los valores de $c$ que garantiza el teorema del valor medio para integrales con la función $f\left( x\right) =3x^{2}+2x$ en el intervalo $\left[ 0,2\right] .$
+Halle los valores de $c$ que garantiza el teorema del valor medio para integrales con la función $f(x) =3x^{2}+2x$ en el intervalo $\left[ 0,2\right]$.
 
 \end{ejemplo}
-\emph{Solución.} Dado que $f$ es continua en $\left[ 0,2\right] $, por el teorema \ref{ValorMedio} existe $c\in \left(0,2\right) $, tal que:
+\emph{Solución.} Dado que $f$ es continua en $\left[ 0,2\right] $, por el teorema \ref{ValorMedio} existe $c\in \left(0,2\right) $, tal que
 \begin{align*}
-f\left( c\right) &=\frac{1}{2}\int_{0}^{2}\left( 3x^{2}+2x\right) dx\ \Rightarrow
-\\3c^{2}+2c&=\frac{1}{2}\left( 3\frac{2^{3}-0^{3}}{3}+2\frac{2^{2}-0^{2}}{2}%
-\right)
-\\3c^{2}+2c&=6,
-\intertext{ es decir, }
-\\c&=\frac{-2\pm \sqrt{4-\left( -72\right) }}{6}=\frac{-2\pm 2\sqrt{19}}{6}%
-,\\ c_{1}&\approx 1,1196,\qquad c_{2}\approx -1,7863
+f\left( c\right) &=\frac{1}{2}\int_{0}^{2}\left( 3x^{2}+2x\right) dx\\
+\Rightarrow 3c^{2}+2c&=\frac{1}{2}\left( 3\frac{2^{3}-0^{3}}{3}+2\frac{2^{2}-0^{2}}{2}\right)\\
+3c^{2}+2c&=6
 \end{align*}
-
-así que el
-valor de $c\in \left( 0,2\right) $ es
-
+es decir,
+\begin{align*}
+c&=\frac{-2\pm \sqrt{4-\left( -72\right) }}{6}\\
+&=\frac{-2\pm 2\sqrt{19}}{6}\\
+c_{1}&\approx 1.1196\\
+c_{2}&\approx -1.7863
+\end{align*}
+así que el valor de $c\in \left( 0,2\right) $ es
 \[
-c=\frac{-2+2\sqrt{19}}{6}\approx 1,1196
+c=\frac{-2+2\sqrt{19}}{6}\approx 1.1196
 \]
 
 \section{Teorema fundamental del cálculo}
@@ -592,49 +540,46 @@ c=\frac{-2+2\sqrt{19}}{6}\approx 1,1196
 En esta sección se presenta una de las herramientas más
 importantes del cálculo, el teorema fundamental del cálculo. En su
 primera parte, nos proporciona una regla de derivación, lo que nos dice
-que una antiderivada de una función continua en un intervalo {\footnotesize $\left[a,b%
-\right] $} es {\footnotesize $\int_{a}^{x}f\left( t\right) dt.$}
+que una antiderivada de una función continua en un intervalo $[a,b] $ es $\int_{a}^{x}f(t) dt$.
 
-En su parte $2$, el teorema
+En su segunda parte, el teorema
 afirma que las integrales definidas se pueden calcular por medio
 de antiderivadas.
 
 \subsection{Funciónes de área de acumulación}
 
-Sea $f $ una función continua en $\left[ a,b\right] ,$ \textit{la
-función de área de acumulación} de $f$ a partir de $t=a$ es
-
+Sea $f $ una función continua en $[a,b]$, la \emph{función de área de acumulación} de $f$ a partir de $t=a$ es
 \[
-F\left( x\right) =\int_{a}^{x}f(t)dt
+F(x) =\int_{a}^{x}f(t)dt
 \]
 
 \begin{ejemplo} Veamos los dos ejemplos siguientes:
 
 \begin{parrafonumerado}
 
-\item \textnormal{Calcule la función de área de acumulación de \textit{$f\left(
-  x\right) =12x^{3}+4x+8$} a partir de $t=0.$}
+\item Calcule la función de área de acumulación de $f(x)=12x^{3}+4x+8$ a partir de $t=0$.
 
 \item Halle la derivada respecto a $x$ de la función área de acumulación.
 \end{parrafonumerado}
 
 \end{ejemplo}
-\emph{Solución}
-\begin{parrafonumerado}
 
-\item
-Usando las propiedades de la integral definida y las fórmulas para las integrales de las potencias, se tiene
+\emph{Solución}
+
+\begin{parrafonumerado}
+\item Usando las propiedades de la integral definida y las fórmulas para las integrales de las potencias, se tiene
 \begin{align*}
-  F\left( x\right) &=\int_{0}^{x}(12t^{3}+4t+8)dt=12\frac{x^{4}-0^{4}}{4}+4%
-  \frac{x^{2}-0^{2}}{2}+8\left( x-0\right)\\& =3x^{4}+2x^{2}+8x
+  F(x) &=\int_{0}^{x}(12t^{3}+4t+8)dt\\
+  &=12\frac{x^{4}-0^{4}}{4}+4\frac{x^{2}-0^{2}}{2}+8\left( x-0\right)\\
+  &=3x^{4}+2x^{2}+8x
 \end{align*}
 que es la función de área de acumulación.
 
-\item
-Como $\int_{0}^{x}f(t)dt=3x^{4}+2x^{2}+8x$, al derivar resulta
+\item Como $\int_{0}^{x}f(t)dt=3x^{4}+2x^{2}+8x$, al derivar resulta
 \begin{align*}
-  F^{\,\prime}\left( x\right) &=\frac{d}{dx}\int_{0}^{x}f(t)dt%\\&
-  =\frac{d}{dx}\left(3x^{4}+2x^{2}+8x\right) =12x^{3}+4x+8
+  F'(x) &=\frac{d}{dx}\int_{0}^{x}f(t)dt\\
+  &=\frac{d}{dx}\left(3x^{4}+2x^{2}+8x\right) \\
+  &=12x^{3}+4x+8
 \end{align*}
 es decir,
 \[
@@ -642,11 +587,11 @@ es decir,
 \]
 \end{parrafonumerado}
 
-\begin{ejemplo}
-Calcule la función de área de acumulación de $g\left(x\right) =e^{x}+2^{x}$ a partir de $t=0.$
-\begin{parrafonumerado}
+\clearpage
 
-  %\item Calcule la función de área de acumulación de $g\left(x\right) =e^{x}+2^{x}$ a partir de $t=0.$
+\begin{ejemplo}\leavevmode
+\begin{parrafonumerado}
+\item Calcule la función de área de acumulación de $g(x) =e^{x}+2^{x}$ a partir de $t=0$.
 
 \item Halle la derivada respecto a $x$ de la funcíon de área de acumulación.
 \end{parrafonumerado}
@@ -655,67 +600,60 @@ Calcule la función de área de acumulación de $g\left(x\right) =e^{x}+2^{x}$ a
 \emph{Solución}
 
 \begin{parrafonumerado}
-
 \item Similarmente al ejemplo anterior,
-
-\resizebox{\textwidth}{!}{$
-  \begin{aligned}
-    G\left( x\right)
-    &=\int_{0}^{x}(e^{t}+2^{t})dt%\\&
-    =\int_{0}^{x}e^{t}dt+%
-    \int_{0}^{x}2^{t}dt=e^{x}-e^{0}+\frac{2^{x}-1}{\ln 2}=e^{x}+\frac{2^{x}}{\ln
-    2}-1-\frac{1}{\ln 2}
-  \end{aligned}
-$}
-
-\resizebox{\textwidth}{!}{$
-  \begin{aligned}
-    G^{\,\prime}\left( x\right) &=\frac{d}{dx}\int_{0}^{x}g(t)dt%\\&
-    =\frac{d}{dx}\left(
-    e^{x}+\frac{2^{x}}{\ln 2}-1-\frac{1}{\ln 2}\right) =e^{x}+\frac{2^{x}}{\ln 2}%
-    \ln 2=e^{x}+2^{x}=g(x)
-  \end{aligned}
-$}
+\begin{align*}
+  G(x)
+  &=\int_{0}^{x}(e^{t}+2^{t})dt\\
+  &=\int_{0}^{x}e^{t}dt+\int_{0}^{x}2^{t}dt\\
+  &=e^{x}-e^{0}+\frac{2^{x}-1}{\ln 2}\\
+  &=e^{x}+\frac{2^{x}}{\ln 2}-1-\frac{1}{\ln 2}\\[1em]
+  G'(x) &=\frac{d}{dx}\int_{0}^{x}g(t)dt\\
+  &=\frac{d}{dx}\left(e^{x}+\frac{2^{x}}{\ln 2}-1-\frac{1}{\ln 2}\right)\\
+  &=e^{x}+\frac{2^{x}}{\ln 2}\ln 2\\
+  &=e^{x}+2^{x}\\
+  &=g(x)
+\end{align*}
 
 \end{parrafonumerado}
 
-El TFC, en su parte I, es la generalizació%
-n de los dos ejemplos anteriores. Nos dice que, si formamos una función de $x$ por medio de la integral de $f$ en el intervalo {\small $[a,x]$}, entonces la derivada con respecto a $x$ de esa función integral es igual a $f$ evaluada en $x$. O también que {\footnotesize $\int_{a}^{x}f(t)dt$} es una antiderivada de la función $f(x)$.
+El TFC, en su parte I, es la generalización de los dos ejemplos anteriores. Nos dice que, si formamos una función de $x$ por medio de la integral de $f$ en el intervalo $[a,x]$, entonces la derivada con respecto a $x$ de esa función integral es igual a $f$ evaluada en $x$. O también que $\int_{a}^{x}f(t)dt$ es una antiderivada de la función $f(x)$.
 
 \subsection{Teorema fundamental del cálculo, parte I}
 
-\textnormal{Sea $f$ una función continua en el intervalo $\left[ a,b\right] $ \} y \textit{\ $F(x)=\displaystyle{\int_{a}^{x}f(t)dt}.$} Entonces
+Sea $f$ una función continua en el intervalo $[a,b] $ y $F(x)=\int_{a}^{x}f(t)dt$. Entonces
 \[
-F^{\, \prime}(x)=\frac{d}{dx}\left(\int_{a}^{x}f(t)dt\right)=f(x)
+F'(x)=\frac{d}{dx}\left(\int_{a}^{x}f(t)dt\right)=f(x)
 \]
-para todo $x\in \left( a,b\right) .$}
+para todo $x\in \left( a,b\right)$.
 
 \textit{Demostración}. Notemos que, por el teorema \ref{PropIntegral},
 \[
 F(x+h)-F(x)=\int_{a}^{x+h}f(t)dt-\int_{a}^{x}f(t)dt=\int_{x}^{x+h}f(t)dt
 \]
 
-Ahora bien, dado que $f$ es continua en $\left[ a,b\right]$, entonces también es continua en $\left[ x,x+h\right]$ para $a\leq x,\ x+h\leq b$. Por otro lado, por el teorema de los valores extremos\textcite{Zill_Wright_2011}, existen $c,d\in \lbrack x,x+h]$ tales que para todo $t$ en este intervalo $f\left( c\right) \leq
-f(t)\leq f(d)$; calculando la integral en el intervalo $[x,x+h],$ resulta que $f(c)h\leq \int_{x}^{x+h}f(t)dt\leq f(d)h,$ o también al dividir entre $h$ (suponemos $h>0$):
+Ahora bien, dado que $f$ es continua en $[a,b]$, entonces también es continua en $\left[ x,x+h\right]$ para $a\leq x,\ x+h\leq b$. Por otro lado, por el teorema de los valores extremos\footnote{\textcite{Zill_Wright_2011}}, existen $c,d\in \lbrack x,x+h]$ tales que para todo $t$ en este intervalo $f\left( c\right) \leq f(t)\leq f(d)$, y calculando la integral en el intervalo $[x,x+h],$ resulta que $f(c)h\leq \int_{x}^{x+h}f(t)dt\leq f(d)h,$ o también al dividir entre $h$ (suponemos que $h>0$):
 \begin{equation}\label{TeorFCParteI}
 f(c)\leq \frac{1}{h}\int_{x}^{x+h}f(t)dt\leq f(d)
 \end{equation}
 
-Además, si $h\rightarrow 0,$ entonces $c\to x$ y $d\to x,$ es decir,
-\begin{align}\label{TeorFCPIlimites}
-\lim_{h\rightarrow 0}f(c)&\leq \lim_{h\rightarrow 0}\frac{1}{h}
-\int_{x}^{x+h}f(t)dt\leq \lim_{h\rightarrow 0}f(d), \text{ y } \notag\\
-f\left( x\right) &\leq \lim_{h\rightarrow 0}\frac{1}{h}\int_{x}^{x+h}f(t)dt%
-\leq f\left( x\right)
-\end{align}
+\enlargethispage*{\baselineskip}
+
+Además, si $h\rightarrow 0$, entonces $c\to x$ y $d\to x$, es decir,
+\[
+\lim_{h\rightarrow 0}f(c)\leq \lim_{h\rightarrow 0}\frac{1}{h}
+\int_{x}^{x+h}f(t)dt\leq \lim_{h\rightarrow 0}f(d)
+\]
+y
+\begin{equation}\label{TeorFCPIlimites}
+f(x) \leq \lim_{h\rightarrow 0}\frac{1}{h}\int_{x}^{x+h}f(t)dt\leq f(x)
+\end{equation}
 
 En este sentido, si $h<0$, entonces la desigualdad \eqref{TeorFCParteI} cambia de sentido, pero, de todas maneras, obtenemos el resultado \eqref{TeorFCPIlimites}.
-\clearpage
-Y para finalizar,
 
-\[
-F^{\, \prime}(x)=\lim_{h\rightarrow 0}\frac{ F(x+h)-F(x)}{h}=\lim_{h\rightarrow 0}\frac{1}{h}\int_{x}^{x+h}f(t)dt=f(x)
-\]
+Y para finalizar,
+\begin{align*}
+F'(x)=\lim_{h\rightarrow 0}\frac{ F(x+h)-F(x)}{h}=\lim_{h\rightarrow 0}\frac{1}{h}\int_{x}^{x+h}f(t)dt=f(x)
+\end{align*}
 como se quería probar.
 
 Tengamos en cuenta que, en general, si
@@ -725,203 +663,200 @@ F(x)=\int_{a}^{g(x)}f(t)dt
 al usar la regla de derivación que nos proporciona el TFC, parte I, combinada con la regla de la cadena
 para derivadas, se obtiene que
 \[
-F^{\prime}(x)=\frac{d}{dx}\int_{a}^{g(x)}f(t)dt=f(g(x))\frac{d(g(x))}{dx}
+F'(x)=\frac{d}{dx}\int_{a}^{g(x)}f(t)dt=f(g(x))\frac{d(g(x))}{dx}
 \]
 algo que se usa en el siguiente ejemplo.
 
 \begin{ejemplo}
-Sea $F\left( x\right) =\int_{-x}^{3}\tan ^{3}zdz$. Encuentre la derivada de $F$.
+Sea $F(x) =\int_{-x}^{3}\tan ^{3}zdz$. Encuentre la derivada de $F$.
 \end{ejemplo}
 
 \emph{Solución.} Por propiedades de la integral (teorema \ref{PropIntegral}),
 \[
-F\left( x\right) =\int_{-x}^{3}\tan ^{3}zdz=-\int_{3}^{-x}\tan
+F(x) =\int_{-x}^{3}\tan ^{3}zdz=-\int_{3}^{-x}\tan
 ^{3}zdz
 \]
 y por el TFC, parte I,
 \[
-F^{\, \prime}\left( x\right) =-\tan ^{3}\left( -x\right) \times \left( -1\right)
-=\tan ^{3}\left( -x\right)
+F'(x) =-\tan ^{3}(-x) \times \left( -1\right)
+=\tan ^{3}(-x)
 \]
 
-\begin{ejemplo} Si $F\left( x\right) =\int_{3}^{x^{4}}\frac{1}{t^{8}+1}dt,$ halle $F^{\, \prime}\left( 1\right) .$
+\begin{ejemplo} Si $F(x) =\int_{3}^{x^{4}}\frac{1}{t^{8}+1}dt$, halle $F'\left(1\right)$.
 \end{ejemplo}
 
 \emph{Solución.} Por TFC,
 \[
-F^{\, \prime}\left( x\right)=\frac{1}{(x^8)^4+1}\times(4x^3)=\frac{ 4x^{3}}{x^{32}+1}
+F'(x)=\frac{1}{(x^8)^4+1}\times(4x^3)=\frac{ 4x^{3}}{x^{32}+1}
 \]
-entonces, $F^{\prime}\left( 1\right) =\frac{4}{1^{32}+1}= 2$
+entonces
+\[F'\left( 1\right) =\frac{4}{1^{32}+1}= 2\]
 
 \begin{ejemplo}
 Halle una función $f$ y un número $a$ tal que
 \[
-\int_{a}^{x}\frac{\left( f\left( t\right) \right) ^{3}}{t}dt=9x^{3}-9
+\int_{a}^{x}\frac{\left( f(t) \right) ^{3}}{t}dt=9x^{3}-9
 \]
 \end{ejemplo}
 
 \emph{Solución.} Para hallar la función $f$, derivamos con respecto a $x$ la ecuación dada y obtenemos
-
-\resizebox{\textwidth}{!}{$
+\begin{gather*}
 \begin{aligned}
-\frac{d}{dx}\int_{a}^{x}\frac{\left( f\left( t\right) \right) ^{3}}{t}dt&=\frac{d}{dx}\left( 9x^{3}-9\right)\Rightarrow \frac{\left( f\left( x\right)\right) ^{3}}{x}=27x^{2}\Rightarrow
-\left( f\left( x\right) \right)^{3}=27x^{3}\Rightarrow
-f\left( x\right) =3x
+\frac{d}{dx}\int_{a}^{x}\frac{\left( f(t) \right) ^{3}}{t}dt&=\frac{d}{dx}\left( 9x^{3}-9\right)\\
+\Rightarrow \frac{\left( f(x)\right) ^{3}}{x}&=27x^{2}\\
+\Rightarrow \left( f(x) \right)^{3}&=27x^{3}
+\Rightarrow f(x) = 3x
 \end{aligned}
-$}
+\end{gather*}
 
 Para hallar $a$, reemplazamos en la ecuación inicial $x$ por $a$, con lo que se obtiene
 \begin{align*}
-\int_{a}^{a}\frac{\left( f\left( t\right) \right) ^{3}}{t}dt&=9a^{3}-9\\
+\int_{a}^{a}\frac{\left( f(t) \right) ^{3}}{t}dt&=9a^{3}-9\\
 0&=9a^{3}-9\Rightarrow\ 9a^{3}=9\Rightarrow\ a^{3}=1
 \end{align*}
-por tanto, $a=1$. Usamos acá que $\int_a^af(x)\,dx=0$.
-%\bigskip
+Por tanto, $a=1$. Usamos acá que $\int_a^af(x)\,dx=0$.
 
 \begin{ejemplo}
-Halle una función $f$ y un número $a$, tal que {\small $\int_{2x}^{a}\left(-\frac{f\left( t\right) }{t^{2}}\right)dt=x^{2}-81.$
-}
+Halle una función $f$ y un número $a$, tal que $\int_{2x}^{a}\left(-\frac{f(t) }{t^{2}}\right)dt=x^{2}-81$.
 \end{ejemplo}
 
 Para escribir la integral en la forma en que la usa el TFC, inicialmente intercambiamos límites de integración:
-{\small
 \[
-\int_{2x}^{a}\left(-\frac{f\left( t\right) }{t^{2}}\right)dt=-\int_{a}^{2x}\left(-\frac{f\left( t\right) }{t^{2}}\right)dt=\int_{a}^{2x}\frac{f\left( t\right) }{t^{2}}dt
+\int_{2x}^{a}\left(-\frac{f(t) }{t^{2}}\right)dt=-\int_{a}^{2x}\left(-\frac{f(t) }{t^{2}}\right)dt=\int_{a}^{2x}\frac{f(t) }{t^{2}}dt
 \]
-}
+
+\enlargethispage*{\baselineskip}
 
 Ahora derivamos cada miembro de la ecuación dada con respecto a $x$:
+\begin{gather*}
+\begin{aligned}
+\frac{d}{dx}\left( \int_{a}^{2x}\frac{f(t) }{t^{2}}dt\right) &=\frac{d}{dx}\left( x^{2}-81\right) \Rightarrow\ \frac{f\left( 2x\right)}{\left( 2x\right) ^{2}}\times 2=2x \Rightarrow\ f\left( 2x\right) =4x^{3}
+\end{aligned}
+\end{gather*}
 
-{\small
-\begin{align*}
-\frac{d}{dx}\left( \int_{a}^{2x}\frac{f\left( t\right) }{t^{2}}dt\right) &=\frac{d}{dx}\left( x^{2}-81\right) \Rightarrow\ \frac{f\left( 2x\right)}{\left( 2x\right) ^{2}}\times 2=2x \Rightarrow\ f\left( 2x\right) =4x^{3}
-\end{align*}
-}
-
-Sustituyendo \ $u=2x$, es decir, {\small $x=\cfrac{u}{2}$}, tenemos
-{\small
+Sustituyendo $u=2x$, es decir, $x=\frac{u}{2}$, tenemos
 \[
 f\left(u\right)=4\left(\frac{u}{2}\right)^{3}=\frac{4u^{3}}{8}=\frac{u^{3}}{2}
 \]
-}
-es decir, la función buscada es $f(u)=\cfrac{u^3}{2}$.
+es decir, la función buscada es $f(u)=\frac{u^3}{2}$.
 
 Por otro lado, si reemplazamos en la ecuación inicial $x$ por $\cfrac{a}{2}$, tenemos
 \[
-\int_{a}^{a}\left(-\frac{f\left( t\right) }{t^{2}}\right)dt=\left(\frac{a}{2}\right)^{2}-81\Rightarrow 0=\frac{a^2}{4}-81\Rightarrow a=\pm 18
+\int_{a}^{a}\left(-\frac{f(t) }{t^{2}}\right)dt=\left(\frac{a}{2}\right)^{2}-81\Rightarrow 0=\frac{a^2}{4}-81\Rightarrow a=\pm 18
 \]
-por tanto, un número puede ser $a=18$.
+y por tanto, un número puede ser $a=18$.
 
 \subsection{Teorema fundamental del cálculo, parte II}
 
-\textnormal{Si $f$ es una función continua en $[a,b]$, entonces
+Si $f$ es una función continua en $[a,b]$, entonces
 \[
 \int_{a}^{b}f(x)\, dx=F(b)-F(a)
 \]
-para $F$ una antiderivada de $f$.}
+para $F$ una antiderivada de $f$.
 
-\textit{Demostración.} Sea $F$ una antiderivada cualquiera de $f$. Por el TFC en su parte $I$, {\footnotesize $A(x)=\int_{a}^{x}f(t)dt$} es otra antiderivada de $f$; luego, como la diferencia de dos antiderivadas es una constante, se tiene que {\footnotesize $F(x)-A(x)=C$}; entonces, {\footnotesize $F(x)=A\left( x\right) +C$}; por tanto,
-{\small
-\[
-F(b)-F(a)=\left( \int_{a}^{b}f(t)dt+C\right) -\left(
-\int_{a}^{a}f(t)dt+C\right) =\int_{a}^{b}f(t)dt
-\]
-}
+\textit{Demostración.} Sea $F$ una antiderivada cualquiera de $f$. Por el TFC en su parte I, $A(x)=\int_{a}^{x}f(t)dt$ es otra antiderivada de $f$; luego, como la diferencia de dos antiderivadas es una constante, se tiene que $F(x)-A(x)=C$; entonces, $F(x)=A(x) +C$; por tanto,
+\begin{align*}
+F(b)-F(a)&=\left( \int_{a}^{b}f(t)dt+C\right) -\left(\int_{a}^{a}f(t)dt+C\right) \\
+&=\int_{a}^{b}f(t)dt
+\end{align*}
 como se quería probar.
+
+\clearpage
 
 \begin{ejemplo}
 Cálculo de integrales definidas:
 \end{ejemplo}
-\begin{parrafonumerado}
 
-\item $\displaystyle{\int_{0}^{\frac{\pi }{4}}(\sen (2x)+\cos (3x))dx}$\\
+\begin{parrafonumerado}
+\item $\displaystyle{\int_{0}^{\frac{\pi }{4}}(\sen (2x)+\cos (3x))dx}$
+
+\vspace{\baselineskip}
 
 \emph{Solución.} Una antiderivada de $\sen (2x)+\cos (3x)$ es
-\[
-F\left( x\right) =\int (\sen (2x)+\cos (3x))dx=-\frac{1}{2}\cos 2x+\frac{1}{3}\sen (3x)
-\]
+\begin{align*}
+F(x) & =\int (\sen (2x)+\cos (3x))dx\\
+& =-\frac{1}{2}\cos 2x+\frac{1}{3}\sen (3x)
+\end{align*}
 
-y por el TFC parte I,
-{\small
+y por el TFC, parte I,
 \begin{align*}
 \int_{0}^{\frac{\pi }{4}}&(\sen (2x)+\cos (3x))\,dx=F(\pi/4)-F(0)\\
 &=-\frac{1}{2}\cos(\pi/2)+\frac{1}{3}\sen (3\pi/4)-\left(-\frac{1}{2}\cos 0+\frac{1}{3}\sen 0\right)\\
-&=\frac{1}{3}\frac{\sqrt{2}}{2}+\frac{1}{2}=\frac{\sqrt{2}}{6}+\frac{1}{2}
+&=\frac{1}{3}\frac{\sqrt{2}}{2}+\frac{1}{2}\\
+&=\frac{\sqrt{2}}{6}+\frac{1}{2}
 \end{align*}
-}
 
-\item $\displaystyle{\int_{0}^{\frac{\pi }{8}}\sec (2x)\tan (2x)dx}$\\
+\item $\displaystyle{\int_{0}^{\frac{\pi }{8}}\sec (2x)\tan (2x)dx}$
+
+\vspace{\baselineskip}
 
 \emph{Solución}
-{\small
 \begin{align*}
-\int_{0}^{\frac{\pi }{8}}&\sec (2x)\tan (2x)\,dx=\int \sec(2x)\tan(2x)\,dx \Big|_{0}^{\frac{\pi }{8}}=\frac{1}{2}\sec(2x)\Big|_{0}^{\frac{\pi }{8}}\\
-&=\frac{1}{2}\sec \frac{\pi }{4}-\frac{1}{2}\sec0=\frac{\sqrt{2}}{2}-\frac{1}{2}
+\int_{0}^{\frac{\pi }{8}}\sec (2x)\tan (2x)\,dx&=\int \sec(2x)\tan(2x)\,dx \Big|_{0}^{\frac{\pi }{8}}\\
+&=\frac{1}{2}\sec(2x)\Big|_{0}^{\frac{\pi }{8}}\\
+&=\frac{1}{2}\sec \frac{\pi }{4}-\frac{1}{2}\sec0\\
+&=\frac{\sqrt{2}}{2}-\frac{1}{2}
 \end{align*}
-}
 
-\item $\displaystyle{\int_{\frac{\pi }{12}}^{\frac{\pi }{9}}(\sec ^{2}(3x)+\csc^{2}(3x))dx}$\\
+\item $\displaystyle{\int_{\frac{\pi }{12}}^{\frac{\pi }{9}}(\sec ^{2}(3x)+\csc^{2}(3x))dx}$
+
+\vspace{\baselineskip}
 
 \emph{Solución}
-
-\scalebox{0.8}{ % Puedes ajustar el valor (0.9, 0.85, etc.) según el ancho deseado
-\begin{minipage}{\linewidth}
-\begin{align*}
-  \int_{\frac{\pi }{12}}^{\frac{\pi }{9}}\left(\sec ^{2}(3x)+\csc^{2}(3x)\right)dx&=\left(\int \sec ^{2}(3x)dx+\int \csc ^{2}(3x)dx\right)\Bigg|_{\pi/12}^{\pi/9}\\
+\begin{gather*}
+\begin{aligned}
+  \int_{\frac{\pi }{12}}^{\frac{\pi }{9}}\bigl(\sec ^{2}(3x)&+\csc^{2}(3x)\bigr)dx\\
+  &=\left(\int \sec ^{2}(3x)dx+\int \csc ^{2}(3x)dx\right)\Bigg|_{\pi/12}^{\pi/9}\\
   &=\left(\frac{1}{3}\tan 3x-\frac{1}{3}\cot 3x\right)\Bigg|_{\pi/12}^{\pi/9}\\
   &=\frac{1}{3}\left(\underset{x=\frac{\pi}{9}}
     {\underbrace{\left(\tan(\pi/3)-\cot(\pi/3)\right)}}
   -\underset{x=\frac{\pi }{12}}{\underbrace{(\tan(\pi/4)-\cot(\pi/4))}}\right)\\
   &=\frac{2}{9}\sqrt{3}
-\end{align*}
-\end{minipage}
-}
+\end{aligned}
+\end{gather*}
 
-\item $\displaystyle{\int_{0}^{1}\left(\sqrt{x}+\sqrt[5]{x^{2}}+\sqrt[7]{x^{8}}\right)\,dx}$\\
+\item $\displaystyle{\int_{0}^{1}\left(\sqrt{x}+\sqrt[5]{x^{2}}+\sqrt[7]{x^{8}}\right)\,dx}$
+
+\vspace{\baselineskip}
 
 \emph{Solución}
+\begin{gather*}
+\begin{aligned}
+  \int_{0}^{1}\left( \sqrt{x}+\sqrt[5]{x^{2}}+\sqrt[7]{x^{8}} \right) \,dx&=\int_{0}^{1} \left( x^{\frac{1}{2}}+x^{\frac{2}{5}}+x^{\frac{8}{7}}\right)dx \\
+  &=\left(\frac{1}{\frac{3}{2}}x^{\frac{3}{2}}+\frac{1}{\frac{7}{5}}x^{\frac{7}{5}}+\frac{1}{\frac{15}{7}}x^{\frac{15}{7}}\right)\bigg|_{0}^{1}\\
+  &=\underset{x=1}{\underbrace{\frac{3}{2}+\frac{5}{7}+\frac{7}{15}}}-\underset{x=0}{\underbrace{0}}\\[0.2em]
+  &=\frac{70+75+49}{105}\\
+  &=\frac{194}{105}
+\end{aligned}
+\end{gather*}
 
-{\small
-\resizebox{\linewidth}{!}{
-\begin{minipage}{\linewidth}
-  \begin{align*}
-    \int_{0}^{1}\left( \sqrt{x}+\sqrt[5]{x^{2}}+\sqrt[7]{x^{8}} \right) \,dx&=\int_{0}^{1} \left( x^{\frac{1}{2}}+x^{\frac{2}{5}}+x^{\frac{8}{7}}\right)dx =\left(\frac{1}{\frac{3}{2}}x^{\frac{3}{2}}+\frac{1}{\frac{7}{5}}x^{\frac{7}{5}}+\frac{1}{\frac{15}{7}}x^{\frac{15}{7}}\right)\bigg|_{0}^{1}\\
-    &=\underset{x=1}{\underbrace{\frac{3}{2}+\frac{5}{7}+\frac{7}{15}}}\underset{x=0}{-\underbrace{0}}=\frac{70+75+49}{105}=\frac{194}{105}
-  \end{align*}
-\end{minipage}
-}
-}
+\item $\displaystyle{\int_{0}^{\frac{\pi }{4}}\frac{1+\sen x}{1-\sen x}dx}$
 
-\item $\displaystyle{\int_{0}^{\frac{\pi }{4}}\frac{1+\sen x}{1-\sen x}dx}$\\
+\vspace{\baselineskip}
 
 \emph{Solución.} Primero transformamos la función por integrar mediante identidades:
-
-{\small
-\begin{align*}
-\frac{1+\sen x}{1-\sen x}&=\frac{1+\sen x}{1-\sen x}\cdot \left(\frac{1+\sen x}{1+\sen x}\right)=\frac{1+\sen x+\sen x+\sen ^{2}x}{1+\sen x-\sen x-\sen ^{2}x}\\
-&=\frac{1+2\sen x+\sen ^{2}x}{1-\sen ^{2}x}=\frac{1+2\sen x+1-\cos ^{2}x}{\cos ^{2}x}\\
-&=\frac{2}{\cos ^{2}x}+\frac{\sen x}{\cos ^{2}x}-\frac{\cos ^{2}x}{\cos ^{2}x}=2\sec ^{2}x+2\cdot \frac{1}{\cos x}\cdot \frac{\sen x}{\cos x}-1\\
-&=2\sec^{2}x+2\sec x \tan x-1
-\end{align*}
-}
+\begin{gather*}
+\begin{aligned}
+  \frac{1+\sen x}{1-\sen x}&=\frac{1+\sen x}{1-\sen x}\cdot \left(\frac{1+\sen x}{1+\sen x}\right)=\frac{1+\sen x+\sen x+\sen ^{2}x}{1+\sen x-\sen x-\sen ^{2}x}\\
+  &=\frac{1+2\sen x+\sen ^{2}x}{1-\sen ^{2}x}=\frac{1+2\sen x+1-\cos ^{2}x}{\cos ^{2}x}\\
+  &=\frac{2}{\cos ^{2}x}+\frac{\sen x}{\cos ^{2}x}-\frac{\cos ^{2}x}{\cos ^{2}x}=2\sec ^{2}x+2\cdot \frac{1}{\cos x}\cdot \frac{\sen x}{\cos x}-1\\
+  &=2\sec^{2}x+2\sec x \tan x-1
+\end{aligned}
+\end{gather*}
 
 Ahora calculemos la integral:
-
-\resizebox{\linewidth}{!}{
-\begin{minipage}{\linewidth}
 \begin{align*}
-  \int_{0}^{\frac{\pi }{4}}\frac{1+\sen x}{1-\sen x}dx&= \int_{0}^{\pi/4} \left(
-  2\sec ^{2}x+2\sec x\tan x-1\right) dx\\
-  &=\left( 2\tan x+2\sec x-x\right)\big|_{0}^{\pi/4}=\underset{x=\frac{\pi }{4}}{\underbrace{2\tan \frac{\pi }{4}+2\sec \frac{\pi }{4}-\frac{\pi }{4}}}\underset{x=0}{-\underbrace{(0+2-0)}}\\
-  &=2+2\sqrt{2}-\frac{\pi }{4}-2=2\sqrt{2}-\frac{\pi }{4}
+\int_{0}^{\frac{\pi }{4}}\frac{1+\sen x}{1-\sen x}dx&= \int_{0}^{\pi/4} \left(
+2\sec ^{2}x+2\sec x\tan x-1\right) dx\\
+&=\left( 2\tan x+2\sec x-x\right)\big|_{0}^{\pi/4}\\
+&=\underset{x=\frac{\pi }{4}}{\underbrace{2\tan \frac{\pi }{4}+2\sec \frac{\pi }{4}-\frac{\pi }{4}}}\underset{x=0}{-\underbrace{(0+2-0)}}\\
+&=2+2\sqrt{2}-\frac{\pi }{4}-2=2\sqrt{2}-\frac{\pi }{4}
 \end{align*}
-\end{minipage}
-}
 
 \end{parrafonumerado}
 
 \begin{ejemplo}
-Use el teorema fundamental del cálculo para derivar cada una de las siguientes funciones:
+Use el TFC para derivar cada una de las siguientes funciones:
 \end{ejemplo}
 
 %%\begin{multicols}{4}
@@ -941,7 +876,7 @@ Use el teorema fundamental del cálculo para derivar cada una de las siguientes 
 
 \begin{parrafonumerado}
 
-\item $\displaystyle{g^{\prime}(x)=\frac{d}{dx}\int_{-1}^{x}\frac{2}{\sqrt{t^{2}+t+1}}dt
+\item $\displaystyle{g'(x)=\frac{d}{dx}\int_{-1}^{x}\frac{2}{\sqrt{t^{2}+t+1}}dt
 =\frac{2}{\sqrt{x^{2}+x+1}}}$
 
 \item $\displaystyle{g^\prime(y)
@@ -949,7 +884,7 @@ Use el teorema fundamental del cálculo para derivar cada una de las siguientes 
 =-\frac{d}{dy}\int_{2}^{y}\frac{\sen x}{\sqrt{x^{2}+1}}dx}
 =-\frac{\sen y}{\sqrt{y^{2}+1}}$
 
-\item $\displaystyle{g^{\prime}(z)=\frac{d}{dz}\int_{3}^{z^{2}+2z}\sqrt[3]{x^{4}+x}dx=\sqrt[3]{%
+\item $\displaystyle{g'(z)=\frac{d}{dz}\int_{3}^{z^{2}+2z}\sqrt[3]{x^{4}+x}dx=\sqrt[3]{%
 \left( z^{2}+2z\right) ^{4}+z^{2}+2z}\cdot \left( 2z+2\right)}$
 
 \item Inicialmente, reescribimos la integral de la siguiente manera:
@@ -961,26 +896,19 @@ t^{2}+1}}dt\\
 dt-\int_{0}^{-\cos s}\frac{t^{3}}{\sqrt{t^{2}+1}}dt
 \end{align*}
 Entonces,
-
-\resizebox{\linewidth}{!}{
-\begin{minipage}{\linewidth}
 \begin{align*}
-  g^{\prime}(s)&=\frac{d}{ds}\int_{0}^{\tan s}\frac{t^{3}}{\sqrt{t^{2}+1}}dt-\frac{d}{ds}\int_{0}^{-\cos s}\frac{t^{3}}{\sqrt{t^{2}+1}}dt\\
-  &=\frac{\tan ^{3}s}{\sqrt{\tan ^{2}s+1}}\cdot \sec ^{2}s-\frac{-\cos ^{3}s}{\sqrt{\cos ^{2}s+1}}\cdot \sen s=\frac{\tan ^{3}s\sec ^{2}s}{\sqrt{\tan ^{2}s+1}}+\frac{\cos^{3}s\cdot \sen s}{\sqrt{\cos ^{2}s+1}}
+g'(s)&=\frac{d}{ds}\int_{0}^{\tan s}\frac{t^{3}}{\sqrt{t^{2}+1}}dt-\frac{d}{ds}\int_{0}^{-\cos s}\frac{t^{3}}{\sqrt{t^{2}+1}}dt\\
+&=\frac{\tan ^{3}s}{\sqrt{\tan ^{2}s+1}}\cdot \sec ^{2}s-\frac{-\cos ^{3}s}{\sqrt{\cos ^{2}s+1}}\cdot \sen s\\
+&=\frac{\tan ^{3}s\sec ^{2}s}{\sqrt{\tan ^{2}s+1}}+\frac{\cos^{3}s\cdot \sen s}{\sqrt{\cos ^{2}s+1}}
 \end{align*}
-\end{minipage}
-}
 \end{parrafonumerado}
 
-%\clearpage
-\addcontentsline{toc}{section}{Ejercicios del capítulo~\thechapter}
-% \renewcommand{\exercisesname}{Ejercicios}
-%\group
-%\renewcommand{\groupname}{}
-%\begin{multicols}{2}
-\begin{ejer}{En los ejercicios 1–26, encuentre el valor de las integrales:}
+\section{Ejercicios del capítulo~\thechapter}
 
-%\begin{multicols}{2}
+\group
+
+\begin{ejer}{En los ejercicios 1-26, encuentre el valor de las integrales:}
+
 \begin{enumerate}
 
 \item {$\int (5-6x)\,dx$}{$5x - 3x^{2} + C$}
@@ -1035,24 +963,22 @@ Entonces,
 
 \item {$\int \frac{1}{2}(\csc^{2}\theta - \csc \theta \cot \theta)\,d\theta$}{$\frac{-\cot \theta + \csc \theta}{2} + C = F(\theta)$}
 \end{enumerate}
-\end{ejer}
-%\end{multicols}
 
 \begin{ejer}{Sea $v(t)$ la función de velocidad de una partícula en un instante $t$ en segundos. Halle la función de posición $s(t)$ de la partícula en cada caso:}
 
 \begin{enumerate}
 
-\item {$v(t)=t^{3}+t^{2}+t,\ s\left(0\right)=3$}{$s\left( t\right) =\frac{t^{4}}{4}+\frac{t^{3}}{3}+\frac{t^{2}}{2}+3$}
+  \item {$v(t)=t^{3}+t^{2}+t,\ s\left(0\right)=3$}{$s(t) =\frac{t^{4}}{4}+\frac{t^{3}}{3}+\frac{t^{2}}{2}+3$}
 
-\item {$v(t)=\sen t+\cos t,\ s\left(\pi\right)=2$}{$s\left( t\right) =-\cos \left( t\right) +\sen \left( t\right)
-+1$}
+  \item {$v(t)=\sen t+\cos t,\ s\left(\pi\right)=2$}{$s(t) =-\cos (t) +\sen (t)
+    +1$}
 
-\item {$v(t)=\sec ^{2}t+\csc ^{2}t,\
-s\left( \frac{\pi }{4}\right) =2$}{$s\left( t\right) =\tan \left( t\right)
--\cot \left( t\right) +2$}
+  \item {$v(t)=\sec ^{2}t+\csc ^{2}t,\
+    s\left( \frac{\pi }{4}\right) =2$}{$s(t) =\tan (t)
+    -\cot (t) +2$}
 
-\item {$v(t)=\cfrac{1-\cos ^{2}t}{\sen ^{2}t},\ s\left( \frac{\pi }{4}\right) =8$}{$s\left( t\right) =t+8-\frac{\pi
-}{4}$}
+  \item {$v(t)=\cfrac{1-\cos ^{2}t}{\sen ^{2}t},\ s\left( \frac{\pi }{4}\right) =8$}{$s(t) =t+8-\frac{\pi
+    }{4}$}
 \end{enumerate}
 \end{ejer}
 
@@ -1061,17 +987,17 @@ s\left( \frac{\pi }{4}\right) =2$}{$s\left( t\right) =\tan \left( t\right)
 
 \begin{enumerate}
 
-\item {$a(t)=t^{3}+t^{2},\ v\left( 0\right)
-=3,s\left( 0\right) =5$}{$s\left( t\right) =\frac{t^{5}}{20}+\frac{t^{4}}{12}+3t+5$}
+  \item {$a(t)=t^{3}+t^{2},\ v\left( 0\right)
+    =3,s\left( 0\right) =5$}{$s(t) =\frac{t^{5}}{20}+\frac{t^{4}}{12}+3t+5$}
 
-\item {$a(t)=\sen t+\cos t,\ v(\pi )=4,$ $\
-s\left( \pi \right) =2$}{$s\left( t\right) =-\sen \left( t\right) -\cos
-\left( t\right) +3t-3\pi +1$}
+  \item {$a(t)=\sen t+\cos t,\ v(\pi )=4,$ $\
+    s\left( \pi \right) =2$}{$s(t) =-\sen (t) -\cos
+    (t) +3t-3\pi +1$}
 
-\item {$a(t)=\cfrac{2t^{3}+t^{2}}{t^{5}},\
-v\left( 1\right) =4,s\left( 1\right) =10$}{$s\left( t\right) =-2\ln\left\vert t\right\vert+\frac{1}{2t}+\frac{13}{4}t^{2}+\frac{25}{4}$}
+  \item {$a(t)=\cfrac{2t^{3}+t^{2}}{t^{5}},\
+    v\left( 1\right) =4,s\left( 1\right) =10$}{$s(t) =-2\ln\left\vert t\right\vert+\frac{1}{2t}+\frac{13}{4}t^{2}+\frac{25}{4}$}
 
-\item {$a(t)=-9,8t,\ v(2)=7,$ $\ s\left(3\right) =9\,$}{$s\left( t\right) =-\frac{9,8}{6}t^{3}+26,6t-26,7$}
+  \item {$a(t)=-9.8t,\ v(2)=7,$ $\ s\left(3\right) =9\,$}{$s(t) =-\frac{9.8}{6}t^{3}+26,6t-26,7$}
 \end{enumerate}
 \end{ejer}
 %\clearpage
@@ -1079,40 +1005,40 @@ v\left( 1\right) =4,s\left( 1\right) =10$}{$s\left( t\right) =-2\ln\left\vert t\
 \begin{ejer}{En cada caso, encuentre la función que satisfaga las condiciones dadas:}
 \begin{enumerate}
 
-\item {Pasa por el punto $(3,4)$ y, en el punto $(x,f(x))$, la pendiente de la recta tangente es$\ 3x^{2}-8$.}{$f(x)=x^{3}-8x+19$.}
+  \item {Pasa por el punto $(3,4)$ y, en el punto $(x,f(x))$, la pendiente de la recta tangente es$\ 3x^{2}-8$.}{$f(x)=x^{3}-8x+19$.}
 
-\item {Pasa por el punto $(0,3)$ y, en el punto $(x,f(x))$, la pendiente de la recta tangente es $e^{x}-x$.}{$f(x)=e^{x}-
-\frac{x^{2}}{2}+2$.}
+  \item {Pasa por el punto $(0,3)$ y, en el punto $(x,f(x))$, la pendiente de la recta tangente es $e^{x}-x$.}{$f(x)=e^{x}-
+    \frac{x^{2}}{2}+2$.}
 \end{enumerate}
 \end{ejer}
 
 \begin{ejer}{Encuentre la función que cumple:}
 \begin{enumerate}
 
-\item {$f^{\prime\prime}\left( x\right) =e^{x}-x,\ f\left( 1\right) =3,\ f^{\prime}\left( 2\right) =1$}{$f(x)=e^{x}-\frac{x^{3}}{6}
-+(3-e^{2})x-\frac{6e-1-6e^{2}}{6}$}
+  \item {$f^{\prime\prime}(x) =e^{x}-x,\ f\left( 1\right) =3,\ f'\left( 2\right) =1$}{$f(x)=e^{x}-\frac{x^{3}}{6}
+    +(3-e^{2})x-\frac{6e-1-6e^{2}}{6}$}
 
-\item {$f^{\prime\prime\prime}\left( x\right) =\sen x-\cos\left( 2x\right),\ f\left( 0\right) =f^{\prime}\left( \frac{\pi }{2}
-\right) =f^{\prime\prime}\left( \pi \right) =1$}{$f\left( x\right) =\cos x+\frac{\sin \left( 2x\right) }{8}+\frac{9}{4}x$}
+  \item {$f^{\prime\prime\prime}(x) =\sen x-\cos\left( 2x\right),\ f\left( 0\right) =f'\left( \frac{\pi }{2}
+    \right) =f^{\prime\prime}\left( \pi \right) =1$}{$f(x) =\cos x+\frac{\sin \left( 2x\right) }{8}+\frac{9}{4}x$}
 
-\item {$\cfrac{d^{\,2}y}{dx^{2}}=2x^{2}+3x^{3},\ y(1)=3,y^{\prime}\left(2\right)=3$}{$y=\frac{x^{4}}{6}+\frac{3x^{5}}{20}-\frac{43}{3}x+\frac{1021}{60}$}
+  \item {$\cfrac{d^{\,2}y}{dx^{2}}=2x^{2}+3x^{3},\ y(1)=3,y'\left(2\right)=3$}{$y=\frac{x^{4}}{6}+\frac{3x^{5}}{20}-\frac{43}{3}x+\frac{1021}{60}$}
 
-\item {$\cfrac{d^{\,4}y}{dx^{4}}=120x^{2},\ y\left( 0\right) =y^{\prime}\left( 0\right) =y^{\prime\prime}\left( 0\right)=y^{\prime\prime\prime}\left( 1\right) =1$}{$ y=\frac{1}{3}x^6 -\frac{13}{2}x^{3}+\frac{1}{2}x^{2}+x+1$}
+  \item {$\cfrac{d^{\,4}y}{dx^{4}}=120x^{2},\ y\left( 0\right) =y'\left( 0\right) =y^{\prime\prime}\left( 0\right)=y^{\prime\prime\prime}\left( 1\right) =1$}{$ y=\frac{1}{3}x^6 -\frac{13}{2}x^{3}+\frac{1}{2}x^{2}+x+1$}
 \end{enumerate}
 \end{ejer}
 
 \begin{ejer}{Si la velocidad de una partícula es {\footnotesize $v(t)=\cfrac{1}{1+\cos \left( 2t\right)}$,} con $t$ en metros y $s$ en segundos,
-su posición en $t=\frac{\pi }{8}$ es $2$ metros. \ Halle la función de posición de la partícula.La función de posición de la partícula es: $s(t)=-\frac{1}{2}\cot \left( 2t\right) +\frac{1}{2}\csc \left( 2t\right) +%
+  su posición en $t=\frac{\pi }{8}$ es $2$ metros. \ Halle la función de posición de la partícula.La función de posición de la partícula es: $s(t)=-\frac{1}{2}\cot \left( 2t\right) +\frac{1}{2}\csc \left( 2t\right) +%
 \frac{5}{2}-\frac{\sqrt{2}}{2}$}
 %La oración anterior era ambigua: ¿es 'sí' o 'su'?
 \end{ejer}
 
 \begin{ejer}{Si la aceleración de una partícula es $a(t)=\sen \left( 2t\right) +e^{2t}+2^{4t},$ con\ $t$ en metros y $s$ en
-segundos, su velocidad inicial es 6 metros por segundo y su posición inicial es 4 metros.\ Halle la función de posición de la partícula.}{$s\left( t\right) =-\frac{\sen \left( 2t\right) }{4}+\frac{e^{2t}}{4}+\frac{2^{4t}}{16\ln ^{2}\left( 2\right) }+\left( 6-\frac{1}{4\ln \left(2\right) }\right) t+\frac{15}{4}-\frac{1}{16\ln ^{2}\left( 2\right) }$}
+segundos, su velocidad inicial es 6 metros por segundo y su posición inicial es 4 metros.\ Halle la función de posición de la partícula.}{$s(t) =-\frac{\sen \left( 2t\right) }{4}+\frac{e^{2t}}{4}+\frac{2^{4t}}{16\ln ^{2}\left( 2\right) }+\left( 6-\frac{1}{4\ln \left(2\right) }\right) t+\frac{15}{4}-\frac{1}{16\ln ^{2}\left( 2\right) }$}
 \end{ejer}
 
-\begin{ejer}{Si la pendiente de la tangente a la gráfica de$f$ en $\left(x,f\left( x\right) \right)$ \ es $\cfrac{\cos  ^{2}x}{1+\sen x}$ y $f\left( \frac{\pi }{6}\right) =4$, halle la función
-$f\left( x\right).$}{$f\left( x\right) =x+\cos x+4-\frac{\pi}{6}-\frac{\sqrt{3}}{2}$}
+\begin{ejer}{Si la pendiente de la tangente a la gráfica de$f$ en $\left(x,f(x) \right)$ \ es $\cfrac{\cos  ^{2}x}{1+\sen x}$ y $f\left( \frac{\pi }{6}\right) =4$, halle la función
+$f(x).$}{$f(x) =x+\cos x+4-\frac{\pi}{6}-\frac{\sqrt{3}}{2}$}
 \end{ejer}
 
 \begin{ejer}{En los siguientes ejercicios, para cada una de las funciones $f\left(x\right) $ dadas, halle el valor de $c$ que garantiza el  teorema del valor medio para integrales en los intervalos indicados y haga una figura de la situación.}
@@ -1120,72 +1046,70 @@ $f\left( x\right).$}{$f\left( x\right) =x+\cos x+4-\frac{\pi}{6}-\frac{\sqrt{3}}
 
 \begin{enumerate}
 
-\item {$f\left( x\right) =6x^{2}+4x+4$ en $\left[1,3\right].$}{$c=\frac{2}{3}\sqrt{13}-\frac{1}{3}$}
+  \item {$f(x) =6x^{2}+4x+4$ en $\left[1,3\right].$}{$c=\frac{2}{3}\sqrt{13}-\frac{1}{3}$}
 
-\item {$f\left( x\right) =x^{3}$ en $\left[ 2,4\right] .$}{$c=\sqrt[3]{30}=3,1072$}
+  \item {$f(x) =x^{3}$ en $\left[ 2,4\right] .$}{$c=\sqrt[3]{30}=3,1072$}
 
-\item {$f\left( x\right) =3^{x}$ en $\left[ 0,2\right] $.}{$c=\frac{\ln \left( \frac{4}{\ln 3}\right) }{\ln 3}=1,1763$}
+  \item {$f(x) =3^{x}$ en $\left[ 0,2\right] $.}{$c=\frac{\ln \left( \frac{4}{\ln 3}\right) }{\ln 3}=1.1763$}
 
-\item {$f\left( x\right) =2^{3x}$ en $\left[ 0,4\right] $.}{$c=\frac{\ln \left( \frac{1365}{4\ln 2}\right) }{\ln 8}=2,9812$}
+  \item {$f(x) =2^{3x}$ en $\left[ 0,4\right] $.}{$c=\frac{\ln \left( \frac{1365}{4\ln 2}\right) }{\ln 8}=2,9812$}
 
-\item {$f\left( x\right) =2\sen x$ en $\left[ 0,\frac{\pi }{2}\right] $.}{$c=\arcsin \left( \frac{2}{\pi }\right) =0,69011$}
+  \item {$f(x) =2\sen x$ en $\left[ 0,\frac{\pi }{2}\right] $.}{$c=\arcsin \left( \frac{2}{\pi }\right) =0,69011$}
 
-\item {$f\left( x\right) =4\cos x$ en $\left[ 0,\frac{\pi }{2}\right] $.}{$c=\arccos \left( \frac{2}{\pi }\right)=0,88069$}
-%\end{multicols}
+  \item {$f(x) =4\cos x$ en $\left[ 0,\frac{\pi }{2}\right] $.}{$c=\arccos \left( \frac{2}{\pi }\right)=0,88069$}
+    %\end{multicols}
 \end{enumerate}
 \end{ejer}
 %\clearpage
 
-\textnormal{Para cada una de las funciones $f\left( x\right) $ dadas en los siguientes ejercicios: $a)$ calcule la función \textit{$A\left( x\right) =\int_{a}^{x}f\left( t\right)
-dt,$} de área de acumulación de $f\left( x\right) $ a partir del
-valor de $t=a$ indicado; $b)$ halle la derivada respecto a $x$ de la funcíon área de acumulación $\cfrac{dA}{dx}$.}
+Para cada una de las funciones $f(x)$ dadas en los siguientes ejercicios: a) calcule la función $A(x) =\int_{a}^{x}f(t)dt$, de área de acumulación de $f(x)$ a partir del valor de $t=a$ indicado; b) halle la derivada respecto a $x$ de la funcíon área de acumulación $\cfrac{dA}{dx}$.
 
 \begin{ejer}
-{$f\left( x\right) =3x^{2}+6x+2$ a partir de $t=2$} \\
-{$a)$ $A\left( x\right) =x^{3}+3x^{2}+2x-24\qquad \\
+{$f(x) =3x^{2}+6x+2$ a partir de $t=2$} \\
+{$a)$ $A(x) =x^{3}+3x^{2}+2x-24\qquad \\
 b)$ $\frac{dA}{dx}
-=3x^{2}+6x+2=f\left( x\right)$}
+=3x^{2}+6x+2=f(x)$}
 \end{ejer}
 
 \begin{ejer}
-{$f\left( x\right) =4x^{3}+3x^{2}+1$ a partir de $t=3$} \\
-{$a)$ $A\left( x\right) =x^{3}+3x^{2}+2x-24\qquad \\
-b)$ $\frac{dA}{dx} =3x^{2}+6x+2=f\left( x\right)$}
+{$f(x) =4x^{3}+3x^{2}+1$ a partir de $t=3$} \\
+{$a)$ $A(x) =x^{3}+3x^{2}+2x-24\qquad \\
+b)$ $\frac{dA}{dx} =3x^{2}+6x+2=f(x)$}
 \end{ejer}
 
 \begin{ejer}
-{$f\left( x\right) =12x^{5}+6x^{2}+2$ a partir de $t=1$} \\
-{$a)$ $A\left( x\right) =2x^{6}+2x^{3}+2x-6\qquad \\ b)$ $ \frac{dA}{dx}=12x^{5}+6x^{2}+2=f\left( x\right)$}
+{$f(x) =12x^{5}+6x^{2}+2$ a partir de $t=1$} \\
+{$a)$ $A(x) =2x^{6}+2x^{3}+2x-6\qquad \\ b)$ $ \frac{dA}{dx}=12x^{5}+6x^{2}+2=f(x)$}
 \end{ejer}
 
 \begin{ejer}
-{$f\left( x\right) =e^{x}+2x$ a partir de $t=0$} \\
-{$a)$ $A\left( x\right) =e^{x}+x^{2}-1\qquad \\ b)$ $\frac{dA}{dx}=e^{x}+2x=f\left( x\right)$}
+{$f(x) =e^{x}+2x$ a partir de $t=0$} \\
+{$a)$ $A(x) =e^{x}+x^{2}-1\qquad \\ b)$ $\frac{dA}{dx}=e^{x}+2x=f(x)$}
 \end{ejer}
 
 \begin{ejer}
-{$f\left( x\right) =2^{x}+3^{x}+8x+1$ a partir de $t=0$} \\
-{$a)$ $A\left( x\right) =\frac{2^{x}}{\ln 2}+\frac{3^{x}}{\ln 3}+4x^{2}+x-\frac{1}{\ln 2}-\frac{1}{\ln 3}\qquad \\
+{$f(x) =2^{x}+3^{x}+8x+1$ a partir de $t=0$} \\
+{$a)$ $A(x) =\frac{2^{x}}{\ln 2}+\frac{3^{x}}{\ln 3}+4x^{2}+x-\frac{1}{\ln 2}-\frac{1}{\ln 3}\qquad \\
 b)$ $\frac{dA}{dx}
-=2^{x}+3^{x}+8x+1=f\left( x\right)$}
+=2^{x}+3^{x}+8x+1=f(x)$}
 \end{ejer}
 
 \begin{ejer}
-{$f\left( x\right) =2\sen x+3x$ a partir de $t=0$} \\
-{$a)$ $A\left( x\right) =\frac{3}{2}x^{2}-2\cos x+2\qquad \\
-b)$ $\frac{dA}{dx}=2\sen x+3x=f\left( x\right)$}
+{$f(x) =2\sen x+3x$ a partir de $t=0$} \\
+{$a)$ $A(x) =\frac{3}{2}x^{2}-2\cos x+2\qquad \\
+b)$ $\frac{dA}{dx}=2\sen x+3x=f(x)$}
 \end{ejer}
 
 \begin{ejer}
-{$f\left( x\right) =e^{2x}+\sen x+1$ a partir de $t=0$} \\
-{$a)$ $A\left( x\right) =x-\cos x+\frac{1}{2}e^{2x}+\frac{1}{2}\qquad \\
-b)$ $e^{2x}+\sen x+1=f\left( x\right)$}
+{$f(x) =e^{2x}+\sen x+1$ a partir de $t=0$} \\
+{$a)$ $A(x) =x-\cos x+\frac{1}{2}e^{2x}+\frac{1}{2}\qquad \\
+b)$ $e^{2x}+\sen x+1=f(x)$}
 \end{ejer}
 
 \begin{ejer}
-{$f\left( x\right) =e^{4x}+\sen x+\cos x$ a partir de $t=0$} \\
-{$a)$ $A\left( x\right) =\sen x-\cos x+\frac{1}{4}e^{4x}+\frac{3}{4}\qquad \\
-b)$ $\frac{dA}{dx}=e^{4x}+\sen x+\cos x=f\left( x\right)$}
+{$f(x) =e^{4x}+\sen x+\cos x$ a partir de $t=0$} \\
+{$a)$ $A(x) =\sen x-\cos x+\frac{1}{4}e^{4x}+\frac{3}{4}\qquad \\
+b)$ $\frac{dA}{dx}=e^{4x}+\sen x+\cos x=f(x)$}
 \end{ejer}
 
 \begin{ejer}{Encuentre la derivada de cada una de las siguientes funciones:}
@@ -1207,9 +1131,9 @@ b)$ $\frac{dA}{dx}=e^{4x}+\sen x+\cos x=f\left( x\right)$}
 %
 \begin{enumerate}
 
-\item {$\int_{a}^{x}\frac{f\left( t\right) }{t^{2}}dt=3x^{2}-9$}{$f(x)=6x^{3}\qquad a=\pm \sqrt{3}$}
+\item {$\int_{a}^{x}\frac{f(t) }{t^{2}}dt=3x^{2}-9$}{$f(x)=6x^{3}\qquad a=\pm \sqrt{3}$}
 
-\item {$\int_{a}^{x}\frac{f(t)+1}{f(t)-1}dt=\frac{x-1}{2x+1}$}{$f\left( x\right) =\frac{-3-\left( 2x+1\right) ^{2}}{\left( 2x+1\right)
+\item {$\int_{a}^{x}\frac{f(t)+1}{f(t)-1}dt=\frac{x-1}{2x+1}$}{$f(x) =\frac{-3-\left( 2x+1\right) ^{2}}{\left( 2x+1\right)
 ^{2}-3}\qquad a=1$}
 
 \item {$\int_{2x}^{a-1}\left( t+1\right) ^{2}f(t)dt=\frac{x^{3}}{2x+1}$
@@ -1259,16 +1183,16 @@ b)$ $\frac{dA}{dx}=e^{4x}+\sen x+\cos x=f\left( x\right)$}
 {\small
 \begin{enumerate}
 
-\item {$y=x^{4}+1,$ el eje $x$, el eje $y$ y la recta $x=3$}{$\allowbreak \frac{258}{5}u^{2}$}
+\item {$y=x^{4}+1$, el eje $x$, el eje $y$ y la recta $x=3$}{$\allowbreak \frac{258}{5}u^{2}$}
 
 \item  {$y=\cos(2x)$, el eje $x$, el eje $y$ y la recta $x=\frac{\pi }{8}$}{$\allowbreak \frac{1}{4}\sqrt{2}u^{2}$}
 
-\item  {$y=\cfrac{x^{4}+x+1}{x^{6}},$ el eje $x$, y las rectas $x=1$ y $x=2$}{$\allowbreak \frac{297}{320}u^{2}$}
+\item  {$y=\cfrac{x^{4}+x+1}{x^{6}}$, el eje $x$, y las rectas $x=1$ y $x=2$}{$\allowbreak \frac{297}{320}u^{2}$}
 
-\item  {$y=\cfrac{x^{4}+1}{x^{2}+1},$ el eje $x$, el eje $y$ y la recta $x=1$}{$\allowbreak \left( \frac{1}{2}\pi -%
+\item  {$y=\cfrac{x^{4}+1}{x^{2}+1}$, el eje $x$, el eje $y$ y la recta $x=1$}{$\allowbreak \left( \frac{1}{2}\pi -%
 \frac{2}{3}\right) u^{2}$}
 
-\item {$ y=\cfrac{\sen^{2}x+1}{\cos ^{2}x},$ el eje $x$, el eje $y$ y la recta $x=\frac{\pi }{4}$}{$\left(
+\item {$ y=\cfrac{\sen^{2}x+1}{\cos ^{2}x}$, el eje $x$, el eje $y$ y la recta $x=\frac{\pi }{4}$}{$\left(
 \allowbreak 2-\frac{1}{4}\pi \right) u^{2}$}
 
 \item  {$y=\cfrac{1}{\sqrt{9-x^{2}}},$ el eje $x$, y la recta $x=1$}{$\arcsin \left( \frac{1}{3}\right) \text{ unidades cuadradas}$}

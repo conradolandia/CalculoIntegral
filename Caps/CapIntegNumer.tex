@@ -251,7 +251,7 @@ $}
 Es decir, la integral converge y converge a $\frac{1}{10}\ln \frac{13}{8}.$
 
 \begin{ejemplo}
-  \textnormal{Diga si la integral {\small$\int_{1}^{\infty }\frac{dx}{e^{x+2}+e^{4-x}} $} converge o diverge. Si converge, diga a qué valor lo hace.}
+  Diga si la integral $\int_{1}^{\infty}\frac{dx}{e^{x+2}+e^{4-x}}$ converge o diverge. Si converge, diga a qué valor lo hace.
 \end{ejemplo}
 \emph{Solución.} Al reescribir la integral, tenemos
 \begin{align*}
@@ -274,7 +274,7 @@ $}
 La integral converge a $\frac{\pi }{4e^{3}}.$
 
 \begin{ejemplo}
-  \textnormal{Diga si la integral {\small $\int_{2}^{\infty }\frac{x^{2}}{\left( x^{2}+4\right) ^{2}}dx$} converge o diverge. Si converge, diga a qué valor lo hace.}
+  Diga si la integral $\int_{2}^{\infty }\frac{x^{2}}{\left( x^{2}+4\right) ^{2}}dx$ converge o diverge. Si converge, diga a qué valor lo hace.
 \end{ejemplo}
 
 \emph{Solución.} Tomemos $x=2\tan \theta$ y $dx=2\sec ^{2}\theta d\theta$, además $x^{2}+4=4\tan^{2}\theta +4=4\left( \tan ^{2}\theta +1\right) =4\sec ^{2}\theta $, entonces
@@ -305,7 +305,7 @@ Así, la integral impropia es
 Con ello, concluimos que la integral converge y lo hace a $\frac{1}{16}\pi +\frac{1}{8}$
 
 \begin{ejemplo}
-  \textnormal{Diga si la integral {\small $\int_{1}^{\infty }\frac{4}{x\left( x+1\right) ^{2}}dx$} converge o diverge. Si converge, diga a qué valor lo hace.}
+  Diga si la integral $\int_{1}^{\infty }\frac{4}{x\left( x+1\right) ^{2}}dx$ converge o diverge. Si converge, diga a qué valor lo hace.
 \end{ejemplo}
 
 \emph{Solución.} Al descomponer en fracciones parciales el integrando, se tiene
@@ -625,10 +625,10 @@ entonces,
 }
 
 \begin{ejemplo}
-  \textnormal{Aproxime la {\small $\int_{0}^{3}\frac{1}{1+x^{4}}\ dx$} con $n=6$ usando la regla del trapecio.}
+  Aproxime la $\int_{0}^{3}\frac{1}{1+x^{4}}\ dx$ con $n=6$ usando la regla del trapecio.
 \end{ejemplo}
 
-De la integral dada tenemos que {\small $f(x)=\cfrac{1}{1+x^{4}}$;} $\Delta x=\cfrac{3-0}{6}=\cfrac{3}{6}=\cfrac{1}{2}$, y la partición es
+De la integral dada tenemos que $f(x)=\cfrac{1}{1+x^{4}}$; $\Delta x=\cfrac{3-0}{6}=\cfrac{3}{6}=\cfrac{1}{2}$, y la partición es
 {\small
   \[
     P=\left\{0,1/2,2(1/2),3(1/2),4(1/2),5(1/2%
@@ -796,14 +796,12 @@ con $h=\Delta x=\cfrac{b-a}{n}$ y $n$ un número par.
 
 \subsubsection*{Error en el método de Simpson}
 
-{ \textnormal{Si $f^{\left( 4\right) }$ es continua y $M$ es una cota superior de $%
-    \left\vert f^{\left( 4\right) }\right\vert $ en $\left[ a,b\right] $,
-    entonces el error en el método de Simpson $E_{S}=\int_{a}^{b}f(x)dx-S_{n}$
-  satisface}
-  \[
-    \left\vert E_{S}\right\vert \leq \frac{\left( b-a\right) ^{5}}{180n^{4}}M
-  \]
-}
+Si $f^{\left( 4\right) }$ es continua y $M$ es una cota superior de $\left\vert f^{\left( 4\right) }\right\vert$ en $\left[ a,b\right]$,
+entonces el error en el método de Simpson $E_{S}=\int_{a}^{b}f(x)dx-S_{n}$
+satisface
+\[
+  \left\vert E_{S}\right\vert \leq \frac{\left( b-a\right) ^{5}}{180n^{4}}M
+\]
 
 \begin{ejemplo}
   Utilice el método de Simpson para estimar cada una de las siguientes integrales con la información dada.
