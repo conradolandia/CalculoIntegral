@@ -1,20 +1,37 @@
-\ProvidesPackage{listofanswers}[06/11/2012]
+\ProvidesPackage{listofanswers}[17/04/2026]
 
 \newcounter{group}
 \newcounter{exercise}[group]
 \newcounter{subexercise}[exercise]
 
-% Flag: compact subexercise rendering (set by \exercise*)
+% Bandera: modo compacto para subejercicio (activado por \exercise*)
 \newif\if@compactexercise
 \@compactexercisefalse
 
-% --- Group (one per chapter) -------------------------------------------
+% Anchos de sangría colgante (ancho del cuadro de etiqueta = sangría del párrafo)
+\newlength{\loa@exindent}
+\setlength{\loa@exindent}{2em}      % suficiente para "30)"
+\newlength{\loa@subexindent}
+\setlength{\loa@subexindent}{1.5em} % suficiente para "a)" … "z)"
+
+% Auxiliar interno: un párrafo con sangría colgante
+% #1 = etiqueta  #2 = ancho de colgado  #3 = desplazamiento del margen izquierdo  #4 = cuerpo
+\newcommand{\loa@hangitem}[4]{%
+  \par
+  \leftskip=#3\relax
+  \noindent
+  \hangindent=#2\hangafter=1%
+  \makebox[#2][l]{#1}#4\par
+  \leftskip=\z@
+}
+
+% --- Grupo (uno por capítulo) ------------------------------------------
 \newcommand{\group}{%
   \refstepcounter{group}
   \addcontentsline{loa}{group}{\thegroup}
 }
 
-% --- Exercise -----------------------------------------------------------
+% --- Ejercicio ----------------------------------------------------------
 \newcommand{\exercise}{%
   \refstepcounter{exercise}
   \@ifstar\exerciseStar\exerciseNoStar
@@ -24,78 +41,76 @@
   \@ifnextchar\bgroup{\exerciseNoStarTwo{#1}}{\exerciseNoStarOne{#1}}
 }
 
-% Exercise without answer — still writes a heading entry
+% Ejercicio sin respuesta — igualmente escribe una entrada de encabezado
 \newcommand{\exerciseNoStarOne}[1]{%
   \@compactexercisefalse
-\theexercise)\hspace{0.5em}#1
-\addcontentsline{loa}{exercise}{\theexercise}
+\loa@hangitem{\theexercise)}{\loa@exindent}{\z@}{#1}%
+\addcontentsline{loa}{exercise}{\theexercise}%
 }
 
-% Exercise with answer — writes heading entry + answer entry
+% Ejercicio con respuesta — escribe entrada de encabezado + entrada de respuesta
 \newcommand{\exerciseNoStarTwo}[2]{%
 \@compactexercisefalse
-\theexercise)\hspace{0.5em}#1
-\addcontentsline{loa}{exercise}{\theexercise}
-\addcontentsline{loa}{exerciseanswer}{#2}
+\loa@hangitem{\theexercise)}{\loa@exindent}{\z@}{#1}%
+\addcontentsline{loa}{exercise}{\theexercise}%
+\addcontentsline{loa}{exerciseanswer}{#2}%
 }
 
-% Starred exercise — compact mode: subexercise answers rendered inline
+% Ejercicio con asterisco — modo compacto: respuestas de subejercicio renderizadas en línea
 \newcommand{\exerciseStar}[1]{%
 \@compactexercisetrue
-\theexercise)\hspace{0.5em}#1
-\addcontentsline{loa}{exercise}{\theexercise}
+\loa@hangitem{\theexercise)}{\loa@exindent}{\z@}{#1}%
+\addcontentsline{loa}{exercise}{\theexercise}%
 }
 
-% --- Subexercise --------------------------------------------------------
+% --- Subejercicio -------------------------------------------------------
 \newcommand{\subexercise}[1]{%
 \refstepcounter{subexercise}
 \@ifnextchar\bgroup{\subexerciseTwo{#1}}{\subexerciseOne{#1}}
 }
 
 \newcommand{\subexerciseOne}[1]{%
-\@alph\thesubexercise)\hspace{0.5em}#1l
+\loa@hangitem{\@alph\thesubexercise)}{\loa@subexindent}{\loa@exindent}{#1}%
 }
 
 \newcommand{\subexerciseTwo}[2]{%
-\@alph\thesubexercise)\hspace{0.5em}#1
+\loa@hangitem{\@alph\thesubexercise)}{\loa@subexindent}{\loa@exindent}{#1}%
 \if@compactexercise
 \addcontentsline{loa}{subexercisecompact}{%
-\@alph\thesubexercise)\hspace{0.5em}#2%
-}
+\@alph\thesubexercise)\hspace{0.5em}#2}%
 \else
 \addcontentsline{loa}{subexercise}{%
-\@alph\thesubexercise)\hspace{0.5em}#2%
-}
+\@alph\thesubexercise)\hspace{0.5em}#2}%
 \fi
 }
 
-% --- Rendering in the answers chapter -----------------------------------
-% \l@group: section heading
+% --- Renderizado en el capítulo de respuestas --------------------------
+% \l@group: encabezado de sección
 \newcommand*{\l@group}[2]{%
 \section*{Ejercicios del capítulo~#1}%
 }
 
-% \l@exercise: subsection heading
+% \l@exercise: encabezado de subsección
 \newcommand*{\l@exercise}[2]{%
 \subsection*{Ejercicio~#1}%
 }
 
-% \l@exerciseanswer: answer paragraph (for exercises with direct answer)
+% \l@exerciseanswer: párrafo de respuesta (para ejercicios con respuesta directa)
 \newcommand*{\l@exerciseanswer}[2]{%
 \noindent\small #1\par
 }
 
-% \l@subexercise: answer paragraph with letter prefix
+% \l@subexercise: párrafo de respuesta con prefijo de letra
 \newcommand*{\l@subexercise}[2]{%
 \noindent #1\par\smallskip
 }
 
-% \l@subexercisecompact: inline answer (\exercise* mode)
+% \l@subexercisecompact: respuesta en línea (modo \exercise*)
 \newcommand*{\l@subexercisecompact}[2]{%
 #1\hskip 1em plus .3em minus .3em
 }
 
-% --- Entry point --------------------------------------------------------
+% --- Punto de entrada ---------------------------------------------------
 \newcommand{\listofanswers}{%
 \answershead
 \@starttoc{loa}

@@ -117,7 +117,7 @@ En resumen, se obtiene la lista de integrales indefinidas\label{TablaResumen}:
 
 \vspace{\baselineskip}
 
-\begin{center}
+\begin{center}\label{TablaIntegrales}
   \begin{NiceTabular}{w{c}{0.8cm}w{c}{8cm}}[cell-space-limits=4pt,hvlines]
     \textbf{N.\textsuperscript{o}} & \textbf{Integral} \\
     1 & $\displaystyle\int m\,dx = mx + C$ \\
@@ -1017,19 +1017,17 @@ v\left( 1\right) =4,s\left( 1\right) =10$}{$s\left( t\right) =-2\ln\left\vert t\
 \subexercise{$\cfrac{d^{\,4}y}{dx^{4}}=120x^{2},\ y\left( 0\right) =y^{\prime}\left( 0\right) =y^{\prime\prime\prime}\left( 1\right) =1$.}{$
 y\left( x\right) =8\cos \left( \frac{1}{2}x\right) -\sen x+\frac{1}{8}e^{2x}+x^{4}+\frac{11}{4}x^{2}+\frac{15}{4}x-\frac{41}{8}$}
 
-\exercise{Si la velocidad de una part\'{\i}cula es $v(t)=\cfrac{1}{1+\cos \left( 2t\right) },$ $t$ en metros $s$ en segundos, si
-su posición en $t=\frac{\pi }{8}$ es $2$ metros. \ Hallar la función de posición de la part\'{\i}cula.}{La función de posición de la part\'{\i}cula es: $s(t)=-\cot \left( 2t\right) +\frac{1}{2}\csc \left(2t\right) +3-\frac{\sqrt{2}}{2}$}
+\exercise{La velocidad de una partícula es $v(t)=\frac{1}{1+\cos \left( 2t\right)}$, $t$ en metros, $s$ en segundos. Si
+su posición en $t=\frac{\pi }{8}$ es $2$ metros, hallar la función de posición de la partícula.}{La función de posición de la partícula es: $s(t)=-\cot \left( 2t\right) +\frac{1}{2}\csc \left(2t\right) +3-\frac{\sqrt{2}}{2}$}
 
-\exercise{Si la aceleración de una part\'{\i}cula es $a(t)=\sen \left( 2t\right) +e^{2t}+2^{4t},$ con \ $t$ en metros $s$ en
-segundos, su velocidad inicial es 6 metros por segundo y su posición inicial es 4 metros. \ Hallar la función de posición de la part\'{\i}cula.}{$s\left( t\right) =-\frac{\sen \left( 2t\right) }{4}+\frac{e^{2t}}{4}+\frac{2^{4t}}{16\ln ^{2}\left( 2\right) }+\left( 6-\frac{1}{4\ln \left(2\right) }\right) t+\frac{15}{4}-\frac{1}{16\ln ^{2}\left( 2\right) }$}
+\exercise{La aceleración de una partícula es $a(t)=\sen \left( 2t\right) +e^{2t}+2^{4t}$, con $t$ en metros, $s$ en
+segundos, su velocidad inicial es 6 metros por segundo y su posición inicial es 4 metros. Hallar la función de posición de la partícula.}{$s\left( t\right) =-\frac{\sen \left( 2t\right) }{4}+\frac{e^{2t}}{4}+\frac{2^{4t}}{16\ln ^{2}\left( 2\right) }+\left( 6-\frac{1}{4\ln \left(2\right) }\right) t+\frac{15}{4}-\frac{1}{16\ln ^{2}\left( 2\right) }$}
 
-\exercise{Si la pendiente de la tangente a la gráfica de $f$ en $\left(x,f\left( x\right) \right)$ \ es $\cfrac{\cos  ^{2}x}{1+\sen x}$ y $f\left( \frac{\pi }{6}\right) =4$. Hallar la función
-$f\left( x\right).$}{$f\left( x\right) =x+\cos x+4-\frac{\pi}{6}-\frac{\sqrt{3}}{2}$}
+\exercise{La pendiente de la tangente a la gráfica de $f$ en $\left(x,f\left( x\right) \right)$ es $\frac{\cos  ^{2}x}{1+\sen x}$ y $f\left( \frac{\pi }{6}\right) =4$. Hallar la función $f\left( x\right)$.}{$f\left( x\right) =x+\cos x+4-\frac{\pi}{6}-\frac{\sqrt{3}}{2}$}
 
-En los siguientes ejercicios para cada una de las funciones $f\left(
-x\right) $ dadas, hallar el valor de $c$ que garantiza el teorema del valor
-medio para integrales en los intervalos indicados y hacer una gráfica de la
-situación.
+\vspace*{\parskip}
+
+En los siguientes ejercicios para cada una de las funciones $f(x)$ dadas, hallar el valor de $c$ que garantiza el teorema del valor medio para integrales en los intervalos indicados y hacer una gráfica de la situación.
 
 \begin{multicols}{2}
 \exercise{$f\left( x\right) =6x^{2}+4x+4$ en $\left[1,3\right].$}{$c=\frac{2}{3}\sqrt{13}-\frac{1}{3}$}
@@ -1045,7 +1043,9 @@ situación.
 \exercise{$f\left( x\right) =4\cos x$ en $\left[ 0,\frac{\pi }{2}\right] $.}{$c=\arccos \left( \frac{2}{\pi }\right)=0.880\,69$}
 \end{multicols}
 
-Para cada una de las funciones $f\left( x\right) $ dadas en los siguientes ejercicios: a) Calcular la función $A\left( x\right) =\displaystyle\int_{a}^{x}f\left( t\right) dt$, de área de acumulación de $f\left( x\right) $ a partir del valor de $t=a$ indicado. b) Hallar la derivada respecto a $x$ de la función área de acumulación $\frac{dA}{dx}$.
+\vspace*{\parskip}
+
+Para cada una de las funciones $f\left( x\right) $ dadas en los siguientes ejercicios: a) Calcular la función $A\left( x\right) =\int_{a}^{x}f\left( t\right) dt$, de área de acumulación de $f\left( x\right) $ a partir del valor de $t=a$ indicado. b) Hallar la derivada respecto a $x$ de la función área de acumulación $\frac{dA}{dx}$.
 
 \exercise{$f\left( x\right) =3x^{2}+6x+2$ a partir de $t=2$}{$a)$ $A\left( x\right) =x^{3}+3x^{2}+2x-24\qquad b)$ $\frac{dA}{dx}
 =3x^{2}+6x+2=f\left( x\right) $}
@@ -1088,25 +1088,24 @@ partir de $t=0.$}{$a)$ $A\left( x\right) =\sen x-\cos x+\frac{1}{4}e^{4x}+\frac{
 \end{multicols}
 
 \exercise {En cada caso hallar una función $f$ y un número $a$ que cumplan la igualdad dada}
-\begin{multicols}{2}
+
 \subexercise{$\displaystyle\int_{a}^{x}\frac{f\left( t\right) }{t^{2}}dt=3x^{2}-9$}{$f(x)=6x^{3}\qquad a=\pm \sqrt{3}$}
 
 \subexercise{$\displaystyle\int_{a}^{x}\frac{f(t)+1}{f(t)-1}dt=\frac{x-1}{2x+1}$}{\linebreak$f(x)=-3-(2x+1)^{2}\qquad  a=1$}
 
 \subexercise{$\displaystyle\int_{2x}^{a-1}\left( t+1\right) ^{2}f(t)dt=\frac{x^{3}}{2x+1}$
 }{$f(z)=\frac{2z^{3}+3z^{2}}{8(z+1)^{4}}\qquad a=-1$}
-\end{multicols}
 
 \exercise {Calcular las siguientes integrales definidas}
-\begin{multicols}{2}
+
 \subexercise{$\displaystyle\int_{-2}^{2}\left( 4x^{3}+6x^{2}+8x-1\right) dx$} {$28$}
 
-\subexercise{$\displaystyle\int_{0}^{\pi }\sin \left( \frac{1}{4}x\right) dx$=}{$\allowbreak 4-2\sqrt{2}$}
+\subexercise{$\displaystyle\int_{0}^{\pi }\sin \left( \frac{1}{4}x\right) dx$=}{$4-2\sqrt{2}$}
 
 \subexercise{$\displaystyle\int_{0}^{\pi }\left( \cos \left( \frac{1}{2}x\right) +\sin \left( \frac{1%
 }{2}x\right) \right) ^{2}dx$}{$\pi +2$}
 
-\subexercise{$\displaystyle\int_{0}^{1}\left( \sqrt[3]{8t}-5t^{\frac{3}{4}}+7\sqrt[7]{t}\right) dt$}{$\allowbreak \frac{267}{56}$}
+\subexercise{$\displaystyle\int_{0}^{1}\left( \sqrt[3]{8t}-5t^{\frac{3}{4}}+7\sqrt[7]{t}\right) dt$}{$\frac{267}{56}$}
 
 \subexercise{$\displaystyle\int_{0}^{\frac{\pi }{8}}\frac{\sin (2x)}{\cos ^{2}(2x)}dx$}{ $\frac{1}{2}  \sqrt{2}-\frac{1}{2}$}
 
@@ -1126,21 +1125,18 @@ dy$}{$=\frac{\arcsec(4)}{2}+\frac{1}{8}-\frac{\arcsec(2)}{2}$}
 \subexercise{$\displaystyle\int_{\frac{\pi }{16}}^{\frac{\pi }{8}}\left( \tan (2t)+\cot (2t)\right)
 ^{2}\ dt$}{$1-\frac{\tan (\frac{\pi }{8})}{2}-\frac{\cot (\frac{\pi }{8})}{2}$}
 
-\subexercise{$\displaystyle\int_{0}^{1}\left( 2t+3\right) ^{4}dt$}{$\allowbreak \frac{1441}{5}$}
-\end{multicols}
+\subexercise{$\displaystyle\int_{0}^{1}\left( 2t+3\right) ^{4}dt$}{$\frac{1441}{5}$}
 
-\exercise {Hallar el área de la región limitada por las gr�ficas de:}
+\exercise {Hallar el área de la región limitada por las gráficas de:}
 
-\subexercise {$y=x^{4}+1,$ el eje $x$, el eje $y$ y la recta $x=3$}{$\allowbreak \frac{258}{5}u^{2}$}
+\subexercise {$y=x^{4}+1,$ el eje $x$, el eje $y$ y la recta $x=3$}{$\frac{258}{5}u^{2}$}
 
-\subexercise {$y=\cos(2x)$, el eje $x$, el eje $y$ y la recta $x=\frac{\pi }{8}$}{$\allowbreak \frac{1}{4}\sqrt{2}u^{2}$}
+\subexercise {$y=\cos(2x)$, el eje $x$, el eje $y$ y la recta $x=\frac{\pi }{8}$}{$\frac{1}{4}\sqrt{2}u^{2}$}
 
-\subexercise {$y=\cfrac{x^{4}+x+1}{x^{6}},$ el eje $x$, y las rectas $x=1$ y $x=2$}{$\allowbreak \frac{297}{320}u^{2}$}
+\subexercise {$y=\frac{x^{4}+x+1}{x^{6}},$ el eje $x$, y las rectas $x=1$ y $x=2$}{$\frac{297}{320}u^{2}$}
 
-\subexercise {$y=\cfrac{x^{4}+1}{x^{2}+1},$ el eje $x$, el eje $y$ y la recta $x=1$}{$\allowbreak \left( \frac{1}{2}\pi -%
-\frac{2}{3}\right) u^{2}$}
+\subexercise {$y=\frac{x^{4}+1}{x^{2}+1},$ el eje $x$, el eje $y$ y la recta $x=1$}{$\left( \frac{1}{2}\pi - \frac{2}{3}\right) u^{2}$}
 
-\subexercise {$ y=\cfrac{\sen^{2}x+1}{\cos ^{2}x},$ el eje $x$, el eje $y$ y la recta $x=\frac{\pi }{4}$}{$\left(
-\allowbreak 2-\frac{1}{4}\pi \right) u^{2}$}
+\subexercise {$ y=\frac{\sen^{2}x+1}{\cos ^{2}x},$ el eje $x$, el eje $y$ y la recta $x=\frac{\pi }{4}$}{$\left(2-\frac{1}{4}\pi \right) u^{2}$}
 
-\subexercise {$y=\cfrac{1}{\sqrt{9-x^{2}}},$ el eje $x$, y la recta $x=1$}{$\allowbreak \frac{1}{2}\pi u^{2}$}
+\subexercise {$y=\frac{1}{\sqrt{9-x^{2}}},$ el eje $x$ y la recta $x=1$}{$\frac{1}{2}\pi u^{2}$}
