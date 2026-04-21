@@ -8,10 +8,10 @@ Hasta ahora se trabajó con funciones que debían ser continuas en un intervalo 
 
 Un intervalo de la forma $[a,\infty )$, $(\infty,b]$ o $(-\infty ,\infty )$ se dice que es \textit{no acotado}. Las integrales impropias se evalúan según el intervalo.
 
-\textbf{Caso I.} Supongamos que $f$ es una función continua en el intervalo $[a,\infty ).$ La integral impropia $\int_{a}^{\infty }f\left( x\right) dx$ se evalúa de la siguiente manera:
+\textbf{Caso I.} Supongamos que $f$ es una función continua en el intervalo $[a,\infty ).$ La integral impropia $\int_{a}^{\infty }f\left( x\right)\,dx$ se evalúa de la siguiente manera:
 \[
-  \int_{a}^{\infty }f\left( x\right) dx=\lim_{z\rightarrow \infty
-  }\int_{a}^{z}f\left( x\right) dx
+  \int_{a}^{\infty }f\left( x\right)\,dx=\lim_{z\rightarrow \infty
+  }\int_{a}^{z}f\left( x\right)\,dx
 \]
 
 \begin{figure}[H]
@@ -27,10 +27,10 @@ Un intervalo de la forma $[a,\infty )$, $(\infty,b]$ o $(-\infty ,\infty )$ se d
 %\textbf{Fuente:} elaboraci?n propia
 %\end{center}
 
-\textbf{Caso II.} Sea $f$ una función continua en $(-\infty ,b].$ La integral impropia $\int_{-\infty }^{b}f\left( x\right) dx$ se evalúa de la siguiente manera:
+\textbf{Caso II.} Sea $f$ una función continua en $(-\infty ,b].$ La integral impropia $\int_{-\infty }^{b}f\left( x\right)\,dx$ se evalúa de la siguiente manera:
 \[
-  \int_{-\infty }^{b}f\left( x\right) dx=\lim_{w\rightarrow -\infty
-  }\int_{w}^{b}f\left( x\right) dx
+  \int_{-\infty }^{b}f\left( x\right)\,dx=\lim_{w\rightarrow -\infty
+  }\int_{w}^{b}f\left( x\right)\,dx
 \]
 
 \begin{figure}[H]
@@ -46,13 +46,13 @@ Un intervalo de la forma $[a,\infty )$, $(\infty,b]$ o $(-\infty ,\infty )$ se d
 %\textbf{Fuente:} elaboraci?n propia
 %\end{center}
 
-\textbf{Caso III.} Sea $f$ \ una función continua en $(-\infty ,\infty ).$ La integral impropia $\int_{-\infty }^{\infty }f\left( x\right) dx$ es
+\textbf{Caso III.} Sea $f$ \ una función continua en $(-\infty ,\infty ).$ La integral impropia $\int_{-\infty }^{\infty }f\left( x\right)\,dx$ es
 {\small
   \[
-    \int_{-\infty }^{\infty }\hspace{-0.3cm}f\left( x\right) dx=\int_{-\infty }^{c}\hspace{-0.3cm}f\left(
-    x\right) dx+\int_{c}^{\infty }\hspace{-0.3cm}f\left( x\right) dx=\lim_{w\rightarrow -\infty
-    }\int_{w}^{c}\hspace{-0.3cm}f\left( x\right) dx+\lim_{z\rightarrow \infty
-    }\int_{c}^{z}\hspace{-0.3cm}f\left( x\right) dx
+    \int_{-\infty }^{\infty }\hspace{-0.3cm}f\left( x\right)\,dx=\int_{-\infty }^{c}\hspace{-0.3cm}f\left(
+    x\right)\,dx+\int_{c}^{\infty }\hspace{-0.3cm}f\left( x\right)\,dx=\lim_{w\rightarrow -\infty
+    }\int_{w}^{c}\hspace{-0.3cm}f\left( x\right)\,dx+\lim_{z\rightarrow \infty
+    }\int_{c}^{z}\hspace{-0.3cm}f\left( x\right)\,dx
   \]
 }
 
@@ -190,7 +190,7 @@ Entonces, la integral dada converge a $4\ln 2.$
 \end{ejemplo}
 \emph{Solución.} Si reescribimos la integral y hacemos la sustitución $y=x^2$, tenemos
 \[
-  \int_{2}^{\infty }\frac{x}{x^{4}-1}dx=\int_{2}^{\infty }\frac{xdx}{\left(
+  \int_{2}^{\infty }\frac{x}{x^{4}-1}dx=\int_{2}^{\infty }\frac{x\,dx}{\left(
   x^{2}\right) ^{2}-1}=\int_{4}^{\infty }\frac{\frac{1}{2}dy}{y^{2}-1}
   =\frac{1}{2}\int_{4}^{\infty }\frac{dy}{\left( y-1\right) \left( y+1\right)}
 \]
@@ -218,7 +218,7 @@ Ahora usemos fracciones parciales para la última integral, y tenemos que
 \end{ejemplo}
 \emph{Solución.} Reescribamos el integrando y tomemos la sustitución $y=x^2$:
 \begin{align*}
-  \int_{3}^{\infty}\frac{x}{x^{4}+3x^{2}-4}dx&=\int_{3}^{\infty }\frac{xdx}{%
+  \int_{3}^{\infty}\frac{x}{x^{4}+3x^{2}-4}dx&=\int_{3}^{\infty }\frac{x\,dx}{%
   \left( x^{2}\right) ^{2}+3x^{2}-4}
   =\int_{9}^{\infty }\frac{\frac{1}{2}dy}{y^{2}+3y-4} \\
   &=\frac{1}{2}%
@@ -343,10 +343,10 @@ Y aplicando límites,
 
 Otro caso de integrales impropias se tiene cuando el integrando es una función con discontinuidad infinita (asíntota vertical) en el intervalo de integración.
 
-\textbf{Caso I.} Sea $f$ una función continua en el intervalo $(a,b]$ y supongamos que $x=a$ es una asíntota vertical de $f$. Entonces, la integral {\small $\int_{a}^{b}f\left( x\right) dx$} es impropia y, para calcularla, se procede con el siguiente límite:
+\textbf{Caso I.} Sea $f$ una función continua en el intervalo $(a,b]$ y supongamos que $x=a$ es una asíntota vertical de $f$. Entonces, la integral {\small $\int_{a}^{b}f\left( x\right)\,dx$} es impropia y, para calcularla, se procede con el siguiente límite:
 \[
-  \int_{a}^{b}f\left( x\right) dx=\lim_{z\rightarrow a^+}\int_{z}^{b}f\left(
-  x\right) dx
+  \int_{a}^{b}f\left( x\right)\,dx=\lim_{z\rightarrow a^+}\int_{z}^{b}f\left(
+  x\right)\,dx
 \]
 
 \begin{figure}[H]
@@ -362,11 +362,11 @@ Otro caso de integrales impropias se tiene cuando el integrando es una función 
 %\textbf{Fuente:} elaboraci?n propia
 %\end{center}
 
-\textbf{Caso II.} Supongamos que $f$ es una función continua en $[a,b)$ y que $x=b$ es una asíntota vertical de $f$. La integral impropia {\small $\int_{a}^{b}f\left( x\right) dx$} se define como
+\textbf{Caso II.} Supongamos que $f$ es una función continua en $[a,b)$ y que $x=b$ es una asíntota vertical de $f$. La integral impropia {\small $\int_{a}^{b}f\left( x\right)\,dx$} se define como
 {\small
   \[
-    \int_{a}^{b}f\left( x\right) dx=\lim_{w\rightarrow b^-}\int_{a}^{w}f\left(
-    x\right) dx
+    \int_{a}^{b}f\left( x\right)\,dx=\lim_{w\rightarrow b^-}\int_{a}^{w}f\left(
+    x\right)\,dx
   \]
 }
 
@@ -383,13 +383,13 @@ Otro caso de integrales impropias se tiene cuando el integrando es una función 
 %\textbf{Fuente:} elaboraci?n propia
 %\end{center}
 
-\textbf{Caso III.} Sea $f$ una función continua en $[a,b]-\left\{ c\right\} $, para c$\in\left( a,b\right)$, y $x=c$ es una asíntota vertical de $f$. La integral impropia {\small $\int_{a}^{b}f\left( x\right) dx$} se define como
+\textbf{Caso III.} Sea $f$ una función continua en $[a,b]-\left\{ c\right\} $, para c$\in\left( a,b\right)$, y $x=c$ es una asíntota vertical de $f$. La integral impropia {\small $\int_{a}^{b}f\left( x\right)\,dx$} se define como
 
 \resizebox{\textwidth}{!}{$
   \begin{aligned}
-    \int_{a}^{b}f\left( x\right) dx&=\int_{a}^{c}f\left( x\right)
-    dx+\int_{c}^{b}f\left( x\right) dx=\lim_{w\rightarrow c^-}\int_{a}^{w}f\left(
-    x\right) dx+\lim_{z\rightarrow c^+}\int_{z}^{b}f\left( x\right) dx
+    \int_{a}^{b}f\left( x\right)\,dx&=\int_{a}^{c}f\left( x\right)
+    dx+\int_{c}^{b}f\left( x\right)\,dx=\lim_{w\rightarrow c^-}\int_{a}^{w}f\left(
+    x\right)\,dx+\lim_{z\rightarrow c^+}\int_{z}^{b}f\left( x\right)\,dx
   \end{aligned}
 $}
 
@@ -481,14 +481,14 @@ Supongamos que
 
 Entonces, la integral de $f$ en el intervalo $[a,b]$ puede aproximarse por la suma de Riemann de la función $f $ en el intervalo, usando el punto medio de cada subintervalo. Llamemos $M_{n}$ a la aproximación, entonces
 \[
-  \int_{a}^{b}f(x)dx\approx M_{n}=\sum\limits_{i=1}^{n}f(x_{i}^{*})\Delta x=\Delta x[f(x_{1}^{* })+f(x_{2}^{*
+  \int_{a}^{b}f(x)\,dx\approx M_{n}=\sum\limits_{i=1}^{n}f(x_{i}^{*})\Delta x=\Delta x[f(x_{1}^{* })+f(x_{2}^{*
   })+\ldots +f(x_{n}^{* })]
 \]
 
 \subsubsection*{Error en el método del punto medio}
 
 Si $f^{\prime}$ es continua y $M$ es una cota superior de $\left\vert
-f^{\prime}\right\vert $ en $\left[ a,b\right] $, entonces el error en el método del punto medio {\small $E_{m}=\int_{a}^{b}f(x)dx-M_{n}$} satisface
+f^{\prime}\right\vert $ en $\left[ a,b\right] $, entonces el error en el método del punto medio {\small $E_{m}=\int_{a}^{b}f(x)\,dx-M_{n}$} satisface
 \[
   \left\vert E_{m}\right\vert \leq \frac{\left( b-a\right) ^{3}}{24n^{2}}M
 \]
@@ -564,7 +564,7 @@ eje $x$ se aproxima sumando las áreas de todos los trapecios:
 
 {\small
   \begin{align*}
-    \int_{a}^{b}&f(x)dx\approx T_{n}=\frac{1}{2}\left( y_{0}+y_{1}\right) \Delta
+    \int_{a}^{b}&f(x)\,dx\approx T_{n}=\frac{1}{2}\left( y_{0}+y_{1}\right) \Delta
     x+\frac{1}{2}\left( y_{1}+y_{2}\right) \Delta x+\frac{1}{2}\left(
     y_{2}+y_{3}\right) \Delta x\\
     &\ +\frac{1}{2}\left( y_{3}+y_{4}\right) \Delta x+\ldots+\frac{1}{2}\left(
@@ -578,7 +578,7 @@ eje $x$ se aproxima sumando las áreas de todos los trapecios:
   \end{align*}
 }
 
-En general, para aproximar la $\int_{a}^{b}f(x)dx$ por medio de la regla del trapecio, se utiliza
+En general, para aproximar la $\int_{a}^{b}f(x)\,dx$ por medio de la regla del trapecio, se utiliza
 \[
   T_{n}=\frac{1}{2}\left[ f(a)+2f(x_{1})+2f(x_{2})+\ldots+2f(x_{n-2})+2f(x_{n-1})+f(b)\right] \Delta x
 \]
@@ -592,7 +592,7 @@ y también
 \subsubsection*{Error en la regla del trapecio}
 
 La aproximación con la regla del trapecio lleva a un error que involucra la segunda derivada de $f$. Más exactamente, si $f^{\prime\prime}$ es continua y $M$ es una cota superior de $\left\vert
-f^{\prime\prime}\right\vert $ en $\left[ a,b\right] $, entonces el error en la regla del trapecio $E_{T}=\int_{a}^{b}f(x)dx-T_{n}$ satisface
+f^{\prime\prime}\right\vert $ en $\left[ a,b\right] $, entonces el error en la regla del trapecio $E_{T}=\int_{a}^{b}f(x)\,dx-T_{n}$ satisface
 \[
   \left\vert E_{T}\right\vert \leq \frac{\left( b-a\right) ^{3}}{12n^{2}}M
 \]
@@ -656,7 +656,7 @@ $}
 Con el siguiente ejemplo usamos integración numérica para responder a un interrogante específico en un contexto aplicado.
 
 \begin{ejemplo}
-  Una alberca mide $30$ pies de ancho y $50$ pies de largo. La tabla 3 muestra la profundidad $h$ del agua a intervalos de $5$ pies. Estime el volumen del agua en la alberca por medio de la regla del trapecio con $\ n=10,$ aplicada a la integral $V=\int_{0}^{50}30h(x)dx.$
+  Una alberca mide $30$ pies de ancho y $50$ pies de largo. La tabla 3 muestra la profundidad $h$ del agua a intervalos de $5$ pies. Estime el volumen del agua en la alberca por medio de la regla del trapecio con $\ n=10,$ aplicada a la integral $V=\int_{0}^{50}30h(x)\,dx.$
 \end{ejemplo}
 
 \begin{table}[H]
@@ -678,7 +678,7 @@ Con el siguiente ejemplo usamos integración numérica para responder a un inter
 
 \resizebox{\textwidth}{!}{$
   \begin{aligned}
-    V&=\int_{0}^{50}30h(x)dx \approx T_{10}=30\left( \frac{1}{2}\right) \left[
+    V&=\int_{0}^{50}30h(x)\,dx \approx T_{10}=30\left( \frac{1}{2}\right) \left[
       f(0)+2f(5)+2f(10)+2f(x15)+2f(20)\right.\\
       &\quad\left.+2f(25)+2f(30)+2f(35)+2f(40)+2f(45)+f(50)%
     \right] (5) \\
@@ -767,7 +767,7 @@ Así, el área debajo de la parábola que pasa por los puntos {\footnotesize $(x
 
 {\small
   \begin{align*}
-    \int_{a}^{b}&f(x)dx \approx S_{n} =\frac{h}{3}\left[f(x_{0})+4f(x_{1})+f(x_{2})\right] \frac{h}{3}\left[f(x_{2})+4f(x_{3})+f(x_{4})\right] \\ &\quad+\frac{h}{3}\left[f(x_{4})+4f(x_{5})+f(x_{6})\right] +\ldots %\\
+    \int_{a}^{b}&f(x)\,dx \approx S_{n} =\frac{h}{3}\left[f(x_{0})+4f(x_{1})+f(x_{2})\right] \frac{h}{3}\left[f(x_{2})+4f(x_{3})+f(x_{4})\right] \\ &\quad+\frac{h}{3}\left[f(x_{4})+4f(x_{5})+f(x_{6})\right] +\ldots %\\
     +\frac{h}{3}\left[ f(x_{n-2})+4f(x_{n-1})+f(x_{n})\right] \\
     &=\frac{h}{3}\left[f(x_{0})+4f(x_{1})+2f(x_{2})+4f(x_{3})+f(x_{4})+f(x_{4})+4f(x_{5})\right.\\
     &\quad\left.+f(x_{6})+\ldots+f(x_{n-2})+4f(x_{n-1})+f(x_{n})\right] \\
@@ -776,7 +776,7 @@ Así, el área debajo de la parábola que pasa por los puntos {\footnotesize $(x
   \end{align*}
 }
 
-En resumen, para aproximar el valor de $\int_{a}^{b}f(x)dx$ por el método de Simpson, se usa la expresión
+En resumen, para aproximar el valor de $\int_{a}^{b}f(x)\,dx$ por el método de Simpson, se usa la expresión
 
 \resizebox{\textwidth}{!}{$
   \begin{aligned}
@@ -797,7 +797,7 @@ con $h=\Delta x=\cfrac{b-a}{n}$ y $n$ un número par.
 \subsubsection*{Error en el método de Simpson}
 
 Si $f^{\left( 4\right) }$ es continua y $M$ es una cota superior de $\left\vert f^{\left( 4\right) }\right\vert$ en $\left[ a,b\right]$,
-entonces el error en el método de Simpson $E_{S}=\int_{a}^{b}f(x)dx-S_{n}$
+entonces el error en el método de Simpson $E_{S}=\int_{a}^{b}f(x)\,dx-S_{n}$
 satisface
 \[
   \left\vert E_{S}\right\vert \leq \frac{\left( b-a\right) ^{5}}{180n^{4}}M
@@ -910,7 +910,7 @@ satisface
 
   \item {$\int_{e}^{\infty }\frac{1}{x\left( \ln x\right) ^{3}}dx$} {Converge a $\frac{1}{2}$.}
 
-  \item {$\int_{0}^{\infty }e^{-x}\sin xdx$} {Converge a $\frac{1}{2}$.}
+  \item {$\int_{0}^{\infty }e^{-x}\sin x\,dx$} {Converge a $\frac{1}{2}$.}
 
   \item {$\int_{0}^{2}\frac{1}{\sqrt[3]{x-1}}dx$} {Converge a $0$.}
 
@@ -950,7 +950,7 @@ satisface
 
   \item {$\int_{-1}^{8}\frac{1}{\sqrt[3]{x}}dx$} {Converge a $\frac{9}{2}$}
 
-  \item {$\int_{0}^{1}x\ln xdx$} {Converge a $-\frac{1}{4}$}
+  \item {$\int_{0}^{1}x\ln x\,dx$} {Converge a $-\frac{1}{4}$}
 
   \item {$\int_{0}^{\infty }\frac{1}{\left( 1+x\right) \sqrt{x}}dx$} {Converge a $\pi$}
 
@@ -1002,7 +1002,7 @@ satisface
 
   \item {Sea $f$\ la función cuyos datos están en la siguiente tabla.}
 
-  \item {Use la tabla para aproximar $\int_{0}^{5}f\left( x\right) dx$ usando el método del punto medio.}{$M_{5}=11.2$}
+  \item {Use la tabla para aproximar $\int_{0}^{5}f\left( x\right)\,dx$ usando el método del punto medio.}{$M_{5}=11.2$}
 
 \item {Si $-3\leq f^{\prime \prime}\left( x\right) \leq 4$ para todo $x.$ \ Estime el error en la aproximación de la parte a).}{Error $0.8333$ }
 
@@ -1021,7 +1021,7 @@ satisface
       \propia
   \end{table}}
 
-\item {Para aproximar $\int_{2}^{7}f\left( x\right) dx$ usando la regla del trapecio.}{$T_{10}=\num{8.6}$}
+\item {Para aproximar $\int_{2}^{7}f\left( x\right)\,dx$ usando la regla del trapecio.}{$T_{10}=\num{8.6}$}
 
 \item {Si $-4\leq f^{\prime \prime}\left( x\right) \leq 6$ para todo $x\in \left[ 2,7\right].$ \ Estime el error en la aproximación de la parte a).}{Error $0,m625$}
 
@@ -1039,7 +1039,7 @@ satisface
     \propia
 \end{table}}
 
-\item {Para aproximar $\int_{4}^{10}f\left( x\right) dx$ usando la regla del trapecio.}{$S_{12}=26.7$}
+\item {Para aproximar $\int_{4}^{10}f\left( x\right)\,dx$ usando la regla del trapecio.}{$S_{12}=26.7$}
 
 \item {Si $-5\leq f^{\left( 4\right) }\left( x\right) \leq 10$ para todo $x\in %
   \left[ 4,10\right] .$ \ Estime el error en la aproximación de la parte

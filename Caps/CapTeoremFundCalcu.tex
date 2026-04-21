@@ -20,19 +20,19 @@ Propiedades:
 
 \begin{defi}
   Dada una función $f$ y $F$ una antiderivada, entonces la familia de todas las antiderivadas de $f$, es decir, $F(x)+C$ con $C$ constante, se llama integral indefinida de $f$ y se denota con
-  \[\int f(x)dx\]
+  \[\int f(x)\,dx\]
 \end{defi}
 
 \subsection{Propiedades de la integral indefinida}
 Supongamos que $f$ y $g$ son funciones con antiderivadas $F$ y $G$ respectivamente. Entonces
 \begin{parrafonumerado}
-\item $\displaystyle{\int f^{\prime }(x)dx=f(x)+C}$
+\item $\displaystyle{\int f^{\prime }(x)\,dx=f(x)+C}$
 
-\item $\displaystyle{\frac{d}{dx}\left(\int f(x)dx\right)=f(x)}$
+\item $\displaystyle{\frac{d}{dx}\left(\int f(x)\,dx\right)=f(x)}$
 
-\item $\displaystyle{\int \left(f(x)+g(x)\right)dx=\int f(x)dx+\int g(x)dx}$
+\item $\displaystyle{\int \left(f(x)+g(x)\right)dx=\int f(x)\,dx+\int g(x)\,dx}$
 
-\item $\displaystyle{\int \alpha f(x)dx=\alpha \int f(x)dx},$ donde $\alpha $ es una constante.
+\item $\displaystyle{\int \alpha f(x)\,dx=\alpha \int f(x)\,dx},$ donde $\alpha $ es una constante.
 \end{parrafonumerado}
 
 \subsection{Algunas integrales indefinidas}
@@ -168,7 +168,7 @@ En resumen, se obtiene la lista de integrales indefinidas\label{TablaResumen}:
   \begin{small}
     \begin{align*}
       \int &\bigl(\sen x+\cos x-3\sen (2x)+4\cos (3x)\bigr)dx\\
-      &=\int \sen xdx+\int \cos xdx-3\int \sen (2x)dx+4\int \cos (3x)dx\\
+      &=\int \sen x\,dx+\int \cos x\,dx-3\int \sen (2x)\,dx+4\int \cos (3x)dx\\
       &=-\cos x+\sen x-3\left(-\frac{1}{2}\cos (2x)\right)+4\left(\frac{1}{3}\sen (3x)\right)\\
       &=-\cos x+\sen x+\frac{3}{2}\cos (2x)+\frac{4}{3}\sen (3x)+C
     \end{align*}
@@ -184,7 +184,7 @@ En resumen, se obtiene la lista de integrales indefinidas\label{TablaResumen}:
   \begin{small}
     \begin{align*}
       \int \bigl(\csc ^{2}x+&3\sec ^{2}(2x)-8\csc ^{2}(7x)\bigr)dx\\
-      &= \int \csc ^{2}xdx+3\int \sec ^{2}(2x)dx-8\int \csc ^{2}(7x)\\
+      &= \int \csc ^{2}x\,dx+3\int \sec ^{2}(2x)\,dx-8\int \csc ^{2}(7x)\\
       &=-\cot x+3\left(\frac{1}{2}\tan (2x)\right)-8\left(-\frac{1}{7}\cot (7x)\right)\\
       &=-\cot x+\frac{3}{2}\tan (2x)+\frac{8}{7}\cot (7x)+C
     \end{align*}
@@ -198,7 +198,7 @@ En resumen, se obtiene la lista de integrales indefinidas\label{TablaResumen}:
   \begin{gather*}
     \begin{aligned}
       \int \bigl(\sec (2x)\tan (2x)-&5\csc (3x)\cot (3x)\bigr)dx\\
-      &=\int \sec (2x)\tan (2x)dx - 5\int \csc (3x)\cot (3x)dx\\
+      &=\int \sec (2x)\tan (2x)\,dx - 5\int \csc (3x)\cot (3x)dx\\
       &=\frac{1}{2}\sec (2x)-5\left(-\frac{1}{3}\csc (3x)\right)+L\\
       &=\frac{1}{2}\sec (2x)+\frac{5}{3}\csc (3x)+L
     \end{aligned}
@@ -247,7 +247,7 @@ En resumen, se obtiene la lista de integrales indefinidas\label{TablaResumen}:
 
   Con ello,
   \begin{align*}
-    \int \sen ^{2}xdx&=\int\left( \frac{1}{2}-\frac{1}{2}\cos(2x)\right)dx \\
+    \int \sen ^{2}x\,dx&=\int\left( \frac{1}{2}-\frac{1}{2}\cos(2x)\right)dx \\
     &=\frac{1}{2}x-\frac{1}{2}\times \frac{1}{2}\sen (2x)+C \\
     &=\frac{1}{2}x-\frac{1}{4}\sen (2x)+C
   \end{align*}
@@ -262,7 +262,7 @@ En resumen, se obtiene la lista de integrales indefinidas\label{TablaResumen}:
   \end{gather*}
   Entonces,
   \begin{align*}
-    \int \cos ^{2}xdx&=\int\left( \frac{1}{2}+\frac{1}{2}\cos (2x)\,\right) dx\\
+    \int \cos ^{2}x\,dx&=\int\left( \frac{1}{2}+\frac{1}{2}\cos (2x)\,\right) dx\\
     &=\frac{1}{2}x+\frac{1}{2}\times \frac{1}{2}\sen (2x)+C \\
     &=\frac{1}{2}x+\frac{1}{4}\sen (2x)+C
   \end{align*}
@@ -453,7 +453,7 @@ suma de Riemann), cuando el límite existe, este es el valor promedio de $f$:
 \begin{align*}
 \Pro\left( f\right)&=\lim_{n\rightarrow \infty }\frac{\sum_{k=1}^{n}f\left(
 x_{k}^{\ast }\right) \Delta x}{b-a}=\frac{1}{b-a}\int_{a}^{b}f\left(
-x\right) dx
+x\right)\,dx
 \end{align*}
 
 \begin{ejemplo}
@@ -474,36 +474,36 @@ El teorema del valor medio para integrales nos dice que el valor promedio de una
 \begin{teorema}\label{ValorMedio}
 Si $f$ es una función continua en el intervalo $\left[a,b\right]$, para $a$ y $b$ números reales, entonces existe un número real $c\in \left( a,b\right)$, tal que
 \begin{equation}
-  f\left( c\right) =\frac{1}{b-a}\int_{a}^{b}f(x)dx
+  f\left( c\right) =\frac{1}{b-a}\int_{a}^{b}f(x)\,dx
 \end{equation}
 
 \end{teorema}
 \textit{Demostración.} Como $f$ es continua en $[a,b]$, por el teorema de valores extremos para funciones continuas\footnote{\textcite{Stewart_2012}}, $f$ alcanza mínimo y máximo en el intervalo, es decir, existen números $d$ y $e$ en el intervalo $[a,b]$ tales que $f\left(d\right) \leq f(x)\leq f(e)$ para todo $x\in[a,b]$. Por otro lado, usando la propiedad de monotonía para integrar\footnote{Ver teorema \ref{PropIntegral}}, se tiene que
 \[
-f(d)(b-a)\leq \int_{a}^{b}f(x)dx\leq f(e)(b-a)
+f(d)(b-a)\leq \int_{a}^{b}f(x)\,dx\leq f(e)(b-a)
 \]
 Dividiendo por $b-a$, resulta
 \[
-f\left( d\right) \leq \frac{1}{b-a}\int_{a}^{b}f(x)dx\leq f(e)
+f\left( d\right) \leq \frac{1}{b-a}\int_{a}^{b}f(x)\,dx\leq f(e)
 \]
 luego, el valor
 \[
-N=\frac{1}{b-a}\int_{a}^{b}f(x)dx
+N=\frac{1}{b-a}\int_{a}^{b}f(x)\,dx
 \]
 es un número entre dos imágenes de la función, así que, usando el teorema del valor intermedio para funciones continuas, $f$ toma todos los valores entre dos imágenes, por lo que existe un número $c$ en el intervalo $\left( a,b\right)$, tal que
 \[
-f(c)=N=\frac{1}{b-a}\int_{a}^{b}f(x)dx
+f(c)=N=\frac{1}{b-a}\int_{a}^{b}f(x)\,dx
 \]
 como se quería probar.
 
 Si $f$ es una función continua y positiva en el intervalo $\left[a,b\right] $, el teorema anterior dice que el área del rectángulo con base en el intervalo $[a,b] $ en el eje $x$ y de altura $
 f\left( c\right) $ es igual al área bajo la curva $y=f(x) $ en $[a,b] .$ Gráficamente, el teorema del valor medio indica que el área bajo la curva es igual al área del rectángulo con base de longitud $b-a$ y altura $f\left( c\right)$.
 \[
-f\left( c\right) =\frac{1}{b-a}\int_{a}^{b}f(x)dx
+f\left( c\right) =\frac{1}{b-a}\int_{a}^{b}f(x)\,dx
 \]
 lo que es equivalente a
 \[
-f\left( c\right) \left( b-a\right) =\int_{a}^{b}f(x)dx
+f\left( c\right) \left( b-a\right) =\int_{a}^{b}f(x)\,dx
 \]
 
 \begin{figure}[H]
@@ -519,7 +519,7 @@ Halle los valores de $c$ que garantiza el teorema del valor medio para integrale
 \end{ejemplo}
 \emph{Solución.} Dado que $f$ es continua en $\left[ 0,2\right] $, por el teorema \ref{ValorMedio} existe $c\in \left(0,2\right) $, tal que
 \begin{align*}
-f\left( c\right) &=\frac{1}{2}\int_{0}^{2}\left( 3x^{2}+2x\right) dx\\
+f\left( c\right) &=\frac{1}{2}\int_{0}^{2}\left( 3x^{2}+2x\right)\,dx\\
 \Rightarrow 3c^{2}+2c&=\frac{1}{2}\left( 3\frac{2^{3}-0^{3}}{3}+2\frac{2^{2}-0^{2}}{2}\right)\\
 3c^{2}+2c&=6
 \end{align*}
@@ -786,7 +786,7 @@ y por el TFC, parte I,
 &=\frac{\sqrt{2}}{6}+\frac{1}{2}
 \end{align*}
 
-\item $\displaystyle{\int_{0}^{\frac{\pi }{8}}\sec (2x)\tan (2x)dx}$
+\item $\displaystyle{\int_{0}^{\frac{\pi }{8}}\sec (2x)\tan (2x)\,dx}$
 
 \vspace{\baselineskip}
 
@@ -913,7 +913,7 @@ En los ejercicios \ref{AntiInici}-\ref{AntiFin}, encuentre el valor de las integ
 
 \exercise{$\displaystyle\int \left( \frac{t^{2}}{2}+4t^{3}\right)dt$}{$\frac{t^{3}}{6}+t^{4}+C$}
 
-\exercise{$\displaystyle\int \left( \frac{1}{5}-\frac{2}{x^{3}}+2x\right) dx$}{$\frac{1}{5x^{2}}\left( 5x^{4}+x^{3}+5\right) +C$}
+\exercise{$\displaystyle\int \left( \frac{1}{5}-\frac{2}{x^{3}}+2x\right)\,dx$}{$\frac{1}{5x^{2}}\left( 5x^{4}+x^{3}+5\right) +C$}
 
 \exercise{$\displaystyle\int \left( \frac{\sqrt{x}}{2}+\frac{2}{\sqrt{x}}\right) dx$}{$4\sqrt{x}+\frac{1}{3}x^{\frac{3}{2}}+C$}
 
@@ -961,7 +961,7 @@ En los ejercicios \ref{AntiInici}-\ref{AntiFin}, encuentre el valor de las integ
 \exercise{$\displaystyle\int \left( \sec ^{2}x+4\csc ^{2}\left(2x\right) +8\sec ^{2}\left( 4x\right) \right) dx$}{$\tan x-2\cot \left(
 2x\right) +2\tan \left( 4x\right) +C$}
 
-\exercise{$\displaystyle\int \left( \sec x\tan x-4\csc 2x\cot2x\right) dx$}{$\sec x+2\csc \left( 2x\right) +C$}
+\exercise{$\displaystyle\int \left( \sec x\tan x-4\csc 2x\cot2x\right)\,dx$}{$\sec x+2\csc \left( 2x\right) +C$}
 
 \exercise{\label{AntiFin}$\displaystyle\int \frac{1}{2}\left( \csc ^{2}(\theta)-\csc (\theta )\cot (\theta )\right) d\theta $}{$\frac{-\cot (\theta)+\csc (\theta )}{2}+C=F(\theta )$}
 
@@ -1100,7 +1100,7 @@ partir de $t=0.$}{$a)$ $A\left( x\right) =\sen x-\cos x+\frac{1}{4}e^{4x}+\frac{
 
 \subexercise{$\displaystyle\int_{-2}^{2}\left( 4x^{3}+6x^{2}+8x-1\right) dx$} {$28$}
 
-\subexercise{$\displaystyle\int_{0}^{\pi }\sin \left( \frac{1}{4}x\right) dx$=}{$4-2\sqrt{2}$}
+\subexercise{$\displaystyle\int_{0}^{\pi }\sin \left( \frac{1}{4}x\right)\,dx$=}{$4-2\sqrt{2}$}
 
 \subexercise{$\displaystyle\int_{0}^{\pi }\left( \cos \left( \frac{1}{2}x\right) +\sin \left( \frac{1%
 }{2}x\right) \right) ^{2}dx$}{$\pi +2$}

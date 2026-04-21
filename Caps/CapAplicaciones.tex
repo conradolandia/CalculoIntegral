@@ -287,7 +287,7 @@ Con ello, el área de la región, usando valor absoluto en la integral, está da
     \right\vert dx\\
     &=\int_{\frac{\pi }{2}}^{\frac{5}{6}\pi }\left( \cos x-\sen
     \left( 2x\right) \right) dx+\int_{\frac{5}{6}\pi }^{\pi }\left( \sen \left(
-    2x\right) -\cos x\right) dx\\
+    2x\right) -\cos x\right)\,dx\\
     &=\left( \sen x+\frac{1}{2}\cos \left( 2x\right) \right) _{\frac{\pi }{2}}^{    \frac{5}{6}\pi }+\left( -\frac{1}{2}\cos \left( 2x\right) -\sen x\right)\Bigg\vert_{\frac{5}{6}\pi }^{\pi }\\
     &=\sen \frac{5}{6}\pi +\frac{1}{2}\cos \frac{5}{3}\pi -\left( \sen \frac{\pi}{2}+\frac{1}{2}\cos \pi \right) \\
     &\phantom{\sen \frac{5}{6}\pi\quad\enspace} -\frac{1}{2}\cos \left( 2\pi \right) -\sen \pi+\frac{1}{2}\cos \left( \frac{5}{3}\pi \right) +\sen \frac{5}{6}\pi \\
@@ -322,7 +322,7 @@ Sea $S$ un sólido acotado en el eje $x$ por el intervalo $\left[ a,b\right]$, t
 una función de área conocida $A\left( x\right)$, (continua en $\left[
 a,b\right])$; entonces, el volumen del sólido es
 \[
-  V=\int_{a}^{b}A\left( x\right) dx
+  V=\int_{a}^{b}A\left( x\right)\,dx
 \]
 
 \begin{figure}[H]
@@ -375,7 +375,7 @@ En la figura \ref{fig:parabola_encerrada}, se ven algunos cuadrados completos se
 
 Ahora bien, el área de un cuadrado de lado $L$ está dada por $A=L^2$. En nuestro caso, la longitud del lado la dan las dos rectas que forman el triángulo, es decir, las rectas $y=x$ y $y=-x$ (véase la figura~\ref{fig:GrafArTransvBaseTriang2}); por tanto, para un $x$ entre $0$ y $3$, se tiene que $L=x-(-x)=2x$, es decir, en términos de $x$, el área está dada por $A(x)=L^{2}=4x^{2}$. Con ello, el volumen del sólido es
 \[
-  V=\int_{0}^{3}A(x)dx=\int_{0}^{3}4x^{2}dx=\left( \frac{4}{3}x^{3}\right) \Bigg\vert_{0}^{3}=36
+  V=\int_{0}^{3}A(x)\,dx=\int_{0}^{3}4x^{2}dx=\left( \frac{4}{3}x^{3}\right) \Bigg\vert_{0}^{3}=36
 \]
 El volumen del sólido, entonces, es de $36$ unidades cúbicas.
 
@@ -406,7 +406,7 @@ Una idea del sólido completo puede darse con la figura \ref{fig:solido_generado
 Si la sección transversal para un valor $x$ es un cuadrado, entonces el lado mide $L=4-x^{2}$ y $-2\leq x\leq 2$; por tanto,
 
 \begin{align*}
-  v&=\int_{a}^{b}A\left( x\right) dx=\int_{-2}^{2}\left(4-x^{2}\right)^{2}dx \\
+  v&=\int_{a}^{b}A\left( x\right)\,dx=\int_{-2}^{2}\left(4-x^{2}\right)^{2}dx \\
   &=2\int_{0}^{2}\left( 4-x^{2}\right) ^{2}dx=2\int_{0}^{2}\left(
   16-8x^{2}+x^{4}\right) dx \\
   &=2\left( 16x-\frac{8}{3}x^{3}+\frac{1}{5}x^{5}\right)\Bigg\vert _{0}^{2}
@@ -589,7 +589,7 @@ Y, en definitiva, el sólido se ve de la siguiente manera:
 
 Ahora bien, haciendo unos cálculos similares a los ejemplos anteriores, se tiene que el área del triángulo es como se usa en la siguiente integral:
 \begin{align*}
-  v&=\int_{a}^{b}A\left( x\right) dx =\int_{-10}^{10}72\underset{\text{es par}}{\left( \underbrace{1-\frac{x^{2}}{%
+  v&=\int_{a}^{b}A\left( x\right)\,dx =\int_{-10}^{10}72\underset{\text{es par}}{\left( \underbrace{1-\frac{x^{2}}{%
   100}}\right) }dx=2\times 72\int_{0}^{10}\left( 1-\frac{x^{2}}{100}\right) dx \\
   &=144\left( x-\frac{x^{3}}{300}\right)\Bigg\vert_{0}^{10}
   %\\&
@@ -751,7 +751,7 @@ Una sección transversal que pasa por $x$ y es perpendicular al eje $x$ es un di
 
 Y con el uso de la fórmula
 \begin{equation}\label{DiscosAlrx}
-  v=\int_{a}^{b}A\left( x\right) dx=\int_{a}^{b}\pi %
+  v=\int_{a}^{b}A\left( x\right)\,dx=\int_{a}^{b}\pi %
   \left[ f\left( x\right) \right] ^{2}dx
 \end{equation}
 tenemos el volumen de $S$. El método con el cual empleamos esta fórmula es usualmente llamado el \textit{método de los discos}.
@@ -1097,13 +1097,13 @@ Apoyándonos en la figura, tenemos que $R=4\ln x$ y $r=x\ln x$. Entonces,
   v&=\pi \int_{a}^{b}\left( R^{2}-r^{2}\right) dx\\
   &=\pi \int_{1}^{4}\left( \left( 4\ln x\right) ^{2}-\left( x\ln x\right)
   ^{2}\right) dx\\
-  &=\pi \int_{1}^{4}\left( 16\ln ^{2}x-x^{2}\ln ^{2}x\right) dx
+  &=\pi \int_{1}^{4}\left( 16\ln ^{2}x-x^{2}\ln ^{2}x\right)\,dx
 \end{align*}
 
 Debemos calcular la integral para tener el volumen. Podemos usar integración por partes en este punto o una sustitución para que tengamos exponenciales en lugar de logaritmos. Usemos la última opción:
 si $y=\ln x\rightarrow e^{y}=x\rightarrow e^{y}dy=dx$, y si $x=1\rightarrow y=\ln 1=0$, y si $x=4\rightarrow y=\ln 4$. Con ello,
 \begin{align*}
-  \pi \int_{1}^{4}\left( 16\ln ^{2}x-x^{2}\ln ^{2}x\right) dx&=\pi \int_{0}^{\ln 4}\left( 16y^{2}-\left( e^{y}\right) ^{2}y^{2}\right)
+  \pi \int_{1}^{4}\left( 16\ln ^{2}x-x^{2}\ln ^{2}x\right)\,dx&=\pi \int_{0}^{\ln 4}\left( 16y^{2}-\left( e^{y}\right) ^{2}y^{2}\right)
   e^{y}dy \\
   &=\pi \left( 16\int_{0}^{\ln 4}y^{2}e^{y}dy-\int_{0}^{\ln
   4}y^{2}e^{3y}dy\right)
@@ -1510,7 +1510,7 @@ Veamos, entonces, el nuevo método. Sea $S$ el sólido obtenido al girar alreded
 
 Con ello, el volumen del sólido $S$ es
 \begin{equation}\label{casquetes}
-  V\left( S\right) =\int_{a}^{b}2\pi xf\left( x\right) dx,\text{ donde }0\leq a\leq b
+  V\left( S\right) =\int_{a}^{b}2\pi xf\left( x\right)\,dx,\text{ donde }0\leq a\leq b
 \end{equation}
 
 Demos una explicación del funcionamiento de la fórmula \eqref{casquetes}: para cada $x$ en el intervalo $\left[ a,b\right] $, supongamos que $C_{x}$ es la capa cilíndrica generada al girar alrededor del eje\textbf{ $y$} el segmento que une los puntos $(x,0)$ con $\left( x,f\left( x\right) \right) $. Así que el s%
@@ -1520,7 +1520,7 @@ Recortando $C_{x}$ por el segmento generador, el volumen $V\left(
 C_{x}\right) $ de la capa cilíndrica $C_{x}$ es
 \begin{align*}
   V\left( C_{x}\right) &=2\pi (\text{radio})(\text{altura})\left(\text{espesor}\right)\\
-  & =2\pi xf\left( x\right) dx
+  & =2\pi xf\left( x\right)\,dx
 \end{align*}
 y el volumen del sólido es
 \begin{align*}
@@ -1529,7 +1529,7 @@ y el volumen del sólido es
   &=\sum_{x\in \left[ a,b\right] }V\left( C_{x}\right) \\
   &= \int_{a}^{b}2\pi
   (\text{radio})(\text{altura})\left(\text{espesor}\right) \\
-  &=\int_{a}^{b}2\pi xf\left( x\right) dx
+  &=\int_{a}^{b}2\pi xf\left( x\right)\,dx
 \end{align*}
 Tenga en cuenta que, si el eje de rotación es diferente a uno de los ejes coordenados, entonces el radio es una función de $x$ en lugar de $x$.
 
@@ -1582,8 +1582,8 @@ y el sólido completo es así:
 
 Con la información de la figura, podemos confirmar que el radio del casquillo cilíndrico es $3-x$ y su altura, $x^{4}+x$, entonces
 \begin{align*}
-  V&=2\pi \int_{a}^{b}(\text{radio})(\text{altura})\, dx=2\pi \int_{0}^{1}\left( 3-x\right) \left(x^{4}+x\right) dx \\
-  &=2\pi \int_{0}^{1}\left( -x^{5}+3x^{4}-x^{2}+3x\right) dx \\
+  V&=2\pi \int_{a}^{b}(\text{radio})(\text{altura})\, dx=2\pi \int_{0}^{1}\left( 3-x\right) \left(x^{4}+x\right)\,dx \\
+  &=2\pi \int_{0}^{1}\left( -x^{5}+3x^{4}-x^{2}+3x\right)\,dx \\
   &=2\pi\left. \left(-\frac{1}{6}x^{6}+\frac{3}{5}x^{5}-\frac{1}{3}x^{3}+\frac{3}{2}x^{2}\right)\right\vert _{0}^{1} \\
   &=2\pi \left( -\frac{1}{6}+\frac{3}{5}-\frac{1}{3}+\frac{3}{2}\right) =\frac{16}{5}\pi \approx10.053 \text{ unidades cúbicas}
 \end{align*}
@@ -1629,7 +1629,7 @@ en donde se forma el casquillo:
 
 Notemos que en este caso el radio de la capa cilíndrica es $x$; por tanto, su volumen es
 \begin{align*}
-  V&=2\pi \int_{a}^{b}(\text{radio})(\text{altura})\, dx=2\pi \int_{0}^{3}x\left( x^{4}+x\right) dx\\
+  V&=2\pi \int_{a}^{b}(\text{radio})(\text{altura})\, dx=2\pi \int_{0}^{3}x\left( x^{4}+x\right)\,dx\\
   &=2\pi \left( \frac{1}{3}x^{3}+\frac{1}{6}x^{6}\right) _{0}^{3}\\
   &=2\pi \left( 9+\frac{243}{2}\right)=261\pi\text{ unidades cúbicas}%
 \end{align*}
@@ -2384,20 +2384,20 @@ de $F(x)$ no pueden variar mucho en el subintervalo. Por tanto, puede considerar
 que el trabajo realizado desde $x_{k-1}$ hasta $x_{k}$ está dado por la
 aproximación
 \[
-  W_{k}=F\left( x_{k}^{\ast }\right) \triangle x_{k}
+  W_{k}=F\left( x_{k}^{\ast }\right) \Delta x_{k}
 \]
 
 Entonces, una aproximación al trabajo total realizado desde $a$ hasta $b$
 está dada por la suma de Riemann:
 \[
   W\approx \sum_{k=1}^{n}W_{k}=\sum_{k=1}^{n}F\left( x_{k}^{\ast }\right)
-  \triangle x_{k}
+  \Delta x_{k}
 \]
 
 \textls[-10]{Resulta natural suponer que el trabajo realizado por $F$ sobre el intervalo es}
 \[
   W=\lim_{\left\Vert P\right\Vert \rightarrow 0}\sum_{k=1}^{n}F\left(
-  x_{k}^{\ast }\right) \triangle x_{k}=\int_{a}^{b}F\left( x\right) dx
+  x_{k}^{\ast }\right) \Delta x_{k}=\int_{a}^{b}F\left( x\right)\,dx
 \]
 
 El análisis anterior se resume en la siguiente definición.
@@ -2405,12 +2405,12 @@ El análisis anterior se resume en la siguiente definición.
 \begin{defi}
   Sea $F$ continua sobre el intervalo $[a,b]$ y sea $F(x)$ la fuerza en un número $x$ en el intervalo. \ Entonces, el trabajo $W$ realizado por la fuerza para mover un objeto de $a$ a $b$ es
   \begin{equation}\label{trabajo}
-    W=\int_{a}^{b}F\left( x\right) dx
+    W=\int_{a}^{b}F\left( x\right)\,dx
   \end{equation}
 \end{defi}
 
 \emph{Nota:} Si $F$ es constante, $F(x)=k$ para toda $x$ en el intervalo, entonces \eqref{trabajo} se vuelve
-\[W=\int_{a}^{b}F\left( x\right) dx=\int_{a}^{b}kdx=k\left( b-a\right)\]
+\[W=\int_{a}^{b}F\left( x\right)\,dx=\int_{a}^{b}kdx=k\left( b-a\right)\]
 lo cual es consistente con el trabajo para una fuerza constante.
 
 \begin{ejemplo}
@@ -2420,7 +2420,7 @@ lo cual es consistente con el trabajo para una fuerza constante.
 \emph{Solución.} Con la información dada, tenemos que
 \begin{gather*}
   \begin{aligned}
-    W&=\int_{a}^{b}F\left( x\right) dx=\int_{0}^{2}\cos \left( \frac{\pi }{3}x\right) dx\\
+    W&=\int_{a}^{b}F\left( x\right)\,dx=\int_{0}^{2}\cos \left( \frac{\pi }{3}x\right)\,dx\\
     &=\frac{1}{\frac{\pi }{3}}\left( \sin \left( \frac{\pi }{3}x\right) \right) _{0}^{2}\\
     &=\frac{3}{\pi }\left( \sin \left( \frac{2\pi }{3}\right) -\sin 0\right) \\
     &=\frac{3\sqrt{3}}{2\pi }\text{ julios}
@@ -2445,7 +2445,7 @@ Es decir, el trabajo realizado por la fuerza dada al mover la partícula es de $
 
 \emph{Solución.} Recordemos que una integral definida de una función positiva es el área bajo la figura de la función. Entonces nuestra integral de trabajo, para este caso particular, la podemos manejar de la siguiente manera:
 \begin{align*}
-  W&=\int_{0}^{8}F\left( x\right) dx=\text{área bajo la curva}
+  W&=\int_{0}^{8}F\left( x\right)\,dx=\text{área bajo la curva}
   =\text{área del trapecio}\\
   &=\frac{\left( B+b\right) h}{2}=\frac{\left(
   8+4\right) \times 3}{2}=18\text{ julios}
@@ -2478,7 +2478,7 @@ Por otro lado, dado que, cuando $F=130$N, el estiramiento es de $x=50$ cm $=\fra
 Por tanto, $F\left( x\right) =260x$. Luego, el trabajo realizado para estirar el
 resorte $20$ cm $=$ $0.2$ m a partir de $x=0$ (longitud natural del resorte) es
 \begin{align*}
-  W&=\int_{a}^{b}F(x) dx\\
+  W&=\int_{a}^{b}F(x)\,dx\\
   &=\int_{0}^{0.2}260x\,dx=\left. 130x^{2}\right|_{0}^{0.2}\\
   &=130(0.2)^{2} =5.2 \text{ julios}
 \end{align*}
@@ -2525,15 +2525,16 @@ altura de $c$ es
     \end{tabular}%
   \right)
   \\
-  &=\rho (\text{área}\left( S_{x}\right) \times dx)\left( c-x\right) =\rho\,\text{área}\left( S_{x}\right) \left( c-x\right) dx
+  &=\rho (\text{área}\left( S_{x}\right) \times dx)\left( c-x\right) =\rho\ \text{área}\left( S_{x}\right) \left( c-x\right)\,dx
 \end{align*}
 
 El trabajo total es
-\begin{align*}
-  W&=\sum_{x\in \left[ a,b\right] }W_{x}=\int_{a}^{b}\rho\, \text{área}\left( S_{x}\right) \left( c-x\right) dx
-  =\rho \int_{a}^{b}\text{área}\left( S_{x}\right) \underset{\substack{\text{distancia desde $x$}\\ \text{
-  hasta la altura final}}}{\underbrace{\left( c-x\right) }}dx
-\end{align*}
+\begin{gather*}
+  \begin{aligned}
+    W&=\sum_{x\in \left[ a,b\right] }W_{x}=\int_{a}^{b}\rho\ \text{área}\left( S_{x}\right) \left( c-x\right)\,dx
+    =\rho \int_{a}^{b}\text{área}\left( S_{x}\right) \underset{\substack{\text{distancia desde $x$}\\ \text{hasta la altura final}}}{\underbrace{\left( c-x\right) }}dx
+  \end{aligned}
+\end{gather*}
 
 En general, para bombeo en tanques aplicamos la siguiente fórmula:
 \begin{equation}\label{Bombeo}
@@ -2553,24 +2554,24 @@ eje $x$ hacia arriba
 \begin{figure}[H]
   \centering
   \caption{Tanque hemisférico}
-  \includegraphics[width=0.45\textwidth]{Gráficas/TrabajTanqueHemisf.pdf}
+  \includegraphics[width=7cm]{Gráficas/TrabajTanqueHemisf.pdf}
   \propia
 \end{figure}
 
 Si vemos el tanque como una región en el plano, entonces la semicircunferencia centrada en $\left( 10,0\right)$ con radio $r=10$ (la proyección del tanque al plano) tiene ecuación $\left( x-10\right) ^{2}+y^{2}=10^{2}$. La sección transversal $S_{x}$ es el disco de radio $y$ donde $y^{2}=100-\left( x-10\right) ^{2}$ y, además,
 \[
-  \text{área}\left( S_{x}\right) =\pi y^{2}=\pi \left( 100-\left( x-10\right)^{2}\right)
+  \text{Área}\left( S_{x}\right) =\pi y^{2}=\pi \left( 100-\left( x-10\right)^{2}\right)
 \]
 y con ello,
 \begin{gather*}
   \begin{aligned}
-    W&=\int_{a}^{b}\rho\times \text{ área}\left( S_{x}\right)\times \text{distancia } dx
-    =62,4\int_{0}^{8}\pi \left( 100-\left( x-10\right) ^{2}\right) \left(
-    10-x\right) dx\\
-    &=62,4\int_{0}^{8}\pi \left( -x^{2}+20x\right) \left( 10-x\right) dx\\
-    &=62,4\int_{0}^{8}\pi \left( x^{3}-30x^{2}+200x\right) dx\\
-    &=62,4\pi \left( \frac{1}{4}x^{4}-10x^{3}+100x^{2}\right)\Big|_{0}^{8}\\
-    &=4,\allowbreak 516\,7\times 10^{5} &\text{pies-lb}
+    W&=\int_{a}^{b}\rho\times \text{ área}\left( S_{x}\right)\times \text{distancia } dx \\
+    &=62.4\int_{0}^{8}\pi \left( 100-\left( x-10\right) ^{2}\right) \left(
+    10-x\right)\, dx\\
+    &=62.4\int_{0}^{8}\pi \left( -x^{2}+20x\right) \left( 10-x\right)\, dx
+    =62.4\int_{0}^{8}\pi \left( x^{3}-30x^{2}+200x\right)\, dx\\
+    &=62.4\pi \left( \frac{1}{4}x^{4}-10x^{3}+100x^{2}\right)\Big|_{0}^{8}
+    =4.5167\times 10^{5}\,\text{pies-lb}
   \end{aligned}
 \end{gather*}
 
@@ -2578,15 +2579,15 @@ Tomemos, para este ejemplo, una solución alterna: un sistema de coordenadas cen
 
 \begin{figure}[H]
   \centering
-  \caption{Tanque hemisférico. Dirección positiva del eje $x$ hacia abajo}
-  \includegraphics[width=0.45\textwidth]{Gráficas/TrabajTanqueHemisf2.pdf}
+  \caption[Tanque hemisférico. Dirección positiva del eje $x$ hacia abajo]{Tanque hemisférico. Dirección positiva\\ del eje $x$ hacia abajo}
+  \includegraphics[width=7cm]{Gráficas/TrabajTanqueHemisf2.pdf}
   \propia
 \end{figure}
 
 Como antes, \textit{S}$_{x}$ es el disco de radio $y$ donde $x^{2}+y^{2}=10^{2}$. Área $\left(
 S_{x}\right) =\pi y^{2}=\pi \left( 100-x^{2}\right)$; por tanto,
 \begin{align*}
-  W&=\int_{a}^{b}\rho \times \text{area}\left( S_{x}\right)\times \text{distancia }dx\\
+  W&=\int_{a}^{b}\rho \times \text{área}\left( S_{x}\right)\times \text{distancia }dx\\
   &= \num{62.4}\int_{2}^{10}\pi \left( 100-x^{2}\right) x\,dx\\
   &= \num{451.67}\times 10^{3}\,\text{pies-lb}
 \end{align*}
@@ -2600,46 +2601,44 @@ S_{x}\right) =\pi y^{2}=\pi \left( 100-x^{2}\right)$; por tanto,
 \begin{figure}[H]
   \centering
   \caption{Tanque parabólico}
-  \includegraphics[width=0.38\textwidth]{Gráficas/TrabajTanqueParabolic.pdf}
+  \includegraphics[width=5cm]{Gráficas/TrabajTanqueParabolic.pdf}
   \propia
 \end{figure}
 
 Para un punto $y$ en el intervalo $\left[ 0,4\right] $, sea $S_{y}$ la sección transversal (disco) de agua perpendicular al eje $y$ que pasa por $%
 \left( 0,y\right) $. El radio de $S_{y}$ se obtiene despejando $x$ en $%
-y=x^{2} $ así, que es $R=\sqrt{y}$, y el área del disco es
+y=x^{2}$, así que es $R=\sqrt{y}$, y el área del disco es
 \[
-  \text{área}\left( S_{y}\right) =\pi R^{2}=\pi y
+  \text{Área}\left( S_{y}\right) =\pi R^{2}=\pi y
 \]
 
 La distancia para mover el disco de agua es $d=5-y$ y el trabajo realizado para bombear el agua es
 \begin{gather*}
   \begin{aligned}
-    W&=\int_{0}^{4}\rho\, \text{área}\left( S_{y}\right)\times \text{distancia } dy=62,4\int_{0}^{4}\pi y\left( 5-y\right) dy=62,4\int_{0}^{4}\pi \left( 5y-y^{2}\right) dy\\
-    &=62,4\pi \left( \frac{5}{2}y^{2}-\frac{1}{3}y^{3}\right) _{0}^{4}=62,4\pi \left( 40-\frac{64}{3}\right) =3659,3\text{ pies-lb}
+    W&=\int_{0}^{4}\rho\, \text{área}\left( S_{y}\right)\times \text{distancia } dy=62.4\int_{0}^{4}\pi y\left( 5-y\right) dy=62.4\int_{0}^{4}\pi \left( 5y-y^{2}\right) dy\\
+    &=62.4\pi \left( \frac{5}{2}y^{2}-\frac{1}{3}y^{3}\right) _{0}^{4}=62.4\pi \left( 40-\frac{64}{3}\right) =3659.3\text{ pies-lb}
   \end{aligned}
 \end{gather*}
 
 \section{Presión y fuerza de un fluido}
 
-La mayoría de las personas han experimentado que se les "tapan los oídos" e incluso han experimentado dolor en los oídos cuando descienden en avión (o en un elevador), o cuando nadan hacia el fondo de una piscina. Estas sensaciones molestas en los oídos se deben a un incremento en la presión ejercida por el aire o el agua sobre mecanismos en el oído medio. El aire y el agua son ejemplos de fluidos. En esta sección se mostrará la forma en que la integral definida puede
-usarse para encontrar la fuerza ejercida por un fluido.
+La mayoría de las personas han experimentado que se les ``tapan los oídos'' e incluso han experimentado dolor en los oídos cuando descienden en avión (o en un elevador), o cuando nadan hacia el fondo de una piscina. Estas sensaciones molestas en los oídos se deben a un incremento en la presión ejercida por el aire o el agua sobre mecanismos en el oído medio. El aire y el agua son ejemplos de fluidos. En esta sección se mostrará la forma como la integral definida puede usarse para encontrar la fuerza ejercida por un fluido.
 
 Suponga que una placa horizontal plana se
 sumerge en un fluido como el agua. La fuerza ejercida por el fluido exactamente arriba de la placa, denominada \textit{fuerza $F$ del fluido}, se define como
 \begin{equation}\label{FuerzaFluido}
   F=\underbrace{(\text{fuerza por unidad de área})}_{\text{presión del fluido $P$\ }}\times (\text{área de superficie})=PA
-  %\underset{}{(\underbrace{\times
 \end{equation}
 
 Si $\rho $ denota el peso específico del fluido (peso por unidad de
 volumen) y $A$ es el área de la placa horizontal sumergida hasta una
-profundidad $h$ (\textbf{(figura \ref{fig:palanca_horizontal})}) (figura 135):
+profundidad $h$ (figura \ref{fig:palanca_horizontal}):
 
 \begin{figure}[H]
   \centering
   \caption{Placa horizontal sumergida}
   \label{fig:palanca_horizontal}
-  \includegraphics[width=0.38\textwidth]{Gráficas/PresPlacaHoriz.pdf}
+  \includegraphics[width=6cm]{Gráficas/PresPlacaHoriz.pdf}
   \propia
 \end{figure}
 
@@ -2683,16 +2682,15 @@ Sobre una placa vertical, la presión varía de la parte superior al fondo.
   \propia
 \end{figure}
 
-\emph{Solución.} Recuerde que el peso específico del agua es $62,4$ lb/pie
-$^{3}$. Así, por \eqref{presion}, la presión del fluido es
+\emph{Solución.} Recuerde que el peso específico del agua es $62.4$ lb/pie$^{3}$. Así, por \eqref{presion}, la presión del fluido es
 \[
-  P=\rho h=(62,4\text{lb/pie}^{3})\cdot (10\text{pies})=624 \text{lb/pie}^{2}
+  P=\rho h=(62.4\,\text{lb/pie}^{3})\cdot (10\,\text{pies})=624\, \text{lb/pie}^{2}
 \]
 
-Puesto que el área superficial de la placa es $A=30$ pies $^{2}$, por \eqref{FuerzaFluido},
+Puesto que el área superficial de la placa es $A=30$ pies$^{2}$, por \eqref{FuerzaFluido},
 se concluye que la fuerza del fluido sobre la placa es
 \[
-  F=PA=(\rho h)A=(624\text{lb/pie}^{2})\cdot (30\text{pies}^{2})=18.720\text{lb}
+  F=PA=(\rho h)A=(624\,\text{lb/pie}^{2})\cdot (30\,\text{pies}^{2})=1872\,\text{lb}
 \]
 
 Para determinar la fuerza total $F$ ejercida por un fluido sobre un lado de
@@ -2705,7 +2703,7 @@ Considere que el eje $x$ positivo está dirigido hacia abajo con el origen en la
   \centering
   \caption{Placa plana vertical}
   \label{fig:rectangulo_base}
-  \includegraphics[width=0.30\textwidth]{Gráficas/FuerzaFluid1.pdf}
+  \includegraphics[width=6cm]{Gráficas/FuerzaFluid1.pdf}
   \propia
 \end{figure}
 
@@ -2713,27 +2711,27 @@ y también
 
 \begin{figure}[H]
   \centering
-  \caption{Placa plana vertical. Rectángulo base}
-  \includegraphics[width=0.30\textwidth]{Gráficas/FuerzaFluid2.pdf}
+  \caption{Placa plana vertical}
+  \includegraphics[width=6cm]{Gráficas/FuerzaFluid2.pdf}
   \propia
 \end{figure}
 
 Sea $w(x)$ la función que denota el ancho de la placa en cualquier nú%
 mero $x$ en $[a,b]$. La superficie $S$ la podemos ver como unión de rectángulos, para cada $x\in \lbrack a,b],$ sea $R_{x}$ el rectángulo de base $w\left( x\right) $ y altura $dx.$ \ La fuerza $F_{x}$ ejercida por el fluido sobre el elemento rectangular $R_{x}$ es
 \[
-F_{x}=\rho \cdot x\cdot w(x)dx
+F_{x}=\rho \cdot x\cdot w(x)\,dx
 \]
 
 donde, como antes, $\rho $ denota el peso específico del fluido. As%
 í, la fuerza total del fluido sobre la placa es
 \[
-\sum_{x\in \left[ a,b\right] }F_{x}=\int_{a}^{b}\rho xw\left( x\right) dx
+\sum_{x\in \left[ a,b\right] }F_{x}=\int_{a}^{b}\rho xw\left( x\right)\,dx
 \]
 
 \begin{defi}
 Sea $\rho $ el peso específico de un fluido y sea $w(x)$ una función continua sobre $[a,b]$ que describe el ancho de una placa plana sumergida verticalmente a una profundidad $x$. La fuerza $F$ ejercida por el fluido sobre un lado de la placa sumergida es
 \[
-  F=\int_{a}^{b}\rho xw(x)dx
+  F=\int_{a}^{b}\rho xw(x)\,dx
 \]
 la integral de $\rho \times \text{profundidad}\times \text{ancho}$ horizontal de la placa en un punto \textit{$x\in \left[ a,b\right] $.}
 \end{defi}
@@ -2750,21 +2748,20 @@ agua sobre un lado de la placa.
 \centering
 \caption{Placa triangular sumergida}
 \label{fig:placa_triangular}
-\includegraphics[width=0.38\textwidth]{Gráficas/PlacaTriangularSumerg.pdf}
+\includegraphics[width=6cm]{Gráficas/PlacaTriangularSumerg.pdf}
 \propia
 \end{figure}
 
-La altura de un tríangulo equilátero de lado $L$ es $\frac{\sqrt{3}}{2}%
-L,$ así que la altura de este triángulo es $h=3\sqrt{3}$. La placa
-queda sumergida en el intervalo $\left[ 0,3\sqrt{3}\right] .$ \ Tome un
-segmento horizontal en $x\in \left[ 0,3\sqrt{3}\right]$ sobre la placa
-(rectángulo de espesor infinitesimal); le medimos la profundidad $h=x$ y el ancho $w=2y$ con triángulos semejantes: $\frac{w}{6}=\frac{h-x}{h}$. Entonces {\footnotesize $w=\frac{6\left( 3\sqrt{3}-x\right) }{3  \sqrt{3}}=6-\frac{2\sqrt{3}}{3}x$.}
+La altura de un tríangulo equilátero de lado $L$ es $\frac{\sqrt{3}}{2}L$, así que la altura de este triángulo es $h=3\sqrt{3}$. La placa
+queda sumergida en el intervalo $\left[\mkern 1mu 0,3\sqrt{3}\mkern 1mu\right]$. Tome un
+segmento horizontal en $x\in \left[\mkern 1mu 0,3\sqrt{3}\mkern 1mu\right]$ sobre la placa
+(rectángulo de espesor infinitesimal); le medimos la profundidad $h=x$ y el ancho $w=2y$ con triángulos semejantes: $\frac{w}{6}=\frac{h-x}{h}$. Entonces $w=\frac{6\left( 3\sqrt{3}-x\right) }{3  \sqrt{3}}=6-\frac{2\sqrt{3}}{3}x$.
 
 La fuerza ejercida por el agua sobre la placa es
 \begin{gather*}
 \begin{aligned}
-  F&=\int_{0}^{3\sqrt{3}}\rho hw\left( x\right) dx=\int_{0}^{3\sqrt{3}}62,4x\left( 6-\frac{2\sqrt{3}}{3}x\right) dx=62,4\int_{0}^{3\sqrt{3}}\left( 6x-\frac{2\sqrt{3}}{3}x^{2}\right) dx\\
-  &=62,4\left( 3x^{2}-\frac{2\sqrt{3}}{9}x^{3}\right) _{0}^{3\sqrt{3}}=62,4\left( 81-54\right)\approx1684,8\text{\,libras}
+  F&=\int_{0}^{3\sqrt{3}}\rho hw\left( x\right)\,dx=\int_{0}^{3\sqrt{3}}62.4x\left( 6-\frac{2\sqrt{3}}{3}x\right)\,dx=62.4\int_{0}^{3\sqrt{3}}\left( 6x-\frac{2\sqrt{3}}{3}x^{2}\right) dx\\
+  &=62.4\left( 3x^{2}-\frac{2\sqrt{3}}{9}x^{3}\right) _{0}^{3\sqrt{3}}=62.4\left( 81-54\right) \approx 1684\,\text{libras}
 \end{aligned}
 \end{gather*}
 
@@ -2772,25 +2769,24 @@ La fuerza ejercida por el agua sobre la placa es
 La placa formada por el sector parabólico limitado por $y=x^{2}$ y la recta $y=4$ ($x$ en pies) se sumerge verticalmente en agua, hasta que la recta $y=4$ coincida con el nivel del agua. Encuentre la fuerza ejercida por el agua sobre un lado de la placa.
 \end{ejemplo}
 
-\emph{Solución.} Dibujamos la placa parabólica de forma normal: el eje $x$ horizontal y el
-eje $y$ vertical:
+\emph{Solución.} Dibujamos la placa parabólica de forma normal: el eje $x$ horizontal y el eje $y$ vertical:
 
 \begin{figure}[H]
 \centering
 \caption{Placa parabólica sumergida}
-\includegraphics[width=0.38\textwidth]{Gráficas/PlacaParabolSumerg.pdf}
+\includegraphics[width=6cm]{Gráficas/PlacaParabolSumerg.pdf}
 \propia
 \end{figure}
 
 El intervalo de integración es $\left[ 0,4\right] $ en el eje $y$, para cada $y\in \left[ 0,4\right] $, dibujamos una placa $P_{y},$ infinitesimal de ancho $w$ y altura $dy.$ La profundidad de la placa $P_{y}$ es $4-y.$
 
-Si $y=x^{2},$ entonces $x=\sqrt{y}$ y el $ancho$ de la placa es $w=2x=2\sqrt{%
-y}$. La fuerza ejercida por el agua sobre un lado de la placa es
+Si $y=x^{2}$, entonces $x=\sqrt{y}$ y el ancho de la placa es $w=2x=2\sqrt{y}$. La fuerza ejercida por el agua sobre un lado de la placa es
 \begin{align*}
-F&=\int_{0}^{4}62,4\ast ancho\ast \text{profundidad}\ast dy=\int_{0}^{4}62,4\left( 2\sqrt{y}\right) \left( 4-y\right) dy\\
-&=124,8\int_{0}^{4}\left( 4y^{\frac{1}{2}}-y^{\frac{3}{2}}\right) dy=124,8\left( \frac{8}{3}y^{\frac{3}{2}}-\frac{2}{5}y^{\frac{5}{2}}\right)
+F&=\int_{0}^{4}62.4\ast \text{ancho}\ast \text{profundidad}\ast dy\\
+&=\int_{0}^{4}62.4\left( 2\sqrt{y}\right) \left( 4-y\right) dy\\
+&=124.8\int_{0}^{4}\left( 4y^{\frac{1}{2}}-y^{\frac{3}{2}}\right) dy=124.8\left( \frac{8}{3}y^{\frac{3}{2}}-\frac{2}{5}y^{\frac{5}{2}}\right)
 _{0}^{4}\\
-&=124,8\left( \frac{64}{3}-\frac{64}{5}\right)=1064.96\text { libras}
+&=124.8\left( \frac{64}{3}-\frac{64}{5}\right)=1064.96\text { libras}
 \end{align*}
 
 \section{Centro de masa y momentos de inercia}
@@ -2820,13 +2816,12 @@ varillas delgadas, que se representan como intervalos cerrados sobre el eje $x$.
 
 \begin{figure}[H]
 \centering
-\caption{Barra o varilla delgada}
-\includegraphics[width=0.40\textwidth]{Gráficas/MasaBarra.pdf}
+\caption{Barra o varilla delgada}\label{fig:barra_delgada}
+\includegraphics[width=7cm]{Gráficas/MasaBarra.pdf}
 \propia
 \end{figure}
 
-Supongamos que la barra de la figura 142 de arriba tiene una densidad variable $%
-\rho \left( x\right) $ en cada punto $x$ del intervalo $\left[ a,b\right] $.
+Supongamos que la barra de la figura \ref{fig:barra_delgada} tiene una densidad variable $\rho \left( x\right) $ en cada punto $x$ del intervalo $\left[ a,b\right] $.
 
 Para un objeto unidimensional, usamos la densidad lineal con unidades de masa por longitud, por ejemplo, gramos por centímetro. Para saber cuál es la
 masa de esta varilla, la dividimos por medio de una partición regular del
@@ -2835,12 +2830,12 @@ intervalo $\left[ a,b\right]$:
 \begin{figure}[H]
 \centering
 \caption{Partición en barra delgada}
-\begin{minipage}[t]{0.38\textwidth}
+\begin{minipage}[c]{0.4\textwidth}
   \centering
   \includegraphics[width=\linewidth]{Gráficas/MasaBarraParticion.pdf}
 \end{minipage}
 \hspace{1em}
-\begin{minipage}[t]{0.38\textwidth}
+\begin{minipage}[c]{0.4\textwidth}
   \centering
   \includegraphics[width=\linewidth]{Gráficas/MasaBarraParticion2.pdf}
 \end{minipage}
@@ -2848,45 +2843,47 @@ intervalo $\left[ a,b\right]$:
 \end{figure}
 
 Comenzamos dividiendo la barra, representada por el intervalo $\left[ a,b%
-\right] $, en $n$ subintervalos de igual longitud $\triangle x=\frac{b-a}{n}$, es decir, $\left\{ x_{k}\right\} _{k=0}^{n},$ $x_{k}=a+k\triangle x$ \ $0\leq k\leq n$.
+\right] $, en $n$ subintervalos de igual longitud $\Delta x=\frac{b-a}{n}$, es decir, $\left\{ x_{k}\right\} _{k=0}^{n},$ $x_{k}=a+k\Delta x$ \ $0\leq k\leq n$.
 
-Así, la barra $B$ es la unión de las $n$ barras $B=\cup _{k=1}^{n}$B$_{k}$, la \textit{k}-%
-ésima barra B$_k$ está representada por el k-ésimo
-subintervalo $\left[ x_{k-1},x_{k}\right] $; por lo tanto, la masa de la \textit{k}-ésima barra la podemos aproximar por $m_{k}\approx \rho \left( x_{k}\right)
-\triangle x$, densidad constante por longitud, por lo que la masa de toda la barra la aproximamos por
+\enlargethispage*{\baselineskip}
+
+Así, la barra $B$ es la unión de las $n$ barras $B=\cup_{k=1}^{n}B_{k}$, la $k$-ésima barra $B_{k}$ está representada por el $k$-ésimo
+subintervalo $\left[ x_{k-1},x_{k}\right] $; por lo tanto, la masa de la $k$-ésima barra la podemos aproximar por $m_{k}\approx \rho \left( x_{k}\right)
+\Delta x$, densidad constante por longitud, por lo que la masa de toda la barra la aproximamos por
 \[
 m=\sum_{k=1}^{n}m_{k}\approx \sum_{k=1}^{n}\rho \left( x_{k}\right)\Delta x
 \]
 
-El valor de la masa de la barra es cada vez más exacta cuando $n$ es grande, así que
+El valor de la masa de la barra es cada vez más exacto cuando $n$ es grande, así que
 \[
 m=\lim_{n\rightarrow \infty }\sum_{k=1}^{n}\rho \left( x_{k}\right)
-\triangle x
+\Delta x
 \]
 
 Con ello, y por la definición de integral,
 \begin{equation}\label{IntMasa}
-m=\int_{a}^{b}\rho \left( x\right) dx
+m=\int_{a}^{b}\rho \left( x\right)\,dx
 \end{equation}
 
-\begin{ejemplo} Halle la masa de una barra delgada que se encuentra sobre el eje $x$
-en el intervalo $\left[ 0,4\right] ,$ si la función de densidad de la
-barra es {\small $\rho \left( x\right) =x\sqrt{16-x^{2}},$}
+\begin{ejemplo} Halle la masa de una barra delgada que se encuentra sobre el eje $x$ en el intervalo $\left[ 0,4\right]$, si la función de densidad de la
+barra es $\rho \left( x\right) =x\sqrt{16-x^{2}}$.
 \end{ejemplo}
 
 \emph{Solución.} Por \eqref{IntMasa},
-\[
-\text{Masa}=m=\int_{0}^{4}\rho \left( x\right) dx=\int_{0}^{4}x\sqrt{16-x^{2}}dx
-\]
-Si hacemos la sustitución {\small $z=\sqrt{16-x^{2}}$}, tenemos que $z^{2}=16-x^{2}$ y $x\,dx=-zdz$, entonces
 \begin{align*}
-m&=\int_{0}^{4}x\sqrt{16-x^{2}}dx=\int_{4}^{0}z\left( -zdz\right)=\int_{0}^{4}z^{2}dz=\frac{1}{3}z^{3}\Big\vert _{0}^{4} =\frac{64}{3}
+\text{Masa}=m&=\int_{0}^{4}\rho \left( x\right)\,dx\\
+&=\int_{0}^{4}x\sqrt{16-x^{2}}dx
+\end{align*}
+Si hacemos la sustitución $z=\sqrt{16-x^{2}}$, tenemos que $z^{2}=16-x^{2}$ y $x\,dx=-zdz$, entonces
+\begin{align*}
+m&=\int_{0}^{4}x\sqrt{16-x^{2}}dx\\
+&=\int_{4}^{0}z\left( -zdz\right)=\int_{0}^{4}z^{2}dz\\
+&=\frac{1}{3}z^{3}\Big\vert _{0}^{4} =\frac{64}{3}
 \end{align*}
 
 \subsection{Masa de una lámina}
 
-Sea $R$ la región acotada por las curvas $y=f(x)$, $y=g(x)$, $x=a$ \ y \
-$x=b$, \ donde $g(x)\leq f(x)$ \ en \ $a\leq x\leq b.$ \
+Sea $R$ la región acotada por las curvas $y=f(x)$, $y=g(x)$, $x=a$ y $x=b$, donde $g(x)\leq f(x)$ en $a\leq x\leq b$.
 
 Físicamente, $R$ representa una lámina delgada. Supongamos que esta lámina
 tiene densidad constante $\rho $, entonces su masa está dada por
@@ -2896,45 +2893,42 @@ m=\text{densidad}\times \text{área}=\rho \int_{a}^{b}\left( f\left( x\right)
 \end{equation}
 
 Supongamos que la densidad de la lámina $R$ es variable y solo depende
-de $x$, $\rho =\rho \left( x\right).$
+de $x$, $\rho =\rho \left( x\right)$.
 
-Comenzamos dividiendo la lámina, representada por la región $R$. Sea $%
-P=\left\{ x_{k}\right\} _{k=0}^{n}$ una partición regular del intervalo $%
-\left[ a,b\right] $, en $n$ subintervalos de igual longitud $\Delta x=\frac{%
-b-a}{n},$ $x_{k}=a+k\Delta x$, \ $0\leq k\leq n$:
+Comenzamos dividiendo la lámina, representada por la región $R$. Sea $P=\left\{ x_{k}\right\} _{k=0}^{n}$ una partición regular del intervalo $\left[ a,b\right] $, en $n$ subintervalos de igual longitud $\Delta x=\frac{b-a}{n},$ $x_{k}=a+k\Delta x$, \ $0\leq k\leq n$:
 
 \begin{figure}[H]
 \centering
 \caption{Lámina delgada}
-\includegraphics[width=0.40\textwidth]{Gráficas/MasaLamina.pdf}
+\includegraphics[width=6cm]{Gráficas/MasaLamina.pdf}
 \propia
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \caption{Rectángulos en lámina delgada}
-\includegraphics[width=0.48\textwidth]{Gráficas/MasaLaminaPartic.pdf}
+\includegraphics[width=7cm]{Gráficas/MasaLaminaPartic.pdf}
 \propia
 \end{figure}
 
 Así, la lámina $R$ se aproxima de las $n$ láminas $R\approx \cup
-_{k=1}^{n}R_{k}$; la \textit{k}-ésima lámina R$_{k\text{ }}$ está representada por
-el \textit{k}-ésimo rectángulo, cuya base es el subintervalo $\left[
-x_{k-1},x_{k}\right] $; así, la masa de la \textit{k}-ésima barra la podemos
+_{k=1}^{n}R_{k}$; la $k$-ésima lámina $R_{k}$ está representada por
+el $k$-ésimo rectángulo, cuya base es el subintervalo $\left[
+x_{k-1},x_{k}\right] $; así, la masa de la $k$-ésima barra la podemos
 aproximar por $m_{k}\approx \rho \left( x_{k}\right) \left( f\left(
-x_{k}\right) -g\left( x_{k}\right) \right) \triangle x$ densidad constante\
+x_{k}\right) -g\left( x_{k}\right) \right) \Delta x$ densidad constante
 por el área.
 
 Así que la masa de toda la barra la aproximamos por
 \[
 m=\sum_{k=1}^{n}m_{k}\approx \sum_{k=1}^{n}\rho \left( x_{k}\right) \left(
-f\left( x_{k}\right) -g\left( x_{k}\right) \right) \triangle x
+f\left( x_{k}\right) -g\left( x_{k}\right) \right) \Delta x
 \]
 El valor de la masa de la lámina es cada vez más exacto cuando $n$ es grande,
 así que
 \[
 m=\lim_{n\rightarrow \infty }\sum_{k=1}^{n}\rho \left( x_{k}\right) \left(
-f\left( x_{k}\right) -g\left( x_{k}\right) \right) \triangle x
+f\left( x_{k}\right) -g\left( x_{k}\right) \right) \Delta x
 \]
 Por definición de integral,
 \[
@@ -2951,7 +2945,7 @@ limitada por $y=9-x^{2},y=x+3,$ si la función de densidad es $\rho
 \begin{figure}[H]
 \centering
 \caption{Lámina del ejercicio}
-\includegraphics[width=0.38\textwidth]{Gráficas/MasaLamParab.pdf}
+\includegraphics[width=5cm]{Gráficas/MasaLamParab.pdf}
 \propia
 \end{figure}
 
@@ -2987,7 +2981,7 @@ ubicadas sobre el eje $x$ y en los puntos con coordenadas $x_1$ y $x_{2}$. El pu
 \begin{figure}[H]
 \centering
 \caption{Centro de masa}
-\includegraphics[width=0.40\textwidth]{Gráficas/CentMasaUnid.pdf}
+\includegraphics[width=6cm]{Gráficas/CentMasaUnid.pdf}
 \propia
 \end{figure}
 
@@ -3030,16 +3024,16 @@ Halle el centro de masa del sistema de masas $m_{1}=7\,\text{kg}$, $m_{2}= 4\,\t
 m_{1}+m_{2}+m_{3}}=\frac{7\left( -2\right) +4\times 3+5\times 5}{7+4+5}=\frac{23}{16}
 \]
 
-\subsection{Centro de masa para varillas, alambres o barras delgadas}
+\subsection[Centro de masa para varillas, alambres o barras delgadas]{Centro de masa para varillas, alambres\\ o barras delgadas}
 
 Supongamos que tenemos una barra delgada sobre el intervalo $\left[ a,b\right] $ y
 en el eje $x$ con densidad variable $\rho =\rho \left( x\right) $. Entonces,
 \[
-\text{Masa}=m=\int_{a}^{b}\rho \left( x\right) dx,\text{ y } \overline{x}=\frac{M}{m}
+\text{Masa}=m=\int_{a}^{b}\rho \left( x\right)\,dx,\text{ y } \overline{x}=\frac{M}{m}
 \]
-con $M$ el momento respecto al origen,
+con $M$ el momento respecto al origen:
 \[
-M=\int_{a}^{b}x\rho \left( x\right) dx \text{ , y entonces, } \overline{x}=\frac{\int_{a}^{b}x\rho \left( x\right) dx}{\int_{a}^{b}\rho  \left( x\right) dx}
+M=\int_{a}^{b}x\rho \left( x\right)\,dx \text{, y entonces}\; \overline{x}=\frac{\int_{a}^{b}x\rho \left( x\right)\,dx}{\int_{a}^{b}\rho  \left( x\right)\,dx}
 \]
 
 \begin{ejemplo}
@@ -3050,7 +3044,7 @@ n de densidad variable $\rho \left( x\right) =\sqrt{4+x}$.
 
 \emph{Solución.} Las integrales que se tienen en este ejemplo pueden calcularse sin mucha dificultad, por eso no se detallan acá:
 \[
-m=\int_{a}^{b}\rho \left( x\right) dx=\int_{0}^{5}\sqrt{4+x}dx
+m=\int_{a}^{b}\rho \left( x\right)\,dx=\int_{0}^{5}\sqrt{4+x}dx
 \]
 tomando $u=\sqrt{4+x}\Rightarrow u^{2}=4+x\Rightarrow 2udu=dx$
 
@@ -3062,7 +3056,7 @@ $m=\int_{2}^{3}2u^{2}du=\left( \frac{2u^{3}}{3}\right) _{2}^{3}=\frac{2}{3}%
 \left( 3^{3}-2^{3}\right) =\frac{2}{3}\left( 27-8\right) =\frac{2}{3}\left(
 19\right) =\frac{38}{3}$
 \[
-M_{0}=\int_{0}^{5}x\rho \left( x\right) dx=\int_{0}^{5}x\sqrt{4+x}dx
+M_{0}=\int_{0}^{5}x\rho \left( x\right)\,dx=\int_{0}^{5}x\sqrt{4+x}dx
 \]
 tomando $u=\sqrt{4+x}\Rightarrow u^{2}=4+x\Rightarrow 2udu=dx$
 
@@ -3071,18 +3065,15 @@ $x=u^{2}-4$
 si $x=0\Rightarrow u=2$
 
 si $x=5\Rightarrow u=3$
-
-$M_{0}=\int_{2}^{3}\left( u^{2}-4\right) 2u^{2}du=2\int_{2}^{3}\left(
+\begin{align*}
+M_{0}&=\int_{2}^{3}\left( u^{2}-4\right) 2u^{2}du=2\int_{2}^{3}\left(
 u^{4}-4u^{2}\right) du=2\left( \frac{u^{5}}{5}-\frac{4u^{3}}{3}\right)
-_{2}^{3}$
+_{2}^{3}\\
+&=2\left( \frac{3^{5}}{5}-\frac{4\left( 3\right) ^{3}}{3}-\left( \frac{2^{5}}{5}-\frac{4\left( 2\right) ^{3}}{3}\right) \right)\\
+&=2\left( \frac{243}{5}-\frac{108}{3}-\frac{32}{5}+\frac{32}{3}\right) \\
+&=2\left( \frac{211}{5}-\frac{76}{3}\right)=2\left( \frac{633-380}{15}\right) =2\left( \frac{253}{15}\right) =\frac{506}{15}
+\end{align*}
 
-$=2\left( \frac{3^{5}}{5}-\frac{4\left( 3\right) ^{3}}{3}-\left( \frac{2^{5}%
-}{5}-\frac{4\left( 2\right) ^{3}}{3}\right) \right) $
-
-$=2\left( \frac{243}{5}-\frac{108}{3}-\frac{32}{5}+\frac{32}{3}\right) $
-
-$=2\left( \frac{211}{5}-\frac{76}{3}\right) $ $=2\left( \frac{633-380}{15}%
-\right) =2\left( \frac{253}{15}\right) =\frac{506}{15}$\\
 y con ello,
 \[
 \overline{x}=\frac{\frac{506}{15}}{\frac{38}{3}}=\allowbreak \frac{253}{95}
@@ -3102,11 +3093,12 @@ si hacemos $\sqrt{3}x=\tan y$ para $-\frac{\pi }{2}<y<\frac{\pi }{2}$, entonces 
 \begin{aligned}
   m&=\int\sqrt{1+3x^{2}}dx
   =\left( \int \sqrt{1+\tan ^{2}y}\frac{\sec ^{2}ydy}{\sqrt{3}}\right)\Bigg\vert
-  _{1}^{4}=\left( \int \sqrt{\sec ^{2}y}\frac{\sec ^{2}ydy}{\sqrt{3}}\right)\Bigg\vert
   _{1}^{4}\\
-  &=\left( \int \frac{\sec ^{3}ydy}{\sqrt{3}}\right)\Bigg\vert _{1}^{4}=\left(
-  \frac{1}{\sqrt{3}}\int \sec ^{3}ydy\right)\Bigg\vert _{1}^{4}
-  =\left( \frac{1}{\sqrt{3}}\left( \frac{\sec y\tan y+\ln \left\vert \sec y+\tan y\right\vert }{2}\right) \right)\Bigg\vert_{1}^{4}
+  &=\left( \int \sqrt{\sec ^{2}y}\frac{\sec ^{2}ydy}{\sqrt{3}}\right)\Bigg\vert
+  _{1}^{4}
+  =\left( \int \frac{\sec ^{3}ydy}{\sqrt{3}}\right)\Bigg\vert _{1}^{4}=\left(
+  \frac{1}{\sqrt{3}}\int \sec ^{3}ydy\right)\Bigg\vert _{1}^{4}\\
+  &=\left( \frac{1}{\sqrt{3}}\left( \frac{\sec y\tan y+\ln \left\vert \sec y+\tan y\right\vert }{2}\right) \right)\Bigg\vert_{1}^{4}
 \end{aligned}
 \end{gather*}
 
@@ -3115,7 +3107,7 @@ y usando el triángulo:
 \begin{figure}[H]
 \centering
 \caption{Sustitución para la integral}
-\includegraphics[width=0.35\textwidth]{Gráficas/TriangSustTang.pdf}
+\includegraphics[width=6cm]{Gráficas/TriangSustTang.pdf}
 \propia
 \end{figure}
 
@@ -3136,44 +3128,41 @@ y usando el triángulo:
   &=\frac{1}{2\sqrt{3}}\left( \sqrt{1+3\left( 16\right) ^{{}}}\sqrt{3}\left(
     4\right) +\ln \left\vert \sqrt{1+3\left( 16\right) ^{{}}}+\sqrt{3}\left(
     4\right) \right\vert -\sqrt{4}\sqrt{3}-\ln \left\vert \sqrt{4}+\sqrt{3}%
-  \right\vert \right) %\\
+  \right\vert \right) \\
+  &=\frac{1}{2\sqrt{3}}\left( \sqrt{49^{{}}}\sqrt{3}\left( 4\right) +\ln
+    \left\vert \sqrt{49^{{}}}+\sqrt{3}\left( 4\right) \right\vert -2\sqrt{3}-\ln
+  \left\vert 2+\sqrt{3}\right\vert \right) \\
+  &=\frac{1}{2\sqrt{3}}\left( 7\sqrt{3}\left( 4\right) +\ln \left\vert 7+\sqrt{%
+    3}\left( 4\right) \right\vert -2\sqrt{3}-\ln \left\vert 2+\sqrt{3}%
+  \right\vert \right)
 \end{aligned}
 \end{gather*}
 
 \begin{align*}
-&=\frac{1}{2\sqrt{3}}\left( \sqrt{49^{{}}}\sqrt{3}\left( 4\right) +\ln
-  \left\vert \sqrt{49^{{}}}+\sqrt{3}\left( 4\right) \right\vert -2\sqrt{3}-\ln
-\left\vert 2+\sqrt{3}\right\vert \right) \\
-&=\frac{1}{2\sqrt{3}}\left( 7\sqrt{3}\left( 4\right) +\ln \left\vert 7+\sqrt{%
-  3}\left( 4\right) \right\vert -2\sqrt{3}-\ln \left\vert 2+\sqrt{3}%
-\right\vert \right) \\
-&=\frac{1}{2\sqrt{3}}\left( 28\sqrt{3}+\ln \left\vert 7+4\sqrt{3}\right\vert
--2\sqrt{3}-\ln \left\vert 2+\sqrt{3}\right\vert \right)\\
-& =\frac{1}{2\sqrt{3}}%
-\left( 26\sqrt{3}+\ln \left\vert \frac{7+4\sqrt{3}}{2+\sqrt{3}}\right\vert
-\right) =\frac{1}{2\sqrt{3}}\left( 26\sqrt{3}+\ln \left( \frac{7+4\sqrt{3}}{%
-2+\sqrt{3}}\right) \right)
+&=\frac{1}{2\sqrt{3}}\left( 28\sqrt{3}+\ln \left\vert 7+4\sqrt{3}\right\vert-2\sqrt{3}-\ln \left\vert 2+\sqrt{3}\right\vert \right)\\
+& =\frac{1}{2\sqrt{3}}\left( 26\sqrt{3}+\ln \left\vert \frac{7+4\sqrt{3}}{2+\sqrt{3}}\right\vert\right) \\
+&=\frac{1}{2\sqrt{3}}\left( 26\sqrt{3}+\ln \left( \frac{7+4\sqrt{3}}{2+\sqrt{3}}\right) \right)
 \end{align*}
 entonces,
 \[
-m=\int_{1}^{4}\sqrt{1+3x^{2}}dx\approx13,\,38
+m=\int_{1}^{4}\sqrt{1+3x^{2}}dx\approx13.38
 \]
 y
 \[
-M_{0}=\int_{1}^{4}x\rho \left( x\right) dx=\int_{1}^{4}x\sqrt{1+3x^{2}}dx
+M_{0}=\int_{1}^{4}x\rho \left( x\right)\,dx=\int_{1}^{4}x\sqrt{1+3x^{2}}dx
 \]
 y para $z=\sqrt{1+3x^{2}}$, $z^{2}=1+3x^{2}$, $2zdz=6x\,dx$ y $x\,dx=\frac{1}{3}zdz$; luego, por el cambio de límites, si $x=1$, entonces $z=\sqrt{4}=2$, y, si $x=4$, entonces $z=\sqrt{49}=7$. Con ello,
-\[
-M_{0}=\int_{2}^{7}z\frac{1}{3}zdz=\left( \frac{1}{9}z^{3}\right) _{2}^{7}=%
-\frac{1}{9}\left( 7^{3}-8\right) =\frac{335}{9}
-\]
+\begin{align*}
+M_{0}&=\int_{2}^{7}z\frac{1}{3}zdz=\left( \frac{1}{9}z^{3}\right) _{2}^{7}\\
+&=\frac{1}{9}\left( 7^{3}-8\right) =\frac{335}{9}
+\end{align*}
 y
 \[
-\overline{x}=\frac{\int_{a}^{b}x\rho \left( x\right) dx}{\int_{a}^{b}\rho \left( x\right)
+\overline{x}=\frac{\int_{a}^{b}x\rho \left( x\right)\,dx}{\int_{a}^{b}\rho \left( x\right)
 dx}=\frac{\frac{335}{9}}{13\approx 38}\approx 2.7819
 \]
 
-\subsection{Centro de masa para láminas planas formadas por regiones limitadas por dos funciones que dependen de $x$}
+\subsection{Centro de masa para láminas planas formadas por regiones limitadas por dos funciones que dependen de \texorpdfstring{\boldmath{$x$}}{x}}
 
 Sea \ $\mathcal{R=}\left\{ \left( x,y\right) :a\leq x\leq b,g\left( x\right)
 \leq y\leq f\left( x\right) \right\}$ una lámina delgada con densidad
@@ -3182,7 +3171,7 @@ variable $\rho =\rho \left( x\right) $ que depende solo de $x.$
 \begin{figure}[H]
 \centering
 \caption{Lámina delgada}
-\includegraphics[width=0.38\textwidth]{Gráficas/MasaLamina.pdf}
+\includegraphics[width=6cm]{Gráficas/MasaLamina.pdf}
 \propia
 \end{figure}
 
@@ -3208,8 +3197,7 @@ x\right) \right) dx
 \]
 es momento de la lámina respecto al eje $y$.
 
-El centro de masa de la lámina es $\left( \overline{x},\overline{y}\right).$ Si la densidad
-es constante, el centro de masa se denomina \textit{centroide} y solo depende de la geometría de la región.
+El centro de masa de la lámina es $\left( \overline{x},\overline{y}\right)$. Si la densidad es constante, el centro de masa se denomina \textit{centroide} y solo depende de la geometría de la región.
 
 \begin{ejemplo}
 Halle el centro de masa de la placa delgada limitada por $y=9-x^{2}$ y $y=8x^{2}$ con función de densidad $\rho \left( x\right)=x^{2}. $
@@ -3251,7 +3239,7 @@ y
 
 Por otro lado,
 \begin{align*}
-\overline{x}&=\frac{M_{y}}{m}=\frac{0}{\frac{12}{5}}=0,\text{ y }
+\overline{x}&=\frac{M_{y}}{m}=\frac{0}{\frac{12}{5}}=0
 \end{align*}
 
 y
@@ -3275,7 +3263,6 @@ Halle el centro de masa de la placa delgada limitada por $y=x^{2},y=4x$, con fun
 \end{gather*}
 
 Los momentos de la lámina son
-
 \begin{gather*}
 \begin{aligned}
   M_{y}&=\int_{0}^{4}xx^{2}\left( 4x-x^{2}\right) dx=\int_{0}^{4}\left( 4x^{4}-x^{5}\right) dx=\left( \frac{4x^{5}}{5}-\frac{x^{6}}{6}\right)\biggl| _{0}^{4}=\frac{4^{6}}{5}-\frac{4^{6}}{6}=\frac{2048}{15}
@@ -3286,8 +3273,8 @@ y
 \begin{gather*}
 \begin{aligned}
   M_{x}&=\int_{a}^{b}\frac{\rho \left( x\right) }{2}\left( (\text{función parte superior})^2-(\text{función parte inferior})^2\right) dx\\
-  &=\int_{0}^{4}\frac{x^{2}}{2}\left( 16x^{2}-x^{4}\right)dx=\int_{0}^{4}\left( 8x^{4}-\frac{1}{2}x^{6}\right) dx=\left( \frac{8x^{5}}{5%
-  }-\frac{x^{7}}{14}\right) _{0}^{4}=\frac{8\ast 4^{5}}{5}-\frac{4^{7}}{14}=\frac{16\,384}{35}
+  &=\int_{0}^{4}\frac{x^{2}}{2}\left( 16x^{2}-x^{4}\right)dx=\int_{0}^{4}\left( 8x^{4}-\frac{1}{2}x^{6}\right) dx\\
+  &=\left( \frac{8x^{5}}{5}-\frac{x^{7}}{14}\right) _{0}^{4}=\frac{8\ast 4^{5}}{5}-\frac{4^{7}}{14}=\frac{16\,384}{35}
 \end{aligned}
 \end{gather*}
 
@@ -3301,8 +3288,7 @@ y
 \overline{y}=\frac{M_{x}}{m}=\frac{\frac{16\,384}{35}}{\frac{256}{5}}=\frac{%
 64}{7}
 \]
-Con ello, el centro de masa es $\left( \overline{x},\overline{y}\right) =\left( \frac{8}{3},%
-\frac{64}{7}\right) $
+Con ello, el centro de masa es $\left( \overline{x},\overline{y}\right) =\left( \frac{8}{3},\frac{64}{7}\right)$.
 
 \begin{ejemplo}
 Halle el centro de masa de la placa delgada limitada por $y=x^{2}$, $y=x$, con función de densidad $\rho \left( x\right) =12x$.
@@ -3312,36 +3298,33 @@ Halle el centro de masa de la placa delgada limitada por $y=x^{2}$, $y=x$, con f
 \begin{align*}
 m&=\int_{a}^{b}\rho \left( x\right) \left( f\left( x\right) -g\left(
 x\right) \right) dx=\int_{0}^{1}12x\left( x-x^{2}\right) dx\\
-&=\int_{0}^{1}12\left( x^{2}-x^{3}\right) dx=12\left( \frac{x^{3}}{3}-\frac{%
-x^{4}}{4}\right) _{0}^{1}\\
-&=12\left( \frac{1}{3}-\frac{1}{4}\right) =12\left( \frac{1}{12}\right)=1\\
-\end{align*}
-
-\begin{align*}
+&=\int_{0}^{1}12\left( x^{2}-x^{3}\right) dx=12\left( \frac{x^{3}}{3}-\frac{x^{4}}{4}\right) _{0}^{1}\\
+&=12\left( \frac{1}{3}-\frac{1}{4}\right) =12\left( \frac{1}{12}\right)=1\\[1em]
 M_{x}&=\int_{a}^{b}\frac{\rho \left( x\right) }{2}\left( \left( f\left(
 x\right) \right) ^{2}-g\left( x\right) ^{2}\right) dx=\int_{0}^{1}6x\left(
 x^{2}-x^{4}\right) dx\\
 &=\int_{0}^{1}6\left( x^{3}-x^{5}\right) dx=6\left( \frac{x^{4}}{4}-\frac{%
 x^{6}}{6}\right) _{0}^{1}\\
 &=6\left( \frac{1}{4}-\frac{1}{6}\right) =6\left( \frac{3-2}{12}\right)
-=\frac{1}{2}\\
-\end{align*}
-
-\begin{align*}
+=\frac{1}{2}\\[1em]
 M_{y}&=\int_{a}^{b}x\rho \left( x\right) \left( f\left( x\right) -g\left(
 x\right) \right) dx=\int_{0}^{1}12x^{2}\left( x-x^{2}\right) dx\\
 &=\int_{0}^{1}12\left( x^{3}-x^{4}\right) dx=12\left( \frac{x^{4}}{4}-\frac{
 x^{5}}{5}\right) _{0}^{1}\\
-&=12\left( \frac{1}{4}-\frac{1}{5}\right) =12\left(\frac{1}{20}\right)=\frac{3}{5}\\
+&=12\left( \frac{1}{4}-\frac{1}{5}\right) =12\left(\frac{1}{20}\right)=\frac{3}{5}
+\end{align*}
+\begin{align*}
 \overline{x}&=\frac{M_{y}}{m}=\frac{\frac{3}{5}}{1}=\frac{3}{5}\\
 \overline{y}&=\frac{M_{x}}{m}=\frac{\frac{1}{2}}{1}=\frac{1}{2}
 \end{align*}
 
-Y, entonces, el centro de masa es $\left( \frac{3}{5},\frac{1}{2}\right) $
+Y, entonces, el centro de masa es $\left( \frac{3}{5},\frac{1}{2}\right)$.
 
 \begin{ejemplo}
 Halle el centro de masa de la placa delgada limitada por $y=x^{2},y=x$, con función de densidad $\rho \left( x\right) =x^{2}$.
 \end{ejemplo}
+
+\enlargethispage*{\baselineskip}
 
 \emph{Solución.} Con las funciones dadas, tenemos
 \begin{align*}
@@ -3350,33 +3333,402 @@ x\right) \right) dx=\int_{0}^{1}x^{2}\left( x-x^{2}\right) dx\\
 &=\int_{0}^{1}\left( x^{3}-x^{4}\right) dx=\left( \frac{x^{4}}{4}-\frac{x^{5}%
 }{5}\right) _{0}^{1}\\
 &=\frac{1}{4}-\frac{1}{5}
-=\frac{1}{20}\\
-\end{align*}
-
-\begin{align*}
+=\frac{1}{20}\\[0.5em]
 M_{x}&=\int_{a}^{b}\frac{\rho \left( x\right) }{2}\left( \left( f\left(
 x\right) \right) ^{2}-g\left( x\right) ^{2}\right) dx=\int_{0}^{1}\frac{1}{2}
 x^{2}\left( x^{2}-x^{4}\right) dx\\
-&=\int_{0}^{1}\frac{1}{2}\left( x^{4}-x^{6}\right) dx=\frac{1}{2}\left( \frac{%
-x^{5}}{5}-\frac{x^{7}}{7}\right) _{0}^{1}\\
-&=\frac{1}{2}\left( \frac{1}{5}-%
-\frac{1}{7}\right) =\frac{1}{2}\left( \frac{2}{35}\right)= \frac{1}{35}\\
-\end{align*}
-
-\begin{align*}
+&=\int_{0}^{1}\frac{1}{2}\left( x^{4}-x^{6}\right) dx=\frac{1}{2}
+\left(\frac{x^{5}}{5}-\frac{x^{7}}{7}\right) _{0}^{1}\\
+&=\frac{1}{2}\left( \frac{1}{5}-\frac{1}{7}\right) =\frac{1}{2}\left( \frac{2}{35}\right)= \frac{1}{35}\\[0.5em]
 M_{y}&=\int_{a}^{b}x\rho \left( x\right) \left( f\left( x\right) -g\left(
 x\right) \right) dx=\int_{0}^{1}x\times x^{2}\left( x-x^{2}\right)
 dx\\
 &=\int_{0}^{1}\left( x^{4}-x^{5}\right) dx=\left( \frac{1}{5}x^{5}-\frac{1}{
-6}x^{6}\right) _{0}^{1}=\frac{1}{5}-\frac{1}{6}=\frac{1}{30}\\
+6}x^{6}\right) _{0}^{1}=\frac{1}{5}-\frac{1}{6}=\frac{1}{30}\\[0.5em]
+\overline{x}&=\frac{M_{y}}{m}=\frac{\frac{1}{30}}{\frac{1}{20}}=\frac{2}{3}\\
+\overline{y}&=\frac{M_{x}}{m}=\frac{\frac{1}{35}}{\frac{1}{20}}=\frac{20}{35}%
+=\frac{4}{7}
 \end{align*}
 
-\[
-\overline{x}=\frac{M_{y}}{m}=\frac{\frac{1}{30}}{\frac{1}{20}}=\frac{2}{3}\\
-\overline{y}=\frac{M_{x}}{m}=\frac{\frac{1}{35}}{\frac{1}{20}}=\frac{20}{35}%
-=\frac{4}{7}
-\]
+luego, el centro de masa es $\left( \frac{1}{35},\frac{1}{30}\right) $.
 
-luego, el centro de masa es $\left( \frac{1}{35},\frac{1}{30}\right) .$
+\section{Ejercicios del capítulo~\thechapter}
 
-\addcontentsline{toc}{section}{Ejercicios del capítulo~\thechapter}
+\group
+
+Para los ejercicios \ref{areainic}-\ref{areafinal} encuentre el área de la región del plano $xy$ acotada por las gráficas de las funciones dadas.
+
+%\begin{multicols}{2}
+
+\exercise{\label{areainic}$y=x^{2}+3$, $y=x$, $x=-1$ y $x=1$.}{$\frac{20}{3}u^{2}$}
+
+\exercise{$y=x^{4}$, $y=-x-1$, $x=-2$ y $x=0$}{$\frac{42}{5}\ u^{2}$}
+
+\exercise{$y=x^{2}+3$ y $y=x+5$}{$\frac{9}{2}\ u^{2}$}
+
+\exercise{$y=x$ y $y=x^{2}$}{$\frac{1}{6}\ u^{2}$}
+
+\exercise{$y=x^{2}$ y $ x=y^{2}$}{$\frac{1}{3}\ u^{2}$}
+
+\exercise {$y=4x^{2}$ y $y=x^{2}+3$}{$4 \ u^{2}$}
+
+\exercise {$y=x^{4}-x^{2}$ y $y=1-x^{2}$}{$\frac{8}{5} \ u^{2}$}
+
+\exercise {$x+y^{2}=2$ y $x+y=0$}{$\frac{9}{2} \ u^{2}$}
+
+\exercise {$y=2x-x^{2}$ y $y=x^{3}$}{$\frac{37}{12} \ u^{2}$}
+
+\exercise {$y=\cos x$, $y=\sec^{2}x$, $x=-\frac{\pi }{4}$ y $x=\frac{\pi}{4}$}{$2-\sqrt{2}\ u^{2}$}
+
+\exercise {$y=\vert x\vert$, $y=(x+1)^{2}-7$ y $x=-4$}{$34\ u^{2}$}
+
+\exercise {$y=\frac{1}{x}$, $y=\frac{1}{x^{2}}$, $x=1$ y $x=2$}{$\ln 2+1\ u^{2}$}
+
+\exercise {$y=\frac{1}{x}$, $x=0$, $y=1$ y $y=2$}{$\ln 2\ u^{2}$}
+
+\exercise {$y=1$ y $y=\frac{10}{x^{2}+1}$}{$20\tan^{-1}3-6\ u^{2}$}
+
+\exercise {$y=2^{x}$, $y=5^{x}$, $x=-1$ y $x=1$}{$\frac{1}{5\ln 5}+\frac{3}{\ln 5}-\frac{1}{2\ln 5}\ u^{2}$}
+
+\exercise {$y=e^{x}$, $y=e^{3x}$ y $x=1$}{$\frac{1}{3}e^{3}-e+\frac{2}{3}\ u^{2}$}
+
+\exercise {$y=\sen ^{-1}x$, $y=0$ y $x=0.5$}{$\frac{\pi }{12}+\frac{\sqrt{3}}{2}-1\ u^{2}$}
+
+\exercise {$y=xe^{-x}$, $y=0$ y $x=5$}{$1-\frac{6}{e^{5}}\ u^{2}$}
+
+\exercise {$y=5\ln x$ y $y=x\ln x$}{$\frac{25}{2}\ln 5-14\ u^{2}$}
+
+\exercise {$y=\frac{25x^{2}}{x^{2}+9}$ y $y=x^{2}$}{$\frac{472}{3}-150\tan^{-1} \frac{4}{3}$}
+
+\exercise {$y=(\sen^{-1}x)^2$ y $y=\sen^{-1} x$}{$2\sen 1-\sqrt{\frac{1}{2}\cos 2+\frac{1}{2}}-1$}
+
+\exercise { $y=x\tan^{-1}x$ y $y=\tan^{-1} x$}{$\frac{1}{2}-\frac{1}{2}\ln 2\ u^2$}
+
+\exercise {$y=\frac{2400}{x^{2}-16}$ y $y=\frac{2400}{x^{4}-16}$}{$600\ln 5-750\ln3-150\pi +300\tan^{-1} 2$}
+
+\exercise {$y=2x^{3}-3x^{2}-9x$ y $ y=x^{3}-2x^{2}-3x$}{}
+
+\exercise {La región en el primer cuadrante acotada por $y=x^{-2}$, $y=8x$ y  $y=\frac{x}{8}$}{}
+
+\exercise {La región en el primer cuadrante acotada por $y=9-x^{2},\ y=8x$ y $y=\frac{5}{2}x$}{}
+
+\exercise {Halle el area de la región limitada por la hipérbola dada por la ecuación $9x^{2}-4y^{2}=36$ y la recta vertical $x=3$.\label{areafinal}}
+%\end{multicols}
+
+\exercise{Hallar el volumen del sólido cuya base es la región limitada por $y=x^{2}$ y $y=4x$ y sus secciones transversales perpendiculares al eje $x$ son triángulos rectángulos isósceles con la hipotenusa sobre la base.}{$\frac{128}{15}u^{3}$}
+
+\exercise{  Hallar el volumen del sólido cuya base es el disco centrado en $\left(0,0\right) $ de radio 2 y sus secciones transversales perpendiculares al eje
+$x$ son triángulos equiláteros con un lado sobre la base.}{$\frac{%
+32}{3}\sqrt{3}$ $u^{3}$.}
+
+\exercise{ Hallar el volumen del sólido cuya base es el disco centrado en $\left(
+0,0\right) $ de radio 2 y sus secciones transversales perpendiculares al eje
+$x$ son cuadrados con la diagonal sobre la base.}{$\frac{64}{3}u^{3}$}
+
+\exercise{Hallar el volumen del sólido cuya base es el disco centrado en $\left(
+0,0\right) $ de radio 2 y sus secciones transversales perpendiculares al eje
+$x$ son cuadrados con un lado sobre la base.} {$\frac{128}{3}u^{3}$}
+
+\exercise{Hallar el volumen del sólido cuya base es la región limitada por $%
+x=y^{2}$ y $x=4$ y sus secciones transversales perpendiculares al eje $x$
+son discos con el diámetro sobre la base.}{$8\pi u^{3}$}
+
+\exercise{Hallar el volumen del sólido cuya base es el disco centrado en $\left(
+0,0\right) $ de radio 2, y sus secciones transversales perpendiculares al
+eje $x$ son discos con el diámetro sobre la base.}{$\frac{32}{3}\pi
+u^{3}$}
+
+\exercise{Hallar el volumen del sólido cuya base es la región limitada por $%
+y=2\sen x$ y $y=0,0\leq x\leq \pi $ y sus secciones transversales perpendiculares al eje $x$
+son triángulos equiláteros con un lado sobre la base.} {$\frac{\sqrt{3}%
+\pi }{2}\allowbreak \pi u^{3}$}
+
+\exercise{Hallar el volumen del sólido cuya base es la región limitada por $%
+y=\tan x$ y $y=\sec x,x=-\frac{\pi }{4},x=\frac{\pi }{4},$ y sus secciones
+transversales perpendiculares al eje $x$ son rectángulos con el largo
+sobre la base y tal que la altura es la mitad del largo.} {$\frac{244}{21}\pi u^{3}$}
+
+En los ejercicios \ref{volinic} a \ref{volfin} encuentre el volumen del sólido de revolución que se obtiene al hacer girar la región limitada por las curvas dadas en torno al eje indicado. Dibuje la región y el sólido.
+
+%\begin{multicols}{2}
+\exercise{$y=x^{2},x=1,y=0,$ alrededor del eje $x$.}{$V=\frac{\pi}{5}u^{3}$}\label{volinic}
+
+\exercise{$y^{2}=x^{3},x=4,y=0,$ alrededor del eje $x$.} {$V=64\pi u^{3}$}
+
+\exercise{$y=\sqrt{x-1},x=2,x=5,y=0,$ alrededor del eje $x$.} {$V=\frac{15}{2}\pi u^{3}$}
+
+\exercise{$x=y-y^{2},x=0,$ alrededor del eje $y$.} {$V=\frac{\pi }{30}u^{3}$}
+
+\exercise{$y=x^{4},y=x^{2},$ alrededor del eje $x$.} {$V=\frac{8}{45}\pi u^{3}$}
+
+\exercise{$y=4-x^{2},y=0,$ alrededor del eje $x$.} {$V=\frac{512}{15}\pi u^{3}$}
+
+\exercise{$y=x^{2},x=y^{2}$.}
+
+\exercise{Alrededor del eje $x$.} {$V=\frac{3}{10}\pi u^{3}$}
+
+\exercise{Alrededor del eje $y$.} {$V=\frac{3}{10}\pi u^{3}$}
+
+\exercise{Alrededor de la recta $y=2$.} {$V=\frac{31}{30}\pi u^{3}$}
+
+\exercise{$y=\sec x$, $y=1$, $x=-1$, $x=1$, alrededor del eje $x$.} {$V=\pi (2\tan (1)-2)u^{3}$}
+
+\exercise{$y=\sen x$, $y=\cos x$, $x=0$, $x=\frac{\pi }{4}$.}
+
+\exercise{En torno al eje $x$.}{$V=\frac{\pi }{2}u^{3}$}
+
+\exercise{En torno al eje $y$.}{$V=\frac{\pi }{2}\left( \sqrt{2}\pi -4\right)u^{3}$}
+
+\exercise{Eje de giro $x=\frac{\pi }{4}$} {$V=\frac{\pi }{2}\left( 4-\pi \right)
+u^{3}$}
+
+\exercise{Eje de rotación $y=1$}{$V=\frac{\pi }{2}\left( 4\sqrt{2}-5\right)u^{3}$}
+
+\exercise{Eje de rotación $y=-1$}{$ V=\frac{\pi }{2}\left( 4%
+\sqrt{2}-3\right) u^{3}$}
+
+\exercise{$y=\frac{-1}{x}$, $x=1$, $y=0$, $x=3$, alrededor del eje $x$.} {$V=\frac{2\pi }{3}u^{3}$}
+
+\exercise{$y=\tan x$, $y=1$, $x=0$, alrededor del eje $x$.} {$V=\pi (\frac{\pi }{2}-1)u^{3}$}
+
+\exercise{$y=\sqrt{x-1}$, $x=5$, $y=0$, alrededor del eje $y$.} {$V=\frac{544}{15}\pi u^{3}$}
+
+\exercise{$y=\cos x$, $x=0$, $y=0$, con $0\leq x\leq \frac{\pi }{2}$, alrededor de la recta $y=1$.} {$V=-\frac{1}{4}\pi \left( \pi -8\right) u^{3}$}\label{volfin}
+%\end{multicols}
+
+\exercise{Halle la longitud de la curva dada entre los puntos dados}
+
+%\begin{multicols}{2}
+\subexercise{$y=2x+1,\ -1\leq x\leq 3$.} {$L=4\sqrt{5}u$}
+
+\subexercise{$y^{2}=(x-1)^{3}$ desde $P(1,0)$ a $Q(2,1)$.}
+{$L=\frac{1}{27}\left[ (-5+9(2))^{\frac{3}{2}}\right.$\linebreak$\left.-(-5+9(1))^{\frac{3}{2}%
+}\right] u$}
+
+\subexercise{$y=1-x^{\frac{2}{3}}$ desde $P(1,0)$ a $ P(-8,-3),Q(-1,0)$.} {$L=\left( -\frac{13\sqrt{13}}{27}+\frac{80\sqrt{10}}{27}\right)
+u$}
+
+\subexercise{$9y^{2}=x(x-3)^{2}$ desde $P(1,0)$ a $ P(1,\frac{2}{3}),Q(2,\frac{\sqrt{2}}{3})$.} {$L=\frac{5(2)^{\frac{1}{2}}-4}{3}u$}
+
+\subexercise{$y=\frac{1}{3}(x^{2}+2)^{\frac{3}{2}}\ 0\leq x\leq 1.$} {$L=\frac{4}{3}u$}
+
+\subexercise{$y=\frac{x^{3}}{6}+\frac{1}{2x}$ \ \ $1\leq x\leq 2.$} {$L=\frac{17}{12}u$}
+
+\subexercise{$y=\frac{x^{4}}{4}+\frac{1}{8x^{2}}$ \ $1\leq x\leq 3$.} {$L=\frac{181}{9}u$}
+
+\subexercise{$y=\ln (\cos x)$ \ $0\leq x\leq \frac{\pi }{4}. $} {$L=\ln (\sqrt{2}+1) u$}
+
+\subexercise{$y=\ln (\sen x)$ \ $\frac{\pi }{6}\leq x\leq \frac{\pi }{3}.$} {$L=\ln \left( \frac{\sqrt{3}}{3(\sqrt{3}-2)}\right) u$}
+
+\subexercise{$y=\ln (\frac{e^{x}+1}{e^{x}-1})$ \ $1\leq x\leq 2.$
+} {$L=\left( \frac{1}{2}\ln \left( e^{2}+1\right) -\frac{1}{2}\right)
+u$}
+
+\subexercise{$\ y=e^{x},0\leq x\leq 1$.} {$L=\left( \sqrt{e^{2}+1}+\ln \left( \frac{\sqrt{e^{2}+1}-1}{\sqrt{2}-1}%
+\right) -1-\sqrt{2}\right) u$}
+
+\subexercise{ $y=\ln x,1\leq x\leq \sqrt{3}.$} {$L=\left( 2-\ln \left\vert \sqrt{3}(\sqrt{2}-1)\right\vert -\sqrt{2}\right) u$}
+
+\subexercise{$y=2\sqrt{x},0\leq y\leq 2.$} {$L=\allowbreak \left( \ln \left( \sqrt{2}+1\right) +\sqrt{2}\right) u$}
+%\end{multicols}
+
+\exercise{Encuentre el área de la superficie que se obtiene al girar la curva dada en torno al eje $x$}
+
+\begin{multicols}{2}
+\subexercise{$y=\sqrt{x},4\leq x\leq 9. $} {$S=\frac{\sqrt{2}\pi }{3}\left( 19(19)^{\frac{1}{2}}\right.$\linebreak$\left.-27\right) u^{2}$}
+
+\subexercise{$y=x+4,0\leq x\leq 2.$} {$ S=10\sqrt{2}u^{2}$}
+
+\subexercise{$y^{2}=4x+4.$} {$S= \frac{16\sqrt{2}\pi }{3}\left( 5\sqrt{5}-1\right) u^{2}$}
+
+\subexercise{$y=x^{3},0\leq x\leq 2.$} {$S=\frac{1}{54}\left( 145(145)^{\frac{1}{2}}\right.$\linebreak$\left.-1\right) u^{2}$}
+
+\subexercise{$y=x^{3}+\frac{1}{12x},1\leq x\leq 2.$
+} {$S= \frac{12289}{192}\pi u^{2}$}
+
+\subexercise{$y=\frac{x^{2}}{4}-\frac{\ln x}{2},1\leq x\leq 4.$} {$S=\frac{\pi }{16}\left( 315-128\left( \ln 2\right) -16\ln ^{2}2\right)  u^{2} $ }
+
+\subexercise{$y=\sen x,0\leq x\leq \pi $.} {$S=\pi \left( 2\sqrt{2}-\ln \left( \frac{\sqrt{2}+1}{\sqrt{2}-1}\right)\right) u^{2}$}
+
+\subexercise{$x=\frac{1}{3}(y^{2}+2)^{\frac{3}{2}},1\leq y\leq 2.$} { $S= \frac{21}{2}\pi u^{2}$}
+
+\subexercise{$x=2\ln y,1\leq y\leq 2.$} {$S=2\pi \left( 4\sqrt{2}+4\ln \left( 2\sqrt{2}+2\right) -\sqrt{5}\right.$\linebreak$\left.-4\ln  \left( \sqrt{5}+1\right) \right) u^{2}$}
+\end{multicols}
+
+\exercise{Encuentre el área de la superficie que se obtiene al girar la curva dada en torno al eje $y$}
+
+\subexercise{$x=\frac{1}{2}y^{4}+\frac{1}{16y^{2}},1\leq y\leq 3.$} {$S=\frac{2127389}{1296}\pi u^{2}$}
+
+\exercise{En los siguientes ejercicios, Halle la masa de las siguientes barras
+delgadas\ representadas en el intervalo dado, con la función de densidad
+$\rho \left( x\right) $ indicada.}
+
+%\begin{multicols}{2}
+\subexercise{ $\rho \left( x\right) =1+\cos x;$ $0\leq x\leq \frac{\pi }{2}.$}{$\frac{\pi }{2}+1$ unidades de masa.}
+
+\subexercise{$\rho \left( x\right) =2+\sen x;$ $0\leq x\leq \pi $}{$2\pi +2$ unidades de masa.}
+
+\subexercise{$\rho \left( x\right) =1+x^{4};$ $0\leq x\leq 1.$}{$\frac{6}{5}$ unidades de masa.}
+
+\subexercise{$\rho \left( x\right) =4+x^{3};$ $0\leq x\leq 2.$}{$12$ unidades de masa.}
+
+\subexercise{$\rho \left( x\right) =\left\{
+  \begin{array}{ccc}
+    x^{2} & si & 0\leq x\leq 1 \\
+    4-x^{2} & si & 1\leq x\leq 2%
+  \end{array}%
+\right. $}{$2$ unidades de masa.}
+
+\subexercise{$\rho \left( x\right) =\left\{
+    \begin{array}{ccc}
+      \sen x & si & 0\leq x\leq \pi \\
+      2+\cos x & si & \pi \leq x\leq 2\pi%
+    \end{array}%
+  \right. $}{$2\pi +2$ unidades de masa.}
+
+  \subexercise{$\rho \left( x\right) =e^{x}+e^{2x};$ $0\leq x\leq \ln 2$}{$\frac{5}{2}$ unidades de masa.}
+
+  \subexercise{$\rho \left( x\right) =\sen \left( 2x\right) +\tan x;$ $0\leq x\leq \frac{%
+  \pi }{4}.$}{$0.84657$ unidades de masa.}
+
+  \subexercise{$\rho \left( x\right) =x\sqrt{16-x^{2}};$ $0\leq x\leq 4.$}{$\frac{64}{3}$unidades de masa.}
+
+  \subexercise{$\rho \left( x\right) =\frac{x}{\sqrt{x^{2}+16}};$ $0\leq x\leq 3.$}{$R:1$ unidad de masa.}
+
+  \subexercise{$\rho \left( x\right) =x^{2}e^{x};$ $0\leq x\leq \ln 3.$}{$1.029,2$ unidad de masa.}
+
+  \subexercise{$\rho \left( x\right) =\frac{\sqrt{x^{2}-9}}{x};$ $3\leq x\leq 5.$}{$1.2181$ unidad de masa.}
+
+  \subexercise{$\rho \left( x\right) =\frac{x^{2}}{\sqrt{x^{2}+9}};$ $0\leq x\leq 4.$}{$5.,056,2$ unidad de masa.}
+  %\end{multicols}
+
+  \medskip
+
+  En los ejercicios \ref{masainic} al \ref{masafin}, halle la masa y el centro de masa de las siguientes láminas delgadas\ representadas por la región limitada por las curvas o rectas dadas, con la función de densidad $\rho \left(x\right) $ indicada.
+
+  \exercise{La región limitada por $y=x^{2}+1,y=2x+1$ con función de
+  densidad $\rho \left( x\right) =x+1.$\label{masainic}}
+  {$m=\frac{8}{3},$ Centro de masa $\left( \frac{11}{10},\frac{14}{5}\right) $}
+
+  \exercise{La región limitada por $y=x^{2}+1,y=3-x^{2}$ con función de
+  densidad $\rho \left( x\right) =2x+1.$}{$m=\frac{8}{3},$ Centro de masa $\left( \frac{2}{5},2\right) .$}
+
+  \exercise{La región limitada por $y=2x^{2}+1,y=x^{2}+5$ con función de
+  densidad $\rho \left( x\right) =3x+2.$} {$m=\frac{64}{3},$ Centro de masa $\left( \frac{6}{5},\frac{21}{5}\right) .$}
+
+  \exercise{La región limitada por $y=x^{4},y=x^{2}$ con función de densidad
+  $\rho \left( x\right) =x+3.$}{$m=\frac{1}{6},$ Centro de masa $\left( \frac{129}{203},\frac{5376}{29}%
+  \right) .$}
+
+  \exercise{La región del primer cuadrante acotada por $x^{2}+y^{2}=16,$ \ $\rho
+  \left( x\right) =x.$}{$m=\frac{64}{3},$ Centro de masa $\left( \frac{3}{4}\pi ,\frac{3}{2}%
+  \right) .$}
+
+  \exercise{La región acotada por $y=1-\left\vert x\right\vert $ y el eje $x,$ \
+  $\rho \left( x\right) =x^{2}.$}{$m=\frac{1}{6},$ Centro de masa $\left( 0,\frac{1}{5}\right) .$}
+
+  \exercise{ La región acotada por $y=e^{-x},y=e^{x}$ y $x=\ln 2,$ \ $\rho
+  \left( x\right) =e^{x}.$}{$m=\frac{3}{2}-\ln 2,$ \ Centro de masa $\left( 0.49088,1.1361\right) .$}
+
+  \exercise{ La región acotada por $y=\ln x,y=0$ y $x=e,$ \ $\rho \left(
+  x\right) =4.$}{$m=4,$ Centro de masa $\left( 2.0973,0.35914\right) .$}
+
+  \exercise{La región limitada por $y=\sec ^{2}\left( x\right) ,\tan ^{2}\left(
+    x\right) $ y las rectas $x=-\frac{\pi }{4},x=\frac{\pi }{4}$ con función
+  de densidad $\rho \left( x\right) =2.$}{$m=\pi ,$ $\ $Centro de masa $\left( 0,0.77324\right) .$}
+
+  \exercise{La región limitada por $y=x^{2}-x,y=x$ con función de densidad $%
+  \rho \left( x\right) =\sqrt{x+1}.$}{$\ m=\frac{24}{35}\sqrt{3}+\frac{24}{35},$ Centro de masa $\left(
+  1.051,0.65029\right)$.}
+
+  \exercise{La región encerrada por la semicircunferencia $x^{2}+y^{2}=4,y\geq 0$
+  $\ $con función de densidad $\rho \left( x\right) =x^{2}.$}{$m=2\pi ,$ \ Centro de masa $\left( 0,0.67906\right) .$}
+
+  \exercise{La región limitada por $y=e^{x},y=e^{-x}$ y $x=\ln 3$ con funció%
+  n de densidad $\rho \left( x\right) =x.$}{$m=\frac{10}{3}\ln 3-\frac{8}{3},$ Centro de masa $\left(
+  0.83442,1.3977\right) .$}
+
+  \exercise{La región limitada por $y=e^{x},y=x^{2}e^{x}$, con función de
+  densidad $\rho \left( x\right) =x^{2}.$}{$m=0.32651,$ \ Centro de masa $\left( 0.38348,1.2437\right) .$}
+
+  \exercise{La región limitada por $y=2\ln x,y=x\ln x$, con función de
+  densidad $\rho \left( x\right) =x^{2}.$}{$m=0.30614,$ Centro de masa $\left( 1.5484,0.77321\right) .$}
+
+  \exercise{Un tanque en forma de prisma rectangular con un largo de $6$ pies, ancho de
+    $4$ pies y alto de $10$ pies, está lleno de agua. Encuentre el trabajo
+  realizado para bombear toda el agua hasta la parte superior del tanque.}{$149760$ lb-pie.}
+
+  \exercise{Un tanque en forma de pirámide con base cuadrada de lado $5$ pies y
+    altura de $12$ pies con el vértice hacia abajo, está lleno de agua. \
+    Encuentre el trabajo realizado para bombear toda el agua hasta $2$ pies arriba
+  de la parte superior del tanque.}{$31200$ lb-pie.}
+
+  \exercise{ Un tanque en forma de cono circular recto con radio de la base de $6$ pies
+    y altura de $14$ pies con el vértice hacia abajo, está lleno de agua
+    hasta una profundidad de $8$ pies. \ Encuentre el trabajo realizado para
+    bombear el agua hasta una altura de $3$ pies arriba de la parte superior del
+  tanque.}{$\frac{5271552}{245}\pi $ lb-pie.}
+
+  \exercise{Un tanque hemisférico de radio de $30$ pies está lleno de agua
+    hasta una profundidad de $20$ pies. Encuentre el trabajo realizado para
+  bombear toda el agua hasta la parte superior del tanque.}{$9984000\pi $ lb-pie.}
+
+  \exercise{Un tanque hemisférico de radio de 10 pies está lleno de agua
+    hasta una profundidad de 5 pies. Encuentre el trabajo realizado para
+  bombear toda el agua hasta 1 pie arriba de la parte superior del tanque.}{$197600\pi lb-pie.$}
+
+  \exercise{Un tanque parabólico, generado por el giro de la recta $y=\frac{1}{2}x^{2}$, $0\leq x\leq 2$, ($x$ en pies ) alrededor del eje $y$, está lleno de
+    agua. Hallar el trabajo realizado para bombear el agua hasta 1 pie por
+  encima del tanque.}{$416\pi $ lb-pie.}
+
+  \exercise{El tanque, generado por el giro de la recta $y=x^{3}$, $0\leq x\leq 2$, ($x$ en pies ) alrededor del eje $y$, está lleno de agua. Hallar el trabajo
+  realizado para bombear el agua hasta $2$ pies por encima del tanque.}{$\frac{29952}{5}\pi $ lb-pie}
+
+  \exercise{El tanque, generado por el giro de la recta $y=x^{4}$, $0\leq x\leq 2$, ($x$ en pies ) alrededor del eje $y$, está lleno de agua. Hallar el trabajo
+  realizado para bombear el agua hasta $1$ pie por encima del tanque.}{$\frac{492544}{25}\pi $ lb-pie}
+
+  \exercise{Una placa rectangular plana de $20$ pies por $26$ pies se sumerge
+    horizontalmente en agua a una profundidad de $15$ pies. Determine la presi%
+  ón y la fuerza ejercidas sobre la placa por el agua arriba de ésta.}{$486720$ lb.}
+
+  \exercise{Una placa en forma de disco de radio de $8$ pies se sumerge
+    horizontalmente en agua a una profundidad de $12$ pies. Determine la presi%
+  ón y la fuerza ejercidas sobre la placa por el agua arriba de ésta.}{$150555.525$ lb.}
+
+  \exercise{La placa formada por un rectángulo de base $6$ pies y altura $10$ pies se
+    sumerge verticalmente en agua, hasta que la base coincida con el nivel del
+  agua. Encuentre la fuerza ejercida por el agua sobre un lado de la placa.}{$18720$ lb.}
+
+  \exercise{La placa formada por un triángulo isóceles de base $8$ pies y
+    altura $12$ pies se sumerge verticalmente en agua, hasta que la base coincida
+    con el nivel del agua. Encuentre la fuerza ejercida por el agua sobre un
+  lado de la placa.}{$11980.8$ lb.}
+
+  \exercise{La placa formada por el sector parabólico limitado por $y=x^{2}$ y la
+    recta $y=9.$ ($x$ en pies) se sumerge verticalmente en agua, hasta que la
+    recta $y=11$coincida con el nivel del agua. Encuentre la fuerza ejercida por
+  el agua sobre un lado de la placa.}{$8087.04$ lb.}
+
+  \exercise{Una placa en forma de mitad de un disco de radio $3$ pies se sumerge
+    verticalmente en agua, hasta que el diámetro coincida con el nivel del agua.
+  Encuentre la fuerza ejercida por el agua sobre un lado de la placa.}{$1123.2$ lb.}
+
+  \exercise{Una placa en forma de triángulo equilátero de lado $5$ pies con la base
+    horizontal se sumerge verticalmente en agua, hasta que la base coincida con
+    el nivel del agua. Encuentre la fuerza ejercida por el agua sobre un lado de
+  la placa.}{$195$ lb.}
+
+  \exercise{La placa formada por la región limitada por $y=x^{2}-1$ y $y=7-x^{2}.$
+    ($x$ en pies) se sumerge verticalmente en agua, hasta que el vértice de $%
+    y=7-x^{2}$ sea tangente al nivel del agua. Encuentre la fuerza ejercida por
+  el agua sobre un lado de la placa.}{$5324.8$ lb.}
+
+  \exercise{La placa formada por la región limitada por $y=4-x^{2}$ y $y=4-4x.$ ($%
+    x$ en pies) se sumerge verticalmente en agua, de tal forma que el nivel del
+    agua corresponde con la recta $y=8$. Encuentre la fuerza ejercida por el
+  agua sobre un lado de la placa.}{$1297.92$ lb.}
+
+  \exercise{La placa formada por la región limitada por $y=\sen x$ y $y=0,0\leq
+    x\leq \pi$. ($x$ en pies) se sumerge verticalmente en agua, de tal forma
+    que el nivel del agua coincida con la recta $y=2$. Encuentre la fuerza
+  ejercida por el agua sobre un lado de la placa.\label{masafin}}{$93.462$ lb.}

@@ -7,7 +7,7 @@
 Cuando se denota la derivada utilizando la notación de Leibniz, esto representa un símbolo, no un cociente. Las cantidades $dy$ y $dx$ tienen significados separados. Cuando se realiza una sustitución, es necesario trabajar con diferencial.
 
 \begin{defi}
-  Sea $y=f(x)$ una función diferenciable. La diferencial $dx$ es una variable independiente y la diferencial $dy$ es igual a $f'(x)dx$.
+  Sea $y=f(x)$ una función diferenciable. La diferencial $dx$ es una variable independiente y la diferencial $dy$ es igual a $f'(x)\,dx$.
 \end{defi}
 
 La diferencial representa la magnitud con que la recta tangente sube o baja cuando la variable independiente se desplaza una cantidad pequeña horizontalmente.
@@ -15,7 +15,7 @@ La diferencial representa la magnitud con que la recta tangente sube o baja cuan
 \section{Integración trigonométrica y método de~sustitución}
 
 Para calcular una integral que tenga la forma $\int f(g(x))g'(x)\,dx$, es decir, una integral en la que se tenga una composición de dos funciones y la derivada de la función interna (salvo, quizás, constantes) multiplique a esa composición\footnote{El hecho de que se tenga $g'(x)$ no es completamente estricto. Puede tenerse una expresión muy similar a la derivada de $g$ de tal manera que la sustitución también funcione.}, puede hacerse la sustitución
-\[u=g(x), \qquad du=g'(x)dx\]
+\[u=g(x), \qquad du=g'(x)\,dx\]
 que la convierte en
 \begin{align*}
   \int f(g(x))g'(x)\,dx&=\int f(u)\, du\\
@@ -151,16 +151,16 @@ Para el caso de $\cot x$,
 
 Si la función es $\sec x$,
 \begin{align*}
-  \int \sec x\,dx & =\int \frac{\sec x\left( \sec x+\tan x\right) }{\sec x+\tan x}dx =\int \frac{\left( \sec x\tan x+\sec ^{2}x\right) dx}{\sec x+\tan x},\\
-  &\quad u=\sec x+\tan x\qquad du=\left( \sec x\tan x+\sec ^{2}x\right) dx\\
+  \int \sec x\,dx & =\int \frac{\sec x\left( \sec x+\tan x\right) }{\sec x+\tan x}dx =\int \frac{\left( \sec x\tan x+\sec ^{2}x\right)\,dx}{\sec x+\tan x},\\
+  &\quad u=\sec x+\tan x\qquad du=\left( \sec x\tan x+\sec ^{2}x\right)\,dx\\
   &=\int \frac{du}{u}=\ln \left\vert u\right\vert =\ln \left\vert \sec x+\tan
   x\right\vert +C
 \end{align*}
 
 Si la función es $\csc x$,
 \begin{align*}
-  \int \csc x\,dx&=\int \frac{\csc x\left( \csc x-\cot x\right) }{\csc x-\cot x}dx=\int \frac{\left( -\csc x\cot x+\csc ^{2}x\right) dx}{\sec x+\tan x},\\
-  &\quad u=\csc x-\cot x\qquad du=\left( -\csc x\cot x+\csc ^{2}x\right) dx\\
+  \int \csc x\,dx&=\int \frac{\csc x\left( \csc x-\cot x\right) }{\csc x-\cot x}dx=\int \frac{\left( -\csc x\cot x+\csc ^{2}x\right)\,dx}{\sec x+\tan x},\\
+  &\quad u=\csc x-\cot x\qquad du=\left( -\csc x\cot x+\csc ^{2}x\right)\,dx\\
   &=\int \frac{du}{u}=\ln \left\vert u\right\vert =\ln \left\vert \csc x-\cot
   x\right\vert +C
 \end{align*}
@@ -321,7 +321,7 @@ Si una función tiene algún tipo de simetría, su integral se puede simplificar
 \begin{teorema}\leavevmode\par
 \begin{parrafonumerado}[label={\alph*)}]
 \item Si $f$ es una función par y continua en el intervalo $\left[ -a,a\right]$, entonces ${\int_{-a}^{a}f\left( x\right)dx=2\int_{0}^{a}f\left( x\right)dx}$.
-\item Si $f$ es una función impar y continua en el intervalo $\left[ -a,a\right]$, entonces ${\int_{-a}^{a}f\left( x\right) dx=0}$.
+\item Si $f$ es una función impar y continua en el intervalo $\left[ -a,a\right]$, entonces ${\int_{-a}^{a}f\left( x\right)\,dx=0}$.
 \end{parrafonumerado}
 \end{teorema}
 
@@ -331,24 +331,24 @@ Si una función tiene algún tipo de simetría, su integral se puede simplificar
 
 \begin{parrafonumerado}[label={\alph*)}]
 
-\item ${\int_{-a}^{a}f\left( x\right) dx=\int_{-a}^{0}f\left( x\right)
-dx+\int_{0}^{a}f\left( x\right) dx}$. Si $u=-x$, es decir, $x=-u$ y $dx=-du$, en la primera integral, entonces
-\[\int_{-a}^{a}f\left( x\right) dx=\int_{a}^{0}f\left( -u\right) \left( -du\right) +\int_{0}^{a}f\left( x\right) dx\]
+\item ${\int_{-a}^{a}f\left( x\right)\,dx=\int_{-a}^{0}f\left( x\right)
+dx+\int_{0}^{a}f\left( x\right)\,dx}$. Si $u=-x$, es decir, $x=-u$ y $dx=-du$, en la primera integral, entonces
+\[\int_{-a}^{a}f\left( x\right)\,dx=\int_{a}^{0}f\left( -u\right) \left( -du\right) +\int_{0}^{a}f\left( x\right)\,dx\]
 E intercambiando los límites de integración y usando la paridad de $f$,
 \begin{align*}
-\int_{-a}^{a}f\left( x\right) dx&=\int_{a}^{0}f\left( -u\right) \left( -du\right) +\int_{0}^{a}f\left( x\right) dx\\
-&=\int_{0}^{a}f\left( u\right) du+\int_{0}^{a}f\left( x\right) dx\\
-&=\int_{0}^{a}f\left( x\right) dx+\int_{0}^{a}f\left( x\right) dx=2\int_{0}^{a}f\left( x\right) dx
+\int_{-a}^{a}f\left( x\right)\,dx&=\int_{a}^{0}f\left( -u\right) \left( -du\right) +\int_{0}^{a}f\left( x\right)\,dx\\
+&=\int_{0}^{a}f\left( u\right) du+\int_{0}^{a}f\left( x\right)\,dx\\
+&=\int_{0}^{a}f\left( x\right)\,dx+\int_{0}^{a}f\left( x\right)\,dx=2\int_{0}^{a}f\left( x\right)\,dx
 \end{align*}
 
 \item De manera similar al caso anterior,
 \begin{align*}
-\int_{-a}^{a}f\left( x\right) dx&=\int_{-a}^{0}f\left( x\right)dx+\int_{0}^{a}f\left( x\right) dx\\
+\int_{-a}^{a}f\left( x\right)\,dx&=\int_{-a}^{0}f\left( x\right)dx+\int_{0}^{a}f\left( x\right)\,dx\\
 \intertext{ si $u=-x$, $x=-u$ y $dx=-du$,}
-&=\int_{a}^{0}f\left( -u\right) \left( -du\right) +\int_{0}^{a}f\left(x\right) dx\\
+&=\int_{a}^{0}f\left( -u\right) \left( -du\right) +\int_{0}^{a}f\left(x\right)\,dx\\
 \intertext{y dado que $f$ es impar,}
-&=-\int_{0}^{a}f\left( u\right) du+\int_{0}^{a}f\left( x\right) dx\\
-&=-\int_{0}^{a}f\left( x\right) dx+\int_{0}^{a}f\left( x\right) dx=0
+&=-\int_{0}^{a}f\left( u\right) du+\int_{0}^{a}f\left( x\right)\,dx\\
+&=-\int_{0}^{a}f\left( x\right)\,dx+\int_{0}^{a}f\left( x\right)\,dx=0
 \end{align*}
 \end{parrafonumerado}
 
@@ -429,23 +429,23 @@ f\left( x\right) g'\left( x\right) =\frac{d}{dx}\left( f\left( x\right)g\left( x
 \]
 que, integrando ambos lados, se convierte en
 \begin{align}\label{partes}
-\int f\left( x\right) g'\left( x\right) dx&=\int \frac{d}{dx}\left(
+\int f\left( x\right) g'\left( x\right)\,dx&=\int \frac{d}{dx}\left(
 f\left( x\right) g\left( x\right) \right) dx-\int g\left( x\right)
-f'\left( x\right) dx\notag\\
+f'\left( x\right)\,dx\notag\\
 &=f\left( x\right) g\left(
-x\right) -\int g\left( x\right) f'\left( x\right) dx
+x\right) -\int g\left( x\right) f'\left( x\right)\,dx
 \end{align}
 Ello nos dice que la integral de un producto particular, es decir, un producto en el que uno de los factores es fácil de integrar (la integral de $g'$ es $g$) y preferiblemente el otro factor se simplifica al derivarlo, se puede reescribir como en \eqref{partes}.
 
 Ahora bien, si hacemos $u=f\left( x\right)$, $du=f'\left( x\right)
-dx$, $v=g\left( x\right)$, y $dv=g'\left( x\right) dx$, se tiene que \eqref{partes} se convierte en
+dx$, $v=g\left( x\right)$, y $dv=g'\left( x\right)\,dx$, se tiene que \eqref{partes} se convierte en
 \begin{equation}\label{partesformula}
 \int udv=uv-\int vdu
 \end{equation}
 
 Esta fórmula identifica el método de integración por partes. Veamos su uso con algunos casos particulares:
 
-\subsection{Integrales de la forma \texorpdfstring{\bm{$\int P(x)f(x)dx$}}{int P(x)f(x)dx}}\label{ProdFunciones}
+\subsection{Integrales de la forma \texorpdfstring{\bm{$\int P(x)f(x)\,dx$}}{int P(x)f(x)\,dx}}\label{ProdFunciones}
 
 Tomemos el caso en donde $P\left( x\right) $ es un polinomio y $f(x)$ es una función de tipo seno, coseno o exponencial, o $P(x)$ es una función lineal y $f(x)$ es $\sec ^{2}x,\ \csc^{2}x,\ \tan ^{2}x,\ \cot ^{2}x.$
 
@@ -486,7 +486,7 @@ En este caso podemos tomar las siguientes sustituciones:
 
 \begin{center}
 \begin{tabular}{lllll}
-  $u=x^{2}$ & $\Rightarrow$ & $\frac{du}{dx} =2x$ & $\Rightarrow$ & $du=2x dx$\\
+  $u=x^{2}$ & $\Rightarrow$ & $\frac{du}{dx} =2x$ & $\Rightarrow$ & $du=2x\,dx$\\
   $dv=\sen \left(\frac{1}{2}x\right)dx$ & $\Rightarrow$ & $v =\int \sen \left(\frac{1}{2}x\right)dx$ & $\Rightarrow$ & $v=-2\cos\left(\frac{1}{2}x\right)$
 \end{tabular}
 \end{center}
@@ -638,9 +638,9 @@ Entonces,
 \int e^{\sqrt{x}}dx=\int e^{y} 2y\,dy=2ye^{y}-2e^{y}+C=(2\sqrt{x}-2)e^{\sqrt{x}}+C
 \]
 
-\subsection{Integral de la forma \texorpdfstring{\boldmath{$\boldsymbol{\int} P(x)\ln x\,dx$}}{int P(x)ln x dx} (\texorpdfstring{\bm{$P(x)$}}{P(x)} un polinomio)}
+\subsection{Integral de la forma \texorpdfstring{\boldmath{$\boldsymbol{\int} P(x)\ln x\,dx$}}{int P(x)ln x\,dx} (\texorpdfstring{\bm{$P(x)$}}{P(x)} un polinomio)}
 
-En este caso, la función que se simplifica al derivarla es $\ln x$; por tanto, debe tomarse $u=\ln x$, $dv=P(x) dx$, con lo cual la nueva integral será de un polinomio:
+En este caso, la función que se simplifica al derivarla es $\ln x$; por tanto, debe tomarse $u=\ln x$, $dv=P(x)\,dx$, con lo cual la nueva integral será de un polinomio:
 
 \begin{ejemplo}
 Tomemos $\int (x^{3}+x^{2})\ln x\,dx$.
@@ -751,7 +751,7 @@ $\int \sen^{-1} x\,dx$.
 
 y así,
 \begin{align*}
-\int \sen^{-1} x dx&=\int y\cos y\,dy\\
+\int \sen^{-1} x\,dx&=\int y\cos y\,dy\\
 &=y(\sen y)-(-\cos y)+B\\
 &=y\sen y+\cos y+B\\
 &=x\sen^{-1} x+\sqrt{1-\sen^{2}y}+B\\
@@ -786,7 +786,7 @@ Por otro lado, la tabla de integración por partes se ve de la siguiente manera:
 
 y con ello,
 \begin{align*}
-\int \tan^{-1} x dx&=\int y\sec^2 y\,dy=y\tan y-\ln |\sec y|+C\\
+\int \tan^{-1} x\,dx&=\int y\sec^2 y\,dy=y\tan y-\ln |\sec y|+C\\
 &=x\tan^{-1} x-\ln |\sqrt{\tan ^{2}y+1}|+C\\
 &=x\tan^{-1} x-\ln \sqrt{x^{2}+1}+C
 \end{align*}
@@ -860,20 +860,20 @@ S&=\frac{1}{2}\left(\sec \theta \tan \theta +\ln |\sec \theta +\tan \theta |\rig
 Note que en la línea \eqref{S} aparece la integral inicial; por tanto; podemos manejarla como a las incógnitas en una ecuación lineal y agruparlas a un solo lado de la igualdad para luego despejar.
 
 \begin{ejemplo}
-Encontremos el valor de $\int e^{4x}\cos (2x)dx$.
+Encontremos el valor de $\int e^{4x}\cos (2x)\,dx$.
 \end{ejemplo}
 
 \emph{Solución.} Por el método de integración por partes, se tiene
 \begin{align*}
-u&=e^{4x} & dv&=\cos (2x)dx \\
+u&=e^{4x} & dv&=\cos (2x)\,dx \\
 du&=4e^{4x}dx & v&=\frac{1}{2}\sen (2x)
 \end{align*}
 y llamemos $I$ a nuestra integral:
 \begin{align}
-I&=\int e^{4x}\cos (2x)dx\notag\\
-I&=\frac{1}{2}e^{4x}\sen (2x)-\underbrace{\int 2e^{4x}\sen (2x)dx}_{\text{partes nuevamente}}\notag\\
-I&=\frac{1}{2}e^{4x}\sen (2x)-2\left(-\frac{1}{2}e^{4x}\cos(2x)+2\int e^{4x}\cos (2x)dx \right)\notag\\
-I&=\frac{1}{2}e^{4x}\sen (2x)+\frac{2}{2}e^{4x}\cos (2x)-\underbrace{4\int e^{4x}\cos (2x)dx}_{\leftarrow I}\\
+I&=\int e^{4x}\cos (2x)\,dx\notag\\
+I&=\frac{1}{2}e^{4x}\sen (2x)-\underbrace{\int 2e^{4x}\sen (2x)\,dx}_{\text{partes nuevamente}}\notag\\
+I&=\frac{1}{2}e^{4x}\sen (2x)-2\left(-\frac{1}{2}e^{4x}\cos(2x)+2\int e^{4x}\cos (2x)\,dx \right)\notag\\
+I&=\frac{1}{2}e^{4x}\sen (2x)+\frac{2}{2}e^{4x}\cos (2x)-\underbrace{4\int e^{4x}\cos (2x)\,dx}_{\leftarrow I}\\
 4I+I&=\frac{1}{2}e^{4x}(\sen (2x)+2\cos (2x))\notag\\
 5I&=\frac{1}{2}e^{4x}(\sen (2x)+2\cos (2x))\notag\\
 I&=\frac{1}{10}e^{4x}(\sen (2x)+2\cos (2x))+C\notag
@@ -2073,7 +2073,7 @@ Si $u=-\frac{1}{3}\rightarrow -\frac{1}{3}B=1\rightarrow B=-3.$
 
   \exercise{$\int \sec ^{6}tdt$}{$\tan t+\frac{2\tan ^{3}t}{3}+\frac{\tan  ^{5}t}{5}+C$}
 
-  \exercise{$\int \csc ^{4}xdx$}{$-\cot \left( x\right) -\frac{\cot  ^{3}\left( x\right) }{3}+C$}
+  \exercise{$\int \csc ^{4}x\,dx$}{$-\cot \left( x\right) -\frac{\cot  ^{3}\left( x\right) }{3}+C$}
 
   \exercise{$\int \cos ^{6}(2y)dy$}{$\frac{5y}{16}+\frac{\sin \left(  2y\right) }{4}+\frac{3\sin \left( 4y\right) }{64}-\frac{\sin ^{3}\left(2y\right) }{48}+C$}
 
@@ -2083,9 +2083,9 @@ Si $u=-\frac{1}{3}\rightarrow -\frac{1}{3}B=1\rightarrow B=-3.$
 
   \exercise{$\int \tan ^{7}\left( 7y\right) dy$}{$ \frac{7^{5}y^{6}}{6}-\frac{7^{3}y^{4}}{4}+\frac{7y^{2}}{2}+\ln \left\vert \cos \left( 7y\right)\right\vert +C$}
 
-  \exercise{$\int \cot ^{5}xdx$}{$-\frac{1}{4}\cot ^{4}x+\frac{1}{2}\cot^{2}x+\ln \left\vert \sin x\right\vert +C$}
+  \exercise{$\int \cot ^{5}x\,dx$}{$-\frac{1}{4}\cot ^{4}x+\frac{1}{2}\cot^{2}x+\ln \left\vert \sin x\right\vert +C$}
 
-  \exercise{$\int \sin ^{4}x\cos ^{5}xdx$}{$\frac{\sin ^{5}\left( x\right)}{5}-\frac{2\sin ^{7}\left( x\right) }{7}+\frac{\sin ^{9}\left( x\right) }{9}+C$}
+  \exercise{$\int \sin ^{4}x\cos ^{5}x\,dx$}{$\frac{\sin ^{5}\left( x\right)}{5}-\frac{2\sin ^{7}\left( x\right) }{7}+\frac{\sin ^{9}\left( x\right) }{9}+C$}
 
   \exercise{$\int \cot ^{3}y\csc ^{4}ydy$}{$\frac{1}{2}\cot ^{2}y-\frac{1}{5}\cot ^{5}y+C$}
 
@@ -2093,7 +2093,7 @@ Si $u=-\frac{1}{3}\rightarrow -\frac{1}{3}B=1\rightarrow B=-3.$
 
   \exercise{$\int_{\frac{\pi ^{2}}{16}}^{\frac{\pi ^{2}}{4}}\frac{\sin (\sqrt{y})}{\sqrt{y}}dy$}{$\sqrt{2}$}
 
-  \exercise{$\int \frac{xdx}{\sqrt[3]{x}+\sqrt{x}}$}{$6\sqrt[6]{x}-6\ln \left( \sqrt[6]{x}+1\right) -3\sqrt[3]{x}+2\sqrt{x}-\frac{3}{2}\sqrt[3]{x}^{2}+\frac{6}{5}\sqrt[6]{x}^{5}-x+\frac{6}{7}\sqrt[6]{x}^{7}-\frac{3}{4}\sqrt[3]{x}^{4}+\frac{2}{3}\sqrt[2]{x}^{3}+C$}
+  \exercise{$\int \frac{x\,dx}{\sqrt[3]{x}+\sqrt{x}}$}{$6\sqrt[6]{x}-6\ln \left( \sqrt[6]{x}+1\right) -3\sqrt[3]{x}+2\sqrt{x}-\frac{3}{2}\sqrt[3]{x}^{2}+\frac{6}{5}\sqrt[6]{x}^{5}-x+\frac{6}{7}\sqrt[6]{x}^{7}-\frac{3}{4}\sqrt[3]{x}^{4}+\frac{2}{3}\sqrt[2]{x}^{3}+C$}
 
   \exercise{$\int \frac{dx}{2\sqrt[3]{x}-3\sqrt{x}}$}{$
     -\frac{8}{9}\sqrt[6]{x}-\frac{2}{3}\sqrt[3]{x}-\frac{2}{3}\sqrt{x}-\frac{16}{27}\ln
@@ -2174,7 +2174,7 @@ Encuentre el valor de cada una de las siguientes integrales.
 
   \exercise{${\int_{0}^{\frac{\pi }{4}}\sec ^{6}\theta d\theta}$}{$\frac{28}{15}$}
 
-  \exercise{${\int \sen \left( 4\ln x\right) dx}$}{ $\frac{x}{17}\left( \sen \left( 4\ln x\right) -x\cos \left( 4\ln x\right) \right)+C$}
+  \exercise{${\int \sen \left( 4\ln x\right)\,dx}$}{ $\frac{x}{17}\left( \sen \left( 4\ln x\right) -x\cos \left( 4\ln x\right) \right)+C$}
 
   \exercise{${\int e^{\sqrt[4]{x}}\, dx}$}{$-4e^{\sqrt[4]{x}}\times$ \linebreak $\left( -\sqrt[4]{x}^{3}+3\sqrt[4]{x}^{2}-6\sqrt[4]{x}+6\right) $ }
 
@@ -2277,7 +2277,7 @@ Encuentre el valor de cada una de las siguientes integrales.
 
   \exercise {$ \int \frac{dx}{4\sen x+3\cos x+4}$}{$\frac{1}{6}\ln \left\vert \frac{\tan (\frac{x}{2})+7}{\tan (\frac{x}{2})+1}\right\vert +C$}
 
-  \exercise {$ \int \frac{\cos xdx}{\sen x+2\cos
+  \exercise {$ \int \frac{\cos x\,dx}{\sen x+2\cos
   x-2}$}{\linebreak$\ln \left\vert \frac{\sqrt[4]{2\tan (\frac{x}{2})+1}}{\tan (\frac{x}{2})}\right\vert +C$}
 
   \exercise{$\int \frac{\sec x}{1+\sen x}dx$}{$2\left( \frac{-1}{1+\tan (\frac{x}{2})}+\frac{1}{2}\ln \left\vert \frac{1+\tan (\frac{x}{2})}{1-\tan (\frac{x}{2})}\right\vert \right) +C$}

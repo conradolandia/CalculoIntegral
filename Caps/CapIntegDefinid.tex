@@ -786,7 +786,7 @@ x_{1}+ f(0.9)\Delta x_{2}+f(1.4)\Delta x_{3}\\[-0.9em]
 \begin{defi}[Integral definida de una función acotada]
 Sean $f$ una función acotada en el intervalo $[a,b]$; $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ una partición cualquiera del intervalo $[a,b]$, y $x_{k}^{\ast }$, un punto elegido en el subintervalo $\left[x_{k-1},x_{k}\right]$. Entonces la integral entre $a$ y $b$ de $f$ está dada por
 \begin{equation}\label{defintegral}
-\int_{a}^{b}f(x)dx=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }
+\int_{a}^{b}f(x)\,dx=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }
 \sum_{k=1}^{n}f(x_{k}^{\ast })\Delta x_{k}
 \end{equation}
 siempre que el límite exista.
@@ -806,7 +806,7 @@ Integral de una función constante $f(x)=c$.
 \end{ejemplo}
 Supongamos que $f$ es constante, es decir, $f(x)=c$, con $c\in\mathbb{R}$; entonces,
 \begin{align*}
-\int_{a}^{b}f(x)dx&=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }%
+\int_{a}^{b}f(x)\,dx&=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }%
 \sum_{k=1}^{n}f(x_{k}^{\ast })\Delta x_{k}\\
 &=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }\sum_{k=1}^{n}c\cdot \Delta x_{k}\\
 &=c\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }\sum_{k=1}^{n}\Delta x_{k}\\
@@ -824,9 +824,9 @@ El siguiente teorema, que se demuestra usando la definición de integral, nos ga
 \begin{teorema}
 Si $f$ es integrable en el intervalo $[a,b]$, entonces
 \begin{parrafonumerado}
-\item ${\int_{a}^{b}f(x)dx}=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }\sum_{k=1}^{n}f(x_{k}^{\ast })\Delta x_{k}$, con $P$ una partición cualquiera de $[a,b]$ y $x_{k}^{\ast }$ un punto cualquiera del subintervalo $\left[ x_{k-1},x_{k}\right]$.
+\item ${\int_{a}^{b}f(x)\,dx}=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }\sum_{k=1}^{n}f(x_{k}^{\ast })\Delta x_{k}$, con $P$ una partición cualquiera de $[a,b]$ y $x_{k}^{\ast }$ un punto cualquiera del subintervalo $\left[ x_{k-1},x_{k}\right]$.
 
-\item ${\int_{a}^{b}f(x)dx}=\lim_{n\to\infty}\sum_{k=1}^{n}f(x_{k})\Delta x,$ con $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ una partición regular del intervalo $[a,b]$, $\Delta x=\frac{b-a}{n}$\; y\; $x_{k}=a+k\Delta x=a+k\frac{b-a}{n},$ $1\leq k\leq n$.
+\item ${\int_{a}^{b}f(x)\,dx}=\lim_{n\to\infty}\sum_{k=1}^{n}f(x_{k})\Delta x,$ con $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ una partición regular del intervalo $[a,b]$, $\Delta x=\frac{b-a}{n}$\; y\; $x_{k}=a+k\Delta x=a+k\frac{b-a}{n},$ $1\leq k\leq n$.
 \end{parrafonumerado}
 \end{teorema}
 
@@ -860,24 +860,24 @@ Vemos, entonces, que, al hacer dos elecciones distintas de $x_k^*$, obtenemos re
 \begin{teorema}\label{PropIntegral}
 Propiedades de la integral definida: sean $f$ y $g$ funciones integrables en el intervalo $[a,b]$, y $\alpha$ y $\beta$, constantes reales; entonces,
 \begin{parrafonumerado}
-\item $\int_{a}^{a}f\left( x\right) dx=0$
-\item $\int_{a}^{b}f\left( x\right) dx=-\int_{b}^{a}f\left( x\right) dx$
+\item $\int_{a}^{a}f\left( x\right)\,dx=0$
+\item $\int_{a}^{b}f\left( x\right)\,dx=-\int_{b}^{a}f\left( x\right)\,dx$
 
 \item Propiedad aditiva:
 \[
-  \int_{a}^{b}\left( f(x)+g(x)\right)dx=\int_{a}^{b}f(x)dx+\int_{a}^{b}g(x)dx
+  \int_{a}^{b}\left( f(x)+g(x)\right)dx=\int_{a}^{b}f(x)\,dx+\int_{a}^{b}g(x)\,dx
 \]
 
 \item Propiedad homogénea:
-\[\int_{a}^{b}\alpha f(x)dx=\alpha \int_{a}^{b}f(x)dx\]
+\[\int_{a}^{b}\alpha f(x)\,dx=\alpha \int_{a}^{b}f(x)\,dx\]
 \item Propiedad de linealidad:
-\[\int_{a}^{b}\left( \alpha f(x)+\beta g(x)\right) dx=\alpha \int_{a}^{b}f(x)dx+\beta \int_{a}^{b}g(x)dx\]
+\[\int_{a}^{b}\left( \alpha f(x)+\beta g(x)\right) dx=\alpha \int_{a}^{b}f(x)\,dx+\beta \int_{a}^{b}g(x)\,dx\]
 \item Propiedad de aditividad en el intervalo:
-\[\int_{a}^{b}f(x)dx=\int_{a}^{c}f(x)dx+\int_{c}^{b}f(x)dx\]
+\[\int_{a}^{b}f(x)\,dx=\int_{a}^{c}f(x)\,dx+\int_{c}^{b}f(x)\,dx\]
 para $c$ entre $a$ y $b$.\footnote{La condición de que $c$ está entre $a$ y $b$ no es necesaria. Acá se incluye solo por ser el caso que se toma en la demostración de más adelante.}
-\item Positividad: $f\geq 0$ en $[a,b]$, entonces $\int_{a}^{b}f(x)dx\geq 0$.
-\item Monotonía: sean $f$ y $g$ tales que $f\left( x\right)\leq g\left( x\right)$ para todo $x\in \left[ a,b\right]$, entonces $\int_{a}^{b}f(x)dx\leq \int_{a}^{b}g(x)dx$.
-\item Desigualdad máximo-mínimo: si existen $f(c)=m $ y $f(d)=M$ los valores mínimo y máximo de $f$ en $[a,b]$, entonces $m(b-a)\leq \int_{a}^{b}f(x)dx\leq M(b-a)$.
+\item Positividad: $f\geq 0$ en $[a,b]$, entonces $\int_{a}^{b}f(x)\,dx\geq 0$.
+\item Monotonía: sean $f$ y $g$ tales que $f\left( x\right)\leq g\left( x\right)$ para todo $x\in \left[ a,b\right]$, entonces $\int_{a}^{b}f(x)\,dx\leq \int_{a}^{b}g(x)\,dx$.
+\item Desigualdad máximo-mínimo: si existen $f(c)=m $ y $f(d)=M$ los valores mínimo y máximo de $f$ en $[a,b]$, entonces $m(b-a)\leq \int_{a}^{b}f(x)\,dx\leq M(b-a)$.
 \end{parrafonumerado}
 \end{teorema}
 
@@ -885,19 +885,19 @@ para $c$ entre $a$ y $b$.\footnote{La condición de que $c$ está entre $a$ y $b
 \begin{parrafonumerado}
 \item Como $b=a$, $\triangle x_{k}=0$ y
 \[
-\int_{a}^{a}f\left( x\right) dx=\underset{\left\Vert P\right\Vert
+\int_{a}^{a}f\left( x\right)\,dx=\underset{\left\Vert P\right\Vert
 \rightarrow 0}{\lim }\sum_{k=1}^{n}f(x_{k}^{\ast
 })\triangle x_{k}=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }0=0
 \]
 
 \item Si $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ es una partición de $\left[a,b\right]$, donde $\triangle x_{k}=x_{k}-x_{k-1}$, así $-\triangle x_{k}=-\left( x_{k-1}-x_{k}\right)$ y
 \begin{align*}
-\int_{a}^{b}f\left( x\right) dx&=\underset{\left\Vert P\right\Vert
+\int_{a}^{b}f\left( x\right)\,dx&=\underset{\left\Vert P\right\Vert
 \rightarrow 0}{\lim }\sum_{k=1}^{n}f(x_{k}^{\ast
 })\triangle x_{k}\\
 &=-\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }
 \sum_{k=1}^{n}f(x_{k}^{\ast })\left( -\triangle
-x_{k}\right) =-\int_{b}^{a}f\left( x\right) dx
+x_{k}\right) =-\int_{b}^{a}f\left( x\right)\,dx
 \end{align*}
 
 \item Descompongamos la expresión en la integral:
@@ -913,17 +913,17 @@ f+g\right) (x_{k}^{\ast })\Delta x_{k}\\
 \rightarrow 0}{\lim }\sum_{k=1}^{n}f(x_{k}^{\ast
 })\Delta x_{k}+\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }%
 \sum_{k=1}^{n}g(x_{k}^{\ast })\Delta x_{k}\\
-&=\int_{a}^{b}f(x)dx+\int_{a}^{b}g(x)dx
+&=\int_{a}^{b}f(x)\,dx+\int_{a}^{b}g(x)\,dx
 \end{align*}
 
 \item Igual que en el caso anterior,
 \begin{align*}
-\int_{a}^{b}\alpha f(x)dx&=\underset{\left\Vert P\right\Vert \rightarrow 0%
+\int_{a}^{b}\alpha f(x)\,dx&=\underset{\left\Vert P\right\Vert \rightarrow 0%
 }{\lim }\sum_{k=1}^{n}\alpha f(x_{k}^{\ast })\Delta
 x_{k}\\
 &=\alpha \underset{\left\Vert P\right\Vert \rightarrow 0%
 }{\lim }\sum_{k=1}^{n}f(x_{k}^{\ast })\Delta x_{k}
-=\alpha \int_{a}^{b}f(x)dx
+=\alpha \int_{a}^{b}f(x)\,dx
 \end{align*}
 
 \item Se deduce de los puntos 3 y 4.
@@ -931,11 +931,11 @@ x_{k}\\
 \item Supongamos que la participación de $[a,b]$ es $P=\{x_{0},x_{1},x_{2},\ldots, x_{j}$ $= c,x_{j+1},\ldots ,x_{n}\}$. Entonces, $P_{1}=\{x_{0},x_{1},x_{2},\ldots, x_{j}=c\}$ es una partición de $[a,c],$ y $P_{2}=\{x_{j}=c,x_{j+1},\ldots ,x_{n}\}$ es partición de $[c,b]$; entonces,
 
 \begin{align*}
-\int_{a}^{b}f(x)dx&=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }\sum_{k=1}^{n}f(x_{k}^{\ast })\Delta x_{k}\\
+\int_{a}^{b}f(x)\,dx&=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }\sum_{k=1}^{n}f(x_{k}^{\ast })\Delta x_{k}\\
 &=\underset{\left\Vert P_{1}\right\Vert \rightarrow 0}{
 \lim }\overset{j}{\underset{k=1}{\sum }}f(x_{k}^{\ast })\Delta x_{k}+%
 \underset{\left\Vert P_{2}\right\Vert \rightarrow 0}{\lim }\overset{n}{\underset{k=j}{\sum }}f(x_{k}^{\ast })\Delta x_{k}\\
-&=\int_{a}^{c}f(x)dx+\int_{c}^{b}f(x)dx
+&=\int_{a}^{c}f(x)\,dx+\int_{c}^{b}f(x)\,dx
 \end{align*}
 
 \item Si $f\geq 0$, entonces $f(x_k^*)\geq 0$ para todo $x_k^*$ en $[a,b]$, y dado que por definición $\Delta x_{k}\geq 0$, entonces $f(x_k^*) \Delta x_{k}\geq 0$; por tanto,
@@ -949,25 +949,25 @@ y
 \]
 lo que nos lleva a que
 \[
-\int_{a}^{b}f(x)dx=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }
+\int_{a}^{b}f(x)\,dx=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }
 \sum_{k=1}^{n}f(x_{k}^{\ast })\Delta x_{k}\geq 0
 \]
 
 \item Sea $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ una partición de $[a,b]$. Por hipótesis, $f\left( x_{k}\right) \leq g\left( x_{k}\right)$ para $1\leq k\leq n,$ entonces
 \begin{gather*}
-\int_{a}^{b}f(x)dx=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }
+\int_{a}^{b}f(x)\,dx=\underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }
 \sum_{k=1}^{n}f(x_{k}^{\ast })\Delta x_{k}\leq
 \underset{\left\Vert P\right\Vert \rightarrow 0}{\lim }
-\sum_{k=1}^{n}g(x_{k}^{\ast })\Delta x_{k}=\int_{a}^{b}g(x)dx
+\sum_{k=1}^{n}g(x_{k}^{\ast })\Delta x_{k}=\int_{a}^{b}g(x)\,dx
 \end{gather*}
 
 \item Por hipótesis, $m\leq f(x)\leq M$ para todo $x\in [a,b],$ entonces por la propiedad $8$ se tiene que
 \[
-\int_{a}^{b}mdx\leq \int_{a}^{b}f(x)dx\leq \int_{a}^{b}Mdx
+\int_{a}^{b}mdx\leq \int_{a}^{b}f(x)\,dx\leq \int_{a}^{b}Mdx
 \]
 y, por tanto,
 \[
-m(b-a)\leq \int_{a}^{b}f(x)dx\leq M(b-a)
+m(b-a)\leq \int_{a}^{b}f(x)\,dx\leq M(b-a)
 \]
 \end{parrafonumerado}
 
@@ -1094,7 +1094,7 @@ Sea $P=\{x_{0},x_{1},x_{2},\cdots ,x_{n}\}$ una partición regular del
 intervalo $[a,b]$, $\Delta x=\frac{b-a}{n}$ y $x_{k}=a+k\Delta x=a+k\frac{b-a}{n}$ para $1\leq k\leq n$. Entonces, la integral entre $a$ y $b$ de
 una función continua $f(x)$ es dada por
 \[
-\int_{a}^{b}f(x)dx=\lim_{n\to\infty}\overset{n}{%
+\int_{a}^{b}f(x)\,dx=\lim_{n\to\infty}\overset{n}{%
 \underset{k=1}{\sum }}f(x_{k})\Delta x
 \]
 cada vez que el límite exista.
@@ -1435,7 +1435,7 @@ Calcular las integrales usando las propiedades y fórmulas anteriores.
 
 Supongamos que $P=\{x_0,x_1,\ldots,x_n \}$ es una partición del intervalo $[a,b]$ y sea $f$ una función continua en cada uno de los subintervalos $\left[ x_{k-1},x_{k}\right]$, $1\leq k\leq n$ en la partición. Usando aditividad, podemos definir la integral de $f$ como
 \[
-\int_{a}^{b}f(x)dx=\sum_{k=1}^{n}\int_{x_{k-1}}^{x_{k}}f(x)dx
+\int_{a}^{b}f(x)\,dx=\sum_{k=1}^{n}\int_{x_{k-1}}^{x_{k}}f(x)\,dx
 \]
 \begin{ejemplo}
 La definición anterior nos permite manejar con comodidad las funciones a trozos: si
@@ -1478,8 +1478,8 @@ Valor de $f$ & $2x-1$ & $3x^{2}-2$ & $4x^{3}$ \\
 tenemos que la integral de $f$ es
 \begin{gather*}
 \begin{aligned}
-\int_{-2}^{2}f\left( x\right) dx&=\int_{-2}^{-1}f\left( x\right)
-dx+\int_{-1}^{1}f\left( x\right) dx+\int_{1}^{2}f\left( x\right) dx\\
+\int_{-2}^{2}f\left( x\right)\,dx&=\int_{-2}^{-1}f\left( x\right)
+dx+\int_{-1}^{1}f\left( x\right)\,dx+\int_{1}^{2}f\left( x\right)\,dx\\
 &=\int_{-2}^{-1}\left( 2x-1\right) dx+\int_{-1}^{1}\left( 3x^{2}-2\right)
 dx+\int_{1}^{2}4x^{3}dx\\
 &=2\int_{-2}^{-1}x\,dx-\int_{-2}^{-1}dx+3\int_{-1}^{1}x^{2}dx-\int_{-1}^{1}2dx+4\int_{1}^{2}x^{3}dx\\
@@ -1877,7 +1877,7 @@ el punto medio.}{$57.51$}
 \begin{multicols}{3}
 \subexercise{$\displaystyle{\int_{0}^{2}\left( x^{2}-2\right) dx}$}{$-\frac{4}{3}$}
 
-\subexercise{$\displaystyle\int_{0}^{1}\left(x^{2}-x\right) dx$}{$-\frac{1}{6}$}
+\subexercise{$\displaystyle\int_{0}^{1}\left(x^{2}-x\right)\,dx$}{$-\frac{1}{6}$}
 
 \subexercise{$\displaystyle\int_{-1}^{1}x^{3}dx$}{$0$}
 
@@ -1902,7 +1902,7 @@ el punto medio.}{$57.51$}
 
 \subexercise{$\displaystyle\int_{0}^{3}\left( e^{x}+2^{x}+3\right) dx$}{ $e^{3}+\frac{7}{\ln 2}+8$}
 
-\subexercise{$\displaystyle\int_{0}^{3}\left( 4^{x}+3^{x}+3x\right) dx$}{$\frac{63}{2\ln 2}+\frac{26}{\ln 3}+\frac{27}{2}$}
+\subexercise{$\displaystyle\int_{0}^{3}\left( 4^{x}+3^{x}+3x\right)\,dx$}{$\frac{63}{2\ln 2}+\frac{26}{\ln 3}+\frac{27}{2}$}
 
 \subexercise{$\displaystyle\int_{0}^{3}\left(5^{x}+4^{x}+4x^{2}\right) dx$}{$\frac{63}{2\ln 2}+\frac{124}{\ln 5}+36$}
 
@@ -1927,21 +1927,21 @@ el punto medio.}{$57.51$}
 
 \clearpage
 
-\subexercise{$\displaystyle\int_{-2}^{2}f(x)dx$, si $f(x)=\left\{
+\subexercise{$\displaystyle\int_{-2}^{2}f(x)\,dx$, si $f(x)=\left\{
 \begin{array}{ll}
 x^{2}-4, & \text{ si }x<0 \\
 4-x^{2}, & \text{ si }x\geq 0%
 \end{array}
 \right.$}{$0$}
 
-\subexercise{$\displaystyle\int_{-1}^{3}f(x)dx$, si $f(x)=\left\{
+\subexercise{$\displaystyle\int_{-1}^{3}f(x)\,dx$, si $f(x)=\left\{
 \begin{array}{ll}
 x^{3}-5x^{2}+x+2, & \text{ si }x<1 \\
 4x^{3}-x^{2}+2, & \text{ si }x\geq 1
 \end{array}
 \right. $}{$76$}
 
-\subexercise{$\displaystyle\int_{-2}^{3}f(x)dx$, si $f(x)=\left\{
+\subexercise{$\displaystyle\int_{-2}^{3}f(x)\,dx$, si $f(x)=\left\{
 \begin{array}{ll}
   x^{2}-4x, & \text{ si }x<0 \\
   4x-x^{2}, & \text{ si 0}\leq x\leq 2 \\
@@ -2019,11 +2019,11 @@ x^{3}-5x^{2}+x+2, & \text{ si }x<1 \\
 
         \subexercise{$\displaystyle\int_{0}^{e-1}\ln \left( x+1\right) dx$}{$ 1$}
 
-        \subexercise{$\displaystyle\int_{1}^{25}\log _{5}xdx$}{$50-\frac{24}{\ln 5}$}
+        \subexercise{$\displaystyle\int_{1}^{25}\log _{5}x\,dx$}{$50-\frac{24}{\ln 5}$}
 
-        \subexercise{$\displaystyle\int_{0}^{\frac{1}{2}}\arcsin \left( 2x\right) dx$}{$\frac{1}{4}\pi -\frac{1}{2}$}
+        \subexercise{$\displaystyle\int_{0}^{\frac{1}{2}}\arcsin \left( 2x\right)\,dx$}{$\frac{1}{4}\pi -\frac{1}{2}$}
 
         \subexercise{$\displaystyle\int_{0}^{3}\arcsin \left( \frac{x}{3}\right) dx$}{$\frac{3}{2}\pi-3$}
 
-        \subexercise{$\displaystyle\int_{0}^{1}\arccos \left( 1-x\right) dx$}{$1$}
+        \subexercise{$\displaystyle\int_{0}^{1}\arccos \left( 1-x\right)\,dx$}{$1$}
       \end{multicols}
