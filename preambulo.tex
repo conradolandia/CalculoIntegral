@@ -39,7 +39,7 @@
 \DefineBibliographyStrings{english}{andothers = {et\addabbrvspace al\adddot}}
 
 %\usepackage{showframe}% Similar al calderon, apagar al terminar de maquetar.
-\usepackage[cam, width=215truemm, height=275truemm, lualatex, center]{crop} % Descomentar solo en producción final
+%\usepackage[cam, width=215truemm, height=275truemm, lualatex, center]{crop} % Descomentar solo en producción final
 
 % 5. AJUSTES FINALES DE FORMATO DEL PÁRRAFO
 \usepackage[nopatch=footnote,nopatch=toc,protrusion=true,expansion=true,tracking=true]{microtype} % Microtipografía avanzada
@@ -151,7 +151,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% HYPERREF
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[hidelinks,unicode,naturalnames,bookmarksopen,bookmarksdepth=2,breaklinks=true,hyperfootnotes=false]{hyperref}
+\usepackage[draft,hidelinks,unicode,naturalnames,bookmarksopen,bookmarksdepth=2,breaklinks=true,hyperfootnotes=false]{hyperref}
 \usepackage{bookmark}
 \urlstyle{same}
 \newcommand{\secref}[1]{``\nameref{#1}''}
@@ -205,7 +205,7 @@
 \counterwithout{footnote}{chapter}
 \counterwithout{figure}{chapter}
 \counterwithout{table}{chapter}
-\setcounter{tocdepth}{3}
+\setcounter{tocdepth}{1}
 \setcounter{secnumdepth}{3}
 \renewcommand*\contentsname{\lhseries Contenido}
 \renewcommand{\cfttoctitlefont}{\hfill\Huge}

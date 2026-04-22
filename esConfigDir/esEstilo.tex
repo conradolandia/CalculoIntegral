@@ -93,8 +93,8 @@
 {\titlerule*[1pc]{}\footnotesize\lhseries\contentspage \vspace{0.5mm}}[]%
 
 \titlecontents{subsection}[2em]
-{\lhseries}%
-{}% numbered sections formatting
+{\footnotesize\lhseries}%
+{\thecontentslabel.\enspace}% numbered sections formatting
 {}% unnumbered sections formatting
 {\titlerule*[1pc]{}\small\lhseries\contentspage \vspace{0.5mm}}[]%
 
@@ -296,9 +296,9 @@ T\kern-.2em%
 X%
 }
 
-\newcommand{\escolofon}[2]{
+\newcommand{\escolofon}[3]{
 \thispagestyle{empty}
-\vspace*{10.0cm}
+\vspace*{10cm}
 \begin{tikzpicture}[remember picture,overlay]
 \node[text=gray,rotate=0,anchor=east, yshift=5mm] at (15.5,11.5){
 \includegraphics[width=5.0cm, height=4.0cm]{esIcons/logoESColofon_corner.png}
@@ -306,17 +306,32 @@ X%
 \end{tikzpicture}
 
 \vspace{-4.5cm}
+
 \begin{center}
-{\fontsize{7pt}{7pt}\selectfont
+\bgroup\fontsize{7pt}{7pt}\selectfont
 \color{MSGreyCOLOFON}
-Este libro fue editado y diagramado en} {\fontsize{13pt}{13pt}\selectfont\color{MSGreyLATEX}{\myLaTeX}}
-\vspace{3.5cm}
+Este libro fue editado y diagramado en
+\egroup
+\bgroup\fontsize{13pt}{13pt}\selectfont
+\color{MSGreyLATEX}
+\myLaTeX
+\egroup
+
+\vspace{2.5cm}
 
 \includegraphics[scale=0.05]{esIcons/logoESColofon.png}
 
 \vspace{0.5cm}
-{\scriptsize
-\color{MSGreyCOLOFON}Este libro se término de imprimir en #1 de #2\\ en la Editorial UD. Bogotá, Colombia.}
+
+\bgroup\fontsize{7pt}{7pt}\selectfont
+\color{MSGreyCOLOFON}Este libro se terminó de imprimir en #1 de #2\\
+en #3.
+\egroup
+
+\vspace*{\fill}
+\includegraphics[width=2.2cm]{esIcons/qr}
+\vspace*{\fill}
+
 \end{center}
 }
 %%%%%%%%%%%%%%%%%%
@@ -326,7 +341,7 @@ Este libro fue editado y diagramado en} {\fontsize{13pt}{13pt}\selectfont\color{
 {\medseries\fontsize{14pt}{16pt}\selectfont #1}\par
 \vspace{2\parskip}\par
 \begingroup
-\fontsize{11pt}{13pt}\selectfont
+\fontsize{9pt}{11pt}\selectfont
 #2\par
 \vspace{\parskip}\par
 {\medseries #3:}\enspace #4\par
@@ -336,9 +351,9 @@ Este libro fue editado y diagramado en} {\fontsize{13pt}{13pt}\selectfont\color{
 % Cite this book
 \newcommand{\comocitar}[2]{
 \begingroup
-\fontsize{10pt}{12pt}\selectfont
-\begin{tabular}{|l}
-\begin{minipage}{0.6\textwidth}\flushleft
+\fontsize{9pt}{11pt}\selectfont
+\begin{tabular}{|r}
+\begin{minipage}{0.55\textwidth}\flushleft
 {\medseries ¿Cómo citar este libro? / How to cite this book?}\par
 #1\par
 %\smallcaps{DOI}:
@@ -346,4 +361,11 @@ Este libro fue editado y diagramado en} {\fontsize{13pt}{13pt}\selectfont\color{
 \end{minipage}
 \end{tabular}
 \endgroup
+}
+
+\newcommand{\autorinfo}[4]{
+{\large\medseries\noindent #1}\par
+\noindent#2\par
+\faEnvelope~\url{#3}\par
+\textcolor{orcidlogocol}{\aiOrcid}~\url{#4}\par\vspace{1em}
 }

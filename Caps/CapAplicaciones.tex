@@ -779,11 +779,13 @@ revolución es
 
 El disco formado en este caso puede verse en la figura \ref{fig:disco_ejemplo}:
 
+\enlargethispage*{\baselineskip}
+
 \begin{figure}[H]
   \centering
   \caption{Disco del ejemplo}
   \label{fig:disco_ejemplo}
-  \includegraphics[width=5cm]{Gráficas/SolRevDiscEjemRectDiscos.pdf}
+  \includegraphics[width=4cm]{Gráficas/SolRevDiscEjemRectDiscos.pdf}
   \propia
 \end{figure}
 
@@ -798,10 +800,11 @@ Por tanto, el volumen del sólido de revolución es
 \begin{gather*}
   \begin{aligned}
     V&=\int_{0}^{2}\pi \left(1-\frac{x}{2}\right)^{2}dx
-    =\int_{0}^{2}\pi \left(1-x+\frac{x^{2}}{4}\right)dx\\
-    &=\pi \left(x-\frac{x^{2}}{2}+\frac{x^{3}}{12}\right)\Bigg|_{0}^{2}
-    =\pi \left[2-\frac{2^{2}}{2}+\frac{2^{3}}{12}-\left(0-\frac{0^{2}}{2}+\frac{0^{3}}{12}\right)\right]\\
-    &=\pi \left( 2-2+\frac{8}{12}\right) =\pi \cdot \frac{2}{3}=\frac{2\pi }{3}\text{ unidades cúbicas}
+    =\int_{0}^{2}\pi \left(1-x+\frac{x^{2}}{4}\right)dx
+    =\pi \left(x-\frac{x^{2}}{2}+\frac{x^{3}}{12}\right)\Bigg|_{0}^{2}\\
+    &=\pi \left[2-\frac{2^{2}}{2}+\frac{2^{3}}{12}-\left(0-\frac{0^{2}}{2}+\frac{0^{3}}{12}\right)\right]
+    =\pi \left( 2-2+\frac{8}{12}\right)\\
+    &=\pi \cdot \frac{2}{3}=\frac{2\pi }{3}\text{ unidades cúbicas}
   \end{aligned}
 \end{gather*}
 
@@ -815,8 +818,6 @@ En el siguiente enlace puede encontrarse la simulación del sólido y de los dis
   Halle el volumen del sólido de revolución generado por la región plana delimitada por la curva $x=\tan (\frac{\pi y}{4}),x=0,y=1$ alrededor del eje $y.$
 \end{ejemplo}
 
-\enlargethispage*{\baselineskip}
-
 \emph{Solución.} En la figura \ref{fig:disco_del_ejemplo} podemos ver que la sección transversal es un disco cuyo radio $r=\tan (\frac{\pi y}{4})$, luego su área es
 \[
   A(y)=\pi x^{2}=\pi \left(\tan \left(\frac{\pi y}{4}\right)\right)^{2}
@@ -826,7 +827,7 @@ En el siguiente enlace puede encontrarse la simulación del sólido y de los dis
   \centering
   \caption{Región plana y sólido del ejemplo}
   \label{fig:disco_del_ejemplo}
-  \includegraphics[width=0.46\textwidth]{Gráficas/SolRevDiscEjemTang.pdf}
+  \includegraphics[width=9cm]{Gráficas/SolRevDiscEjemTang.pdf}
   \propia
 \end{figure}
 
@@ -1468,12 +1469,14 @@ Con este método tenemos una herramienta adicional a las dos anteriores para cal
   girar alrededor del eje $y$, la región limitada por las figuras de $y=\frac{1}{16}x^{5}+x+1$, el eje $x$, el eje $y$ y la recta $x=2$.
 \end{ejemplo}
 
+\clearpage
+
 \emph{Solución.} La región y el sólido que describen el contexto son los siguientes:
 
 \begin{figure}[H]
   \centering
   \caption{Región y sólido del ejemplo}
-  \includegraphics[width=8cm]{Gráficas/CasquillosGradCinco.pdf}
+  \includegraphics[width=9cm]{Gráficas/CasquillosGradCinco.pdf}
   \propia
 \end{figure}
 
@@ -1483,7 +1486,7 @@ El casquillo solo puede verse en la figura \ref{fig:casquillo_ejemplo}:
   \centering
   \caption{Casquillo del ejemplo}
   \label{fig:casquillo_ejemplo}
-  \includegraphics[width=6cm]{Gráficas/CasquillosGradCincoCasquill.pdf}
+  \includegraphics[width=7cm]{Gráficas/CasquillosGradCincoCasquill.pdf}
   \propia
 \end{figure}
 
@@ -1492,7 +1495,7 @@ O también podemos ver el sólido de la siguiente manera:
 \begin{figure}[H]
   \centering
   \caption{El sólido del ejemplo en 3D}
-  \includegraphics[width=6cm]{Gráficas/CasquillosGradCinco3D.pdf}
+  \includegraphics[width=7cm]{Gráficas/CasquillosGradCinco3D.pdf}
   \propia
 \end{figure}
 
@@ -1513,8 +1516,7 @@ Con ello, el volumen del sólido $S$ es
   V\left( S\right) =\int_{a}^{b}2\pi xf\left( x\right)\,dx,\text{ donde }0\leq a\leq b
 \end{equation}
 
-Demos una explicación del funcionamiento de la fórmula \eqref{casquetes}: para cada $x$ en el intervalo $\left[ a,b\right] $, supongamos que $C_{x}$ es la capa cilíndrica generada al girar alrededor del eje\textbf{ $y$} el segmento que une los puntos $(x,0)$ con $\left( x,f\left( x\right) \right) $. Así que el s%
-ólido \textit{S} es $S=\cup _{x\in \left[ a,b\right] }C_{x}.$
+Demos una explicación del funcionamiento de la fórmula \eqref{casquetes}: para cada $x$ en el intervalo $\left[ a,b\right] $, supongamos que $C_{x}$ es la capa cilíndrica generada al girar alrededor del eje\textbf{ $y$} el segmento que une los puntos $(x,0)$ con $\left( x,f\left( x\right) \right) $. Así que el sólido $S$ es $S=\cup _{x\in \left[ a,b\right] }C_{x}$.
 
 Recortando $C_{x}$ por el segmento generador, el volumen $V\left(
 C_{x}\right) $ de la capa cilíndrica $C_{x}$ es
@@ -1538,6 +1540,8 @@ Tenga en cuenta que, si el eje de rotación es diferente a uno de los ejes coord
   región limitada por las figuras de $y=x^{4}+x $, el eje $x$ y la recta $x=1$, en torno a la recta $x=3$.
 \end{ejemplo}
 
+\clearpage
+
 \emph{Solución.} La figura \ref{fig:radio_altura_casquillo} muestra la región y el eje de rotación del ejemplo:
 
 \begin{figure}[H]
@@ -1558,6 +1562,8 @@ Al girar un rectángulo, tenemos lo siguiente:
   \propia
 \end{figure}
 
+\clearpage
+
 y el casquillo solo lo podemos ver así:
 
 \begin{figure}[H]
@@ -1567,11 +1573,7 @@ y el casquillo solo lo podemos ver así:
   \propia
 \end{figure}
 
-\bigskip
-
 y el sólido completo es así:
-
-\bigskip
 
 \begin{figure}[H]
   \centering
@@ -3406,13 +3408,13 @@ Para los ejercicios \ref{areainic}-\ref{areafinal} encuentre el área de la regi
 
 \exercise {$y=\frac{2400}{x^{2}-16}$ y $y=\frac{2400}{x^{4}-16}$}{$600\ln 5-750\ln3-150\pi +300\tan^{-1} 2$}
 
-\exercise {$y=2x^{3}-3x^{2}-9x$ y $ y=x^{3}-2x^{2}-3x$}{}
+\exercise{$y=2x^{3}-3x^{2}-9x$ y $ y=x^{3}-2x^{2}-3x$}{SIN RESPUESTA EN EL ORIGINAL}
 
-\exercise {La región en el primer cuadrante acotada por $y=x^{-2}$, $y=8x$ y  $y=\frac{x}{8}$}{}
+\exercise {La región en el primer cuadrante acotada por $y=x^{-2}$, $y=8x$ y  $y=\frac{x}{8}$}{SIN RESPUESTA EN EL ORIGINAL}
 
-\exercise {La región en el primer cuadrante acotada por $y=9-x^{2},\ y=8x$ y $y=\frac{5}{2}x$}{}
+\exercise {La región en el primer cuadrante acotada por $y=9-x^{2},\ y=8x$ y $y=\frac{5}{2}x$}{SIN RESPUESTA EN EL ORIGINAL}
 
-\exercise {Halle el area de la región limitada por la hipérbola dada por la ecuación $9x^{2}-4y^{2}=36$ y la recta vertical $x=3$.\label{areafinal}}
+\exercise {Halle el area de la región limitada por la hipérbola dada por la ecuación $9x^{2}-4y^{2}=36$ y la recta vertical $x=3$.\label{areafinal}}{SIN RESPUESTA EN EL ORIGINAL}
 %\end{multicols}
 
 \exercise{Hallar el volumen del sólido cuya base es la región limitada por $y=x^{2}$ y $y=4x$ y sus secciones transversales perpendiculares al eje $x$ son triángulos rectángulos isósceles con la hipotenusa sobre la base.}{$\frac{128}{15}u^{3}$}
@@ -3502,8 +3504,7 @@ u^{3}$}
 \subexercise{$y=2x+1,\ -1\leq x\leq 3$.} {$L=4\sqrt{5}u$}
 
 \subexercise{$y^{2}=(x-1)^{3}$ desde $P(1,0)$ a $Q(2,1)$.}
-{$L=\frac{1}{27}\left[ (-5+9(2))^{\frac{3}{2}}\right.$\linebreak$\left.-(-5+9(1))^{\frac{3}{2}%
-}\right] u$}
+{$L=\frac{1}{27}\left[ (-5+9(2))^{\frac{3}{2}}-(-5+9(1))^{\frac{3}{2}}\right] u$}
 
 \subexercise{$y=1-x^{\frac{2}{3}}$ desde $P(1,0)$ a $ P(-8,-3),Q(-1,0)$.} {$L=\left( -\frac{13\sqrt{13}}{27}+\frac{80\sqrt{10}}{27}\right)
 u$}
@@ -3535,13 +3536,13 @@ u$}
 \exercise{Encuentre el área de la superficie que se obtiene al girar la curva dada en torno al eje $x$}
 
 \begin{multicols}{2}
-\subexercise{$y=\sqrt{x},4\leq x\leq 9. $} {$S=\frac{\sqrt{2}\pi }{3}\left( 19(19)^{\frac{1}{2}}\right.$\linebreak$\left.-27\right) u^{2}$}
+\subexercise{$y=\sqrt{x},4\leq x\leq 9. $} {$S=\frac{\sqrt{2}\pi }{3}\left( 19(19)^{\frac{1}{2}}-27\right) u^{2}$}
 
 \subexercise{$y=x+4,0\leq x\leq 2.$} {$ S=10\sqrt{2}u^{2}$}
 
 \subexercise{$y^{2}=4x+4.$} {$S= \frac{16\sqrt{2}\pi }{3}\left( 5\sqrt{5}-1\right) u^{2}$}
 
-\subexercise{$y=x^{3},0\leq x\leq 2.$} {$S=\frac{1}{54}\left( 145(145)^{\frac{1}{2}}\right.$\linebreak$\left.-1\right) u^{2}$}
+\subexercise{$y=x^{3},0\leq x\leq 2.$} {$S=\frac{1}{54}\left( 145(145)^{\frac{1}{2}}-1\right) u^{2}$}
 
 \subexercise{$y=x^{3}+\frac{1}{12x},1\leq x\leq 2.$
 } {$S= \frac{12289}{192}\pi u^{2}$}
@@ -3552,7 +3553,7 @@ u$}
 
 \subexercise{$x=\frac{1}{3}(y^{2}+2)^{\frac{3}{2}},1\leq y\leq 2.$} { $S= \frac{21}{2}\pi u^{2}$}
 
-\subexercise{$x=2\ln y,1\leq y\leq 2.$} {$S=2\pi \left( 4\sqrt{2}+4\ln \left( 2\sqrt{2}+2\right) -\sqrt{5}\right.$\linebreak$\left.-4\ln  \left( \sqrt{5}+1\right) \right) u^{2}$}
+\subexercise{$x=2\ln y,1\leq y\leq 2.$} {$S=2\pi \left( 4\sqrt{2}+4\ln \left( 2\sqrt{2}+2\right) -\sqrt{5}-4\ln  \left( \sqrt{5}+1\right) \right) u^{2}$}
 \end{multicols}
 
 \exercise{Encuentre el área de la superficie que se obtiene al girar la curva dada en torno al eje $y$}

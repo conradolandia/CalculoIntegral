@@ -1882,8 +1882,8 @@ entonces,
   &= \int \frac{\frac{2du}{1+u^{2}}}{3\frac{2u}{1+u^{2}} + 4\frac{1-u^{2}}{1+u^{2}} + 5\frac{1+u^{2}}{1+u^{2}}} \\
   &= \int \frac{\frac{2}{1+u^{2}}}{\frac{6u}{1+u^{2}} + \frac{4-4u^{2}}{1+u^{2}} + \frac{5+5u^{2}}{1+u^{2}}} \, du \\
   &= \int \frac{\frac{2}{1+u^{2}}}{\frac{6u+4-4u^{2}+5+5u^{2}}{1+u^{2}}} \, du\\
-  &= \int \frac{2}{u^{2}+6u+9} \, du\\
-  &= \int \frac{2}{(u+3)^{2}} \, du \\
+  &= \int \frac{2}{u^{2}+6u+9} \, du
+  = \int \frac{2}{(u+3)^{2}} \, du \\
   &= -\frac{2}{u+3} + C= -\frac{2}{\tan\left(\frac{x}{2}\right)+3} + C
 \end{align*}
 
@@ -1902,8 +1902,8 @@ y tenemos que la integral es
     &=\int \frac{\frac{2}{1+u^{2}}}{\frac{8u+1-u^{2}+4+4u^{2}}{1+u^{2}}}\, du\\
     &=\int \frac{2}{3u^{2}+8u+5}\\
     &=\int \frac{2du}{3\left( u^{2}+\frac{8}{3}u+\frac{5}{3}\right) }\, du\\
-    &=\int \frac{2}{3\left( u+1\right) \left( u+\frac{5}{3}\right) }\, du
-    =\frac{2}{3}\int \frac{1}{\left( u+1\right) \left( u+\frac{5}{3}\right) }\, du
+    &=\int \frac{2}{3\left( u+1\right) \left( u+\frac{5}{3}\right) }\, du \\
+    &=\frac{2}{3}\int \frac{1}{\left( u+1\right) \left( u+\frac{5}{3}\right) }\, du
   \end{aligned}
 \end{gather*}
 
@@ -1942,21 +1942,25 @@ En conclusión,
   u=\tan \left( \frac{x}{2}\right)\ -\pi<x<\pi,\ dx=\frac{2du}{1+u^{2}},\ \sen x=\frac{2u}{1+u^{2}}\text{ y }\cos x=\frac{1-u^{2}}{1+u^{2}}
 \end{gather*}
 La integral dada se convierte en
-\begin{align*}
-  \int \frac{\sen x}{-3\sen x + 2\cos x + 3} \, dx
-  &= \int \frac{\frac{2u}{1+u^{2}} \cdot \frac{2du}{1+u^{2}}}{-3\frac{2u}{1+u^{2}} + 2\frac{1-u^{2}}{1+u^{2}} + 3\frac{1+u^{2}}{1+u^{2}}} \\
-  &= \int \frac{\frac{4u}{(1+u^{2})^{2}}}{\frac{-6u+2-2u^{2}+3+3u^{2}}{1+u^{2}}} \, du\\
-  &= \int \frac{\frac{4u}{(1+u^{2})^{2}}}{\frac{u^{2}-6u+5}{1+u^{2}}} \, du \\
-  &= \int \frac{4u}{(1+u^{2})(u^{2}-6u+5)} \, du \\
-  &= \int \frac{4u}{(u^{2}+1)(u-1)(u-5)} \, du
-\end{align*}
+\begin{small}
+  \begin{align*}
+    \int \frac{\sen x}{-3\sen x + 2\cos x + 3} \, dx
+    &= \int \frac{\frac{2u}{1+u^{2}} \cdot \frac{2du}{1+u^{2}}}{-3\frac{2u}{1+u^{2}} + 2\frac{1-u^{2}}{1+u^{2}} + 3\frac{1+u^{2}}{1+u^{2}}}\\
+    &= \int \frac{\frac{4u}{(1+u^{2})^{2}}}{\frac{-6u+2-2u^{2}+3+3u^{2}}{1+u^{2}}} \, du
+    = \int \frac{\frac{4u}{(1+u^{2})^{2}}}{\frac{u^{2}-6u+5}{1+u^{2}}} \, du \\
+    &= \int \frac{4u}{(1+u^{2})(u^{2}-6u+5)} \, du \\
+    &= \int \frac{4u}{(u^{2}+1)(u-1)(u-5)} \, du
+  \end{align*}
+\end{small}
+
 Por otro lado,
-\begin{multline*}
+\begin{gather*}
   \frac{4u}{\left( u^{2}+1\right) \left( u-1\right) \left( u-5\right) }=\frac{%
   A}{u-1}+\frac{B}{u-5}+\frac{Cu+D}{u^{2}+1}\\
   =\frac{A\left( u^{2}+1\right) \left( u-5\right) +B\left( u^{2}+1\right)
-  \left( u-1\right) +\left( Cu+D\right) \left( u-1\right) \left( u-5\right) }{\left( u^{2}+1\right) \left( u-1\right) \left( u-5\right) }
-\end{multline*}
+    \left( u-1\right) +\left( Cu+D\right) \left( u-1\right) \left( u-5\right
+  ) }{\left( u^{2}+1\right) \left( u-1\right) \left( u-5\right) }
+\end{gather*}
 e igualando los numeradores,
 \[
   A\left( u^{2}+1\right) \left( u-5\right) +B\left( u^{2}+1\right) \left(
@@ -2014,7 +2018,7 @@ y tenemos
   \int \frac{dx}{\sen x - 3\cos x + 3}
   &= \int \frac{\frac{2}{u^{2}+1}}{\frac{2u}{u^{2}+1}
     - 3\left( \frac{1 - u^{2}}{u^{2}+1} \right)
-  + 3\left( \frac{u^{2}+1}{u^{2}+1} \right)} \, du \\ \displaybreak
+  + 3\left( \frac{u^{2}+1}{u^{2}+1} \right)} \, du \\
   &= \int \frac{2}{2u - 3(1 - u^{2}) + 3(u^{2} + 1)} \, du \\
   &= \int \frac{2}{6u^{2} + 2u} \, du
   = \frac{1}{3} \int \frac{1}{u^{2} + \frac{1}{3}u} \, du \\
@@ -2030,6 +2034,7 @@ Para la integral $\int \left( \frac{3}{u}-\frac{3}{u+\frac{1}{3}}\right)\, du$ d
 \[
   \frac{1}{u\left( u+\frac{1}{3}\right)}=\frac{A}{u}+\frac{B}{u+\frac{1}{3}}\Rightarrow A\left( u+\frac{1}{3}\right) +Bu=1
 \]
+
 Si $u=0\rightarrow \frac{1}{3}A=1\rightarrow A=3$.
 
 Si $u=-\frac{1}{3}\rightarrow -\frac{1}{3}B=1\rightarrow B=-3.$
@@ -2069,7 +2074,7 @@ Si $u=-\frac{1}{3}\rightarrow -\frac{1}{3}B=1\rightarrow B=-3.$
 
   \exercise{$\int_{0}^{\frac{\pi }{4}}\tan ^{8}\theta d\theta$}{$\frac{1}{4}\pi -\frac{76}{105}$}
 
-  \exercise{$\int \cot ^{10}\theta d\theta$}{$-\frac{1}{9}\cot ^{9}\theta$ \linebreak $+\frac{1}{7}\cot ^{7}\theta -\frac{1}{5}\cot ^{5}\theta +\frac{1}{3}\cot^{3}\theta -\cot \theta -\theta +C$}
+  \exercise{$\int \cot ^{10}\theta d\theta$}{$-\frac{1}{9}\cot ^{9}\theta$  $+\frac{1}{7}\cot ^{7}\theta -\frac{1}{5}\cot ^{5}\theta +\frac{1}{3}\cot^{3}\theta -\cot \theta -\theta +C$}
 
   \exercise{$\int \sec ^{6}tdt$}{$\tan t+\frac{2\tan ^{3}t}{3}+\frac{\tan  ^{5}t}{5}+C$}
 
@@ -2139,7 +2144,7 @@ Encuentre el valor de cada una de las siguientes integrales.
 
   \exercise{${\int x\ln x\, dx}$}{$\frac{1}{2}x^{2}\ln x-\frac{1}{4}x^{2}$}
 
-  \exercise{${\int \cos x\ln (\sen x)\, dx}$}{$\left( \sen x\right) \left( \ln \left( \sen x\right)\right.$\linebreak $\left. -1\right) $}
+  \exercise{${\int \cos x\ln (\sen x)\, dx}$}{$\left( \sen x\right) \left( \ln \left( \sen x\right)-1\right) $}
 
   \exercise{${\int \cos \left( \sqrt[3]{x}\right) \, dx}$}{$\allowbreak 3\sqrt[3]{x}^{2}\sen
   \sqrt[3]{x}-6\sen \sqrt[3]{x}+6\sqrt[3]{x}\cos \sqrt[3]{x}+C$}
@@ -2148,11 +2153,11 @@ Encuentre el valor de cada una de las siguientes integrales.
 
   \exercise{${\int_{0}^{1}e^{\sqrt{x}}\, dx}$}{$2$}
 
-  \exercise{${\int e^{\sqrt[3]{x}}\, dx}$}{\linebreak$3e^{\sqrt[3]{x}}\left( \sqrt[3]{x}^{2}-2\sqrt[3]{x}+2\right) $}
+  \exercise{${\int e^{\sqrt[3]{x}}\, dx}$}{$3e^{\sqrt[3]{x}}\left( \sqrt[3]{x}^{2}-2\sqrt[3]{x}+2\right) $}
 
   \exercise{${\int \sen (\ln x)\, dx}$}{$\frac{1}{2}x\left( \sen \left( \ln x\right) -\cos\left( \ln x\right) \right) $}
 
-  \exercise{${\int x\sen (\sqrt{x})\, dx}$}{ $6x\sen \sqrt{x}-2\sqrt{x}^{3}\cos \sqrt{x}$\linebreak $-12\sen \sqrt{x}+12\sqrt{x}\cos \sqrt{x}+C$}
+  \exercise{${\int x\sen (\sqrt{x})\, dx}$}{ $6x\sen \sqrt{x}-2\sqrt{x}^{3}\cos \sqrt{x}-12\sen \sqrt{x}+12\sqrt{x}\cos \sqrt{x}+C$}
 
   \exercise{${\int \sqrt{t}\ln tdt}$}{$\frac{2}{3}t^{\frac{3}{2}}\ln t-\frac{4}{9}t^{\frac{3}{2}}$}
 
@@ -2162,7 +2167,7 @@ Encuentre el valor de cada una de las siguientes integrales.
 
   \exercise{${\int e^{-5\theta }\cos 7\theta d\theta }$}{$\frac{7}{74}e^{-5\theta }\sen7\theta -\frac{5}{74}\left( \cos 7\theta \right) e^{-5\theta }$}
 
-  \exercise{${\int \cos \left( \ln t\right) dt}$}{$\frac{1}{2}t \left(\cos\ln t\right.$ \linebreak $\left. +\sen\ln t\right) $}
+  \exercise{${\int \cos \left( \ln t\right) dt}$}{$\frac{1}{2}t \left(\cos\ln t+\sen\ln t\right) $}
 
   \exercise{${\int x\sec ^{2}x\, dx}$}{$x\tan x-$ $\ln \left\vert \sec x\right\vert +C$}
 
@@ -2170,30 +2175,29 @@ Encuentre el valor de cada una de las siguientes integrales.
 
   \exercise{${\int \sen ^{3}x\cos ^{4}x\, dx}$}{$\frac{1}{7}\cos ^{7}x-\frac{1}{5}\cos^{5}x+C $}
 
-  \exercise{${\int \cot ^{5}x\sen ^{2}x\, dx}$}{$-\frac{1}{2\sen ^{2}x}\times$ \linebreak $\left( 4\sen ^{2}x\ln\sen x-\sen ^{4}x+1\right) $}
+  \exercise{${\int \cot ^{5}x\sen ^{2}x\, dx}$}{$-\frac{1}{2\sen ^{2}x}\times\left( 4\sen ^{2}x\ln\sen x-\sen ^{4}x+1\right) $}
 
   \exercise{${\int_{0}^{\frac{\pi }{4}}\sec ^{6}\theta d\theta}$}{$\frac{28}{15}$}
 
   \exercise{${\int \sen \left( 4\ln x\right)\,dx}$}{ $\frac{x}{17}\left( \sen \left( 4\ln x\right) -x\cos \left( 4\ln x\right) \right)+C$}
 
-  \exercise{${\int e^{\sqrt[4]{x}}\, dx}$}{$-4e^{\sqrt[4]{x}}\times$ \linebreak $\left( -\sqrt[4]{x}^{3}+3\sqrt[4]{x}^{2}-6\sqrt[4]{x}+6\right) $ }
+  \exercise{${\int e^{\sqrt[4]{x}}\, dx}$}{$-4e^{\sqrt[4]{x}}\times\left( -\sqrt[4]{x}^{3}+3\sqrt[4]{x}^{2}-6\sqrt[4]{x}+6\right) $ }
 
   \exercise{${\int x\ln ^{3}x\, dx}$}{$\frac{1}{8}x^{2}\left( 4\ln ^{3}x-6\ln ^{2}x+6\ln x-3\right) $}
 
   \exercise{${\int_{1}^{e}\ln ^{4}x\, dx}$}{$\allowbreak 9e-24$ }
 
-  \exercise{${\int \left( x^{4}+x^{2}\right) \ln x\, dx}$}{\linebreak$-\frac{1}{225}%
+  \exercise{${\int \left( x^{4}+x^{2}\right) \ln x\, dx}$}{$-\frac{1}{225}%
   x^{3}\left( 9x^{2}-45x^{2}\ln x-75\ln x+25\right) $}
 
   \exercise{${\int \left( x^{8}+x^{4}\right) \ln x\, dx}$}{$-\frac{1}{2025}x^{5}\left(25x^{4}-225x^{4}\ln x-405\ln x+81\right) $}
 
-  \exercise{${\int \arcsen^{2}x\, dx}$}{\linebreak $2\left(\arcsen x\right) \sqrt{1-x^{2}}-2x+x\arcsen ^{2}x$ }
+  \exercise{${\int \arcsen^{2}x\, dx}$}{$2\left(\arcsen x\right) \sqrt{1-x^{2}}-2x+x\arcsen ^{2}x$ }
 
   \exercise{${\int x\arctan x\, dx}$}{$ \frac{1}{2}\tan^{-1} x-\frac{1}{2}x-\frac{1}{%
   4}\pi +\frac{1}{2}x^{2}\tan^{-1} x$}
 
-  \exercise{${\int x\sec^{-1} x\, dx}$}{$\frac{1}{2}\left(x^{2}\sec^{-1}\right.$ \linebreak $\left. x-%
-  \sqrt{x^{2}-1}\right) $ }
+  \exercise{${\int x\sec^{-1} x\, dx}$}{$\frac{1}{2}\left(x^{2}\sec^{-1}x-\sqrt{x^{2}-1}\right)$}
 
   \exercise{${\int x\arcsen ^{2}x\, dx}$}{$\left( \frac{1}{8}-\frac{1}{4}\arcsen ^{2}x\right)\left( 1-2x^{2}\right) +\frac{1}{2}x\sqrt{1-x^{2}}\arcsen x$ }
 
@@ -2219,17 +2223,17 @@ Encuentre el valor de cada una de las siguientes integrales.
 
   \exercise{${\int \frac{x}{(x^{2}+4)^{\frac{5}{2}}}\, dx}$}{$-\frac{1}{3\left(x^{2}+4\right) ^{\frac{3}{2}}}$ }
 
-  \exercise{${\int \frac{x}{\sqrt{\left( x+1\right) ^{2}+9}}dx}$}{$\sqrt{\left( x+1\right)^{2}+9}-\ln \left\vert \frac{1}{3}\sqrt{\left( x+1\right)^{2}+9}\right.$ \linebreak$\left.+\frac{x+1}{3}\right\vert +C$}
+  \exercise{${\int \frac{x}{\sqrt{\left( x+1\right) ^{2}+9}}dx}$}{$\sqrt{\left( x+1\right)^{2}+9}-\ln \left\vert \frac{1}{3}\sqrt{\left( x+1\right)^{2}+9}+\frac{x+1}{3}\right\vert +C$}
 
   \exercise{${\int \frac{x^{2}}{\sqrt{4x-x^{2}}}\, dx}$}{$-6\sen^{-1} \left( 1-\frac{1}{2}x\right) -\frac{1}{2}x\sqrt{-x\left( x-4\right) }-3\sqrt{-x\left( x-4\right)
   } $}
 
-  \exercise{${\int \frac{1}{\sqrt{9x^{2}+6x-8}}\, dx}$}{$\frac{1}{3}\ln \left( 18x\right.$ \linebreak$\left.+6\sqrt{9x^{2}+6x-8}+6\right) $}
+  \exercise{${\int \frac{1}{\sqrt{9x^{2}+6x-8}}\, dx}$}{$\frac{1}{3}\ln \left( 18x+6\sqrt{9x^{2}+6x-8}+6\right) $}
 
   \exercise{${\int \frac{1}{\left( x^{2}+4x+5\right) ^{2}}dx}$}{$\frac{%
   1}{2}\left( \arctan \left( x+2\right) +\frac{x+2}{x^{2}+4x+5}\right) +C$}
 
-  \exercise{${\int \frac{1}{(5-4x-x^{2})^{\frac{5}{2}}}\, dx}$}{$-\frac{1}{243\left(-x^{2}-4x+5\right)^{\frac{3}{2}}}\left( 2x^{3}+\right.$ \linebreak$\left.12x^{2}-3x-38\right)$}
+  \exercise{${\int \frac{1}{(5-4x-x^{2})^{\frac{5}{2}}}\, dx}$}{$-\frac{1}{243\left(-x^{2}-4x+5\right)^{\frac{3}{2}}}\left( 2x^{3}+12x^{2}-3x-38\right)$}
 
   \exercise{${\int e^{t}\sqrt{9-e^{2t}}dt}$}{$\frac{9}{2}\arcsen \left( e^{t}\right) +\frac{1}{2}%
   e^{t}\sqrt{9-e^{2t}}+C$}
@@ -2249,14 +2253,13 @@ Encuentre el valor de cada una de las siguientes integrales.
       \ln \left( x+4\right) -\ln \left( x-1\right) +x\ln \left( x-1\right) -x\ln
   \left( x+4\right) +5\right)$}
 
-  \exercise{${\int \frac{x^{3}}{(x+2)^{4}}\, dx}$}{$\frac{1}{3\left( x+2\right) ^{3}}\left(54x+\right.$ \linebreak$\left.24\ln \left( x+2\right) +36x\ln \left( x+2\right) \right.  \left.+18x^{2}\ln \left(
-  x+2\right) +3x^{3}\ln \left( x+2\right) +18x^{2}+44\right)$}
+  \exercise{${\int \frac{x^{3}}{(x+2)^{4}}\, dx}$}{$\frac{1}{3( x+2) ^{3}}(54x+24\ln ( x+2) +36x\ln ( x+2) +18x^{2}\ln (x+2) +3x^{3}\ln ( x+2) +18x^{2}+44)$}
 
-  \exercise{${\int \frac{1}{x^{4}-x^{2}}\, dx}$}{\linebreak$\frac{1}{2x}\left( x\ln \left( x-1\right)-x\ln \left( x+1\right) +2\right) $}
+  \exercise{${\int \frac{1}{x^{4}-x^{2}}\, dx}$}{$\frac{1}{2x}\left( x\ln \left( x-1\right)-x\ln \left( x+1\right) +2\right) $}
 
   \exercise{${\int \frac{x}{x^{2}+x+1}\, dx}$}{$\frac{1}{2}\ln \left( x^{2}+x+1\right) +\frac{1}{6}\sqrt{3}\pi -\frac{1}{3}\sqrt{3}\tan^{-1} \sqrt{3}\left( \frac{2}{3}x+\frac{1}{3}\right)$}
 
-  \exercise{${\int_{0}^{1}\frac{8x^{2}}{x^{4}-16}\, dx}$}{\linebreak$\pi -\ln 3-2\arctan 2$}
+  \exercise{${\int_{0}^{1}\frac{8x^{2}}{x^{4}-16}\, dx}$}{$\pi -\ln 3-2\arctan 2$}
 
   \exercise{${\int \frac{x^{3}-2x^{2}+x+1}{x^{4}+5x^{2}+4}\, dx}$}{$-\frac{3}{2}\arctan \frac{%
   1}{2}x+\frac{1}{2}\ln \left( x^{2}+4\right) +\arctan x$}
@@ -2278,11 +2281,11 @@ Encuentre el valor de cada una de las siguientes integrales.
   \exercise {$ \int \frac{dx}{4\sen x+3\cos x+4}$}{$\frac{1}{6}\ln \left\vert \frac{\tan (\frac{x}{2})+7}{\tan (\frac{x}{2})+1}\right\vert +C$}
 
   \exercise {$ \int \frac{\cos x\,dx}{\sen x+2\cos
-  x-2}$}{\linebreak$\ln \left\vert \frac{\sqrt[4]{2\tan (\frac{x}{2})+1}}{\tan (\frac{x}{2})}\right\vert +C$}
+  x-2}$}{$\ln \left\vert \frac{\sqrt[4]{2\tan (\frac{x}{2})+1}}{\tan (\frac{x}{2})}\right\vert +C$}
 
   \exercise{$\int \frac{\sec x}{1+\sen x}dx$}{$2\left( \frac{-1}{1+\tan (\frac{x}{2})}+\frac{1}{2}\ln \left\vert \frac{1+\tan (\frac{x}{2})}{1-\tan (\frac{x}{2})}\right\vert \right) +C$}
 
-  \exercise{$\int \frac{dx}{2\sen x+\sen 2x}$}{$\frac{1}{4}\left[\ln \left\vert\tan(\frac{x}{2})\right\vert\right.$ \linebreak$\left.+\frac{\tan^{2}(\frac{x}{2})}{2}\right] +C$}
+  \exercise{$\int \frac{dx}{2\sen x+\sen 2x}$}{$\frac{1}{4}\left[\ln \left\vert\tan(\frac{x}{2})\right\vert+\frac{\tan^{2}(\frac{x}{2})}{2}\right] +C$}
 
   \exercise{$\int \frac{dx}{2\sen x-\sen 2x}$}{$\frac{1}{4}\left( \frac{-1}{2\tan ^{2}(\frac{x}{2})}+\ln \left\vert \tan (
   \frac{x}{2})\right\vert \right) +C$}
@@ -2290,5 +2293,5 @@ Encuentre el valor de cada una de las siguientes integrales.
   \exercise{$\int \frac{dx}{\sen x+\tan x}$}{$\frac{1}{4}\left( \ln
   \left\vert \tan (\frac{x}{2})\right\vert -\frac{\tan ^{4}(\frac{x}{2})}{4}\right)+C$}
 
-  \exercise{$\int \frac{dx}{15\sen x+8\cos x+17}$}{$\linebreak\frac{-2}{9\tan (\frac{x}{2})+15}+C$}
+  \exercise{$\int \frac{dx}{15\sen x+8\cos x+17}$}{$\frac{-2}{9\tan (\frac{x}{2})+15}+C$}
 \end{multicols}
