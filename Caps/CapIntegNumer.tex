@@ -4,30 +4,24 @@
 
 Hasta ahora se trabajó con funciones que debían ser continuas en un intervalo cerrado $[a,b]$, en donde se podía calcular la integral definida. En muchos contextos podemos encontrarnos con funciones definidas en un intervalo no finito, o que no son continuas en el intervalo. En ese caso, tenemos integrales impropias. Estas integrales se clasifican en dos grupos.
 
-\subsection*{Intervalos de integración no acotados}
+\subsection{Intervalos de integración no acotados}
 
 Un intervalo de la forma $[a,\infty )$, $(\infty,b]$ o $(-\infty ,\infty )$ se dice que es \textit{no acotado}. Las integrales impropias se evalúan según el intervalo.
 
-\textbf{Caso I.} Supongamos que $f$ es una función continua en el intervalo $[a,\infty ).$ La integral impropia $\int_{a}^{\infty }f\left( x\right)\,dx$ se evalúa de la siguiente manera:
+\textbf{Caso I.} Supongamos que $f$ es una función continua en el intervalo $[a,\infty )$. La integral impropia $\int_{a}^{\infty }f\left( x\right)\,dx$ se evalúa de la siguiente manera:
 \[
   \int_{a}^{\infty }f\left( x\right)\,dx=\lim_{z\rightarrow \infty
   }\int_{a}^{z}f\left( x\right)\,dx
 \]
 
-\begin{figure}[H]
+\begin{figure}[t]
   \centering
   \caption{Integral impropia a $\infty$}
-  \includegraphics[width=0.40\textwidth]{Gráficas/IntegImprIntervDerech}
+  \includegraphics[width=6cm]{Gráficas/IntegImprIntervDerech}
   \propia
 \end{figure}
 
-%\begin{center}------------
-%\centerline{ \graf{Integral impropia a $\infty$}}
-%\includegraphics[scale=0.35]%{IntegImprIntervDerech}
-%\textbf{Fuente:} elaboraci?n propia
-%\end{center}
-
-\textbf{Caso II.} Sea $f$ una función continua en $(-\infty ,b].$ La integral impropia $\int_{-\infty }^{b}f\left( x\right)\,dx$ se evalúa de la siguiente manera:
+\textbf{Caso II.} Sea $f$ una función continua en $(-\infty ,b]$. La integral impropia $\int_{-\infty }^{b}f\left( x\right)\,dx$ se evalúa de la siguiente manera:
 \[
   \int_{-\infty }^{b}f\left( x\right)\,dx=\lim_{w\rightarrow -\infty
   }\int_{w}^{b}f\left( x\right)\,dx
@@ -36,68 +30,51 @@ Un intervalo de la forma $[a,\infty )$, $(\infty,b]$ o $(-\infty ,\infty )$ se d
 \begin{figure}[H]
   \centering
   \caption{Integral impropia desde $-\infty$}
-  \includegraphics[width=0.40\textwidth]{Gráficas/IntegImprIntervIzqu}
+  \includegraphics[width=6cm]{Gráficas/IntegImprIntervIzqu}
   \propia
 \end{figure}
 
-%\begin{center}-------------
-%\centerline{ \graf{Integral impropia desde $-\infty$}}
-%\includegraphics[scale=0.4]{IntegImprIntervIzqu}
-%\textbf{Fuente:} elaboraci?n propia
-%\end{center}
-
-\textbf{Caso III.} Sea $f$ \ una función continua en $(-\infty ,\infty ).$ La integral impropia $\int_{-\infty }^{\infty }f\left( x\right)\,dx$ es
-{\small
-  \[
-    \int_{-\infty }^{\infty }\hspace{-0.3cm}f\left( x\right)\,dx=\int_{-\infty }^{c}\hspace{-0.3cm}f\left(
-    x\right)\,dx+\int_{c}^{\infty }\hspace{-0.3cm}f\left( x\right)\,dx=\lim_{w\rightarrow -\infty
-    }\int_{w}^{c}\hspace{-0.3cm}f\left( x\right)\,dx+\lim_{z\rightarrow \infty
-    }\int_{c}^{z}\hspace{-0.3cm}f\left( x\right)\,dx
-  \]
-}
+\textbf{Caso III.} Sea $f$ \ una función continua en $(-\infty ,\infty )$. La integral impropia $\int_{-\infty }^{\infty }f\left( x\right)\,dx$ es
+\begin{gather*}
+  \int_{-\infty }^{\infty }\hspace{-0.3cm}f\left( x\right)\,dx=\int_{-\infty }^{c}\hspace{-0.3cm}f\left(
+  x\right)\,dx+\int_{c}^{\infty }\hspace{-0.3cm}f\left( x\right)\,dx=\lim_{w\rightarrow -\infty
+  }\int_{w}^{c}\hspace{-0.3cm}f\left( x\right)\,dx+\lim_{z\rightarrow \infty
+  }\int_{c}^{z}\hspace{-0.3cm}f\left( x\right)\,dx
+\end{gather*}
 
 \begin{figure}[H]
   \centering
   \caption{Integral impropia desde $-\infty$ hasta $\infty$}
-  \includegraphics[width=0.40\textwidth]{Gráficas/IntegImprReales}
+  \includegraphics[width=6cm]{Gráficas/IntegImprReales}
   \propia
 \end{figure}
-
-%\begin{center}------------
-%\centerline{ \graf{Integral impropia desde $-\infty$ hasta $\infty$}}
-%\includegraphics[scale=0.35]{IntegImprReales}
-%\textbf{Fuente:} elaboraci?n propia
-%\end{center}
 
 Se dice que la integral impropia converge si cada uno de los límites que
 define la integral existe y es finito, y diverge si
 alguno de los límites que define la integral no existe o es infinito.
 
 \begin{ejemplo}
-  Encuentre el valor de la integral {\small $\int_{2}^{\infty }\frac{1}{\left( x+1\right) \left( x+2\right) }dx$.}
+  Encuentre el valor de la integral $\int_{2}^{\infty }\frac{1}{\left( x+1\right) \left( x+2\right) }dx$.
 \end{ejemplo}
+
 \emph{Solución.} Inicialmente, calculamos la integral usando alguno de los métodos que ya hemos estudiado. En este caso, planteamos fracciones parciales para calcularla:
-{\small
-  \[
-    \frac{1}{\left( x+1\right) \left( x+2\right) }=\frac{A}{x+1}+\frac{B}{x+2}\Rightarrow A\left( x+2\right) +B\left( x+1\right) =1
-  \]
-}
+\[
+  \frac{1}{\left( x+1\right) \left( x+2\right) }=\frac{A}{x+1}+\frac{B}{x+2}\Rightarrow A\left( x+2\right) +B\left( x+1\right) =1
+\]
 
 Si $x=-1$, entonces $A=1$. Si $x=-2$, entonces $-B=1$, es decir, $B=-1$.
 
 Ahora calculamos la integral indefinida:
-{\small
-  \begin{align*}
-    \int \frac{1}{\left( x+1\right) \left( x+2\right) }dx&=\int \left( \frac{1}{
-    x+1}-\frac{1}{x+2}\right) dx\\
-    &=\ln \left\vert x+1\right\vert -\ln \left\vert
-    x+2\right\vert =\ln \left\vert \frac{x+1}{x+2}\right\vert
-  \end{align*}
-}
+\begin{align*}
+  \int \frac{1}{\left( x+1\right) \left( x+2\right) }dx&=\int \left( \frac{1}{
+  x+1}-\frac{1}{x+2}\right) dx\\
+  &=\ln \left\vert x+1\right\vert -\ln \left\vert
+  x+2\right\vert \\
+  &=\ln \left\vert \frac{x+1}{x+2}\right\vert
+\end{align*}
 
 Y, por último, la impropia:
-
-\resizebox{\textwidth}{!}{$
+\begin{gather*}
   \begin{aligned}
     \int_{2}^{\infty }\frac{1}{\left( x+1\right) \left( x+2\right) }%
     dx& =\lim_{z\rightarrow \infty }\int_{2}^{z}\frac{1}{\left( x+1\right) \left(x+2\right) }dx=\left.\lim_{z\rightarrow \infty }\ln \left\vert \frac{x+1}{x+2}\right\vert \right\vert_{2}^{z}\\
@@ -105,125 +82,117 @@ Y, por último, la impropia:
     \right\vert -\ln \left( \frac{3}{4}\right) \right)=\ln \left\vert\lim_{z\rightarrow \infty }\frac{z+1}{z+2}\right\vert -\ln \left( \frac{3}{4}\right)\\
     &=\ln \left\vert \lim_{z\rightarrow \infty }\frac{\frac{z}{z}+\frac{1}{z}}{%
     \frac{z}{z}+\frac{2}{z}}\right\vert -\ln \left( \frac{3}{4}\right)=\ln\left\vert \lim_{z\rightarrow \infty }\frac{1+\frac{1}{z}}{1+\frac{2}{z}}\right\vert -\ln \left( \frac{3}{4}\right)\\
-    &=\ln 1+\ln \frac{4}{3}=\ln \frac{4}{3}
+    &=\ln 1+\ln \frac{4}{3}\\
+    &=\ln \frac{4}{3}
   \end{aligned}
-$}
+\end{gather*}
 
-Es decir, la integral converge y lo hace a $\ln \frac{4}{3}.$
+Es decir, la integral converge y lo hace a $\ln \frac{4}{3}$.
 
 \begin{ejemplo}
   Encuentre el valor de $\int_{-\infty }^{3}e^{2x}dx$.
 \end{ejemplo}
+
 \emph{Solución.} Escribamos esta vez en la forma de la definición dada:
-{\small
-  \begin{align*}
-    \int_{-\infty }^{3}e^{2x}dx&=\lim_{w\rightarrow -\infty
-    }\int_{w}^{3}e^{2x}dx=\left.\lim_{w\rightarrow -\infty }\left( \frac{1}{2}%
-    e^{2x}\right)\right\vert_{w}^{3} \\
-    &=\lim_{w\rightarrow -\infty }\left( \frac{1}{2}e^{6}-\frac{1}{2}%
-    e^{2w}\right)=\frac{1}{2}e^{6}-0=\frac{1}{2}e^{6}=201.71
-  \end{align*}
-}
-La integral converge a $\frac{1}{2}e^{6}.$
+\begin{align*}
+  \int_{-\infty }^{3}e^{2x}dx&=\lim_{w\rightarrow -\infty
+  }\int_{w}^{3}e^{2x}dx=\left.\lim_{w\rightarrow -\infty }\left( \frac{1}{2}%
+  e^{2x}\right)\right\vert_{w}^{3} \\
+  &=\lim_{w\rightarrow -\infty }\left( \frac{1}{2}e^{6}-\frac{1}{2}%
+  e^{2w}\right)\\
+  &=\frac{1}{2}e^{6}-0=\frac{1}{2}e^{6}=201.71
+\end{align*}
+
+La integral converge a $\frac{1}{2}e^{6}$.
 
 \begin{ejemplo}
   Encuentre el valor de $\int_{2}^{\infty }\frac{2}{\left( x+1\right) ^{2}}dx$.
 \end{ejemplo}
 \emph{Solución.} Igual que en el ejemplo anterior,
-{\small
-  \begin{align*}
-    \int_{2}^{\infty }\frac{2}{\left( x+1\right) ^{2}}dx&=\lim_{z\rightarrow
-    \infty }\int_{2}^{z}\frac{2}{\left( x+1\right) ^{2}}dx=\left.\lim_{z\rightarrow
-    \infty }\left( \frac{-2}{x+1}\right)\right\vert_{2}^{z} \\
-    &=\lim_{z\rightarrow \infty }\left( \frac{-2}{z+1}-\frac{-2}{3}\right) =0+%
-    \frac{2}{3}=\frac{2}{3}
-  \end{align*}
-}
+\begin{align*}
+  \int_{2}^{\infty }\frac{2}{\left( x+1\right) ^{2}}dx&=\lim_{z\rightarrow
+  \infty }\int_{2}^{z}\frac{2}{\left( x+1\right) ^{2}}dx=\left.\lim_{z\rightarrow \infty }\left( \frac{-2}{x+1}\right)\right\vert_{2}^{z} \\
+  &=\lim_{z\rightarrow \infty }\left( \frac{-2}{z+1}-\frac{-2}{3}\right) \\
+  &=0+\frac{2}{3}=\frac{2}{3}
+\end{align*}
 
 \begin{ejemplo}
   Diga si la integral $\int_{1}^{\infty }\frac{8}{x^{3}+x}dx$ converge o diverge. Si converge, diga a qué valor lo hace.
 \end{ejemplo}
 \emph{Solución.} Para calcular la integral, usemos sustitución trigonométrica:
-{\small
-  \[
-    \int_{1}^{\infty }\frac{8}{x^{3}+x}dx=8\int_{1}^{\infty }\frac{1}{x\left(
-    x^{2}+1\right) }dx
-  \]
-}
+\[
+  \int_{1}^{\infty }\frac{8}{x^{3}+x}dx=8\int_{1}^{\infty }\frac{1}{x\left(
+  x^{2}+1\right) }dx
+\]
 es decir, si $x=\tan\theta$, entonces $dx=\sec ^{2}\theta d\theta$ y $x^{2}+1=\tan ^{2}\theta +1=\sec ^{2}\theta$. Por otro lado,
-{\small
-  \[
-    \int \frac{dx}{x\left( x^{2}+1\right) }=\int \frac{\sec ^{2}\theta d\theta }{%
-    \tan \theta \sec ^{2}\theta }=\int \frac{1}{\tan \theta }d\theta
-    =\int \cot \theta d\theta =\ln \left\vert \sen \theta \right\vert
-  \]
-}
+\begin{align*}
+  \int \frac{dx}{x\left( x^{2}+1\right) }&=\int \frac{\sec ^{2}\theta d\theta }
+  {\tan \theta \sec ^{2}\theta }=\int \frac{1}{\tan \theta }d\theta\\
+  &=\int \cot \theta d\theta =\ln \left\vert \sen \theta \right\vert
+\end{align*}
 
 Pero $\tan\theta=x$ y tangente es cateto opuesto sobre cateto adyacente, es decir, $\sen\theta=\frac{x}{\sqrt{x^{2}+1}}$. Luego
-{\small
-  \[
-    \int \frac{dx}{x\left( x^{2}+1\right) }=\ln \left\vert \sen \theta\right\vert=\ln \left\vert \frac{x}{\sqrt{x^{2}+1}} \right\vert=\ln \left\vert \sqrt{
-    \frac{x^{2}}{x^{2}+1}}\right\vert =\frac{1}{2}\ln \left\vert \frac{x^{2}}{
-    x^{2}+1}\right\vert
-  \]
-}
+\begin{align*}
+  \int \frac{dx}{x\left( x^{2}+1\right) }&=\ln \left\vert \sen \theta\right\vert=\ln \left\vert \frac{x}{\sqrt{x^{2}+1}} \right\vert\\
+  &=\ln \left\vert \sqrt{
+  \frac{x^{2}}{x^{2}+1}}\right\vert =\frac{1}{2}\ln \left\vert \frac{x^{2}}{
+  x^{2}+1}\right\vert
+\end{align*}
 Con ello,
-
-\resizebox{\textwidth}{!}{$
+\begin{gather*}
   \begin{aligned}
-    \int_{1}^{\infty }\frac{8}{x^{3}+x}dx&=8\lim_{z\rightarrow \infty }\int_{1}^{z}\frac{1}{x\left( x^{2}+1\right) }dx =8\left.\lim_{z\rightarrow \infty }\frac{1}{2}\ln \left\vert \frac{x^{2}}{x^{2}+1}%
-    \right\vert\right\vert_{1}^{z}\\
+    \int_{1}^{\infty }\frac{8}{x^{3}+x}dx&=8\lim_{z\rightarrow \infty }\int_{1}^{z}\frac{1}{x\left( x^{2}+1\right) }dx \\
+    &=8\left.\lim_{z\rightarrow \infty }\frac{1}{2}\ln \left\vert \frac{x^{2}}{x^{2}+1}\right\vert\right\vert_{1}^{z}\\
     &=4\lim_{z\rightarrow \infty }\left( \ln \left\vert \frac{x^{2}}{x^{2}+1}%
-    \right\vert -\ln \frac{1}{2}\right) %\\
-    %&
-    =4\left( \ln \left\vert \lim_{z\rightarrow \infty }\frac{z^{2}}{z^{2}+1}%
     \right\vert -\ln \frac{1}{2}\right) \\
-    &=4\left( \ln 1-\ln \frac{1}{2}\right) =4\left( -\ln \frac{1}{2}\right) \\
+    &=4\left( \ln \left\vert \lim_{z\rightarrow \infty }\frac{z^{2}}{z^{2}+1}%
+    \right\vert -\ln \frac{1}{2}\right) \\
+    &=4\left( \ln 1-\ln \frac{1}{2}\right) \\
+    &=4\left( -\ln \frac{1}{2}\right) \\
     &=4\ln 2\approx 2.7726%
   \end{aligned}
-$}
+\end{gather*}
 
-Entonces, la integral dada converge a $4\ln 2.$
+Entonces, la integral dada converge a $4\ln 2$.
 
 \begin{ejemplo}
   Diga si la integral $\int_{2}^{\infty }\frac{x}{x^{4}-1}dx$ converge o diverge. Si converge, diga a qué valor lo hace.
 \end{ejemplo}
-\emph{Solución.} Si reescribimos la integral y hacemos la sustitución $y=x^2$, tenemos
+\emph{Solución.} Si reescribimos la integral y hacemos la sustitución $y=x^2$, \mbox{tenemos}
 \[
   \int_{2}^{\infty }\frac{x}{x^{4}-1}dx=\int_{2}^{\infty }\frac{x\,dx}{\left(
   x^{2}\right) ^{2}-1}=\int_{4}^{\infty }\frac{\frac{1}{2}dy}{y^{2}-1}
   =\frac{1}{2}\int_{4}^{\infty }\frac{dy}{\left( y-1\right) \left( y+1\right)}
 \]
-Ahora usemos fracciones parciales para la última integral, y tenemos que
 
+Ahora usemos fracciones parciales para la última integral, y tenemos que
 \begin{align*}
-  \frac{1}{2}\int_{4}^{\infty }&\frac{dy}{\left( y-1\right) \left( y+1\right)} =\frac{1}{2}\lim_{z\rightarrow \infty }\int_{4}^{z} \frac{\frac{1}{2}}{y-1}-\frac{\frac{1}{2}}{y+1}\, dy \\
+  \frac{1}{2}\int_{4}^{\infty }\frac{dy}{\left( y-1\right) \left( y+1\right)} &=\frac{1}{2}\lim_{z\rightarrow \infty }\int_{4}^{z} \frac{\frac{1}{2}}{y-1}-\frac{\frac{1}{2}}{y+1}\, dy \\
   &=\frac{1}{4}\lim_{z\rightarrow \infty }\left( \ln \left\vert y-1\right\vert
-  -\ln \left\vert y+1\right\vert \right)\big\vert_{4}^{z} %\\
-  %&
-  =\frac{1}{4}\left.\lim_{z\rightarrow \infty }\left( \ln \left\vert \frac{y-1}{y+1}\right\vert \right)\right\vert_{4}^{z} \\
+  -\ln \left\vert y+1\right\vert \right)\big\vert_{4}^{z} \\
+  &=\frac{1}{4}\left.\lim_{z\rightarrow \infty }\left( \ln \left\vert \frac{y-1}{y+1}\right\vert \right)\right\vert_{4}^{z} \\
   &=\frac{1}{4}\lim_{z\rightarrow \infty }\left( \ln \left\vert \frac{z-1}{z+1}%
-  \right\vert -\ln \frac{3}{5}\right) %\\
-  %&
-  =\frac{1}{4}\left( \ln \left\vert \lim_{z\rightarrow \infty }\frac{z-1}{z+1}%
+  \right\vert -\ln \frac{3}{5}\right) \\
+  &=\frac{1}{4}\left( \ln \left\vert \lim_{z\rightarrow \infty }\frac{z-1}{z+1}%
   \right\vert -\ln \frac{3}{5}\right) \\
   &=\frac{1}{4}\left( \ln \left\vert 1\right\vert -\ln \frac{3}{5}\right) =%
-  \frac{1}{4}\left( -\ln \frac{3}{5}\right) %\\
-  %&
-  =\frac{1}{4}\ln \frac{5}{3}=0.12771
+  \frac{1}{4}\left( -\ln \frac{3}{5}\right) \\
+  &=\frac{1}{4}\ln \frac{5}{3}=0.12771
 \end{align*}
 
 \begin{ejemplo}
   Diga si la integral $\int_{3}^{\infty}\frac{x}{x^{4}+3x^{2}-4}dx$ converge o diverge. Si converge, diga a qué valor lo hace.
 \end{ejemplo}
+
 \emph{Solución.} Reescribamos el integrando y tomemos la sustitución $y=x^2$:
 \begin{align*}
   \int_{3}^{\infty}\frac{x}{x^{4}+3x^{2}-4}dx&=\int_{3}^{\infty }\frac{x\,dx}{%
-  \left( x^{2}\right) ^{2}+3x^{2}-4}
-  =\int_{9}^{\infty }\frac{\frac{1}{2}dy}{y^{2}+3y-4} \\
+  \left( x^{2}\right) ^{2}+3x^{2}-4}\\
+  &=\int_{9}^{\infty }\frac{\frac{1}{2}dy}{y^{2}+3y-4} \\
   &=\frac{1}{2}%
   \int_{9}^{\infty }\frac{1}{\left( y+4\right) \left( y-1\right) }dy
 \end{align*}
+
 Notemos que, si $y=x^2$ y $x=3$, entonces $y=9$, y si $x\to\infty$, entonces $y\to\infty$.
 
 Por otro lado, al tomar fracciones parciales, tenemos que
@@ -232,8 +201,7 @@ Por otro lado, al tomar fracciones parciales, tenemos que
   \frac{\frac{1}{5}}{y-1}
 \]
 luego,
-
-\resizebox{\textwidth}{!}{$
+\begin{gather*}
   \begin{aligned}
     \int_{3}^{\infty}\frac{x}{x^{4}+3x^{2}-4}dx&=\frac{1}{2}\lim_{z\rightarrow \infty }\int_{9}^{z}\frac{-\frac{1}{5}}{y+4}+%
     \frac{\frac{1}{5}}{y-1}dy =\frac{1}{10}\lim_{z\rightarrow \infty }\int_{9}^{z}\frac{-1}{y+4}+\frac{1}{%
@@ -246,13 +214,14 @@ luego,
     \right\vert +\ln \frac{13}{8}\right) \\
     &=\frac{1}{10}\left( \ln 1+\ln \frac{13}{8}\right) =\frac{1}{10}\ln \frac{13}{8}
   \end{aligned}
-$}
+\end{gather*}
 
-Es decir, la integral converge y converge a $\frac{1}{10}\ln \frac{13}{8}.$
+Es decir, la integral converge y converge a $\frac{1}{10}\ln \frac{13}{8}$.
 
 \begin{ejemplo}
   Diga si la integral $\int_{1}^{\infty}\frac{dx}{e^{x+2}+e^{4-x}}$ converge o diverge. Si converge, diga a qué valor lo hace.
 \end{ejemplo}
+
 \emph{Solución.} Al reescribir la integral, tenemos
 \begin{align*}
   \int \frac{dx}{e^{x+2}+e^{4-x}}&=\int \frac{dx}{e^{2}\left(
@@ -261,25 +230,23 @@ Es decir, la integral converge y converge a $\frac{1}{10}\ln \frac{13}{8}.$
   &=\frac{1}{e^{2}}\int \frac{e^{x}dx}{\left( e^{x}\right) ^{2}+e^{2}e^{x}e^{-x}}=\frac{1}{e^{2}}\int \frac{e^{x}dx}{\left( e^{x}\right) ^{2}+e^{2}}
 \end{align*}
 Ahora tomemos $u=e^{x}$ y $du=e^{x}dx$. Si $x=1$, entonces $u=e^{1}=e$, y si $x\to \infty$, entonces $u=e^{x}\rightarrow \infty$. Con ello, la integral dada es
-
-\resizebox{\textwidth}{!}{$
+\begin{gather*}
   \begin{aligned}
     \int_{1}^{\infty }\frac{dx}{e^{x+2}+e^{4-x}}&=\frac{1}{e^{2}}\int_{1}^{\infty }\frac{e^{x}dx}{\left( e^{x}\right)^{2}+e^{2}}
     =\frac{1}{e^{2}}\int_{e}^{\infty }\frac{du}{u^{2}+e^{2}}=\frac{1}{e^{2}}\lim_{z\rightarrow \infty }\int_{e}^{z}\frac{du}{u^{2}+e^{2}} \\
     &=\frac{1}{e^{2}}\lim_{z\rightarrow \infty }\left.\left( \frac{1}{e}\tan^{-1} \left(\frac{u}{e}\right) \right)\right\vert_{e}^{z}=\frac{1}{e^{3}}\lim_{z\rightarrow \infty }\left( \tan^{-1} \left( \frac{z}{e}\right) -\tan^{-1} 1\right)\\
     &=\frac{1}{e^{3}}\left( \frac{\pi }{2}-\frac{\pi }{4}\right) =\frac{\pi }{4e^{3}}
   \end{aligned}
-$}
+\end{gather*}
 
-La integral converge a $\frac{\pi }{4e^{3}}.$
+La integral converge a $\frac{\pi }{4e^{3}}$.
 
 \begin{ejemplo}
   Diga si la integral $\int_{2}^{\infty }\frac{x^{2}}{\left( x^{2}+4\right) ^{2}}dx$ converge o diverge. Si converge, diga a qué valor lo hace.
 \end{ejemplo}
 
 \emph{Solución.} Tomemos $x=2\tan \theta$ y $dx=2\sec ^{2}\theta d\theta$, además $x^{2}+4=4\tan^{2}\theta +4=4\left( \tan ^{2}\theta +1\right) =4\sec ^{2}\theta $, entonces
-
-\resizebox{\textwidth}{!}{$
+\begin{gather*}
   \begin{aligned}
     \int \frac{x^{2}}{\left( x^{2}+1\right) ^{2}}dx&=\int \frac{4\tan ^{2}\theta 2\sec ^{2}\theta d\theta }{\left( 4\sec ^{2}\theta \right) ^{2}}=\int\frac{8\tan ^{2}\theta \sec ^{2}\theta d\theta }{16\sec ^{4}\theta }=\frac{1}{2}\int \frac{\tan ^{2}\theta d\theta }{\sec ^{2}\theta }\\
     &=\frac{1}{2}\int\sen ^{2}\theta d\theta=\frac{1}{2}\int \left( \frac{1}{2}-\frac{1}{2}\cos2\theta \right) d\theta
@@ -290,45 +257,42 @@ La integral converge a $\frac{\pi }{4e^{3}}.$
     }}\frac{2}{\sqrt{x^{2}+4}}\right)\\
     &=\frac{1}{4}\left( \tan^{-1} \left( \frac{x}{2}\right) -\frac{2x}{x^{2}+4}\right)
   \end{aligned}
-$}
+\end{gather*}
 
 Así, la integral impropia es
-{\small
+\begin{gather*}
   \begin{align*}
     \int_{2}^{\infty }\frac{x^{2}}{\left( x^{2}+4\right) ^{2}}dx&=\lim_{z\rightarrow \infty }\left.\frac{1}{4}\left( \tan^{-1} \left( \frac{x}{2}\right) -\frac{2x}{x^{2}+4}\right)\right\vert_{2}^{z}\\
     &=\lim_{z\rightarrow \infty }\frac{1}{4}\left( \tan^{-1} \left( \frac{z}{2}%
     \right) -\frac{2z}{z^{2}+4}-\tan^{-1} 1+\frac{1}{2}\right)\\
     &=\frac{1}{4}\left(\frac{\pi }{2}-0-\tan^{-1} 1+\frac{1}{2}\right) =\frac{1}{4}\left( \frac{\pi }{2}-\frac{\pi }{4}+\frac{1}{2}\right)\\ &=\frac{1}{4}\left( \frac{\pi }{4}+\frac{1}{2}\right)=\frac{1}{16}\pi +\frac{1}{8}\approx0.32135
   \end{align*}
-}
+\end{gather*}
 
-Con ello, concluimos que la integral converge y lo hace a $\frac{1}{16}\pi +\frac{1}{8}$
+Con ello, concluimos que la integral converge y lo hace a $\frac{1}{16}\pi +\frac{1}{8}$.
 
 \begin{ejemplo}
   Diga si la integral $\int_{1}^{\infty }\frac{4}{x\left( x+1\right) ^{2}}dx$ converge o diverge. Si converge, diga a qué valor lo hace.
 \end{ejemplo}
 
 \emph{Solución.} Al descomponer en fracciones parciales el integrando, se tiene
-{\small
-  \[
-    \frac{4}{x\left( x+1\right)^{2}}=\frac{A}{x}+\frac{B}{x\left( x+1\right) }+\frac{C}{x}=\frac{A\left( x+1\right) ^{2}+Bx\left( x+1\right) +Cx}{x\left(
-    x+1\right) ^{2}}
-  \]
-}
+\begin{align*}
+  \frac{4}{x\left( x+1\right)^{2}}&=\frac{A}{x}+\frac{B}{x\left( x+1\right) }+\frac{C}{x}\\
+  &=\frac{A\left( x+1\right) ^{2}+Bx\left( x+1\right) +Cx}{x\left(x+1\right) ^{2}}
+\end{align*}
 
-es decir, $A\left( x+1\right) ^{2}+Bx\left( x+1\right) +Cx=4$. Ahora, si $x=0$, entonces $A=4$, y si $x=-1$, entonces $-C=4$ o también $C=-4.$. Por otro lado, si $x=1$, $A=4$ y $C=-4$, entonces $16+2B-4=4$ o también $B=-4.$
+es decir, $A\left( x+1\right) ^{2}+Bx\left( x+1\right) +Cx=4$. Ahora, si $x=0$, entonces $A=4$, y si $x=-1$, entonces $-C=4$ o también $C=-4$. Por otro lado, si $x=1$, $A=4$ y $C=-4$, entonces $16+2B-4=4$ o también $B=-4$.
 
 Con esos valores,
-{\small
-  \begin{align*}
-    \int_{1}^{\infty }\frac{4}{x\left( x+1\right) ^{2}}dx&=\int \left( \frac{4}{x}+\frac{-4}{x+1}-\frac{4}{\left( x+1\right) ^{2}}\right) dx\\
-    &=4\ln x-4\ln \left( x+1\right) +\frac{4}{x+1}=4\ln \left\vert \frac{x}{x+1}\right\vert +\frac{4}{x+1}
-  \end{align*}
-}
+\begin{align*}
+  \int_{1}^{\infty }\frac{4}{x\left( x+1\right) ^{2}}dx&=\int \left( \frac{4}{x}+\frac{-4}{x+1}-\frac{4}{\left( x+1\right) ^{2}}\right) dx\\
+  &=4\ln x-4\ln \left( x+1\right) +\frac{4}{x+1}\\
+  &=4\ln \left\vert \frac{x}{x+1}\right\vert +\frac{4}{x+1}
+\end{align*}
 
 Y aplicando límites,
-{\small
-  \begin{align*}
+\begin{gather*}
+  \begin{aligned}
     \int_{1}^{\infty }\hspace{-0.3cm}\frac{4}{x\left( x+1\right) ^{2}}dx&=\lim_{z\rightarrow
     \infty }\int_{1}^{z}\frac{4}{x\left( x+1\right) ^{2}}dx=\lim_{z\to
     \infty }\left.\left( 4\ln \left( \frac{x}{x+1}\right) +\frac{4}{x+1}\right)
@@ -336,14 +300,14 @@ Y aplicando límites,
     &=4\lim_{z\rightarrow \infty }\left.\left( \ln \left( \frac{z}{z+1}\right) +\frac{1}{z+1}-\ln \left( \frac{1}{2}\right) -\frac{1}{2}\right)\right\vert_{1}^{z}\\
     &=4\left(\ln 1+0-\ln \left( \frac{1}{2}\right) -\frac{1}{2}\right) \\
     &=-4\ln \left( \frac{1}{2}\right) -2\approx0.77259
-  \end{align*}
-}
+  \end{aligned}
+\end{gather*}
 
-\subsection*{Discontinuidad en el intervalo de integración}
+\subsection{Discontinuidad en el intervalo de integración}
 
 Otro caso de integrales impropias se tiene cuando el integrando es una función con discontinuidad infinita (asíntota vertical) en el intervalo de integración.
 
-\textbf{Caso I.} Sea $f$ una función continua en el intervalo $(a,b]$ y supongamos que $x=a$ es una asíntota vertical de $f$. Entonces, la integral {\small $\int_{a}^{b}f\left( x\right)\,dx$} es impropia y, para calcularla, se procede con el siguiente límite:
+\textbf{Caso I.} Sea $f$ una función continua en el intervalo $(a,b]$ y supongamos que $x=a$ es una asíntota vertical de $f$. Entonces, la integral $\int_{a}^{b}f\left( x\right)\,dx$ es impropia y, para calcularla, se procede con el siguiente límite:
 \[
   \int_{a}^{b}f\left( x\right)\,dx=\lim_{z\rightarrow a^+}\int_{z}^{b}f\left(
   x\right)\,dx
@@ -352,124 +316,98 @@ Otro caso de integrales impropias se tiene cuando el integrando es una función 
 \begin{figure}[H]
   \centering
   \caption{Función discontinua en el límite inferior}
-  \includegraphics[width=0.35\textwidth]{Gráficas/IntegImprDisconLimferior}
+  \includegraphics[width=5cm]{Gráficas/IntegImprDisconLimferior}
   \propia
 \end{figure}
 
-%\begin{center}-----------
-%\centerline{ \graf{Función discontinua en el límite inferior}}
-%\includegraphics[scale=0.4]{IntegImprDisconLimferior}
-%\textbf{Fuente:} elaboraci?n propia
-%\end{center}
-
-\textbf{Caso II.} Supongamos que $f$ es una función continua en $[a,b)$ y que $x=b$ es una asíntota vertical de $f$. La integral impropia {\small $\int_{a}^{b}f\left( x\right)\,dx$} se define como
-{\small
-  \[
-    \int_{a}^{b}f\left( x\right)\,dx=\lim_{w\rightarrow b^-}\int_{a}^{w}f\left(
-    x\right)\,dx
-  \]
-}
+\textbf{Caso II.} Supongamos que $f$ es una función continua en $[a,b)$ y que $x=b$ es una asíntota vertical de $f$. La integral impropia $\int_{a}^{b}f\left( x\right)\,dx$ se define como
+\[
+  \int_{a}^{b}f\left( x\right)\,dx=\lim_{w\rightarrow b^-}\int_{a}^{w}f\left(
+  x\right)\,dx
+\]
 
 \begin{figure}[H]
   \centering
   \caption{Función discontinua en el límite superior}
-  \includegraphics[width=0.35\textwidth]{Gráficas/IntegImprDisconLimSuperior}
+  \includegraphics[width=6cm]{Gráficas/IntegImprDisconLimSuperior}
   \propia
 \end{figure}
 
-%\begin{center}------------
-%\centerline{ \graf{Función discontinua en el límite superior}}
-%\includegraphics[scale=0.35]{IntegImprDisconLimSuperior}
-%\textbf{Fuente:} elaboraci?n propia
-%\end{center}
-
-\textbf{Caso III.} Sea $f$ una función continua en $[a,b]-\left\{ c\right\} $, para c$\in\left( a,b\right)$, y $x=c$ es una asíntota vertical de $f$. La integral impropia {\small $\int_{a}^{b}f\left( x\right)\,dx$} se define como
-
-\resizebox{\textwidth}{!}{$
+\textbf{Caso III.} Sea $f$ una función continua en $[a,b]-\left\{ c\right\} $, para $c\in\left( a,b\right)$, y $x=c$ es una asíntota vertical de $f$. La integral impropia $\int_{a}^{b}f\left( x\right)\,dx$ se define como
+\begin{gather*}
   \begin{aligned}
     \int_{a}^{b}f\left( x\right)\,dx&=\int_{a}^{c}f\left( x\right)
     dx+\int_{c}^{b}f\left( x\right)\,dx=\lim_{w\rightarrow c^-}\int_{a}^{w}f\left(
     x\right)\,dx+\lim_{z\rightarrow c^+}\int_{z}^{b}f\left( x\right)\,dx
   \end{aligned}
-$}
+\end{gather*}
 
 \begin{figure}[H]
   \centering
   \caption{Función discontinua en un punto del intervalo}
-  \includegraphics[width=0.35\textwidth]{Gráficas/IntegImprDisconIntervalo}
+  \includegraphics[width=6cm]{Gráficas/IntegImprDisconIntervalo}
   \propia
 \end{figure}
-
-%\begin{center}-----------
-%\centerline{ \graf{Función discontinua en un punto del intervalo}}
-%\includegraphics[scale=0.4]{IntegImprDisconIntervalo}
-%\textbf{Fuente:} elaboraci?n propia
-%\end{center}
 
 Diremos que la integral impropia converge si cada uno de los límites que
 la definen existe y es finito, y es divergente si alguno de los límites que la define no existe o es infinito.
 
 \begin{ejemplo}
   A manera de ejemplo, calculemos la siguiente integral.
+  \begin{align*}
+    \int_{0}^{1}\frac{\ln x}{\sqrt{x}}dx&=\lim_{z\rightarrow 0^{+}}\int_{z}^{1}%
+    \frac{\ln x}{\sqrt{x}}dx=\lim_{z\rightarrow 0^{+}}\left.\left( 2\sqrt{x}\ln x-4\sqrt{x}\right)\right\vert_{z}^{1}\\
+    &=\lim_{z\rightarrow 0^{+}}\left.\left( 2\times 1\ln 1-4\sqrt{1}-\left( 2\sqrt{z}\ln z-4\sqrt{z}\right) \right)\right\vert_{z}^{1}\\
+    &=\lim_{z\rightarrow 0^{+}}\left( -4-2\sqrt{z}\ln z+4\sqrt{z}\right)
+    =-4-0+0=-4
+  \end{align*}
+  La integral entonces converge a $-4$.
 \end{ejemplo}
 
-\begin{align*}
-  \int_{0}^{1}\frac{\ln x}{\sqrt{x}}dx&=\lim_{z\rightarrow 0^{+}}\int_{z}^{1}%
-  \frac{\ln x}{\sqrt{x}}dx=\lim_{z\rightarrow 0^{+}}\left.\left( 2\sqrt{x}\ln x-4\sqrt{x}\right)\right\vert_{z}^{1}\\
-  &=\lim_{z\rightarrow 0^{+}}\left.\left( 2\times 1\ln 1-4\sqrt{1}-\left( 2\sqrt{z}\ln z-4\sqrt{z}\right) \right)\right\vert_{z}^{1}\\
-  &=\lim_{z\rightarrow 0^{+}}\left( -4-2\sqrt{z}\ln z+4\sqrt{z}\right)
-  =-4-0+0=-4
-\end{align*}
-La integral entonces converge a $-4$.
-
 \begin{ejemplo}
-  Calcule la siguiente integral: {\small $\displaystyle{\int_{0}^{1}\frac{dx}{\sqrt{1-x^{2}}}}$.}
+  Calcule la siguiente integral: $\int_{0}^{1}\frac{dx}{\sqrt{1-x^{2}}}$.
 \end{ejemplo}
 
 \emph{Solución.} En este caso, tenemos una discontinuidad en el límite superior para el integrando; entonces,
-
-\resizebox{\textwidth}{!}{$
+\begin{gather*}
   \begin{aligned}
-    \int_{0}^{1}\frac{dx}{\sqrt{1-x^{2}}}= &{\lim_{c\to 1^{-}} \int_{0}^{c}\frac{dx}{\sqrt{1-x^{2}}}} =\underset{c\rightarrow 1^{-}}{\lim }%
-    \left( \int \frac{dx}{\sqrt{1-x^{2}}}\right)\Bigg| _{0}^{c} =\underset{c\rightarrow
-    1^{-}}{\lim }\arcsin (x)\big| _{0}^{c}\\
-    =&\underset{c\rightarrow 1^{-}}{\lim }\left( \arcsin (c)-\arcsin (1)\right) =%
-    \underset{c\rightarrow 1^{-}}{\lim }\left( \arcsin (c)-0\right)\\
-    =&\underset{%
-    c\rightarrow 1^{-}}{\lim }\arcsin (c)=\frac{\pi }{2}
+    \int_{0}^{1}\frac{dx}{\sqrt{1-x^{2}}}&={\lim_{c\to 1^{-}} \int_{0}^{c}\frac{dx}{\sqrt{1-x^{2}}}} =\lim_{c\to 1^{-}} \left( \int \frac{dx}{\sqrt{1-x^{2}}}\right)\Bigg|_{0}^{c}\\
+    &=\lim_{c\to 1^{-}}\arcsin (x)\big| _{0}^{c}
+    =\lim_{c\to 1^{-}}\left( \arcsin (c)-\arcsin (1)\right)\\
+    &=\lim_{c\to 1^{-}}\left( \arcsin (c)-0\right)
+    =\lim_{c\to 1^{-}}\arcsin (c)=\frac{\pi }{2}
   \end{aligned}
-$}
+\end{gather*}
 
 \begin{ejemplo}
-  Calcule la siguiente integral: $\displaystyle{\int_{-1}^{1}\frac{dx}{x^{\frac{2}{3}}}}$.
+  Calcule la siguiente integral: $\int_{-1}^{1}\frac{dx}{x^{\frac{2}{3}}}$.
 \end{ejemplo}
 
-\emph{Solución.} En este caso, tenemos una discontinuidad en un punto del intervalo. El integrando es discontinuo en $x=0$, que está en el intervalo {\small $[-1,1]$:}
-
-\resizebox{\textwidth}{!}{$
+\emph{Solución.} En este caso, tenemos una discontinuidad en un punto del intervalo. El integrando es discontinuo en $x=0$, que está en el intervalo $[-1,1]$:
+\begin{gather*}
   \begin{aligned}
-    \int_{-1}^{1}\frac{dx}{x^{\frac{2}{3}}}&= \int_{-1}^{0}\frac{dx}{x^{\frac{2}{3%
-    }}}+\int_{0}^{1}\frac{dx}{x^{\frac{2}{3}}}=\lim_{c\rightarrow 0^{-}}\int_{-1}^{c}\frac{dx}{x^{\frac{2}{3}}}%
-    +\lim_{z\rightarrow 0^{+}}\int_{z}^{1}\frac{dx}{x^{\frac{2}{3}}} \\
-    &=\lim_{c\rightarrow 0^{-}}\left( \int \frac{dx}{x^{\frac{2}{3}}}\right)\Bigg|_{-1}^{c}+\lim_{z\rightarrow 0^{+}}\left(\int \frac{dx}{x^{\frac{2}{3}}}\right)\Bigg|_{z}^{1}=\lim_{c\rightarrow 0^{-}}\left( \int x^{-\frac{2}{3}}dx\right)\Bigg|_{-1}^{c}+\lim_{z\rightarrow 0^{+}}\left(\int x^{-\frac{2}{3}}dx\right)\Big|_{z}^{1} \\
-    &=\lim_{c\rightarrow 0^{-}}\left( 3x^{\frac{1}{3}}\right)\Big|_{-1}^{c}+\lim_{z\rightarrow 0^{+}}\left( 3x^{\frac{1}{3}}\right)\Big|_{z}^{1}=\lim_{c\rightarrow 0^{-}}\left( 3c^{\frac{1}{3}}-3(-1)^{\frac{1}{3}%
-    }\right) +\lim_{z\rightarrow 0^{+}}\left( 3(1)^{\frac{1}{3}}-3(z)^{\frac{1}{3%
-    }}\right) \\
+    \int_{-1}^{1}\frac{dx}{x^{\frac{2}{3}}}&= \int_{-1}^{0}\frac{dx}{x^{\frac{2}{3}}}+\int_{0}^{1}\frac{dx}{x^{\frac{2}{3}}}
+    =\lim_{c\rightarrow 0^{-}}\int_{-1}^{c}\frac{dx}{x^{\frac{2}{3}}}+\lim_{z\rightarrow 0^{+}}\int_{z}^{1}\frac{dx}{x^{\frac{2}{3}}} \\
+    &=\lim_{c\rightarrow 0^{-}}\left( \int \frac{dx}{x^{\frac{2}{3}}}\right)\Bigg|_{-1}^{c}+\lim_{z\rightarrow 0^{+}}\left(\int \frac{dx}{x^{\frac{2}{3}}}\right)\Bigg|_{z}^{1}\\
+    &=\lim_{c\rightarrow 0^{-}}\left( \int x^{-\frac{2}{3}}dx\right)\Bigg|_{-1}^{c}+\lim_{z\rightarrow 0^{+}}\left(\int x^{-\frac{2}{3}}dx\right)\Big|_{z}^{1} \\
+    &=\lim_{c\rightarrow 0^{-}}\left( 3x^{\frac{1}{3}}\right)\Big|_{-1}^{c}+\lim_{z\rightarrow 0^{+}}\left( 3x^{\frac{1}{3}}\right)\Big|_{z}^{1}
+    =\lim_{c\rightarrow 0^{-}}\left( 3c^{\frac{1}{3}}-3(-1)^{\frac{1}{3}}\right) +\lim_{z\rightarrow 0^{+}}\left( 3(1)^{\frac{1}{3}}-3(z)^{\frac{1}{3}}\right) \\
     &=\lim_{c\rightarrow 0^{-}}\left( 3c^{\frac{1}{3}}+3\right)+\lim_{z\rightarrow 0^{+}}\left( 3-3(z)^{\frac{1}{3}}\right)
   \end{aligned}
-$}
+\end{gather*}
 
-Para calcular el límite anterior, recordemos que debemos encontrar el límite de cada término; entonces, {\footnotesize $\displaystyle\lim_{c\rightarrow 0^{-}}\left( 3c^{\frac{1}{3}}\right) =3(0)^{\frac{1}{3}}=0,$ $\displaystyle\lim_{c\rightarrow 0^{-}}\left( 3\right) =3,$ $\lim_{z\rightarrow 0^{+}}\left( 3\right) =3$} y {\footnotesize $ \displaystyle\lim_{z\rightarrow 0^{+}}\left( 3(z)^{\frac{1}{3}}\right) =0$.} Con ello se tiene que
-\[\lim_{c\rightarrow 0^{-}}\left( 3c^{\frac{1}{3}}+3\right)
+Para calcular el límite anterior, recordemos que debemos encontrar el límite de cada término; entonces, $\lim_{c\rightarrow 0^{-}}\big( 3c^{\frac{1}{3}}\big) =3(0)^{\frac{1}{3}}=0$, $\lim_{c\rightarrow 0^{-}}\left( 3\right) =3$, $\lim_{z\rightarrow 0^{+}}(3) =3$ y $ \lim_{z\rightarrow 0^{+}}\big( 3(z)^{\frac{1}{3}}\big) =0$. Con ello se tiene que
+\[
+  \lim_{c\rightarrow 0^{-}}\left( 3c^{\frac{1}{3}}+3\right)
   +\lim_{z\rightarrow 0^{+}}\left( 3-3(z)^{\frac{1}{3}}\right) =3+3=6
 \]
-es decir, la integral dada converge a $6.$
+es decir, la integral dada converge a $6$.
 
 \section{Integración numérica}
 
 Cuando una integral definida no se puede evaluar con una antiderivada, se emplean métodos numéricos como los siguientes.
 
-\subsection*{Método del punto medio}
+\subsection{Método del punto medio}
 
 Supongamos que
 \begin{itemize}
@@ -480,12 +418,12 @@ Supongamos que
 \end{itemize}
 
 Entonces, la integral de $f$ en el intervalo $[a,b]$ puede aproximarse por la suma de Riemann de la función $f $ en el intervalo, usando el punto medio de cada subintervalo. Llamemos $M_{n}$ a la aproximación, entonces
-\[
-  \int_{a}^{b}f(x)\,dx\approx M_{n}=\sum\limits_{i=1}^{n}f(x_{i}^{*})\Delta x=\Delta x[f(x_{1}^{* })+f(x_{2}^{*
-  })+\ldots +f(x_{n}^{* })]
-\]
+\begin{align*}
+  \int_{a}^{b}f(x)\,dx\approx M_{n}&=\sum\limits_{i=1}^{n}f(x_{i}^{*})\Delta x\\
+  &=\Delta x[f(x_{1}^{* })+f(x_{2}^{*})+\ldots +f(x_{n}^{*})]
+\end{align*}
 
-\subsubsection*{Error en el método del punto medio}
+\subsubsection{Error en el método del punto medio}
 
 Si $f^{\prime}$ es continua y $M$ es una cota superior de $\left\vert
 f^{\prime}\right\vert $ en $\left[ a,b\right] $, entonces el error en el método del punto medio {\small $E_{m}=\int_{a}^{b}f(x)\,dx-M_{n}$} satisface
@@ -497,31 +435,25 @@ f^{\prime}\right\vert $ en $\left[ a,b\right] $, entonces el error en el método
   Halle una aproximación de la integral, con $n=5$ para $\int_{0}^{5}x^{3}dx,$ usando el método del punto medio.
 \end{ejemplo}
 
-\emph{Solución.} Dado que $n=5$, entonces tenemos $5$ subintervalos, y los extremos de cada subintervalo son {\small $0,\ 1,\ 2,\ 3,\ 4$ y $5$.} Los puntos medios de los subintervalos $[0,1],\ [1,2],\ [2,3],\ [3,4]$ y $[4,5]$ son $\frac{1}{2},\ \frac{3}{2},\ \frac{5}{2},\ \frac{7}{2}$ y $\frac{9}{2}$, respectivamente. El ancho de los subintervalos es $\Delta x=\frac{5-0}{5}=1$. Con la anterior información tenemos, entonces,
-
-{\small
-  \begin{eqnarray*}
-    \int_{0}^{5}x^{3}dx &\approx& M_{5}=\Delta x\left[f\left(\frac{1}{2}\right)+f\left(\frac{3}{2}\right)+f\left(\frac{5}{2}\right)+f\left(\frac{7}{2}\right)+f\left(\frac{9}{2}\right)\right] \\
-    &=&1\left( \left( \frac{1}{2}\right) ^{3}+\left( \frac{3}{2}\right)
-      ^{3}+\left( \frac{5}{2}\right) ^{3}+\left( \frac{7}{2}\right) ^{3}+\left(
-    \frac{9}{2}\right) ^{3}\right) \\
-    &=&\frac{1}{8}+\frac{27}{8}+\frac{125}{8}+\frac{343}{8}+\frac{729}{8}=\frac{%
-    1225}{8}
-  \end{eqnarray*}
-}
+\emph{Solución.} Dado que $n=5$, entonces tenemos $5$ subintervalos, y los extremos de cada subintervalo son $0,\ 1,\ 2,\ 3,\ 4$ y $5$. Los puntos medios de los subintervalos $[0,1],\ [1,2],\ [2,3],\ [3,4]$ y $[4,5]$ son $\frac{1}{2},\ \frac{3}{2},\ \frac{5}{2},\ \frac{7}{2}$ y $\frac{9}{2}$, respectivamente. El ancho de los subintervalos es $\Delta x=\frac{5-0}{5}=1$. Con la anterior información tenemos, entonces,
+\begin{align*}
+  \int_{0}^{5}x^{3}dx &\approx M_{5}=\Delta x\left[f\left(\frac{1}{2}\right)+f\left(\frac{3}{2}\right)+f\left(\frac{5}{2}\right)+f\left(\frac{7}{2}\right)+f\left(\frac{9}{2}\right)\right] \\
+  &=1\left( \left( \frac{1}{2}\right) ^{3}+\left( \frac{3}{2}\right)
+    ^{3}+\left( \frac{5}{2}\right) ^{3}+\left( \frac{7}{2}\right) ^{3}+\left(
+  \frac{9}{2}\right) ^{3}\right) \\
+  &=\frac{1}{8}+\frac{27}{8}+\frac{125}{8}+\frac{343}{8}+\frac{729}{8}=\frac{1225}{8}
+\end{align*}
 
 es decir,
 \[
   \int_{0}^{5}x^{3}dx \approx \frac{1225}{8}
 \]
 Dado que $f(x)=x^3$ es una función fácilmente integrable, podemos encontrar el valor exacto de la integral, y tenemos
-{\small
-  \begin{align*}
-    \int_{0}^{5}x^{3}\, dx&=\frac{x^4}{4}\Big|_0^5\\
-    &=\frac{5^4}{4}-\frac{0^4}{4}\\
-    &=\frac{625}{4}
-  \end{align*}
-}
+\begin{align*}
+  \int_{0}^{5}x^{3}\, dx&=\frac{x^4}{4}\Big|_0^5\\
+  &=\frac{5^4}{4}-\frac{0^4}{4}\\
+  &=\frac{625}{4}
+\end{align*}
 
 y el error cometido en la aproximación es
 \[
@@ -529,41 +461,25 @@ y el error cometido en la aproximación es
 \]
 un valor que puede disminuirse si se tomara un valor mayor de $n$.
 
-\subsection*{Regla del trapecio}
+\subsection{Regla del trapecio}
 
 Sea $f$ una función continua en el intervalo $[a,b]$. La regla del
 trapecio para aproximar el valor de una integral definida se basa en la aproximación, por medio de trapecios en lugar de rectángulos, del área de la región acotada por la gráfica de la función y el eje $x$.
 
-%\[
-%\FRAME{itbpF}{5.4431in}{2.6169in}{0in}{}{}{Figure}{\special{language
-%"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
-%"USEDEF";valid_file "T";width 5.4431in;height 2.6169in;depth
-%0in;original-width 8.4362in;original-height 4.0343in;cropleft "0";croptop
-%"1";cropright "1";cropbottom "0";tempfilename
-%'PC12IU08.wmf';tempfile-properties "XPR";}}
-%\]
-
 \begin{figure}[H]
   \centering
   \caption{Trapecios en la región por medir}
-  \includegraphics[width=0.40\textwidth]{Gráficas/rtrapecio}
+  \includegraphics[width=9cm]{Gráficas/rtrapecio}
   \propia
 \end{figure}
-
-%\begin{center}------------
-%\centerline{ \graf{Trapecios en la región por medir}}
-%\includegraphics[scale=0.35]{rtrapecio}
-%\textbf{Fuente:} elaboraci?n propia
-%\end{center}
 
 La longitud de cada subintervalo es $\Delta x=\frac{b-a}{n}$ y el área
 de cada trapecio que está sobre el $i$-ésimo subintervalo es $A=\frac{\Delta x}{2}\left( y_{i-1}+y_{i}\right) $, donde $y_{i-1}=f(x_{i-1})$ y $y_{i}=f(x_{i})$, con los $x_i$ en una partición del intervalo $[a,b]$.
 
 Con ello, el área que está debajo de la curva $y=f(x)$ y encima del
 eje $x$ se aproxima sumando las áreas de todos los trapecios:
-
-{\small
-  \begin{align*}
+\begin{gather*}
+  \begin{aligned}
     \int_{a}^{b}&f(x)\,dx\approx T_{n}=\frac{1}{2}\left( y_{0}+y_{1}\right) \Delta
     x+\frac{1}{2}\left( y_{1}+y_{2}\right) \Delta x+\frac{1}{2}\left(
     y_{2}+y_{3}\right) \Delta x\\
@@ -575,21 +491,19 @@ eje $x$ se aproxima sumando las áreas de todos los trapecios:
     +2f(x_{n-2})+2f(x_{n-1})+f(b)\right] \Delta x\\
     &=\frac{1}{2}\left[f(a)+2f(x_{1})+2f(x_{2})+\ldots
     +2f(x_{n-1})+f(b)\right] \left( \frac{b-a}{n}\right)
-  \end{align*}
-}
+  \end{aligned}
+\end{gather*}
 
 En general, para aproximar la $\int_{a}^{b}f(x)\,dx$ por medio de la regla del trapecio, se utiliza
-\[
+\begin{gather*}
   T_{n}=\frac{1}{2}\left[ f(a)+2f(x_{1})+2f(x_{2})+\ldots+2f(x_{n-2})+2f(x_{n-1})+f(b)\right] \Delta x
-\]
-Los puntos de la partición son $x_{0}=a,\ x_{1}=a+\Delta x,\ x_{2}=a+2\Delta x,\ x_{3}=a+3\Delta x,\ldots,x_{n-1}=a+(n-1)\Delta x$ y $x_{n}=a+n\Delta x=b$
-
-y también
+\end{gather*}
+Los puntos de la partición son $x_{0}=a$, $x_{1}=a+\Delta x$, $x_{2}=a+2\Delta x$, $x_{3}=a+3\Delta x,\ldots,x_{n-1}=a+(n-1)\Delta x$\; y\; $x_{n}=a+n\Delta x=b$\; y también
 \[
   \Delta x=\frac{b-a}{n}
 \]
 
-\subsubsection*{Error en la regla del trapecio}
+\subsubsection{Error en la regla del trapecio}
 
 La aproximación con la regla del trapecio lleva a un error que involucra la segunda derivada de $f$. Más exactamente, si $f^{\prime\prime}$ es continua y $M$ es una cota superior de $\left\vert
 f^{\prime\prime}\right\vert $ en $\left[ a,b\right] $, entonces el error en la regla del trapecio $E_{T}=\int_{a}^{b}f(x)\,dx-T_{n}$ satisface
@@ -598,163 +512,143 @@ f^{\prime\prime}\right\vert $ en $\left[ a,b\right] $, entonces el error en la r
 \]
 
 \begin{ejemplo}
-  Utilice la regla del trapecio para estimar $\int_{1}^{2}e^{1/x}\,dx$ con $n=4.$
+  Utilice la regla del trapecio para estimar $\int_{1}^{2}e^{1/x}\,dx$ con $n=4$.
 \end{ejemplo}
 
 De los datos de la integral tenemos que $f(x)=e^{1/x}$, $\Delta x=\frac{2-1}{4}=\frac{1}{4}$; la partición es
-
-\resizebox{\textwidth}{!}{$
+\begin{gather*}
   \begin{aligned}
-    P&=\left\{1,1+\frac{1}{4},1+2\left(\frac{1}{4}\right),1+3\left(\frac{1}{4}\right),
-    1+4\left(\frac{1}{4}\right)\right\}=\left\{1,\frac{4+1}{4},1+\frac{1}{2},1+\frac{3}{4},1+1\right\}\\
-    &=\left\{1,\frac{4+1}{4},\frac{2+1}{2},\frac{4+3}{4},2\right\}=\left\{1,\frac{5}{4},\frac{3}{2},\frac{7}{4},2\right\}
+    P&=\left\{1,1+\frac{1}{4},1+2\left(\frac{1}{4}\right),1+3\left(\frac{1}{4}\right),1+4\left(\frac{1}{4}\right)\right\}\\
+    &=\left\{1,\frac{4+1}{4},1+\frac{1}{2},1+\frac{3}{4},1+1\right\}\\
+    &=\left\{1,\frac{4+1}{4},\frac{2+1}{2},\frac{4+3}{4},2\right\}\\
+    &=\left\{1,\frac{5}{4},\frac{3}{2},\frac{7}{4},2\right\}
   \end{aligned}
-$}
+\end{gather*}
 
 entonces,
-{\small
-  \begin{align*}
+\begin{gather*}
+  \begin{aligned}
     \int_{1}^{2}e^{1/x}\,dx&\approx T_4=\frac{1}{2}\left[ f(1)+2f\left(\frac{5}{4}\right)+2f\left(\frac{3}{2}\right)+2f\left(\frac{7}{4}\right)+f(2)\right] \left( \frac{1}{4}\right)\\
     &=\frac{1}{2}\left[ e^{1/1}+2e^{4/5}+2e^{2/3}+2e^{4/7}+e^{1/2}\right] \left( \frac{1}{4}\right)\\
-    &=\frac{1}{8}\left[ e+2e^{4/5}+2e^{\frac{2}{3}
-    }+2e^{4/7}+e^{1/2}\right]\\
-    &=0.125(2.7183+4,\,\allowbreak
-    4511+3,\,\allowbreak 8955+3,\,\allowbreak 5416+1,\,\allowbreak 6487)\\
-    &=0.125(16,\,\allowbreak 255)=2,\,\allowbreak 0319
-  \end{align*}
-}
+    &=\frac{1}{8}\left[ e+2e^{4/5}+2e^{\frac{2}{3}}+2e^{4/7}+e^{1/2}\right]\\
+    &=0.125(2.7183+4.4511+3.8955+3.5416+1.6487)\\
+    &=0.125(16.255)=2.0319
+  \end{aligned}
+\end{gather*}
 
 \begin{ejemplo}
   Aproxime la $\int_{0}^{3}\frac{1}{1+x^{4}}\ dx$ con $n=6$ usando la regla del trapecio.
 \end{ejemplo}
 
-De la integral dada tenemos que $f(x)=\cfrac{1}{1+x^{4}}$; $\Delta x=\cfrac{3-0}{6}=\cfrac{3}{6}=\cfrac{1}{2}$, y la partición es
-{\small
-  \[
-    P=\left\{0,1/2,2(1/2),3(1/2),4(1/2),5(1/2%
-    ),6(1/2)\right\}=\left\{0,\frac{1}{2},1,\frac{3}{2},2,\frac{5}{2},3\right\}
-  \]
-}
-Entonces,
+De la integral dada tenemos que $f(x)=\frac{1}{1+x^{4}}$; $\Delta x=\frac{3-0}{6}=\frac{3}{6}=\frac{1}{2}$, y la partición es
+\begin{gather*}
+  P=\left\{0,1/2,2(1/2),3(1/2),4(1/2),5(1/2%
+  ),6(1/2)\right\}=\left\{0,\frac{1}{2},1,\frac{3}{2},2,\frac{5}{2},3\right\}
+\end{gather*}
 
-\resizebox{\textwidth}{!}{$
+Entonces,
+\begin{gather*}
   \begin{aligned}
     \int_{0}^{3}&\frac{1}{1+x^{4}}dx\approx T_6=\frac{1}{2}\left[ f(0)+2f(\frac{1}{2})+2f(1)+2f(\frac{3}{2})+2f(2)
-      %\right.\\&\quad \left.
     +2f(\frac{5}{2})+f(3)\right] \left( \frac{1}{2}\right)\\
     &=\frac{1}{4}\left[ \frac{1}{1+0^{4}}+2\frac{1}{1+(\frac{1}{2}%
       )^{4}}+2\frac{1}{1+1^{4}}+2\frac{1}{1+(\frac{3}{2})^{4}}+2\frac{1}{1+2^{4}}
-      %\right.\\&\quad\left.
     +2\frac{1}{1+(\frac{5}{2})^{4}}+\frac{1}{1+3^{4}}\right]\\
     &=(0.25)\left[ 1+2(0.94118)+2(0.5)+2(0.16495)
-      +2(0.05882)%\right.\\&\quad\left.
+      +2(0.05882)
     +2(0.02496)+0.01219\right]\\
-    &=(0.25)(4,\allowbreak 392)=\allowbreak 1,\allowbreak 098
+    &=(0.25)(4.392)=1.098
   \end{aligned}
-$}
+\end{gather*}
 
 Con el siguiente ejemplo usamos integración numérica para responder a un interrogante específico en un contexto aplicado.
 
 \begin{ejemplo}
-  Una alberca mide $30$ pies de ancho y $50$ pies de largo. La tabla 3 muestra la profundidad $h$ del agua a intervalos de $5$ pies. Estime el volumen del agua en la alberca por medio de la regla del trapecio con $\ n=10,$ aplicada a la integral $V=\int_{0}^{50}30h(x)\,dx.$
+  Una alberca mide $30$ pies de ancho y $50$ pies de largo. La tabla 3 muestra la profundidad $h$ del agua a intervalos de $5$ pies. Estime el volumen del agua en la alberca por medio de la regla del trapecio con $\ n=10$, aplicada a la integral $V=\int_{0}^{50}30h(x)\,dx$.
 \end{ejemplo}
 
 \begin{table}[H]
+  \centering
   \caption{Profundidad \textit{h} del agua}
-
-  % REDUCE EL ESPACIO HORIZONTAL DE COLUMNA A 3PT
-  \setlength{\tabcolsep}{3pt}
-  \begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|} % Notar que ajust? las columnas a 12 (l+11c)
-    \hline
-    Posición $x$(pies) & $0$ & $5$ &$10$ & $15$ & $20$ & $25$ & $30$ & $35$ & $40$ & $45$ & $50$\\
-    \hline
-    Profundidad $h(x)$(pies) & $6.0$& $8.2$ & $9.1$ & $9.9$ & $10.5$ & $11.0$ & $11.5$ & $11.9$ & $12.3$ & $12.7$ & $13.0$ \\ \hline
-  \end{tabular}
+  \begin{footnotesize}
+    \centering
+    \setlength{\tabcolsep}{3pt}
+    \begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|}
+      \hline
+      Posición $x$ (pies) & $0$ & $5$ &$10$ & $15$ & $20$ & $25$ & $30$ & $35$ & $40$ & $45$ & $50$\\
+      \hline
+      Profundidad $h(x)$ (pies) & $6.0$& $8.2$ & $9.1$ & $9.9$ & $10.5$ & $11.0$ & $11.5$ & $11.9$ & $12.3$ & $12.7$ & $13.0$ \\ \hline
+    \end{tabular}
+  \end{footnotesize}
   \propia
-
 \end{table}
 
 \emph{Solución.} Según la fórmula del método, tenemos
-
-\resizebox{\textwidth}{!}{$
+\begin{gather*}
   \begin{aligned}
     V&=\int_{0}^{50}30h(x)\,dx \approx T_{10}=30\left( \frac{1}{2}\right) \left[
       f(0)+2f(5)+2f(10)+2f(x15)+2f(20)\right.\\
       &\quad\left.+2f(25)+2f(30)+2f(35)+2f(40)+2f(45)+f(50)%
     \right] (5) \\
     &=15\left( 5\right) \left[
-      6+2(8,2)+2(9,1)+2(9,9)+2(10,5)+2(11)+2(11,5)\right.\\
-      &\quad\left.+2(11,9)+2(12,3)+2(12,7)+(13)%
+      6+2(8.2)+2(9.1)+2(9.9)+2(10.5)+2(11)+2(11.5)\right.\\
+      &\quad\left.+2(11.9)+2(12.3)+2(12.7)+(13)%
     \right] \\
-    &=75\left( 6+16,4+18,2+19,8+21+22+23+23,8+24,6+25,4+13\right) \\
+    &=75\left( 6+16.4+18.2+19.8+21+22+23+23.8+24.6+25.4+13\right) \\
     &=75\left( 213.2\right) =15990
   \end{aligned}
-$}
+\end{gather*}
 
-\subsection*{Método de Simpson}
+\subsection{Método de Simpson}
 
 Tomemos ahora una función $f$ continua en $[a,b]$ y una partición del intervalo $[a,b]$ de tal forma que se tenga un número par de subintervalos de longitud $\Delta x=\frac{b-a}{n}$ (con $n$ par).
 
 \begin{figure}[H]
   \centering
   \caption{Parábolas en la región por medir}
-  \includegraphics[width=0.40\textwidth]{Gráficas/simpson.pdf}
+  \includegraphics[width=9cm]{Gráficas/simpson.pdf}
   \propia
 \end{figure}
 
-%\begin{center}-----------
-%\centerline{ \graf{Par?bolas en la regi?n por medir}}
-%\includegraphics[scale=0.3]{simpson.pdf}
-%\textbf{Fuente:} elaboraci?n propia
-%\end{center}
+Para el método de Simpson, en lugar de usar rectángulos o trapecios como en otros métodos, aproximamos el área bajo la curva de la función $f$ por medio de regiones dadas por partes de parábolas. En cada par de subintervalos consecutivos, aproximamos la curva $y=f(x)\geq 0$ mediante una parábola que pasa por los puntos consecutivos $(x_{i-1},y_{i-1}),(x_{i},y_{i}),(x_{i+1},y_{i+1})$ de la curva.
 
-Para el método de Simpson, en lugar de usar rectángulos o trapecios como en otros métodos, aproximamos el área bajo la curva de la función $f$ por medio de regiones dadas por partes de parábolas. En cada par de subintervalos consecutivos, aproximamos la curva {\footnotesize $y=f(x)\geq 0$} mediante una parábola que pasa por los puntos consecutivos {\footnotesize $(x_{i-1},y_{i-1}),(x_{i},y_{i}),(x_{i+1},y_{i+1})$} de la curva.
+\begin{figure}[H]
+  \centering
+  \caption{Puntos que forman la parábola}
+  \includegraphics[width=5cm]{Gráficas/02_rgsimpson.pdf}
+  \propia
+\end{figure}
 
-%\begin{center}-No se encontr? la figura
-%\centerline{ \graf{Puntos que forman la parábola}}
-%\includegraphics[scale=0.3]{rgsimpson.pdf}
-%\textbf{Fuente:} elaboraci?n propia/Falta esta imagen
-%\end{center}
-
-%Verifiquen si esta es la imagen, por favor.
-La ecuación de una parábola es $y=Ax^{2}+Bx+C$; por tanto, el área debajo de la parábola desde $x_{0}=-h,\ x_{1}=0$ a $x=h$, con $h=\Delta x=\frac{b-a}{n}$ es
-
-\resizebox{\textwidth}{!}{$
-  \begin{aligned}
-    A_{1} %&=&\int_{-h}^{h}\left( Ax^{2}+Bx+C\right) dx=\left[ \int \left(
-    %Ax^{2}+Bx+C\right) dx\right] _{-h}^{h} \\
-    &= \frac{Ax^{3}}{3}+\frac{Bx^{2}}{2}+Cx\Big|_{-h}^{h}\notag
-    %\\&
-    =\frac{Ah^{3}}{3}+\frac{Bh^{2}}{2}+Ch-\left[ \frac{A(-h)^{3}}{3}+\frac{%
-    B(-h)^{2}}{2}+C(-h)\right]\notag \\
-    &=\frac{Ah^{3}}{3}+\frac{Bh^{2}}{2}+Ch-\left[ \frac{-Ah^{3}}{3}+\frac{Bh^{2}%
-    }{2}-Ch\right]=\frac{Ah^{3}}{3}+\frac{Bh^{2}}{2}+Ch+\frac{Ah^{3}}{3}-\frac{Bh^{2}}{2}+Ch
-    \notag\\
-    &=\frac{2Ah^{3}}{3}+2Ch=\frac{h}{3}\left[ 2Ah^{2}+6C\right]
-  \end{aligned}
-$}
+\textls[-5]{La ecuación de una parábola es $y=Ax^{2}+Bx+C$; por tanto, el área debajo de la parábola desde $x_{0}=-h$, $x_{1}=0$ a $x=h$, con $h=\Delta x=\frac{b-a}{n}$ es}
+\begin{gather}
+  \begin{aligned}[b]
+    A_{1} &= \frac{Ax^{3}}{3}+\frac{Bx^{2}}{2}+Cx\Big|_{-h}^{h} \\
+    &=\frac{Ah^{3}}{3}+\frac{Bh^{2}}{2}+Ch-\left[ \frac{A(-h)^{3}}{3}
+    +\frac{B(-h)^{2}}{2}+C(-h)\right] \\
+    &=\frac{Ah^{3}}{3}+\frac{Bh^{2}}{2}+Ch-\left[ \frac{-Ah^{3}}{3}
+    +\frac{Bh^{2}}{2}-Ch\right] \\
+    &=\frac{Ah^{3}}{3}+\frac{Bh^{2}}{2}+Ch+\frac{Ah^{3}}{3}
+    -\frac{Bh^{2}}{2}+Ch  \\
+    &=\frac{2Ah^{3}}{3}+2Ch \\
+    &=\frac{h}{3}\left[ 2Ah^{2}+6C\right]
+  \end{aligned}\label{eq:e51}
+\end{gather}
 
 Como la curva pasa por los puntos $(-h,f(x_{0})),\ (0,f(x_{1}))$ y $(h,f(x_{2}))$, entonces
-{\small
-  \begin{align}
-    f(x_{0}) &=A(-h)^{2}+B(-h)+C=Ah^{2}-Bh+C\label{ecua1}\\
-    f(x_{1}) &=A(0)^{2}+B(0)+C=C\label{ecua2}\\
-    f(x_{2}) &=Ah^{2}+Bh+C\label{ecua3}
-  \end{align}
-}
+\begin{align}
+  f(x_{0}) &=A(-h)^{2}+B(-h)+C=Ah^{2}-Bh+C\label{ecua1}\\
+  f(x_{1}) &=A(0)^{2}+B(0)+C=C\label{ecua2}\\
+  f(x_{2}) &=Ah^{2}+Bh+C\label{ecua3}
+\end{align}
 Sumando las ecuaciones \eqref{ecua1} y \eqref{ecua3},
-{\small
-  \begin{equation}\label{ecua4}
-    f(x_{0})+f(x_{2})=Ah^{2}-Bh+C+Ah^{2}+Bh+C=2Ah^{2}+2C
-  \end{equation}
-}
+\begin{equation}\label{ecua4}
+  f(x_{0})+f(x_{2})=Ah^{2}-Bh+C+Ah^{2}+Bh+C=2Ah^{2}+2C
+\end{equation}
 que, al reemplazar la ecuación \eqref{ecua2} en la ecuación \eqref{ecua4}, se tiene
-{\small
-  \begin{align}
-    f(x_{0})+f(x_{2})&=2Ah^{2}+2f(x_{1})\notag\\
-    f(x_{0})-2f(x_{1})+f(x_{2})&=2Ah^{2}\label{ecua5}
-  \end{align}
-}
+\begin{align}
+  f(x_{0})+f(x_{2})&=2Ah^{2}+2f(x_{1})\notag\\
+  f(x_{0})-2f(x_{1})+f(x_{2})&=2Ah^{2}\label{ecua5}
+\end{align}
 y, reemplazando en \eqref{ecua1} las ecuaciones \eqref{ecua5} y \eqref{ecua2}, se tiene que %$\frac{h}{3}\left[ 2Ah^{2}+6C\right] $
 \begin{align*}
   A_{1}&=\frac{2Ah^{3}}{3}+2Ch=\frac{h}{3}\left[
@@ -763,38 +657,35 @@ y, reemplazando en \eqref{ecua1} las ecuaciones \eqref{ecua5} y \eqref{ecua2}, s
   f(x_{0})+4f(x_{1})+f(x_{2})\right]
 \end{align*}
 
-Así, el área debajo de la parábola que pasa por los puntos {\footnotesize $(x_{2},f(x_{2})),\ (x_{3},f(x_{3}))$} y {\footnotesize $(x_{4},f(x_{4}))$} es {\footnotesize $A_{2}=\frac{h}{3}\left[ f(x_{2})+4f(x_{3})+f(x_{4})\right];$} entonces, por los puntos {\footnotesize $(x_{4},f(x_{4})),\ (x_{5},f(x_{5}))$} y {\footnotesize $(x_{6},f(x_{6}))$,} es {\footnotesize $A_{3}=\frac{h}{3}\left[ f(x_{4})+4f(x_{5})+f(x_{6})\right]$;} y, $\ldots$, por los puntos $(x_{n-2},f(x_{n-2})),\ (x_{n-1},f(x_{n-1}))$ y $(x_{n},f(x_{n}))$ es $A_{n}=\frac{h}{3}\left[ f(x_{n-2})+4f(x_{n-1})+f(x_{n})\right],$que sumando todas las áreas de las parábolas da como resultado. %Por favor, revisen este p?rrafo.
+Así, el área debajo de la parábola que pasa por los puntos $(x_{2},f(x_{2}))$, $(x_{3},f(x_{3}))$ y $(x_{4},f(x_{4}))$ es $A_{2}=\frac{h}{3}[f(x_{2})+4f(x_{3})+f(x_{4})]$; entonces, por los puntos $(x_{4},f(x_{4}))$, $(x_{5},f(x_{5}))$ y $(x_{6},f(x_{6}))$, es $A_{3}=\frac{h}{3}[f(x_{4})+4f(x_{5})+f(x_{6})]$; y, $\ldots$, por los puntos $(x_{n-2},f(x_{n-2}))$, $(x_{n-1},f(x_{n-1}))$ y $(x_{n},f(x_{n}))$ es $A_{n}=\frac{h}{3}[f(x_{n-2})+4f(x_{n-1})+f(x_{n})]$, lo que, sumando todas las áreas de las parábolas, da como resultado
+\begin{align*}
+  \int_{a}^{b}&f(x)\,dx \approx S_{n}=\frac{h}{3}\left[f(x_{0})+4f(x_{1})+f(x_{2})\right]\\
+  &\quad+\frac{h}{3}\left[f(x_{2})+4f(x_{3})+f(x_{4})\right]
+  +\frac{h}{3}\left[f(x_{4})+4f(x_{5})+f(x_{6})\right] +\ldots \\
+  &\quad+\frac{h}{3}\left[ f(x_{n-2})+4f(x_{n-1})+f(x_{n})\right] \displaybreak \\
+  &=\frac{h}{3}\left[f(x_{0})+4f(x_{1})+2f(x_{2})+4f(x_{3})\right.\\
+  &\quad\left.+f(x_{4})+4f(x_{5})+f(x_{6})+\ldots+f(x_{n-2})+4f(x_{n-1})+f(x_{n})\right] \\
+  &=\frac{h}{3}\left[f(x_{0})+4f(x_{1})+2f(x_{2})+4f(x_{3})\right.\\
+    &\quad+2f(x_{4})+4f(x_{5})+2f(x_{6})+\ldots\\
+  &\quad\left.+2f(x_{n-2})+4f(x_{n-1})+f(x_{n})\right]
+\end{align*}
 
-{\small
-  \begin{align*}
-    \int_{a}^{b}&f(x)\,dx \approx S_{n} =\frac{h}{3}\left[f(x_{0})+4f(x_{1})+f(x_{2})\right] \frac{h}{3}\left[f(x_{2})+4f(x_{3})+f(x_{4})\right] \\ &\quad+\frac{h}{3}\left[f(x_{4})+4f(x_{5})+f(x_{6})\right] +\ldots %\\
-    +\frac{h}{3}\left[ f(x_{n-2})+4f(x_{n-1})+f(x_{n})\right] \\
-    &=\frac{h}{3}\left[f(x_{0})+4f(x_{1})+2f(x_{2})+4f(x_{3})+f(x_{4})+f(x_{4})+4f(x_{5})\right.\\
-    &\quad\left.+f(x_{6})+\ldots+f(x_{n-2})+4f(x_{n-1})+f(x_{n})\right] \\
-    &=\frac{h}{3}\left[f(x_{0})+4f(x_{1})+2f(x_{2})+4f(x_{3})+2f(x_{4})+4f(x_{5})+2f(x_{6})\right.\\
-    &\quad\left.+\ldots +2f(x_{n-2})+4f(x_{n-1})+f(x_{n})\right]
-  \end{align*}
-}
-
-En resumen, para aproximar el valor de $\int_{a}^{b}f(x)\,dx$ por el método de Simpson, se usa la expresión
-
-\resizebox{\textwidth}{!}{$
+En resumen, para aproximar el valor de $\int_{a}^{b}f(x)\,dx$ por el método de Simp\-son, se usa la expresión
+\begin{gather*}
   \begin{aligned}
     S_{n}&=\frac{h}{3}\Big[f(x_{2})+4f(x_{3})+2f(x_{4})+4f(x_{5})+2f(x_{6})+
       %\Big.\\&\quad
     +2f(x_{n-2})+4f(x_{n-1})+f(x_{n})\Big]
   \end{aligned}
-$}
+\end{gather*}
 
 para la partición
-{\small
-  \[
-    P=\{x_{0}=a,x_{1}=a+\Delta x,x_{2}=a+2\Delta x,\ldots,x_{n}=a+n\Delta x=b\}
-  \]
-}
-con $h=\Delta x=\cfrac{b-a}{n}$ y $n$ un número par.
+\[
+  P=\{x_{0}=a,x_{1}=a+\Delta x,x_{2}=a+2\Delta x,\ldots,x_{n}=a+n\Delta x=b\}
+\]
+con $h=\Delta x=\frac{b-a}{n}$ y $n$ un número par.
 
-\subsubsection*{Error en el método de Simpson}
+\subsubsection{Error en el método de Simpson}
 
 Si $f^{\left( 4\right) }$ es continua y $M$ es una cota superior de $\left\vert f^{\left( 4\right) }\right\vert$ en $\left[ a,b\right]$,
 entonces el error en el método de Simpson $E_{S}=\int_{a}^{b}f(x)\,dx-S_{n}$
@@ -808,41 +699,35 @@ satisface
 \end{ejemplo}
 \begin{parrafonumerado}
 
-\item $\int_{1}^{2}e^{1/x}dx$ con $n=4.$
+\item $\int_{1}^{2}e^{1/x}dx$ con $n=4$.
 
-  \emph{Solución.} En este caso tenemos que $\Delta x=\cfrac{2-1}{4}=\cfrac{1}{4}$ \ y
-  {\small
-    \[
-      P=\{1,1+1/4,1+2(1/4),1+3(1/4),1+4(1/4)\}=\{1,5/4,3/2,7/4,2\}
-    \]
-  }
+  \emph{Solución.} En este caso tenemos que $\Delta x=\frac{2-1}{4}=\frac{1}{4}$ \ y
+  \begin{align*}
+    P&=\{1,1+1/4,1+2(1/4),1+3(1/4),1+4(1/4)\}\\
+    &=\{1,5/4,3/2,7/4,2\}
+  \end{align*}
 
   por tanto,
-  {\small
-    \begin{align*}
-      \int_{1}^{2}e^{1/x}dx&\approx S_{n}=\frac{1/4}{3}\Big[
-      f(1)+4f(5/4)+2f(3/2)+4f(7/4)+f(2)\Big]\\
-      &=\frac{1}{12}\Big[ e^{1/1}+4e^{4/5}+2e^{2/3}+4e^{4/7}+e^{1/2}\Big]\\
-      &=0.0833(2,\allowbreak 7183+8.\allowbreak9022+3,\allowbreak 8955+7,\allowbreak 0832+1,\allowbreak 6487)\\
-      &=0.0833(24,\allowbreak 248)\approx\allowbreak 2.0199
-    \end{align*}
-  }
-
-\item $\int_{0}^{3}\frac{1}{1+x^{4}}dx$ con $n=6.$
-
-  \emph{Solución.} Ahora, $\Delta x=\cfrac{3-0}{6}=\cfrac{3}{6}=\cfrac{1}{2}$ \ y
-
-  \resizebox{\textwidth}{!}{$
+  \begin{gather*}
     \begin{aligned}
-      P&=\{0,1/2,2(1/2),3(1/2),4(1/2),5(1/2),6(1/2)\}
-      %\\&
-      =\{0,1/2,1,3/2,2,5/2,3\}
+      \int_{1}^{2}e^{1/x}dx&\approx S_{n}=\frac{1/4}{3}
+      \Big[f(1)+4f(5/4)+2f(3/2)+4f(7/4)+f(2)\Big]\\
+      &=\frac{1}{12}\Big[ e^{1/1}+4e^{4/5}+2e^{2/3}+4e^{4/7}+e^{1/2}\Big]\\
+      &=0.0833(2.7183+8.9022+3.8955+7.0832+1.6487)\\
+      &=0.0833(24.248)\approx 2.0199
     \end{aligned}
-  $}
+  \end{gather*}
+
+\item $\int_{0}^{3}\frac{1}{1+x^{4}}dx$ con $n=6$.
+
+  \emph{Solución.} Ahora, $\Delta x=\frac{3-0}{6}=\frac{3}{6}=\frac{1}{2}$ \ y
+  \begin{align*}
+    P&=\{0,1/2,2(1/2),3(1/2),4(1/2),5(1/2),6(1/2)\}\\
+    &=\{0,1/2,1,3/2,2,5/2,3\}
+  \end{align*}
 
   y entonces,
-
-  \resizebox{\textwidth}{!}{$
+  \begin{gather*}
     \begin{aligned}
       &\int_{0}^{3}\frac{1}{1+x^{4}}dx\approx S_{6}
       %\\&
@@ -858,197 +743,173 @@ satisface
         95)+2(0.05882)
         %\right.\\&\quad\left.
       +4(0.02496)+0.01219\ \right]\\
-      &=(0.1666)(6,\allowbreak 6542) \approx\allowbreak
+      &=(0.1666)(6.6542) \approx\allowbreak
       1.106
     \end{aligned}
-  $}
+  \end{gather*}
 
-\item Usando el método de Simpson, halle el área de la región dada en la gráfica:
+\item Usando el método de Simpson, halle el área de la región dada en la figura~\ref{fig:InteNumSimpsEjemp}:
 
   \begin{figure}[H]
     \centering
-    \caption{Región por medir}
-    \includegraphics[width=0.40\textwidth]{Gráficas/InteNumSimpsEjemp}
+    \caption{Región por medir}\label{fig:InteNumSimpsEjemp}
+    \includegraphics[width=0.45\textwidth]{Gráficas/InteNumSimpsEjemp}
     \propia
   \end{figure}
 
-  %\begin{center}------------
-  %\centerline{ \graf{Región por medir}}
-  %\includegraphics[scale=0.35]{InteNumSimpsEjemp}
-  %\textbf{Fuente:} elaboraci?n propia
-  %\end{center}
-
   \emph{Solución.} Con la información en la figura, podemos hacer
-
-  \resizebox{\textwidth}{!}{$
+  \begin{gather*}
     \begin{aligned}
-      \text{área}&\approx S_{8}=\frac{1.8}{3}\Big( 2+4\cdot 2.5+2\cdot 3.1+4\cdot 3.8+2\cdot4+4\cdot 4.5
-        %\\ &\quad
+      \text{Área}\approx S_{8}&=\frac{1.8}{3}\Big( 2+4\cdot 2.5+2\cdot 3.1+4\cdot 3.8+2\cdot4+4\cdot 4.5
       +2\cdot 5.5+4\cdot 4+0\Big)\\
       &=51.84
     \end{aligned}
-  $}
+  \end{gather*}
 
 \end{parrafonumerado}
 
-\addcontentsline{toc}{section}{Ejercicios del capítulo~\thechapter}
+\section{Ejercicios del capítulo~\thechapter}
 
-%\group
+\group
 
-\begin{ejer}{Decida si la integral es convergente o divergente. En caso de ser convergente,calcule la integral impropia dada.}
-\end{ejer}
-\begin{enumerate}
-    %\begin{multicols}{3}
+Decida si la integral es convergente o divergente. En caso de ser convergente, calcule la integral impropia dada.
 
-  \item {$\int_{1}^{\infty }\frac{1}{x^{0.99}}dx$} {La integral diverge.}
+\begin{multicols}{3}
+  \exercise{$\int_{1}^{\infty }\frac{1}{x^{0.99}}dx$.} {La integral diverge.}
 
-  \item {$\int_{1}^{\infty }e^{-4x}dx$} {Converge a $\frac{1}{4e^{4}}$.}
+  \exercise{$\int_{1}^{\infty }e^{-4x}dx$.} {Converge a $\frac{1}{4e^{4}}$.}
 
-  \item {$\int_{-\infty }^{3}e^{2x}dx$} {Converge a $\frac{1}{2}e^{6}$.}
+  \exercise{$\int_{-\infty }^{3}e^{2x}dx$.} {Converge a $\frac{1}{2}e^{6}$}
 
-  \item {$\int_{-\infty }^{\infty }e^{-x}dx$} {La integral diverge.}
+  \exercise{$\int_{-\infty }^{\infty }e^{-x}dx$.} {La integral diverge.}
 
-  \item {$\int_{e}^{\infty }\frac{1}{x\left( \ln x\right) ^{3}}dx$} {Converge a $\frac{1}{2}$.}
+  \exercise{$\int_{e}^{\infty }\frac{1}{x\left( \ln x\right) ^{3}}dx$.} {Converge a $\frac{1}{2}$}
 
-  \item {$\int_{0}^{\infty }e^{-x}\sin x\,dx$} {Converge a $\frac{1}{2}$.}
+  \exercise{$\int_{0}^{\infty }e^{-x}\sin xdx$.} {Converge a $\frac{1}{2}$}
 
-  \item {$\int_{0}^{2}\frac{1}{\sqrt[3]{x-1}}dx$} {Converge a $0$.}
+  \exercise{$\int_{0}^{2}\frac{1}{\sqrt[3]{x-1}}dx$.} {Converge a $0$}
 
-  \item {$\int_{0}^{\frac{\pi }{4}}\frac{\sec ^{2}\theta d\theta }{\sqrt{\tan\theta }}$} {Converge a $2$}
+  \exercise{$\int_{0}^{\frac{\pi }{4}}\frac{\sec ^{2}\theta d\theta }{\sqrt{\tan\theta }}$.} {Converge a $2$}
 
-  \item {$\int_{2}^{\infty }\frac{1}{\left( x+1\right) \left( x+2\right) }dx$} {Converge a $\ln \frac{4}{3}$}
+  \exercise{$ \int_{2}^{\infty }\frac{1}{\left( x+1\right) \left( x+2\right) }dx$.} {Converge a $\ln \frac{4}{3}$}
 
-  \item {$\int_{1}^{\infty }\frac{1}{x}dx$} {Diverge}
+  \exercise{$\int_{1}^{\infty }\frac{1}{x}dx$.} {Diverge.}
 
-  \item {$\int_{2}^{\infty }\frac{2}{\left( x+1\right) ^{2}}dx$} {Converge a $\frac{2}{3}$}
+  \exercise{$\int_{2}^{\infty }\frac{2}{\left( x+1\right) ^{2}}dx$.} {Converge a $\frac{2}{3}$.}
 
-  \item {$\int_{1}^{\infty }\frac{8}{x^{3}+x}dx$} {Converge a $4\ln 2$}
+  \exercise{$\int_{1}^{\infty }\frac{8}{x^{3}+x}dx$.} {Converge a $4\ln 2$.}
 
-  \item {$\int_{2}^{\infty }\frac{x}{x^{4}-1}dx$} {Converge a $\frac{1}{4}\ln \frac{5}{3}$}
+  \exercise{$\int_{2}^{\infty }\frac{x}{x^{4}-1}dx$.} {Converge a $\frac{1}{4}\ln \frac{5}{3}$.}
 
-  \item {$\int_{3}^{\infty }\frac{x}{x^{4}+3x^{2}-4}dx$} {Converge a $\frac{1}{10}\ln \frac{13}{8}$}
+  \exercise{$\int_{3}^{\infty }\frac{x}{x^{4}+3x^{2}-4}dx$.} {Converge a $\frac{1}{10}\ln \frac{13}{8}$.}
 
-  \item {$\int_{1}^{\infty }\frac{dx}{e^{x+2}+e^{4-x}}$} {Converge a $\frac{\pi }{4e^{3}}$}
+  \exercise{$\int_{1}^{\infty }\frac{dx}{e^{x+2}+e^{4-x}}$.} {Converge a $\frac{\pi }{4e^{3}}$.}
 
-  \item {$\int_{2}^{\infty }\frac{x^{2}}{\left( x^{2}+4\right) ^{2}}dx$} {Converge a $\frac{1}{16}\pi +\frac{1}{8}$}
+  \exercise{$\int_{2}^{\infty }\frac{x^{2}}{\left( x^{2}+4\right) ^{2}}dx$.} {Converge a $\frac{1}{16}\pi +\frac{1}{8}$.}
 
-  \item {$\int_{1}^{\infty }\frac{4}{x\left( x+1\right) ^{2}}dx$} {Converge a $4\ln 2 -2$}
+  \exercise{$\int_{1}^{\infty }\frac{4}{x\left( x+1\right) ^{2}}dx$.} {Converge a $4\ln 2 -2$.}
 
-  \item {$\int_{3}^{\infty }\frac{x}{\left( x-1\right) ^{2}\left( x+1\right) }dx$} {Converge a $\frac{1}{4}\ln 2+\frac{1}{4}$.}
+  \exercise{$\int_{3}^{\infty }\frac{x}{\left( x-1\right) ^{2}\left( x+1\right) }dx$.} {Converge a $\frac{1}{4}\ln 2+\frac{1}{4}$.}
 
-  \item {$\int_{2}^{\infty }\frac{1}{x^{2}-1}dx$} {Converge a $\frac{1}{2}\ln 3$}
+  \exercise{$\int_{2}^{\infty }\frac{1}{x^{2}-1}dx$.} {Converge a $\frac{1}{2}\ln 3$.}
 
-  \item {$\int_{2}^{\infty }\frac{dx}{x\left( x-1\right) \left( x+1\right) }$} {Converge a $\frac{1}{2}\ln \frac{4}{3}$}
+  \exercise{$\int_{2}^{\infty }\frac{dx}{x\left( x-1\right) \left( x+1\right) }$.} {Converge a $\frac{1}{2}\ln \frac{4}{3}$.}
 
-  \item {$\int_{2}^{\infty }\frac{10}{\left( x+2\right) \left( x+3\right)}dx $} {Converge a $10\ln 5-20\ln 2 $}
+  \exercise{$\int_{2}^{\infty }\frac{10}{\left( x+2\right) \left( x+3\right)}dx $.} {Converge a $10\ln 5-20\ln 2 $.}
 
-  \item {$\int_{1}^{\infty }\frac{10}{x^{3}+4x}dx$} {Converge a $\frac{5}{4}\ln 5 $}
+  \exercise{$\int_{1}^{\infty }\frac{10}{x^{3}+4x}dx$.} {Converge a $\frac{5}{4}\ln 5 $.}
 
-  \item {$\int_{-\infty }^{\infty }\frac{3x^{2}dx}{x^{6}+1}$} {Converge a $\pi$}
+  \exercise{$\int_{-\infty }^{\infty }\frac{3x^{2}dx}{x^{6}+1}$.} {Converge a $\pi$.}
 
-  \item {$\int_{-2}^{3}\frac{1}{x^{3}}dx$} {La integral diverge}
+  \exercise{$\int_{-2}^{3}\frac{1}{x^{3}}dx$.} {La integral diverge.}
 
-  \item {$\int_{-1}^{8}\frac{1}{\sqrt[3]{x}}dx$} {Converge a $\frac{9}{2}$}
+  \exercise{$\int_{-1}^{8}\frac{1}{\sqrt[3]{x}}dx$.} {Converge a $\frac{9}{2}$.}
 
-  \item {$\int_{0}^{1}x\ln x\,dx$} {Converge a $-\frac{1}{4}$}
+  \exercise{$\int_{0}^{1}x\ln xdx$.} {Converge a $-\frac{1}{4}$.}
 
-  \item {$\int_{0}^{\infty }\frac{1}{\left( 1+x\right) \sqrt{x}}dx$} {Converge a $\pi$}
+  \exercise{$\int_{0}^{\infty }\frac{1}{\left( 1+x\right) \sqrt{x}}dx$.} {Converge a $\pi$.}
 
-  \item {$\int_{0}^{e}\ln ^{2}zdz$} {Converge a $e$}
-    %\end{multicols}
-\end{enumerate}
+  \exercise{$\int_{0}^{e}\ln ^{2}zdz$.} {Converge a $e$.}
+\end{multicols}
 
-\begin{ejer}{Aproximar las siguientes integrales usando el método del punto medio, la regla del trapecio y el método de Simpson, con el valor de $n$ indicado.}
-\end{ejer}
-\begin{enumerate}
-    %\begin{multicols}{2}
+\exercise{Aproxime las siguientes integrales usando el método del punto medio, la regla del trapecio y método de Simpson, con el valor de $n$ indicado.}
+%\begin{multicols}{2}
+\subexercise{$\int_{2}^{4}\frac{x}{\ln x}dx$  con $n=6$.}{$M_{6}=5.5483,\ T_{6}=5.5598,\ S_{6}=5.552\,5$}
 
-  \item {$\int_{2}^{4}\frac{x}{\ln x}dx$ con $n=6$}{$M_{6}=5.5483,\ T_{6}=5.5598,\ S_{6}=5.5525$}
+\subexercise{$\int_{0}^{1}\frac{e^{x}}{1+x^{2}}dx$ con $n=10$.}{$ M_{10}=1.2711,\ T_{10}=1.2699,\ S_{10}=1.2707$}
 
-  \item {$\int_{0}^{1}\frac{e^{x}}{1+x^{2}}dx$ con $n=10$}{$ M_{10}=1.2711,\ T_{10}=1.2699,\ S_{10}=1.2707$}
+\subexercise{$\int_{4}^{6}\ln \left( x^{3}+2\right) dx$ con $n=10$.}{$M_{10}=9.6509,\ T_{10}=9.6498,\ S_{10}=9.6505$}
 
-  \item {$\int_{4}^{6}\ln \left( x^{3}+2\right) dx$ con $n=10$}{$M_{10}=9.6509,\ T_{10}=9.6498,\ S_{10}=9.6505$}
+\subexercise{$\int_{2}^{10}\frac{x^{2}+10x}{\ln x}dx$ con $n=10$.}{$ M_{10}=443.59,\ T_{10}=444.66,\ S_{10}=444.01$}
 
-  \item {$\int_{2}^{10}\frac{x^{2}+10x}{\ln x}dx$ con $n=10$}{$ M_{10}=443.59,\ T_{10}=444.66,\ S_{10}=444.01$}
+\subexercise{$\int_{0}^{3}\sqrt{x^{6}+2}dx$ con $n=8$.}{$%
+M_{10}=21.706$, $T_{10}=22.180$, $S_{10}=21.863$.}
+%\end{multicols}
 
-  \item {$\int_{0}^{3}\sqrt{x^{6}+2}dx$ con $n=8$}{$%
-    M_{10}=21.706,\ T_{10}=22.180,\ S_{10}=21.863$}
-    %\end{multicols}
-\end{enumerate}
+\exercise{Dada la figura~\ref{fig:ejempintnum}, aproxime el área abajo de la región sombreada para $n=6$ utilizando:}
 
-\begin{ejer}{Dada la \textbf{(figura \ref{fig:integral_impropia})}figura 163, aproxime el área abajo de la región sombreada para $n=6$ utilizando}
-\end{ejer}
+\subexercise{El método del punto medio.}{$M_{6}=24.6$ }
+
+\subexercise{La regla del trapecio.}{ $T_{6}=24.1$}
+
+\subexercise{El método de Simpson.}{$S_{6}=24.4$}
 
 \begin{figure}[H]
   \centering
-  \caption{?rea para aproximar}
-  \label{fig:integral_impropia}
-  \includegraphics[width=0.45\textwidth]{Gráficas/ejempintnum.pdf}
+  \caption{Área para aproximar}
+  \label{fig:ejempintnum}
+  \includegraphics[width=6cm]{Gráficas/ejempintnum.pdf}
   \propia
 \end{figure}
 
-%\begin{center}-----------
-%\includegraphics[scale=0.35]{ejempintnum.pdf}
-%\end{center}
-
-\begin{enumerate}
-
-  \item {El método del punto medio.}{$M_{6}=24,6$ }
-
-  \item {La regla del trapecio.}{ $T_{6}=24,1$}
-
-  \item {El método de Simpson.}{$S_{6}=24,4$}
-    %\clearpage
-
-  \item {Sea $f$\ la función cuyos datos están en la siguiente tabla.}
-
-  \item {Use la tabla para aproximar $\int_{0}^{5}f\left( x\right)\,dx$ usando el método del punto medio.}{$M_{5}=11.2$}
-
-\item {Si $-3\leq f^{\prime \prime}\left( x\right) \leq 4$ para todo $x.$ \ Estime el error en la aproximación de la parte a).}{Error $0.8333$ }
-
-\item {Utilice los datos de la función $f$ dados en la tabla 5:
-
-    \begin{table}[H]
-      \caption{Datos de la función \textit{f}}
-      \begin{tabular}{|r|r|r|r|r|r|r|r|r|r|r|r|}
-        \hline
-        $x$ & $2$ & $2,5$ & $3$ & $3,5$ & $4$ & $4,5$ & $5$ & $5,5$ & $6$ & $6,5$ & $%
-        7$ \\ \hline
-        $f\left( x\right) $ & $1$ & $1,8$ & $2,6$ & $3,8$ & $4,8$ & $6$ & $5,2$ & $4$
-        & $3,8$ & $3,2$ & $3$ \\
-        \hline
-      \end{tabular}
-      \propia
-  \end{table}}
-
-\item {Para aproximar $\int_{2}^{7}f\left( x\right)\,dx$ usando la regla del trapecio.}{$T_{10}=\num{8.6}$}
-
-\item {Si $-4\leq f^{\prime \prime}\left( x\right) \leq 6$ para todo $x\in \left[ 2,7\right].$ \ Estime el error en la aproximación de la parte a).}{Error $0,m625$}
-
-\item {Utilice los datos de la función $f$ dados en la tabla
-
-  \begin{table}[H]
-    \caption{Datos de la función \textit{f}}
-    \begin{tabular}{|r|r|r|r|r|r|r|r|r|r|r|r|r|r|}
+\exercise{Sea $f$\ la función cuyos datos están en la siguiente tabla:
+  \begin{center}
+    \begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|}
       \hline
-      $x$ & $4$ & $4,5$ & $5$ & $5,5$ & $6$ & $6,5$ & $7$ & $7,5$ & $8$ & $8,5$ & $%
-      9$ & $9,5$ & $10$ \\ \hline
-      $f\left( x\right) $ & $3$ & $3,8$ & $4$ & $4,6$ & $5$ & $5,4$ & $6,6$ & $5,8$
-      & $5$ & $4$ & $3,6$ & $3$ & $2,4$ \\ \hline
+      $x$ & $0$ & $0.5$ & $1$ & $1.5$ & $2$ & $2.5$ & $3$ & $3.5$ & $4$ & $4.5$ & $5$ \\ \hline
+      $f\left( x\right) $ & $0.8$ & $1$ & $1.6$ & $2$ & $3$ & $3.8$ & $3.2$ & $2.6$ & $2.2$ & $1.8$ & $1.5$ \\ \hline
     \end{tabular}
-    \propia
-\end{table}}
+  \end{center}
+}
 
-\item {Para aproximar $\int_{4}^{10}f\left( x\right)\,dx$ usando la regla del trapecio.}{$S_{12}=26.7$}
+\subexercise{ Use la tabla para aproximar $\int_{0}^{5}f\left( x\right) dx$ usando el método del punto medio.}{$M_{5}=11.2$}
 
-\item {Si $-5\leq f^{\left( 4\right) }\left( x\right) \leq 10$ para todo $x\in %
-  \left[ 4,10\right] .$ \ Estime el error en la aproximación de la parte
+\subexercise{Si $-3\leq f^{\prime \prime}\left( x\right) \leq 4$ para todo $x$. \ Estime el error en la aproximación de la parte a.}{Error $0.8333$ }
+
+\exercise{Utilice los datos de la función $f$ dados en la siguiente tabla:
+  \begin{center}
+    \begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|}
+      \hline
+      $x$ & $2$ & $2.5$ & $3$ & $3.5$ & $4$ & $4.5$ & $5$ & $5.5$ & $6$ & $6.5$ & $7$ \\ \hline
+      $f\left( x\right) $ & $1$ & $1.8$ & $2.6$ & $3.8$ & $4.8$ & $6$ & $5.2$ & $4$ & $3.8$ & $3.2$ & $3$ \\
+      \hline
+    \end{tabular}
+\end{center}}
+
+\subexercise{Para aproximar $\int_{2}^{7}f\left( x\right) dx$ usando la regla del trapecio.}{$T_{10}=18.6$ }
+
+\subexercise{Si $-4\leq f^{\prime \prime}\left( x\right) \leq 6$ para todo $x\in \left[ 2,7\right]$. \ Estime el error en la aproximación de la parte a).}{Error $0.625$}
+
+\exercise{Utilice los datos de la función $f$ dados en la siguiente tabla:
+
+\begin{center}
+  \begin{tabular}{|l|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+    \hline
+    $x$ & $4$ & $4.5$ & $5$ & $5.5$ & $6$ & $6.5$ & $7$ & $7.5$ & $8$ & $8.5$ & $9$ & $9.5$ & $10$ \\ \hline
+    $f\left( x\right) $ & $3$ & $3.8$ & $4$ & $4.6$ & $5$ & $5.4$ & $6.6$ &
+    $5.8$ & $5$ & $4$ & $3.6$ & $3$ & $2.4$ \\ \hline
+  \end{tabular}
+\end{center}}
+
+\subexercise{Para aproximar $\int_{4}^{10}f\left( x\right) dx$ usando la regla del
+trapecio.}{$S_{12}=26.7$}
+
+\subexercise{Si $-5\leq f^{\left( 4\right) }\left( x\right) \leq 10$ para todo $x\in %
+\left[ 4,10\right] $. \ Estime el error en la aproximación de la parte
 a).}{Error $0.00837$}
 
-\item {Halle $n$ para que $\int_{0}^{1}e^{\frac{1}{4}x^{2}}dx$ tenga magnitud de error menor que $10^{-3},$ usando la regla del trapecio y halle $T_{n}.$}
+\exercise{}
 
-\item {Halle $n$ para que $\int_{0}^{1}e^{\frac{1}{4}x^{2}}dx$ tenga magnitud de error menor que $10^{-4},$ usando el método de Simpson y halle $S_{n}.$}\\
-\item {$n=10$\qquad $T_{10}=1.0905$}.\\
-\item {$n=4$ \qquad $S_{4}=1.09$}.
+\subexercise{Halle $n$ para que $\int_{0}^{1}e^{\frac{1}{4}x^{2}}dx$ tenga magnitud de error menor que $10^{-3},$ usando la regla del trapecio y halle $T_{n}$.}{$n=10$\qquad $T_{10}=1.090\,5$.}
 
-\end{enumerate}
+\subexercise{Halle $n$ para que $\int_{0}^{1}e^{\frac{1}{4}x^{2}}dx$ tenga magnitud de error menor que $10^{-4},$ usando el método de Simpson y halle $S_{n}$.}{$n=4$ \qquad $S_{4}=1.09$.}

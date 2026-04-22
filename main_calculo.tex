@@ -48,22 +48,10 @@
 \include{Caps/CapAplicaciones}
 \include{Caps/CapIntegNumer}
 
-%\includepdf[pages=-,
-%  pagecommand={
-%    \begin{tikzpicture}[remember picture,overlay]
-%      \node[opacity=0,inner sep=0pt] at (current page.center)
-%        {\includegraphics[width=\paperwidth,height=\paperheight]{overlay.pdf}};
-%    \end{tikzpicture}
-%  }
-%]{Respuestas.pdf}
-%
-%\clearpage
-%\pagestyle{plain}
-%\printbibliography[title={\normalfont\lhseries Referencias}]
-%\nocite{*}
-%\includepdf[]{Colofón}
-
-%\chapter*{Respuestas a los ejercicios}
 \listofanswers
+
+\printbibliography[title={Referencias}]
+\nocite{*}
+%\includepdf[]{Colofón}
 
 \end{document}
