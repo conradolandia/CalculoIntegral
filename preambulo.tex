@@ -1,5 +1,6 @@
 % --- PREÁMBULO FINAL OPTIMIZADO PARA LA EDITORIAL UD ---
 \usepackage[english,spanish,es-tabla,es-lcroman]{babel}
+\unspacedoperators
 % Estilo editorial
 \input{esConfigDir/esConfigFonts} % Definición de fuentes (lhseries, medseries, etc.)
 \input{esConfigDir/esEstilo}
@@ -124,7 +125,6 @@
 
 \usepackage{float}
 \usepackage{caption}
-\usepackage{enumitem}
 \usepackage{array}
 \usepackage{hhline}
 \usepackage[absolute,overlay]{textpos}
@@ -168,9 +168,12 @@
 % COMANDOS PERSONALIZADOS Y ENTORNOS
 \DeclareMathOperator{\Pro}{Pro}
 \DeclareMathOperator{\arcsen}{arcsen}
+\DeclareMathOperator{\arccose}{\mathrm{arccos}}
+\DeclareMathOperator{\arcsene}{\mathrm{arcsen}}
 \DeclareMathOperator{\sen}{sen}
-\let\arcsin\arcsen
+\let\arcsin\arcsene
 \let\sin\sen
+\let\arccos\arccose
 
 \newcommand{\piso}[1]{\protect\ensuremath{\big[\mkern-3.5mu| #1 |\mkern-3.5mu\big]}}
 
@@ -192,8 +195,8 @@
 {}          % Indent amount
 {\bfseries} % Head font
 {}         % Punctuation after head
-{.4em}      % Space after head
-{\thmname{#1}\thmnumber{~#2.}\thmnote{\hspace{.4em}#3.}}
+{.33em}      % Space after head
+{\thmname{#1}\thmnumber{~#2.}\thmnote{\hspace{.33em}#3.}}
 \theoremstyle{pauta}
 \newtheorem{teorema}{Teorema}[chapter]
 \newtheorem{prop}{Proposición}[chapter]
@@ -210,6 +213,21 @@
 \renewcommand*\contentsname{\lhseries Contenido}
 \renewcommand{\cfttoctitlefont}{\hfill\Huge}
 \renewcommand{\cftdot}{}
+
+% Footnotemark en bold
+\makeatletter
+\newcommand{\boldfootnotemark}{%
+  \begingroup
+  \renewcommand{\@makefnmark}{\hbox{\medseries\textsuperscript{\@thefnmark}}}%
+  \footnotemark
+  \endgroup
+}
+\makeatother
+
+\newcommand*{\cleartoleftpage}{%
+  \clearpage
+  \ifodd\value{page}\hbox{}\newpage\fi
+}
 
 \makeindex
 

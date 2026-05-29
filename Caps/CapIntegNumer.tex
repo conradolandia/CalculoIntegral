@@ -13,7 +13,6 @@ Un intervalo de la forma $[a,\infty )$, $(\infty,b]$ o $(-\infty ,\infty )$ se d
   \int_{a}^{\infty }f\left( x\right)\,dx=\lim_{z\rightarrow \infty
   }\int_{a}^{z}f\left( x\right)\,dx
 \]
-
 \begin{figure}[t]
   \centering
   \caption{Integral impropia a $\infty$}
@@ -124,11 +123,11 @@ La integral converge a $\frac{1}{2}e^{6}$.
   \int_{1}^{\infty }\frac{8}{x^{3}+x}dx=8\int_{1}^{\infty }\frac{1}{x\left(
   x^{2}+1\right) }dx
 \]
-es decir, si $x=\tan\theta$, entonces $dx=\sec ^{2}\theta d\theta$ y $x^{2}+1=\tan ^{2}\theta +1=\sec ^{2}\theta$. Por otro lado,
+es decir, si $x=\tan\theta$, entonces $dx=\sec ^{2}\theta\,d\theta$ y $x^{2}+1=\tan ^{2}\theta +1=\sec ^{2}\theta$. Por otro lado,
 \begin{align*}
-  \int \frac{dx}{x\left( x^{2}+1\right) }&=\int \frac{\sec ^{2}\theta d\theta }
+  \int \frac{dx}{x\left( x^{2}+1\right) }&=\int \frac{\sec ^{2}\theta\,d\theta }
   {\tan \theta \sec ^{2}\theta }=\int \frac{1}{\tan \theta }d\theta\\
-  &=\int \cot \theta d\theta =\ln \left\vert \sen \theta \right\vert
+  &=\int \cot \theta\,d\theta =\ln \left\vert \sen \theta \right\vert
 \end{align*}
 
 Pero $\tan\theta=x$ y tangente es cateto opuesto sobre cateto adyacente, es decir, $\sen\theta=\frac{x}{\sqrt{x^{2}+1}}$. Luego
@@ -245,11 +244,11 @@ La integral converge a $\frac{\pi }{4e^{3}}$.
   Diga si la integral $\int_{2}^{\infty }\frac{x^{2}}{\left( x^{2}+4\right) ^{2}}dx$ converge o diverge. Si converge, diga a qué valor lo hace.
 \end{ejemplo}
 
-\emph{Solución.} Tomemos $x=2\tan \theta$ y $dx=2\sec ^{2}\theta d\theta$, además $x^{2}+4=4\tan^{2}\theta +4=4\left( \tan ^{2}\theta +1\right) =4\sec ^{2}\theta $, entonces
+\emph{Solución.} Tomemos $x=2\tan \theta$ y $dx=2\sec ^{2}\theta\,d\theta$, además $x^{2}+4=4\tan^{2}\theta +4=4\left( \tan ^{2}\theta +1\right) =4\sec ^{2}\theta $, entonces
 \begin{gather*}
   \begin{aligned}
-    \int \frac{x^{2}}{\left( x^{2}+1\right) ^{2}}dx&=\int \frac{4\tan ^{2}\theta 2\sec ^{2}\theta d\theta }{\left( 4\sec ^{2}\theta \right) ^{2}}=\int\frac{8\tan ^{2}\theta \sec ^{2}\theta d\theta }{16\sec ^{4}\theta }=\frac{1}{2}\int \frac{\tan ^{2}\theta d\theta }{\sec ^{2}\theta }\\
-    &=\frac{1}{2}\int\sen ^{2}\theta d\theta=\frac{1}{2}\int \left( \frac{1}{2}-\frac{1}{2}\cos2\theta \right) d\theta
+    \int \frac{x^{2}}{\left( x^{2}+1\right) ^{2}}dx&=\int \frac{4\tan ^{2}\theta 2\sec ^{2}\theta\,d\theta }{\left( 4\sec ^{2}\theta \right) ^{2}}=\int\frac{8\tan ^{2}\theta \sec ^{2}\theta\,d\theta }{16\sec ^{4}\theta }=\frac{1}{2}\int \frac{\tan ^{2}\theta\,d\theta }{\sec ^{2}\theta }\\
+    &=\frac{1}{2}\int\sen ^{2}\theta\,d\theta=\frac{1}{2}\int \left( \frac{1}{2}-\frac{1}{2}\cos2\theta \right) d\theta
     =\frac{1}{2}\left( \frac{1}{2}\theta -\frac{1}{4}\sen 2\theta \right)\\
     &=\frac{1}{2}\left( \frac{1}{2}\theta -\frac{1}{4}2\sen \theta \cos \theta
     \right) =\frac{1}{4}\left( \theta -\sen \theta \cos \theta \right)\\
@@ -595,7 +594,7 @@ Con el siguiente ejemplo usamos integración numérica para responder a un inter
       &\quad\left.+2(11.9)+2(12.3)+2(12.7)+(13)%
     \right] \\
     &=75\left( 6+16.4+18.2+19.8+21+22+23+23.8+24.6+25.4+13\right) \\
-    &=75\left( 213.2\right) =15990
+    &=75\left( 213.2\right) =15\,990
   \end{aligned}
 \end{gather*}
 
@@ -730,21 +729,16 @@ satisface
   \begin{gather*}
     \begin{aligned}
       &\int_{0}^{3}\frac{1}{1+x^{4}}dx\approx S_{6}
-      %\\&
       =\frac{1/2}{3}\Big[ f(0)+4f\left(\frac{1}{2}\right)+2f(1)+4f\left(\frac{3}{2}\right)+2f(2)+4f\left(\frac{5}{2}\right)
-        %\\&\quad
       +f(3)\Big]\\
       &=\frac{1}{6}\left[ \frac{1}{1+0^{4}}+4\frac{1}{1+(%
         \frac{1}{2})^{4}}+2\frac{1}{1+1^{4}}+4\frac{1}{1+(\frac{3}{2})^{4}}+2\frac{1%
         }{1+2^{4}}
-        %\right.\\&\quad\left.
       +4\frac{1}{1+(\frac{5}{2})^{4}}+\frac{1}{1+3^{4}}\right]\\
       &=(0.1666)\left[ 1+4(0.94118)+2(0.5)+4(0.164
         95)+2(0.05882)
-        %\right.\\&\quad\left.
-      +4(0.02496)+0.01219\ \right]\\
-      &=(0.1666)(6.6542) \approx\allowbreak
-      1.106
+      +4(0.02496)+0.01219\right]\\
+      &=(0.1666)(6.6542) \approx 1.106
     \end{aligned}
   \end{gather*}
 
@@ -772,78 +766,78 @@ satisface
 
 \group
 
-Decida si la integral es convergente o divergente. En caso de ser convergente, calcule la integral impropia dada.
+Decida si la integral es convergente o divergente. En caso de ser convergente, calcule la integral impropia dada:
 
 \begin{multicols}{3}
-  \exercise{$\int_{1}^{\infty }\frac{1}{x^{0.99}}dx$.} {La integral diverge.}
+  \exercise{$\int_{1}^{\infty }\frac{1}{x^{0.99}}dx$} {La integral diverge}
 
-  \exercise{$\int_{1}^{\infty }e^{-4x}dx$.} {Converge a $\frac{1}{4e^{4}}$.}
+  \exercise{$\int_{1}^{\infty }e^{-4x}dx$} {Converge a $\frac{1}{4e^{4}}$}
 
-  \exercise{$\int_{-\infty }^{3}e^{2x}dx$.} {Converge a $\frac{1}{2}e^{6}$}
+  \exercise{$\int_{-\infty }^{3}e^{2x}dx$} {Converge a $\frac{1}{2}e^{6}$}
 
-  \exercise{$\int_{-\infty }^{\infty }e^{-x}dx$.} {La integral diverge.}
+  \exercise{$\int_{-\infty }^{\infty }e^{-x}dx$} {La integral diverge}
 
-  \exercise{$\int_{e}^{\infty }\frac{1}{x\left( \ln x\right) ^{3}}dx$.} {Converge a $\frac{1}{2}$}
+  \exercise{$\int_{e}^{\infty }\frac{1}{x\left( \ln x\right) ^{3}}dx$} {Converge a $\frac{1}{2}$}
 
-  \exercise{$\int_{0}^{\infty }e^{-x}\sin xdx$.} {Converge a $\frac{1}{2}$}
+  \exercise{$\int_{0}^{\infty }e^{-x}\sin x\,dx$} {Converge a $\frac{1}{2}$}
 
-  \exercise{$\int_{0}^{2}\frac{1}{\sqrt[3]{x-1}}dx$.} {Converge a $0$}
+  \exercise{$\int_{0}^{2}\frac{1}{\sqrt[3]{x-1}}dx$} {Converge a $0$}
 
-  \exercise{$\int_{0}^{\frac{\pi }{4}}\frac{\sec ^{2}\theta d\theta }{\sqrt{\tan\theta }}$.} {Converge a $2$}
+  \exercise{$\int_{0}^{\frac{\pi }{4}}\frac{\sec ^{2}\theta\,d\theta }{\sqrt{\tan\theta }}$} {Converge a $2$}
 
-  \exercise{$ \int_{2}^{\infty }\frac{1}{\left( x+1\right) \left( x+2\right) }dx$.} {Converge a $\ln \frac{4}{3}$}
+  \exercise{$ \int_{2}^{\infty }\frac{1}{\left( x+1\right) \left( x+2\right) }dx$} {Converge a $\ln \frac{4}{3}$}
 
-  \exercise{$\int_{1}^{\infty }\frac{1}{x}dx$.} {Diverge.}
+  \exercise{$\int_{1}^{\infty }\frac{1}{x}dx$} {La integral diverge}
 
-  \exercise{$\int_{2}^{\infty }\frac{2}{\left( x+1\right) ^{2}}dx$.} {Converge a $\frac{2}{3}$.}
+  \exercise{$\int_{2}^{\infty }\frac{2}{\left( x+1\right) ^{2}}dx$} {Converge a $\frac{2}{3}$}
 
-  \exercise{$\int_{1}^{\infty }\frac{8}{x^{3}+x}dx$.} {Converge a $4\ln 2$.}
+  \exercise{$\int_{1}^{\infty }\frac{8}{x^{3}+x}dx$} {Converge a $4\ln 2$}
 
-  \exercise{$\int_{2}^{\infty }\frac{x}{x^{4}-1}dx$.} {Converge a $\frac{1}{4}\ln \frac{5}{3}$.}
+  \exercise{$\int_{2}^{\infty }\frac{x}{x^{4}-1}dx$} {Converge a $\frac{1}{4}\ln \frac{5}{3}$}
 
-  \exercise{$\int_{3}^{\infty }\frac{x}{x^{4}+3x^{2}-4}dx$.} {Converge a $\frac{1}{10}\ln \frac{13}{8}$.}
+  \exercise{$\int_{3}^{\infty }\frac{x}{x^{4}+3x^{2}-4}dx$} {Converge a $\frac{1}{10}\ln \frac{13}{8}$}
 
-  \exercise{$\int_{1}^{\infty }\frac{dx}{e^{x+2}+e^{4-x}}$.} {Converge a $\frac{\pi }{4e^{3}}$.}
+  \exercise{$\int_{1}^{\infty }\frac{dx}{e^{x+2}+e^{4-x}}$} {Converge a $\frac{\pi }{4e^{3}}$}
 
-  \exercise{$\int_{2}^{\infty }\frac{x^{2}}{\left( x^{2}+4\right) ^{2}}dx$.} {Converge a $\frac{1}{16}\pi +\frac{1}{8}$.}
+  \exercise{$\int_{2}^{\infty }\frac{x^{2}}{\left( x^{2}+4\right) ^{2}}dx$} {Converge a $\frac{1}{16}\pi +\frac{1}{8}$}
 
-  \exercise{$\int_{1}^{\infty }\frac{4}{x\left( x+1\right) ^{2}}dx$.} {Converge a $4\ln 2 -2$.}
+  \exercise{$\int_{1}^{\infty }\frac{4}{x\left( x+1\right) ^{2}}dx$} {Converge a $4\ln 2 -2$}
 
-  \exercise{$\int_{3}^{\infty }\frac{x}{\left( x-1\right) ^{2}\left( x+1\right) }dx$.} {Converge a $\frac{1}{4}\ln 2+\frac{1}{4}$.}
+  \exercise{$\int_{3}^{\infty }\frac{x}{\left( x-1\right) ^{2}\left( x+1\right) }dx$} {Converge a $\frac{1}{4}\ln 2+\frac{1}{4}$}
 
-  \exercise{$\int_{2}^{\infty }\frac{1}{x^{2}-1}dx$.} {Converge a $\frac{1}{2}\ln 3$.}
+  \exercise{$\int_{2}^{\infty }\frac{1}{x^{2}-1}dx$} {Converge a $\frac{1}{2}\ln 3$}
 
-  \exercise{$\int_{2}^{\infty }\frac{dx}{x\left( x-1\right) \left( x+1\right) }$.} {Converge a $\frac{1}{2}\ln \frac{4}{3}$.}
+  \exercise{$\int_{2}^{\infty }\frac{dx}{x\left( x-1\right) \left( x+1\right) }$} {Converge a $\frac{1}{2}\ln \frac{4}{3}$}
 
-  \exercise{$\int_{2}^{\infty }\frac{10}{\left( x+2\right) \left( x+3\right)}dx $.} {Converge a $10\ln 5-20\ln 2 $.}
+  \exercise{$\int_{2}^{\infty }\frac{10}{\left( x+2\right) \left( x+3\right)}dx $} {Converge a $10\ln 5-20\ln 2 $}
 
-  \exercise{$\int_{1}^{\infty }\frac{10}{x^{3}+4x}dx$.} {Converge a $\frac{5}{4}\ln 5 $.}
+  \exercise{$\int_{1}^{\infty }\frac{10}{x^{3}+4x}dx$} {Converge a $\frac{5}{4}\ln 5 $}
 
-  \exercise{$\int_{-\infty }^{\infty }\frac{3x^{2}dx}{x^{6}+1}$.} {Converge a $\pi$.}
+  \exercise{$\int_{-\infty }^{\infty }\frac{3x^{2}dx}{x^{6}+1}$} {Converge a $\pi$}
 
-  \exercise{$\int_{-2}^{3}\frac{1}{x^{3}}dx$.} {La integral diverge.}
+  \exercise{$\int_{-2}^{3}\frac{1}{x^{3}}dx$} {La integral diverge}
 
-  \exercise{$\int_{-1}^{8}\frac{1}{\sqrt[3]{x}}dx$.} {Converge a $\frac{9}{2}$.}
+  \exercise{$\int_{-1}^{8}\frac{1}{\sqrt[3]{x}}dx$} {Converge a $\frac{9}{2}$}
 
-  \exercise{$\int_{0}^{1}x\ln xdx$.} {Converge a $-\frac{1}{4}$.}
+  \exercise{$\int_{0}^{1}x\ln x\,dx$} {Converge a $-\frac{1}{4}$}
 
-  \exercise{$\int_{0}^{\infty }\frac{1}{\left( 1+x\right) \sqrt{x}}dx$.} {Converge a $\pi$.}
+  \exercise{$\int_{0}^{\infty }\frac{1}{\left( 1+x\right) \sqrt{x}}dx$} {Converge a $\pi$}
 
-  \exercise{$\int_{0}^{e}\ln ^{2}zdz$.} {Converge a $e$.}
+  \exercise{$\int_{0}^{e}\ln ^{2}z\,dz$} {Converge a $e$}
 \end{multicols}
 
-\exercise{Aproxime las siguientes integrales usando el método del punto medio, la regla del trapecio y método de Simpson, con el valor de $n$ indicado.}
+\exercise{\textls[-10]{Aproxime las siguientes integrales usando el método del punto medio, la regla del trapecio y el método de Simpson, con el valor de $n$ indicado:}}
 %\begin{multicols}{2}
-\subexercise{$\int_{2}^{4}\frac{x}{\ln x}dx$  con $n=6$.}{$M_{6}=5.5483,\ T_{6}=5.5598,\ S_{6}=5.552\,5$}
+\subexercise{$\int_{2}^{4}\frac{x}{\ln x}dx$  con $n=6$}{$M_{6}=5.5483,\ T_{6}=5.5598,\ S_{6}=5.5525$}
 
-\subexercise{$\int_{0}^{1}\frac{e^{x}}{1+x^{2}}dx$ con $n=10$.}{$ M_{10}=1.2711,\ T_{10}=1.2699,\ S_{10}=1.2707$}
+\subexercise{$\int_{0}^{1}\frac{e^{x}}{1+x^{2}}dx$ con $n=10$}{$ M_{10}=1.2711,\ T_{10}=1.2699,\ S_{10}=1.2707$}
 
-\subexercise{$\int_{4}^{6}\ln \left( x^{3}+2\right) dx$ con $n=10$.}{$M_{10}=9.6509,\ T_{10}=9.6498,\ S_{10}=9.6505$}
+\subexercise{$\int_{4}^{6}\ln \left( x^{3}+2\right) dx$ con $n=10$}{$M_{10}=9.6509,\ T_{10}=9.6498,\ S_{10}=9.6505$}
 
-\subexercise{$\int_{2}^{10}\frac{x^{2}+10x}{\ln x}dx$ con $n=10$.}{$ M_{10}=443.59,\ T_{10}=444.66,\ S_{10}=444.01$}
+\subexercise{$\int_{2}^{10}\frac{x^{2}+10x}{\ln x}dx$ con $n=10$}{$ M_{10}=443.59,\ T_{10}=444.66,\ S_{10}=444.01$}
 
-\subexercise{$\int_{0}^{3}\sqrt{x^{6}+2}dx$ con $n=8$.}{$%
-M_{10}=21.706$, $T_{10}=22.180$, $S_{10}=21.863$.}
+\subexercise{$\int_{0}^{3}\sqrt{x^{6}+2}dx$ con $n=8$}{$%
+M_{10}=21.706$, $T_{10}=22.180$, $S_{10}=21.863$}
 %\end{multicols}
 
 \exercise{Dada la figura~\ref{fig:ejempintnum}, aproxime el área abajo de la región sombreada para $n=6$ utilizando:}
@@ -872,9 +866,9 @@ M_{10}=21.706$, $T_{10}=22.180$, $S_{10}=21.863$.}
   \end{center}
 }
 
-\subexercise{ Use la tabla para aproximar $\int_{0}^{5}f\left( x\right) dx$ usando el método del punto medio.}{$M_{5}=11.2$}
+\subexercise{Use la tabla para aproximar $\int_{0}^{5}f\left( x\right) dx$ usando el método del punto medio.}{$M_{5}=11.2$}
 
-\subexercise{Si $-3\leq f^{\prime \prime}\left( x\right) \leq 4$ para todo $x$. \ Estime el error en la aproximación de la parte a.}{Error $0.8333$ }
+\subexercise{Si $-3\leq f^{\prime \prime}\left( x\right) \leq 4$ para todo $x$, estime el error en la aproximación de la parte a).}{Error $0.8333$}
 
 \exercise{Utilice los datos de la función $f$ dados en la siguiente tabla:
   \begin{center}
@@ -888,7 +882,7 @@ M_{10}=21.706$, $T_{10}=22.180$, $S_{10}=21.863$.}
 
 \subexercise{Para aproximar $\int_{2}^{7}f\left( x\right) dx$ usando la regla del trapecio.}{$T_{10}=18.6$ }
 
-\subexercise{Si $-4\leq f^{\prime \prime}\left( x\right) \leq 6$ para todo $x\in \left[ 2,7\right]$. \ Estime el error en la aproximación de la parte a).}{Error $0.625$}
+\subexercise{Si $-4\leq f^{\prime \prime}\left( x\right) \leq 6$ para todo $x\in \left[ 2,7\right]$, estime el error en la aproximación de la parte a).}{Error $0.625$}
 
 \exercise{Utilice los datos de la función $f$ dados en la siguiente tabla:
 
@@ -901,15 +895,12 @@ M_{10}=21.706$, $T_{10}=22.180$, $S_{10}=21.863$.}
   \end{tabular}
 \end{center}}
 
-\subexercise{Para aproximar $\int_{4}^{10}f\left( x\right) dx$ usando la regla del
-trapecio.}{$S_{12}=26.7$}
+\subexercise{Para aproximar $\int_{4}^{10}f\left( x\right) dx$ usando la regla del trapecio.}{$S_{12}=26.7$}
 
-\subexercise{Si $-5\leq f^{\left( 4\right) }\left( x\right) \leq 10$ para todo $x\in %
-\left[ 4,10\right] $. \ Estime el error en la aproximación de la parte
-a).}{Error $0.00837$}
+\subexercise{Si $-5\leq f^{\left( 4\right) }\left( x\right) \leq 10$ para todo $x\in \left[ 4,10\right] $, estime el error en la aproximación de la parte a).}{Error $0.00837$}
 
 \exercise{}
 
-\subexercise{Halle $n$ para que $\int_{0}^{1}e^{\frac{1}{4}x^{2}}dx$ tenga magnitud de error menor que $10^{-3},$ usando la regla del trapecio y halle $T_{n}$.}{$n=10$\qquad $T_{10}=1.090\,5$.}
+\subexercise{Halle $n$ para que $\int_{0}^{1}e^{\frac{1}{4}x^{2}}dx$ tenga magnitud de error menor que $10^{-3},$ usando la regla del trapecio, y halle $T_{n}$.}{$n=10$\qquad $T_{10}=1.0905$}
 
-\subexercise{Halle $n$ para que $\int_{0}^{1}e^{\frac{1}{4}x^{2}}dx$ tenga magnitud de error menor que $10^{-4},$ usando el método de Simpson y halle $S_{n}$.}{$n=4$ \qquad $S_{4}=1.09$.}
+\subexercise{Halle $n$ para que $\int_{0}^{1}e^{\frac{1}{4}x^{2}}dx$ tenga magnitud de error menor que $10^{-4},$ usando el método de Simpson, y halle $S_{n}$.}{$n=4$ \qquad $S_{4}=1.09$}

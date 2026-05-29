@@ -12,7 +12,7 @@ Cuando se denota la derivada utilizando la notación de Leibniz, esto representa
 
 La diferencial representa la magnitud con que la recta tangente sube o baja cuando la variable independiente se desplaza una cantidad pequeña horizontalmente.
 
-\section{Integración trigonométrica y método de~sustitución}
+\section[Integración trigonométrica y método de sustitución]{Integración trigonométrica\\ y método de~sustitución}
 
 Para calcular una integral que tenga la forma $\int f(g(x))g'(x)\,dx$, es decir, una integral en la que se tenga una composición de dos funciones y la derivada de la función interna (salvo, quizás, constantes) multiplique a esa composición\footnote{El hecho de que se tenga $g'(x)$ no es completamente estricto. Puede tenerse una expresión muy similar a la derivada de $g$ de tal manera que la sustitución también funcione.}, puede hacerse la sustitución
 \[u=g(x), \qquad du=g'(x)\,dx\]
@@ -314,14 +314,14 @@ En la figura~\ref{fig:GrafArcsec} puede verse la región a la que se le mide el 
   =\frac{\pi }{2}-1=0.57
 \end{align*}
 
-\subsection{Integración de funciones pares e impares en un intervalo simétrico}
+\subsection[Integración de funciones pares e impares en un intervalo simétrico]{Integración de funciones pares e impares\\ en un intervalo simétrico}
 
 Si una función tiene algún tipo de simetría, su integral se puede simplificar. Si es par, simétrica respecto al eje $y$, entonces su integral en un intervalo $[-a,a]$ es el doble de la integral en el intervalo $[0,a]$, y si la función es impar, simétrica respecto al origen, su integral en el intervalo $[-a,a]$ es igual a $0$.
 
 \begin{teorema}\leavevmode\par
 \begin{parrafonumerado}[label={\alph*)}]
-\item Si $f$ es una función par y continua en el intervalo $\left[ -a,a\right]$, entonces ${\int_{-a}^{a}f\left( x\right)dx=2\int_{0}^{a}f\left( x\right)dx}$.
-\item Si $f$ es una función impar y continua en el intervalo $\left[ -a,a\right]$, entonces ${\int_{-a}^{a}f\left( x\right)\,dx=0}$.
+\item Si $f$ es una función par y continua en el intervalo $\left[ -a,a\right]$, entonces ${\int_{-a}^{a}f\left( x\right)dx=2\int_{0}^{a}f\left( x\right)dx}$.\label{par:1}
+\item Si $f$ es una función impar y continua en el intervalo $\left[ -a,a\right]$, entonces ${\int_{-a}^{a}f\left( x\right)\,dx=0}$.\label{par:2}
 \end{parrafonumerado}
 \end{teorema}
 
@@ -352,11 +352,11 @@ E intercambiando los límites de integración y usando la paridad de $f$,
 \end{align*}
 \end{parrafonumerado}
 
-En la figura~\ref{fig:TeoParImpar} se ilustran las partes a y b del teorema.
+En la figura~\ref{fig:TeoParImpar} se ilustran las partes \ref{par:1} y \ref{par:2} del teorema.
 
 \begin{figure}[H]
 \centering
-\caption{Partes a y b del teorema}\label{fig:TeoParImpar}
+\caption{Partes \ref{par:1} y \ref{par:2} del teorema}\label{fig:TeoParImpar}
 \begin{subfigure}{0.37\linewidth}
 \centering
 \includegraphics[width=\linewidth]{Gráficas/GrafPar.pdf}
@@ -540,7 +540,7 @@ En este caso,
 \begin{center}
 \begin{tabular}{lllll}
   $u=2\theta +1$ & $\Rightarrow$ & $\frac{du}{d\theta} =2$ & $\Rightarrow$ & $du=2d\theta$\\
-  $dv=\sec ^{2}\theta\,d\theta$ & $\Rightarrow$ & $v =\int \sec ^{2}\theta\,d\theta d\theta$ & $\Rightarrow$ & $v=\tan \theta$
+  $dv=\sec ^{2}\theta\,d\theta$ & $\Rightarrow$ & $v =\int \sec ^{2}\theta\,d\theta\,d\theta$ & $\Rightarrow$ & $v=\tan \theta$
 \end{tabular}
 \end{center}
 
@@ -582,17 +582,17 @@ Al aplicar partes varias veces en expresiones en donde $dv$ (o $v$) no cambia si
   \hhline{|-|-|-|~}
   \textbf{Funciones} & \bm{$x^{5}$} & \bm{$e^{2x}$} & \multicolumn{1}{c}{} \\
   \hline
-  derivada $\rightarrow$ & $5x^{4}$ & $\frac{1}{2}e^{2x}$ & $\leftarrow$ integral\\
+  Derivada $\rightarrow$ & $5x^{4}$ & $\frac{1}{2}e^{2x}$ & $\leftarrow$ Integral\\
   \hline
-  derivada $\rightarrow$ & $20x^{3}$ & $\frac{1}{4}e^{2x}$ & $\leftarrow$ integral\\
+  Derivada $\rightarrow$ & $20x^{3}$ & $\frac{1}{4}e^{2x}$ & $\leftarrow$ Integral\\
   \hline
-  derivada $\rightarrow$ & $60x^{2}$ & $\frac{1}{8}e^{2x}$ & $\leftarrow$ integral\\
+  Derivada $\rightarrow$ & $60x^{2}$ & $\frac{1}{8}e^{2x}$ & $\leftarrow$ Integral\\
   \hline
-  derivada $\rightarrow$ & $120x$ & $\frac{1}{16}e^{2x}$ & $\leftarrow$ integral\\
+  Derivada $\rightarrow$ & $120x$ & $\frac{1}{16}e^{2x}$ & $\leftarrow$ Integral\\
   \hline
-  derivada $\rightarrow$ & $120$ & $\frac{1}{32}e^{2x}$ & $\leftarrow$ integral\\
+  Derivada $\rightarrow$ & $120$ & $\frac{1}{32}e^{2x}$ & $\leftarrow$ Integral\\
   \hline
-  derivada $\rightarrow$ & $0$ & $\frac{1}{64}e^{2x}$ & $\leftarrow$ integral\\
+  Derivada $\rightarrow$ & $0$ & $\frac{1}{64}e^{2x}$ & $\leftarrow$ Integral\\
   \hline
 \end{tabular}
 \end{center}
@@ -701,18 +701,18 @@ Ahora bien, usando la tabla de integración por partes\footnote{Esta es otra man
 \begin{center}
 \renewcommand{\arraystretch}{1.5}
 \begin{tabular}{|c|c|c|c|c|}
-  \hhline{|~|~|~|-|-|}
+  \hhline{~~~|-|-|}
   \multicolumn{3}{c|}{} & \bm{$e^{y}$} & \textbf{Función} \\
   \hline
-  \text{función} & $y^{3}$ & $\xrightarrow{+}$ & $e^{y}$ & $\leftarrow$ integral\\
+  Función & $y^{3}$ & $\xrightarrow{+}$ & $e^{y}$ & $\leftarrow$ Integral\\
   \hline
-  derivada $\rightarrow$ & $3y^{2}$ & $\xrightarrow{-}$ & $e^{y}$ & $\leftarrow$ integral\\
+  Derivada $\rightarrow$ & $3y^{2}$ & $\xrightarrow{-}$ & $e^{y}$ & $\leftarrow$ Integral\\
   \hline
-  derivada $\rightarrow$ & $6y$ & $\xrightarrow{+}$ & $e^{y}$ & $\leftarrow$ integral\\
+  Derivada $\rightarrow$ & $6y$ & $\xrightarrow{+}$ & $e^{y}$ & $\leftarrow$ Integral\\
   \hline
-  derivada $\rightarrow$ & $6$ & $\xrightarrow{-}$ & $e^{y}$ & $\leftarrow$ integral\\
+  Derivada $\rightarrow$ & $6$ & $\xrightarrow{-}$ & $e^{y}$ & $\leftarrow$ Integral\\
   \hline
-  derivada $\rightarrow$ & $0$ & $\xrightarrow{+}$ & $e^{y}$ & $\leftarrow$ integral\\
+  Derivada $\rightarrow$ & $0$ & $\xrightarrow{+}$ & $e^{y}$ & $\leftarrow$ Integral\\
   \hline
 \end{tabular}
 \end{center}
@@ -738,11 +738,11 @@ $\int \sen^{-1} x\,dx$.
   \hline
   \textbf{Operación} & \textbf{Derivar (\boldmath{$y$})} & \textbf{Signo} & \textbf{Integrar (\boldmath{$\cos y$})} & \textbf{Función} \\
   \hline
-  \text{función} & $y$ & $\xrightarrow{+}$ & $\sen y$ & $\leftarrow$ integral \\
+  Función & $y$ & $\xrightarrow{+}$ & $\sen y$ & $\leftarrow$ Integral \\
   \hline
-  \text{derivada} $\rightarrow$ & $1$ & $\xrightarrow{-}$ & $-\cos y$ & $\leftarrow$ integral \\
+  Derivada $\rightarrow$ & $1$ & $\xrightarrow{-}$ & $-\cos y$ & $\leftarrow$ Integral \\
   \hline
-  \text{derivada} $\rightarrow$ & $0$ & $\xrightarrow{+}$ & $-\sen y$ & $\leftarrow$ integral \\
+  Derivada $\rightarrow$ & $0$ & $\xrightarrow{+}$ & $-\sen y$ & $\leftarrow$ Integral \\
   \hline
 \end{tabular}
 \end{center}
@@ -773,11 +773,11 @@ Por otro lado, la tabla de integración por partes se ve de la siguiente manera:
   \hline
   \textbf{Operación} & \textbf{Derivar (\boldmath{$y$})} & \textbf{Signo} & \textbf{Integrar (\boldmath{$\sec^{2} y$})} & \textbf{Función} \\
   \hline
-  función & $y$ & $\xrightarrow{+}$ & $\tan y$ & $\leftarrow$ integral \\
+  Función & $y$ & $\xrightarrow{+}$ & $\tan y$ & $\leftarrow$ Integral \\
   \hline
-  derivada $\rightarrow$ & $1$ & $\xrightarrow{-}$ & $\ln \left\vert \sec y \right\vert$ & $\leftarrow$ integral \\
+  Derivada $\rightarrow$ & $1$ & $\xrightarrow{-}$ & $\ln \left\vert \sec y \right\vert$ & $\leftarrow$ Integral \\
   \hline
-  derivada $\rightarrow$ & $0$ & $\xrightarrow{+}$ & & \\
+  Derivada $\rightarrow$ & $0$ & $\xrightarrow{+}$ & & \\
   \hline
 \end{tabular}
 \end{center}
@@ -794,7 +794,7 @@ y con ello,
 \enlargethispage*{\baselineskip}
 
 \begin{ejemplo}
-$\int (\sin^{-1} x )^2  dx $
+$\int (\sin^{-1} x )^2  dx $.
 \end{ejemplo}
 
 \emph{Solución.} Si $y=\sin^{-1} x$, entonces $\sin y= x$ y $\cos y\,dy= dx$; por tanto, $(\sin^{-1} x)^2dx=y^2\cos y\,dy$\; y la tabla es:
@@ -807,13 +807,13 @@ $\int (\sin^{-1} x )^2  dx $
   \hline
   \textbf{Operación} & \textbf{Derivar (\boldmath{$y^2$})} & \textbf{Signo} & \textbf{Integrar (\boldmath{$\cos y$})} & \textbf{Función} \\
   \hline
-  Función & $y^{2}$ & $\xrightarrow{+}$ & $\sen y$ & $\leftarrow$ integral \\
+  Función & $y^{2}$ & $\xrightarrow{+}$ & $\sen y$ & $\leftarrow$ Integral \\
   \hline
-  Derivada $\rightarrow$ & $2y$ & $\xrightarrow{-}$ & $-\cos y$ & $\leftarrow$ integral \\
+  Derivada $\rightarrow$ & $2y$ & $\xrightarrow{-}$ & $-\cos y$ & $\leftarrow$ Integral \\
   \hline
-  Derivada $\rightarrow$ & $2$ & $\xrightarrow{+}$ & $-\sen y$ & $\leftarrow$ integral \\
+  Derivada $\rightarrow$ & $2$ & $\xrightarrow{+}$ & $-\sen y$ & $\leftarrow$ Integral \\
   \hline
-  Derivada $\rightarrow$ & $0$ & $\xrightarrow{+}$ & $\cos y$ & $\leftarrow$ integral \\
+  Derivada $\rightarrow$ & $0$ & $\xrightarrow{+}$ & $\cos y$ & $\leftarrow$ Integral \\
   \hline
 \end{tabular}
 \end{center}
@@ -1175,7 +1175,7 @@ Calcule $\int_{0}^{\ln \sqrt{2}}\frac{e^{z}dz}{\left( 4-e^{2z}\right) ^{\frac{3}
 y también, al derivar $e^z=2\sen\theta$, se tiene $e^{z}dz=\cos \theta\,d\theta$. Por otro lado,
 \[
 \left( 1-e^{2z}\right)^{\frac{3}{2}}=\left( 1-(e^{z})^2\right)^{\frac{3}{2}}=\left( 1-\sen^{2}\theta \right) ^{\frac{3}{2}}=\left( \cos^{2}\theta \right) ^{\frac{3}{2}}=\cos ^{3}\theta \]
-Ahora bien, la integral que nos dieron es definida; entonces, al cambiar de variable los límites van a cambiar. Hagamos ese cambio de límites: si $z=0$, entonces en \eqref{theta}, $\theta =\sen^{-1} \left( \frac{1}{2}e^0\right)=\sen^{-1} \left( \frac{1}{2}\right)=\frac{\pi }{6}$, y si $z=\ln \sqrt{2}$, entonces $\theta=\sen^{-1} \left(\frac{1}{2}e^{\ln\sqrt{2}}\right) =\sen^{-1} \left(\frac{\sqrt{2}}{2}\right) =\frac{\pi }{4}$. Así,
+Ahora bien, la integral que nos dieron es definida; entonces, al cambiar de variable los límites van a cambiar. Hagamos ese cambio de límites: si $z=0$, entonces, en \eqref{theta}, $\theta =\sen^{-1} \left( \frac{1}{2}e^0\right)=\sen^{-1} \left( \frac{1}{2}\right)=\frac{\pi }{6}$, y si $z=\ln \sqrt{2}$, entonces $\theta=\sen^{-1} \left(\frac{1}{2}e^{\ln\sqrt{2}}\right) =\sen^{-1} \left(\frac{\sqrt{2}}{2}\right) =\frac{\pi }{4}$. Así,
 \begin{align*}
 \int_{0}^{\ln \sqrt{2}}\frac{e^{z}dz}{\left( 1-e^{2z}\right) ^{\frac{3}{2}}}&=\int_{\frac{\pi }{6}}^{\frac{\pi }{4}}\frac{\cos \theta\,d\theta }{\cos^{3}\theta }=\int_{\frac{\pi }{6}}^{\frac{\pi }{4}}\frac{d\theta }{\cos^{2}\theta } =\int_{\frac{\pi }{6}}^{\frac{\pi }{4}}\sec ^{2}\theta\,d\theta
 \\
@@ -1317,7 +1317,7 @@ función tangente tiene inversa en ese intervalo). Luego, $\beta dx=a\sec ^{2}(\
   \begin{gather*}
     \begin{aligned}
       \int& e^{t} \sqrt{e^{2t}-100}dt
-      =\int10\tan \theta10\sec\theta\tan\theta\,d\theta d\theta
+      =\int10\tan \theta10\sec\theta\tan\theta\,d\theta\,d\theta
       =100\int \tan^{2}\theta \sec \theta\,d\theta \\
       &=100\int (\sec^{2}\theta-1) \sec \theta\,d\theta
       =100\int (\sec^{3}\theta-\sec \theta) d\theta \\
@@ -1398,7 +1398,7 @@ con lo cual tenemos
 \]
 es decir, la fracción original se descompone en fracciones más simples. Veamos cómo se simplificaría la segunda fracción; mejor dicho, tomemos fracciones en las que el numerador tenga grado menor que el denominador. Para ello tenemos varios casos.
 
-\subsection{Caso I: en \texorpdfstring{\boldmath{$\frac{p(x)}{q(x)}$}}{p(x)/q(x)}, el grado de \texorpdfstring{\boldmath{$p$}}{p} es menor que el grado de \texorpdfstring{\boldmath{$q$}}{q} y además \texorpdfstring{\boldmath{$q$}}{q} se factoriza en factores lineales distintos}
+\subsection{Caso I: en \texorpdfstring{\boldmath{$\frac{p(x)}{q(x)}$}}{p(x)/q(x)}, el grado de \texorpdfstring{\boldmath{$p$}}{p} es menor que el grado de \texorpdfstring{\boldmath{$q$}}{q} y~además \texorpdfstring{\boldmath{$q$}}{q} se factoriza en factores lineales distintos}
 
 Supongamos, entonces, que $q(x)=(a_1x+b_1)(a_2x+b_2)\cdots(a_nx+b_n)$ con factores (lineales) diferentes y $a_1,\ a_2,\ \ldots,\ a_n$ diferentes de cero. Entonces $\frac{p(x)}{q(x)}$ se descompone en fracciones parciales de la forma
 \begin{align}\label{FraccLinDif}
@@ -1458,7 +1458,7 @@ Si $x=1$,
   (-2)A+(0)B+(0)C&=1 \\
   A&=-\frac{1}{2}
 \end{align*}
-Entonces \eqref{EjemFraccDesc} se convierte en
+Entonces, \eqref{EjemFraccDesc} se convierte en
 \[
   \frac{x^{2}}{(x-1)(x+1)(x-2)}=\frac{-1/2}{x-1}+\frac{1/6}{x+1}+\frac{4/3}{x-2}
 \]
@@ -1477,7 +1477,7 @@ se puede abreviar, como veremos en el siguiente ejemplo:
 
 \begin{ejemplo}
   Calcule $\int_{0}^{1}\frac{2x^{2}+10x+14}{\left( x+1\right) \left(
-  x+2\right) \left( x+3\right) \left( x+4\right) }dx$
+  x+2\right) \left( x+3\right) \left( x+4\right) }dx$.
 \end{ejemplo}
 \emph{Solución.} Planteamiento de las fracciones parciales:
 \begin{equation}\label{ejerfracpar2caso1}
@@ -1485,7 +1485,7 @@ se puede abreviar, como veremos en el siguiente ejemplo:
     \frac{A}{x+1}+\frac{B}{x+2}+\frac{C}{x+3}+\frac{D}{x+4}=\frac{2x^{2}+10x+14}{\left( x+1\right) \left( x+2\right) \left( x+3\right) \left(x+4\right)}
   $}
 \end{equation}
-Multiplicamos \ref{ejerfracpar2caso1} por $x+1$ y luego reemplazamos $x$ por $-1$:
+Multiplicamos (\ref{ejerfracpar2caso1}) por $x+1$ y luego reemplazamos $x$ por $-1$:
 \begin{gather*}
   \left( A+\frac{B\left( x+1\right) }{x+2}+\frac{C\left( x+1\right) }{x+3}+%
     \frac{D\left( x+1\right) }{x+4}=\frac{2x^{2}+10x+14}{\left( x+2\right)
@@ -1493,7 +1493,7 @@ Multiplicamos \ref{ejerfracpar2caso1} por $x+1$ y luego reemplazamos $x$ por $-1
 \end{gather*}
 entonces obtenemos
 $$A=\frac{6}{6}=1$$
-Multiplicamos \ref{ejerfracpar2caso1} por $x+2$ y luego reemplazamos $x$ por $-2$%
+Multiplicamos (\ref{ejerfracpar2caso1}) por $x+2$ y luego reemplazamos $x$ por $-2$%
 ; en la parte izquierda solo quedará $B$:
 \[
   B=\left. \frac{2x^{2}+10x+14}{\left( x+1\right) \left( x+3\right) \left(
@@ -1501,14 +1501,14 @@ Multiplicamos \ref{ejerfracpar2caso1} por $x+2$ y luego reemplazamos $x$ por $-2
 \]
 entonces obtenemos \[B=\frac{2}{-2}=-1\]
 
-Multiplicamos \ref{ejerfracpar2caso1} por $x+3$ y luego reemplazamos $x$ por $-3$%
+Multiplicamos (\ref{ejerfracpar2caso1}) por $x+3$ y luego reemplazamos $x$ por $-3$%
 ; en la parte izquierda solo quedará $C$:
 \[
   C=\left. \frac{2x^{2}+10x+14}{\left( x+1\right) \left( x+2\right) \left(
   x+4\right) }\right\vert _{x=-3}$$ entonces obtenemos $$C=\frac{2}{2}=1
 \]
 
-Multiplicamos \ref{ejerfracpar2caso1} por $x+4$ y luego reemplazamos $x$ por $-4$%
+Multiplicamos (\ref{ejerfracpar2caso1}) por $x+4$ y luego reemplazamos $x$ por $-4$%
 ; en la parte izquierda solo quedará $D$:
 \[
   D=\left. \frac{2x^{2}+10x+14}{\left( x+1\right) \left( x+2\right) \left(
@@ -1528,7 +1528,7 @@ Así, la integral queda
   \end{aligned}
 \end{gather*}
 
-\subsection{Caso II: el denominador en \texorpdfstring{\protect\boldmath{$\frac{p(x)}{q(x)}$}}{p(x)/q(x)} se descompone en factores lineales, pero algunos se repiten}\label{repetidos}
+\subsection{Caso II: el denominador en \texorpdfstring{\protect\boldmath{$\frac{p(x)}{q(x)}$}}{p(x)/q(x)} se descompone en~factores lineales, pero algunos se repiten}\label{repetidos}
 
 Supongamos que la factorización de $q$ tiene el factor $(ax+b)^n$, es decir, el término $ax+b$ se repite $n$ veces y $a\ne0$. Entonces, por cada factor de esa forma, la descomposición es
 \[
@@ -1595,7 +1595,7 @@ Entonces tenemos que
   &=\ln |x-2|-\frac{6}{x-2}-\frac{6}{(x-2)^{2}}-\frac{8}{3(x-2)^{3}}+C
 \end{align*}
 
-\subsection{Caso III: la factorización del denominador en \texorpdfstring{\boldmath{$\frac{p(x)}{q(x)}$}}{p(x)/q(x)} tiene factores cuadráticos irreducibles}
+\subsection{Caso III: la factorización del denominador en \texorpdfstring{\boldmath{$\frac{p(x)}{q(x)}$}}{p(x)/q(x)} tiene~factores cuadráticos irreducibles}
 
 Recordemos que un término cuadrático $ax^{2}+bx+c$ es irreducible si no se puede factorizar en términos lineales con coeficientes reales, o también si sus raíces son imaginarias (es decir, si $b^2-4ac<0$). Por ejemplo, $x^{2}+4$, $x^{2}+4x+5$, $2x^2+3x+2$, entre otros.
 
@@ -1671,7 +1671,8 @@ Por tanto,
   \end{aligned}
 \end{gather*}
 
-\section{Fracciones parciales con una sustitución previa}
+\section[Fracciones parciales con una sustitución previa]{Fracciones parciales\\ con una sustitución previa}
+
 En esta sección se muestran algunos ejemplos en los cuales las fracciones parciales se aplican después de haber modificado o reescrito el integrando.
 
 \begin{ejemplo}
@@ -1792,7 +1793,7 @@ Por tanto, la integral completa es
   \left\vert \sqrt[4]{x}-1\right\vert +C
 \]
 
-\section{Integración de funciones racionales seno~y~coseno}
+\section{Integración de funciones racionales~seno~y~coseno}
 
 Las expresiones de la forma {\small $\int \frac{P(\sen x,\cos x)dx}{Q(\sen x,\cos x)}$} donde $P$ y $Q$ son polinomios se llaman una \emph{función racional de seno y coseno}.
 
@@ -2011,7 +2012,7 @@ es decir,
 \end{ejemplo}
 \emph{Solución.} Usamos nuevamente la sustitución de Weierstrass:
 \begin{gather*}
-  u=\tan \left( \frac{x}{2}\right)\ -\pi<x<\pi,\ dx=\frac{2du}{1+u^{2}},\ \sen x=\frac{2u}{1+u^{2}}\text{ y }\cos x=\frac{1-u^{2}}{1+u^{2}},
+  u=\tan \left( \frac{x}{2}\right)\ -\pi<x<\pi,\ dx=\frac{2du}{1+u^{2}},\ \sen x=\frac{2u}{1+u^{2}}\text{ y }\cos x=\frac{1-u^{2}}{1+u^{2}}
 \end{gather*}
 y tenemos
 \begin{align*}
@@ -2043,10 +2044,10 @@ Si $u=-\frac{1}{3}\rightarrow -\frac{1}{3}B=1\rightarrow B=-3.$
 
 \group
 
-\textls[-10]{Calcular cada una de las siguientes integrales. Use una sustitución adecuada.}
+\textls[-10]{Calcule cada una de las siguientes integrales. Use una sustitución adecuada:}
 
 \begin{multicols}{2}
-  \exercise{$\int_{0}^{2}\left( 4y+1\right) ^{100}dy$}{ $\frac{9^{101}-1}{404}.$}
+  \exercise{$\int_{0}^{2}\left( 4y+1\right) ^{100}dy$}{ $\frac{9^{101}-1}{404}$} 
 
   \exercise{$\int_{2}^{5}t(t^{2}+1)^{10}dt$}{$\frac{26^{11}-5^{11}}{22}$}
 
@@ -2068,37 +2069,39 @@ Si $u=-\frac{1}{3}\rightarrow -\frac{1}{3}B=1\rightarrow B=-3.$
 
   \exercise{$\int \frac{\sin t}{\sqrt{4+5\cos t}}dt$}{$ -\frac{2}{5}\sqrt{4+5\cos t}+C$}
 
-  \exercise{$\int \sin ^{5}ydy$}{$\frac{-15\sin y+10\sin ^{3}y-3\sin^{5}y}{15}+C$}
+  \exercise{$\int \sin ^{5}y\,dy$}{$\frac{-15\cos y+10\cos^{3}y-3\cos^{5}y}{15}+C$}
 
-  \exercise{$\int_{0}^{\frac{\pi }{2}}\cos ^{7}zdz$}{$\frac{16}{35}$}
+  \exercise{$\int_{0}^{\frac{\pi }{2}}\cos ^{7}z\,dz$}{$\frac{16}{35}$}
 
-  \exercise{$\int_{0}^{\frac{\pi }{4}}\tan ^{8}\theta d\theta$}{$\frac{1}{4}\pi -\frac{76}{105}$}
+  \exercise{$\int_{0}^{\frac{\pi }{4}}\tan ^{8}\theta\,d\theta$}{$\frac{1}{4}\pi -\frac{76}{105}$}
 
-  \exercise{$\int \cot ^{10}\theta d\theta$}{$-\frac{1}{9}\cot ^{9}\theta$  $+\frac{1}{7}\cot ^{7}\theta -\frac{1}{5}\cot ^{5}\theta +\frac{1}{3}\cot^{3}\theta -\cot \theta -\theta +C$}
+  \exercise{$\int \cot ^{10}\theta\,d\theta$}{$-\frac{1}{9}\cot ^{9}\theta$  $+\frac{1}{7}\cot ^{7}\theta -\frac{1}{5}\cot ^{5}\theta +\frac{1}{3}\cot^{3}\theta -\cot \theta -\theta +C$}
 
-  \exercise{$\int \sec ^{6}tdt$}{$\tan t+\frac{2\tan ^{3}t}{3}+\frac{\tan  ^{5}t}{5}+C$}
+  \columnbreak
+
+  \exercise{$\int \sec ^{6}t\,dt$}{$\tan t+\frac{2\tan ^{3}t}{3}+\frac{\tan  ^{5}t}{5}+C$}
 
   \exercise{$\int \csc ^{4}x\,dx$}{$-\cot \left( x\right) -\frac{\cot  ^{3}\left( x\right) }{3}+C$}
 
-  \exercise{$\int \cos ^{6}(2y)dy$}{$\frac{5y}{16}+\frac{\sin \left(  2y\right) }{4}+\frac{3\sin \left( 4y\right) }{64}-\frac{\sin ^{3}\left(2y\right) }{48}+C$}
+  \exercise{$\int \cos ^{6}(2y)dy$}{$\frac{1}{12}\cos^{5}(2y)\sin(2y)-\frac{5}{48}\cos^{3}(2y)\sin(2y)-\frac{5}{32}\cos(2y)\sin(2y)+\frac{5}{16}y+C$}
 
-  \exercise{$\int \sin ^{6}(z)dz$}{$\frac{1}{8}\left( -\frac{3}{2}\sin\left( 2z\right) +\frac{5}{2}z+\frac{3\sin \left( 4z\right) }{8}-1-\frac{2\sin ^{3}\left( 2z\right) }{3}\right) +C$}
+  \exercise{$\int \sin ^{6}(z)dz$}{$-\frac{1}{6}\sin^{5}z\cos z-\frac{5}{24}\sin^{3}z\cos z-\frac{5}{16}\sin z\cos z+\frac{5}{16}z+C$}
 
-  \exercise{$\int \tan ^{5}y\sec ^{4}ydy$}{$\frac{\tan ^{6}\left( y\right)}{6}+\frac{\tan ^{7}\left( y\right) }{7}+C$}
+  \exercise{$\int \tan ^{5}y\sec ^{4}y\,dy$}{$\frac{\tan ^{6}\left( y\right)}{6}+\frac{\tan ^{7}\left( y\right) }{7}+C$}
 
-  \exercise{$\int \tan ^{7}\left( 7y\right) dy$}{$ \frac{7^{5}y^{6}}{6}-\frac{7^{3}y^{4}}{4}+\frac{7y^{2}}{2}+\ln \left\vert \cos \left( 7y\right)\right\vert +C$}
+  \exercise{$\int \tan ^{7}\left( 7y\right) dy$}{$\frac{1}{7}\left(\frac{(\tan(7y))^{6}}{6}-\frac{(\tan(7y))^{4}}{4}+\frac{(\tan(7y))^{2}}{2}-\ln | \sec(7y) | \right) +C$}
 
   \exercise{$\int \cot ^{5}x\,dx$}{$-\frac{1}{4}\cot ^{4}x+\frac{1}{2}\cot^{2}x+\ln \left\vert \sin x\right\vert +C$}
 
   \exercise{$\int \sin ^{4}x\cos ^{5}x\,dx$}{$\frac{\sin ^{5}\left( x\right)}{5}-\frac{2\sin ^{7}\left( x\right) }{7}+\frac{\sin ^{9}\left( x\right) }{9}+C$}
 
-  \exercise{$\int \cot ^{3}y\csc ^{4}ydy$}{$\frac{1}{2}\cot ^{2}y-\frac{1}{5}\cot ^{5}y+C$}
+  \exercise{$\int \cot ^{3}y\csc ^{4}y\,dy$}{$-\left(\frac{\cot^6(y)}{6}+\frac{\cot^4(y)}{4}\right) +C$}
 
   \exercise{$\int_{\frac{1}{2}}^{1}\frac{1}{x^{2}}\sqrt{1+\frac{1}{x}}dx$}{$2\sqrt{3}-\frac{4}{3}\sqrt{2}$}
 
   \exercise{$\int_{\frac{\pi ^{2}}{16}}^{\frac{\pi ^{2}}{4}}\frac{\sin (\sqrt{y})}{\sqrt{y}}dy$}{$\sqrt{2}$}
 
-  \exercise{$\int \frac{x\,dx}{\sqrt[3]{x}+\sqrt{x}}$}{$6\sqrt[6]{x}-6\ln \left( \sqrt[6]{x}+1\right) -3\sqrt[3]{x}+2\sqrt{x}-\frac{3}{2}\sqrt[3]{x}^{2}+\frac{6}{5}\sqrt[6]{x}^{5}-x+\frac{6}{7}\sqrt[6]{x}^{7}-\frac{3}{4}\sqrt[3]{x}^{4}+\frac{2}{3}\sqrt[2]{x}^{3}+C$}
+  \exercise{$\int \frac{x\,dx}{\sqrt[3]{x}+\sqrt{x}}$}{$-\frac{2\sqrt{x}}{3}-\frac{2\sqrt[3]{x}}{3}-\frac{8}{9}\sqrt[6]{x}-\frac{16}{27}\ln|-3\sqrt[6]{x}+2|+C$}
 
   \exercise{$\int \frac{dx}{2\sqrt[3]{x}-3\sqrt{x}}$}{$
     -\frac{8}{9}\sqrt[6]{x}-\frac{2}{3}\sqrt[3]{x}-\frac{2}{3}\sqrt{x}-\frac{16}{27}\ln
@@ -2106,7 +2109,7 @@ Si $u=-\frac{1}{3}\rightarrow -\frac{1}{3}B=1\rightarrow B=-3.$
 
 \end{multicols}
 
-Encuentre el valor de cada una de las siguientes integrales.
+Encuentre el valor de cada una de las siguientes integrales:
 
 \begin{multicols}{2}
   \exercise{${\int \frac{\tan ^{-1}(x)}{1+x^{2}}dx}$}{$\frac{1}{2}\arctan ^{2}x+C$}
@@ -2119,12 +2122,11 @@ Encuentre el valor de cada una de las siguientes integrales.
 
   \exercise{${\int \frac{dx}{x(\ln x)^{4}}}$}{$-\frac{1}{3\ln ^{3}x}$}
 
-  \exercise{${\int \frac{x+1}{2x+x^{2}}dx}$}{$\frac{1}{2}\ln \left( x^{2}+2x\right) $}
+  \exercise{${\int \frac{x+1}{2x+x^{2}}dx}$}{$\frac12\ln|2x+x^2|+C$}
 
-  \exercise{${\int \frac{1+x}{1+x^{2}}\,dx}$}{$\frac{1}{2}\ln \left( x^{2}+1\right) +\arctan x $}
+  \exercise{${\int \frac{1+x}{1+x^{2}}\,dx}$}{$\frac{1}{2}\ln \left( x^{2}+1\right) +\arctan x + C$}
 
-  \exercise{${\int \frac{x^{2}+1}{x^{3}+3x+1}\, dx}$}{$\frac{1}{3}\ln \left( x^{3}+3x+1\right)
-  $}
+  \exercise{${\int \frac{x^{2}+1}{x^{3}+3x+1}\, dx}$}{$\frac{1}{3}\ln | x^{3}+3x+1 | +C$}
 
   \exercise{${\int_{0}^{1}t^{2}\left( 2^{-t^{3}}\right) dt}$}{$\frac{1}{6\ln 2}$}
 
@@ -2132,166 +2134,151 @@ Encuentre el valor de cada una de las siguientes integrales.
 
   \exercise{${\int_{e}^{e^{4}}\frac{1}{x\sqrt{\ln x}}\, dx}$}{$2$}
 
-  \exercise{${\int xe^{2x}\, dx}$}{$\frac{1}{4}e^{2x}\left( 2x-1\right) $}
+  \exercise{${\int xe^{2x}\, dx}$}{$\frac{1}{4}e^{2x}\left( 2x-1\right) +C$}
 
-  \exercise{${\int x\cos x\, dx}$}{$\cos x+x\sen x$}
+  \exercise{${\int x\cos x\, dx}$}{$\cos x+x\sen x+C$}
 
   \exercise{${\int_{0}^{\frac{\pi }{2}}x\cos (2x)\, dx}$}{$-\frac{1}{2}$}
 
-  \exercise{${\int x^{2}e^{-x}\, dx}$}{$-e^{-x}\left( x^{2}+2x+2\right) $}
+  \exercise{${\int x^{2}e^{-x}\, dx}$}{$-e^{-x}\left( x^{2}+2x+2\right) +C$}
 
-  \exercise{${\int xe^{2x}\, dx}$}{$\frac{1}{4}e^{2x}\left( 2x-1\right) $}
+  \exercise{${\int x\ln x\, dx}$}{$\frac{1}{2}x^{2}\ln x-\frac{1}{4}x^{2}+C$}
 
-  \exercise{${\int x\ln x\, dx}$}{$\frac{1}{2}x^{2}\ln x-\frac{1}{4}x^{2}$}
+  \exercise{${\int \cos x\ln (\sen x)\, dx}$}{$\left( \sen x\right) \left( \ln \left( \sen x\right)-1\right) +C$}
 
-  \exercise{${\int \cos x\ln (\sen x)\, dx}$}{$\left( \sen x\right) \left( \ln \left( \sen x\right)-1\right) $}
-
-  \exercise{${\int \cos \left( \sqrt[3]{x}\right) \, dx}$}{$\allowbreak 3\sqrt[3]{x}^{2}\sen
+  \exercise{${\int \cos \left( \sqrt[3]{x}\right) \, dx}$}{$3\sqrt[3]{x}^{2}\sen
   \sqrt[3]{x}-6\sen \sqrt[3]{x}+6\sqrt[3]{x}\cos \sqrt[3]{x}+C$}
 
   \exercise{${\int x\left( 5^{x}\right) \, dx}$}{$-\frac{1}{\ln ^{2}5}\left( 5^{x}-5^{x}x\ln 5\right) $}
 
   \exercise{${\int_{0}^{1}e^{\sqrt{x}}\, dx}$}{$2$}
 
-  \exercise{${\int e^{\sqrt[3]{x}}\, dx}$}{$3e^{\sqrt[3]{x}}\left( \sqrt[3]{x}^{2}-2\sqrt[3]{x}+2\right) $}
+  \exercise{${\int e^{\sqrt[3]{x}}\, dx}$}{$3e^{\sqrt[3]{x}}\left( \sqrt[3]{x}^{2}-2\sqrt[3]{x}+2\right)+C $}
 
-  \exercise{${\int \sen (\ln x)\, dx}$}{$\frac{1}{2}x\left( \sen \left( \ln x\right) -\cos\left( \ln x\right) \right) $}
+  \exercise{${\int \sen (\ln x)\, dx}$}{$\frac{1}{2}x\left( \sen \left( \ln x\right) -\cos\left( \ln x\right) \right) +C$}
 
   \exercise{${\int x\sen (\sqrt{x})\, dx}$}{ $6x\sen \sqrt{x}-2\sqrt{x}^{3}\cos \sqrt{x}-12\sen \sqrt{x}+12\sqrt{x}\cos \sqrt{x}+C$}
 
-  \exercise{${\int \sqrt{t}\ln tdt}$}{$\frac{2}{3}t^{\frac{3}{2}}\ln t-\frac{4}{9}t^{\frac{3}{2}}$}
+  \exercise{${\int \sqrt{t}\ln t\,dt}$}{$\frac{2}{3}t^{\frac{3}{2}}\ln t-\frac{4}{9}t^{\frac{3}{2}}+C$}
 
   \exercise{${\int x\tan ^{-1}x\, dx}$}{$\frac{1}{2}\arctan x-\frac{1}{2}x+\frac{1}{2}x^{2}\arctan x+C$}
 
-  \exercise{${\int e^{2\theta }\sen \left( 3\theta \right) d\theta }$}{$\frac{2}{13}e^{2\theta }\sen 3\theta -\frac{3}{13}\left( \cos 3\theta \right) e^{2\theta}$}
+  \exercise{${\int e^{2\theta }\sen \left( 3\theta \right) d\theta }$}{$\frac{2}{13}e^{2\theta }\sen 3\theta -\frac{3}{13}\left( \cos 3\theta \right) e^{2\theta}+C$}
 
-  \exercise{${\int e^{-5\theta }\cos 7\theta d\theta }$}{$\frac{7}{74}e^{-5\theta }\sen7\theta -\frac{5}{74}\left( \cos 7\theta \right) e^{-5\theta }$}
+  \exercise{${\int e^{-5\theta }\cos 7\theta\,d\theta }$}{$\frac{7}{74}e^{-5\theta }\sen7\theta -\frac{5}{74}\left( \cos 7\theta \right) e^{-5\theta }+C$}
 
-  \exercise{${\int \cos \left( \ln t\right) dt}$}{$\frac{1}{2}t \left(\cos\ln t+\sen\ln t\right) $}
+  \exercise{${\int \cos \left( \ln t\right) dt}$}{$\frac{1}{2}t \left(\cos\ln t+\sen\ln t\right) +C$}
 
   \exercise{${\int x\sec ^{2}x\, dx}$}{$x\tan x-$ $\ln \left\vert \sec x\right\vert +C$}
 
-  \exercise{${\int_{0}^{\frac{\pi }{2}}\cos ^{4}\theta d\theta }$}{$\frac{3}{16}\pi $}
+  \exercise{${\int_{0}^{\frac{\pi }{2}}\cos ^{4}\theta\,d\theta }$}{$\frac{3}{16}\pi $}
 
   \exercise{${\int \sen ^{3}x\cos ^{4}x\, dx}$}{$\frac{1}{7}\cos ^{7}x-\frac{1}{5}\cos^{5}x+C $}
 
-  \exercise{${\int \cot ^{5}x\sen ^{2}x\, dx}$}{$-\frac{1}{2\sen ^{2}x}\times\left( 4\sen ^{2}x\ln\sen x-\sen ^{4}x+1\right) $}
+  \exercise{${\int \cot ^{5}x\sen ^{2}x\, dx}$}{$-\frac{1}{2\sen ^{2}x}\times\left( 4\sen ^{2}x\ln\sen x-\sen ^{4}x+1\right) +C$}
 
-  \exercise{${\int_{0}^{\frac{\pi }{4}}\sec ^{6}\theta d\theta}$}{$\frac{28}{15}$}
+  \exercise{${\int_{0}^{\frac{\pi }{4}}\sec ^{6}\theta\,d\theta}$}{$\frac{28}{15}$}
 
-  \exercise{${\int \sen \left( 4\ln x\right)\,dx}$}{ $\frac{x}{17}\left( \sen \left( 4\ln x\right) -x\cos \left( 4\ln x\right) \right)+C$}
+  \exercise{${\int \sen \left( 4\ln x\right)\,dx}$}{ $\frac{x}{17}\left( \sen \left( 4\ln x\right) -4\cos \left( 4\ln x\right) \right)+C$}
 
-  \exercise{${\int e^{\sqrt[4]{x}}\, dx}$}{$-4e^{\sqrt[4]{x}}\times\left( -\sqrt[4]{x}^{3}+3\sqrt[4]{x}^{2}-6\sqrt[4]{x}+6\right) $ }
+  \exercise{${\int e^{\sqrt[4]{x}}\, dx}$}{$-4e^{\sqrt[4]{x}}\times\left( -\sqrt[4]{x}^{3}+3\sqrt[4]{x}^{2}-6\sqrt[4]{x}+6\right) +C$}
 
-  \exercise{${\int x\ln ^{3}x\, dx}$}{$\frac{1}{8}x^{2}\left( 4\ln ^{3}x-6\ln ^{2}x+6\ln x-3\right) $}
+  \exercise{${\int x\ln ^{3}x\, dx}$}{$\frac{1}{8}x^{2}\left( 4\ln ^{3}x-6\ln ^{2}x+6\ln x-3\right) +C$}
 
-  \exercise{${\int_{1}^{e}\ln ^{4}x\, dx}$}{$\allowbreak 9e-24$ }
+  \exercise{${\int_{1}^{e}\ln ^{4}x\, dx}$}{$9e-24$ }
 
-  \exercise{${\int \left( x^{4}+x^{2}\right) \ln x\, dx}$}{$-\frac{1}{225}%
-  x^{3}\left( 9x^{2}-45x^{2}\ln x-75\ln x+25\right) $}
+  \exercise{${\int \left( x^{4}+x^{2}\right) \ln x\, dx}$}{$-\frac{1}{225}
+  x^{3}\left( 9x^{2}-45x^{2}\ln x-75\ln x+25\right) +C$}
 
-  \exercise{${\int \left( x^{8}+x^{4}\right) \ln x\, dx}$}{$-\frac{1}{2025}x^{5}\left(25x^{4}-225x^{4}\ln x-405\ln x+81\right) $}
+  \exercise{${\int \left( x^{8}+x^{4}\right) \ln x\, dx}$}{$-\frac{1}{2025}x^{5}\left(25x^{4}-225x^{4}\ln x-405\ln x+81\right) +C$}
 
-  \exercise{${\int \arcsen^{2}x\, dx}$}{$2\left(\arcsen x\right) \sqrt{1-x^{2}}-2x+x\arcsen ^{2}x$ }
+  \exercise{${\int \arcsen^{2}x\, dx}$}{$2\left(\arcsen x\right) \sqrt{1-x^{2}}-2x+x\arcsen ^{2}x+C$}
 
-  \exercise{${\int x\arctan x\, dx}$}{$ \frac{1}{2}\tan^{-1} x-\frac{1}{2}x-\frac{1}{%
-  4}\pi +\frac{1}{2}x^{2}\tan^{-1} x$}
+  \exercise{${\int x\arctan x\, dx}$}{$ \frac{1}{2}\tan^{-1} x-\frac{1}{2}x-\frac{1}{4}\pi +\frac{1}{2}x^{2}\tan^{-1} x +C$}
 
-  \exercise{${\int x\sec^{-1} x\, dx}$}{$\frac{1}{2}\left(x^{2}\sec^{-1}x-\sqrt{x^{2}-1}\right)$}
+  \exercise{${\int x\sec^{-1} x\, dx}$}{$\frac{1}{2}\left(x^{2}\sec^{-1}x-\sqrt{x^{2}-1}\right)+C$}
 
-  \exercise{${\int x\arcsen ^{2}x\, dx}$}{$\left( \frac{1}{8}-\frac{1}{4}\arcsen ^{2}x\right)\left( 1-2x^{2}\right) +\frac{1}{2}x\sqrt{1-x^{2}}\arcsen x$ }
+  \exercise{${\int x\arcsen ^{2}x\, dx}$}{$\left( \frac{1}{8}-\frac{1}{4}\arcsen ^{2}x\right)\left( 1-2x^{2}\right) +\frac{1}{2}x\sqrt{1-x^{2}}\arcsen x+C$ }
 
-  \exercise{${\int \tan ^{6}\theta d\theta }$}{$\frac{1}{5}\tan ^{5}\theta -\frac{1}{3}\tan ^{3}\theta +\tan \theta -\theta $}
+  \exercise{${\int \tan ^{6}\theta\,d\theta }$}{$\frac{1}{5}\tan ^{5}\theta -\frac{1}{3}\tan ^{3}\theta +\tan \theta -\theta +C$}
 
-  \exercise{${\int \tan ^{5}\theta \sec ^{3}\theta d\theta }$}{$\frac{1}{7}\sec ^{7}\theta
-  -\frac{2}{5}\sec ^{5}\theta +\frac{1}{3}\sec ^{3}\theta $}
+  \exercise{${\int \tan ^{5}\theta \sec ^{3}\theta\,d\theta }$}{$\frac{1}{7}\sec ^{7}\theta -\frac{2}{5}\sec ^{5}\theta +\frac{1}{3}\sec ^{3}\theta +C$}
 
-  \exercise{${\int \frac{dx}{x^{2}\sqrt{1-x^{2}}}}$}{ $-\frac{1}{x}\sqrt{1-x^{2}}$}
+  \exercise{${\int \frac{dx}{x^{2}\sqrt{1-x^{2}}}}$}{ $-\frac{1}{x}\sqrt{1-x^{2}}+C$}
 
   \exercise{${\int \frac{dx}{x^{3}\sqrt{x^{2}-16}}}$}{$\frac{1}{128}\left( \sec^{-1}\left( \frac{x}{4}\right) +\frac{4}{x}\frac{\sqrt{x^{2}-16}}{x}\right) +C$ }
 
-  \exercise{${\int \frac{\sqrt{9x^{2}-4}}{x}dx}$}{ $\sqrt{9x^{2}-4}-2\sec^{-1}\left( \frac{3x}{2}\right) +C$}
+  \exercise{${\int \frac{\sqrt{9x^{2}-4}}{x}dx}$}{ $\frac{\sqrt{9x^{2}-4}}{x}- \arcsec\left(\frac{3x}{2}\right) +C$}
 
-  \exercise{${\int x\sqrt{4-x^{2}}\, dx}$}{$-\frac{1}{3}\left( 4-x^{2}\right) ^{\frac{3}{2}}$}
+  \exercise{${\int x\sqrt{4-x^{2}}\, dx}$}{$-\frac{1}{3}\left( 4-x^{2}\right) ^{\frac{3}{2}}+C$}
 
-  \exercise{${\int \frac{x^{3}}{\sqrt{x^{2}+4}}\, dx}$}{$\frac{1}{3}\sqrt{x^{2}+4}\left(
-  x^{2}-8\right) $ }
+  \exercise{${\int \frac{x^{3}}{\sqrt{x^{2}+4}}\, dx}$}{$\frac{1}{3}\sqrt{x^{2}+4}\left(x^{2}-8\right)+C$}
 
-  \exercise{${\int \frac{dx}{x^{2}\sqrt{16x^{2}-9}}}$}{$\frac{1}{9x}\sqrt{16x^{2}-9}$ }
+  \exercise{${\int \frac{dx}{x^{2}\sqrt{16x^{2}-9}}}$}{$\frac{1}{9x}\sqrt{16x^{2}-9}+C$}
 
   \exercise{${\int_{1}^{2}\frac{x^{2}}{\sqrt{5-x^{2}}}\, dx}$}{ $\frac{5}{2}\sen^{-1} \frac{2}{5}\sqrt{5}-\frac{5}{2}\sen^{-1} \frac{1}{5}\sqrt{5}$}
 
-  \exercise{${\int \frac{x}{(x^{2}+4)^{\frac{5}{2}}}\, dx}$}{$-\frac{1}{3\left(x^{2}+4\right) ^{\frac{3}{2}}}$ }
+  \exercise{${\int \frac{x}{(x^{2}+4)^{\frac{5}{2}}}\, dx}$}{$-\frac{1}{3\left(x^{2}+4\right) ^{\frac{3}{2}}}+C$}
 
-  \exercise{${\int \frac{x}{\sqrt{\left( x+1\right) ^{2}+9}}dx}$}{$\sqrt{\left( x+1\right)^{2}+9}-\ln \left\vert \frac{1}{3}\sqrt{\left( x+1\right)^{2}+9}+\frac{x+1}{3}\right\vert +C$}
+  \exercise{${\int \frac{x}{\sqrt{\left( x+1\right) ^{2}+9}}dx}$}{$\sqrt{\left( x+1\right)^{2}+9}-\ln \left\vert \frac{1}{3}\sqrt{\left( x+1\right)^{2}+9}\right.$}
 
-  \exercise{${\int \frac{x^{2}}{\sqrt{4x-x^{2}}}\, dx}$}{$-6\sen^{-1} \left( 1-\frac{1}{2}x\right) -\frac{1}{2}x\sqrt{-x\left( x-4\right) }-3\sqrt{-x\left( x-4\right)
-  } $}
+  \exercise{${\int \frac{x^{2}}{\sqrt{4x-x^{2}}}\, dx}$}{$-6\sen^{-1} \left( 1-\frac{1}{2}x\right) -\frac{1}{2}x\sqrt{-x\left( x-4\right) }-3\sqrt{-x\left( x-4\right)}+C$}
 
-  \exercise{${\int \frac{1}{\sqrt{9x^{2}+6x-8}}\, dx}$}{$\frac{1}{3}\ln \left( 18x+6\sqrt{9x^{2}+6x-8}+6\right) $}
+  \exercise{${\int \frac{1}{\sqrt{9x^{2}+6x-8}}\, dx}$}{$\frac{1}{3}\ln\left| 3x+1+ \sqrt{9x^2+6x-8} \right| +D$}
 
   \exercise{${\int \frac{1}{\left( x^{2}+4x+5\right) ^{2}}dx}$}{$\frac{%
   1}{2}\left( \arctan \left( x+2\right) +\frac{x+2}{x^{2}+4x+5}\right) +C$}
 
-  \exercise{${\int \frac{1}{(5-4x-x^{2})^{\frac{5}{2}}}\, dx}$}{$-\frac{1}{243\left(-x^{2}-4x+5\right)^{\frac{3}{2}}}\left( 2x^{3}+12x^{2}-3x-38\right)$}
+  \exercise{${\int \frac{1}{(5-4x-x^{2})^{\frac{5}{2}}}\, dx}$}{$\frac{x+2}{27\sqrt{5-4x-x^2}}\left(\frac{1}{5-4x-x^2}+\frac{2}{9}\right)+C$}
 
-  \exercise{${\int e^{t}\sqrt{9-e^{2t}}dt}$}{$\frac{9}{2}\arcsen \left( e^{t}\right) +\frac{1}{2}%
-  e^{t}\sqrt{9-e^{2t}}+C$}
+  \exercise{${\int e^{t}\sqrt{9-e^{2t}}dt}$}{$\frac{e^{2t}\sqrt{9-e^{2t}}}{2}+\frac{9}{2}\arcsen\left(\frac{e^{2t}}{3}\right)+C$}
 
-  \exercise{${\int \sqrt{e^{2t}-9}dt}$}{$\frac{9}{2}\left( \sec \theta \tan \theta -\ln
-  \left\vert \sec \theta +\tan \theta \right\vert \right) +C$}
+  \exercise{${\int \sqrt{e^{2t}-9}dt}$}{$3\left(\frac{\sqrt{e^{2t}-9}}{3}-\arcsec\left(\frac{e^{t}}{3}\right)\right)+C$}
 
-  \exercise{${\int \frac{4x-1}{(x-1)(x+2)}\, dx}$}{$\ln \left( x-1\right) +3\ln \left(
-  x+2\right) $}
+  \exercise{${\int \frac{4x-1}{(x-1)(x+2)}\, dx}$}{$\ln \left| (x-1)(x+2)^3 \right| + C $}
 
-  \exercise{${\int \frac{x^{2}+1}{x^{2}-x}\, dx}$}{$x-\ln x+2\ln \left( x-1\right) $ }
+  \exercise{${\int \frac{x^{2}+1}{x^{2}-x}\, dx}$}{$x+\ln \left|\frac{(x-1)^2}{x}\right|+C$ }
 
-  \exercise{${\int \frac{3x^{2}-6x+2}{2x^{3}-3x^{2}+x}\, dx}$}{$2\ln x-\ln \left( x-1\right) +%
-  \frac{1}{2}\ln \left( x-\frac{1}{2}\right) $}
+  \exercise{${\int \frac{3x^{2}-6x+2}{2x^{3}-3x^{2}+x}\, dx}$}{$\ln \left| \frac{x^2\sqrt{2x-1}}{x-1} \right| +C$}
 
-  \exercise{${\int \frac{1}{(x-1)^{2}(x+4)}\, dx}$}{$-\frac{1}{25\left( x-1\right) }\left(
-      \ln \left( x+4\right) -\ln \left( x-1\right) +x\ln \left( x-1\right) -x\ln
-  \left( x+4\right) +5\right)$}
+  \exercise{${\int \frac{1}{(x-1)^{2}(x+4)}\, dx}$}{$-\frac{1}{5(x-1)}+\frac{1}{25}\ln \left\vert \frac{x+4}{x-1}\right\vert +C$}
 
-  \exercise{${\int \frac{x^{3}}{(x+2)^{4}}\, dx}$}{$\frac{1}{3( x+2) ^{3}}(54x+24\ln ( x+2) +36x\ln ( x+2) +18x^{2}\ln (x+2) +3x^{3}\ln ( x+2) +18x^{2}+44)$}
+  \exercise{${\int \frac{x^{3}}{(x+2)^{4}}\, dx}$}{$\frac{8}{3(x+2)^3}-\frac{6}{(x+2)^2}+\frac{6}{x+2}+\ln \left\vert x+2\right\vert +C$}
 
-  \exercise{${\int \frac{1}{x^{4}-x^{2}}\, dx}$}{$\frac{1}{2x}\left( x\ln \left( x-1\right)-x\ln \left( x+1\right) +2\right) $}
+  \exercise{${\int \frac{1}{x^{4}-x^{2}}\, dx}$}{$\frac{1}{x}+\frac{1}{2}\ln\left\vert\frac{x-1}{x+1}\right\vert+C$}
 
-  \exercise{${\int \frac{x}{x^{2}+x+1}\, dx}$}{$\frac{1}{2}\ln \left( x^{2}+x+1\right) +\frac{1}{6}\sqrt{3}\pi -\frac{1}{3}\sqrt{3}\tan^{-1} \sqrt{3}\left( \frac{2}{3}x+\frac{1}{3}\right)$}
+  \exercise{${\int \frac{x}{x^{2}+x+1}\, dx}$}{$\frac{1}{2}\ln(x^2+x+1)-\frac{\sqrt{3}}{3}\arctan\left(\frac{(2x+1)\sqrt{3}}{3}\right)+D$}
 
-  \exercise{${\int_{0}^{1}\frac{8x^{2}}{x^{4}-16}\, dx}$}{$\pi -\ln 3-2\arctan 2$}
+  \exercise{${\int_{0}^{1}\frac{8x^{2}}{x^{4}-16}\, dx}$}{$-\ln(3)+2\arctan\left(\frac{1}{2}\right)$}
 
-  \exercise{${\int \frac{x^{3}-2x^{2}+x+1}{x^{4}+5x^{2}+4}\, dx}$}{$-\frac{3}{2}\arctan \frac{%
-  1}{2}x+\frac{1}{2}\ln \left( x^{2}+4\right) +\arctan x$}
+  \exercise{${\int \frac{x^{3}-2x^{2}+x+1}{x^{4}+5x^{2}+4}\, dx}$}{$-\frac{3}{2}\arctan \frac{1}{2}x+\frac{1}{2}\ln \left( x^{2}+4\right) +\arctan x+C$}
 
-  \exercise{${\int \frac{x^{2}+1}{(x^{3}+3x)^{2}}\, dx}$}{$-\frac{1}{3\left( x^{3}+3x\right) }$}
+  \exercise{${\int \frac{x^{2}+1}{(x^{3}+3x)^{2}}\, dx}$}{$-\frac{1}{3\left( x^{3}+3x\right) }+C$}
 
-  \exercise{${\int \frac{8x}{(x^{2}+4)^{3}}\, dx}$}{$-\frac{2}{\left( x^{2}+4\right) ^{2}}$}
+  \exercise{${\int \frac{8x}{(x^{2}+4)^{3}}\, dx}$}{$-\frac{2}{\left( x^{2}+4\right) ^{2}}+C$}
 
-  \exercise{${\int \frac{dx}{\sqrt{x}+\sqrt[3]{x}-2}}$}{$24\sqrt[6]{x}-\frac{108}{7}\ln \left( \sqrt[3]{x}+3\sqrt[6]{x}+3\right) +%
-    \frac{6}{7}\ln \left( \sqrt[6]{x}-1\right) -\frac{108}{7}\sqrt{3}\arctan
-  \sqrt{3}\left( \frac{2}{3}\sqrt[6]{x}+1\right) -6\sqrt[3]{x}+2\sqrt{x}+C$}
+  \exercise{${\int \frac{dx}{\sqrt{x}+\sqrt[3]{x}-2}}$}{$\frac{6}{5}\ln\left\vert\sqrt[6]{x}-1\right\vert+\frac{12}{5}\ln\left\vert1+\left(\sqrt[6]{x}+1\right)^{2}\right\vert-\frac{72}{5}\arctan\left(\sqrt[6]{x}+1\right)-3\sqrt[3]{x}+6\sqrt[6]{x}+2\sqrt{x}+C$}
 
-  \exercise{$\int \frac{(4x-1)\, dx}{x(x-1)(x+2)(x+1)(x-2)}$}{$\frac{5}{6}\ln \left(x+1\right) -\frac{1}{2}\ln \left( x-1\right) -\frac{1}{4}\ln x+\frac{7}{24}\ln \left( x-2\right) -\frac{3}{8}\ln \left( x+2\right)+C $}
+  \exercise{$\int \frac{(4x-1)\, dx}{x(x-1)(x+2)(x+1)(x-2)}$}{$-\frac{1}{4}\ln\left\vert x\right\vert-\frac{1}{2}\ln\left\vert x-1\right\vert-\frac{3}{8}\ln\left\vert x+2\right\vert+\frac{5}{6}\ln\left\vert x+1\right\vert+\frac{7}{24}\ln\left\vert x-2\right\vert+C$}
 
-  \exercise{${\int \frac{3x^{2}}{(x-1)(x+2)(x+3)}\, dx}$}{ $\frac{1}{4}\ln \left(x-1\right) -4\ln \left( x+2\right) +\frac{27}{4}\ln \left( x+3\right) $}
+  \exercise{${\int \frac{3x^{2}}{(x-1)(x+2)(x+3)}\, dx}$}{$\frac{1}{4}\ln\left\vert x-1\right\vert-4\ln\left\vert x+2\right\vert+\frac{27}{4}\ln\left\vert x+3\right\vert+C$}
 
-  \exercise {$ \int \frac{dx}{\sen x-2\cos x+2}$}{$\ln \left\vert \tan (\frac{x}{2})\sqrt{2\tan (\frac{x}{2})+1}\right\vert +C$}
+  \exercise {$ \int \frac{dx}{\sen x-2\cos x+2}$}{$\ln\left\vert\frac{\tan(\frac{x}{2})}{2\tan(\frac{x}{2})+1}\right\vert+C$}
 
-  \exercise {$ \int \frac{dx}{4\sen x+3\cos x+4}$}{$\frac{1}{6}\ln \left\vert \frac{\tan (\frac{x}{2})+7}{\tan (\frac{x}{2})+1}\right\vert +C$}
+  \columnbreak
 
-  \exercise {$ \int \frac{\cos x\,dx}{\sen x+2\cos
-  x-2}$}{$\ln \left\vert \frac{\sqrt[4]{2\tan (\frac{x}{2})+1}}{\tan (\frac{x}{2})}\right\vert +C$}
+  \exercise {$ \int \frac{dx}{4\sen x+3\cos x+4}$}{$\frac{1}{3}\ln\left\vert\frac{\tan(\frac{x}{2})+1}{\tan(\frac{x}{2})+7}\right\vert+C$}
 
-  \exercise{$\int \frac{\sec x}{1+\sen x}dx$}{$2\left( \frac{-1}{1+\tan (\frac{x}{2})}+\frac{1}{2}\ln \left\vert \frac{1+\tan (\frac{x}{2})}{1-\tan (\frac{x}{2})}\right\vert \right) +C$}
+  \exercise {$ \int \frac{\cos x\,dx}{\sen x+2\cos x-2}$}{$\ln\left\vert\frac{\tan(\frac{x}{2})}{\left(2\tan(\frac{x}{2})-1\right)^{\frac{3}{5}}\left(1+\tan^{2}(\frac{x}{2})\right)^{\frac{1}{5}}}\right\vert+\frac{2x}{5}+C$}
+
+  \exercise{$\int \frac{\sec x}{1+\sen x}dx$}{$-\frac{1}{2}\ln\left\vert1-\tan^{2}(\frac{x}{2})\right\vert+\frac{\tan(\frac{x}{2})}{\left(\tan(\frac{x}{2})+1\right)^{2}}+C$}
 
   \exercise{$\int \frac{dx}{2\sen x+\sen 2x}$}{$\frac{1}{4}\left[\ln \left\vert\tan(\frac{x}{2})\right\vert+\frac{\tan^{2}(\frac{x}{2})}{2}\right] +C$}
 
   \exercise{$\int \frac{dx}{2\sen x-\sen 2x}$}{$\frac{1}{4}\left( \frac{-1}{2\tan ^{2}(\frac{x}{2})}+\ln \left\vert \tan (
   \frac{x}{2})\right\vert \right) +C$}
 
-  \exercise{$\int \frac{dx}{\sen x+\tan x}$}{$\frac{1}{4}\left( \ln
-  \left\vert \tan (\frac{x}{2})\right\vert -\frac{\tan ^{4}(\frac{x}{2})}{4}\right)+C$}
+  \exercise{$\int \frac{dx}{\sen x+\tan x}$}{$\frac{1}{2}\left(\ln\left\vert\tan(\frac{x}{2})\right\vert-\frac{\tan^{2}(\frac{x}{2})}{2}\right)+C$}
 
   \exercise{$\int \frac{dx}{15\sen x+8\cos x+17}$}{$\frac{-2}{9\tan (\frac{x}{2})+15}+C$}
 \end{multicols}

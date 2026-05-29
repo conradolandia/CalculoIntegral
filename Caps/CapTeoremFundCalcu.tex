@@ -40,12 +40,12 @@ Las siguientes integrales pueden deducirse usando derivadas de funciones conocid
 
 \begin{parrafonumerado}
 
-\item Como $\cfrac{d(x^{p+1})}{dx}= (p+1)x^{p}$, entonces, $(p+1) \displaystyle{\int x^{p}dx}=x^{p+1}$ y, por tanto, $\displaystyle{\int x^{p}dx=\frac{x^{p+1}}{p+1}}$ o, mejor,
+\item Como $\frac{d(x^{p+1})}{dx}= (p+1)x^{p}$, entonces, $(p+1) \int x^{p}dx=x^{p+1}$ y, por tanto, $\int x^{p}dx=\frac{x^{p+1}}{p+1}$ o, mejor,
   \[
     \int x^{p}dx=\frac{x^{p+1}}{p+1}+C
   \]
 
-\item Como $\cfrac{d\, \sen (kx)}{dx}=k\cos (kx)$, para $k$ una constante diferente de cero, entonces se tiene
+\item Como $\frac{d\, \sen (kx)}{dx}=k\cos (kx)$, para $k$ una constante diferente de cero, entonces se tiene
 
   \resizebox{\linewidth}{!}{$
     \int k\cos(kx)\,dx=\operatorname{sen}(kx)\Rightarrow
@@ -292,11 +292,13 @@ Veamos ahora ciertos contextos en los que las integrales juegan un papel importa
 Con $s_0$ y $v_0$ constantes.
 
 El enunciado nos dice que el objeto cae libremente; es decir, la aceleración es $g=9.8\,\nicefrac{\text{m}}{\text{s}^{2}}$, y, dado que la velocidad es la derivada de la posición y la aceleración es la derivada de la velocidad, entonces
-\begin{equation}\label{aceleracion}
+\begin{equation*}
   a(t)=s''(t)=-g
-\end{equation}
+\end{equation*}
 o, si se quieren unidades explícitas:
-\[a(t)=-9.8\,\nicefrac{\text{cm}}{\text{s}^2}\]
+\begin{equation}\label{aceleracion}
+  a(t)=-9.8\,\nicefrac{\text{cm}}{\text{s}^2}
+\end{equation}
 
 Ahora bien, si queremos la posición del objeto, debemos despejar $s$ de \eqref{aceleracion}, es decir, quitar las derivadas de $s$. Recordemos que eso lo podemos hacer por medio de las integrales: $\displaystyle{\int s^{\prime \prime} (t)dt=s^\prime (t)}$; entonces
 \begin{align*}
@@ -466,7 +468,7 @@ La temperatura promedio es:
 \begin{aligned}
   \Pro(T)&=\frac{1}{4-0}\int_{0}^{4}T(t)dt %\\&
   =\frac{1}{4}\int_{0}^{4}(t^{3}+t)dt=\frac{1}{4}\left( \frac{4^{4}-0^{4}}{4}+\frac{4^{2}-0^{2}}{2}\right) \\
-  &=\frac{1}{4}\left(64+8\right)=18\,\degree C
+  &=\frac{1}{4}\left(64+8\right)=\qty{18}{\degreeCelsius}
 \end{aligned}
 \end{gather*}
 
@@ -478,7 +480,7 @@ Si $f$ es una función continua en el intervalo $\left[a,b\right]$, para $a$ y $
 \end{equation}
 
 \end{teorema}
-\textit{Demostración.} Como $f$ es continua en $[a,b]$, por el teorema de valores extremos para funciones continuas\footnote{\textcite{Stewart_2012}}, $f$ alcanza mínimo y máximo en el intervalo, es decir, existen números $d$ y $e$ en el intervalo $[a,b]$ tales que $f\left(d\right) \leq f(x)\leq f(e)$ para todo $x\in[a,b]$. Por otro lado, usando la propiedad de monotonía para integrar\footnote{Ver teorema \ref{PropIntegral}}, se tiene que
+\textit{Demostración.} Como $f$ es continua en $[a,b]$, por el teorema de valores extremos para funciones continuas\footnote{\textcite{Stewart_2012}.}, $f$ alcanza mínimo y máximo en el intervalo, es decir, existen números $d$ y $e$ en el intervalo $[a,b]$ tales que $f\left(d\right) \leq f(x)\leq f(e)$ para todo $x\in[a,b]$. Por otro lado, usando la propiedad de monotonía para integrar\footnote{Ver teorema \ref{PropIntegral}.}, se tiene que
 \[
 f(d)(b-a)\leq \int_{a}^{b}f(x)\,dx\leq f(e)(b-a)
 \]
@@ -631,7 +633,7 @@ para todo $x\in \left( a,b\right)$.
 F(x+h)-F(x)=\int_{a}^{x+h}f(t)dt-\int_{a}^{x}f(t)dt=\int_{x}^{x+h}f(t)dt
 \]
 
-Ahora bien, dado que $f$ es continua en $[a,b]$, entonces también es continua en $\left[ x,x+h\right]$ para $a\leq x,\ x+h\leq b$. Por otro lado, por el teorema de los valores extremos\footnote{\textcite{Zill_Wright_2011}}, existen $c,d\in \lbrack x,x+h]$ tales que para todo $t$ en este intervalo $f\left( c\right) \leq f(t)\leq f(d)$, y calculando la integral en el intervalo $[x,x+h],$ resulta que $f(c)h\leq \int_{x}^{x+h}f(t)dt\leq f(d)h,$ o también al dividir entre $h$ (suponemos que $h>0$):
+Ahora bien, dado que $f$ es continua en $[a,b]$, entonces también es continua en $\left[ x,x+h\right]$ para $a\leq x,\ x+h\leq b$. Por otro lado, por el teorema de los valores extremos\footnote{\textcite{Zill_Wright_2011}.}, existen $c,d\in \lbrack x,x+h]$ tales que para todo $t$ en este intervalo $f\left( c\right) \leq f(t)\leq f(d)$, y calculando la integral en el intervalo $[x,x+h],$ resulta que $f(c)h\leq \int_{x}^{x+h}f(t)dt\leq f(d)h,$ o también al dividir entre $h$ (suponemos que $h>0$):
 \begin{equation}\label{TeorFCParteI}
 f(c)\leq \frac{1}{h}\int_{x}^{x+h}f(t)dt\leq f(d)
 \end{equation}
@@ -668,13 +670,13 @@ F'(x)=\frac{d}{dx}\int_{a}^{g(x)}f(t)dt=f(g(x))\frac{d(g(x))}{dx}
 algo que se usa en el siguiente ejemplo.
 
 \begin{ejemplo}
-Sea $F(x) =\int_{-x}^{3}\tan ^{3}zdz$. Encuentre la derivada de $F$.
+Sea $F(x) =\int_{-x}^{3}\tan ^{3}z\,dz$. Encuentre la derivada de $F$.
 \end{ejemplo}
 
 \emph{Solución.} Por propiedades de la integral (teorema \ref{PropIntegral}),
 \[
-F(x) =\int_{-x}^{3}\tan ^{3}zdz=-\int_{3}^{-x}\tan
-^{3}zdz
+F(x) =\int_{-x}^{3}\tan ^{3}z\,dz=-\int_{3}^{-x}\tan
+^{3}z\,dz
 \]
 y por el TFC, parte I,
 \[
@@ -754,7 +756,7 @@ Si $f$ es una función continua en $[a,b]$, entonces
 \]
 para $F$ una antiderivada de $f$.
 
-\textit{Demostración.} Sea $F$ una antiderivada cualquiera de $f$. Por el TFC en su parte I, $A(x)=\int_{a}^{x}f(t)dt$ es otra antiderivada de $f$; luego, como la diferencia de dos antiderivadas es una constante, se tiene que $F(x)-A(x)=C$; entonces, $F(x)=A(x) +C$; por tanto,
+\textit{Demostración.} \textls[-15]{Sea $F$ una antiderivada cualquiera de $f$. Por el TFC en su parte~I,} $A(x)=\int_{a}^{x}f(t)dt$ es otra antiderivada de $f$; luego, como la diferencia de dos antiderivadas es una constante, se tiene que $F(x)-A(x)=C$; entonces, $F(x)=A(x) +C$; por tanto,
 \begin{align*}
 F(b)-F(a)&=\left( \int_{a}^{b}f(t)dt+C\right) -\left(\int_{a}^{a}f(t)dt+C\right) \\
 &=\int_{a}^{b}f(t)dt
@@ -844,7 +846,7 @@ y por el TFC, parte I,
 \end{aligned}
 \end{gather*}
 
-Ahora calculemos la integral:
+Ahora, calculemos la integral:
 \begin{align*}
 \int_{0}^{\frac{\pi }{4}}\frac{1+\sen x}{1-\sen x}dx&= \int_{0}^{\pi/4} \left(
 2\sec ^{2}x+2\sec x\tan x-1\right) dx\\
@@ -942,7 +944,7 @@ En los ejercicios \ref{AntiInici}-\ref{AntiFin}, encuentre el valor de las integ
 
 \exercise{$\displaystyle\int \left( \tan x+\cot x\right) ^{2}dx$}{$\tan x-\cot x+C$}
 
-\exercise{$\displaystyle\int \frac{1+\sen x}{1-\sen x}dx$}{$-\cot \left( 2x\right) -\csc 2x-x+C$}
+\exercise{$\displaystyle\int \frac{1+\sen x}{1-\sen x}dx$}{$2\tan x +2 \sec x - x + C$}
 
 \exercise{$\displaystyle\int \left( 2+\tan ^{2}\theta \right)d\theta $}{$\theta +\tan \theta +C$}
 
@@ -969,21 +971,17 @@ En los ejercicios \ref{AntiInici}-\ref{AntiFin}, encuentre el valor de las integ
 
 \vspace{\parskip}
 
-\exercise{Sea $v(t)$ la función de velocidad de una partícula en un instante $t$ en segundos.  Hallar la función de posición $s(t)$ de la partícula en cada caso}
+\exercise{Sea $v(t)$ la función de velocidad de una partícula en un instante $t$ en segundos.  Halle la función de posición $s(t)$ de la partícula en cada caso:}
 
 \subexercise{$v(t)=t^{3}+t^{2}+t,\  s\left(0\right)=3$}{$s\left( t\right) =\frac{t^{4}}{4}+\frac{t^{3}}{3}+\frac{t^{2}}{2}+3$}
 
-\subexercise{$v(t)=\sen t+\cos t,\  s\left(\pi\right)=2$}{$s\left( t\right) =\cos \left( t\right) -\sen \left( t\right)
-+1$}
+\subexercise{$v(t)=\sen t+\cos t,\  s\left(\pi\right)=2$}{$s\left( t\right) =-\cos (t) + \sen (t) + 1$}
 
-\subexercise{$v(t)=\sec ^{2}t+\csc ^{2}t,\
-s\left( \frac{\pi }{4}\right) =2$}{$s\left( t\right) =\tan \left( t\right)
--\cot \left( t\right) -\frac{\sqrt{2}}{2}+3$}
+\subexercise{$v(t)=\sec ^{2}t+\csc ^{2}t,\ s\left( \frac{\pi }{4}\right) =2$}{$s\left( t\right) =\tan (t) - \cot (t) + 2$}
 
-\subexercise{$v(t)=\frac{1-\cos ^{2}t}{\sen ^{2}t},\  s\left( \frac{\pi }{4}\right) =8$}{$s\left( t\right) =t+8-\frac{\pi
-}{4}$}
+\subexercise{$v(t)=\frac{1-\cos ^{2}t}{\sen ^{2}t},\  s\left( \frac{\pi }{4}\right) =8$}{$s\left( t\right) =t+8-\frac{\pi}{4}$}
 
-\exercise{Sea $a(t)$ la función de aceleración de una partícula en un instante. Hallar la función de posición $s(t)$ de la partícula ($t$ en segundos $s$ en metros) en cada caso}
+\exercise{Sea $a(t)$ la función de aceleración de una partícula en un instante. Halle la función de posición $s(t)$ de la partícula ($t$ en segundos, $s$ en metros) en cada caso:}
 
 \subexercise{$a(t)=t^{3}+t^{2},\  v\left( 0\right)
 =3,s\left( 0\right) =5$}{$s\left( t\right) =\frac{t^{5}}{20}+\frac{t^{4}}{12}+3t+5$}
@@ -997,83 +995,71 @@ v\left( 1\right) =4,s\left( 1\right) =10$}{$s\left( t\right) =-2\ln\left\vert t\
 
 \subexercise{$a(t)=-9.8t,\  v(2)=7,$ $\ s\left(3\right) =9\,$}{$s\left( t\right) =-\frac{9.8}{6}t^{3}+26.6t-26.7$}
 
-\exercise{En cada caso encuentre la función que satisfaga las condiciones dadas}
+\exercise{En cada caso, encuentre la función que satisfaga las condiciones dadas:}
 
 \subexercise{Pasa por el punto $(3,4)$ y en el punto $(x,f(x))$ la pendiente de la recta tangente es$\ 3x^{2}-8$.}{$f(x)=x^{3}-8x+19$}
 
-\subexercise{Pasa por el punto $(0,3)$ y en el punto $(x,f(x))$ la pendiente de la recta tangente es $e^{x}-x$.}{$f(x)=e^{x}-
-\frac{x^{2}}{2}+2$}
+\subexercise{Pasa por el punto $(0,3)$ y en el punto $(x,f(x))$ la pendiente de la recta tangente es $e^{x}-x$.}{$f(x)=e^{x}-\frac{x^{2}}{2}+2$}
 
 \exercise{Encuentre la función que cumple:}
 
-\subexercise{$f^{\prime\prime}\left( x\right) =e^{x}-x,\ f\left( 1\right) =3,\ f^{\prime}\left( 2\right) =1$.}{$f(x)=e^{x}-\frac{x^{3}}{6}
-+(3-e^{2})x+\frac{6e-1-6e^{2}}{6}$}
+\subexercise{$f^{\prime\prime}\left( x\right) =e^{x}-x,\ f\left( 1\right) =3,\ f^{\prime}\left( 2\right) =1$}{$f(x)=e^{x}-\frac{x^{3}}{6}
++(3-e^{2})x-\frac{6e-1-6e^{2}}{6}$}
 
 \subexercise{$f^{\prime\prime\prime}\left( x\right) =\sen x-\cos\left( 2x\right),\  f\left( 0\right) =f^{\prime}\left( \frac{\pi }{2}
-\right) =f^{\prime\prime}\left( \pi \right) =1$.}{$f\left( x\right) =-\cos x-\frac{\sen \left( 2x\right) }{8}+x^{2}+\frac{7}{4}x+2$}
+\right) =f^{\prime\prime}\left( \pi \right) =1$}{$f\left( x\right) = \cos x+\frac{\sen \left( 2x\right) }{8}+\frac{9}{4}x$}
 
-\subexercise{$\cfrac{d^{\,2}y}{dx^{2}}=2x^{2}+3x^{3},\ y(1)=3,y^{\prime}\left(2\right)=3$.}{$y=\frac{x^{4}}{12}+\frac{3x^{5}}{20}-\frac{43}{3}x+\frac{156}{5}$}
+\subexercise{$\cfrac{d^{\,2}y}{dx^{2}}=2x^{2}+3x^{3},\ y(1)=3,y^{\prime}\left(2\right)=3$}{$y=\frac{x^{4}}{6}+\frac{3x^{5}}{20}-\frac{43}{3}x+\frac{1021}{60}$}
 
-\subexercise{$\cfrac{d^{\,4}y}{dx^{4}}=120x^{2},\ y\left( 0\right) =y^{\prime}\left( 0\right) =y^{\prime\prime\prime}\left( 1\right) =1$.}{$
-y\left( x\right) =8\cos \left( \frac{1}{2}x\right) -\sen x+\frac{1}{8}e^{2x}+x^{4}+\frac{11}{4}x^{2}+\frac{15}{4}x-\frac{41}{8}$}
+\subexercise{$\cfrac{d^{\,4}y}{dx^{4}}=120x^{2},\ y\left( 0\right) =y^{\prime}\left( 0\right) =y^{\prime\prime\prime}\left( 1\right) =1$}{$y=\frac{1}{3}x^{6}-\frac{13}{2}x^3+\frac{1}{2}x^2+x+1$}
 
-\exercise{La velocidad de una partícula es $v(t)=\frac{1}{1+\cos \left( 2t\right)}$, $t$ en metros, $s$ en segundos. Si
-su posición en $t=\frac{\pi }{8}$ es $2$ metros, hallar la función de posición de la partícula.}{La función de posición de la partícula es: $s(t)=-\cot \left( 2t\right) +\frac{1}{2}\csc \left(2t\right) +3-\frac{\sqrt{2}}{2}$}
+\exercise{La velocidad de una partícula es $v(t)=\frac{1}{1+\cos \left( 2t\right)}$, con $t$ en metros, $s$ en segundos. Si
+su posición en $t=\frac{\pi }{8}$ es $2$ metros, halle la función de posición de la partícula.}{La función de posición de la partícula es $s(t)=-\frac{1}{2} \cot \left( 2t\right) +\frac{1}{2}\csc \left(2t\right) +\frac{5}{2}-\frac{\sqrt{2}}{2}$}
 
-\exercise{La aceleración de una partícula es $a(t)=\sen \left( 2t\right) +e^{2t}+2^{4t}$, con $t$ en metros, $s$ en
-segundos, su velocidad inicial es 6 metros por segundo y su posición inicial es 4 metros. Hallar la función de posición de la partícula.}{$s\left( t\right) =-\frac{\sen \left( 2t\right) }{4}+\frac{e^{2t}}{4}+\frac{2^{4t}}{16\ln ^{2}\left( 2\right) }+\left( 6-\frac{1}{4\ln \left(2\right) }\right) t+\frac{15}{4}-\frac{1}{16\ln ^{2}\left( 2\right) }$}
+\exercise{La aceleración de una partícula es $a(t)=\sen \left( 2t\right) +e^{2t}+2^{4t}$, con $t$ en metros, $s$ en segundos; su velocidad inicial es 6 metros por segundo y su posición inicial es 4 metros. Halle la función de posición de la partícula.}{$s\left( t\right) =-\frac{\sen \left( 2t\right) }{4}+\frac{e^{2t}}{4}+\frac{2^{4t}}{16\ln ^{2}\left( 2\right) }+\left( 6-\frac{1}{4\ln \left(2\right) }\right) t+\frac{15}{4}-\frac{1}{16\ln ^{2}\left( 2\right) }$}
 
-\exercise{La pendiente de la tangente a la gráfica de $f$ en $\left(x,f\left( x\right) \right)$ es $\frac{\cos  ^{2}x}{1+\sen x}$ y $f\left( \frac{\pi }{6}\right) =4$. Hallar la función $f\left( x\right)$.}{$f\left( x\right) =x+\cos x+4-\frac{\pi}{6}-\frac{\sqrt{3}}{2}$}
+\exercise{La pendiente de la tangente a la gráfica de $f$ en $\left(x,f\left( x\right) \right)$ es $\frac{\cos  ^{2}x}{1+\sen x}$ y $f\left( \frac{\pi }{6}\right) =4$. Halle la función $f\left( x\right)$.}{$f\left( x\right) =x+\cos x+4-\frac{\pi}{6}-\frac{\sqrt{3}}{2}$}
 
 \vspace*{\parskip}
 
-En los siguientes ejercicios para cada una de las funciones $f(x)$ dadas, hallar el valor de $c$ que garantiza el teorema del valor medio para integrales en los intervalos indicados y hacer una gráfica de la situación.
+En los siguientes ejercicios, para cada una de las funciones $f(x)$ dadas, halle el valor de $c$ que garantiza el teorema del valor medio para integrales en los intervalos indicados y haga una gráfica de la situación:
 
 \begin{multicols}{2}
-\exercise{$f\left( x\right) =6x^{2}+4x+4$ en $\left[1,3\right].$}{$c=\frac{2}{3}\sqrt{13}-\frac{1}{3}$}
+\exercise{$f\left( x\right) =6x^{2}+4x+4$ en $\left[1,3\right]$}{$c=\frac{2}{3}\sqrt{13}-\frac{1}{3}$}
 
-\exercise{$f\left( x\right) =x^{3}$ en $\left[ 2,4\right] .$}{$c=\sqrt[3]{30}=3.1072$}
+\exercise{$f\left( x\right) =x^{3}$ en $\left[ 2,4\right]$}{$c=\sqrt[3]{30}=3.1072$}
 
-\exercise{$f\left( x\right) =3^{x}$ en $\left[ 0,2\right] $.}{$c=\frac{\ln \left( \frac{4}{\ln 3}\right) }{\ln 3}=1.1763$}
+\exercise{$f\left( x\right) =3^{x}$ en $\left[ 0,2\right] $}{$c=\frac{\ln \left( \frac{4}{\ln 3}\right) }{\ln 3}=1.1763$}
 
-\exercise{$f\left( x\right) =2^{3x}$ en $\left[ 0,4\right] $.}{$c=\frac{\ln \left( \frac{1365}{4\ln 2}\right) }{\ln 8}=2.9812$}
+\exercise{$f\left( x\right) =2^{3x}$ en $\left[ 0,4\right] $}{$c=\frac{\ln \left( \frac{1365}{4\ln 2}\right) }{\ln 8}=2.9812$}
 
-\exercise{$f\left( x\right) =2\sen x$ en $\left[ 0,\frac{\pi }{2}\right] $.}{$c=\arcsin \left( \frac{2}{\pi }\right) =0.69011$}
+\exercise{$f\left( x\right) =2\sen x$ en $\left[ 0,\frac{\pi }{2}\right] $}{$c=\arcsin \left( \frac{2}{\pi }\right) =0.69011$}
 
-\exercise{$f\left( x\right) =4\cos x$ en $\left[ 0,\frac{\pi }{2}\right] $.}{$c=\arccos \left( \frac{2}{\pi }\right)=0.880\,69$}
+\exercise{$f\left( x\right) =4\cos x$ en $\left[ 0,\frac{\pi }{2}\right] $}{$c=\arccos \left( \frac{2}{\pi }\right)=0.88069$}
 \end{multicols}
 
 \vspace*{\parskip}
 
-Para cada una de las funciones $f\left( x\right) $ dadas en los siguientes ejercicios: a) Calcular la función $A\left( x\right) =\int_{a}^{x}f\left( t\right) dt$, de área de acumulación de $f\left( x\right) $ a partir del valor de $t=a$ indicado. b) Hallar la derivada respecto a $x$ de la función área de acumulación $\frac{dA}{dx}$.
+Para cada una de las funciones $f\left( x\right) $ dadas en los siguientes ejercicios: a)~calcule la función $A\left( x\right) =\int_{a}^{x}f\left( t\right) dt$, de área de acumulación de $f\left( x\right) $ a partir del valor de $t=a$ indicado; b)~halle la derivada respecto a $x$ de la función área de acumulación $\frac{dA}{dx}$:
 
-\exercise{$f\left( x\right) =3x^{2}+6x+2$ a partir de $t=2$}{$a)$ $A\left( x\right) =x^{3}+3x^{2}+2x-24\qquad b)$ $\frac{dA}{dx}
-=3x^{2}+6x+2=f\left( x\right) $}
+\exercise{$f\left( x\right) =3x^{2}+6x+2$ a partir de $t=2$}{a) $A\left( x\right) =x^{3}+3x^{2}+2x-24$\qquad b) $\frac{dA}{dx}=3x^{2}+6x+2=f\left( x\right) $}
 
-\exercise{$f\left( x\right) =4x^{3}+3x^{2}+1$ a
-partir de $t=3$}{$a)$ $A\left( x\right) =x^{4}+x^{3}+x-111\qquad b)$ $
+\exercise{$f\left( x\right) =4x^{3}+3x^{2}+1$ a partir de $t=3$}{a) $A\left( x\right) =x^{4}+x^{3}+x-111$\qquad b) $
 \frac{dA}{dx}=4x^{3}+3x^{2}+1=f\left( x\right) $}
 
-\exercise{$f\left( x\right) =12x^{5}+6x^{2}+2$ a partir de $t=1$}{$a)$ $A\left( x\right) =2x^{6}+2x^{3}+2x-6\qquad b)$ $ \frac{dA}{dx}=12x^{5}+6x^{2}+2=f\left( x\right) $}
+\exercise{$f\left( x\right) =12x^{5}+6x^{2}+2$ a partir de $t=1$}{a) $A\left( x\right) =2x^{6}+2x^{3}+2x-6$\qquad b) $ \frac{dA}{dx}=12x^{5}+6x^{2}+2=f\left( x\right) $}
 
-\exercise{$f\left( x\right) =e^{x}+2x$ a partir de $t=0.$}{$a)$ $A\left( x\right) =e^{x}+x^{2}-1\qquad b)$ $\frac{dA}{dx}=e^{x}+2x=f\left( x\right) $}
+\exercise{$f\left( x\right) =e^{x}+2x$ a partir de $t=0$}{a) $A\left( x\right) =e^{x}+x^{2}-1$\qquad b) $\frac{dA}{dx}=e^{x}+2x=f\left( x\right) $}
 
-\exercise{$f\left( x\right) =2^{x}+3^{x}+8x+1$ a
-partir de $t=0.$}{$a)$ $A\left( x\right) =\frac{2^{x}}{\ln 2}+\frac{3^{x}}{%
-\ln 3}+4x^{2}+x-\frac{1}{\ln 2}-\frac{1}{\ln 3}\qquad b)$ $\frac{dA}{dx}%
-=2^{x}+3^{x}+8x+1=f\left( x\right) $}
+\exercise{$f\left( x\right) =2^{x}+3^{x}+8x+1$ a partir de $t=0$}{a) $A\left( x\right) =\frac{2^{x}}{\ln 2}+\frac{3^{x}}{\ln 3}+4x^{2}+x-\frac{1}{\ln 2}-\frac{1}{\ln 3}$\qquad b) $\frac{dA}{dx}=2^{x}+3^{x}+8x+1=f\left( x\right) $}
 
-\exercise{$f\left( x\right) =2\sen x+3x$ a partir de $t=0.$}{$a)$ $A\left( x\right) =\frac{3}{2}x^{2}-2\cos x+2\qquad b)$ $\frac{%
-dA}{dx}=2\sen x+3x=f\left( x\right) $}
+\exercise{$f\left( x\right) =2\sen x+3x$ a partir de $t=0$}{a) $A\left( x\right) =\frac{3}{2}x^{2}-2\cos x+2$\qquad b) $\frac{dA}{dx}=2\sen x+3x=f\left( x\right) $}
 
-\exercise{$f\left( x\right) =e^{2x}+\sen x+1$ a
-partir de $t=0.$}{$a)$ $A\left( x\right) =x-\cos x+\frac{1}{2}e^{2x}+\frac{%
-1}{2}\qquad b)$ $e^{2x}+\sen x+1=f\left( x\right) $}
+\exercise{$f\left( x\right) =e^{2x}+\sen x+1$ a partir de $t=0$}{a) $A\left( x\right) =x-\cos x+\frac{1}{2}e^{2x}+\frac{1}{2}$\qquad b) $e^{2x}+\sen x+1=f\left( x\right) $}
 
-\exercise{$f\left( x\right) =e^{4x}+\sen x+\cos x$ a
-partir de $t=0.$}{$a)$ $A\left( x\right) =\sen x-\cos x+\frac{1}{4}e^{4x}+\frac{3}{4}\qquad b)$ $\frac{dA}{dx}=e^{4x}+\sen x+\cos x=f\left( x\right) $}
+\exercise{$f\left( x\right) =e^{4x}+\sen x+\cos x$ a partir de $t=0$}{a) $A\left( x\right) =\sen x-\cos x+\frac{1}{4}e^{4x}+\frac{3}{4}$\qquad b) $\frac{dA}{dx}=e^{4x}+\sen x+\cos x=f\left( x\right) $}
 
-\exercise{Encuentre la derivada de cada una de las siguientes funciones}
+\exercise{Encuentre la derivada de cada una de las siguientes funciones:}
 %\begin{multicols}{2}
 \subexercise{$f(x)=\displaystyle\int_{-3}^{x^{4}}\sqrt{t}dt$}{$4x^{3}\sqrt{x^{4}}$}
 
@@ -1087,20 +1073,20 @@ partir de $t=0.$}{$a)$ $A\left( x\right) =\sen x-\cos x+\frac{1}{4}e^{4x}+\frac{
 4x^{3}\sin (x^{4})\sqrt{\cos (x^{4})}}{\cos (x^{4})+1}$}
 %\end{multicols}
 
-\exercise {En cada caso hallar una función $f$ y un número $a$ que cumplan la igualdad dada}
+\exercise {En cada caso, halle una función $f$ y un número $a$ que cumplan la igualdad dada:}
 
 \subexercise{$\displaystyle\int_{a}^{x}\frac{f\left( t\right) }{t^{2}}dt=3x^{2}-9$}{$f(x)=6x^{3}\qquad a=\pm \sqrt{3}$}
 
-\subexercise{$\displaystyle\int_{a}^{x}\frac{f(t)+1}{f(t)-1}dt=\frac{x-1}{2x+1}$}{$f(x)=-3-(2x+1)^{2}\qquad  a=1$}
+\subexercise{$\displaystyle\int_{a}^{x}\frac{f(t)+1}{f(t)-1}dt=\frac{x-1}{2x+1}$}{$f(x)=\frac{-3-(2x+1)^{2}}{(2x+1)^{2}-3}$}
 
 \subexercise{$\displaystyle\int_{2x}^{a-1}\left( t+1\right) ^{2}f(t)dt=\frac{x^{3}}{2x+1}$
 }{$f(z)=\frac{2z^{3}+3z^{2}}{8(z+1)^{4}}\qquad a=-1$}
 
-\exercise {Calcular las siguientes integrales definidas}
+\exercise {Calcule las siguientes integrales definidas:}
 
 \subexercise{$\displaystyle\int_{-2}^{2}\left( 4x^{3}+6x^{2}+8x-1\right) dx$} {$28$}
 
-\subexercise{$\displaystyle\int_{0}^{\pi }\sin \left( \frac{1}{4}x\right)\,dx$=}{$4-2\sqrt{2}$}
+\subexercise{$\displaystyle\int_{0}^{\pi }\sin \left( \frac{1}{4}x\right)\,dx$}{$4-2\sqrt{2}$}
 
 \subexercise{$\displaystyle\int_{0}^{\pi }\left( \cos \left( \frac{1}{2}x\right) +\sin \left( \frac{1%
 }{2}x\right) \right) ^{2}dx$}{$\pi +2$}
@@ -1123,11 +1109,11 @@ partir de $t=0.$}{$a)$ $A\left( x\right) =\sen x-\cos x+\frac{1}{4}e^{4x}+\frac{
 dy$}{$=\frac{\arcsec(4)}{2}+\frac{1}{8}-\frac{\arcsec(2)}{2}$}
 
 \subexercise{$\displaystyle\int_{\frac{\pi }{16}}^{\frac{\pi }{8}}\left( \tan (2t)+\cot (2t)\right)
-^{2}\ dt$}{$1-\frac{\tan (\frac{\pi }{8})}{2}-\frac{\cot (\frac{\pi }{8})}{2}$}
+^{2}\ dt$}{$-\frac{\tan (\frac{\pi }{8})}{2}+\frac{\cot (\frac{\pi }{8})}{2}$}
 
 \subexercise{$\displaystyle\int_{0}^{1}\left( 2t+3\right) ^{4}dt$}{$\frac{1441}{5}$}
 
-\exercise {Hallar el área de la región limitada por las gráficas de:}
+\exercise {Halle el área de la región limitada por las gráficas de:}
 
 \subexercise {$y=x^{4}+1,$ el eje $x$, el eje $y$ y la recta $x=3$}{$\frac{258}{5}u^{2}$}
 
@@ -1139,4 +1125,4 @@ dy$}{$=\frac{\arcsec(4)}{2}+\frac{1}{8}-\frac{\arcsec(2)}{2}$}
 
 \subexercise {$ y=\frac{\sen^{2}x+1}{\cos ^{2}x},$ el eje $x$, el eje $y$ y la recta $x=\frac{\pi }{4}$}{$\left(2-\frac{1}{4}\pi \right) u^{2}$}
 
-\subexercise {$y=\frac{1}{\sqrt{9-x^{2}}},$ el eje $x$ y la recta $x=1$}{$\frac{1}{2}\pi u^{2}$}
+\subexercise {$y=\frac{1}{\sqrt{9-x^{2}}},$ el eje $x$ y la recta $x=1$}{$\arcsen\left(\frac{1}{3}\right) u^{2}$}

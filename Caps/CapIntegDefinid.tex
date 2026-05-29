@@ -24,7 +24,7 @@ El símbolo $\sum $ denota, entonces, una suma o sumatoria. La variable $k$ (que
 En la expresión anterior, $k$ va desde $1$ hasta $n$. El límite inferior es $1$ y el límite superior es $n$.
 
 \begin{ejemplo}
-  \textit Si vamos a sumar los números del $1$ al $12$, es decir,
+  Si vamos a sumar los números del $1$ al $12$, es decir,
   \[
     1+2+3+4+5+6+7+8+9+10+11+12
   \]
@@ -41,7 +41,7 @@ En la expresión anterior, $k$ va desde $1$ hasta $n$. El límite inferior es $1
 Además, el contador no necesariamente debe iniciar en $1$ y puede tomar nombres diferentes a $k$. El límite inferior de la sumatoria depende de la expresión que vaya a sumarse. A continuación, se muestran otros ejemplos.
 
 \begin{ejemplo}\leavevmode
-  \begin{parrafonoin}
+  \begin{parrafonumerado}
   \item $\displaystyle{\sum_{k=1}^3\frac{1}{k}}=
     \underset{k=1}{\underbrace{\frac{1}{1}}}+
     \underset{k=2}{\underbrace{\frac{1}{2}}}+
@@ -57,7 +57,7 @@ Además, el contador no necesariamente debe iniciar en $1$ y puede tomar nombres
     \underset{k=3}{\underbrace{4^{3}-3^{3}}}+
     \underset{k=4}{\underbrace{5^{3}-4^{3}}}+
     \underset{k=5}{\underbrace{6^{3}-5^{3}}}=6^{3}-2^{3}$
-  \end{parrafonoin}
+  \end{parrafonumerado}
 \end{ejemplo}
 
 Para escribir una suma en notación compacta, es decir, como sumatoria, debe identificarse la expresión que generan los números que se están sumando.
@@ -201,7 +201,7 @@ A continuación, se construyen algunas fórmulas para cierto tipo de sumas que s
   \[1+2+3+4+5+6+7=28\]
   o también
   \[1+2+3+4+5+6+7+8+9+10+11=66\]
-  que puede hacerse a mano. Pero, si la suma incluye muchos más términos, hacerlo a mano ya no es tan cómodo. Veamos, a continuación, lo que puede hacerse:
+  que puede hacerse a mano. Pero, si la suma incluye muchos más términos, hacerlo a mano ya no es tan cómodo. Veamos, a continuación, lo que puede hacerse.
 \end{ejemplo}
 
 Supongamos que quieren sumarse los $n$ primeros números naturales. Sea $S$ dicha suma:
@@ -233,7 +233,7 @@ En nuestro ejemplo de sumar los primeros $11$ números, pudimos simplemente hace
 o también
 \begin{align*}
   \sum_{k=1}^{152} k&=1+2+3+\ldots+150+151+152=\frac{n\left( n+1\right) }{2}\\
-  &=\frac{152\left(152+1\right)}{2}=76\times 153=11628
+  &=\frac{152\left(152+1\right)}{2}=76\times 153=11\,628
 \end{align*}
 Veamos ahora qué pasa cuando sumamos los cuadrados de los primeros naturales.
 
@@ -343,6 +343,7 @@ Por ejemplo, calculemos la suma de los cuadrados de $1$ hasta $30$, es decir, co
   tienda a infinito.
 \end{ejemplo}
 Si descomponemos las expresiones dentro de los paréntesis y cancelamos términos similares, tenemos
+
 \begin{gather*}
   \begin{aligned}
     \lim_{n\to\infty}\sum_{k=1}^{n}\left( \left( 2\frac{k}{n}-1\right) ^{2}+2\left( 2\frac{k}{n}-1\right) +1\right) \frac{1}{n}
@@ -363,7 +364,9 @@ La siguiente es una propiedad que en cierta forma extiende las fórmulas que dim
   donde $f$ es un polinomio de grado $m$.
 \end{teorema}
 
-\textit{Demostración}. Usemos inducción\footnote{Puede consultarse \textcite{Stewart_2012}, páginas 820-827.} sobre $m.$
+\enlargethispage*{0.5\baselineskip}
+
+\textit{Demostración}. Usemos inducción\footnote{Para recordar sobre inducción matemática, puede consultarse \textcite{Stewart_2012}, páginas 814-819.} sobre $m$.
 Supongamos que $P\left( m\right)$ está definida como
 \begin{equation*}
   P\left( m\right):\sum_{k=1}^{n}k^{m}=\frac{n^{m+1}}{m+1}+f\left( n\right)
@@ -381,10 +384,10 @@ donde $f$ es un polinomio de grado $m,$ $m\geq 1$.
   \begin{equation}\label{pruebam1}
     \sum_{k=1}^{n}\left( k^{m+2}-\left( k-1\right) ^{m+2}\right)=n^{m+2}
   \end{equation}
-  y por otro lado, usando el teorema del binomio\footnote{Para recordar sobre inducción matemática, puede consultarse \textcite{Stewart_2012}, páginas 814-819.},
+  y por otro lado, usando el teorema del binomio\footnote{Puede consultarse \textcite{Stewart_2012}, páginas 820-827.},
   en el segundo término dentro de la suma, tenemos que
   \begin{equation}
-    \resizebox{.9\textwidth}{!}{$
+    \resizebox{.87\textwidth}{!}{$
       \begin{aligned}[b]
         &\sum_{k=1}^{n}\left( k^{m+2}-\left( k-1\right)^{m+2}\right)
         =\sum_{k=1}^{n}\left( k^{m+2}-\sum_{i=0}^{m+2}\binom{m+2}{i}k^{i}(-1)^{m+2-i}\right)\\
@@ -410,27 +413,27 @@ donde $f$ es un polinomio de grado $m,$ $m\geq 1$.
     \sum_{k=1}^{n}k^{m+1}=\frac{n^{m+2}}{m+2}+\frac{\binom{m+2}{m}}{m+2}%
     \sum_{k=1}^{n}k^{m}+\sum_{i=0}^{m-1}\left[\left( -1\right) ^{m+2-i}\frac{\binom{m+2}{i}}{m+2}\sum_{k=1}^{n}k^{i}\right]
   \end{gather*}
-  y, usando la hipótesis de inducción, obtenemos
-  \begin{gather*}
-    \begin{aligned}
-      \sum_{k=1}^{n}k^{m+1}
-      = \frac{n^{m+2}}{m+2}
-      &+ \frac{\binom{m+2}{m}}{m+2} \left( \frac{n^{m+1}}{m+1} + f_{m}(n) \right) \\
-      &+ \sum_{i=0}^{m-1} (-1)^{m+2-i} \frac{\binom{m+2}{i}}{m+2} \left( \frac{n^{i+1}}{i+1} + f_{i}(n) \right)
-    \end{aligned}
-  \end{gather*}
-  con $f_{m}\left( n\right) $ como un polinomio de grado $m$ en la variable $n$ y los $f_{i}\left( n\right) $ como polinomios de grado $i$ en la variable $n$ para $0\leq i\leq m-1$. Por tanto,
-  \[
-    \sum_{k=1}^{n}k^{m+1}=\frac{n^{m+2}}{m+2}+f(n)
-  \]
-  con
-  \begin{gather*}
-    f(n)=\hspace{-0.1cm}\frac{\binom{m+2}{m}}{m+2}\left(\hspace{-0.1cm} \frac{n^{m+1}}{m+1}+f_{m}\left( n\right) \hspace{-0.1cm}\right)
-    +\hspace{-0.1cm}\sum_{i=0}^{m-1}\left( -1\right) ^{m+2-i}\hspace{-0.1cm}\frac{\binom{m+2}{i}}{m+2}\left(\hspace{-0.1cm}
-    \frac{n^{i+1}}{i+1}+f_{i}\left( n\right)\hspace{-0.1cm} \right)
-  \end{gather*}
-  el polinomio de grado $m+1$, con lo que se demuestra lo que se quería probar.
 \end{parrafoitemize}
+y, usando la hipótesis de inducción, obtenemos
+\begin{gather*}
+  \begin{aligned}
+    \sum_{k=1}^{n}k^{m+1}
+    = \frac{n^{m+2}}{m+2}
+    &+ \frac{\binom{m+2}{m}}{m+2} \left( \frac{n^{m+1}}{m+1} + f_{m}(n) \right) \\
+    &+ \sum_{i=0}^{m-1} (-1)^{m+2-i} \frac{\binom{m+2}{i}}{m+2} \left( \frac{n^{i+1}}{i+1} + f_{i}(n) \right)
+  \end{aligned}
+\end{gather*}
+con $f_{m}\left( n\right) $ como un polinomio de grado $m$ en la variable $n$ y los $f_{i}\left( n\right) $ como polinomios de grado $i$ en la variable $n$ para $0\leq i\leq m-1$. Por tanto,
+\[
+  \sum_{k=1}^{n}k^{m+1}=\frac{n^{m+2}}{m+2}+f(n)
+\]
+con
+\begin{gather*}
+  f(n)=\hspace{-0.1cm}\frac{\binom{m+2}{m}}{m+2}\left(\hspace{-0.1cm} \frac{n^{m+1}}{m+1}+f_{m}\left( n\right) \hspace{-0.1cm}\right)
+  +\hspace{-0.1cm}\sum_{i=0}^{m-1}\left( -1\right) ^{m+2-i}\hspace{-0.1cm}\frac{\binom{m+2}{i}}{m+2}\left(\hspace{-0.1cm}
+  \frac{n^{i+1}}{i+1}+f_{i}\left( n\right)\hspace{-0.1cm} \right)
+\end{gather*}
+el polinomio de grado $m+1$, con lo que se demuestra lo que se quería probar.
 
 Las siguientes propiedades involucran funciones trigonométricas:
 
@@ -519,7 +522,7 @@ por lo que
 \end{aligned}
 \end{gather*}
 
-\begin{ejemplo} Suma geométrica: supongamos que $n$ es un número natural y que $b$ es un número real distinto de $1$. Entonces
+\begin{ejemplo} \textbf{Suma geométrica.} Supongamos que $n$ es un número natural y que $b$ es un número real distinto de $1$. Entonces
 \[
 \sum_{k=1}^{n}b^{k}=\cfrac{b^{n+1}-b}{b-1}
 \]
@@ -673,10 +676,11 @@ P=\left\{ 0,\frac{1}{2},1,\frac{3}{2},2,\frac{5}{2},3\right\}
 \left[ 0,\frac{3}{5}\right],\ \left[ \frac{3}{5},\frac{6}{5}\right],\ \left[ \frac{6}{5},\frac{8}{5}\right],\ \left[ \frac{8}{5},2\right],\ \left[ 2,\frac{5}{2}\right]\text{ y } \left[ \frac{5}{2},3\right]
 \]
 Por otro lado, como la partición no es regular, entonces debemos hacer explícita cada una de las longitudes de los intervalos; entonces,
+
 \begin{align*}
 \Delta x_{1}&=\frac{3}{5}-0=\frac{3}{5} & \Delta x_{2}&=\frac{6}{5}-
-\frac{3}{5}=\frac{3}{5}\\
-\Delta x_{3}&=\frac{8}{5}-\frac{6}{5}=\frac{2}{5} &\Delta x_{4}&=2-\frac{8}{5}=\frac{2}{5}\\
+\frac{3}{5}=\frac{3}{5}\\[0.5em]
+\Delta x_{3}&=\frac{8}{5}-\frac{6}{5}=\frac{2}{5} &\Delta x_{4}&=2-\frac{8}{5}=\frac{2}{5}\\[0.5em]
 \Delta x_{5}&=\frac{5}{2}-2=\frac{1}{2}& \Delta x_{6}&=3-\frac{5}{2}=\frac{1}{2}
 \end{align*}
 Y, por último, la norma de la partición es
@@ -699,7 +703,7 @@ y
 \left[ -2,\frac{-7}{5}\right],\ \left[ \frac{-7}{5},-1\right],\
 \left[ -1,\frac{-4}{5}\right],\ \left[
 \frac{-4}{5},\frac{-1}{5}\right],\ \left[
-\frac{-1}{5},\frac{3}{5}\right],\\
+\frac{-1}{5},\frac{3}{5}\right],\\[0.5em]
 \left[\frac{3}{5},\frac{6}{5}\right],\
 \left[ \frac{6}{5},\frac{8}{5}\right],\
 \left[ \frac{8}{5},2\right],\
@@ -711,13 +715,13 @@ hacer explícita cada una de las longitudes de los intervalos;
 entonces,
 \begin{align*}
 \Delta x_{1}&=\frac{-7}{5}+2=\frac{3}{5} &
-\Delta x_{2}&=-1+\frac{7}{5}=\frac{2}{5}\\ \displaybreak
+\Delta x_{2}&=-1+\frac{7}{5}=\frac{2}{5}\\[0.5em]
 \Delta x_{3}&=\frac{-4}{5}+1=\frac{1}{5} &
-\Delta x_{4}&=\frac{-1}{5}+\frac{4}{5}=\frac{3}{5}\\
+\Delta x_{4}&=\frac{-1}{5}+\frac{4}{5}=\frac{3}{5} \displaybreak\\
 \Delta x_{5}&=\frac{3}{5}+\frac{1}{5}=\frac{4}{5} &
-\Delta x_{6}&=\frac{6}{5}-\frac{3}{5}=\frac{3}{5}\\
+\Delta x_{6}&=\frac{6}{5}-\frac{3}{5}=\frac{3}{5}\\[0.5em]
 \Delta x_{7}&=\frac{8}{5}-\frac{6}{5}=\frac{2}{5}&
-\Delta x_{8}&=2-\frac{8}{5}=\frac{2}{5}&\\
+\Delta x_{8}&=2-\frac{8}{5}=\frac{2}{5}\\[0.5em]
 \Delta x_{9}&=\frac{5}{2}-2=\frac{1}{2}&
 \Delta x_{10}&=3-\frac{5}{2}=\frac{1}{2}
 \end{align*}
@@ -736,7 +740,7 @@ Sea $f$ una función definida en el intervalo $\left[ a,b\right] $ y sea $P=\{x_
 \sum_{k=1}^{n}f(x_{k}^{\ast })\Delta x_{k}
 \]
 \end{defi}
-Veamos algunos ejemplos:
+Veamos algunos ejemplos.
 
 \begin{ejemplo}
 Dadas la función $f(x)=16-x^{2}$ definida en el intervalo $\left[ 0,4\right]$, la partición $P=\left\{ 0,1,2,3,4\right\} $ y $x_{k}^{\ast }$ el extremo izquierdo de cada subintervalo, encuentre la suma de Riemann para $f$.
@@ -752,6 +756,11 @@ y los puntos $x_k^*$ son
 x_{1}^{\ast }=0,\ x_{2}^{\ast }=1,\ x_{3}^{\ast }=2,\ x_{4}^{\ast }=3
 \]
 Teniendo entonces toda la información necesaria para la suma de Riemann, ya podemos calcularla:
+
+\clearpage
+
+\vspace*{-1.5\baselineskip}
+
 \begin{align*}
 \sum_{k=1}^{4}f(x_{k}^{\ast })\Delta x_{k}&=f(0)\Delta x_{1}+f(1)\Delta x_{2}+f(2)\Delta x_{3}+f(3)\Delta x_{4}\\
 &=16\cdot 1+15\cdot 1+12\cdot 1+7\cdot1=50
@@ -1024,7 +1033,7 @@ y $f$ es integrable en $[a,b]$.
 tal que para cada $\delta >0$ existen $x,y$ en $[a,b]$ con $\left\vert
 f\left( x\right) -f\left( y\right) \right\vert \geq \varepsilon _{0}.$
 
-Así que: para $\delta _{1}=\frac{b-a}{2}$ existen $a_{1},b_{1}$ en $[a,b]$ con $%
+Así que para $\delta _{1}=\frac{b-a}{2}$ existen $a_{1},b_{1}$ en $[a,b]$ con $%
 a_{1}<b_{1},\ \left\vert b_{1}-a_{1}\right\vert <\delta $ y
 $\left\vert f\left( b_{1}\right) -f\left( a_{1}\right) \right\vert
 \geq \varepsilon _{0}$.
@@ -1304,7 +1313,7 @@ con lo cual, entonces,
 &=\lim_{n\to\infty}\frac{b}{n}\sum\limits_{k=1}^{n}
 \cos \left( k\frac{b}{n}\right)
 \end{align*}
-aplicando el punto \ref{SumSentoCosenoA} del teorema \ref{SumSenoCoseno} con $x=\frac{b}{n}$, resulta
+aplicando el punto \ref{SumSentoCosenoA}) del teorema \ref{SumSenoCoseno} con $x=\frac{b}{n}$, resulta
 \begin{equation*}
 =\lim_{n\to\infty}\frac{b}{n}\frac{\sen\left( \left( n+\frac{1}{2}\right) \frac{b}{n}\right) -\sen\left( \frac{1}{2}\frac{b}{n}%
 \right) }{2\sen\left( \frac{1}{2}\frac{b}{n}\right) }
@@ -1512,7 +1521,7 @@ x^{2}-1\right) $ & $x^{2}-1$ \\ \hline
 
 \vspace{2\parskip}
 
-La figura de la función por integrar se muestra en la figura~\ref{fig:graf7}.
+La figura~\ref{fig:graf7} muestra la función por integrar.
 
 \begin{figure}[t]
 \centering
@@ -1633,7 +1642,7 @@ Con los datos, entonces, el valor de la integral es
 &=1\cdot \left( \sqrt{2}-1\right) +2\cdot \left( \sqrt{3}-\sqrt{2}\right)
 +3\cdot \left( 2-\sqrt{3}\right)\\
 &=\sqrt{2}-1 +2\sqrt{3}-2\sqrt{2}+6-3\sqrt{3}=5-\sqrt{2}-\sqrt{3}\\
-&\approx 1.8537.
+&\approx 1.8537
 \end{align*}
 \end{parrafonumerado}
 
@@ -1680,7 +1689,7 @@ La inversa de $y=\log _{3}x$ es $x=3^{y}$; entonces
 \end{align*}
 
 \begin{ejemplo}
-Calcular $\int_{0}^{1}\sen^{-1} x\, dx$.
+Calcule $\int_{0}^{1}\sen^{-1} x\, dx$.
 \end{ejemplo}
 \emph{Solución.} Si $y=\sen^{-1} x$, entonces $x=\sen y$. Por la región dada:
 \begin{gather*}
@@ -1743,7 +1752,7 @@ anterior,
 
 \group
 
-\exercise {En cada caso escribir la suma de manera expandida}
+\exercise{En cada caso, escriba la suma de manera expandida:}
 \begin{multicols}{2}
 \subexercise{$\displaystyle\sum_{k=1}^{5}\left( k^{2}-(k+2)^{2}\right)$}{$1^{2}-3^{2}+2^{2}-4^{2}+3^{2}-5^{2}+4^{2}-6^{2}+5^{2}-7^{2}=-80$}
 
@@ -1757,7 +1766,7 @@ anterior,
 
 \subexercise{$\displaystyle\sum_{k=1}^{8}\left(\sen(k\pi )\right)$}{$\sen\pi +\sen2\pi +\sen3\pi +\sen4\pi +\sen5\pi +\sen6\pi +\sen7\pi +\sen8\pi =0$}
 
-\subexercise{$\displaystyle\sum_{k=1}^{n}\left(-1\right) ^{k}k^{2}$}{$-1^{2}+2^{2}-3^{2}+4^{2}-\cdots \left( -1\right) ^{n}n^{2}.$}
+\subexercise{$\displaystyle\sum_{k=1}^{n}\left(-1\right) ^{k}k^{2}$}{$-1^{2}+2^{2}-3^{2}+4^{2}-\cdots \left( -1\right) ^{n}n^{2}$}
 
 \subexercise{$\displaystyle\sum_{k=1}^{n}\left( \frac{k}{k+1}-\frac{k+1}{k+2%
 }\right) $}{$\frac{1%
@@ -1766,7 +1775,7 @@ anterior,
 n+1}{n+2}$}
 \end{multicols}
 
-\exercise{Expresar cada uno de las sumas en notación de sumatoria}
+\exercise{Exprese cada una de las sumas en notación de sumatoria:}
 
 \begin{multicols}{2}
 \subexercise{$1+5+9+13+\ldots +81$}{$\sum_{k=0}^{20}\left( 4k+1\right) $}
@@ -1801,7 +1810,7 @@ n+1}{n+2}$}
 \subexercise{$1-x+x^{2}-x^{3}+\ldots+(-1)^{n}x^{n}$}{$\sum_{k=1}^{n+1}(-1)^{k-1}{x^{k-1}}$}
 \end{multicols}
 
-\exercise{Encontrar el valor de cada una de las siguientes expresiones}
+\exercise{Encuentre el valor de cada una de las siguientes expresiones:}
 
 \begin{multicols}{2}
 
@@ -1828,7 +1837,7 @@ k+1\right) ^{2}\right] $}{$-2n^{2}-2n$}
 
 \clearpage
 
-\exercise{Calcule cada uno de los siguientes límites}
+\exercise{Calcule cada uno de los siguientes límites:}
 
 \subexercise{$\displaystyle\lim_{n\rightarrow \infty }\sum_{k=1}^{n}\left[ \left( \frac{3k}{n}-1\right) ^{3}-2\right] \frac{3}{n}$}{$-\frac{9}{4}$}
 
@@ -1847,48 +1856,44 @@ n}\right) $}{$\sen 1$}
 
 \subexercise{$\displaystyle\lim_{n\rightarrow \infty}\sum_{k=1}^{n}\left[ \left( 2+\frac{k}{n}\right) ^{3}-2\left( 2+\frac{k}{n}\right) ^{2}+1\right] \frac{1}{n}$}{$\frac{55}{12}$}
 
-\exercise{Escriba una suma de Riemann para cada función y partición dadas y usando el punto indicado de cada subintervalo.}
+\exercise{Escriba una suma de Riemann para cada función y partición dadas, usando el punto indicado de cada subintervalo:}
 
-\subexercise{$f\left( x\right) =9-3x^{2}$\ $P=\left\{ 0,0.3,0.5,0.8,1\right\}$ partición de $\left[ 0,1\right]$; usar el extremo derecho.}{$7.593$}
+\subexercise{$f\left( x\right) =9-3x^{2}$\ $P=\left\{ 0,0.3,0.5,0.8,1\right\}$, partición de $\left[ 0,1\right]$; use el extremo derecho.}{$7.593$}
 
 \subexercise{$f\left( x\right) =x^{2}+x^{3}$ \ $P=\left\{
--1,-0.5,-0.8,0,0.5,1\right\} $ partición de $\left[ -1,1\right]$; usar
-el extremo derecho.}{$1.2506$}
+-1,-0.5,-0.8,0,0.5,1\right\}$, partición de $\left[ -1,1\right]$; use el extremo derecho.}{$1.2506$}
 
-\subexercise{$f\left( x\right) =20-x^{3}$ \ \ $P=\left\{ 0,0.5,1.5,1.8,2\right\} $ partición de $\left[ 0,2\right]$; usar el extremo izquierdo.}{$33.088$}
+\subexercise{$f\left( x\right) =20-x^{3}$ \ \ $P=\left\{ 0,0.5,1.5,1.8,2\right\}$, partición de $\left[ 0,2\right]$; use el extremo izquierdo.}{$37.696$}
 
-\subexercise{$f\left( x\right) =x^{4}-1$ \ \ $P=\left\{ -1,-0.5,0,0.5,1,2,3\right\} $
-partición de $\left[ -1,3\right]$; usar el extremo izquierdo.}{$13.563$}
+\subexercise{$f\left( x\right) =x^{4}-1$ \ \ $P=\left\{ -1,-0.5,0,0.5,1,2,3\right\} $, partición de $\left[ -1,3\right]$; use el extremo izquierdo.}{$13.563$}
 
 \subexercise{$f\left( x\right) =20-4x^{2}$ \ $P=\left\{
-0,0.5,1.5,1.8,2,2.5,3\right\} $ partición de $\left[ 0,3\right]$; usar
-el punto medio.}{$24.47$}
+0,0.5,1.5,1.8,2,2.5,3\right\} $, partición de $\left[ 0,3\right]$; use el punto medio.}{$24.47$}
 
 \subexercise{$f\left( x\right) =x^{3}-1$ \ $P=\left\{
--1,-0.5,0,0.5,1,2,3,3.6,4\right\} $ partición de $\left[ -1,4\right]$; usar
-el punto medio.}{$57.51$}
+-1,-0.5,0,0.5,1,2,3,3.6,4\right\} $, partición de $\left[ -1,4\right]$; use el punto medio.}{$57.51$}
 
 \subexercise{$f\left( x\right) =2^{x}-1$ \ $P=\left\{
-0,0.5,1,2.5,3,3.6,4.1,5\right\} $ partición de $\left[ 0,5\right]$; usar el extremo derecho.}{$53.842$}
+0,0.5,1,2.5,3,3.6,4.1,5\right\} $, partición de $\left[ 0,5\right]$; use el extremo derecho.}{$53.842$}
 
-\exercise{Calcular cada una de las siguientes integrales usando la definición.}
+\exercise{Calcule cada una de las siguientes integrales usando la definición:}
 \begin{multicols}{3}
 \subexercise{$\int_{0}^{2}\left( x^{2}-2\right) dx$}{$-\frac{4}{3}$}
 
-\subexercise{$\int_{0}^{1}\left(x^{2}-x\right)\,dx$}{$-\frac{1}{6}$}
+\subexercise{$\int_{0}^{1}\left(x^{2}-x\right) dx$}{$-\frac{1}{6}$}
 
 \subexercise{$\int_{-1}^{1}x^{3}dx$}{$0$}
 
 \subexercise{$\int_{-2}^{2}\left( x^{3}+2\right) dx$}{$8$}
 
-\subexercise{$\int_{-1}^{2}\left( 2x^{3}-1\right) dx.$}{$\frac{9}{2}$}
+\subexercise{$\int_{-1}^{2}\left( 2x^{3}-1\right) dx$}{$\frac{9}{2}$}
 
-\subexercise{$\int_{0}^{2}\left(2^{x}\right) dx.$}{$\frac{3}{\ln 2}$}
+\subexercise{$\int_{0}^{2}\left(2^{x}\right) dx$}{$\frac{3}{\ln 2}$}
 
 \subexercise{$\int_{0}^{3}2\left( 3^{x}\right) dx$}{$\frac{52}{\ln 3}$}
 \end{multicols}
 
-\exercise{Calcular usando las propiedades de la integral}
+\exercise{Calcule usando las propiedades de la integral:}
 \begin{multicols}{2}
 \subexercise{$\int_{0}^{2}\left( 4x^{3}-8x^{2}+7x+8\right) dx$}{$\frac{74}{3}$}
 
@@ -1945,45 +1950,51 @@ x^{3}-5x^{2}+x+2, & \text{ si }x<1 \\
 \end{array}
 \right. $}{$\frac{7}{2}$}
 
-\exercise{Hallar el área limitada por la curva y las rectas dadas.}
+\exercise{Halle el área limitada por la curva y las rectas dadas:}
 
-\subexercise{$y=5x^{4}$, $x=1$, $x=3$ y el eje $x$.}{$242$}
+\subexercise{$y=5x^{4}$, $x=1$, $x=3$ y el eje $x$}{$242$}
 
-\subexercise{$y=3x+x^{2}-x$; $x=0$, $x=5$ y el eje $x$.}{$\frac{200}{3}$}
+\subexercise{$y=3x+x^{2}-x$, $x=0$, $x=5$ y el eje $x$}{$\frac{200}{3}$}
 
-\subexercise{$y=e^{x}+x^{3}+1$; $x=0$, $x=2$ y el eje $x$.}{$e^{2}+5$}
+\subexercise{$y=e^{x}+x^{3}+1$, $x=0$, $x=2$ y el eje $x$}{$e^{2}+5$}
 
-\subexercise{$y=x^{2}+2^{x}+x$; $x=1$, $x=3$ y el eje $x$.}{$\frac{2}{3\ln 2}\left( 19\ln 2+9\right) $}
+\subexercise{$y=x^{2}+2^{x}+x$, $x=1$, $x=3$ y el eje $x$}{$\frac{2}{3\ln 2}\left( 19\ln 2+9\right) $}
 
-\subexercise{$y=2\sen x$; $x=0$, $x=\pi $ y el eje $x$.}{$4$}
+\subexercise{$y=2\sen x$, $x=0$, $x=\pi $ y el eje $x$}{$4$}
 
-\subexercise{$y=5\cos x$; $x=\frac{3\pi }{2}$, $x=2\pi $ y el eje $x$.}{$5$}
+\subexercise{$y=5\cos x$, $x=\frac{3\pi }{2}$, $x=2\pi $ y el eje $x$}{$5$}
 
-\subexercise{$y=2\cos x+3\sen 3x$; $x=0$, $y=\frac{\pi }{2}$ y el eje $x$.}{$5$}
+\subexercise{$y=2\cos x+3\sen x$, $x=0$, $y=\frac{\pi }{2}$ y el eje $x$}{$5$}
 
-\subexercise{$y=3\cos x+\sen x+x^{2}$; $x=-\frac{\pi }{2}$, $x=\frac{\pi }{2}$ y el eje $x$.}{$\frac{1}{12}\pi ^{3}+6$}
+\subexercise{$y=3\cos x+\sen x+x^{2}$, $x=-\frac{\pi }{2}$, $x=\frac{\pi }{2}$ y el eje $x$}{$\frac{1}{12}\pi ^{3}+6$}
 
 \subexercise{$f(x)=\left\{
   \begin{array}{ccc} 16-x^{2} & \text{si} & x<4 \\ x+4 & \text{si} & x\geq 4%
   \end{array}%
-\right. ;x=0$, $x=6$ y el eje $x$.}{$\frac{182}{3}$}
+\right.$\hspace{-0.3em}, $x=0$, $x=6$ y el eje $x$}{$\frac{182}{3}$}
 
 \subexercise{$f(x)=\left\{
     \begin{array}{ccc}2\sen x & \text{si} & x\geq 0 \\ 3\cos x & \text{si} & x<0%
     \end{array}%
-  \right. ;x=-\frac{^{\pi }}{2}$, $x=\frac{\pi }{4}$ y el eje $x$.}{$5-\sqrt{2}$}
+  \right.$\hspace{-0.3em}, $x=-\frac{^{\pi }}{2}$, $x=\frac{\pi }{4}$ y el eje $x$}{$5-\sqrt{2}$}
 
   \subexercise{$f(x)=\left\{
       \begin{array}{ccc}2^{x} & \text{si} & x<-1 \\ \frac{1}{2^{x}} & \text{si} & x\geq -1%
       \end{array}%
-    \right. ;x=-2$, $x=2$ y el eje $x$.}{$\frac{2}{\ln 2}$}
+    \right.$\hspace{-0.3em}, $x=-2$, $x=2$ y el eje $x$}{$\frac{2}{\ln 2}$}
 
     \subexercise{$f(x)=\left\{
-        \begin{array}{ccc}3x^{2}+2x+2 & \text{si} & x\leq 0 \\6\sen x & \text{si} & 0<x\leq \pi  \\ e^{x} &  & \pi <x%
+      \bgroup
+      \setlength{\arraycolsep}{3pt}
+        \begin{array}{ccc}
+          3x^{2}+2x+2 & \text{si} & x\leq 0 \\
+          6\sen x & \text{si} & 0<x\leq \pi  \\ 
+          e^{x} &  & \pi <x%
         \end{array}%
-      \right. ;x=-1$, $x=4$ y el eje $x$.}{$\allowbreak e^{4}-e^{\pi}+14$}
+      \egroup
+      \right.$\hspace{-0.45em}, $x=-1$, $x=4$ y el eje $x$}{$e^{4}-e^{\pi}+14$}
 
-      \exercise{Usar nociones geométricas para encontrar el valor de cada una de las siguientes integrales}
+      \exercise{Use nociones geométricas para encontrar el valor de cada una de las siguientes integrales:}
       \begin{multicols}{2}
         \subexercise{$\int_{-2}^{2}\sqrt{4-x^{2}}dx$}{$2\pi$}
 
@@ -2003,7 +2014,7 @@ x^{3}-5x^{2}+x+2, & \text{ si }x<1 \\
 
       \end{multicols}
 
-      \exercise{Calcular las integrales usando propiedades de áreas y de funciones inversas.}
+      \exercise{Calcule las integrales usando propiedades de áreas y de funciones inversas:}
       \begin{multicols}{2}
         \subexercise{$\int_{0}^{9}\sqrt{x}dx$}{$18$}
 
@@ -2021,6 +2032,6 @@ x^{3}-5x^{2}+x+2, & \text{ si }x<1 \\
 
         \subexercise{$\int_{0}^{3}\arcsin \left( \frac{x}{3}\right) dx$}{$\frac{3}{2}\pi-3$}
 
-        \subexercise{$\int_{0}^{1}\arccos \left( 1-x\right)\,dx$}{$1$}
+        \subexercise{$\int_{0}^{1}\arccose\, \left( 1-x\right)\,dx$}{$1$}
 
       \end{multicols}
