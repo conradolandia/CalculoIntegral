@@ -364,8 +364,6 @@ La siguiente es una propiedad que en cierta forma extiende las fórmulas que dim
   donde $f$ es un polinomio de grado $m$.
 \end{teorema}
 
-\enlargethispage*{0.5\baselineskip}
-
 \textit{Demostración}. Usemos inducción\footnote{Para recordar sobre inducción matemática, puede consultarse \textcite{Stewart_2012}, páginas 814-819.} sobre $m$.
 Supongamos que $P\left( m\right)$ está definida como
 \begin{equation*}
@@ -626,7 +624,7 @@ x_{2},\Delta x_{3},\ldots ,\Delta x_{n}\right\}
 
 Una partición $P$ es regular si todos los subintervalos tienen la misma longitud, en este caso,
 \[
-\left\Vert P\right\Vert =\Delta x_{k}:=\Delta x=\frac{b-a}{n}
+\left\Vert P\right\Vert =\Delta x_{k}=\Delta x=\frac{b-a}{n}
 \]
 
 Si la partición es regular, entonces
@@ -824,7 +822,7 @@ Supongamos que $f$ es constante, es decir, $f(x)=c$, con $c\in\mathbb{R}$; enton
 &=c\left( b-a\right)
 \end{align*}
 es decir,
-\begin{empheq}[box=\fbox]{equation*}
+\begin{empheq}{equation*}
 \int_{a}^{b} c\,dx = c(b-a)
 \end{empheq}
 
@@ -1192,7 +1190,7 @@ Usando la definición de integral para funciones continuas, se obtienen las sigu
 &=\lim_{n\to\infty}c(b-a)=c(b-a)
 \end{align*}
 entonces
-\begin{empheq}[box=\fbox]{align}
+\begin{empheq}{equation}
 \int_{a}^{b} c\, dx=c\left( b-a\right)
 \end{empheq}
 
@@ -1208,7 +1206,7 @@ entonces
 &= \frac{b^{2}-a^{2}}{2}
 \end{align*}
 entonces
-\begin{empheq}[box=\fbox]{equation}
+\begin{empheq}{equation}
 \int_{a}^{b}x\, dx=\frac{b^{2}-a^{2}}{2} \label{x}
 \end{empheq}
 
@@ -1252,7 +1250,7 @@ a^{2}+a\left( b-a\right) ^{2}+\frac{a\left( b-a\right) ^{2}}{n}+\frac{%
 \end{aligned}
 \end{gather*}
 es decir,
-\begin{empheq}[box=\fbox]{equation}
+\begin{empheq}{equation}
 \int_{a}^{b}x^2\, dx=\frac{b^{3}-a^{3}}{3}\label{x2}
 \end{empheq}
 
@@ -1275,7 +1273,7 @@ es decir,
 \end{aligned}
 \end{gather*}
 es decir,
-\begin{empheq}[box=\fbox]{equation}
+\begin{empheq}{equation}
 \int_{a}^{b}x^3\, dx=\frac{b^{4}-a^{4}}{4}\label{x3}
 \end{empheq}
 
@@ -1303,7 +1301,7 @@ Por otro lado,
 =\frac{b^{m+1}-a^{m+1}}{m+1}
 \end{align*}
 con lo cual, entonces,
-\begin{empheq}[box=\fbox]{equation}
+\begin{empheq}{equation}
 \int_{a}^{b}x^m\, dx=\frac{b^{m+1}-a^{m+1}}{m+1}\label{xm}
 \end{empheq}
 
@@ -1333,7 +1331,7 @@ Ahora,
 &= \int_0^b\!\cos x\,dx - \int_0^a\!\cos x\,dx = \sen b - \sen a
 \end{align*}
 y así,
-\begin{empheq}[box=\fbox]{equation}
+\begin{empheq}{equation}
 \int_{a}^{b}\cos x\,dx=\sen b-\sen a \label{cos}
 \end{empheq}
 
@@ -1362,7 +1360,7 @@ x\,dx%\\&
 \end{aligned}
 \end{gather*}
 y, en conclusión,
-\begin{empheq}[box=\fbox]{equation}
+\begin{empheq}{equation}
 \int_{a}^{b}\sen x\,dx=\cos a-\cos b\label{sen}
 \end{empheq}
 
@@ -1395,7 +1393,7 @@ y la integral original, es
 &=\frac{b^{\beta}-1}{\ln b}-\frac{b^{\alpha}-1}{\ln b}=\frac{b^{\beta}-b^{\alpha}}{\ln b}
 \end{align*}
 que nos permite concluir que
-\begin{empheq}[box=\fbox]{equation}
+\begin{empheq}{equation}
 \int_{\alpha}^{\beta}b^x\,dx=\frac{b^{\beta}-b^{\alpha}}{\ln b}\label{bx}
 \end{empheq}
 \end{parrafonumerado}
