@@ -33,7 +33,7 @@
 
 % --- Ejercicio ----------------------------------------------------------
 \newcommand{\exercise}{%
-  \refstepcounter{exercise}
+  \stepcounter{exercise}% hyperref final mode: \refstepcounter injects \pdfdest whatsit
   \@ifstar\exerciseStar\exerciseNoStar
 }
 
@@ -65,7 +65,7 @@
 
 % --- Subejercicio -------------------------------------------------------
 \newcommand{\subexercise}[1]{%
-\refstepcounter{subexercise}
+\stepcounter{subexercise}% hyperref final mode: \refstepcounter injects \pdfdest whatsit
 \@ifnextchar\bgroup{\subexerciseTwo{#1}}{\subexerciseOne{#1}}
 }
 

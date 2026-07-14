@@ -150,7 +150,7 @@ Dado que la variable $y$ nos da la información de la figura, es conveniente int
     &=6\left( 3\right)+\left( \frac{1}{2}\right) \left( 3\right) ^{2}-\left( \frac{1}{3}\right)\left( 3\right) ^{3}-\left( 6\left(-2\right) +\left( \frac{1}{2}\right)\left( -2\right) ^{2}-\left( \frac{1}{3}\right) \left( -2\right) ^{3}\right) \\
     &=18+\left( \frac{9}{2}\right) -9-\left( -12+2+\left( \frac{8}{3}\right)\right) =9+\frac{9}{2}+10-\frac{8}{3} \\
     &=\frac{114+27-16}{6}\\
-    &=\frac{125}{6} \text{ unidades cuadradas.}
+    &=\frac{125}{6} \text{ unidades cuadradas}
   \end{aligned}
 \end{gather*}
 
@@ -276,7 +276,54 @@ Abajo, la figura:
 \begin{figure}[H]
   \centering
   \caption{Área entre seno y coseno}
-  \includegraphics[width=8cm]{Gráficas/ejempintnum.pdf}
+  \begin{tikzpicture}
+  \begin{axis}[
+      axis lines=middle,
+      xmin=-0.3, xmax=3.6,
+      ymin=-1.2, ymax=1.4,
+      xtick={pi/2,pi},
+      xticklabels={$\frac{\pi}{2}$,{}},
+      ytick={-1,1},
+      width=12cm,
+      height=7cm,
+      clip=false,
+      axis line style={thick},
+      major tick length=10pt,
+      major tick style={black, thick},
+  ]
+      
+  \addplot[
+      name path=cosx,
+      domain=1.1:pi,
+      samples=300,
+      thick
+  ] {cos(deg(x))};
+
+  \addplot[
+      name path=sin2x,
+      domain=1.1:pi,
+      samples=300,
+      thick
+  ] {sin(deg(2*x))};
+
+  % region between curves
+  \addplot[
+      gray!25
+  ] fill between[
+      of=cosx and sin2x,
+      soft clip={domain=pi/2:pi}
+  ];
+
+  % labels
+  \node[font=\small] at (axis cs:0.9,0.2) {$y=\cos(x)$};
+  \node[font=\small] at (axis cs:1.6,0.8) {$y=\sin(2x)$};
+  \node[below right] at (axis cs:pi,0) {$\pi$};
+
+  % vertical segment at x=pi
+  \draw[thick] (axis cs:pi,-1) -- (axis cs:pi,0.18);
+
+  \end{axis}
+  \end{tikzpicture}
   \propia
 \end{figure}
 
@@ -662,7 +709,7 @@ obtenemos:
     $32y$ & $\overset{-}{\longrightarrow }$ & $e^{y}$ \\
     $32$ & $\overset{+}{\longrightarrow }$ & $e^{y}$ \\
     $0$ & &
-  \end{tabular},
+  \end{tabular}
   \quad\quad
   \begin{tabular}{lll}
     & & $e^{2y}$ \\
@@ -670,7 +717,7 @@ obtenemos:
     $16y$ & $\overset{-}{\longrightarrow }$ & $\frac{1}{4}e^{2y}$ \\
     $16$ & $\overset{+}{\longrightarrow }$ & $\frac{1}{8}e^{2y}$ \\
     $0$ & &
-  \end{tabular},
+  \end{tabular}
   \quad\quad
   \begin{tabular}{lll}
     & & $e^{3y}$ \\
@@ -1116,8 +1163,9 @@ Y acá usamos integración por partes al estilo de la sección \ref{tabular}. To
 
 \begin{center}
   \renewcommand{\arraystretch}{1.5}
-  \begin{tabular}{>{$}c<{$} >{$}c<{$} | >{$}c<{$} >{$}c<{$}}
-    \multicolumn{2}{c|}{$\int_{0}^{\ln 4}y^{2}e^{y}dy$} & \multicolumn{2}{c}{$\int_{0}^{\ln 4}y^{2}e^{3y}dy$}\\
+  \begin{tabular}{|>{$}c<{$} >{$}c<{$} | >{$}c<{$} >{$}c<{$}|}
+    \hline
+    \multicolumn{2}{|c|}{$\int_{0}^{\ln 4}y^{2}e^{y}dy$} & \multicolumn{2}{c|}{$\int_{0}^{\ln 4}y^{2}e^{3y}dy$}\\
     \hline
     y^{2} & e^{y} & y^{2} & e^{3y}\\
     \hline
@@ -1127,7 +1175,7 @@ Y acá usamos integración por partes al estilo de la sección \ref{tabular}. To
     \hline
     0 & e^{y} & 0 & \frac{1}{27}e^{3y}\\
     \hline
-    \multicolumn{2}{c|}{$=e^{y}\left( y^{2}-2y+2\right)$} & \multicolumn{2}{c}{$=e^{3y}\left( \frac{1}{3}y^{2}-\frac{2}{9}y+\frac{2}{27}\right)$}\\
+    \multicolumn{2}{|c|}{$=e^{y}\left( y^{2}-2y+2\right)$} & \multicolumn{2}{c|}{$=e^{3y}\left( \frac{1}{3}y^{2}-\frac{2}{9}y+\frac{2}{27}\right)$}\\
     \hline
   \end{tabular}
 \end{center}
@@ -1198,7 +1246,7 @@ Con la información de la figura, tenemos
     =2\pi \left( \int_{0}^{1}\left( \frac{2x^{2}}{x^{2}+1}\right) ^{2}dx-\left(\frac{1}{5}x^{5}\right)\Bigg\vert_{0}^{1}\right)\\
     &=2\pi \left( 5-\frac{3}{2}\pi -\frac{1}{5}\right)
     =2\pi \left( \frac{24}{5}-\frac{3}{2}\pi \right)
-    \approx0.55048\;\text{unidades cúbicas.}
+    \approx0.55048\;\text{unidades cúbicas}
   \end{aligned}
 \end{gather*}
 

@@ -1,6 +1,15 @@
 % --- PREÁMBULO FINAL OPTIMIZADO PARA LA EDITORIAL UD ---
 \usepackage[english,spanish,es-tabla,es-lcroman]{babel}
 \unspacedoperators
+
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing, arrows.meta, bending}
+\usetikzlibrary{patterns}
+\usetikzlibrary{calc}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{fillbetween}
+
 % Estilo editorial
 \input{esConfigDir/esConfigFonts} % Definición de fuentes (lhseries, medseries, etc.)
 \input{esConfigDir/esEstilo}
@@ -40,7 +49,7 @@
 \DefineBibliographyStrings{english}{andothers = {et\addabbrvspace al\adddot}}
 
 %\usepackage{showframe}% Similar al calderon, apagar al terminar de maquetar.
-%\usepackage[cam, width=215truemm, height=275truemm, lualatex, center]{crop} % Descomentar solo en producción final
+\usepackage[cam, width=215truemm, height=275truemm, lualatex, center]{crop} % Descomentar solo en producción final
 
 % 5. AJUSTES FINALES DE FORMATO DEL PÁRRAFO
 \usepackage[nopatch=footnote,nopatch=toc,protrusion=true,expansion=true,tracking=true]{microtype} % Microtipografía avanzada
@@ -151,7 +160,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% HYPERREF
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[draft,hidelinks,unicode,naturalnames,bookmarksopen,bookmarksdepth=2,breaklinks=true,hyperfootnotes=false]{hyperref}
+\usepackage[hidelinks,unicode,naturalnames,bookmarksopen,bookmarksdepth=2,breaklinks=true,hyperfootnotes=false]{hyperref}
 \usepackage{bookmark}
 \urlstyle{same}
 \newcommand{\secref}[1]{``\nameref{#1}''}
